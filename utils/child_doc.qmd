@@ -1,0 +1,106 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# {{ species }}
+
+\vspace{-0.5cm}
+
+<!-- *`r params$scientific_name`* -->
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/{{ species }}_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/{{ species }}_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/{{ species }}_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/{{ species }}_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/{{ species }}_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/{{ species }}_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/{{ species }}_sdm.png")
+```
+
+\newpage
+
+# {{ species }}
+
+\vspace{-0.5cm}
+
+<!-- *`r params$scientific_name`* -->
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+## Life History Synopsis:
+
+## References
