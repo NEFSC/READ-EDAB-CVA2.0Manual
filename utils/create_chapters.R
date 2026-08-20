@@ -43,17 +43,66 @@ species_names <- c(
   "Yellowtail flounder"
 )
 
-create_child <- function(species_names) {
-  filename <- here::here("chapters", paste0(species_names, ".qmd"))
+sci_names <- c(
+  "Homarus americanus",
+  "Gadus morhua",
+  "Micropogonias undulates",
+ "Hippoglossus hippoglossus",
+  "Clupea harengus",
+  'Scomber scombrus',
+  'Brevoortia tyrannus',
+  'Placopecten magellanicus',
+  'Spisula solidissima',
+  'Anarhichas lupus',
+  'Centropristis striata',
+  'Callinectes sapidus',
+  'Thunnus thynnus',
+  'Pomatomus saltatrix',
+  'Caulolatilus microps',
+  'Peprilus triacanthus',
+  'Scomber colias',
+  'Rachycentron canadum',
+  'Crassostrea virginica',
+  'Lopholatilus chamaeleonticeps',
+  'Melanogrammus aeglefinus',
+  'Doryteuthis (Amerigo) pealeii',
+  'Lophius americanus',
+  'Mercenaria mercenaria',
+  'Zoarces americanus',
+  'Arctica islandica',
+  'Pollachius virens',
+  'Sciaenops ocellatus',
+  'Stenotomus chrysops',
+  'Illex illecebrosus',
+  'Mustelus canis',
+  'Mya arenaria',
+ 'Scomberomorus maculatus',
+  'Squalus acanthias',
+  'Morone saxatilis',
+  'Paralichthys dentatus',
+  'Tautoga onitis',
+  'Urophycis tenuis',
+  'Scophthalmus aquosus',
+  'Pseudopleuronectes americanus',
+  'Glyptocephalus cynoglossus',
+  'Limanda ferruginea'
+)
+
+create_child <- function(species_name, scientific_name) {
+  filename <- here::here("chapters", paste0(species_name, ".qmd"))
   file.create(filename)
 
-  writeLines(
-    text = knitr::knit_expand(
-      file = here::here("utils/child_doc.qmd"),
-      species = species_names
-    ),
-    con = filename
+  # knit_expand accepts both variables as parameters
+  content <- knitr::knit_expand(
+    file = here::here("utils/child_doc.qmd"),
+    species = species_name,
+    scientific_name = scientific_name
   )
+  
+  # writeLines automatically creates/overwrites the file
+  writeLines(text = content, con = filename)
 }
 
-purrr::map(species_names, ~ create_child(.x))
+purrr::walk2(.x = species_names,
+           .y = sci_names, 
+           ~ create_child(species_name = .x, scientific_name = .y))

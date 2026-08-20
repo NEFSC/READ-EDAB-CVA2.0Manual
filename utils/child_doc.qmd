@@ -12,7 +12,6 @@ format:
         \usepackage{fvextra}
         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
         \pagenumbering{gobble}
-bibliography: utils/references.bib
 ---
 
 ```{r setup}
@@ -23,19 +22,33 @@ knitr::opts_chunk$set(
 )
 ```
 
-# {{ species }}
+# {{ species }} (*`{{ scientific_name }}`*)
 
-\vspace{-0.5cm}
+## Summary
 
-<!-- *`r params$scientific_name`* -->
+::::: {layout-ncol="2"}
+<div>
 
-Overall vulnerability Rank =
+**Scores**
 
-Biological Sensitivity =
+Vulnerability =
 
 Climate Exposure =
 
-Data Quality =
+Biological Sensitivity =
+
+</div>
+
+<div>
+
+**Data Quality**
+
+Model Confidence Score =
+
+Life History Data Quality =
+
+</div>
+:::::
 
 ```{r,echo=FALSE, fig.align='left'}
 here::here("test_images/{{ species }}_exposure_summary_table.png")
@@ -46,6 +59,55 @@ here::here("test_images/{{ species }}_exposure_summary_table.png")
 here::here("test_images/{{ species }}_sensitivity_summary_table.png")
 
 ```
+
+## Changes from Previous Assessment(s)
+
+| Metric               | Current Assessment | Previous Assessment(s) | Change |
+|----------------------|--------------------|------------------------|--------|
+| *Vulnerability*      |                    |                        |        |
+| *Exposure*           |                    |                        |        |
+| *Sensitivity*        |                    |                        |        |
+| *Directional Effect* |                    |                        |        |
+
+## Score Drivers
+
+### Vulnerability:
+
+add text here
+
+### Climate Exposure:
+
+add text here
+
+### Biological Sensitivity:
+
+add text here
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+add text here
+
+### Model Confidence:
+
+add text here
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+add text here
+
+### Directional Effect:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+## Life History Synopsis:
+
+## Figures
 
 ```{r,echo=FALSE, fig.align='left'}
 here::here("test_images/{{ species }}_exposure_allvars.png")
@@ -66,41 +128,5 @@ here::here("test_images/{{ species }}_distribution_area_of_high_probability.png"
 ```{r,echo=FALSE, out.width="200%", fig.align='left'}
 here::here("test_images/{{ species }}_sdm.png")
 ```
-
-\newpage
-
-# {{ species }}
-
-\vspace{-0.5cm}
-
-<!-- *`r params$scientific_name`* -->
-
-## Overall Climate Vulnerability Rank:
-
-add text here
-
-## Climate Exposure:
-
-add text here
-
-## Biological Sensitivity:
-
-add text here
-
-## Distributional Vulnerability Rank:
-
-add text here
-
-## Directional Effect:
-
-add text here
-
-## Data Quality:
-
-add text here
-
-## Climate Effects on Abundance and Distribution:
-
-## Life History Synopsis:
 
 ## References
