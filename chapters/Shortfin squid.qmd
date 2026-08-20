@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Shortfin squid
+
+\vspace{-0.5cm}
+
+*Illex illecebrosus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Shortfin squid_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Shortfin squid_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Shortfin squid_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Shortfin squid_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Shortfin squid_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Shortfin squid_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Shortfin squid_sdm.png")
+```
+
+\newpage
+
+# Shortfin squid
+
+\vspace{-0.5cm}
+
+*Illex illecebrosus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Distribution and abundance of shortfin squid on the Northeast U.S. Continental Shelf is highly related to oceanographic conditions such as shelf-slope dynamics and positions of the shelf-slope front and Gulf Stream [@dawe2007ocean]. @dawe2000environmental theorized based on catch data from Newfoundland that squid abundance may co-vary with that of its most important predators, competitors, and prey in an adaptive manner such that the population increases and expands when niche space becomes available. These shifts appear to result from high water temperatures, a negative North Atlantic Oscillation (NAO) index, and a southward shift in the Gulf Stream position. Greater catch per unit effort (CPUE) of shortfin squid has been associated with cooler bottom temperatures, timing and location of warm core rings in the winter and spring, and slope water/shelf slope front dynamics [@salois2023shelf]. These features may contribute to areas of high primary productivity, food sources, and transport mechanisms for larvae. 
+
+## Life History Synopsis:
+
+The northern shortfin squid inhabits Northwest Atlantic shelf and slope waters from the Labrador Sea to the Florida Straits [@hendrickson2004essential]. Spawning occurs year round, but peaks seasonally from October to June. Shortfin squid are semelparous; females release multiple egg capsules during a single spawning season, after which they die [@hendrickson2004essential]. Laboratory studies indicate that hatching occurs in 16 days at 13°C, 12 days at 16°C, and 8 days at 21°C. In the laboratory, paralarvae enter a transitional stage at approximately 5.0 mm ML, followed by a juvenile stage at about 7.0 mm ML [@odor1982embryonic]. The Gulf Stream and associated eddies are hypothesized to be the primary mechanisms for transport of larvae to northern latitudes and then inshore via the eddies [@trites1983physical]. Larvae have small yolk-sacs, so they rely on rapid transportation to food-rich habitats [@hendrickson2004population]. Larvae feed on a variety of prey items (fish, nematodes, euphausiids). Larvae and juveniles are abundant in the slope water of the Gulf Stream and in the adjacent upwelling regions at times of maximum production such as the spring plankton bloom [@hendrickson2004essential]. As the initial biomass of the bloom is transferred up through various trophic levels, the squid grow at a pace which allows them to feed continuously at the level where biomass is peaking [@odor2013chapter]. Paralarvae, juveniles and adults of Illex exhibit diel vertical migrations to feed at night, and remain near the seabed during the day [@arkhipkin1986diel]. An ontogenetic shift in diet from a predominance of crustaceans to a predominance of fish and squid is evident as the squid mature [@dawe1988length]. Larger, older Northern shortfin squid feed primarily on fish, but cannibalism of small individuals (most likely males) by larger females also occurs, particularly during autumn. Fish prey consists of the early life history stages of Atlantic cod, Arctic cod, redfish, sand lance,  mackerel, Atlantic herring, haddock, and sculpin [@dawe1988length]. Shortfin squid are important prey for seabirds and many fish species, including tunas, hakes, spiny dogfish, monkfish, and Atlantic cod [@hendrickson2004essential]. Juveniles and adults make seasonal migrations off the continental shelf in the fall and back onto the shelf to spawning grounds in the Mid-Atlantic in the spring [@hendrickson2004essential].  Shortfin squid are a short lived species, reaching maturity at 40-60 days and a maximum lifespan of less than one year [@hendrickson2004population]. Adults are found at bottom temperatures between 3.5-15°C and surface temperatures greater than 20°C [@hendrickson2004essential]. Shortfin squid in the Northwest Atlantic are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. The most recent stock assessment occurred in 2025; management measures are in place but stock status is unknown as there are no reference points for this stock [@nefsc2025northern]. 
+
+
+## References

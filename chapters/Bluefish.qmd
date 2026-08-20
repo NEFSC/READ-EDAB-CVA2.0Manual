@@ -1,0 +1,110 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Bluefish
+
+\vspace{-0.5cm}
+
+*Pomatomus saltatrix*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefish_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Bluefish_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefish_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefish_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefish_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefish_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Bluefish_sdm.png")
+```
+
+\newpage
+
+# Bluefish
+
+\vspace{-0.5cm}
+
+*Pomatomus saltatrix*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+There has been a documented shift in bluefish distribution, spawning, habitat use in the Mediterranean [@Sabates2012] [@VillegasHernandez2015]. Bluefish distributions in the Northwest Atlantic seem to be shifting north and east [@Tyrell2022]. Increasing fall sea surface temperatures may extend spawning season further into the calendar year [@Tyrell2022]. If warming alters spawning phenology, there are concerns that juveniles may arrive in estuaries before their prey. Seasonal mismatches have been shown to impact growth, body condition, and reproductive success [@Taylor2006]. Changing distributions of prey species as a result of climate change may alter interactions between bluefish and their prey [@Whitfield2026]. 
+
+## Life History Synopsis:
+
+  Bluefish inhabit temperate and tropical surface waters in the North Atlantic from Maine to the Atlantic coast of Florida [@Shepherd2006]. Bluefish in the North Atlantic are a single, migratory stock with two discrete spawning periods. The first occurs during March-May near the edge of the continental shelf of the South-Atlantic Bight. The second occurs between June and August in the Mid-Atlantic Bight [@Shepherd2006]. Eggs hatch after 46-48 hours at 18 - 22.2°C to pelagic larvae [@Deuel1966]. Larvae spawned in the South Atlantic (spring-spawned cohort) are subject to advection north via the Gulf Stream and inshore via warm core rings. Eggs in the southern part of the Mid-Atlantic Bight may be advected south and offshore [@Shepherd2006]. Transport of larvae and/or juveniles across the shelf- slope region may be aided by wind-driven surface flow [@Hare1996]. @Sherman1984 note that wide distribution of bluefish larvae over the shelf reduces their vulnerability to the predator field and environmental perturbation. Larvae prey on copepods [@Shepherd2006]. Peak abundance of larval bluefish in Southern New England and the Mid-Atlantic Bight coincided with zooplankton production [@Sherman1984]. Changes in prey availability and distribution can impact bluefish condition and reproductive success [@Taylor2006]. Juvenile bluefish inhabit estuaries, bays, and coastal oceans with sand, oyster beds, and submerged aquatic vegetation habitats [@McBride1991]. Juveniles enter estuaries when temperatures are greater than 13-15°C and leave when temperatures fall below 10-12°C [@Smith1994]. Juvenile migration into estuarine habitats appears tied to a shift in eating other fish. In estuaries, adults and juveniles eat whatever taxa are locally abundant (fish, crustaceans, shrimp, and polychaetes). In ocean habitats, young-of-the-year bluefish switch to piscivory predation with increasing size, similar to estuarine habitats [@Marks1996]. Bluefish are opportunistic foragers, and the composition of adult bluefish diet depends largely on the available prey, but they consume similar prey items as juvenile bluefish [@Shepherd2006]. Bluefish have long been recognized as a notable predator of forage fish [@Tyrell2022]. Adult bluefish conduct seasonal migrations following warmer waters, overwintering in the south and moving north in the spring and summer [@Shepherd2006]. Migrations may be cued by photoperiod as well, and have been observed to shift northward in warm years [@Nye2009]. Shortfin mako sharks are identified as a major predator of bluefish and may consume more individuals than removed by the fishery [@Wood2009]. Most bluefish are mature by age 2, with approximately half maturing by age 1 [@NEFSC2015_bluefish]. The maximum age for bluefish in the North Atlantic is 12 years [@Salerno2001]. In the Northwest Atlantic, bluefish are managed by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission. The last stock assessment occurred in 2025, where bluefish were found to not be overfished nor is overfishing occurring [@NEFSC2025_bluefish]. 
+
+## References

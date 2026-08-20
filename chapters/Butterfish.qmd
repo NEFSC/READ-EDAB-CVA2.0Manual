@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Butterfish
+
+\vspace{-0.5cm}
+
+*Peprilus triacanthus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Butterfish_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Butterfish_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Butterfish_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Butterfish_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Butterfish_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Butterfish_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Butterfish_sdm.png")
+```
+
+\newpage
+
+# Butterfish
+
+\vspace{-0.5cm}
+
+*Peprilus triacanthus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Butterfish distributions and abundance in the Mid-Atlantic Bight are strongly related to bottom temperature [@kohut2013toward]. Butterfish have shifted their distribution northward in recent decades. @collie2008long documented an increase in butterfish abundance in Narragansett Bay in the latter half of the 20th century, and they recently have expanded their range into the Gulf of Maine [@suca2021environmental] [@adams2022update]. Their depth distribution has also shifted to inhabiting deeper waters [@suca2021environmental]. An increase in butterfish prevalence in the Gulf of Maine has altered seabird diets, and is replacing preferred prey in common terns [@smith2023effects]. 
+
+## Life History Synopsis:
+
+Butterfish distribution ranges from Newfoundland in Canada to Atlantic Florida, but they are primarily found from the Gulf of Maine to Cape Hatteras. They are a schooling fish and shift distribution in response to changing water temperatures: moving north and inshore over the summer to spawn and south and offshore in the winter to seek warmer water [@cross1999essential]. Butterfish are broadcast spawners and spawn primarily in the evening or at night, however no direct observations have been made [@horn1970systematics]. In general, butterfish spawn starting in May through early fall, peaking in June-July, although timing is dependent on location [@cross1999essential]. Egg duration and larval growth is temperature dependent [@colton1963eggs], and most eggs and larvae prefer temperatures 9-19°C [@cross1999essential]. Butterfish eggs and larvae are widely distributed throughout their range from spring to fall as spawning occurs over their entire range. Larvae are associated with the Gulf Stream, although it is not clear how far they travel [@morse1987marmap]. Later life stages (juveniles and adults) can inhabit surface waters to depth on the continental shelf and into coastal bays and estuaries [@schreiber1973fishes]. Survival is reduced in juveniles and adults below 10°C [@cross1999essential]. Juvenile and adult butterfish feed mainly on planktonic prey including thaliaceans (primarily *Larvacea* and *Hemimyaria*), mollusks (primarily squids), crustaceans, coelenterates, polychaetes, small fishes, and ctenophores [@horn1970systematics]. Recent diet analysis on 2013-2015 trawl specimens illustrates that spring diets are dominated by *Calanus* copepods, amphipods, larvaceans, and fall diets are dominated by amphipods [@suca2018feeding]. There is little information about larval predation; juvenile and adult butterfish are preyed upon by haddock, silver hake, goosefish, weakfish, bluefish, swordfish, sharks (hammerhead), and longfin inshore squid [@bigelow1953fishes_butterfish] [@horn1970systematics]. Butterfish age at maturity is 1-2 years; the maximum lifespan is 6 years although most butterfish live roughly 2-3 years [@horn1970systematics] [@draganik1966rate]. In the Northwest Atlantic, butterfish are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. As of the 2024 stock assessment, the stock is not overfished and overfishing is not occurring [@nefsc2024butterfish]. 
+
+
+## References
+

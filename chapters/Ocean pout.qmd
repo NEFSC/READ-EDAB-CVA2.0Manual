@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Ocean pout
+
+\vspace{-0.5cm}
+
+*Zoarces americanus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean pout_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Ocean pout_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean pout_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean pout_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean pout_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean pout_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Ocean pout_sdm.png")
+```
+
+\newpage
+
+# Ocean pout
+
+\vspace{-0.5cm}
+
+*Zoarces americanus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+@nye2009changing identified an increase in depth of occurrence of ocean pout in the Gulf of Maine. Although ocean pout have been reported to be quite hardy, they appear to have limited tolerance of hypoxic and anoxic conditions; they are common victims of these conditions which occasionally occur in the New York Bight [@azarovitz1976effects]. Ocean pout are sluggish swimmers, which can explain their inability to avoid stressful conditions, such as hypoxia [@steimle1999_pout]. @killen2008lack found that young ocean pout from Newfoundland do not show thermal compensation in response to long-term temperature changes. 
+
+## Life History Synopsis:
+
+Ocean pout are a non-migratory, bottom dwelling fish found along the Atlantic coast from Labrador to Delaware [@steimle1999_pout]. Spawning occurs in the late summer through early winter (peak in September-October) with earlier peaks (August-October) in the south [@wilk1979annual].  Eggs are laid in gelatinous masses in a sheltered place on the bottom, such as rocky crevices, where they are guarded either by one or both parents until hatching [@steimle1999_pout]. Eggs develop in 2-3 months, temperature dependent [@olsen1946studies]. Larvae are about 30 mm long at hatching [@clark1982ocean] and live at the bottom at temperatures below 10°C [@steimle1999_pout]. Juvenile and adult ocean pout use both open and rough habitats. @sedberry1983food reported that juveniles were common during the summer on the sandy, mid- to outer-continental shelf (approximately 35-95 m). In the Gulf of Maine, juveniles occur in shallow coastal waters around rocks and attached algae, and in rivers with saline bottom waters [@auster1985some]. @macdonald1983laboratory reported that ocean pout feed by sorting mouthfuls of sediments for infauna and do not use visual cues to stimulate feeding; they maintained that ocean pout were not very effective at capturing moving prey and rarely left the bottom to feed. @auster1985some and @auster1995patterns, however, considered ocean pout an "ambush predator" that waits in sediment depressions for prey to approach or drift by in the current. Juveniles feed primarily on gammarid amphipods and polychaetes [@sedberry1983food]. Adult ocean pout feed on a variety of benthic invertebrates, including polychaetes, mollusks, crustaceans, and echinoderms [@steimle1999_pout]. Adults reach maturity at 2+ years [@steimle1999_pout], with a maximum age of 18 years [@hoenig1983empirical]. Although they do not migrate, ocean pout move seasonally within a region: offshore in late summer and inshore in the spring in the Gulf of Maine, and offshore to cooler waters in the summer returning inshore in the fall in Southern New England and Georges Bank [@steimle1999_pout]. Ocean pout are managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. As of the 2022 management track assessment, the stock is not overfished and overfishing is not occurring [@nefsc2022ocean]. 
+
+## References
+

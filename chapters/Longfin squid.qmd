@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Longfin squid
+
+\vspace{-0.5cm}
+
+*Dorytheuthis pealeii*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Longfin squid_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Longfin squid_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Longfin squid_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Longfin squid_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Longfin squid_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Longfin squid_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Longfin squid_sdm.png")
+```
+
+\newpage
+
+# Longfin squid
+
+\vspace{-0.5cm}
+
+*Dorytheuthis pealeii*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Cephalopods have been shown to be sensitive to environmental variability and climate change, due to their short lifespan [@moustahfid2021ecological]. Inshore squids, such as longfin, may have complex responses to climate change. As temperatures increase, squids will likely hatch smaller and earlier, grow faster, mature at a smaller size, and have shorter life spans. They may also require more food and oxygen, but a reduced capacity to cope without food [@pecl2008potential]. Longfin squid recruitment may negatively be affected by impacts of increasing ocean acidification on the paralarval stage [@arkhipkin2015world]. Longfin squid raised under elevated pCO^2^ increased hatching time (~24 hours longer) and had shorter mantle lengths as well as significantly reduced statolith surface area (by 25%) and abnormally shaped and porous statoliths [@kaplan2013adverse]. Abundance and distribution changes have been linked to the North Atlantic Oscillation, Gulf Stream, and surface fronts on the outer continental shelf [@dawe2007ocean] [@hendrickson2023cyclical] [@manderson2011ocean].
+
+## Life History Synopsis:
+
+In the Northwest Atlantic, longfin squid are most abundant from Georges Bank to Cape Hatteras although their range expands from Newfoundland to the Gulf of Venezuela [@jacobson2005essential]. The North Atlantic stock undertakes seasonal migrations: moving offshore in the fall to overwinter along the shelf edge and slope and migrating inshore in the spring following warming water temperatures to spawn [@hatfield2002geographic]. More recent studies after the development of statolith aging techniques highlight a peak in spawning from late spring to summer [@hatfield2002geographic] [@macy2001seasonal] and hatching in late summer [@jacobson2005essential]. Some spawning occurs throughout the year both inshore and offshore depending on hatching month and length-at-age [@macy1994application] [@macy2001seasonal], with winter spawning thought to occur primarily south of Cape Hatteras [@hatfield2002geographic]. Eggs incubate for 11 - 27 days on sandy or muddy bottoms attached to solid substrate, with faster development times are warmer temperatures. The duration of the larval stage is unclear, but they occupy coastal surface waters. Once juveniles, they transition from inhabiting surface waters to a demersal lifestyle [@jacobson2005essential]. The Gulf Stream and warm core rings may facilitate the recruitment transport of  larval and juvenile squid northward, but potential for inputs to the population from the Southeast U.S. Continental Shelf and offshore are difficult to quantify [@hatfield2002geographic]. Juveniles and adults are generally demersal and inhabit the continental shelf and upper slope to depths of 400 m. This varies seasonally, with adults occupying shallower habitats in summer and fall, and deeper habitats in the winter. Diel vertical migrations have been reported [@jacobson2005essential]. Juveniles consume planktonic organisms, primarily copepods. Their preferred prey type varies with size [@jacobson2005essential]. Larger individuals feed on crustaceans and small fish. Diets shift seasonally from crustacean-dominated in the spring to fish-dominated in the fall. Cannibalism is observed in individuals larger than 5 cm [@jacobson2005essential]. Longfin squid are prey for a variety of finfish, marine mammals, and birds [@jacobson2005essential]. Most statolith-aging studies suggest that longfin squid have a short lifespan of around 1 year or less, reaching maturity shortly before spawning and senescence [@macy2001seasonal]. Longfin squid are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. The stock is not overfished, and overfishing reference points are not available [@mafmc2025longfin]. 
+
+
+## References

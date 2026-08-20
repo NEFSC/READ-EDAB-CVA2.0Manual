@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Eastern oyster
+
+\vspace{-0.5cm}
+
+*Crassostrea virginica*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Eastern oyster_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Eastern oyster_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Eastern oyster_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Eastern oyster_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Eastern oyster_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Eastern oyster_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Eastern oyster_sdm.png")
+```
+
+\newpage
+
+# Eastern oyster
+
+\vspace{-0.5cm}
+
+*Crassostrea virginica*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Climate change, warmer temperatures, and perhaps different tidal ranges, may increase competition for resources with current competitors, like hooked mussel, invasive species such as *Didemnum* sp., or increase exposure to predators like veined rapa whelk [@white1996predators]. Depletion of oyster beds will also likely have negative effects for many marine species and habitats, for they provide refuge and homes for many fish and invertebrates species and help prevent erosion [@eobrt2007status]. Hurricanes can cover oysters in silt, wash them off beds, or impose extended “freshettes” on oyster beds to the degree that they are significantly impaired and need restoration. This may become more problematic, for hurricanes are thought to increase with increased warming temperatures and climate change [@perret1999oyster]. Since adult oysters are sessile and inhabit mainly highly vulnerable habitats in areas with high climate exposure, their spawning habitat is also highly vulnerable [@farr2021assessment].
+
+## Life History Synopsis:
+
+Eastern oysters are found along the eastern U.S. from the Gulf of St. Lawrence to the Gulf of America. They inhabit brackish and salty waters, forming beds or reefs by attaching to each other or other hard substrate [@ozbay2014eastern]. Eastern oysters are a keystone species, and provide valuable habitat for benthic and intertidal organisms. Oysters are sessile filter feeders, contributing to increased water quality through reduced sediment suspension and nutrient uptake and sequestration [@ozbay2014eastern]. Eastern oyster populations in the Mid-Atlantic and Gulf declined in the 19th and 20th centuries, mainly from anthropogenic factors such as land use, habitat degradation, and overharvesting. Disease mortality from Dermo and MSX continues to diminish oyster recovery [@eobrt2007status]. Aquaculture production of oysters contributes to population recovery and habitat restoration programs across the East Coast [@mackenzie1981biotic]. Oysters spawn during the summer in the North and Mid-Atlantic and throughout most of the year in the South Atlantic when temperatures remain above 20°C and salinities above 10ppt [@berringan1991oyster]. The first larval stage (trochophore) is formed four to six hours following fertilization. Larvae normally settle two to three weeks after hatching, but can last up to 2 months [@eobrt2007status]. Larvae move both by passive and active (as development progresses) transport, although larval transport in estuaries seems to be minimal. A balance is reached where the larvae can find suitable areas to settle while still being retained in estuaries [@eobrt2007status]. Settlement ends at the end of the larval stage, and the larval duration is highly temperature dependent [@shumway1996natural]. @fritz1984selective found that planktotrophic oyster larvae fed upon a variety of phytoplankton taxa (coccoids, centrate diatoms, pennate diatoms, dinoflagellates, and flagellates). @baldwin1991omnivorous found that the larvae are actually omnivorous, preying on both autotrophic and heterotrophic plankton. Predation on oyster larvae is extremely high by filter-feeders in the water column and in the benthos. Along the Atlantic coast, drills have been responsible for mortality on 33% of spat in Long Island Sound. Oysters can compete with other mussels and barnacles for shell and substrate spaces, resulting in increased mortality when competitors are abundant [@kennedy1996biology]. Juveniles and adults feed primarily on phytoplankton and suspended detritus, relying on food-laden water being moved past them in order to extract food from the water column [@langdon1996digestion]. Maturity occurs between 1 and 3 years of age [@fsuml_oyster_lifecycle]. Several ages have been proposed, the most common being 20 years. Oysters in Maryland appear to survive at
+at least 10 years based on plantings at restoration sites which are not thought to have received natural spat sets. It is likely that the maximum longevity is substantially longer than 10 years [@mddnr2025stock]. Wild and aquaculture harvest is managed by individual jurisdictions or states, and management guidelines vary [@ozbay2014eastern].
+
+
+## References

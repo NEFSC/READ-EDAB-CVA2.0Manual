@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Golden tilefish
+
+\vspace{-0.5cm}
+
+*Lopholatilus chamaeleonticeps*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Golden tilefish_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Golden tilefish_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Golden tilefish_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Golden tilefish_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Golden tilefish_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Golden tilefish_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Golden tilefish_sdm.png")
+```
+
+\newpage
+
+# Golden tilefish
+
+\vspace{-0.5cm}
+
+*Lopholatilus chamaeleonticeps*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+  Golden tilefish prefer a very narrow temperature range (8-17°C); increased ocean acidification may have negative impacts on survival, growth, and abundance [@salois2024golden]. @nesslage2021environmental identified a correlation between negative Atlantic Multidecadal Oscillation (AMO) and positive North Atlantic Oscillation (NAO) and golden tilefish recruitment class pulses. Catch per unit effort is influenced by temperature and oceanographic currents (Gulf Stream and Labrador Current) [@nesslage2021environmental]. A large golden tilefish die-off and resulting fishery collapse in the spring of 1882 has been correlated with meanders in the Gulf Stream, suggesting that they are very sensitive to temperature changes [@fisher2014life]. Changes to weather patterns and a rise in stormy conditions along with very cold bottom temperatures can drive golden tilefish off the shelf and cause a decrease in fishing [@salois2024golden]. 
+
+## Life History Synopsis:
+
+Golden tilefish inhabit continental shelf and slope waters along the entire U.S. East and Gulf Coasts, although they are most abundant from Nantucket to Cape May, New Jersey [@steimle1999essential]. Two genetically-different tilefish stocks have been identified in United States waters: the Mid-Atlantic Bight and south of Cape Hatteras into the Gulf of America [@steimle1999essential]. Individuals of many species off Cape Hatteras were smaller and less active than their conspecifics off Virginia. Tilefish are classified as serial or fractional spawners from March to November with a peak in activity in June [@idelberger1988reproductive]. However, with serial or fractional spawners there is some doubt whether all of the eggs in the ovaries are released during a single seasonal spawning cycle. Residual eggs could be resorbed during the winter [@grimes1988reproductive]. Artificially-fertilized eggs hatched in 40 hours at 22-24.6°C; it is likely that egg duration increases in colder temperatures [@fahay1981preliminary]. The duration of the larval stage is unknown. Movements of water masses along the shelf break may play a role in recruitment success, including larval survival and retention near spawning grounds. Strong recruitment pulses have been linked to shifts in the Gulf Stream Index, AMO, and NAO [@salois2024golden]. Little is known about larval diets, but they likely prey on zooplankton, particularly *Calanus* [@steimle1999essential]. Common predators of larval and juvenile tilefish are monkfish, spiny dogfish, and bottom-dwelling sharks [@steimle1999essential]. Post-larval tilefish are primarily sedentary and non-migratory. They settle in waters approximately 8-17°C, known as the "warm belt" (where shelf and slope water meet) on the outer continental shelf and upper slope of the Northwest Atlantic [@able1982burrow]. Juveniles and adults often occupy simple vertical shaft burrows in semi-lithified clay of the shelf break, submarine canyon walls, and flanks around 100-200m depth [@able1982burrow]. Lobster pots, red crab traps, ship wrecks and other artificial structures have also been used by tilefish [@steimle1999essential]. Diet shifts with size, with crustaceans, mollusks, and echinoderms dominating young/small tilefish diets. Adult tilefish are opportunistic benthic foragers, feeding on shrimp, crabs, snails, worms, anemones, sea cucumbers, smaller fish, squid, and bivalves. They are known to scavenge on fresh material and reject rancid bait. Adults will also consume anthropogenic material [@steimle1999essential]. Age at maturity is typically 2-4 years [@steimle1999essential], with a maximum age up to 45 years [@bigelow1953fishes]. The Northwest Atlantic stock is managed by the Mid-Atlantic Fishery Management Council under the Tilefish Fishery Management Plan. The most recent benchmark stock assessment occurred in 2024. The stock is not overfished, but overfishing is occurring and the Mid-Atlantic stock is reduced to end overfishing [@nefsc2024golden].
+
+## References
+

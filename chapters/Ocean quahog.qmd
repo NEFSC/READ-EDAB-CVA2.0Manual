@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Ocean quahog
+
+\vspace{-0.5cm}
+
+*Arctica islandica*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean quahog_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Ocean quahog_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean quahog_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean quahog_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean quahog_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Ocean quahog_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Ocean quahog_sdm.png")
+```
+
+\newpage
+
+# Ocean quahog
+
+\vspace{-0.5cm}
+
+*Arctica islandica*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Radiocarbon aging on ocean quahog shells suggest past (200 years) ocean quahog distributions inshore of their current range, indicating a range shift coinciding with the regression of the Cold Pool after the Little Ice Age [@leclaire2022historical]. With settlement occurring at the end of the larval stage, it may be presumed that temperature impacts settlement rate. @weinberg2002influence note that an increase in temperature would shift the species offshore and north. Future warming conditions are predicted to result in range shifts in Atlantic surfclams that would lead to potential competition for food and space between surfclams and ocean quahogs [@stromp2023evaluation] [@spencer2024climate]. 
+
+## Life History Synopsis:
+
+Ocean quahogs are bivalve mollusks that inhabit the Northeast U.S. Continental Shelf from Newfoundland to Cape Hatteras [@cargnelli1999_oq]. The ocean quahog is among the longest-lived and slowest growing of marine bivalves, reaching maturity around 13 years of age and harvestable size at age 20 [@cargnelli1999_oq]. Maximum ages have been documented as high as 507 years old, with ages over 300 years old more common in the Northwest Atlantic [@sower2023examination]. Spawning occurs either in summer or fall, and can extend for months, releasing eggs and sperm into the water column at low levels over time [@cargnelli1999_oq]. Multiple annual spawnings may occur at the individual and population levels [@mann1982seasonal]. Eggs and larvae drift with currents until metamorphosis, then settle to the bottom [@mafmc1997_oq]. Larval development, at minimum, lasts for 55 days and decreases with increasing temperature [@lutz1981experimental]. Larvae go through three stages of development (trochophores, veligers and pediveligers) with the duration of each stage being temperature dependent [@cargnelli1999_oq]. @vandewater1997biological noted that wind-forced circulation may play a significant role in planktonic and benthic recruitment on Georges Bank and that interannual differences in these winds can yield very different abundance patterns over the bank. Once settled to the bottom, juvenile ocean quahogs are found offshore in sandy substrates, but may survive in muddy intertidal environments if protected from predators [@kraus1989growth]. Cross-shelf distributions of juveniles and adults remain within a 10°C optimal temperature range, as temperatures above 16°C limit distribution [@cargnelli1999_oq]. Ocean quahogs are suspension feeders on phytoplankton, using their relatively short siphons which are extended above the surface of the substrate to pump in water [@cargnelli1999_oq]. Juvenile and small ocean quahogs are commonly preyed upon by crustaceans (rock crabs, sea stars) and fish (haddock, cod) [@cargnelli1999_oq]. Ocean quahogs are managed by the Mid-Atlantic Fishery Management Council under the Atlantic Surfclam-Ocean Quahog Fishery Management Plan. The species is mainly harvested off of Maine and Long Island. The last stock assessment was conducted in 2019, where the stock was not overfished and overfishing was not occurring [@mafmc2025_oq]. 
+
+
+## References

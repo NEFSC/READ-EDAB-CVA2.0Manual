@@ -1,0 +1,113 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic sea scallop
+
+\vspace{-0.5cm}
+
+*Placopecten magellanicus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic sea scallop_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Atlantic sea scallop_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic sea scallop_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic sea scallop_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic sea scallop_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic sea scallop_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Atlantic sea scallop_sdm.png")
+```
+
+\newpage
+
+# Atlantic sea scallop
+
+\vspace{-0.5cm}
+
+*Placopecten magellanicus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+The Atlantic sea scallop population in the Northwest Atlantic is subject to climate-related environmental stress from rising temperatures and ocean acidification [@zang2022modeling]. Scallop habitat can be degraded by trawling/dredging activity [@maguire2002effects]. Scallop feeding behaviors are temporarily impacted by noise pollution associated with offshore wind construction [@jezequel2022pile]. Changes in temperature and food availability are likely the predominant drivers for reduced growth in sea scallops [@cranford1998situ]. @rheuban2018projected modeled the Atlantic sea scallop fishery under a range of climate and management scenarios and found the possibility of reduced biomass up to 50% by the end of this century. Results of a scope for growth model with increased warming food deficiency indicated a range contraction of suitable sea scallop habitat in the Mid-Atlantic Bight [@zang2022modeling]. A second scope for growth model by @zang2023effects investigated the relationship between sea scallop size and temperature. Under future climate warming, sea scallops exhibited a range contraction and decline in maximum shell height. An integrated assessment model simulating sea scallop population dynamics with oceanographic and socioeconomic influences indicates that sea scallop harvests could experience a substantial decline by 2050 under increased CO^2^ emissions (with the assumption that ocean acidification decreases recruitment and slows growth and warming increases growth) [@cooley2015integrated].
+
+
+## Life History Synopsis:
+
+Atlantic sea scallops are one of the most economically important fisheries in the Northwest Atlantic, with average annual ex-vessel revenues of over $500 million [@zang2022modeling]. Their habitat ranges from the Gulf of St. Lawrence to Cape Hatteras, North Carolina [@stewart1994environmental] with primary fishing areas in Georges Bank, the Great South Channel, and the Mid-Atlantic Bight [@hart2006long]. After a period of severe overfishing in the 1970s to 1990s, regulations including effort reductions, gear restrictions, and closed areas were introduced to rebuild the stock [@hart2006long]. Spawning occurs in late summer or early fall, although smaller spawning events at other times of the year are possible [@culliney1974larval]. Gametes from other scallops, agitation, or tides may trigger scallop spawning [@parsons1992intra]. Larvae reside in the water column for 5-7 weeks [@thouzeau1991spatial] and circulate with residual currents ranging from 6-25 cm/s [@culliney1974larval]. Larval exchange is influenced by duration and depth of planktonic drift, gyre strength, and weak cross-isobath flow [@thouzeau1991spatial]. The transition to the benthos of the freeswimming larvae occurs at a size of about 0.25 mm shell height and is accompanied by drastic changes in diet, morphology, and locomotory ability [@bourne1965comparison]. Mean fall temperatures impact the time larvae take to settle [@tremblay1994drift]. Sea scallop larvae are potentially preyed on by filter feeders and larval and adult planktivores [@tremblay1986horizontal]. Juvenile Atlantic sea scallops are mainly found on gravel, small rocks, shells, and among branching animals and plants that permit attachment of juveniles [@thouzeau1991spatial] and feed on suspended particles, primarily phytoplankton and microzooplankton [@shumway1987food]. Adult sea scallops are filter feeders on phytoplankton and other suspended organic particulates from the water [@shumway1987food]. Adult sea scallops prefer temperatures of 5-18°C [@hart2004essential]. Predation on juvenile and adult sea scallops decreases with shell height; common predators include Atlantic cod, wolffish, sculpins, winter and yellowtail flounder, as well as boring polychaetes, sea stars, crabs, and lobsters [@hart2004essential]. The New England Fishery Management Council manages Atlantic sea scallops in federal waters under the Atlantic Sea Scallop Fishery Management Plan. As of the 2020 Management Track Assessment, the stock is not overfished and overfishing is not occurring [@nefsc2020sea]. 
+
+
+## References
+

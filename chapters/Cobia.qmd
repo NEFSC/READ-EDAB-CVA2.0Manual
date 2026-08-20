@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Cobia
+
+\vspace{-0.5cm}
+
+*Rachycentron canadum*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Cobia_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Cobia_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Cobia_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Cobia_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Cobia_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Cobia_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Cobia_sdm.png")
+```
+
+\newpage
+
+# Cobia
+
+\vspace{-0.5cm}
+
+*Rachycentron canadum*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Cobia off the eastern U.S. Atlantic coast currently overwinter offshore in waters south of North Carolina. Suitable habitat increases in the summer months with warming temperatures. Habitat distribution models suggest increased habitat suitability northward, shifting distributions poleward, and possible earlier seasonal migrations [@crear2020contemporary]. This shift northward could prompt revision of management regulations as the fishery expands to new states or regions. Early life stage cobia may be somewhat resistant to projected rises in CO^2^ levels [@ebanks2013influence], although juvenile cobia in a laboratory study exhibited poor growth performance and reduced feeding at elevated temperatures [@le2024impact]. 
+
+## Life History Synopsis:
+
+Cobia are a pelagic, continental shelf fish distributed from Massachusetts to Argentina but are most abundant from Virginia to the Gulf of America [@shaffer1989synopsis]. Two stocks are recognized in the United States: one along the Atlantic coast south to Georgia and the other along the Atlantic coast of Florida into the Gulf [@sedar2020sedar58]. Cobia are batch spawners, and move inshore to spawn when temperatures reach 20-25°C. They spawn over a period of 4-6 weeks, peaking in June-July in Virginia [@joseph1964spawning]. Cobia eggs hatch within 36 hours of fertilization. Given the short time frame between fertilization and hatching, it is likely that eggs and larvae do not travel far from spawning grounds [@shaffer1989synopsis]. Little is known about the feeding habits of larval and juvenile cobia. Adult cobia are generalist carnivores, feeding on benthic-epibenthic crustaceans (*Portunids* and *Callinectes* sp.), teleosts, cephalopods, and elasmobranchs [@smith1995life]. Juveniles are pelagic and often associated with structure for feeding and shelter. Juveniles and adults can be found near shipwrecks, buoys, shellfish beds, and submerged aquatic vegetation [@sedar2020sedar58]. Few predators of cobia in U.S. Atlantic waters are known, although dolphinfish (*Coryphaena hippurus*) have been reported to prey on small cobia [@shaffer1989synopsis]. Over 50% of cobia are mature by age 2, and can live up to 15 years [@sedar2020sedar58]. Adults are highly migratory. Cobia exhibit a general migratory trend of overwintering in south Florida and the Florida Keys waters, and then migrating north along the Atlantic and Gulf coasts in late winter-early spring.  They likely return to south Florida coastal waters in the late fall [@hendon2008seasonal]. The Atlantic migratory cobia are managed by the Atlantic States Marine Fisheries Commission. The population is not overfished and overfishing is not occurring as of the last benchmark stock assessment in 2020 [@sedar2020sedar58].
+
+
+## References

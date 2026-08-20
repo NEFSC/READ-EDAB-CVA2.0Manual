@@ -1,0 +1,113 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Northern Quahog
+
+\vspace{-0.5cm}
+
+*Mercenaria mercenaria*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Northern Quahog_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Northern Quahog_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Northern Quahog_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Northern Quahog_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Northern Quahog_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Northern Quahog_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Northern Quahog_sdm.png")
+```
+
+\newpage
+
+# Northern Quahog
+
+\vspace{-0.5cm}
+
+*Mercenaria mercenaria*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Temperature is the decisive factor for final gamete maturation in northern quahogs. @kennish1975effects cited 21 to 25°C as the required or preferred temperature range for spawning. Metamorphosis is inhibited at salinities below 17.5 to 20 ppt [@stanley1983species]. Increased freshwater intrusions (man-made or otherwise) have resulted in clam die offs. Eutrophication of habitat has resulted in reduced growth and health of stocks [@carmichael2004changes]. Recent research suggests that quahogs are relatively resilient to suboxic conditions, which may help protect them from predators that are more sensitive to these conditions [@altieri2006local]. Northern quahogs exposed to higher temperatures and elevated pCO^2^ led to decreased shell hardness and energy deficiency [@ivanina2013interactive]. Alternatively, northern quahogs exposed to marine heat wave conditions exhibited increased absorption efficiency, respiration rate, excretion rate, and scope for growth, indicating their ability to recover from persistent or repeated marine heat waves [@liang2024hard].
+
+## Life History Synopsis:
+
+The northern quahog, or hard clam, is a hard shell clam inhabiting intertidal and subtidal waters from the Gulf of St. Lawrence south to Florida [@kraeuter2001biology]. Spawning occurs from May through August, depending on latitude and temperature. Female hard
+clams require 2 - 2.5 months to spawn out completely, but the greatest release of eggs is during the initial spawning of the season [@stanley1983species]. Eggs hatch within 12-14 hours. Larvae are planktonic until metamorphosis, which occurs within 5-7 days at 30°C, or 16-24 days at 18°C [@stanley1983species] [@rice1992review]. Eggs may be carried by currents up to 25km from spawning sites. Larvae feed on phytoplankton, primarily dinoflagellates and use physical transport mechanisms to travel to the entrance of estuaries [@stanley1983species]. The clams prefer to settle on sandy substrate with a few small rocks and/or shells, and set more densely in sand than mud [@mackenzie1979management]. Juveniles likely consume phytoplankton or small zooplankton. The adult hard clam feeds by filtering out plankton and microorganisms that are carried along the bottom by currents [@stanley1983species], burrowing into the sediment and leaving their siphons exposed to feed. However, adults cease filter feeding at 6°C [@kraeuter2001biology]. They are preyed upon by gastropods, crabs, and starfish [@stanley1983species]. These clams have slow growth rates, reaching maturity at 1-3 years with a maximum lifespan of 12-20 years [@bricelj1992aspects], although they have been found up to 46 years [@ridgway2011new]. There are numerous reports of isolated incidents of hard clam disease causing high mortality rates. Disease may be related to a parasite (QPX - Quahog parasite unknown). The prevalence of QPX appears to be increasing [@smolowitz1998observations] [@dove2004histological]. Quahogs occur in areas of harmful algal blooms (HABs) and may act to reduce prevalence and length of HABs due to filtration. Negative effects of HABs on quahog have been noted, specifically the presence of HABs have been shown to impact growth rates [@cerrato2004effect]. Because these clams are primarily estuarine and inhabit specific bays and coastal zones, the fishery is managed on a localized, state-by-state basis rather than by federal fishery councils. Primary management tools include minimum legal size limits (typically 50 mm), gear restrictions, and daily bag limits [@ncdmf2025north] [@njdep2014inventory].  
+
+
+## References
+

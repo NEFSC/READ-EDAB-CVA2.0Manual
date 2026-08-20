@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Pollock
+
+\vspace{-0.5cm}
+
+*Pollachius virens*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Pollock_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Pollock_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Pollock_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Pollock_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Pollock_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Pollock_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Pollock_sdm.png")
+```
+
+\newpage
+
+# Pollock
+
+\vspace{-0.5cm}
+
+*Pollachius virens*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Because of the narrow range for when spawning occurs (4.5-6°C) [@cargnelli1999_pollock] [@collette2002bigelow], increase in temperatures and climate change could have implications on the stock's success. The center of biomass for Northwest Atlantic pollock has not shifted and distribution has not moved northward, although they have been recently found at greater depths [@nye2009changing]. @murawski1993climate noted a range contraction, increased depth of occurrence, and increased temperature of occurrence in pollock and other deep-water fish in the Gulf of Maine. 
+
+## Life History Synopsis:
+
+Atlantic pollock are found in the Northwest Atlantic from the Grand Banks and Gulf of St. Lawrence to the Delmarva Peninsula, with highest abundances on the Scotian Shelf and in the Gulf of Maine [@cargnelli1999_pollock]. Spawning takes place from September to April on the Scotian Shelf and November to February in the Gulf of Maine [@cargnelli1999_pollock]. Optimal egg development occurs between 2.2 and 8.9°C [@cargnelli1999_pollock]. Eggs are pelagic and free-floating, usually found in water 50-250 m in depth. Larvae are normally occurring from the shore out to the 200 m depth contour, but have been reported in waters as deep as 1550 m [@hardy1978development]. Eggs and larvae undergo significant movement away from the spawning area as they drift with currents. For example, larvae from the northern Gulf of Maine are thought to originate from spawning grounds in the southern Gulf of Maine [@hardy1978development]. Larvae are pelagic, consuming generally the most abundant copepods in their preferred size range, and metamorphose into juveniles at 3-4 months of age [@cargnelli1999_pollock]. Juveniles have been reported over a wide variety of substrates, including sand, mud, or rocky bottom and vegetation [@ojeda1990diversity]. Inshore subtidal and intertidal zones are utilized by age 0-1 juveniles and serve as important nursery areas. Age 2+ juveniles move offshore, inhabiting depths of 130-150 m [@hardy1978development]. The primary prey of juvenile pollock are crustaceans. Euphausiids, in particular *Meganyctiphanes norvegica*, are the most important crustacean prey of juveniles [@tyler1972food]. Fish and mollusks make up a smaller proportion of the juvenile diet; however, in some cases fish may play a more important role in the diet [@collette2002bigelow]. Pollock reach maturity at 3-7 years of age, longer for females, and reach a maximum age of 24 years [@nefsc201355th]. Adults inhabit a wide range of depths, 35-365 m, but most occur within the 137 m depth contour and depths of 100-125 m are preferred [@scott1982depth]. They prefer temperatures 0-14°C , although they tend to avoid temperatures > 11°C and < 3°C [@scott1982depth]. For most of the year, adult pollock undergo minor inshore-offshore movements linked to temperature. Pollock migration rates vary with stock areas, but there is considerable movement across the Scotian Shelf and Gulf of Maine [@mayo1989patterns]. The diet of adults consists of, in order of decreasing importance, euphausiids, fish and mollusks. *M. norvegica* is the single most important prey item and Atlantic herring is the most important fish species [@steele1963pollock]. The primary predator of adult pollock are monkfish, although spiny dogfish and other pollock also prey on adults [@cargnelli1999_pollock]. Atlantic pollock are managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. The stock is not currently overfished and overfishing is not occurring [@nefsc2024pollock]. 
+
+
+## References

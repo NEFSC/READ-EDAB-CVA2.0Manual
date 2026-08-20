@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Blue crab
+
+\vspace{-0.5cm}
+
+*Callinectes sapidus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Blue crab_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Blue crab_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Blue crab_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Blue crab_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Blue crab_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Blue crab_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Blue crab_sdm.png")
+```
+
+\newpage
+
+# Blue crab
+
+\vspace{-0.5cm}
+
+*Callinectes sapidus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+As an estuary dependent species, blue crab habitats have been degraded through urbanization impacts including hypoxia, reduction in seagrass beds, and changes in timing and volume of freshwater inputs. Low oxygen conditions may force crabs into shallower, more spatially restricted areas of Chesapeake Bay, increasing their vulnerability to predation or capture. Prolonged hypoxia may limit food resources (mainly infaunal bivalves) in affected areas even after normoxic conditions resume [@aguilar2008importance]. @glandon2019winter estimated water temperatures in Chesapeake Bay through 2100 and found that a 50% shorter winter will increase overwinter survival rates in blue crab by 20%. Faster growth, a longer growing season, and lower winter mortality would lead to increased productivity [@glandon2019winter]. Blue crabs may also adapt phenologically to warming temperatures by shifting the timing of biological events such as spawning [@schneider2024reproductive]. Blue crabs have been observed in the Gulf of Maine, indicating a possible range extension from climate-driven rising temperatures [@johnson2015savory]. 
+
+## Life History Synopsis:
+
+  The blue crab’s native range is along the western Atlantic coast from Nova Scotia to Argentina, including the Gulf of America [@hill1989species]. The blue crab fishery is the most valuable fishery in the Chesapeake Bay [@hines2007ecology]. In Chesapeake Bay, adults spawn from May to October, however spawning is likely more limited in cooler waters [@umces2011stock]. To spawn, adults aggregate in low salinity areas of upper estuaries to mate. Adult females then travel to higher salinity spawning grounds [@hill1989species]. The timing of the migration varies with water temperature and occurs earlier in the year at lower latitudes [@aguilar2008importance]. Eggs (7-14 days) and larvae (40-70 days) are pelagic [@hill1989species] and are carried by currents offshore before using physical transport methods to return to bays and eventually estuaries [@millikin1984synopsis]. Larvae require temperatures of 20-30°C and salinities of 10-30 ppt for proper development [@hill1989species]. Settlement into estuarine habitats is associated with Ekman flow from southward wind events resulting in strong subtidal flow into the estuaries. Once in the estuary, settlement and metamorphosis of the megalopae are stimulated by chemical cues associated with appropriate nursery habitat [@epifanio2016behavioral]. Larvae are phytoplanktivorous, consuming dinoflagellates and copepod nauplii [@hill1989species]. They are preyed upon by a large number of estuarine and marine animals , including other commercially important species such as the striped bass [@hill1989species]. Once reaching the juvenile stage, blue crabs gradually migrate into shallower, less saline waters in upper estuaries and rivers, where they grow and mature. Males, which prefer low-salinity waters, generally migrate farther upstream than do females, which tend to stay in the lower rivers and estuaries [@hill1989species]. Post-larval and juvenile crabs are considered general scavengers, bottom carnivores, detritivores, and omnivores, consuming a wide range of dead and live fish, crabs, organic debris, shrimp, mollusks (including mussels, clams, oysters, and snails), and aquatic plants [@hill1989species]. Adult blue crab prey is very similar to juveniles; they will consume most available prey and freely switch among preferred prey types [@hill1989species]. Juvenile and adult blue crabs are consumed by mammals, sea turtles, birds, and several fishes [@hill1989species]. Blue crabs reach maturity at 12-18 months, with a maximum lifespan around 4 years of age and a maximum size of 9 inches carapace length (CL) [@umces2011stock] [@millikin1984synopsis]. Adults prefer temperatures of 9-10°C for feeding, growth, and migration [@hines2007ecology]. In the Northwest Atlantic, blue crabs are managed by the Maryland Department of Natural Resources, Virginia Marine Resources Commission, and Potomac River Fisheries Commission. These entities work together with NOAA to conduct stock assessments for blue crab. The Chesapeake Bay blue crab population is not overfished based on current biological reference points, but abundance and recruitment remain low. A benchmark stock assessment is underway to improve understanding of blue crab population dynamics and its fishery [@cbsac2025advisory]. 
+
+
+## References`
+

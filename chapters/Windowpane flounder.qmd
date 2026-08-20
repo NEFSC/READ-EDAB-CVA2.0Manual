@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Windowpane flounder
+
+\vspace{-0.5cm}
+
+*Scophthalmus aquosus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Windowpane flounder_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Windowpane flounder_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Windowpane flounder_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Windowpane flounder_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Windowpane flounder_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Windowpane flounder_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Windowpane flounder_sdm.png")
+```
+
+\newpage
+
+# Windowpane flounder
+
+\vspace{-0.5cm}
+
+*Scophthalmus aquosus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Percent biomass of windowpane flounder in the Northwest Atlantic increases with changes in seasonality, from cold springs, to warm springs, to fall [@Dunn2016]. Increasing temperatures (> 7-10°C) have been shown to displace windowpane flounder [@Bell2021]. In New York/New Jersey Harbor, cold winter temperatures decreased windowpane abundance and overwinter mortality in small juveniles [@Wilber2016]. Overwintering success appears to be driven in part by temperatures, with extreme cold conditions resulting in high overwinter mortality of age-0 individuals. This likely has a larger impact on fall-spawned juveniles since resilience to extreme cold temperatures is size-dependent and fall-spawned individuals have less time to grow [@Neuman2009_windowpane]. Individual windowpane have also demonstrated avoiding hypoxic conditions [@Cadrin2021].
+
+## Life History Synopsis:
+
+Windowpane flounder inhabit shallow waters from the Gulf of St. Lawrence to Florida, but are most abundant from Georges Bank to Chesapeake Bay [@Chang1999_windowpane]. They reach maturity around 1.5 years of age and can live up to 8 years [@Cadrin2021]. Windowpane spawn from February to November on the inner continental shelf, Georges Bank, and within estuaries. Spawning occurs in the Mid-Atlantic Bight in both spring and fall, whereas spawning in Georges Bank peaks in summer [@AbleFahay2010] [@Cadrin2021]. Windowpane spawn in the evening or at night on or near bottom at temperatures ranging from 6-21°C  [@Chang1999_windowpane]. Eggs hatch after 8 days. The duration of the larval stage is unknown, but eggs and larvae remain in the water column feeding on suspended copepods [@Chang1999_windowpane]. Surveys from Canadian waters suggest that small (< 10 cm TL) windowpane consume bay shrimp and crab larvae, which may be a transition point from zooplankton prey to larger prey items [@Hanson2014]. Larvae settle to the bottom at approximately 10 mm TL. However, individuals collected on Georges Bank may be planktonic up to 20 mm. There is no indication that settlement is driven by environmental factors [@Morse1995_windowpane]. Juveniles that settle in shallow inshore waters move to deeper offshore waters as they grow. Juveniles inhabiting Georges Bank (< 60 m) undergo seasonal movements to deeper waters along the southern flank of the Bank occur during late autumn, as bottom temperatures drop, and overwintering occurs in deeper areas until late spring [@KleinMacPhee2002_windowpane]. From Massachusetts to the Gulf of Maine, they can be found in estuaries and on the shelf [@Chang1999_windowpane]. Adults are found on the benthos in waters < 100 m and tolerate a wide range of temperatures (0-26.8°C) [@Chang1999_windowpane]. Adult windowpane may travel along the coast for considerable distances. Juveniles and adults may migrate to nearshore or estuarine habitats in the Mid-Atlantic Bight. Seasonal movements into offshore overwintering habitats have also been documented [@Chang1999_windowpane]. Stomach content data collected during Northeast Fisheries Science Center (NEFSC) bottom trawl surveys indicate windowpane feed on small crustaceans (e.g., mysids and decapod shrimp) and various fish larvae including hakes and tomcod, as well as their own species [@Langton1981] [@Chang1999_windowpane]. Windowpane flounder are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. The fishery is divided into two stocks: Northern Gulf of Maine/Georges Bank and Southern New England/Mid-Atlantic. Overfishing and overfished status of the northern stock is unknown, as the assessment has not estimated reference points since 2020 [@NEFSC2023a_windowpane]. The southern stock is not overfished and overfishing is not occurring [@NEFSC2023b_windowpane].
+
+
+## References
+

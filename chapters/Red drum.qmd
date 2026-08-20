@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Red drum
+
+\vspace{-0.5cm}
+
+*Sciaenops ocellatus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Red drum_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Red drum_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Red drum_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Red drum_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Red drum_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Red drum_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Red drum_sdm.png")
+```
+
+\newpage
+
+# Red drum
+
+\vspace{-0.5cm}
+
+*Sciaenops ocellatus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Red drum recruitment has been correlated with wind directions and sea surface temperature [@asmfc2024reddrum]. In North Carolina, the duration and magnitude of N and NE winds in August was twice as strong in high recruitment years. Elevated nearshore sea surface temperatures and coastal productivity (high chlorophyll a) were positively correlated with strong year classes [@goldberg2022analysis]. Red drum acclimated to higher temperatures had a higher standard metabolic rate, decreased critical oxygen threshold, and reduced ability to recover from exercise. Crude oil exposure (hypoxic conditions) also resulted in lower metabolic rates and reduced ability to recover from exercise, and combined with climate-induced increases in temperature, are likely to impact red drum respiratory performance and fitness [@ackerly2021effects]. Laboratory experiments on early life stage red drum resulted in decreased survival and increased heart rate when exposed to elevated pCO^2^ ; however the effects were less severe on red drum compared to similar studies on other species [@lonthair2017early]. 
+
+## Life History Synopsis:
+
+Red drum, or redfish, are a popular recreational fish species found in estuarine and inshore waters from Massachusetts to Florida. The stock is divided into northern and southern subunits from New Jersey to North Carolina and South Carolina to Florida, respectively [@asmfc2024reddrum]. Spawning occurs within 45-60 days between August and October and where currents can move larvae/eggs into nearby estuaries and nursery habitats [@asmfc2024reddrum]. Optimal spawning temperatures in laboratory studies ranged between 22 - 25°C, with spawning observed from 22 - 30°C [@asmfc2024reddrum]. Eggs hatch within 24-36 hours [@peters1987early]. Larvae settle at approximately 17 days old in Florida estuaries [@rooker1998vulnerability]. Temperatures of 25°C and salinities around 30 are optimal for hatching success and larval survival. Larvae growth rates were also correlated with ocean temperatures in the Gulf of America [@asmfc2024reddrum] [@comyns1989age]. Larvae in Florida consume abundant copepods, whereas juveniles consume abundance amphipods, shrimp, and mysids, switching to crabs and fish as they grow [@peters1987early]. Juveniles rely on structural nursery habitats such as seagrasses for protection from predators. Juveniles are most abundant in estuarine waters and inlets, while fish older than age four inhabit deeper waters [@rooker1998vulnerability]. Adults in the Gulf of America (TX) consume white shrimp, gulf menhaden, and blue crab. Dominant prey species shift seasonally (shrimp in fall, menhaden in spring) while some prey species are consistent throughout the year (crab) [@scharf2000feeding]. Age at maturity in red drum off North Carolina is 3-4 years, with a maximum age of 62 years [@asmfc2024reddrum]. Red drum move out of estuaries into coastal waters as they mature. Seasonal movements with seasonal site fidelity have been observed in Georgia but some populations (particularly in the southern stock) are resident year round. Seasonal migrations between Virginia and North Carolina have been observed between May and September [@asmfc2024reddrum]. The northern stock is managed by the Atlantic States Marine Fisheries Commission. The northern stock is not overfished and overfishing is not occurring, however the southern stock is overfished and overfishing is currently occurring [@asmfc2024reddrum].
+
+## References
+

@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic mackerel
+
+\vspace{-0.5cm}
+
+*Scomber scombrus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic mackerel_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Atlantic mackerel_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic mackerel_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic mackerel_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic mackerel_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic mackerel_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Atlantic mackerel_sdm.png")
+```
+
+\newpage
+
+# Atlantic mackerel
+
+\vspace{-0.5cm}
+
+*Scomber scombrus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Atlantic mackerel are sensitive to temperature changes, particularly temperatures greater than 5°C [@overholtz2011]. From 1968 to 2008, the distribution of mackerel in the Northwest Atlantic has shifted roughly 250km north and east in addition to changes in depth distribution to more shallow on-shelf waters. These changes in position and depth are known to be correlated with the gradual warming of the Northwest Atlantic [@overholtz2011]. Atlantic mackerel egg distribution has also shifted northeastward as a consequence of warming, depleting egg production in important spawning locations in southern New England [@richardson2020]. @bruge2016 projected changes in Northeast Atlantic mackerel spawning distribution under future climate scenarios, and found that the spawning center of gravity is expected to shift westward and northward. @mbaye2019 investigated effects of environmental conditions on Atlantic mackerel spawning habitat in the Gulf of St. Lawrence. Generalized additive model (GAM) results showed that spawning habitat in the Gulf of St. Lawrence could expand and extend to western and southern Newfoundland. 
+
+## Life History Synopsis:
+
+Atlantic mackerel in the Northwest Atlantic inhabit cold and temperate continental shelf waters from the Gulf of St Lawrence to Cape Lookout, North Carolina [@studholme1999]. Spawning occurs from April to August in the Northwest Atlantic and progresses from south to north with warming temperatures and following migration patterns [@sette1943]. There are two spawning contingents: the southern contingent spawns from April to July in the Mid-Atlantic Bight and Gulf of Maine, and the northern contingent spawns in the southern Gulf of St. Lawrence in June and July [@berrien1982] [@morse1987]. Temperature is a cue for spawning. Spawning does not occur until water has warmed to 8°C with most egg production occurring between 9-14°C [@sette1943]. More recent work has shown that mackerel spawning and migration timing is negatively correlated with sea surface temperature [@jansen2011]. Early life stage development happens quickly, with eggs hatching in 4-7.5 hours, depending on temperature [@berrien1982]. Larvae (< 13 mm) occur primarily in offshore waters from Chesapeake Bay to southern Gulf of St. Lawrence [@sette1943]. Larval and juvenile depth varies diurnally and with age [@collette2002_mack]. Larvae feed primarily on zooplankton and copepods, and larvae > 6.4 mm are known to experience cannibalistic behavior [@castonguay2008]. Juveniles rely on water column habitats, both on the shelf, and in estuaries [@guyant2022]. Juveniles and adults are opportunistic feeders that prey on a wide range of crustaceans, copepods, planktonic organisms, and fishes [@sette1950]. Squid, seabirds and larger piscivores, including Atlantic cod, prey on juvenile mackerel [@studholme1999]. Adults over winter in moderately deep water, 70-200 m, along the continental shelf. After migrating inshore in April-May, they form the two spawning aggregations [@berrien1982]. Predators of adult mackerel include larger fish, sharks, skates, seabirds, and marine mammals (primarily whales and seals) [@studholme1999]. Atlantic mackerel are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. As of the 2025 assessment, the stock is not overfished and overfishing is not occurring, but is rebuilding to target levels [@nefsc2025_mack].
+
+
+## References
+

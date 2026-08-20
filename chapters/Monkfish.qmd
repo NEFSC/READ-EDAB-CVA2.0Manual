@@ -1,0 +1,110 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Monkfish
+
+\vspace{-0.5cm}
+
+*Lophius americanus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Monkfish_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Monkfish_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Monkfish_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Monkfish_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Monkfish_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Monkfish_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Monkfish_sdm.png")
+```
+
+\newpage
+
+# Monkfish
+
+\vspace{-0.5cm}
+
+*Lophius americanus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+In Icelandic waters, monkfish distribution changes and increased stock size have been correlated with rising water temperatures and expanding suitable habitat [@solmundsson2007recent]. Monkfish movement and relative abundance on Georges Bank is driven by seasonal changes in bottom temperature. Their distribution may shift in response to future changes in thermal habitat, highlighting the need for further management strategies [@siemann2018summering]. Maximum size of monkfish in the Northwest Atlantic has decreased, and is related to seasonality and bottom temperature [@charbonneau2020pervasive]. 
+
+## Life History Synopsis:
+
+Monkfish are a bottom dwelling fish ranging from the northern Gulf of St. Lawrence to Cape Hatteras. The commercial fishery operates from Maine to North Carolina [@steimle1999monkfish]. Spawning takes place from spring through early autumn, progressing from south to north over a 6 month period [@richards2008population]. Pelagic larvae hatch from egg veils (up 12 m long and 1.5 m wide) 1-3 weeks after being laid, depending on temperature. Larvae remain in the egg veil 2-3 days after hatching. Monkfish larvae feed on zooplankton, including copepods, crustacean larvae, and chaetognaths [@bigelow1953fishes]. Larval to juvenile transition occurs at 5-10 cm TL (total length) when the elongate fins and body gradually assume the adult form [@nefsc2010fifty]. Once larvae transition to juveniles, they move to the benthos. Juveniles and adults settle on mud, gravelly sand, algae, and rock substrates [@steimle1999monkfish]. Once moved to the bottom, juveniles can eat sand lance, but invertebrates such as red shrimp and squid make up the majority of their diet. The amount of invertebrates eaten by juveniles decreases as they get older [@steimle1999monkfish]. Monkfish are ambush predators and opportunistic feeders; prey found in their stomachs include a variety of benthic and pelagic species. Monkfish are also cannibalistic and can eat sea birds and diving ducks. Adults spend most of their time resting on the bottom, but have been reported at the surface after a storm event, preying on seabirds [@richards2008population]. Large monkfish have few predators, but smaller monkfish are common prey for swordfish, sharks, and skates [@steimle1999monkfish]. Monkfish move by slow swimming or by using their sturdy pectoral fins to "walk." Despite slow speeds, juveniles and adults migrate in response to thermal conditions, spawning, or food availability [@steimle1999monkfish]. Monkfish were found on Georges Bank in summer and early fall, and found in deeper waters/on the edge of the bank in winter months, suggesting that movements may be influenced by temperature [@rountree2006extraction]. Age at maturity is 4-5 years, longer for females and for the Mid-Atlantic stock [@richards2008population]. Maximum age is listed at 7 years for males and 12-14 years for females [@nefsc2010fifty]. Monkfish in the Northwest Atlantic are divided into two stocks: the Gulf of Maine/Northern Georges Bank and Southern Georges Bank/Mid-Atlantic. Both stocks do not have stock assessments that provide indices on overfishing and overfished status, although an index based assessment is used for catch advice [@deroba2022draft]. 
+
+## References

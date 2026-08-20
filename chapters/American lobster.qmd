@@ -1,0 +1,110 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# American lobster
+
+\vspace{-0.5cm}
+
+*Homarus americanus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/American lobster_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/American lobster_sdm.png")
+```
+
+\newpage
+
+# American lobster
+
+\vspace{-0.5cm}
+
+*Homarus americanus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+The Northwest Atlantic has been warming at an exceptionally fast rate [@saba2016], which has contributed to declines in fecundity and population size in Southern New England [@goldstein2022] while the fishery in the central Gulf of Maine has increased dramatically [@lebris2018]. Temperatures have increased in the lobster’s inshore range, and evidence suggests that the productivity of the stock is severely compromised with increased thermal stress and disease [@asmfc2025]. The assemblage of predators of American lobster has shifted with warming conditions in the Gulf of Maine, with benthic and demersal predators, such as black sea bass (*Centropristis striata*) and spiny dogfish (*Squalus acanthias*) becoming increasingly present throughout the lobster’s range, taking the place of traditional predators, such as Atlantic cod (*Gadus morhua*). The effects of invasive and range-expanding species may also lead to greater predation risk for juvenile lobsters [@goldstein2025].
+
+## Life History Synopsis:
+
+American lobsters inhabit the coastal and oceanic waters of the Atlantic Ocean from Labrador to North Carolina. They are widely distributed within most of the coastal waters in the Northeast U.S. with some major offshore concentrations along the outer edge of the Continental Shelf and upper slope between Georges Bank and Delaware Bay [@mackenzie1985]. Spawning takes place during a 4 month period from late May through much of September, when females leave their solitary shelters about 7 days before molting to share the shelter of a dominant male [@factor1995] [@mackenzie1985]. Lobster larvae are planktonic for 6-8 weeks [@factor1995] and travel from surface waters offshore to inshore areas of Southern New England and the Gulf of Maine. Larval distribution is affected by the distribution of spawning females and by surface current velocity and direction, temperature, salinity, light intensity, and hydrostatic pressure [@katz1994] [@harding1988] [@hudson1993] [@mackenzie1985]. Larval survival is likely affected by pollution of the marine environment by human activity, especially coastal waters [@connor1972]. There is an inverse relationship between temperature and the time from hatching to the postlarval stage (when they settle). Larvae take as few as 11 days at 22°C and as many as 54 days at 10°C to reach the postlarval stage. It is speculated that thermoclines are a negative cue for larvae/post larvae settlement [@factor1995] [@templeman1936]. Juvenile lobsters utilize shelters (rocks and vegetation) in the benthic habitat, and may also burrow in mud [@wahle1991]. Juveniles are omnivorous but also scavenge for food. Much of their diet consists of bottom invertebrates, crabs, urchins, mussels, polychaetes, periwinkles, and sea stars, but they may also consume fish and plants [@lawton1987]. Adult lobsters are also considered omnivores and scavengers . However, their diet is dominated by mollusks (especially mussels), echinoderms, and polychaetes [@elner1987]. Juveniles and adults prefer bottom water temperatures of 8-14°C [@mackenzie1985]. Inshore, adult lobsters appear to have a limited home range of about 2.2 km, however offshore lobsters tend to migrate greater distances (up to 345 km in 71 days) [@mackenzie1985]. American lobster are managed by the Atlantic States Marine Fisheries Commission as three stock units based on life history differences: Gulf of Maine, Georges Bank, and southern New England [@asmfc2025].
+
+## References

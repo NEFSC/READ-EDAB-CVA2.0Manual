@@ -1,0 +1,108 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic croaker
+
+\vspace{-0.5cm}
+
+*Micropogonias undulatus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic croaker_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic croaker_sensitivity_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic croaker_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic croaker_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic croaker_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic croaker_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Atlantic croaker_sdm.png")
+```
+
+\newpage
+
+# Atlantic croaker
+
+\vspace{-0.5cm}
+
+*Micropogonias undulatus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+As a sub-tropical species, Atlantic croaker may experience both positive and negative effects on their abundance and distribution as a result of climate change. Interannual variability in croaker abundance may be climate related, with colder winters causing increased mortality in overwintering young-of-the-year [@lankford2001low]. Warm winters, however, may result in increased abundances, or “outbursts” of juveniles in the spring that contribute to expansion of the population’s distribution [@hare2007mechanistic]. @diamond2013simulating modeled Atlantic croaker abundance in the Mid-Atlantic with global climate change projections and found increased croaker abundance with lower inter-annual variability under global climate change. Positive responses in sensitivity analyses stemmed from warmer temperatures, and negative responses were due to rising variability in salinity and increases in offshore transport and sea level rise [@diamond2013simulating]. Common juvenile habitat types (submerged aquatic vegetation, salt marshes, and intertidal habitats) are highly vulnerable to climate change [@guyant2022northeast].
+
+## Life History Synopsis:
+
+Atlantic croaker are a demersal species found from the Gulf of Maine to Argentina. Along the United States Atlantic coast, they are most abundant from Chesapeake Bay to northern Florida [@asmfc2020addendum]. Atlantic croaker spawn from July - December in inshore shelf and estuarine waters between Delaware Bay and Cape Hatteras, peaking in August - October near Chesapeake Bay [@able1998first]. Their name comes from the croaking noises the fish make during spawning by vibrating their abdominal muscles against their swim bladder [@asmfc2020addendum]. After 30-90 days post-hatch Atlantic croaker larvae are driven inshore by winds [@thorrold1997response] where they migrate to estuarine habitats [@sempsrott2017biological]. Initial fall recruitment of croaker depends on fall continental shelf winds to provide transport into Chesapeake Bay [@norcross1991estuarine]. Recruitment to specific estuaries is influenced by tidal activity and currents, such that eggs and larvae are dependent on transport to suitable habitats for survival [@sempsrott2017biological]. Atlantic croaker larvae are selective feeders, as they eat fewer taxa of suitable size than are present in ambient plankton [@govoni1986selective]. Juvenile croaker are highly dependent on marine, estuarine, and riverine mud and sand substrates, as well as native salt marsh habitats [@guyant2022northeast]. The major prey of young-of-the-year Atlantic croaker are polychaetes, copepods, and mysids. Detritus is also a major component of the juvenile diet [@ffwcc2010croaker] [@sink2011species]. Adult Atlantic croaker perform seasonal migrations, moving northward and inshore to estuaries and bays in the spring - fall and southward and offshore to shelf waters in the winter [@asmfc2020addendum]. They reach maturity by 2 years of age and can live up to 17 years, although lifespans are commonly below 10 years [@asmfc2020addendum]. Adult Atlantic croaker are opportunistic feeders and are known to consume polychaetes, anchovies, mysid shrimp, amphipods, fishes and crabs, and detritus in Chesapeake Bay [@nye2011annual]. Atlantic croaker are managed under Amendment 1 to the Atlantic States Marine Fisheries Commission’s Interstate Fishery Management Plan for Atlantic Croaker (2005) and Addenda I, II, and III (2011, 2014, 2020). [@asmfc2020addendum]. The most recent benchmark stock assessment was completed in 2017, where the current stock status could not be determined because the assessment results were sensitive to certain modeling assumptions, but any further depletion in the stock was unlikely [@asmfc2017croaker].
+
+## References

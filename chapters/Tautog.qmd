@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Tautog
+
+\vspace{-0.5cm}
+
+*Tautoga onitis*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Tautog_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Tautog_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Tautog_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Tautog_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Tautog_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Tautog_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Tautog_sdm.png")
+```
+
+\newpage
+
+# Tautog
+
+\vspace{-0.5cm}
+
+*Tautoga onitis*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Temperature is linked to recruitment, spawning, and migration timing in tautog [@steimle1999tautog], but it is unclear how warming temperatures will affect phenology. Tautog exhibit some site fidelity, which may present a limited ability to expand or shift their range in response to warming temperatures [@langan2021climate]. @moran2023impacts observed differences in prey type and feeding behavior in tautog exposed to varying temperatures, highlighting the need for further research on the relationship between increasing temperature and feeding behavior. [@howell1994abundance] reported that tautog are not tolerant of dissolved oxygen (DO) concentrations below 2 mg/l, and prefer DO levels above 3 mg/l. Tautog mortalities were reported by commercial fishers and were observed on the beach during a major anoxia-hypoxia episode off New Jersey in 1976. 
+
+## Life History Synopsis:
+
+Tautog are a slow-growing, long-lived coastal species inhabiting the outer coast of Nova Scotia to Georgia, although they are most abundant from Cape Cod to Chesapeake Bay [@steimle1999tautog]. They do not reach maturity until age 3 (males) or 4 (females) and can live up to 25-30 years [@steimle1999tautog]. Tautog spawn in pairs, or in small groups with a single female and several males. The method depends on sex-ratios, the presence of a patriarchy, and availability of shelter and food [@steimle1999tautog]. They spawn from April to August; occurring earlier (April) in the southern portion of the range. Peak spawning occurs in June/July in northern portions of habitat. They perform inshore/offshore migrations in order to spawn. In the north, tautog overwinter offshore and migrate inshore in the spring to spawn and feed before moving back offshore as temperatures decline (below 11°C) in the fall and winter. Southern populations may undertake shorter seasonal migrations or remain either inshore or offshore for the entire year [@steimle1999tautog]. Tautog enter a torpor state in waters between 7-10°C and prefer temperatures 10-22°C [@olla1974daily]. In a laboratory setting, eggs hatch in 42-48 hours at 20-22°C with longer development times at lower temperatures [@perry1994artificial]. Larval duration lasts about 20-25 days, depending on location [@sogard1992variability]. Larvae consume small fish and copepods, such as *Acartia tonsa* [@simpson1989population]. Larvae survival is dependent on temperatures for both incubation period and recruitment. There was no direct evidence in the literature to support reliance on specific hydrographic conditions, however, spawning locations near the mouths of nursery habitats,and possible offshore advection suggest that local current patterns may play a role in larval distribution [@steimle1999tautog]. Juveniles prefer areas with high amounts of cover that they can hide in/around. However, they can utilize a variety of vertical habitats, including piers, artificial and real seagrass/algal beds, shells, and marine debris. Larger juvenile and adult tautog are closely associated with hard- surface, reef-like habitats, remaining close to their preferred home location [@sogard1992variability]. Juvenile tautog forage on benthic, as well as planktonic, prey. As they grow, juvenile tautog rely less on planktonic food resources and feed primarily on benthic prey, although the prey remain primarily crustaceans, such as decapods [@dorf1994ecology]. Adult tautog are durophagous and feed chiefly on blue mussels and other shellfish throughout the year [@steimle1999tautog]. Seabirds, particularly cormorants, prey on juvenile tautog. Hakes, smooth and spiny dogfish, skates, and sea ravens have been reported to consume adult tautog [@steimle1999tautog]. Tautog is managed by the Atlantic States Marine Fisheries Commission. The Tautog Fishery Management Plan divides the stock into four regions: Massachusetts-Rhode Island (MARI), Long Island Sound (LIS), New Jersey-New York Bight (NJ-NYB), and Delaware-Maryland-Virginia (DMV) [@asmfc2017tautog]. The 2025 stock assessment update indicated tautog are not overfished in MARI, LIS, or NJ-NYB, but overfished in DMV. Overfishing is not occurring in MARI or LIS, but the NJ-NYB and DMV regions are experiencing overfishing [@asmfc2025tautog]. 
+
+
+## References

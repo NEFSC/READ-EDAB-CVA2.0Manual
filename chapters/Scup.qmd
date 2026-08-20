@@ -1,0 +1,110 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Scup
+
+\vspace{-0.5cm}
+
+*Stenotomus chrysops*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Scup_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Scup_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Scup_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Scup_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Scup_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Scup_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Scup_sdm.png")
+```
+
+\newpage
+
+# Scup
+
+\vspace{-0.5cm}
+
+*Stenotomus chrysops*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Scup distributions in the spring and fall have shifted northward and offshore, which may necessitate new management strategies [@bell2015disentangling] [@palacios2023quantifying]. @roday2026recreational analyzed fish distribution shifts using recreational catch and fishery independent data. Scup distributions showed a moderate range expansion but little to no change to center of distribution [@roday2026recreational]. Juvenile scup exposed to elevated pCO^2^ in a laboratory setting had no significant effect on growth, survival, or otolith condition. Scup spawning areas in Long Island Sound are already exposed to high pCO^2^, indicating some tolerance to ocean acidification [@perry2015effect]. 
+
+## Life History Synopsis:
+
+Scup are found in the Northwest Atlantic from Cape Cod, Massachusetts to Cape Hatteras, North Carolina [@steimle1999_scup]. There are two U.S. stocks: Mid-Atlantic/New England (Atlantic coast) and South Atlantic [@nefsc2025scup]. Spawning occurs once per year in coastal bays and estuaries in May-August, beginning with lower latitudes [@steimle1999_scup]. Eggs take 2-3 days to hatch depending on temperature. The larval stage lasts from 2 mm TL to 18-19 TL; the duration of this period is unclear. Larval distributions are highest in inshore bays and estuaries, suggesting that eggs and larvae do not travel far during planktonic stages [@steimle1999_scup]. The biggest cue for larval settlement is size (~25 mm), with size in part being a function of temperature - most common at 15-20°C [@steimle1999_scup]. Larval diets are poorly understood, but larvae have been successfully reared on zooplankton in lab experiments [@bowman1987food]. Early juveniles consume copepods, so larval scup may also consume copepods [@michelman1988biology]. Larval predators include plantivorous medusae, crustaceans, and fishes [@steimle1999_scup]. Juveniles have been caught in intertidal and subtidal habitats, over sand, silty-sand, shell, mud, mussel beds and eelgrass (*Zosteria marina*). Offshore winter-spring distributions indicate that they occur in habitats ranging from relatively flat, open, sandy-silty bottoms to the head of submarine canyons, and other areas with topographical relief and varying sediments. Juveniles can use biogenic depressions, sand wave troughs, and possibly mollusk shell fields for shelter in winter, suggesting structure may be important to juveniles [@able1998first]. Juveniles primarily feed on polychaetes, epibenthic amphipods and other small crustaceans, mollusks, and fish eggs and larvae [@steimle1999_scup]. Prey size increases with individual size, with copepods and mysids being important to early juveniles and bivalve mollusks consumed by larger fish [@bowman1987food]. Adult scup are also benthic feeders and forage on a variety of prey, including small crustaceans (including zooplankton), polychaetes, mollusks, small squid, vegetable detritus, insect larvae, hydroids, sand dollars, amphipods, and small fish [@steimle1999_scup]. Similar to juveniles, their prey size scales with individual size. Diets can vary based on location, and season. Feeding slows or stops entirely in winter [@byron2010stability]. Adults are primarily benthic and utilize both estuarine and shelf benthos [@steimle1999_scup]. Age at maturity is around 2 years of age, with a maximum age between 15-20 years [@nefsc2015sixtieth]. Scup undertake extensive inshore/offshore migrations driven by temperature preferences. They migrate south and offshore in the fall and return to inshore bays and estuaries in the spring to spawn. Scup can become inactive or dormant if caught in cold pockets < 6°C during their inshore spring migration and prefer temperatures 9-24°C [@steimle1999_scup]. The North Atlantic scup fishery is managed jointly by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission. The 2025 Management Track Assessment reported the Atlantic coast stock as not overfished and overfishing not occurring [@nefsc2025scup]. 
+
+## References

@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic herring
+
+\vspace{-0.5cm}
+
+*Clupea harengus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic herring_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Atlantic herring_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic herring_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic herring_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic herring_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic herring_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Atlantic herring_sdm.png")
+```
+
+\newpage
+
+# Atlantic herring
+
+\vspace{-0.5cm}
+
+*Clupea harengus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+A number of Atlantic herring life history parameters are linked to drivers of climate change. Climate-related mismatches between Atlantic herring larval feeding and prey abundance have resulted in slower growth and higher mortality [@Randall2022]. @Groger2010 found that lags in the North Atlantic Oscillation (NAO) and Atlantic Multi-decadal Oscillation (AMO) were the primary drivers of Atlantic herring recruitment. Winter NAO has also indirectly influenced recruitment in multiple herring stocks [@Axenrot2003] [@Oskarsson2010] [@Lynam2005] and may be used to predict recruitment with lead times up to 5 years [@Groger2010]. Atlantic herring recruitment is also influenced by larval temperatures, the Gulf Stream Index, and food availability from water mass movement [@Molina2025]. Favorable habitat for Atlantic herring in the Northwest Atlantic is currently decreasing with rising temperatures and bottom salinity [@Suca2021], with herring populations in warmer waters responding more negatively to increasing temperatures than those in colder waters [@Beaudry2024]. Herring larvae in the Baltic Sea are facing more heat stress and cardiac dysfunction with an increase in the number of marine heat waves [@Groger2024]. Migration and distribution of Atlantic herring is also linked with thermal oceanic fronts between colder, less saline continental shelf water and warmer, more salient slope water (where plankton are also usually more abundant) [@Kelly1986]. 
+
+
+## Life History Synopsis:
+
+Atlantic herring in the Northwest Atlantic reside from southern Labrador in Canada to Cape Hatteras, NC [@Stevenson2005]. They spawn primarily on Jeffreys Ledge and Georges Bank between July and November, with peaks in August - September in the Gulf of Maine. However, recent research has suggested that the optimal spawning temperature window has shortened over the past 30 years [@Kanwit2009] [@Molina2025]. Early life history development is inversely related to water temperature, with slower growth occurring at higher temperatures [@Stevenson2005]. Eggs hatch after 6-15 days, and larval development time ranges from 4-8 months. Larvae absorb their yolk sac within 2.5 - 6 days, at which point the larvae become pelagic and can be transported away from or retained near spawning habitats, depending on prevailing current systems [@Lough1982]. Predation of eggs is linked to high mortality. Predators include haddock, cod, mackerel, winter flounder, moon snails, hermit crabs and starfish. Strong haddock recruitment has been linked to low abundances of larval herring [@Boyar1973] [@Burbank2023]. Larval herring prey on copepods, with size depending on the size of the larvae [@Sherman1971_larval]. Juveniles form large schools in coastal waters (i.e. estuaries and embayments)  throughout the Gulf of Maine in the spring and summer, and overwinter in deep bays or offshore [@Stevenson2005]. Juveniles and adults are planktivorous and opportunistic feeders. As they grow and the size of their jaws increases, they consume larger organisms. Their diet therefore varies with season, their age and size, and location. [@Stevenson2005] [@Sherman1971_juvenile]. A lack of availability of preferred prey in adults (due to strong mixing in the water column) can lead to suboptimal feeding and slow growth resulting in increased mortality from starvation and predation [@Stevenson2005]. Adult herring make extensive seasonal migrations between summer spawning grounds on Georges Bank and in the Gulf of Maine and overwintering areas in southern New England and the Mid-Atlantic region [@Stevenson2005]. There are two major spawning stocks in the Northwest Atlantic: the Gulf of Maine and Georges Bank/Nantucket Shoals. Stocks are separated based on larval distribution patterns, spawning times/locations, and growth rates [@Iles1982] [@Boyar1973] [@Anthony1980]. Both stocks are currently assessed in the U.S. as a single coastal stock complex managed by the New England Fishery Management Council. As of the most recent assessment [@NEFSC2024_herring], the stock is overfished but not experiencing overfishing based on the biological reference points for spawning stock biomass (SSB) and fishing mortality (F). 
+
+## References
+

@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Spiny dogfish
+
+\vspace{-0.5cm}
+
+*Squalus acanthias*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spiny dogfish_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Spiny dogfish_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spiny dogfish_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spiny dogfish_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spiny dogfish_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spiny dogfish_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Spiny dogfish_sdm.png")
+```
+
+\newpage
+
+# Spiny dogfish
+
+\vspace{-0.5cm}
+
+*Squalus acanthias*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+@nye2009 observed a range expansion and southward shift in center of biomass in spiny dogfish, although changes in biomass over the study period may have influenced these shifts. Seasonal occurrence of spiny dogfish is highly correlated with depth and bottom temperature, with a higher probability of occurrence in warmer years versus colder years [@sagarese2014a]. Spiny dogfish shift their distribution seasonally; variation in environmental drivers may impact population and fishery dynamics as temperatures continue to increase. Climate-inducing seasonal distribution shifts influencing habitat availability for spiny dogfish may also lead to vulnerability of the inshore fishery in the fall [@sagarese2014b]. 
+
+## Life History Synopsis:
+
+Atlantic spiny dogfish are a schooling, highly migratory shark species (HMS) inhabiting inshore and offshore waters from Labrador to Florida, although they are most abundant from Nova Scotia and Cape Hatteras. Spiny dogfish perform diel vertical migrations; most schools are found around 40-50 m depth, but can descend upwards of 500 m [@stehlik2007] [@carlson2014]. There are populations that occupy the continental shelves of Europe, Asia, and the northeast Pacific, but these populations do not mix [@stehlik2007]. Spiny dogfish perform north-south migrations and move between inshore-offshore waters in response to water temperature, migrating north in the spring and summer and south in the fall and winter to remain in waters between 6-13°C [@stehlik2007] [@carlson2014]. Age at maturity is 6 years for males and 12 years for females, with a lifespan of 35 years for males and 40 years for females. Spawning occurs offshore in the winter, with a gestation period of 18-24 months [@stehlik2007]. Proportions of mature females in catch are correlated with bottom temperatures, with more mature females caught at relatively higher bottom temperatures. However, how temperature impacts reproduction is still unclear [@sagarese2014b]. Spiny dogfish are opportunistic feeders, preying upon a variety of fishes (herring, mackerel, hakes, sand lance, menhaden), squid, ctenophores, polychaetes, crustaceans, bivalves. Diets can shift based on location and availability [@stehlik2007] [@devries2025]. Predators of spiny dogfish include sharks, seals, cod, goosefish, dolphins, and larger fish [@stehlik2007]. Spiny dogfish occupy a similar niche to that of Atlantic cod, whose populations have been impacted by increasing seal populations in the Northwest Atlantic and Canada. It has been hypothesized that the loss of cod could be a benefit to spiny dogfish, since they occupy similar feeding niches [@neuenhoff2019] [@ono2019]. The Mid-Atlantic Fishery Management Council (MAFMC) leads the joint management of the Spiny Dogfish Fishery Management Plan, with support from the New England Fishery Management Council (NEFMC) and Atlantic States Marine Fisheries Commission (ASMFC) [@mafmc2025_spinydog]. The ASMFC manages spiny dogfish in state waters via the Interstate Fishery Management Plan for Spiny Dogfish [@asmfc2002_spinydog]. As of 2023, spiny dogfish in the Northwest Atlantic are not overfished and overfishing is not occurring [@nefsc2023_spinydog]. 
+
+
+## References

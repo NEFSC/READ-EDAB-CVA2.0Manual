@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib 
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic halibut
+
+\vspace{-0.5cm}
+
+*Hippoglossus hippoglossus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic halibut_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Atlantic halibut_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic halibut_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic halibut_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic halibut_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic halibut_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Atlantic halibut_sdm.png")
+```
+
+\newpage
+
+# Atlantic halibut
+
+\vspace{-0.5cm}
+
+*Hippoglossus hippoglossus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+@Nye2009 observed a northward shift in Atlantic halibut distribution and an increase in the depth of occurrence on the Northeast U.S. continental shelf. The species’ thermal habitat has widened, likely contributing to its range expansion [@Shackell2022], and biomass and landings in Canadian waters have thus increased greatly since the early 2000s [@Trzcinski2016]. @Shackell2022 calculated growth rates from tagging studies and found faster growth in Atlantic halibut in warmer, southern waters. From 1990 to 2018, thermal habitat rose by 11.6% (+/- 7.35%) and the number of degree days where Atlantic halibut are experiencing growth increased by 13.5 °C days (+/- 7.86 °C days) [@Czich2023]. Continued warming is likely to increase abundance in the northern end of the species’ range; however elevated CO^2^ levels and rising temperatures may lead to oxidative stress [@Almroth2019].
+
+## Life History Synopsis:
+
+Atlantic halibut are found from the Labrador Shelf in the North to Virginia, although they are rare south of Long Island [@Cargnelli1999]. Adult halibut spawn from late fall to late spring in deep continental shelf waters, with  presumed spawning peaks occurring at 2 - 9 day intervals between October and January [@Collette2002] [@Armsworthy2014]. Eggs hatch in 13-20 days depending on the temperature [@Blaxter1983]; larvae have been found in the plankton as much as a year after spawning [@Collette2002]. Depending on current speeds and larval duration, eggs and larvae may drift anywhere from 300-500 km. Tagging studies of spawning individuals suggest that larvae can be transported into the Gulf of St Lawrence, which may provide nursery habitats [@Armsworthy2014]. Juveniles are most common in shallow water from 20-60 m in nursery areas on the shelf [@Cargnelli1999]. Juvenile halibut up to 30 cm in length consume invertebrates, mostly annelid worms and crustaceans; they then feed on fish and invertebrates from 30-80 cm in length, and then almost exclusively on fish as they grow larger [@Scott1988] [@Bowman2000]. Adults normally inhabit benthic waters from 2-15°C, but occupy the entire water column to feed and spawn [@Cargnelli1999] [@Collette2002] [@Armsworthy2014]. In the Gulf of Maine, tagged individuals have been observed conducting both shore and long distance migrations, as well as being resident year-round [@Shackell2022]. Age at maturity ranges from 7 - 13 years (females) and  5 - 12 years (males), and their maximum age is between 38-50 years [@Armsworthy2014]. Atlantic halibut is currently managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. The most recent management track assessment was completed in 2024, where stock status could not be determined analytically due to a lack of biological reference points [@NEFSC2024_halibut].
+
+## References
+

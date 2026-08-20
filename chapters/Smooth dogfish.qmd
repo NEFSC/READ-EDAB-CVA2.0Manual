@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Smooth dogfish
+
+\vspace{-0.5cm}
+
+*Mustelus canis*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Smooth dogfish_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Smooth dogfish_sdm.png")
+```
+
+\newpage
+
+# Smooth dogfish
+
+\vspace{-0.5cm}
+
+*Mustelus canis*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Little information exists on the potential effects of climate on smooth dogfish abundance and distribution. Coastal areas, including estuaries and smooth dogfish nursing grounds, are affected by anthropogenic activities that degrade a portion of smooth dogfish habitat. These areas are also more likely to be impacted by hypoxia and changes to freshwater input/increases in turbidity [@plumlee2018community]. Smooth dogfish exposed to higher temperatures (increase of 6°C) did not result in a thermal stress response, indicating a possible tolerance and ability for range expansion [@bockus2020thermal]. 
+
+## Life History Synopsis:
+
+Smooth dogfish are a demersal, highly migratory shark species (HMS). The Northwest Atlantic population of smooth dogfish ranges from Cape Cod to Florida and the northern Gulf of America [@conrath2002age]. The species undergoes temperature-driven seasonal migrations north in the summer and south in the winter. They overwinter in Chesapeake Bay to South Carolina from January to May, migrating north to Southern New England beginning in early spring to give birth to pups [@castro2010sharks] [@dellapa2018hierarchical]. Females ovulate between June and July, with gestation lasting 10 months. Birth occurs in southern New England between early May to mid-July [@castro2010sharks]. Once females have given birth in nearshore or estuarine areas,, young of year and immature age classes may remain in nursery grounds while females migrate north to suitable temperatures [@bangley2017habitat]. Smooth dogfish prefer temperatures 9-32°C. They begin appearing in the mid-Atlantic and New England when temperatures are greater than 6-7°C, and are most abundant along the East Coast between 13-15°C [@bockus2020thermal]. Young of year individuals use shallow shoals and marsh creek habitats particularly during night hours. Juveniles are found throughout temperate coastal estuaries, creeks, and seagrass beds, which may serve as nursery grounds [@castro2010sharks]. Juveniles prey on small shrimp, polychaete worms, and crabs, and may fill an important predatory role during times of year when other piscivores are rare [@rountree1996seasonal_smooth]. Adult smooth dogfish are bottom feeders, primarily consuming crustaceans and mainly feeling at night. They are described as a trophic specialist due to the morphological and functional modifications that allow them to feed on hard-shelled/exoskeleton-bearing prey [@castro2010sharks] [@bangley2017habitat]. Smooth dogfish are prey items for a variety of larger sharks and fishes [@gelsleichter1999food]. Age at maturity is 2-3 years for males and 4-7 years for females, with a maximum age of 11 years for males and 13 years for females [@conrath2002age] [@giresi2013morphological]. In state waters, smooth dogfish are managed by the Atlantic States Marine Fisheries Commission’s Interstate Fishery Management Plan for Coastal Sharks [@asmfc2024_smooth]. NOAA Fisheries produces an annual Stock Assessment and Fisheries Evaluation (SAFE) Report detailing the status of HMS in federal waters [@nmfs2023safe]. The current stock status is not overfished and overfishing is not occurring [@sedar2015smoothdogfish]. 
+
+
+## References
+

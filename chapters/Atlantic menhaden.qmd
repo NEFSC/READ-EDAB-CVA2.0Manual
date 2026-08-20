@@ -1,0 +1,113 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic menhaden
+
+\vspace{-0.5cm}
+
+*Brevoortia tyrannus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic menhaden_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Atlantic menhaden_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic menhaden_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic menhaden_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic menhaden_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic menhaden_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Atlantic menhaden_sdm.png")
+```
+
+\newpage
+
+# Atlantic menhaden
+
+\vspace{-0.5cm}
+
+*Brevoortia tyrannus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Atlantic menhaden are estuary dependent species, and their habitats may be impacted by future development or trawling and dredging activities [@rogers1989]. Atlantic menhaden distribution is expanding northward, likely to due warmer water temperatures, although other local ecological factors may also influence distribution [@morano2025]. Recruitment of Atlantic menhaden larvae to nursery habitats appears to be driven primarily by larval supply and the oceanographic properties driving transport, as well as nursery habitat quality, rather than specific settlement cues [@quinlan1999]. Climate change could impact these transport mechanisms or the quality of nursery habitats. In a study modeling menhaden recruitment trends in Chesapeake Bay and Southern New England, a broad-scale climate driver, the Atlantic Multidecadal Oscillation (AMO)  was one of the best predictors of recruitment [@buchheister2016]. @midway2020 used hierarchical models to determine significant effects of age 1 Atlantic menhaden growth caused by the AMO (negative effect), easterly (positive effect) and northerly (negative effect) wind velocity. @turner2017 investigated declines in size-at-age for age 3-5 Atlantic menhaden and attributed these size changes to coastal and ocean warming. This study also predicted future reductions in size-at-age as ocean temperatures rise.
+
+## Life History Synopsis:
+
+
+Atlantic menhaden inhabit coastal and estuarine waters from Nova Scotia to Florida [@rogers1989]. They are a key forage species in the North and South Atlantic, and are consumed by a wide range of predators, including striped bass, bluefish, and weakfish in the North Atlantic [@asmfc2025_menhaden]. Menhanden spawning peaks in December - February [@sedar2025]. Spawning was originally thought to be concentrated off the coast of the Carolinas following the fall migration. However, more recent analysis of larval distributions suggests that spawning occurs throughout the range, as far north as Long Island [@nelson1977] [@simpson2017]. Menhaden spawning periods coincide with presence of phytoplankton and zooplankton, the dominant food sources of larval menhaden  [@rogers1989]. Eggs are buoyant and reliant on transportation by wind and tidal currents towards nursery estuary habitats, where they hatch in a few days [@sedar2025]. After around 30 days in the larval stage, juveniles move to upper portions of estuaries including river shoals and the heads of small tidal creeks, where they congregate over vegetation in open water [@rogers1989]. Young juvenile menhaden consume individual zooplankton; this reliance on zooplankton decreases as menhaden move from open waters to marshes, although adult menhaden also consume zooplankton [@rogers1989]. Adults prefer temperatures near 18°C and generally remain within the top 100m of the water column [@sedar2025]. After the winter spawning season, adults migrate inshore and north following spawning grounds in the Carolinas to the Gulf of Maine  [@rogers1989]. Atlantic menhaden reach maturity around 2 years of age and a maximum age is listed at 10 years, although individuals older than 6 years of age are rarely caught in the fishery [@sedar2025]. Menhaden in the Northwest Atlantic are managed as a single stock unit by the Atlantic States Marine Fisheries Commission. The most recent stock assessment update in 2025 used ecological reference points to determine stock status. As of 2025, the stock is not overfished and overfishing is not occurring [@asmfc2025_menhaden].
+
+
+## References
+

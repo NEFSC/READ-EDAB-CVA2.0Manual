@@ -1,0 +1,110 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Black sea bass
+
+\vspace{-0.5cm}
+
+*Centropristis striata*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Black sea bass_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Black sea bass_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Black sea bass_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Black sea bass_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Black sea bass_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Black sea bass_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Black sea bass_sdm.png")
+```
+
+\newpage
+
+# Black sea bass
+
+\vspace{-0.5cm}
+
+*Centropristis striata*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Black sea bass in the Mid-Atlantic Bight are currently expanding their distribution northward into the Gulf of Maine [@mcmahan2020geographic]. Black sea bass in their newly-expanded range have a less diverse diet, lower condition, and a younger age-at-maturity than their counterparts at the historic northern range of the stock [@mcmahan2020geographic]. A laboratory study on Mid-Atlantic black sea bass observed a decline in bodily processes that require oxygen demand above 24°C, suggesting black sea bass will continue to shift their range poleward with warming conditions [@slesinger2020effect]. @tabandera2024black found that winter bottom temperature was positively correlated with recruitment deviations in black sea bass. Black sea bass in the southern Mid-Atlantic Bight also appear to occupy a smaller portion of their habitat in years with an increase in cold shelf water on the shelf slope. Northward distributions of black sea bass are resulting in new species interactions and habitat overlaps. In Narragansett Bay, black sea bass juveniles now share nursery habitats with juvenile tautog and cunner, however dietary overlap was size-dependent and ontogenic diet shifts eventually led to niche separation [@bell2015disentangling] [@taylor2023habitat].
+
+## Life History Synopsis:
+
+Black sea bass are found along the U.S. Atlantic coast from Cape Cod to the Gulf of America in structured habitats such as reefs, shipwrecks, or oyster beds [@drohan2007essential]. In the Mid-Atlantic Bight, spawning occurs from April to October, beginning first in the southern portion of their range and northern latitudes starting later in the year [@able1998first]. Early larval stages last approximately 72 hrs at 21°C but can last anywhere from 2-6 days depending on temperature [@berlinsky2004effects]. Afterwards, larvae enter a 21-24 day planktonic phase where they can disperse up to 50 miles by currents [@watanabe2021status]. Eggs and pelagic larvae are vulnerable to predation, especially by gelatinous zooplankton [@arai1988interactions]. Larvae settle in nearshore shelf habitats and then migrate to estuarine nurseries to settle and metamorphose into juveniles (occurs at 13-24mm) [@able1995early]. Larvae are abundant at temperatures between 13-21°C and leave estuaries for deeper water when temperatures dip below 14°C [@kendall1972description]. Larvae consume microalgae and zooplankton, including rotifers [@richards1963demersal]. Metamorphosis is likely the biggest factor influencing settlement [@musick1977seasonal]. Structural complexity appears to be an essential component of juvenile black sea bass habitat offshore as well as inshore nurseries throughout the species range. In offshore areas, recently settled fish occur in accumulations of shell on sand substrata, complex microtopographies on exposed clay, on rocky reefs, and on wrecks [@able1995early]. Primary black sea bass settlement habitats are probably located along the near shore continental shelf in accumulations of the shells of bivalves, including Atlantic surfclams (*Spisula solidissima*) [@able1995early]. Juvenile growth rates impact winter mortality. Smaller juveniles have smaller lipid reserves and higher metabolic rates and therefore face higher predation or starvation risks in the winter [@geissinger2021food]. Juveniles, which are diurnal, visual predators, prey on benthic and epibenthic crustaceans (isopods, amphipods, small crabs, sand shrimp, copepods, mysids) and small fish. As they mature, their diet diversifies to include crabs, krill, isopods, shrimp, and small fish [@kimmel1973food]. Adult black sea bass perform seasonal inshore/offshore migrations between coastal spawning grounds and offshore overwintering habitats. Migrations are triggered by declining temperatures (around 10-12°C) and begin in the North moving southward [@tabandera2024black]. In the Mid-Atlantic Bight, individuals have home ranges as large as 7km^2^ [@tabandera2024black]. Observations suggest that spawning aggregations consist of a single dominant male and a harem of females. These spawning aggregations may rely on visual cues rather than chemical or environmental cues [@tabandera2024black]. Black sea bass are protogynous hermaphrodites, with fish changing sex from female to male as they increase in age and size [@mcgovern2002temporal]. Age of sexual transition varies with latitude with females maturing and undergoing sexual transition at greater ages in northern latitudes [@obrien1993maturation]. On average, age at maturity in the Mid-Atlantic is 2-3 years but can extend up to 5 years [@obrien1993maturation]. Maximum age for females is 8 years and 12 years for males [@nefsc2017_62saw]. The black sea bass fishery in the Northwest Atlantic is divided into two stock subunits (north and south) and is managed by the Mid-Atlantic Fishery Management Council along with the Atlantic States Marine Fisheries Commission. As of the 2025 Management Track Assessment, the Mid-Atlantic stock is not overfished or subject to overfishing [@asmfc2025_bsb].
+
+## References

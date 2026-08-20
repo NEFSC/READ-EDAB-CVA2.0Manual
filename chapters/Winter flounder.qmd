@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Winter flounder
+
+\vspace{-0.5cm}
+
+*Pseudopleuronectes americanus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Winter flounder_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Winter flounder_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Winter flounder_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Winter flounder_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Winter flounder_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Winter flounder_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Winter flounder_sdm.png")
+```
+
+\newpage
+
+# Winter flounder
+
+\vspace{-0.5cm}
+
+*Pseudopleuronectes americanus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+A number of studies describe evidence of changes in winter flounder growth, abundance, and distribution as a result of climate change. The Southern New England/Mid-Atlantic Bight stock declined sharply in the 1980s from overfishing, has not recovered, and is shifting northward [@able2014temporal] [@langan2021role]. Warm spring temperatures have resulted in poor recruitment [@able2014temporal], and declining productivity due to warming estuarine waters has blocked recovery efforts [@bell2014externally]. Elevated water temperatures can cause faster development rates of early life history winter flounder; length of incubation time is crucial as a nearshore and estuarine species as these areas are more susceptible to anthropogenic impacts [@klein2017effects]. Increasing temperatures may alter predation rates, affecting survival of larval winter flounder, as well as migration and distribution patterns [@klein2017effects]. In Narragansett Bay, warmer summer temperatures were linked to increasing mortality in young-of-the-year winter flounder. Greater abundance of mature winter flounder in the lower bay during spring may also indicate a potential shift in spawning migration timing [@langan2021role].
+
+
+## Life History Synopsis:
+
+Winter flounder are found in estuaries and on the continental shelf from Nova Scotia to North Carolina, and are most common in the Mid-Atlantic north of Delaware Bay [@pereira1999essential]. They prefer temperatures between 0-20°C and depths less than 30m inshore and 100m offshore [@pereira1999essential]. The fishery is divided into 3 stocks: Gulf of Maine, Georges Bank, and Southern New England/Mid-Atlantic. They reach maturity at 2- 3 years, varying across stocks with southern populations maturing younger than northern ones, and live to a maximum age of 15 years [@nefsc2011assessment_winter]. Winter flounder spawn inshore in the winter through spring, peaking in February/March in the Mid-Atlantic and Southern New England and continuing into May in the Gulf of Maine [@pereira1999essential]. Timing of spawning aggregations is linked to inshore migration timing, which is complex and possibly related to time of year, temperature, lunar cycle, and photoperiod, as well as varying across years. Individuals migrate inshore in the fall, and migrate offshore in the spring. The Georges Bank population does not migrate [@pearcy1962ecology]. Females deposit eggs at night and on bottom substrates, usually sand or algal mats, and can deposit multiple batches of eggs per spawning season [@ziegler2019migration]. Eggs are demersal and hatch within 2-3 weeks, depending on temperature. Larvae are initially planktonic but become more demersal as they metamorphosize, which starts 5-6 weeks after hatching. Larvae rely on bottom currents to keep them in and around spawning areas in inshore bays and estuaries. They are tolerant to a wide range of temperatures, salinities, and dissolved oxygen concentrations [@pearcy1962ecology]. Metamorphosis is complete about 8 weeks after hatching, and is temperature dependent [@pereira1999essential]. Size, rather than age, tends to drive metamorphosis and settlement [@manderson2003winter]. Larvae consume a variety of planktonic prey including nauplii, invertebrate eggs, calanoids, and polychaetes, with larger larvae consuming larger prey. Copepods and other zooplankton are important during metamorphosis [@stehlik2000diet]. Small medusae are important predators to larvae. Larvae can also be preyed upon by amphipods and Atlantic mackerel [@pereira1999essential]. Juveniles utilize marine and estuarine rocky, sand, and mud substrates, particularly fine sand and gravel as well as marine and estuarine water columns. They also occupy submerged aquatic vegetation, marshes, oyster reefs, and macroalgae habitats [@bigelow1953fishes]. Juveniles consume a variety of prey including copepods, amphipods, and polychaetes. The diversity of prey increases and the importance of smaller zooplankton decreases with size [@pearcy1962ecology] [@pereira1999essential]. Adults are omnivorous opportunistic feeders. They feed during the day as they depend on sight to locate prey. Their diet is limited by mouth size; diets primarily consist of polychaetes and crustaceans (mostly amphipods), but also include bivalves, fish eggs, and fish. Diets can shift based on available prey [@stehlik2000diet] [@pereira1999essential]. Predators of adult winter flounder include striped bass, spiny dogfish, and seals [@pereira1999essential]. The New England Fishery Management Council manages winter flounder in federal waters under the Northeast Multispecies (Groundfish) Fishery Management Plan. The Atlantic States Marine Fisheries Commission coordinates management in state waters. None of the 3 stocks are subject to overfishing. The Georges Bank and Southern New England/Mid-Atlantic stocks are not overfished; the Gulf of Maine stock has not been assessed and population abundance is unknown [@nefsc2025gom_winter] [@nefsc2025snema_winter] [@nefsc2025gb_winter].
+
+## References

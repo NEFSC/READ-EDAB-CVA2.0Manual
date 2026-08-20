@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Witch flounder
+
+\vspace{-0.5cm}
+
+*Glyptocephalus cynoglossus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Witch flounder_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Witch flounder_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Witch flounder_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Witch flounder_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Witch flounder_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Witch flounder_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Witch flounder_sdm.png")
+```
+
+\newpage
+
+# Witch flounder
+
+\vspace{-0.5cm}
+
+*Glyptocephalus cynoglossus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+There have been few direct studies on the effect of climate change on witch flounder. Larval growth and survival has been linked to temperature in laboratory conditions [@bidwell2001effect]. @murawski1993climate included witch flounder in a list of species that exhibit low variation in seasonal temperature or depth of occurrence. @mills2024multispecies found that witch flounder distribution has actually shifted significantly toward more southern latitudes.
+
+## Life History Synopsis:
+
+Witch flounder are a long-lived flatfish species inhabiting deep, cold waters in the Northwest Atlantic from Labrador to North Carolina [@cargnelli1999_witch]. They are slow-growing, reaching maturity at 4.5 years for males and 6 years for females in Georges Bank and the Gulf of Maine [@burnett1992several]. Witch flounder can live up to 30 years, reaching a maximum length of 78 cm [@cargnelli1999_witch]. Witch flounder spawn from March to November, with peak spawning occurring in summer. The general trend is for spawning to occur progressively later from south to north. In the Gulf of Maine-Georges Bank region, spawning occurs from April to November, and peaks from May to August [@martin1978development] [@burnett1992several]. @powles1970depth suggested that witch flounder occupy three largely discrete ecological niches, resulting in the different life stages being geographically separated from each other. The pelagic egg and larval stages are spent in the water column over deep water. Egg hatching occurs 7 to 8 days after spawning, with the yolk sac absorbed 10 days after hatching. Larvae are pelagic, and the larval stage lasts from 4-6 months to 1 year [@cargnelli1999_witch]. Eggs generally drift southward, and shelf currents may transport some larvae. Length may be the biggest cue for settlement [@cargnelli1999_witch]. The juvenile stage occurs in very deep water when metamorphosed fish settle to the bottom. They are found over mud, clay, silt, or muddy sand substrates [@cargnelli1999_witch]. Juveniles remain separated from the adult population, occupying deeper areas until the onset of sexual maturity. @walsh1987habitat suggests however that while the juveniles and adults are in different areas, the niche separation may not be true. Witch flounder are capable of inhabiting depths up to 1500 m, although the majority are found at 90-300 m [@martin1978development] [@kleinmacphee2002witch]. The main food items in the witch flounder diet are polychaetes and crustaceans, although mollusks and echinoderms are also important. Overall, polychaetes were by far the most important food item, accounting for greater than 70% of the diet [@maurer1975food]. However, there is a distinct ontogenetic shift in diet, with polychaetes increasing in importance and crustaceans decreasing in importance with age [@cargnelli1999_witch]. Adult witch flounder generally do not migrate, although they prefer to stay within temperatures of 4-11°C. Some subpopulations may move from shallower waters in warmer months to deeper overwintering waters. Migration was not observed in the Gulf of Maine [@cargnelli1999_witch]. Predators of witch flounder include monkfish, spiny dogfish, harp seals, Atlantic halibut, white hake, and some skates [@kleinmacphee2002witch]. Witch flounder are managed as a single stock unit by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. In the last Management Track Assessment, the stock status could not be determined due to a lack of biological reference points. The stock condition appears to be improving but is poor relative to historical levels [@nefsc2024witch]. 
+
+
+## References

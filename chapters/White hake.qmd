@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# White hake
+
+\vspace{-0.5cm}
+
+*Urophycis tenuis*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/White hake_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/White hake_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/White hake_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/White hake_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/White hake_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/White hake_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/White hake_sdm.png")
+```
+
+\newpage
+
+# White hake
+
+\vspace{-0.5cm}
+
+*Urophycis tenuis*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+White hake are a common groundfish species in the Gulf of Maine, which is warming faster than most of the world’s oceans [@pershing2021climate]. In response to warming in the Gulf of Maine, white hake show a preference for narrow temperature (9-13°C) and depth (55-100 m) ranges and display a gradual northward movement in their center of gravity [@lafreniere2023what]. @nye2009changing observed a range contraction in white hake in the Gulf of Maine. White hake may be affected by changes in circulation patterns. Small white hake larvae have been collected in early summer in a Gulf Stream warm core ring seaward of southern Scotian Shelf and southeast of Georges Bank. Patterns of strong recruitment have been linked to the strength of the Labrador Current on the Great Banks and strong onshore transport and downwelling conditions in coastal Newfoundland [@han2008dispersion] [@ings2008episodic]. 
+
+## Life History Synopsis:
+
+White hake are a groundfish species inhabiting deep water from Newfoundland to the Mid-Atlantic Bight [@chang1999essential]. Males reach maturity at 2.5 years and females at 2.8 years; both males and females have a lifespan of around 20 years of age [@nefsc2013saw56]. In the Gulf of Maine, white hake of all ages tend to migrate inshore in warmer months and disperse into deeper waters in colder months, while hake in the south move offshore to spawn in the spring; fall movements may be linked to prey movements [@langton1994selected]. Based on the distribution and abundance of pelagic juveniles, as well as circulation patterns throughout the region, @fahay1989white suggested that the southern portion of the stock (below the Gulf of St. Lawrence) spawns in early spring (April-May) in deep waters along the continental slope, primarily off southern Georges Bank and the Mid-Atlantic Bight. White hake eggs are buoyant, and hatch in the water column in 3-7 days [@fahay1983guide]. Larvae may be affected by oceanographic conditions like warm core rings, the Gulf Stream, and Labrador Current for transport [@han2008dispersion] [@ings2008episodic]. White hake prefer temperatures between 7-20°C [@chang1999essential]. Eggs, larvae, and early juveniles are pelagic; older juveniles and adults are demersal. Most catches occur in Canadian waters at depths between 175 to 375 m with no differences between mature and immature hake. In the Gulf of Maine, depth preferences are 55-100 m [@fahay1989white] [@nozeres2015review]. Juvenile white hake settle to the bottom at around 2 months of age. Pelagic juveniles are in the upper water column during the daytime. Demersal juveniles inhabit muddy and fine grained sandy bottom sediment [@chang1999essential] [@fahay1989white]. Demersal juveniles feed primarily on polychaetes, shrimps, and other crustaceans [@bowman1981food]. Adults feed on fish, including juveniles of their own and similar species (silver hake), Atlantic herring, Gulf Stream flounder, and possibly alewife, shrimps, krill, and other crustaceans [@langton1994selected] [@nozeres2015review]. The white hake fishery is managed as a single stock by the New England Fisheries Management Council, under the Northeast Multispecies (Small-Mesh) Fishery Management Plan. The stock is under a rebuilding plan, but is not overfished and overfishing is not occurring [@nefsc2025whitehake].
+
+
+## References

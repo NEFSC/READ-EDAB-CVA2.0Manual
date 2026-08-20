@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Haddock
+
+\vspace{-0.5cm}
+
+*Melanogrammus aeglefinus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Haddock_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Haddock_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Haddock_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Haddock_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Haddock_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Haddock_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Haddock_sdm.png")
+```
+
+\newpage
+
+# Haddock
+
+\vspace{-0.5cm}
+
+*Melanogrammus aeglefinus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+In the Northeast Atlantic, early life stage haddock and cod compete for food and later life stage cod prey upon haddock. Changing climate and the increasing number of warm years increases cod abundance, causing a decline in haddock [@durant2020nonlinearity]. Haddock abundance on Georges Bank has increased significantly in recent years and may coincide with a rise in extreme ocean temperatures or phytoplankton blooms [@friedland2008does] [@wang2024density]. A large recruitment event in Georges Bank haddock in 2003 was hypothesized to be related to the timing of the fall bloom and enhanced adult condition, affecting reproductive output [@friedland2008does]. Spatial distribution changes of haddock were modeled using bottom trawl survey data, and results showed range expansion and contraction in both spring and fall. Higher temperatures correspond with northward distribution shifts on Georges Bank [@wang2024density]. Future warming may shift haddock’s southern range boundary, making it difficult to define stock boundaries.
+
+## Life History Synopsis:
+
+In the Northwest Atlantic, haddock are found from Newfoundland to Cape May, New Jersey but are most abundant in the Gulf of Maine and on Georges Bank [@brodziak2005essential]. The stock is managed in two subunits for the Gulf of Maine and Georges Bank [@nefsc2024gb] [@nefsc2024gom]. Haddock primarily spawn on the Northeast peak of Georges Bank and in the Great South Channel. Spawning occurs from January to July with a delay in peak spawning time with increasing latitude [@smith1985retention]. Spawning distribution is influenced more by restrictive spawning area and bottom type conditions than by temperature variation [@page1989spawning]. At water temperatures typical of Georges Bank, haddock eggs hatch in about 15 days. Larvae metamorphose into juveniles in roughly 30-42 days at lengths of 2-3 cm [@page1989spawning]. Small juveniles initially live and feed in the epipelagic zone and remain in the upper part of the water column for 3-5 months [@fahay1983guide]. The retention of haddock larvae in suitable nursery areas is an important factor in determining year class strength of Georges Bank haddock. The clockwise gyre around the main portion of Georges Bank provides a physical mechanism to retain haddock larvae on the Bank. There is limited information on retention of larval haddock in the Gulf of Maine. Larvae can potentially be advected as far south as the Mid-Atlantic Bight, but local retention or transport to nursery habitats to the southwest of Georges Bank are important to strong recruitment [@brodziak2005essential]. Haddock larvae are passive foragers on less motile prey: invertebrate eggs, copepods, and phytoplankton [@marak1960food]. Planktonic prey declines after juveniles become demersal, feeding on ophiuroids and polychaetes instead of copepods and pteropods [@brodziak2005essential]. Common predators of juvenile haddock include spiny dogfish, skates, and other groundfish. Gray seals also prey on adult haddock [@brodziak2005essential]. Adult haddock are indiscriminate consumers of benthic, sedentary or slow-moving invertebrates: crustaceans, annelids, polychaetes, mollusks, and echinoderms. Prey consumption varies by area and prey availability indicating adaptability [@tam2016trans]. Juvenile and adult haddock are demersal and usually found between 40-150m depth. Preferred bottom types include gravel, pebbles, clay and smooth hard sand, particularly smooth areas between rocky patches [@kleinmacphee2002haddock]. Age at maturity ranges from 1-4 years with a maximum age of 22 years [@nefsc2014saw59]. The Georges Bank and Gulf of Maine haddock stocks are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. Both stocks are not overfished and overfishing is not occurring [@nefsc2024gb] [@nefsc2024gom]. 
+
+
+## References

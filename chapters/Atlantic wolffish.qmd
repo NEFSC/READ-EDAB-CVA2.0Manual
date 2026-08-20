@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic wolffish
+
+\vspace{-0.5cm}
+
+*Anarhichas lupus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic wolffish_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Atlantic wolffish_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic wolffish_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic wolffish_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic wolffish_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic wolffish_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Atlantic wolffish_sdm.png")
+```
+
+\newpage
+
+# Atlantic wolffish
+
+\vspace{-0.5cm}
+
+*Anarhichas lupus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Atlantic wolffish is a cold water species and has been termed a “temperature seeker” [@Kulka2011]. Early life history stages and fish near the southern stock boundary may be the most vulnerable to surface water temperatures exceeding 9-11°C [@Rountree2002]. Juvenile Atlantic wolffish exposed to temperatures of 15°C exhibited reduced growth and higher metabolic rates compared to those at 10°C [@Hinchcliffe2025]. In the North Sea, Atlantic wolffish have shifted their distribution and decreased abundance at the southern end of their range and in shallow waters [@Bluemel2022]. @Bianucci2016 observed a connection between low dissolved oxygen and contraction of the Atlantic wolffish population on the Scotian Shelf. Model results of future dissolved oxygen conditions also extend to areas with high Atlantic wolffish biomass [@Bianucci2016]. Similar results were also observed in [@Brennan2016] which predicted declines in dissolved oxygen concentrations and increases in temperature outside of known adult wolffish tolerances. 
+
+## Life History Synopsis:
+
+Atlantic wolffish inhabit deep, rocky waters of the Northwest Atlantic from Labrador to the Great South Channel and Georges Bank [@Rountree2002]. In the Northwest Atlantic, wolffish are believed to spawn primarily in autumn [@Rountree2002]. Spawning is likely temperature dependent [@AWBRT2009]. Wolffish will migrate to colder temperatures before the spawning season, and egg laying and guarding behavior could be disrupted if bottom temperatures increase above 10°C [@Collette2002]. However, laboratory experiments suggest that timing may be highly plastic and dependent on local conditions, including photoperiod [@McBride2022]. Spatial and temporal variation in spawning may be contributing to the stock’s regional reproductive isolation [@AWBRT2009]. Eggs are deposited in rocky dens and incubation time  is highly dependent on water temperature, varying between 3 - 9 months [@AWBRT2009]. After hatching, prolarvae stay close to the bottom. Larvae consume a broad range of amphipod, crustacean, and fish larvae [@Rountree2002]. The prolarval stage can last from a few hours to 6 days [@Collette2002]. The larvae become pelagic shortly after and stay within the water column from 20 days to 2 months, with colder temperatures prolonging the larval period, before migrating back to the bottom [@Rountree2002]. Juvenile and adult wolffish occupy the bottom habitats of the continental shelf and slope, using large stones and rocks for shelter and nesting and soft substrates for feeding [@AWBRT2009] [@Collette2002]. Juvenile wolffish primarily consume echinoderms [@AWBRT2009]. Adults prey upon hard-shelled invertebrates such as mollusks, crustaceans and echinoderms. Stomach contents have included sea urchins, whelks, cockles, sea clams, brittle stars, crabs, scallops and other shellfish in addition to an occasional redfish [@AWBRT2009] [@Rountree2002]. While previous studies have suggested that wolffish migrate inshore/offshore seasonally for spawning or maturity, it is unclear if this is a true migration or if behavioral changes are affecting catchability as eggs are found both inshore and offshore. More recent tagging studies have illustrated that movements in the Northwest Atlantic are limited, but the species has been shown to migrate in the Northeast Atlantic [@Rountree2002] [@Simpson2015] [@Gunnarsson2019]. Spiny dogfish, sea raven and Atlantic cod are the dominant  predators for juveniles. For adults, the occurrence of predation is low and is not likely to be having a significant effect at the population level [@AWBRT2009]. The maximum reported age for wolffish in the Gulf of Maine is 33 years [@Fairchild2015]. Most individuals reach maturity by age 6, but this may vary regionally due to temperature [@Rountree2002] [@McBride2022]. Atlantic wolffish are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. As of the 2022 Management Track Assessment, the stock is not overfished and overfishing is not occurring [@NEFSC2022_wolffish]. 
+
+
+## References
+

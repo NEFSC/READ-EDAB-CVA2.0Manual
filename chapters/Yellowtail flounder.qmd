@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Yellowtail flounder
+
+\vspace{-0.5cm}
+
+*Limanda ferruginea*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Yellowtail flounder_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Yellowtail flounder_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Yellowtail flounder_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Yellowtail flounder_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Yellowtail flounder_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Yellowtail flounder_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Yellowtail flounder_sdm.png")
+```
+
+\newpage
+
+# Yellowtail flounder
+
+\vspace{-0.5cm}
+
+*Limanda ferruginea*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Yellowtail flounder abundance, distribution, and recruitment have been associated with a number of environmental and climate indices. Rapid warming of the Northwest Atlantic has resulted in decreased productivity in yellow flounder [@Kitteletal2026]. Higher temperatures can increase mortality in yellowtail flounder larvae, and faster rates of warming causing earlier stratification may reduce settlement rates in juveniles [@Kleinetal2017]. Yellowtail recruitment in Southern New England is highly correlated with the North Atlantic Oscillation (NAO) and air temperature [@Sullivanetal2005]. Low recruitment since 1990 was associated with unfavorable environmental conditions caused by a northward shift in the Gulf Stream [@Xu2016] [@Kittel2025]. The Mid-Atlantic Cold Pool, bottom temperature, and the Atlantic Multidecadal Oscillation (AMO) are also linked to recruitment [@Kittel2025]. As warming continues, joint management between the United States and Canada may be more challenging as distributions change [@Sumailaetal2020]. 
+
+## Life History Synopsis:
+
+Yellowtail flounder are found in the Northwest Atlantic from Newfoundland to Chesapeake Bay, inhabiting sandy bottom waters between 130-230 m depth [@Johnsonetal1999] and at temperatures of -1 to 18°C [@OverholtzCadrin1998]. Previous research has suggested that fish live up to 17 years, possibly as high as 20 years, although fish older than 7 years is unusual [@NEFSC2012_yellowtail]. The fishery is divided into 3 stocks: Gulf of Maine/Cape Cod, Georges Bank, and Southern New England/Mid-Atlantic [@NEFSC2025a_yellowtail] [@NEFSC2025b_yellowtail] [@NEFSC2025c_yellowtail]. Most females are mature by ages 2-3 [@NEFSC2012_yellowtail]. Spawning occurs from mid-February to July along the continental shelf waters of Georges Bank, northwest of Cape Cod, Southern New England and nearshore along New Jersey and southern Long Island [@MartinDrewry1978]. Spawning peaks from April to June in southern New England and late June to July in Canada [@BerrienSibunka1999]. Laboratory studies show eggs begin to hatch 6-7 days after fertilization [@BenoitPepin1999]. At sea hatching times range from 14.5 days at 4⁰C to 4.5 days at 14⁰C [@WalshMorgan2004]. Eggs are pelagic (most at 10-90m depth), with movement limited to currents in spawning locations [@Smithetal1975]. Larvae move from the surface down to about 20 m, with larger larvae making longer migrations. This habit may assist in the dispersal of larvae because circulation at the surface transports the larvae further  and is likely associated with feeding behavior [@Smithetal1978]. Larvae feed on zooplankton, particularly *Calanus* [@Kittel2025]. Once larvae reach metamorphosis size (11.6-16 mm) bottom temperature (4-8°C) and depth (41-70m) are the most important parameters for determining settlement [@ColletteKleinMacPhee2002]. Juveniles utilize marine and estuarine sandy and muddy substrates, as well as estuarine and marine water columns [@ColletteKleinMacPhee2002]. Rotifers, copepods, and brine shrimp nauplii were fed to juveniles in laboratory studies [@BenoitPepin1999]. *Calanus* copepods are considered a critical food source for larvae/juveniles [@Purchaseetal2000]. Amphipods (41% by weight) and polychaetes (38.5%) dominate the diet of adult yellowtail, but they also can consume cnidarians, small crabs and shrimps, mysids, cumaceans, isopods, univalve and bivalve mollusks, echinoderms, and sometimes small fish [@Bowmanetal1987] [@Bowmanetal2000]. Similar to other groundfish, yellowtail may be impacted by increasing grey seal and dogfish populations and resulting increased predation pressures [@Kittel2025]. Other predators of juvenile and adult yellowtail include spiny dogfish, skates, cod, hakes, and monkfish [@Johnsonetal1999]. Minimal migration patterns show that Southern New England yellowtail traveled eastward during spring and summer and westward in the fall and winter as a result of seasonal changes in temperature [@Smithetal1975]. Recent tagging studies, however, show that individuals generally don't move between stocks [@Goetheletal2015]. Yellowtail flounder are managed by the New England Fishery Management Council through the Northeast Multispecies (Groundfish) Fishery Management Plan. The Georges Bank stock is jointly managed by the Council and Canada, as the stock extends beyond the international boundary. The Cape Cod/Gulf of Maine stock is not overfished and not subject to overfishing [@NEFSC2025a_yellowtail]. The Georges Bank stock is overfished but under a rebuilding plan; overfishing status is unknown [@NEFSC2025b_yellowtail]. The Southern New England/Mid-Atlantic stock is overfished but under a rebuilding plan, but not subject to overfishing [@NEFSC2025c_yellowtail]. 
+
+## References
+

@@ -1,0 +1,114 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic surfclam
+
+\vspace{-0.5cm}
+
+*Spisula solidissima*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic surfclam_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Atlantic surfclam_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic surfclam_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic surfclam_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic surfclam_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Atlantic surfclam_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Atlantic surfclam_sdm.png")
+```
+
+\newpage
+
+# Atlantic surfclam
+
+\vspace{-0.5cm}
+
+*Spisula solidissima*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+
+Warming bottom water temperatures in the Northwest Atlantic have produced a range shift in Atlantic surfclams from southern, inshore waters of the Mid-Atlantic Bight into deeper waters north and offshore [@Timbs2019] [@Stromp2023]. The southern range boundary of the species likely began to migrate northward and offshore in the 1970s [@Hofmann2018]. A mass mortality event in the inshore waters of Delmarva occurred in 2000, where surfclams were in a “transient event margin”, a physiological range where scope for growth is negative but temperatures remain non-lethal, leading to decreased energetics and mortality [@Weinberg2005] [@Woodin2013]. Thermal stress in surfclams occurs at 21°C and mortality above 25°C [@Munroe2013] [@Powell2017]. Model projections through the end of the 21st century show a positive trend in Atlantic surfclam biomass as their range continues to shift, with biomass expanding in deeper waters off of New Jersey, Long Island, and Southern New England and declines in Georges Bank and Delmarva [@Spencer2026]. Warming waters may result in declines in maximum size in the southern portion of the species’ range [@Powell2025]. This range shift may lead to potential competition between Atlantic surfclams and ocean quahogs (*Arctica islandica*) and changes to the spatial extent of the fishery [@Spencer2026] [@Stromp2023].
+
+
+## Life History Synopsis:
+
+Atlantic surfclams are a benthic biomass dominant species on the Northeast U.S. continental shelf from the Gulf of St. Lawrence to Cape Hatteras, North Carolina [@Hofmann2018]. The fishery operates in the Mid-Atlantic Bight and Georges Bank and produces over $30 million in exvessel annual revenue [@Murray2016]. Spawning occurs in summer to early fall, with earlier spawning occurring in southern habitats [@Cargnelli1999_surfclam]. Temperature is a determinant for gonadal development and spawning [@Loosanoff1963]. Spawning occurs when temperatures exceed 15°C, and may be delayed due to cold temperatures [@Cargnelli1999_surfclam]. Fertilized eggs develop into planktonic larvae approximately 9 hours after fertilization at 21.7°C and 40 hours at 14°C [@Ropes1980]. Larvae mature into the pediveliger stage, a transitional “swimming-crawling” larval stage with development of a foot for burrowing, around 18 days after fertilization [@Loosanoff1963]. Larvae are dispersed by currents (generally southward along the Northeast shelf) and settlement coincides with a relaxation of upwelling events [@Fay1983]. Variable reproductive success has been linked to variability in current dynamics in the Mid-Atlantic Bight [@Zhang2016]. Metamorphosis to juveniles, which consists of complete absorption of the velum and settlement to the substrate, occurs anywhere from 19 to 35 days after fertilization depending on temperature [@Fay1983]. Juveniles settle in sandy habitats in the intertidal and up to depths of 178m [@Cargnelli1999_surfclam]. Juveniles and adults are planktivorous siphon feeders, feeding on phytoplankton ≥ 4µm diameter. Food varies with the season, geographic location, and depth of shell bed [@Cargnelli1999_surfclam]. Atlantic surfclams have many predators, including the naticid snails *Euspira heros* and *Neverita duplicata*, the sea star *Asterias forbesi*, lady crabs (*Ovalipes ocellatus*), Jonah crabs (*Cancer borealis*)  and horseshoe crabs (*Limulus polyphemus*).  Fish predators include haddock (*Melanogrammus aeglefinus*) and Atlantic cod (*Gadus morhua*) [@Ropes1980]. Age at maturity ranges anywhere from 3 months to 4 years, however size is likely more important to maturation rates [@Cargnelli1999_surfclam]. Atlantic surfclams have a maximum age of 31 years [@Cargnelli1999_surfclam]. The stock is managed by the Mid-Atlantic Fishery Management Council under the Atlantic surfclam and ocean quahog Fishery Management Plan. As of the 2024 Management Track Assessment, the stock is not overfished and overfishing is not occurring. However, spawning stock biomass continues to decline and is currently at 95% of the target biomass [@NEFSC2024_surfclam].
+
+
+## References
+

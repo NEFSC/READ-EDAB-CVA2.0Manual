@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Chub mackerel
+
+\vspace{-0.5cm}
+
+*Scomber colias*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Chub mackerel_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Chub mackerel_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Chub mackerel_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Chub mackerel_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Chub mackerel_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Chub mackerel_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Chub mackerel_sdm.png")
+```
+
+\newpage
+
+# Chub mackerel
+
+\vspace{-0.5cm}
+
+*Scomber colias*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Fluctuations in Atlantic chub mackerel abundance have been reported in the Mid-Atlantic and New England, and may result from environmental influences such as temperature and upwelling. Oceanographic processes likely influence recruitment and distribution, as all life stages of chub mackerel are fully pelagic [@hernandez2000synopsis]. In the eastern Atlantic, chub mackerel distributions have shifted northward, with a delayed and prolonged spawning season with increasing latitude [@dominguez2022spatial]. In the Alboran Sea, chub mackerel abundance is vulnerable to variations in sea surface temperature, salinity, currents, and wind patterns [@ayman2024environmental].
+
+## Life History Synopsis:
+
+Atlantic chub mackerel is a schooling pelagic species ranging from Nova Scotia to Argentina, including the Gulf of America, and are found on the continental shelf at depths of 250-300m [@mafmc2025chub]. They are batch spawners, spawning January through April from North Carolina through the Gulf of America [@daley2018growth]. Spawning generally occurs in waters greater than 10°C and is possibly triggered by water temperatures between 15- 20°C [@hernandez2000synopsis]. Chub mackerel eggs develop for approximately 53-56 hrs at 18-20°C. Larval stages last between 16-24 days, developing faster at higher temperatures [@hernandez2000synopsis]. Atlantic chub mackerel grow rapidly during the first year of life, reaching maturity around 2 years of age [@daley2018growth] and can live up to 13 years [@hernandez2000synopsis]. Chub mackerel are generalist predators of zooplankton and other pelagic prey including mysids, euphausids, decapod larvae, copepods, amphipods, small fish, cephalopods. Cannibalism has been observed in this species [@hernandez2000synopsis]. There is little data on chub mackerel predation in the Northwest Atlantic. The Mid-Atlantic Fishery Management Council funded a study on diet composition of marlins and tunas and found very few chub mackerel in the stomachs of yellowfin tuna and white marlin [@mafmc2025chub]. In 2019, the Mid-Atlantic Fishery Management Council approved Amendment 21 to the Mackerel, Squid, and Butterfish Fishery Management Plan. This Amendment established conservation and management measures for Atlantic chub mackerel in the Northwest Atlantic [@mafmc2019amendment]. There is currently no stock assessment of chub mackerel in the Mid-Atlantic. Biomass is assumed to be at a sustainable level based on stock productivity and low fishery capacity [@mafmc2025chub].
+
+## References
+

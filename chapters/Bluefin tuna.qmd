@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Bluefin tuna
+
+\vspace{-0.5cm}
+
+*Thunnus thynnus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefin tuna_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Bluefin tuna_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefin tuna_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefin tuna_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefin tuna_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Bluefin tuna_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Bluefin tuna_sdm.png")
+```
+
+\newpage
+
+# Bluefin tuna
+
+\vspace{-0.5cm}
+
+*Thunnus thynnus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Projected surface temperatures in the Gulf of America may alter the spatial and temporal extent of Atlantic bluefin tuna spawning. Model results from [@muhling2011] indicate decreased larval bluefin tuna occurrence in late spring in the Gulf by 39-61% by 2050 and 93-96% by 2100, with early spring spawning becoming more prevalent. @erauskin2026 also modeled decreased habitat suitability for spawning in the Gulf of America. They predict a poleward shift in Atlantic bluefin tuna distribution and greater spatial overlap with prey in higher latitudes. Nursery habitats in the Gulf of America are impacted by oil spills. Upwards of 5% of predicted spawning habitat within the U.S. Exclusive Economic Zone (EEZ) was impacted by the Deepwater Horizon oil spill [@hazen2016].
+
+## Life History Synopsis:
+
+Western Atlantic bluefin tuna are a highly migratory species observed from Newfoundland to the Gulf of America; they occupy temperate surface waters but can dive to depths of 1000m [@fromentin2006]. Spawning occurs between spring and summer throughout western North Atlantic spawning grounds, namely the Gulf of America (March-June) and Slope Sea (June-September). Spawning in the Slope Sea occurs one to two months later than the Gulf of America due to differences in sea surface temperatures [@baglin1982]. Bluefin tuna eggs hatch after 2 days and larvae remain pelagic for 3-4 weeks [@shropshire2022]. Larval bluefin tuna are found near spawning grounds and dispersed via wind and the margins of ocean currents. Edges of ocean currents and eddies provide access to warmer sea surface temperatures and nutrient-rich waters that support larval foraging of zooplankton prey while avoiding predation [@shropshire2022]. Favorable habitat for bluefin larvae in the Gulf of America was determined to be moderately warm waters (23.5-28.5°C) in the eddies of the Loop Current, and outside of cooler, higher chlorophyll continental shelf waters [@teo2007]. Along the coast of the southeastern United States, larval stages may benefit from nearshore meanders of the Gulf Stream that can produce upwelling of nutrient rich water along the continental shelf edge [@shropshire2022]. Larvae initially feed on zooplankton and progress to a piscivorous diet at a relatively small size [@llopiz2015]. Starvation is the largest cumulative source of mortality in early larval stages, and predation on older larvae is a main source of mortality in later stages [@mcgowan1989]. Juvenile habitats are located over the continental shelf in the summer and further offshore in the winter. Juvenile life stages follow similar seasonal movements compared to adult life stages, though are generally more restricted to coastal areas [@nmfs2006]. Juvenile and adult bluefin tuna are opportunistic, generalist predators feeding mainly on zooplanktivorous fishes and crustaceans. Predation of larger fish continues with increasing body size, with juveniles moving from sand lance to mackerel and herring as adults [@logan2011] [@logan2015]. Adult bluefin tuna migrate seasonally from winter to early summer spawning grounds in the Gulf of America, Straits of Florida, and Slope Sea to summer and fall foraging grounds throughout the Gulf Stream, South and Mid-Atlantic Bight, Gulf of Maine, Nova Scotia Shelf, and east of the Flemish Cap [@block2001]. Age at 50% maturity estimates for Atlantic bluefin tuna vary between 5 to 12 years, with a maximum age of over 30 years [@scrs2021]. NOAA Fisheries, with recommendations from the International Commission for the Conservation of Atlantic Tunas (ICCAT), manages the Atlantic bluefin tuna fishery in the United States through the Atlantic Highly Migratory Species Management Division. As of 2023, the stock is being managed ICCAT Recommendation 21-10. Population numbers are unknown but the stock is not subject to overfishing [@iccat2022]. 
+
+## References
+

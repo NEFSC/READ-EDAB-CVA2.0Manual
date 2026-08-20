@@ -1,0 +1,110 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Spanish mackerel
+
+\vspace{-0.5cm}
+
+*Scomberomorus maculatus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spanish mackerel_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Spanish mackerel_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spanish mackerel_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spanish mackerel_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spanish mackerel_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Spanish mackerel_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Spanish mackerel_sdm.png")
+```
+
+\newpage
+
+# Spanish mackerel
+
+\vspace{-0.5cm}
+
+*Scomberomorus maculatus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Little work exists on the effects of climate on Spanish mackerel populations in the Northwest Atlantic. Temperature likely limits movement; they are not found in waters colder than 18°C [@berrien1977biological]. Rising ocean temperatures may expand suitable habitat in the Mid-Atlantic and north to New England. Larval Spanish mackerel were largely resistant to contaminants from the Deepwater Horizon oil spill, and larval abundance did not differ before v. after the spill [@ransom2016condition].
+
+## Life History Synopsis:
+
+Spanish mackerel are a migratory, schooling fish found along the eastern United States and Gulf from New York to Florida [@godcharles1986species]. There are two Spanish mackerel stocks, one in the South Atlantic and one in the Gulf of America [@sedar2022sedar78] [@sedar2023sedar81]. The Atlantic stock overwinters off the Florida coast and migrates northward to the Mid-Atlantic in the spring and early summer. They return south to Florida once the Mid-Atlantic cools in the fall [@berrien1977biological]. Spanish mackerel prefer temperatures 21-27°C and are not seen below 18°C [@berrien1977biological]. Spawning occurs from May to September along the southeast Atlantic coast, with lower latitudes spawning earlier than higher latitudes [@collins1987larval]. In Chesapeake Bay, spawning occurs from June to August, peaking in June [@cooksey1996reproductive]. Females are batch spawners, releasing as many as 1.5 million eggs over the spawning season [@collins1987larval]. Larval collection data indicate that spawning occurs at depths of 12-35 meters over the inner continental shelf including estuarine and coastal areas [@mceachran1980distribution]. Hatching occurs approximately 25 hours after fertilization at water temperatures averaging 26ºC. Larvae and early juveniles grow 1.9 mm per day for approximately the first 23 days of life.  From 23-40 days, growth is accelerated, with young fishes growing as much as 5 mm per day. Thereafter, growth slows to approximately 2.1 mm per day [@schmidt1993age]. Larvae are found in surface waters between 19.6–29.8°C with a salinity of 28.3–37.4 ppt. It is unclear if there is a dependency on currents for transport to nursery habitats [@godcharles1986species]. Larvae feed on other larval fishes such as carngids, clupeids, and engraulids and crustaceans [@berrien1977biological]. Juveniles and adults are voracious, opportunistic, carnivores. Food consists mostly of small fishes with lesser quantities of pandalid and penaeoid shrimps and squids.  Clupeoids such as round herring, thread herring, menhaden, and alewives, along with anchovies, are important forage species. They seldom feed on bottom invertebrates [@bowman2000food] [@berrien1977biological]. Spanish mackerel reach maturity around 1-1.5 years of age [@juan2013life] with a maximum lifespan of around 12 years [@sedar2022sedar78]. They are largely preyed upon by dolphins, sharks, and tunas [@berrien1977biological]. Management of Spanish mackerel in state waters is coordinated by the Atlantic States Marine Fisheries Commission (ASMFC) Coastal Pelagics Management Board. Both stocks are not overfished or subject to overfishing [@sedar2022sedar78]  [@sedar2023sedar81].
+
+## References

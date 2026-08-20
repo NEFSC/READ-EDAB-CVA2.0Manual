@@ -1,0 +1,111 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Summer flounder
+
+\vspace{-0.5cm}
+
+*Paralichthys dentatus*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Summer flounder_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Summer flounder_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Summer flounder_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Summer flounder_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Summer flounder_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Summer flounder_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Summer flounder_sdm.png")
+```
+
+\newpage
+
+# Summer flounder
+
+\vspace{-0.5cm}
+
+*Paralichthys dentatus*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Summer flounder distributions are correlated with depth, bottom temperature, sea surface temperature (SST), and bottom salinity [@deen2025estimating]. Their distribution in the Northwest Atlantic may shifting north due to increasing winter temperatures, but could also be affected by reductions in fishing pressure or range expansion [@bell2014externally]. Large-scale climate drivers, such as the Gulf Stream Index, may affect summer flounder recruitment and distribution [@oleary2019understanding]. Spatio-temporal modeling results from [@deen2025estimating] report increased abundance of summer flounder in the fall by 10-15% with a 1°C increase in SST, 12% with a 1°C increase in bottom temperature and 3-4% increase with each meter in depth. In the spring, abundance increased by 30% with a 1°C increase in SST. Summer flounder embryos exhibit reduced survival when exposed to elevated CO^2^. Larvae exposed to elevated CO^2^ had tissue damage and initiated metamorphosis earlier and at smaller sizes [@chambers2014effects].
+
+## Life History Synopsis:
+
+Summer flounder are found both inshore and offshore in waters from Nova Scotia to Florida [@packer1999_sf]. Spawning season lasts from September through February/March, with lower latitudes starting sooner. Spawning adults migrate to overwintering habitats on the continental shelf edge. In the late spring, they move back inshore into shallow waters and estuaries [@packer1999_sf]. The timing of peak spawning in October/November coincides with the breakdown of thermal stratification on the continental shelf and the maximum production of autumn plankton which is characteristic of temperate ocean waters of the northern hemisphere [@packer1999_sf] [@morse1981reproduction]. Egg development takes anywhere from 48-142 hours, depending on water temperatures. At 14°C, larvae metamorphosize into juveniles within approximately 65 days of hatching. Time to metamorphosis also was dependent on temperatures, with metamorphosis completing as fast as 46.5 days at 14.5°C [@smith1973distribution]. Larvae do not drift far from spawning regions; however, tidal stream transport and vertical migration behavior may be important to determining larval distributions [@packer1999_sf] [@hare2006sinking]. Larvae prefer waters with warmer temperatures and intermediate salinities. Temperature affects the rate of larvae yolk sac absorption (which impacts when larvae have to depend on exogenous feeding), development and growth [@watanabe1998light]. Studies have also shown that larval size increases with greater light intensity (presumably affecting activity and energy metabolism) and higher salinities [@watanabe1998light] [@burke1998influence]. Larvae are preyed upon by a variety of predators, including blue crabs and sea robins. The type and abundance of predators (ex: *Crangon septemspinosa* or pelagic mummichugs) could determine whether a metamorphic summer flounder stays in the substrate or the water column (*C. septemspinosa* would force them to the water column, and vice versa for mummichugs) [@keefe1994contributions]. Larvae preferentially settle on sandy substrate; bottom type, presence of predators, and water temperatures may all impact settlement [@keefe1994contributions]. Young-of-the-year can occur in a variety of habitats, including shallow, mud-bottomed marsh creeks, shallow sand substrates (including seagrass beds), deep sand substrate, and deep fine-sand substrates [@szedlmayer1993ultrasonic]. Juveniles are opportunistic feeders and differences in diet are often related to the availability of prey. There also appears to be ontogenetic changes in diet. Smaller individuals eat polychaetes and crustaceans. Metamorphic stage individuals reflect calanoid copepod diets (pelagic), while late metamorphosis stage individual and juveniles' diets reflected shrimp, polychaetes, harpactoid copepods, amphipods, small fishes, small gastropod mollusks, and plant material (benthic) [@grover1998feeding]. Adults are demersal, with highest abundance in waters deeper than 30m and at temperatures 2-27°C [@packer1999_sf]. Adults are also opportunistic feeders. Fish and crustaceans make up the majority of their diet, but dominant prey items shift following prey availability [@cernadas2021composition]. Adult summer flounder are preyed upon by sharks, rays, and monkfish [@packer1999_sf]. Summer flounder reach maturity at approximately 13-17 months. Males can reach 12 years of age and females 14 years, although individuals living upwards of 20 years have been reported [@nefsc2019assessment_sf]. The summer flounder stock is cooperatively managed by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission under the Summer Founder, Scup, and Black Sea Bass Fishery Management Plan. The stock is not overfished and overfishing is not occurring [@nefsc2025assessment_sf]. 
+
+
+## References

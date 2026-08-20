@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Softshell clam
+
+\vspace{-0.5cm}
+
+*Mya arenaria*
+
+Overall vulnerability Rank =
+
+Biological Sensitivity =
+
+Climate Exposure =
+
+Data Quality =
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Softshell clam_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Softshell clam_sensitivity_summary_table.png")
+
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Softshell clam_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Softshell clam_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Softshell clam_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Softshell clam_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Softshell clam_sdm.png")
+```
+
+\newpage
+
+# Softshell clam
+
+\vspace{-0.5cm}
+
+*Mya arenaria*
+
+## Overall Climate Vulnerability Rank:
+
+add text here
+
+## Climate Exposure:
+
+add text here
+
+## Biological Sensitivity:
+
+add text here
+
+## Distributional Vulnerability Rank:
+
+add text here
+
+## Directional Effect:
+
+add text here
+
+## Data Quality:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+Softshell clams are sensitive to increasing temperatures; temperature influences growth and reproduction, and their southern range boundary is controlled by sea surface temperatures [@kennedy1971upper]. Population declines in softshell clams in the Wadden Sea result from thermal stress caused by high water temperatures [@freitas2007potential]. Softshell clams are likely to be vulnerable to ocean acidification, impacting their behavior, physiology, growth, and survival [@clements2023effects]. @koo2017variability described salinity accounting for the majority of spatial variation in softshell clam growth in Plum Island Sound, Massachusetts. Salinity gradients in Northwest Atlantic estuaries are expected to alter with sea level rise and increasing precipitation, which may prompt management concerns [@koo2017variability]. 
+
+## Life History Synopsis:
+
+The softshell clam is a circumboreal species native to the Northwest Atlantic from Labrador to Cape Hatteras [@newell1986species]. Softshell clams reach maturity in 1-4 years, depending on the length of each growing season. The typical lifespan is between 10-12 years, but cases have been recorded of some softshell clams reaching 28 years of age [@cohen2005guide]. These clams can be found at temperatures as low as 2°C but prefer between 10-28°C [@newell1986species] [@landry2021recruitment]. Spawning occurs between 4-25°C, with optimal temperatures between 10-15°C [@abraham1986species]. Fecundity also increases with size and age, particularly with females [@cohen2005guide]. Separate male and female sexes occur in the species, with fertilization occurring externally in the environment. Female softshell clams can release from 1-5 million eggs in their lifetime and typically one to two spawnings happen a year, one in early spring and the other in late summer, depending on locality and monthly tidal cycles [@abraham1986species]. Approximately 12 hours after fertilization, larvae hatch from the eggs. Larvae spend 2-5 weeks free-floating with plankton and other organic particles before metamorphosizing and settling to the bottom of the sea floor. The clams then spend another 2-5 weeks moving along the sea floor or temporarily attaching themselves to the surface of objects [@cohen2005guide]. Food availability and optimal oceanographic conditions to help transport and/or retain eggs and larvae in suitable habitats help drive local recruitment [@bowen2009settlement]. Eggs and larvae are preyed upon by a variety of predators, including fish and other filtering invertebrates. High fecundity likely reduces the impact of predation on egg and larvae [@newell1986species]. Metamorphosis and settlement to the benthos can be delayed in favor of more suitable substrates, and may be driven by chemical cues [@snelgrove1999habitat]. Once settled, softshell clams spend 2-5 weeks moving along the sea floor or temporarily attaching themselves to the surface of objects. They begin to burrow into the sediment in brackish waters, estuaries, and marine habitats, and stay burrowed for the rest of their life [@cohen2005guide]. Burrows are constructed 20-30cm below the sediment surface and in waters up to 200m depth. Sandy sediment, with a sandy-mud mixture or with some gravel, is preferred [@tyler2003mya]. 
+The softshell clam is an active suspension feeder, filtering organic particles and microinvertebrates such as plankton, filamentous algae, diatoms, jellyfish and fish larvae, and flagellates [@tyler2003mya]. Predation plays a large role in juvenile and adult distribution and survival. Predators include birds, fish, shrimp, worms, crabs, and snails [@newell1986species]. The green crab, an invasive species, is one of the more destructive clam predators and declines in clam production have been linked to increases in green crab abundance. Blue crabs are also major predators in Chesapeake Bay; exclusion studies have illustrated that recruitment and survival increases when blue crabs are excluded [@landry2021recruitment]. The softshell clam supports important state-managed commercial and recreational fisheries, and are harvested with rakes, forks, or hydraulic dredges [@newell1986species]. Recent declines in commercial landings can be attributed to overfishing, habitat loss, pollution, and climate change. However, mariculture in softshell clams has been successful in building populations for restoration or commercial fishing [@kennedy2023soft]. 
+
+
+## References
