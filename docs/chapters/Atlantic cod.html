@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -432,8 +452,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -472,12 +492,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = High (Eastern &amp; Western Gulf of Maine and Georges Bank stocks) - Very High (Southern New England stock)</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 82-83%</p>
 </div>
 </div>
 </div>
@@ -496,10 +516,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -524,15 +544,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>High (E/W Gulf of Maine, Georges Bank) – Very High (Southern New England)</td>
+<td>Moderate (All Stocks)</td>
+<td>Increase</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -549,7 +569,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Of the four cod stocks, three (<strong>Eastern Gulf of Maine, Western Gulf of Maine, and Georges Bank</strong>) received <strong>High</strong> sensitivity scores. The <strong>Southern New England</strong> stock received a <strong>Very High</strong> score. Certainty was highest for the Georges Bank (92%) stock, followed by the Eastern Gulf of Maine (82%), Western Gulf of Maine (66%), and Southern New England (64%).</p>
+<p>Stock size, complexity in reproductive strategy, and egg and larval survival and settlement requirements drove the scores across all four stocks. Spawning cycle and historical variability in temperature also scored above 3 for all stocks.</p>
+<p>Cod are currently overfished in the Gulf of Maine (NEFSC 2021). Spawning is coupled with copepod production (Brander and Hurley 1992) and may be impacted by warming temperatures (Behan et al 2023; Drinkwater 2005). Warming temperatures may also reduce adult fitness, and thus reduce egg quality (Klein et al 2016). Recruitment success is linked to retentive circulation patterns in the Gulf of Maine and on Georges Bank (Cong et al 1996; Lough and Bolz 1989), which can be altered by large scale climate patterns and overall regional warming (Pershing et al 2015).</p>
+<p>Atlantic cod sensitivity has increased since the last assessment. Atlantic cod were previously scored as Moderate (Hare et al 2016). Stock size/status and egg and larval survival and settlement requirements (formally early life history requirements) drove the scores in both assessments.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
@@ -571,14 +594,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>All four stocks of Atlantic Cod will likely be negatively impacted by future climate change (100% certainty in expert scores). This is similar to the previous Assessment (Hare et al 2016). Continued warming will likely drive declines in recruitment and shifts in spawning phenology.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Recent warming in the Gulf of Maine relating to a northward shift in the Gulf Stream and changes in the Atlantic Multidecadal Oscillation and Pacific Decadal Oscillation led to reduced Atlantic cod recruitment and increased mortality <span class="citation" data-cites="pershing2015slow">(<a href="#ref-pershing2015slow" role="doc-biblioref">Pershing et al. 2015</a>)</span>. Rising temperatures may affect Atlantic cod spawning locations and timing <span class="citation" data-cites="behan2023profile">(<a href="#ref-behan2023profile" role="doc-biblioref">Behan et al. 2023</a>)</span>. <span class="citation" data-cites="drinkwater2005response">Drinkwater (<a href="#ref-drinkwater2005response" role="doc-biblioref">2005</a>)</span> suggested Atlantic cod spawning grounds will experience a shift northward, with spawning timing occurring later in the season as a response to warming ocean temperatures. Climate change may also increase in natural mortality in adult Atlantic cod due to declines in fish condition <span class="citation" data-cites="behan2023profile">(<a href="#ref-behan2023profile" role="doc-biblioref">Behan et al. 2023</a>)</span>. <span class="citation" data-cites="drinkwater2005response">Drinkwater (<a href="#ref-drinkwater2005response" role="doc-biblioref">2005</a>)</span> predicted large-scale declines in Atlantic cod in the Gulf of Maine if bottom temperatures increase above 12°C, either through changes in distribution to colder waters or natural mortality. Reduced fitness in Atlantic cod adults from climate impacts may result in lower quality eggs <span class="citation" data-cites="klein2016effects">(<a href="#ref-klein2016effects" role="doc-biblioref">Klein, Smith, and Kritzer 2016</a>)</span>; however, there may be some capacity to adapt to slower rates of warming <span class="citation" data-cites="langan2020abundance">(<a href="#ref-langan2020abundance" role="doc-biblioref">Langan et al. 2020</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Cod in the Northwest Atlantic range from Greenland to Cape Hatteras, NC, with a majority of biomass in the Gulf of Maine and on Georges Bank <span class="citation" data-cites="behan2023profile">(<a href="#ref-behan2023profile" role="doc-biblioref">Behan et al. 2023</a>)</span>. Spawning timing varies by location - later in the year with increasing latitude - although peaks generally occur in the winter and spring <span class="citation" data-cites="lough2004essential">(<a href="#ref-lough2004essential" role="doc-biblioref">Lough 2004</a>)</span> in water temperatures between 5-7°C. In spring, Atlantic cod spawning matched the variation in peak abundance of <em>Calanus finmarchicus</em>. In fall, cod spawned in some, but not all, areas where <em>Calanus</em> were abundant. This is consistent with the hypothesis that cod spawning is coupled to copepod production <span class="citation" data-cites="brander1992distribution">(<a href="#ref-brander1992distribution" role="doc-biblioref">Brander and Hurley 1992</a>)</span>. Atlantic cod eggs are pelagic and hatch after 8-60 days, varying with temperature <span class="citation" data-cites="hardy1978development">(<a href="#ref-hardy1978development" role="doc-biblioref">Hardy 1978</a>)</span>. Recruitment success increases when dispersion of larvae by currents is reduced <span class="citation" data-cites="cong1996retrospective">(<a href="#ref-cong1996retrospective" role="doc-biblioref">Cong, Sheng, and Thompson 1996</a>)</span>. On Georges Bank, a clockwise gyre circulation pattern tends to retain and isolate eggs and larvae <span class="citation" data-cites="lough1989movement">(<a href="#ref-lough1989movement" role="doc-biblioref">Lough and Bolz 1989</a>)</span>. Transformation from larvae to the juvenile stage occurs at sizes greater than 20 mm, where they then move to the bottom <span class="citation" data-cites="lough2004essential">(<a href="#ref-lough2004essential" role="doc-biblioref">Lough 2004</a>)</span>. Early juveniles are dependent on gravel substrates or grass beds in nearshore nurseries to favor survival through predator avoidance and increased food availability <span class="citation" data-cites="lough1989movement">(<a href="#ref-lough1989movement" role="doc-biblioref">Lough and Bolz 1989</a>)</span>. In the Gulf of Maine, juveniles prey on mollusks and other invertebrates, while adults consume a greater proportion of fish including herring, redfish, mackerel, and other cod <span class="citation" data-cites="bowman1975food">(<a href="#ref-bowman1975food" role="doc-biblioref">Bowman 1975</a>)</span>. Adult cod have few predators, other than large sharks and seals <span class="citation" data-cites="neuenhoff2019continued">(<a href="#ref-neuenhoff2019continued" role="doc-biblioref">Neuenhoff et al. 2019</a>)</span>. Recent modeling studies illustrate growing populations of grey seals, harp seals, and dogfish are a major barrier to cod population recovery <span class="citation" data-cites="behan2023profile">(<a href="#ref-behan2023profile" role="doc-biblioref">Behan et al. 2023</a>)</span>. Adults in the Newfoundland stock migrate, leaving overwintering areas in deep oceanic waters and follow tongues of deep, relatively warm, oceanic waters (“highways”) across the shelf to summer feeding areas nearshore. They then move northward along the Newfoundland coast in late summer, and eventually return to wintering areas <span class="citation" data-cites="lough2004essential">(<a href="#ref-lough2004essential" role="doc-biblioref">Lough 2004</a>)</span>. Previous research suggested that in the middle part of their range, Atlantic cod only undertake minor seasonal movements in reaction to changing temperatures. However, more recent research suggests that there are inshore/offshore migrations that correspond to spawning and feeding activity in the Gulf of Maine <span class="citation" data-cites="zemeckis2017seasonal">(<a href="#ref-zemeckis2017seasonal" role="doc-biblioref">Zemeckis et al. 2017</a>)</span>. As of 2025, Atlantic cod are divided into 4 stock units (Western &amp; Eastern Gulf Maine, Georges Bank, and Southern New England) based on spawning locations, larval transport pathways, and genetic markers <span class="citation" data-cites="nefmc2025multispecies">(<a href="#ref-nefmc2025multispecies" role="doc-biblioref">New England Fishery Management Council (NEFMC) 2025</a>)</span>. All stocks are managed under the New England Fishery Management Council’s Northeast Multispecies Fishery Management Plan <span class="citation" data-cites="kleinmacphee2012atlantic">(<a href="#ref-kleinmacphee2012atlantic" role="doc-biblioref">Klein-MacPhee 2012</a>)</span>. The stock is overfished and overfishing is occurring in the Gulf of Maine <span class="citation" data-cites="nefsc2021update">(<a href="#ref-nefsc2021update" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2021</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -612,6 +637,56 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-behan2023profile" class="csl-entry" role="listitem">
+Behan, J., A. Tyrell, A. Hart, S. Large, A. Hansell, K. Lankowicz, R. Morse, I. Andruschchenko, J. Gross, and L. Kerr. 2023. <span>“Profile of Ecosystem and Climate Influences on Atlantic Cod.”</span> NOAA. <a href="https://doi.org/10.25923/c267-zd92">https://doi.org/10.25923/c267-zd92</a>.
+</div>
+<div id="ref-bowman1975food" class="csl-entry" role="listitem">
+Bowman, R. E. 1975. <span>“Food Habits of Atlantic Cod, Haddock, and Silver Hake in the Northwest Atlantic, 1969-1972.”</span> Lab. Ref. 75-1. U.S. Natl. Mar. Fish. Serv., Northeast Fish. Cent.
+</div>
+<div id="ref-brander1992distribution" class="csl-entry" role="listitem">
+Brander, K., and P. C. F. Hurley. 1992. <span>“Distribution of Early-Stage Atlantic Cod (Gadus Morhua), Haddock (Melanogrammus Aeglefinus), and Witch Flounder (Glyptocephalus Cynoglossus) Eggs on the Scotian Shelf: A Reappraisal of Evidence on the Coupling of Cod Spawning and Plankton Production.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 49 (2): 238–51.
+</div>
+<div id="ref-cong1996retrospective" class="csl-entry" role="listitem">
+Cong, L., J. Sheng, and K. T. Thompson. 1996. <span>“A Retrospective Study of Particle Retention on the Outer Banks of the Scotian Shelf 1956-1993.”</span> 170. Canadian Technical Report of Hydrography; Ocean Sciences.
+</div>
+<div id="ref-drinkwater2005response" class="csl-entry" role="listitem">
+Drinkwater, K. F. 2005. <span>“The Response of Atlantic Cod (Gadus Morhua) to Future Climate Change.”</span> <em>ICES Journal of Marine Science</em> 62 (7): 1327–37. <a href="https://doi.org/10.1016/j.icesjms.2005.05.015">https://doi.org/10.1016/j.icesjms.2005.05.015</a>.
+</div>
+<div id="ref-hardy1978development" class="csl-entry" role="listitem">
+Hardy, J. D., Jr. 1978. <span>“Development of Fishes of the <span>M</span>id-<span>A</span>tlantic <span>B</span>ight: An Atlas of Egg, Larval and Juvenile Stages. <span>V</span>ol. 2 <span>A</span>nguillidae Through <span>S</span>yngnathidae.”</span> Report FWS/OBS-78/12. U.S. Fish; Wildlife Service, Biological Services Program.
+</div>
+<div id="ref-klein2016effects" class="csl-entry" role="listitem">
+Klein, E. S., S. L. Smith, and J. P. Kritzer. 2016. <span>“Effects of Climate Change on Four New England Groundfish Species.”</span> <em>Reviews in Fish Biology and Fisheries</em> 27: 317–38. <a href="https://doi.org/10.1007/s11160-016-9444-z">https://doi.org/10.1007/s11160-016-9444-z</a>.
+</div>
+<div id="ref-kleinmacphee2012atlantic" class="csl-entry" role="listitem">
+Klein-MacPhee, G. 2012. <span>“Atlantic Cod/Gadus Morhua Linnaeus 1758.”</span> In <em>Fishes of the Gulf of Maine</em>, edited by B. B. Collette and G. Klein-MacPhee, 3rd ed., 228–35. Washington D.C.: Smithsonian Institution Press.
+</div>
+<div id="ref-langan2020abundance" class="csl-entry" role="listitem">
+Langan, J. A., M. C. McManus, D. R. Zemeckis, and J. S. Colli. 2020. <span>“Abundance and Distribution of Atlantic Cod (Gadus Morhua) in a Warming Southern New England.”</span> <em>Fisheries Bulletin</em> 118 (2): 145–56. <a href="https://doi.org/10.7755/FB.118.2.4">https://doi.org/10.7755/FB.118.2.4</a>.
+</div>
+<div id="ref-lough2004essential" class="csl-entry" role="listitem">
+Lough, R. G. 2004. <span>“Essential Fish Habitat Source Document: Atlantic Cod, Gadus Morhua, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE-190.
+</div>
+<div id="ref-lough1989movement" class="csl-entry" role="listitem">
+Lough, R. G., and G. R. Bolz. 1989. <span>“The Movement of Cod and Haddock Larvae onto the Shoals of Georges Bank.”</span> <em>Journal of Fish Biology</em> 35 (Suppl. A): 71–79.
+</div>
+<div id="ref-neuenhoff2019continued" class="csl-entry" role="listitem">
+Neuenhoff, R. D., D. P. Swain, S. P. Cox, M. K. McAllister, A. W. Trites, C. J. Walters, and M. O. Hammill. 2019. <span>“Continued Decline of a Collapsed Population of Atlantic Cod (Gadus Morhua) Due to Predation-Driven Allee Effects.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 76 (1): 168–84. <a href="https://doi.org/10.1139/cjfas-2017-0190">https://doi.org/10.1139/cjfas-2017-0190</a>.
+</div>
+<div id="ref-nefmc2025multispecies" class="csl-entry" role="listitem">
+New England Fishery Management Council (NEFMC). 2025. <span>“Northeast Multispecies Fishery Management Plan Amendment 25.”</span> <a href="https://d23h0vhsm26o6d.cloudfront.net/250305_Groundfish_Amendment-25_final_submission.pdf">https://d23h0vhsm26o6d.cloudfront.net/250305_Groundfish_Amendment-25_final_submission.pdf</a>.
+</div>
+<div id="ref-nefsc2021update" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2021. <span>“Gulf of Maine Atlantic Cod 2021 Update Assessment Report.”</span> <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=7550">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=7550</a>.
+</div>
+<div id="ref-pershing2015slow" class="csl-entry" role="listitem">
+Pershing, A. J., M. A. Alexander, C. M. Hernandez, L. A. Kerr, A. Le Bris, K. E. Mills, J. A. Nye, et al. 2015. <span>“Slow Adaptation in the Face of Rapid Warming Leads to Collapse of the Gulf of Maine Cod Fishery.”</span> <em>Science</em> 350: 809–12. <a href="https://doi.org/10.1126/science.aac9819">https://doi.org/10.1126/science.aac9819</a>.
+</div>
+<div id="ref-zemeckis2017seasonal" class="csl-entry" role="listitem">
+Zemeckis, D. R., C. Liu, G. W. Cowles, M. J. Dean, W. S. Hoffman, D. Martins, and S. X. Cadrin. 2017. <span>“Seasonal Movements and Connectivity of an Atlantic Cod (Gadus Morhua) Spawning Component in the Western Gulf of Maine.”</span> <em>ICES Journal of Marine Science</em> 74: 1780–96.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

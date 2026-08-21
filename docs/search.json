@@ -309,7 +309,7 @@
     "href": "chapters/American lobster.html#summary",
     "title": "American lobster (Homarus americanus)",
     "section": "",
-    "text": "Scores\nVulnerability =\nClimate Exposure =\nBiological Sensitivity =\n\n\nData Quality\nModel Confidence Score =\nLife History Data Quality =",
+    "text": "Scores\nVulnerability =\nClimate Exposure =\nBiological Sensitivity = High (Gulf of Maine/Georges Bank stock) - Very High (Southern New England stock)\n\n\nData Quality\nModel Confidence Score =\nLife History Data Quality = 97%",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>American lobster (*`Homarus americanus`*)</span>"
@@ -320,7 +320,7 @@
     "href": "chapters/American lobster.html#changes-from-previous-assessments",
     "title": "American lobster (Homarus americanus)",
     "section": "Changes from Previous Assessment(s)",
-    "text": "Changes from Previous Assessment(s)\n\n\n\n\n\n\n\n\n\nMetric\nCurrent Assessment\nPrevious Assessment(s)\nChange\n\n\n\n\nVulnerability\n\n\n\n\n\nExposure\n\n\n\n\n\nSensitivity\n\n\n\n\n\nDirectional Effect",
+    "text": "Changes from Previous Assessment(s)\n\n\n\n\n\n\n\n\n\nMetric\nCurrent Assessment\nPrevious Assessment(s)\nChange\n\n\n\n\nVulnerability\n\n\n\n\n\nExposure\n\n\n\n\n\nSensitivity\nHigh (Gulf of Maine/Georges Bank) - Very High (Southern New England)\nModerate (All Stocks)\nIncrease\n\n\nDirectional Effect\nNegative\nNeutral\nDecrease",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>American lobster (*`Homarus americanus`*)</span>"
@@ -331,7 +331,7 @@
     "href": "chapters/American lobster.html#score-drivers",
     "title": "American lobster (Homarus americanus)",
     "section": "Score Drivers",
-    "text": "Score Drivers\n\nVulnerability:\nadd text here\n\n\nClimate Exposure:\nadd text here\n\n\nBiological Sensitivity:\nadd text here",
+    "text": "Score Drivers\n\nVulnerability:\nadd text here\n\n\nClimate Exposure:\nadd text here\n\n\nBiological Sensitivity:\nThe Gulf of Maine/Georges Bank stock of American lobster received a High sensitivity score and the Southern New England stock scored Very High. Certainty was high for both stocks, with 99% certainty for the Gulf of Maine/Georges Bank stock and 92% certainty for the Southern New England stock.\nPopulation growth rate and other stressors drove the scores for both stocks. Relationships to calcified organisms contributed to the High score for the Gulf of Maine/Georges Bank stock, and received a score of 3.5 for the Southern New England stock. Stock size had the highest score for the Southern New England Stock.\nLobsters are long-lived, slow growing species that can reach ages of 50+ years. Disease and the introduction of new predators such as black sea bass and spiny dogfish impact lobsters across their range (Atlantic States Marine Fisheries Commission (ASMFC) 2025; Goldstein et al. 2025). American lobsters are omnivores but diets are dominated by mollusks (Elner and Campbell 1987), which are likely to be impacted by ocean acidification.\nSensitivity has increased since the last assessment, where lobsters received a Moderate score (Hare et al. 2016). Population growth rate and other stressors drove scores in both assessments.",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>American lobster (*`Homarus americanus`*)</span>"
@@ -342,7 +342,7 @@
     "href": "chapters/American lobster.html#data-quality-metrics",
     "title": "American lobster (Homarus americanus)",
     "section": "Data Quality Metrics",
-    "text": "Data Quality Metrics\n\nLife History Data Quality:\nadd text here\n\n\nModel Confidence:\nadd text here",
+    "text": "Data Quality Metrics\n\nLife History Data Quality:\nThe percent of data quality scores greater than 2 was 97% for the Gulf of Maine/Georges Bank stock and 95% for the Southern New England stock, indicating excellent data quality. For both stocks, Stock Size/Status was the only data gap (mean attribute data quality score &lt; 2).\n\n\nModel Confidence:\nadd text here",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>American lobster (*`Homarus americanus`*)</span>"
@@ -353,7 +353,7 @@
     "href": "chapters/American lobster.html#additional-metrics",
     "title": "American lobster (Homarus americanus)",
     "section": "Additional Metrics",
-    "text": "Additional Metrics\n\nDistribution Shifts:\nadd text here\n\n\nDirectional Effect:\nadd text here",
+    "text": "Additional Metrics\n\nDistribution Shifts:\nadd text here\n\n\nDirectional Effect:\nBoth stocks are likely to be negatively impacted by climate change (certainties range from 81 – 100% based on bootstrap analysis of expert scores). Increased thermal stress and disease will continue to decrease the productivity of the stocks. In addition, new demersal predators such as black sea bass and spiny dogfish will increase predation pressures of juvenile and adult lobster. The directional effect was estimated to be neutral in the previous Assessment (Hare et al. 2016).",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>American lobster (*`Homarus americanus`*)</span>"
@@ -363,8 +363,8 @@
     "objectID": "chapters/American lobster.html#climate-effects-on-abundance-and-distribution",
     "href": "chapters/American lobster.html#climate-effects-on-abundance-and-distribution",
     "title": "American lobster (Homarus americanus)",
-    "section": "Climate Effects on Abundance and Distribution:",
-    "text": "Climate Effects on Abundance and Distribution:",
+    "section": "Climate Effects on Abundance and Distribution",
+    "text": "Climate Effects on Abundance and Distribution\nThe Northwest Atlantic has been warming at an exceptionally fast rate (Saba et al. 2016), which has contributed to declines in fecundity and population size in Southern New England (Goldstein, Zarrella-Smith, and Pugh 2022) while the fishery in the central Gulf of Maine has increased dramatically (Le Bris et al. 2018). Temperatures have increased in the lobster’s inshore range, and evidence suggests that the productivity of the stock is severely compromised with increased thermal stress and disease (Atlantic States Marine Fisheries Commission (ASMFC) 2025). The assemblage of predators of American lobster has shifted with warming conditions in the Gulf of Maine, with benthic and demersal predators, such as black sea bass (Centropristis striata) and spiny dogfish (Squalus acanthias) becoming increasingly present throughout the lobster’s range, taking the place of traditional predators, such as Atlantic cod (Gadus morhua). The effects of invasive and range-expanding species may also lead to greater predation risk for juvenile lobsters (Goldstein et al. 2025).",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>American lobster (*`Homarus americanus`*)</span>"
@@ -374,8 +374,8 @@
     "objectID": "chapters/American lobster.html#life-history-synopsis",
     "href": "chapters/American lobster.html#life-history-synopsis",
     "title": "American lobster (Homarus americanus)",
-    "section": "Life History Synopsis:",
-    "text": "Life History Synopsis:",
+    "section": "Life History Synopsis",
+    "text": "Life History Synopsis\nAmerican lobsters inhabit the coastal and oceanic waters of the Atlantic Ocean from Labrador to North Carolina. They are widely distributed within most of the coastal waters in the Northeast U.S. with some major offshore concentrations along the outer edge of the Continental Shelf and upper slope between Georges Bank and Delaware Bay (Mackenzie and Moring 1985). Spawning takes place during a 4 month period from late May through much of September, when females leave their solitary shelters about 7 days before molting to share the shelter of a dominant male (Factor 1995) (Mackenzie and Moring 1985). Lobster larvae are planktonic for 6-8 weeks (Factor 1995) and travel from surface waters offshore to inshore areas of Southern New England and the Gulf of Maine. Larval distribution is affected by the distribution of spawning females and by surface current velocity and direction, temperature, salinity, light intensity, and hydrostatic pressure (Katz, Cobb, and Spaulding 1994) (Harding and Trites 1988) (Hudson and Fradette 1993) (Mackenzie and Moring 1985). Larval survival is likely affected by pollution of the marine environment by human activity, especially coastal waters (Connor 1972). There is an inverse relationship between temperature and the time from hatching to the postlarval stage (when they settle). Larvae take as few as 11 days at 22°C and as many as 54 days at 10°C to reach the postlarval stage. It is speculated that thermoclines are a negative cue for larvae/post larvae settlement (Factor 1995) (Templeman 1936). Juvenile lobsters utilize shelters (rocks and vegetation) in the benthic habitat, and may also burrow in mud (Wahle and Steneck 1991). Juveniles are omnivorous but also scavenge for food. Much of their diet consists of bottom invertebrates, crabs, urchins, mussels, polychaetes, periwinkles, and sea stars, but they may also consume fish and plants (Lawton 1987). Adult lobsters are also considered omnivores and scavengers . However, their diet is dominated by mollusks (especially mussels), echinoderms, and polychaetes (Elner and Campbell 1987). Juveniles and adults prefer bottom water temperatures of 8-14°C (Mackenzie and Moring 1985). Inshore, adult lobsters appear to have a limited home range of about 2.2 km, however offshore lobsters tend to migrate greater distances (up to 345 km in 71 days) (Mackenzie and Moring 1985). American lobster are managed by the Atlantic States Marine Fisheries Commission as three stock units based on life history differences: Gulf of Maine, Georges Bank, and southern New England (Atlantic States Marine Fisheries Commission (ASMFC) 2025).",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>American lobster (*`Homarus americanus`*)</span>"
@@ -397,7 +397,7 @@
     "href": "chapters/American lobster.html#references",
     "title": "American lobster (Homarus americanus)",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\n\n\nAtlantic States Marine Fisheries Commission (ASMFC). 2025. “ASMFC Stock Assessment Overview: American Lobster.” Atlantic States Marine Fisheries Commission. https://asmfc.org/wp-content/uploads/2025/11/AmericanLobsterStockAssmtOverview_Oct2025.pdf.\n\n\nConnor, P. M. 1972. “Acute Toxicity of Heavy Metals to Some Marine Larvae.” Marine Pollution Bulletin 3: 190–92. https://doi.org/10.1016/0025-326X(72)90234-8.\n\n\nElner, R. W., and A. Campbell. 1987. “Natural Diets of Lobster Homarus Americanus from Barren Ground and Macroalgal Habitats Off Southwestern Nova Scotia, Canada.” Marine Ecology Progress Series 37: 131–40.\n\n\nFactor, J. R. 1995. Biology of Lobster: Homarus Americanus. Academic Press, Inc.\n\n\nGoldstein, J. S., B. C. Gutzler, A. S. Kough, J. T. Carloni, A. M. Dayton, C. M. Guenther, S. H. Jury, and W. H. Watson III. 2025. “A Review of American Lobster (Homarus Americanus) Research Since 2000.” Reviews in Fisheries Science & Aquaculture 34 (1). https://doi.org/10.1080/23308249.2025.2514440.\n\n\nGoldstein, J. S., K. A. Zarrella-Smith, and T. L. Pugh. 2022. “Recent Declines in American Lobster Fecundity in Southern New England: Drivers and Implications.” ICES Journal of Marine Science 79 (5): 1662–74. https://doi.org/10.1093/icesjms/fsac083.\n\n\nHarding, G. C., and K. W. Trites. 1988. “Dispersal of Homarus Americanus Larvae in the Gulf of Maine from Browns Bank.” Canadian Journal of Fisheries and Aquatic Sciences 21: 180–99.\n\n\nHare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. “A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.” PloS One 11 (2): e0146756.\n\n\nHudson, C., and P. Fradette. 1993. “Wind-Induced Advection of Larval Decapods into Baie de Plaisance (Iles de la Madeleine, Quebec).” Canadian Journal of Fisheries and Aquatic Sciences 40: 1422–32.\n\n\nKatz, C. H., J. S. Cobb, and M. Spaulding. 1994. “Larval Behavior, Hydrodynamic Transport and Potential Offshore-to-Inshore Recruitment in the American Lobster Homarus Americanus.” Marine Ecology Progress Series 103: 265–73.\n\n\nLawton, P. 1987. “Diel Activity and Foraging Behavior of Juvenile American Lobsters, Homarus Americanus.” Canadian Journal of Fisheries and Aquatic Sciences 44 (6): 1195–205.\n\n\nLe Bris, A., K. E. Mills, R. A. Wahle, Y. Chen, M. A. Alexander, A. J. Allyn, J. G. Schuetz, J. D. Scott, and A. J. Pershing. 2018. “Climate Vulnerability and Resilience in the Most Valuable North American Fishery.” Proceedings of the National Academy of Sciences 115 (8): 1831–36. https://doi.org/10.1073/pnas.1711122115.\n\n\nMackenzie, C., and J. R. Moring. 1985. “Species Profiles: Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (North Atlantic) AMERICAN LOBSTER.” Biological Report 82(11.33). U.S. Fish; Wildlife Service.\n\n\nSaba, V. S., S. M. Griffies, W. G. Anderson, M. Winton, M. A. Alexander, T. L. Delworth, J. A. Hare, et al. 2016. “Enhanced Warming of the Northwest Atlantic Ocean Under Climate Change.” Journal of Geophysical Research: Oceans 121: 118–32. https://doi.org/10.1002/2015JC011346.\n\n\nTempleman, W. 1936. “The Influence of Temperature, Salinity, Light and Food Conditions on the Survival and Growth of the Larvae of the Lobster (Homarus Americanus).” Journal of the Biological Board of Canada 2: 485–97.\n\n\nWahle, R. A., and R. S. Steneck. 1991. “Recruitment Habitats and Nursery Grounds of the American Lobster Homarus Americanus: A Demographic Bottleneck?” Marine Ecology Progress Series 69: 231–43.",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>American lobster (*`Homarus americanus`*)</span>"
@@ -419,7 +419,7 @@
     "href": "chapters/Atlantic cod.html#summary",
     "title": "Atlantic cod (Gadus morhua)",
     "section": "",
-    "text": "Scores\nVulnerability =\nClimate Exposure =\nBiological Sensitivity =\n\n\nData Quality\nModel Confidence Score =\nLife History Data Quality =",
+    "text": "Scores\nVulnerability =\nClimate Exposure =\nBiological Sensitivity = High (Eastern & Western Gulf of Maine and Georges Bank stocks) - Very High (Southern New England stock)\n\n\nData Quality\nModel Confidence Score =\nLife History Data Quality = 82-83%",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Atlantic cod (*`Gadus morhua`*)</span>"
@@ -430,7 +430,7 @@
     "href": "chapters/Atlantic cod.html#changes-from-previous-assessments",
     "title": "Atlantic cod (Gadus morhua)",
     "section": "Changes from Previous Assessment(s)",
-    "text": "Changes from Previous Assessment(s)\n\n\n\n\n\n\n\n\n\nMetric\nCurrent Assessment\nPrevious Assessment(s)\nChange\n\n\n\n\nVulnerability\n\n\n\n\n\nExposure\n\n\n\n\n\nSensitivity\n\n\n\n\n\nDirectional Effect",
+    "text": "Changes from Previous Assessment(s)\n\n\n\n\n\n\n\n\n\nMetric\nCurrent Assessment\nPrevious Assessment(s)\nChange\n\n\n\n\nVulnerability\n\n\n\n\n\nExposure\n\n\n\n\n\nSensitivity\nHigh (E/W Gulf of Maine, Georges Bank) – Very High (Southern New England)\nModerate (All Stocks)\nIncrease\n\n\nDirectional Effect\nNegative\nNegative\nNone",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Atlantic cod (*`Gadus morhua`*)</span>"
@@ -441,7 +441,7 @@
     "href": "chapters/Atlantic cod.html#score-drivers",
     "title": "Atlantic cod (Gadus morhua)",
     "section": "Score Drivers",
-    "text": "Score Drivers\n\nVulnerability:\nadd text here\n\n\nClimate Exposure:\nadd text here\n\n\nBiological Sensitivity:\nadd text here",
+    "text": "Score Drivers\n\nVulnerability:\nadd text here\n\n\nClimate Exposure:\nadd text here\n\n\nBiological Sensitivity:\nOf the four cod stocks, three (Eastern Gulf of Maine, Western Gulf of Maine, and Georges Bank) received High sensitivity scores. The Southern New England stock received a Very High score. Certainty was highest for the Georges Bank (92%) stock, followed by the Eastern Gulf of Maine (82%), Western Gulf of Maine (66%), and Southern New England (64%).\nStock size, complexity in reproductive strategy, and egg and larval survival and settlement requirements drove the scores across all four stocks. Spawning cycle and historical variability in temperature also scored above 3 for all stocks.\nCod are currently overfished in the Gulf of Maine (NEFSC 2021). Spawning is coupled with copepod production (Brander and Hurley 1992) and may be impacted by warming temperatures (Behan et al 2023; Drinkwater 2005). Warming temperatures may also reduce adult fitness, and thus reduce egg quality (Klein et al 2016). Recruitment success is linked to retentive circulation patterns in the Gulf of Maine and on Georges Bank (Cong et al 1996; Lough and Bolz 1989), which can be altered by large scale climate patterns and overall regional warming (Pershing et al 2015).\nAtlantic cod sensitivity has increased since the last assessment. Atlantic cod were previously scored as Moderate (Hare et al 2016). Stock size/status and egg and larval survival and settlement requirements (formally early life history requirements) drove the scores in both assessments.",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Atlantic cod (*`Gadus morhua`*)</span>"
@@ -463,7 +463,7 @@
     "href": "chapters/Atlantic cod.html#additional-metrics",
     "title": "Atlantic cod (Gadus morhua)",
     "section": "Additional Metrics",
-    "text": "Additional Metrics\n\nDistribution Shifts:\nadd text here\n\n\nDirectional Effect:\nadd text here",
+    "text": "Additional Metrics\n\nDistribution Shifts:\nadd text here\n\n\nDirectional Effect:\nAll four stocks of Atlantic Cod will likely be negatively impacted by future climate change (100% certainty in expert scores). This is similar to the previous Assessment (Hare et al 2016). Continued warming will likely drive declines in recruitment and shifts in spawning phenology.",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Atlantic cod (*`Gadus morhua`*)</span>"
@@ -473,8 +473,8 @@
     "objectID": "chapters/Atlantic cod.html#climate-effects-on-abundance-and-distribution",
     "href": "chapters/Atlantic cod.html#climate-effects-on-abundance-and-distribution",
     "title": "Atlantic cod (Gadus morhua)",
-    "section": "Climate Effects on Abundance and Distribution:",
-    "text": "Climate Effects on Abundance and Distribution:",
+    "section": "Climate Effects on Abundance and Distribution",
+    "text": "Climate Effects on Abundance and Distribution\nRecent warming in the Gulf of Maine relating to a northward shift in the Gulf Stream and changes in the Atlantic Multidecadal Oscillation and Pacific Decadal Oscillation led to reduced Atlantic cod recruitment and increased mortality (Pershing et al. 2015). Rising temperatures may affect Atlantic cod spawning locations and timing (Behan et al. 2023). Drinkwater (2005) suggested Atlantic cod spawning grounds will experience a shift northward, with spawning timing occurring later in the season as a response to warming ocean temperatures. Climate change may also increase in natural mortality in adult Atlantic cod due to declines in fish condition (Behan et al. 2023). Drinkwater (2005) predicted large-scale declines in Atlantic cod in the Gulf of Maine if bottom temperatures increase above 12°C, either through changes in distribution to colder waters or natural mortality. Reduced fitness in Atlantic cod adults from climate impacts may result in lower quality eggs (Klein, Smith, and Kritzer 2016); however, there may be some capacity to adapt to slower rates of warming (Langan et al. 2020).",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Atlantic cod (*`Gadus morhua`*)</span>"
@@ -484,8 +484,8 @@
     "objectID": "chapters/Atlantic cod.html#life-history-synopsis",
     "href": "chapters/Atlantic cod.html#life-history-synopsis",
     "title": "Atlantic cod (Gadus morhua)",
-    "section": "Life History Synopsis:",
-    "text": "Life History Synopsis:",
+    "section": "Life History Synopsis",
+    "text": "Life History Synopsis\nCod in the Northwest Atlantic range from Greenland to Cape Hatteras, NC, with a majority of biomass in the Gulf of Maine and on Georges Bank (Behan et al. 2023). Spawning timing varies by location - later in the year with increasing latitude - although peaks generally occur in the winter and spring (Lough 2004) in water temperatures between 5-7°C. In spring, Atlantic cod spawning matched the variation in peak abundance of Calanus finmarchicus. In fall, cod spawned in some, but not all, areas where Calanus were abundant. This is consistent with the hypothesis that cod spawning is coupled to copepod production (Brander and Hurley 1992). Atlantic cod eggs are pelagic and hatch after 8-60 days, varying with temperature (Hardy 1978). Recruitment success increases when dispersion of larvae by currents is reduced (Cong, Sheng, and Thompson 1996). On Georges Bank, a clockwise gyre circulation pattern tends to retain and isolate eggs and larvae (Lough and Bolz 1989). Transformation from larvae to the juvenile stage occurs at sizes greater than 20 mm, where they then move to the bottom (Lough 2004). Early juveniles are dependent on gravel substrates or grass beds in nearshore nurseries to favor survival through predator avoidance and increased food availability (Lough and Bolz 1989). In the Gulf of Maine, juveniles prey on mollusks and other invertebrates, while adults consume a greater proportion of fish including herring, redfish, mackerel, and other cod (Bowman 1975). Adult cod have few predators, other than large sharks and seals (Neuenhoff et al. 2019). Recent modeling studies illustrate growing populations of grey seals, harp seals, and dogfish are a major barrier to cod population recovery (Behan et al. 2023). Adults in the Newfoundland stock migrate, leaving overwintering areas in deep oceanic waters and follow tongues of deep, relatively warm, oceanic waters (“highways”) across the shelf to summer feeding areas nearshore. They then move northward along the Newfoundland coast in late summer, and eventually return to wintering areas (Lough 2004). Previous research suggested that in the middle part of their range, Atlantic cod only undertake minor seasonal movements in reaction to changing temperatures. However, more recent research suggests that there are inshore/offshore migrations that correspond to spawning and feeding activity in the Gulf of Maine (Zemeckis et al. 2017). As of 2025, Atlantic cod are divided into 4 stock units (Western & Eastern Gulf Maine, Georges Bank, and Southern New England) based on spawning locations, larval transport pathways, and genetic markers (New England Fishery Management Council (NEFMC) 2025). All stocks are managed under the New England Fishery Management Council’s Northeast Multispecies Fishery Management Plan (Klein-MacPhee 2012). The stock is overfished and overfishing is occurring in the Gulf of Maine (Northeast Fisheries Science Center (NEFSC) 2021).",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Atlantic cod (*`Gadus morhua`*)</span>"
@@ -507,7 +507,7 @@
     "href": "chapters/Atlantic cod.html#references",
     "title": "Atlantic cod (Gadus morhua)",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\n\n\nBehan, J., A. Tyrell, A. Hart, S. Large, A. Hansell, K. Lankowicz, R. Morse, I. Andruschchenko, J. Gross, and L. Kerr. 2023. “Profile of Ecosystem and Climate Influences on Atlantic Cod.” NOAA. https://doi.org/10.25923/c267-zd92.\n\n\nBowman, R. E. 1975. “Food Habits of Atlantic Cod, Haddock, and Silver Hake in the Northwest Atlantic, 1969-1972.” Lab. Ref. 75-1. U.S. Natl. Mar. Fish. Serv., Northeast Fish. Cent.\n\n\nBrander, K., and P. C. F. Hurley. 1992. “Distribution of Early-Stage Atlantic Cod (Gadus Morhua), Haddock (Melanogrammus Aeglefinus), and Witch Flounder (Glyptocephalus Cynoglossus) Eggs on the Scotian Shelf: A Reappraisal of Evidence on the Coupling of Cod Spawning and Plankton Production.” Canadian Journal of Fisheries and Aquatic Sciences 49 (2): 238–51.\n\n\nCong, L., J. Sheng, and K. T. Thompson. 1996. “A Retrospective Study of Particle Retention on the Outer Banks of the Scotian Shelf 1956-1993.” 170. Canadian Technical Report of Hydrography; Ocean Sciences.\n\n\nDrinkwater, K. F. 2005. “The Response of Atlantic Cod (Gadus Morhua) to Future Climate Change.” ICES Journal of Marine Science 62 (7): 1327–37. https://doi.org/10.1016/j.icesjms.2005.05.015.\n\n\nHardy, J. D., Jr. 1978. “Development of Fishes of the Mid-Atlantic Bight: An Atlas of Egg, Larval and Juvenile Stages. Vol. 2 Anguillidae Through Syngnathidae.” Report FWS/OBS-78/12. U.S. Fish; Wildlife Service, Biological Services Program.\n\n\nKlein, E. S., S. L. Smith, and J. P. Kritzer. 2016. “Effects of Climate Change on Four New England Groundfish Species.” Reviews in Fish Biology and Fisheries 27: 317–38. https://doi.org/10.1007/s11160-016-9444-z.\n\n\nKlein-MacPhee, G. 2012. “Atlantic Cod/Gadus Morhua Linnaeus 1758.” In Fishes of the Gulf of Maine, edited by B. B. Collette and G. Klein-MacPhee, 3rd ed., 228–35. Washington D.C.: Smithsonian Institution Press.\n\n\nLangan, J. A., M. C. McManus, D. R. Zemeckis, and J. S. Colli. 2020. “Abundance and Distribution of Atlantic Cod (Gadus Morhua) in a Warming Southern New England.” Fisheries Bulletin 118 (2): 145–56. https://doi.org/10.7755/FB.118.2.4.\n\n\nLough, R. G. 2004. “Essential Fish Habitat Source Document: Atlantic Cod, Gadus Morhua, Life History and Habitat Characteristics.” NOAA Technical Memorandum NMFS-NE-190.\n\n\nLough, R. G., and G. R. Bolz. 1989. “The Movement of Cod and Haddock Larvae onto the Shoals of Georges Bank.” Journal of Fish Biology 35 (Suppl. A): 71–79.\n\n\nNeuenhoff, R. D., D. P. Swain, S. P. Cox, M. K. McAllister, A. W. Trites, C. J. Walters, and M. O. Hammill. 2019. “Continued Decline of a Collapsed Population of Atlantic Cod (Gadus Morhua) Due to Predation-Driven Allee Effects.” Canadian Journal of Fisheries and Aquatic Sciences 76 (1): 168–84. https://doi.org/10.1139/cjfas-2017-0190.\n\n\nNew England Fishery Management Council (NEFMC). 2025. “Northeast Multispecies Fishery Management Plan Amendment 25.” https://d23h0vhsm26o6d.cloudfront.net/250305_Groundfish_Amendment-25_final_submission.pdf.\n\n\nNortheast Fisheries Science Center (NEFSC). 2021. “Gulf of Maine Atlantic Cod 2021 Update Assessment Report.” https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&fileId=7550.\n\n\nPershing, A. J., M. A. Alexander, C. M. Hernandez, L. A. Kerr, A. Le Bris, K. E. Mills, J. A. Nye, et al. 2015. “Slow Adaptation in the Face of Rapid Warming Leads to Collapse of the Gulf of Maine Cod Fishery.” Science 350: 809–12. https://doi.org/10.1126/science.aac9819.\n\n\nZemeckis, D. R., C. Liu, G. W. Cowles, M. J. Dean, W. S. Hoffman, D. Martins, and S. X. Cadrin. 2017. “Seasonal Movements and Connectivity of an Atlantic Cod (Gadus Morhua) Spawning Component in the Western Gulf of Maine.” ICES Journal of Marine Science 74: 1780–96.",
     "crumbs": [
       "Species Narratives",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Atlantic cod (*`Gadus morhua`*)</span>"

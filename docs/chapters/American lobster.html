@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -432,8 +452,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -472,12 +492,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = High (Gulf of Maine/Georges Bank stock) - Very High (Southern New England stock)</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 97%</p>
 </div>
 </div>
 </div>
@@ -496,10 +516,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
+<col style="width: 24%">
+<col style="width: 24%">
 <col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 24%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -524,15 +544,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>High (Gulf of Maine/Georges Bank) - Very High (Southern New England)</td>
+<td>Moderate (All Stocks)</td>
+<td>Increase</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Neutral</td>
+<td>Decrease</td>
 </tr>
 </tbody>
 </table>
@@ -549,14 +569,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>The <strong>Gulf of Maine/Georges Bank</strong> stock of American lobster received a <strong>High</strong> sensitivity score and the <strong>Southern New England</strong> stock scored <strong>Very High.</strong> Certainty was high for both stocks, with 99% certainty for the Gulf of Maine/Georges Bank stock and 92% certainty for the Southern New England stock.</p>
+<p>Population growth rate and other stressors drove the scores for both stocks. Relationships to calcified organisms contributed to the High score for the Gulf of Maine/Georges Bank stock, and received a score of 3.5 for the Southern New England stock. Stock size had the highest score for the Southern New England Stock.</p>
+<p>Lobsters are long-lived, slow growing species that can reach ages of 50+ years. Disease and the introduction of new predators such as black sea bass and spiny dogfish impact lobsters across their range <span class="citation" data-cites="asmfc2025 goldstein2025">(<a href="#ref-asmfc2025" role="doc-biblioref">Atlantic States Marine Fisheries Commission (ASMFC) 2025</a>; <a href="#ref-goldstein2025" role="doc-biblioref">Goldstein et al. 2025</a>)</span>. American lobsters are omnivores but diets are dominated by mollusks <span class="citation" data-cites="elner1987">(<a href="#ref-elner1987" role="doc-biblioref">Elner and Campbell 1987</a>)</span>, which are likely to be impacted by ocean acidification.</p>
+<p>Sensitivity has increased since the last assessment, where lobsters received a Moderate score <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. Population growth rate and other stressors drove scores in both assessments.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>The percent of data quality scores greater than 2 was 97% for the Gulf of Maine/Georges Bank stock and 95% for the Southern New England stock, indicating excellent data quality. For both stocks, Stock Size/Status was the only data gap (mean attribute data quality score &lt; 2).</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -571,14 +594,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Both stocks are likely to be <strong>negatively</strong> impacted by climate change (certainties range from 81 – 100% based on bootstrap analysis of expert scores). Increased thermal stress and disease will continue to decrease the productivity of the stocks. In addition, new demersal predators such as black sea bass and spiny dogfish will increase predation pressures of juvenile and adult lobster. The directional effect was estimated to be neutral in the previous Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>The Northwest Atlantic has been warming at an exceptionally fast rate <span class="citation" data-cites="saba2016">(<a href="#ref-saba2016" role="doc-biblioref">Saba et al. 2016</a>)</span>, which has contributed to declines in fecundity and population size in Southern New England <span class="citation" data-cites="goldstein2022">(<a href="#ref-goldstein2022" role="doc-biblioref">Goldstein, Zarrella-Smith, and Pugh 2022</a>)</span> while the fishery in the central Gulf of Maine has increased dramatically <span class="citation" data-cites="lebris2018">(<a href="#ref-lebris2018" role="doc-biblioref">Le Bris et al. 2018</a>)</span>. Temperatures have increased in the lobster’s inshore range, and evidence suggests that the productivity of the stock is severely compromised with increased thermal stress and disease <span class="citation" data-cites="asmfc2025">(<a href="#ref-asmfc2025" role="doc-biblioref">Atlantic States Marine Fisheries Commission (ASMFC) 2025</a>)</span>. The assemblage of predators of American lobster has shifted with warming conditions in the Gulf of Maine, with benthic and demersal predators, such as black sea bass (<em>Centropristis striata</em>) and spiny dogfish (<em>Squalus acanthias</em>) becoming increasingly present throughout the lobster’s range, taking the place of traditional predators, such as Atlantic cod (<em>Gadus morhua</em>). The effects of invasive and range-expanding species may also lead to greater predation risk for juvenile lobsters <span class="citation" data-cites="goldstein2025">(<a href="#ref-goldstein2025" role="doc-biblioref">Goldstein et al. 2025</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>American lobsters inhabit the coastal and oceanic waters of the Atlantic Ocean from Labrador to North Carolina. They are widely distributed within most of the coastal waters in the Northeast U.S. with some major offshore concentrations along the outer edge of the Continental Shelf and upper slope between Georges Bank and Delaware Bay <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. Spawning takes place during a 4 month period from late May through much of September, when females leave their solitary shelters about 7 days before molting to share the shelter of a dominant male <span class="citation" data-cites="factor1995">(<a href="#ref-factor1995" role="doc-biblioref">Factor 1995</a>)</span> <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. Lobster larvae are planktonic for 6-8 weeks <span class="citation" data-cites="factor1995">(<a href="#ref-factor1995" role="doc-biblioref">Factor 1995</a>)</span> and travel from surface waters offshore to inshore areas of Southern New England and the Gulf of Maine. Larval distribution is affected by the distribution of spawning females and by surface current velocity and direction, temperature, salinity, light intensity, and hydrostatic pressure <span class="citation" data-cites="katz1994">(<a href="#ref-katz1994" role="doc-biblioref">Katz, Cobb, and Spaulding 1994</a>)</span> <span class="citation" data-cites="harding1988">(<a href="#ref-harding1988" role="doc-biblioref">Harding and Trites 1988</a>)</span> <span class="citation" data-cites="hudson1993">(<a href="#ref-hudson1993" role="doc-biblioref">Hudson and Fradette 1993</a>)</span> <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. Larval survival is likely affected by pollution of the marine environment by human activity, especially coastal waters <span class="citation" data-cites="connor1972">(<a href="#ref-connor1972" role="doc-biblioref">Connor 1972</a>)</span>. There is an inverse relationship between temperature and the time from hatching to the postlarval stage (when they settle). Larvae take as few as 11 days at 22°C and as many as 54 days at 10°C to reach the postlarval stage. It is speculated that thermoclines are a negative cue for larvae/post larvae settlement <span class="citation" data-cites="factor1995">(<a href="#ref-factor1995" role="doc-biblioref">Factor 1995</a>)</span> <span class="citation" data-cites="templeman1936">(<a href="#ref-templeman1936" role="doc-biblioref">Templeman 1936</a>)</span>. Juvenile lobsters utilize shelters (rocks and vegetation) in the benthic habitat, and may also burrow in mud <span class="citation" data-cites="wahle1991">(<a href="#ref-wahle1991" role="doc-biblioref">Wahle and Steneck 1991</a>)</span>. Juveniles are omnivorous but also scavenge for food. Much of their diet consists of bottom invertebrates, crabs, urchins, mussels, polychaetes, periwinkles, and sea stars, but they may also consume fish and plants <span class="citation" data-cites="lawton1987">(<a href="#ref-lawton1987" role="doc-biblioref">Lawton 1987</a>)</span>. Adult lobsters are also considered omnivores and scavengers . However, their diet is dominated by mollusks (especially mussels), echinoderms, and polychaetes <span class="citation" data-cites="elner1987">(<a href="#ref-elner1987" role="doc-biblioref">Elner and Campbell 1987</a>)</span>. Juveniles and adults prefer bottom water temperatures of 8-14°C <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. Inshore, adult lobsters appear to have a limited home range of about 2.2 km, however offshore lobsters tend to migrate greater distances (up to 345 km in 71 days) <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. American lobster are managed by the Atlantic States Marine Fisheries Commission as three stock units based on life history differences: Gulf of Maine, Georges Bank, and southern New England <span class="citation" data-cites="asmfc2025">(<a href="#ref-asmfc2025" role="doc-biblioref">Atlantic States Marine Fisheries Commission (ASMFC) 2025</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -612,6 +637,56 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-asmfc2025" class="csl-entry" role="listitem">
+Atlantic States Marine Fisheries Commission (ASMFC). 2025. <span>“ASMFC Stock Assessment Overview: American Lobster.”</span> Atlantic States Marine Fisheries Commission. <a href="https://asmfc.org/wp-content/uploads/2025/11/AmericanLobsterStockAssmtOverview_Oct2025.pdf">https://asmfc.org/wp-content/uploads/2025/11/AmericanLobsterStockAssmtOverview_Oct2025.pdf</a>.
+</div>
+<div id="ref-connor1972" class="csl-entry" role="listitem">
+Connor, P. M. 1972. <span>“Acute Toxicity of Heavy Metals to Some Marine Larvae.”</span> <em>Marine Pollution Bulletin</em> 3: 190–92. <a href="https://doi.org/10.1016/0025-326X(72)90234-8">https://doi.org/10.1016/0025-326X(72)90234-8</a>.
+</div>
+<div id="ref-elner1987" class="csl-entry" role="listitem">
+Elner, R. W., and A. Campbell. 1987. <span>“Natural Diets of Lobster <span>Homarus</span> Americanus from Barren Ground and Macroalgal Habitats Off Southwestern <span>Nova Scotia</span>, <span>Canada</span>.”</span> <em>Marine Ecology Progress Series</em> 37: 131–40.
+</div>
+<div id="ref-factor1995" class="csl-entry" role="listitem">
+Factor, J. R. 1995. <em>Biology of Lobster: <span>Homarus</span> Americanus</em>. Academic Press, Inc.
+</div>
+<div id="ref-goldstein2025" class="csl-entry" role="listitem">
+Goldstein, J. S., B. C. Gutzler, A. S. Kough, J. T. Carloni, A. M. Dayton, C. M. Guenther, S. H. Jury, and W. H. Watson III. 2025. <span>“A Review of <span>American</span> Lobster (<span>Homarus</span> Americanus) Research Since 2000.”</span> <em>Reviews in Fisheries Science &amp; Aquaculture</em> 34 (1). <a href="https://doi.org/10.1080/23308249.2025.2514440">https://doi.org/10.1080/23308249.2025.2514440</a>.
+</div>
+<div id="ref-goldstein2022" class="csl-entry" role="listitem">
+Goldstein, J. S., K. A. Zarrella-Smith, and T. L. Pugh. 2022. <span>“Recent Declines in <span>American</span> Lobster Fecundity in Southern <span>New England</span>: Drivers and Implications.”</span> <em>ICES Journal of Marine Science</em> 79 (5): 1662–74. <a href="https://doi.org/10.1093/icesjms/fsac083">https://doi.org/10.1093/icesjms/fsac083</a>.
+</div>
+<div id="ref-harding1988" class="csl-entry" role="listitem">
+Harding, G. C., and K. W. Trites. 1988. <span>“Dispersal of <span>Homarus</span> Americanus Larvae in the <span class="nocase">Gulf of Maine</span> from <span>Browns Bank</span>.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 21: 180–99.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-hudson1993" class="csl-entry" role="listitem">
+Hudson, C., and P. Fradette. 1993. <span>“Wind-Induced Advection of Larval Decapods into <span class="nocase">Baie de Plaisance</span> (<span class="nocase">Iles de la Madeleine, Quebec</span>).”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 40: 1422–32.
+</div>
+<div id="ref-katz1994" class="csl-entry" role="listitem">
+Katz, C. H., J. S. Cobb, and M. Spaulding. 1994. <span>“Larval Behavior, Hydrodynamic Transport and Potential Offshore-to-Inshore Recruitment in the <span>American</span> Lobster <span>Homarus</span> Americanus.”</span> <em>Marine Ecology Progress Series</em> 103: 265–73.
+</div>
+<div id="ref-lawton1987" class="csl-entry" role="listitem">
+Lawton, P. 1987. <span>“Diel Activity and Foraging Behavior of Juvenile <span>American</span> Lobsters, <span>Homarus</span> Americanus.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 44 (6): 1195–205.
+</div>
+<div id="ref-lebris2018" class="csl-entry" role="listitem">
+Le Bris, A., K. E. Mills, R. A. Wahle, Y. Chen, M. A. Alexander, A. J. Allyn, J. G. Schuetz, J. D. Scott, and A. J. Pershing. 2018. <span>“Climate Vulnerability and Resilience in the Most Valuable <span>North American</span> Fishery.”</span> <em>Proceedings of the National Academy of Sciences</em> 115 (8): 1831–36. <a href="https://doi.org/10.1073/pnas.1711122115">https://doi.org/10.1073/pnas.1711122115</a>.
+</div>
+<div id="ref-mackenzie1985" class="csl-entry" role="listitem">
+Mackenzie, C., and J. R. Moring. 1985. <span>“Species Profiles: Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (<span>North Atlantic</span>) <span>AMERICAN LOBSTER</span>.”</span> Biological Report 82(11.33). U.S. Fish; Wildlife Service.
+</div>
+<div id="ref-saba2016" class="csl-entry" role="listitem">
+Saba, V. S., S. M. Griffies, W. G. Anderson, M. Winton, M. A. Alexander, T. L. Delworth, J. A. Hare, et al. 2016. <span>“Enhanced Warming of the <span>Northwest Atlantic Ocean</span> Under Climate Change.”</span> <em>Journal of Geophysical Research: Oceans</em> 121: 118–32. <a href="https://doi.org/10.1002/2015JC011346">https://doi.org/10.1002/2015JC011346</a>.
+</div>
+<div id="ref-templeman1936" class="csl-entry" role="listitem">
+Templeman, W. 1936. <span>“The Influence of Temperature, Salinity, Light and Food Conditions on the Survival and Growth of the Larvae of the Lobster (<span>Homarus</span> Americanus).”</span> <em>Journal of the Biological Board of Canada</em> 2: 485–97.
+</div>
+<div id="ref-wahle1991" class="csl-entry" role="listitem">
+Wahle, R. A., and R. S. Steneck. 1991. <span>“Recruitment Habitats and Nursery Grounds of the <span>American</span> Lobster <span>Homarus</span> Americanus: A Demographic Bottleneck?”</span> <em>Marine Ecology Progress Series</em> 69: 231–43.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

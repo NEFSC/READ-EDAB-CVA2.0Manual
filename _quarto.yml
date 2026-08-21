@@ -71,12 +71,8 @@ book:
         - chapters/Yellowtail flounder.qmd
     - content/acknowledgements.qmd
 
-bibliography: references.bib
-citeproc: false
-
-resource-path:
-  - .
-  - utils
+bibliography: utils/references.bib
+citeproc: true
 
 filters:
   - quarto
@@ -92,8 +88,8 @@ format:
     theme:
       - cosmo
     number-sections: false
-  pdf:
-    number-sections: false
+ # pdf:
+  #  number-sections: false
 
 execute:
   echo: false

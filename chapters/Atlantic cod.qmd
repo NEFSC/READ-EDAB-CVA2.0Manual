@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = High (Eastern & Western Gulf of Maine and Georges Bank stocks) - Very High (Southern New England stock)
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 82-83%
 
 </div>
 :::::
@@ -62,12 +62,12 @@ here::here("test_images/Atlantic cod_sensitivity_summary_table.png")
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability* |  |  |  |
+| *Exposure* |  |  |  |
+| *Sensitivity* | High (E/W Gulf of Maine, Georges Bank) – Very High (Southern New England) | Moderate (All Stocks) | Increase |
+| *Directional Effect* | Negative | Negative | None |
 
 ## Score Drivers
 
@@ -81,7 +81,13 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+Of the four cod stocks, three (**Eastern Gulf of Maine, Western Gulf of Maine, and Georges Bank**) received **High** sensitivity scores. The **Southern New England** stock received a **Very High** score. Certainty was highest for the Georges Bank (92%) stock, followed by the Eastern Gulf of Maine (82%), Western Gulf of Maine (66%), and Southern New England (64%).
+
+Stock size, complexity in reproductive strategy, and egg and larval survival and settlement requirements drove the scores across all four stocks. Spawning cycle and historical variability in temperature also scored above 3 for all stocks.
+
+Cod are currently overfished in the Gulf of Maine (NEFSC 2021). Spawning is coupled with copepod production [@brander1992distribution**]** and may be impacted by warming temperatures [@behan2023profile; @drinkwater2005response]. Warming temperatures may also reduce adult fitness, and thus reduce egg quality (Klein et al 2016). Recruitment success is linked to retentive circulation patterns in the Gulf of Maine and on Georges Bank (Cong et al 1996; Lough and Bolz 1989), which can be altered by large scale climate patterns and overall regional warming (Pershing et al 2015).
+
+Atlantic cod sensitivity has increased since the last assessment. Atlantic cod were previously scored as Moderate [@hare2016vulnerability]. Stock size/status and egg and larval survival and settlement requirements (formally early life history requirements) drove the scores in both assessments.
 
 ## Data Quality Metrics
 
@@ -101,11 +107,15 @@ add text here
 
 ### Directional Effect:
 
-add text here
+All four stocks of Atlantic Cod will likely be negatively impacted by future climate change (100% certainty in expert scores). This is similar to the previous Assessment [@hare2016vulnerability]. Continued warming will likely drive declines in recruitment and shifts in spawning phenology.
 
-## Climate Effects on Abundance and Distribution:
+## Climate Effects on Abundance and Distribution
 
-## Life History Synopsis:
+Recent warming in the Gulf of Maine relating to a northward shift in the Gulf Stream and changes in the Atlantic Multidecadal Oscillation and Pacific Decadal Oscillation led to reduced Atlantic cod recruitment and increased mortality [@pershing2015slow]. Rising temperatures may affect Atlantic cod spawning locations and timing [@behan2023profile]. @drinkwater2005response suggested Atlantic cod spawning grounds will experience a shift northward, with spawning timing occurring later in the season as a response to warming ocean temperatures. Climate change may also increase in natural mortality in adult Atlantic cod due to declines in fish condition [@behan2023profile]. @drinkwater2005response predicted large-scale declines in Atlantic cod in the Gulf of Maine if bottom temperatures increase above 12°C, either through changes in distribution to colder waters or natural mortality. Reduced fitness in Atlantic cod adults from climate impacts may result in lower quality eggs [@klein2016effects]; however, there may be some capacity to adapt to slower rates of warming [@langan2020abundance].
+
+## Life History Synopsis
+
+Cod in the Northwest Atlantic range from Greenland to Cape Hatteras, NC, with a majority of biomass in the Gulf of Maine and on Georges Bank [@behan2023profile]. Spawning timing varies by location - later in the year with increasing latitude - although peaks generally occur in the winter and spring [@lough2004essential] in water temperatures between 5-7°C. In spring, Atlantic cod spawning matched the variation in peak abundance of *Calanus finmarchicus*. In fall, cod spawned in some, but not all, areas where *Calanus* were abundant. This is consistent with the hypothesis that cod spawning is coupled to copepod production [@brander1992distribution]. Atlantic cod eggs are pelagic and hatch after 8-60 days, varying with temperature [@hardy1978development]. Recruitment success increases when dispersion of larvae by currents is reduced [@cong1996retrospective]. On Georges Bank, a clockwise gyre circulation pattern tends to retain and isolate eggs and larvae [@lough1989movement]. Transformation from larvae to the juvenile stage occurs at sizes greater than 20 mm, where they then move to the bottom [@lough2004essential]. Early juveniles are dependent on gravel substrates or grass beds in nearshore nurseries to favor survival through predator avoidance and increased food availability [@lough1989movement]. In the Gulf of Maine, juveniles prey on mollusks and other invertebrates, while adults consume a greater proportion of fish including herring, redfish, mackerel, and other cod [@bowman1975food]. Adult cod have few predators, other than large sharks and seals [@neuenhoff2019continued]. Recent modeling studies illustrate growing populations of grey seals, harp seals, and dogfish are a major barrier to cod population recovery [@behan2023profile]. Adults in the Newfoundland stock migrate, leaving overwintering areas in deep oceanic waters and follow tongues of deep, relatively warm, oceanic waters ("highways") across the shelf to summer feeding areas nearshore. They then move northward along the Newfoundland coast in late summer, and eventually return to wintering areas [@lough2004essential]. Previous research suggested that in the middle part of their range, Atlantic cod only undertake minor seasonal movements in reaction to changing temperatures. However, more recent research suggests that there are inshore/offshore migrations that correspond to spawning and feeding activity in the Gulf of Maine [@zemeckis2017seasonal]. As of 2025, Atlantic cod are divided into 4 stock units (Western & Eastern Gulf Maine, Georges Bank, and Southern New England) based on spawning locations, larval transport pathways, and genetic markers [@nefmc2025multispecies]. All stocks are managed under the New England Fishery Management Council’s Northeast Multispecies Fishery Management Plan [@kleinmacphee2012atlantic]. The stock is overfished and overfishing is occurring in the Gulf of Maine [@nefsc2021update].
 
 ## Figures
 
