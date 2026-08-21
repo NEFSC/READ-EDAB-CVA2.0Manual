@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = Moderate
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 73%
 
 </div>
 :::::
@@ -62,12 +62,12 @@ here::here("test_images/Atlantic croaker_sensitivity_summary_table.png")
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| Metric               | Current Assessment | Previous Assessment(s) | Change   |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability*      |                    |                        |          |
+| *Exposure*           |                    |                        |          |
+| *Sensitivity*        | Moderate           | Low                    | Increase |
+| *Directional Effect* | Neutral            | Positive               | Increase |
 
 ## Score Drivers
 
@@ -81,7 +81,9 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+Atlantic croaker received a sensitivity score of **Moderate**. Certainty was high (90%). Three attributes received scores greater than 2.5: 1) Egg and Larval Survival and Settlement Requirements (2.9), 2) Other Stressors (2.7), and 3) Stock Size (2.5).
+
+Croaker eggs and larvae rely on currents and tidal activity for transport to suitable nursery habitats (Sempsrott et al 2017). Larvae are selective feeders, only feeding on a subset of plankton species (Govoni et al 1986). Juveniles are also dependent on native salt marsh habitats, which themselves are highly vulnerable (Guyant et al 2022) and are susceptible to eutrophication and hypoxic events. Croaker had a low sensitivity score in the previous assessment (Hare et al 2016). Egg and Larval Survival and Settlement Requirements drove the previous sensitivity score.
 
 ## Data Quality Metrics
 
