@@ -60,7 +60,7 @@ book:
         - chapters/Smooth dogfish.qmd
         - chapters/Softshell clam.qmd
         - chapters/Spanish mackerel.qmd
-        - chapters/Spiny dogfish.qmd
+        #- chapters/Spiny dogfish.qmd
         - chapters/Striped bass.qmd
         - chapters/Summer flounder.qmd
         - chapters/Tautog.qmd

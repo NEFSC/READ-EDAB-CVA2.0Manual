@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -354,11 +374,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../chapters/Striped bass.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Striped bass (<em><code>Morone saxatilis</code></em>)</span></a>
   </div>
 </li>
@@ -432,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -472,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = High</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 95%</p>
 </div>
 </div>
 </div>
@@ -524,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>High</td>
+<td>High</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -549,14 +564,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Both the <strong>Georges Bank</strong> and <strong>Mid Atlantic Bight</strong> stock units of Atlantic Sea Scallop received a <strong>High</strong> sensitivity score. Certainties for both stocks were 100%. Relationship to Calcified Organisms (4) and Adult Mobility (3.8) drove the scores in both stocks. Scores for each attribute were the same for both stocks.</p>
+<p>Scallops are subject to stress due to increasing ocean acidification due to their calcium carbonate shells <span class="citation" data-cites="zang2022modeling">(<a href="#ref-zang2022modeling" role="doc-biblioref">Zang et al. 2022</a>)</span>. Adults are primarily sessile, but can make small-scale movements to avoid predators.</p>
+<p>Atlantic sea scallops also received a high sensitivity score in the previous assessment. This score was also driven by Sensitivity to Ocean Acidification and Adult Mobility <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>95% of sensitivity attribute data quality scores were greater than or equal to 2 for both stocks of Atlantic Sea Scallop, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were found in either stock.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -571,14 +588,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Both stocks of Atlantic sea scallop are estimated to be <strong>negatively</strong> impacted by future climate change. Certainty ranged from 88 – 99%, with higher certainty for the Mid Atlantic Bight stock. Rising temperatures and ocean acidification induce stress in sea scallops. In addition, anthropogenic activities such as dredging and offshore wind construction degrade habitats and impact behaviors. These results are similar to those from the 2016 Climate Vulnerability Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>The Atlantic sea scallop population in the Northwest Atlantic is subject to climate-related environmental stress from rising temperatures and ocean acidification <span class="citation" data-cites="zang2022modeling">(<a href="#ref-zang2022modeling" role="doc-biblioref">Zang et al. 2022</a>)</span>. Scallop habitat can be degraded by trawling/dredging activity <span class="citation" data-cites="maguire2002effects">(<a href="#ref-maguire2002effects" role="doc-biblioref">Maguire et al. 2002</a>)</span>. Scallop feeding behaviors are temporarily impacted by noise pollution associated with offshore wind construction <span class="citation" data-cites="jezequel2022pile">(<a href="#ref-jezequel2022pile" role="doc-biblioref">J’ez’equel et al. 2022</a>)</span>. Changes in temperature and food availability are likely the predominant drivers for reduced growth in sea scallops <span class="citation" data-cites="cranford1998situ">(<a href="#ref-cranford1998situ" role="doc-biblioref">Cranford et al. 1998</a>)</span>. <span class="citation" data-cites="rheuban2018projected">Rheuban et al. (<a href="#ref-rheuban2018projected" role="doc-biblioref">2018</a>)</span> modeled the Atlantic sea scallop fishery under a range of climate and management scenarios and found the possibility of reduced biomass up to 50% by the end of this century. Results of a scope for growth model with increased warming food deficiency indicated a range contraction of suitable sea scallop habitat in the Mid-Atlantic Bight <span class="citation" data-cites="zang2022modeling">(<a href="#ref-zang2022modeling" role="doc-biblioref">Zang et al. 2022</a>)</span>. A second scope for growth model by <span class="citation" data-cites="zang2023effects">Zang et al. (<a href="#ref-zang2023effects" role="doc-biblioref">2023</a>)</span> investigated the relationship between sea scallop size and temperature. Under future climate warming, sea scallops exhibited a range contraction and decline in maximum shell height. An integrated assessment model simulating sea scallop population dynamics with oceanographic and socioeconomic influences indicates that sea scallop harvests could experience a substantial decline by 2050 under increased CO<sup>2</sup> emissions (with the assumption that ocean acidification decreases recruitment and slows growth and warming increases growth) <span class="citation" data-cites="cooley2015integrated">(<a href="#ref-cooley2015integrated" role="doc-biblioref">Cooley et al. 2015</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic sea scallops are one of the most economically important fisheries in the Northwest Atlantic, with average annual ex-vessel revenues of over $500 million <span class="citation" data-cites="zang2022modeling">(<a href="#ref-zang2022modeling" role="doc-biblioref">Zang et al. 2022</a>)</span>. Their habitat ranges from the Gulf of St.&nbsp;Lawrence to Cape Hatteras, North Carolina <span class="citation" data-cites="stewart1994environmental">(<a href="#ref-stewart1994environmental" role="doc-biblioref">Stewart and Arnold 1994</a>)</span> with primary fishing areas in Georges Bank, the Great South Channel, and the Mid-Atlantic Bight <span class="citation" data-cites="hart2006long">(<a href="#ref-hart2006long" role="doc-biblioref">Hart and Rago 2006</a>)</span>. After a period of severe overfishing in the 1970s to 1990s, regulations including effort reductions, gear restrictions, and closed areas were introduced to rebuild the stock <span class="citation" data-cites="hart2006long">(<a href="#ref-hart2006long" role="doc-biblioref">Hart and Rago 2006</a>)</span>. Spawning occurs in late summer or early fall, although smaller spawning events at other times of the year are possible <span class="citation" data-cites="culliney1974larval">(<a href="#ref-culliney1974larval" role="doc-biblioref">Culliney 1974</a>)</span>. Gametes from other scallops, agitation, or tides may trigger scallop spawning <span class="citation" data-cites="parsons1992intra">(<a href="#ref-parsons1992intra" role="doc-biblioref">Parsons et al. 1992</a>)</span>. Larvae reside in the water column for 5-7 weeks <span class="citation" data-cites="thouzeau1991spatial">(<a href="#ref-thouzeau1991spatial" role="doc-biblioref">Thouzeau, Robert, and Smith 1991</a>)</span> and circulate with residual currents ranging from 6-25 cm/s <span class="citation" data-cites="culliney1974larval">(<a href="#ref-culliney1974larval" role="doc-biblioref">Culliney 1974</a>)</span>. Larval exchange is influenced by duration and depth of planktonic drift, gyre strength, and weak cross-isobath flow <span class="citation" data-cites="thouzeau1991spatial">(<a href="#ref-thouzeau1991spatial" role="doc-biblioref">Thouzeau, Robert, and Smith 1991</a>)</span>. The transition to the benthos of the freeswimming larvae occurs at a size of about 0.25 mm shell height and is accompanied by drastic changes in diet, morphology, and locomotory ability <span class="citation" data-cites="bourne1965comparison">(<a href="#ref-bourne1965comparison" role="doc-biblioref">Bourne 1965</a>)</span>. Mean fall temperatures impact the time larvae take to settle <span class="citation" data-cites="tremblay1994drift">(<a href="#ref-tremblay1994drift" role="doc-biblioref">Tremblay et al. 1994</a>)</span>. Sea scallop larvae are potentially preyed on by filter feeders and larval and adult planktivores <span class="citation" data-cites="tremblay1986horizontal">(<a href="#ref-tremblay1986horizontal" role="doc-biblioref">Tremblay and Sinclair 1986</a>)</span>. Juvenile Atlantic sea scallops are mainly found on gravel, small rocks, shells, and among branching animals and plants that permit attachment of juveniles <span class="citation" data-cites="thouzeau1991spatial">(<a href="#ref-thouzeau1991spatial" role="doc-biblioref">Thouzeau, Robert, and Smith 1991</a>)</span> and feed on suspended particles, primarily phytoplankton and microzooplankton <span class="citation" data-cites="shumway1987food">(<a href="#ref-shumway1987food" role="doc-biblioref">Shumway, Selvin, and Schick 1987</a>)</span>. Adult sea scallops are filter feeders on phytoplankton and other suspended organic particulates from the water <span class="citation" data-cites="shumway1987food">(<a href="#ref-shumway1987food" role="doc-biblioref">Shumway, Selvin, and Schick 1987</a>)</span>. Adult sea scallops prefer temperatures of 5-18°C <span class="citation" data-cites="hart2004essential">(<a href="#ref-hart2004essential" role="doc-biblioref">Hart and Chute 2004</a>)</span>. Predation on juvenile and adult sea scallops decreases with shell height; common predators include Atlantic cod, wolffish, sculpins, winter and yellowtail flounder, as well as boring polychaetes, sea stars, crabs, and lobsters <span class="citation" data-cites="hart2004essential">(<a href="#ref-hart2004essential" role="doc-biblioref">Hart and Chute 2004</a>)</span>. The New England Fishery Management Council manages Atlantic sea scallops in federal waters under the Atlantic Sea Scallop Fishery Management Plan. As of the 2020 Management Track Assessment, the stock is not overfished and overfishing is not occurring <span class="citation" data-cites="nefsc2020sea">(<a href="#ref-nefsc2020sea" role="doc-biblioref">Northeast Fisheries Science Center 2020</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -612,6 +631,65 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bourne1965comparison" class="csl-entry" role="listitem">
+Bourne, N. 1965. <span>“A Comparison of Catches by 3- and 4-Inch Rings on Offshore Scallop Drags.”</span> <em>Journal of the Fisheries Research Board of Canada</em> 22 (2): 313–33.
+</div>
+<div id="ref-cooley2015integrated" class="csl-entry" role="listitem">
+Cooley, Sarah R., Jennie E. Rheuban, Deborah R. Hart, Victoria Luu, David M. Glover, Jonathan A. Hare, and Scott C. Doney. 2015. <span>“An Integrated Assessment Model for Helping the United States Sea Scallop (Placopecten Magellanicus) Fishery Plan Ahead for Ocean Acidification and Warming.”</span> <em>PLoS ONE</em> 10 (5): e0124145. <a href="https://doi.org/10.1371/journal.pone.0124145">https://doi.org/10.1371/journal.pone.0124145</a>.
+</div>
+<div id="ref-cranford1998situ" class="csl-entry" role="listitem">
+Cranford, Peter J., Craig W. Emerson, Barry T. Hargrave, and Timothy G. Milligan. 1998. <span>“In Situ Feeding and Absorption Responses of Sea Scallops Placopecten Magellanicus (Gmelin) to Storm-Induced Changes in the Quantity and Composition of the Seston.”</span> <em>Journal of Experimental Marine Biology and Ecology</em> 219 (1-2): 45–70. <a href="https://doi.org/10.1016/S0022-0981(97)00174-3">https://doi.org/10.1016/S0022-0981(97)00174-3</a>.
+</div>
+<div id="ref-culliney1974larval" class="csl-entry" role="listitem">
+Culliney, John L. 1974. <span>“Larval Development of the Giant Scallop Placopecten Magellanicus (Gmelin).”</span> <em>Biological Bulletin</em> 147 (2): 321–32.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-hart2004essential" class="csl-entry" role="listitem">
+Hart, Deborah R., and Antonie S. Chute. 2004. <span>“Essential Fish Habitat Source Document. Sea Scallop, Placopecten Magellanicus, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE 189. <a href="https://repository.library.noaa.gov/view/noaa/4031">https://repository.library.noaa.gov/view/noaa/4031</a>.
+</div>
+<div id="ref-hart2006long" class="csl-entry" role="listitem">
+Hart, Deborah R., and Paul J. Rago. 2006. <span>“Long-Term Dynamics of US Atlantic Sea Scallop Placopecten Magellanicus Populations.”</span> <em>North American Journal of Fisheries Management</em> 26 (2): 490–501.
+</div>
+<div id="ref-jezequel2022pile" class="csl-entry" role="listitem">
+J’ez’equel, Youenn, Simon Cones, Frants H. Jensen, Heather Brewer, James Collins, and T. Aran Mooney. 2022. <span>“Pile Driving Repeatedly Impacts the Giant Scallop (Placopecten Magellanicus).”</span> <em>Scientific Reports</em> 12 (1): 15380. <a href="https://doi.org/10.1038/s41598-022-19838-6">https://doi.org/10.1038/s41598-022-19838-6</a>.
+</div>
+<div id="ref-maguire2002effects" class="csl-entry" role="listitem">
+Maguire, Julie A., A. Coleman, Stuart Jenkins, and Gavin M. Burnell. 2002. <span>“Effects of Dredging on Undersized Scallops.”</span> <em>Fisheries Research</em> 56 (2): 155–65. <a href="https://doi.org/10.1016/S0165-7836(01)00322-8">https://doi.org/10.1016/S0165-7836(01)00322-8</a>.
+</div>
+<div id="ref-nefsc2020sea" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center. 2020. <span>“Sea Scallop Management Track Assessment Fall 2020.”</span> NOAA Technical Memorandum NMFS-NE 293. <a href="https://repository.library.noaa.gov/view/noaa/48008">https://repository.library.noaa.gov/view/noaa/48008</a>.
+</div>
+<div id="ref-parsons1992intra" class="csl-entry" role="listitem">
+Parsons, G. J., S. M. C. Robinson, R. A. Chandler, L. A. Davidson, M. Lanteigne, and M. J. Dadswell. 1992. <span>“Intra-Annual and Long-Term Patterns in the Reproductive Cycle of Giant Scallops Placopecten Magellanicus (Bivalvia: Pectinidae) from Passamaquoddy Bay, New Brunswick, Canada.”</span> <em>Marine Ecology Progress Series</em> 80: 203–14.
+</div>
+<div id="ref-rheuban2018projected" class="csl-entry" role="listitem">
+Rheuban, Jennie E., Scott C. Doney, Sarah R. Cooley, and Deborah R. Hart. 2018. <span>“Projected Impacts of Future Climate Change, Ocean Acidification, and Management on the US Atlantic Sea Scallop (Placopecten Magellanicus) Fishery.”</span> <em>PLoS ONE</em> 13 (9): e0203536. <a href="https://doi.org/10.1371/journal.pone.0203536">https://doi.org/10.1371/journal.pone.0203536</a>.
+</div>
+<div id="ref-shumway1987food" class="csl-entry" role="listitem">
+Shumway, Sandra E., R. Selvin, and D. F. Schick. 1987. <span>“Food Resources Related to Habitat in the Scallop Placopecten Magellanicus (Gmelin, 1791): A Qualitative Study.”</span> <em>Journal of Shellfish Research</em> 6: 89–95.
+</div>
+<div id="ref-stewart1994environmental" class="csl-entry" role="listitem">
+Stewart, Patrick L., and S. H. Arnold. 1994. <span>“Environmental Requirements of the Sea Scallop (Placopecten Magellanicus) in Eastern Canada and Its Response to Human Impacts.”</span> Canadian Technical Report of Fisheries; Aquatic Sciences 2005.
+</div>
+<div id="ref-thouzeau1991spatial" class="csl-entry" role="listitem">
+Thouzeau, G’erard, G. Robert, and Stephen J. Smith. 1991. <span>“Spatial Variability in Distribution and Growth of Juvenile and Adult Sea Scallops Placopecten Magellanicus (Gmelin) on Eastern Georges Bank (Northwest Atlantic).”</span> <em>Marine Ecology Progress Series</em> 74: 205–18.
+</div>
+<div id="ref-tremblay1994drift" class="csl-entry" role="listitem">
+Tremblay, M. John, John W. Loder, Francisco E. Werner, Christopher E. Naimie, Fred H. Page, and Michael M. Sinclair. 1994. <span>“Drift of Sea Scallop Larvae Placopecten Magellanicus on Georges Bank: A Model Study of the Roles of Mean Advection, Larval Behavior and Larval Origin.”</span> <em>Deep Sea Research Part II: Topical Studies in Oceanography</em> 41 (1): 7–49.
+</div>
+<div id="ref-tremblay1986horizontal" class="csl-entry" role="listitem">
+Tremblay, M. John, and Michael M. Sinclair. 1986. <span>“The Horizontal Distribution of Larval Sea Scallops (Placopecten Magellanicus) in the Bay of Fundy, on the Scotian Shelf and on Georges Bank.”</span> NAFO Scientific Council Research Document 86/98.
+</div>
+<div id="ref-zang2022modeling" class="csl-entry" role="listitem">
+Zang, Zhengzhe, Rubao Ji, Deborah R. Hart, Changsheng Chen, Liang Zhao, and Cabell S. Davis. 2022. <span>“Modeling Atlantic Sea Scallop (Placopecten Magellanicus) Scope for Growth on the Northeast US Shelf.”</span> <em>Fisheries Oceanography</em> 31 (3): 271–90. <a href="https://doi.org/10.1111/fog.12577">https://doi.org/10.1111/fog.12577</a>.
+</div>
+<div id="ref-zang2023effects" class="csl-entry" role="listitem">
+Zang, Zhengzhe, Rubao Ji, Deborah R. Hart, Di Jin, Changsheng Chen, Yonggang Liu, and Cabell S. Davis. 2023. <span>“Effects of Warming and Fishing on Atlantic Sea Scallop (Placopecten Magellanicus) Size Structure in the Mid-Atlantic Rotationally Closed Areas.”</span> <em>ICES Journal of Marine Science</em> 80 (5): 1351–66. <a href="https://doi.org/10.1093/icesjms/fsad063">https://doi.org/10.1093/icesjms/fsad063</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

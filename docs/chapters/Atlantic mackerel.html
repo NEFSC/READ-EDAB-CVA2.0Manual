@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -354,11 +374,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../chapters/Striped bass.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Striped bass (<em><code>Morone saxatilis</code></em>)</span></a>
   </div>
 </li>
@@ -432,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -472,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 95%</p>
 </div>
 </div>
 </div>
@@ -496,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -524,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low</td>
+<td>Moderate</td>
+<td>Decrease</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -549,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Atlantic mackerel received a <strong>Low</strong> sensitivity score with a certainty of 100%. The only score greater than 2.5 was Stock Size (3.2). Stocks are not currently overfished or experiencing overfishing according to the most recent stock assessment. The stock is rebuilding to target levels <span class="citation" data-cites="nefsc2025_mack">(<a href="#ref-nefsc2025_mack" role="doc-biblioref">Northeast Fisheries Science Center 2025</a>)</span>.</p>
+<p>In the previous Climate Vulnerability Assessment, mackerel were given a moderate sensitivity score. This previous score was driven by Stock Size, Egg and Larval Survival and Settlement Requirements (Early Life History Requirements), and Spawning Cycle. Stock sizes were not classified at the time of the last assessment, and it was unclear how spawning cycle and early life stages would be impacted by warming waters <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. Recent work has suggested that spawning habitats will likely shift west and north under future warming conditions <span class="citation" data-cites="bruge2016">(<a href="#ref-bruge2016" role="doc-biblioref">Bruge et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>95% of sensitivity attribute data quality scores were greater than or equal to 2, indicating excellent data quality. Only Relationship to Calcified Organisms was considered a data gap (mean attribute data quality score &lt; 2).&nbsp;</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -571,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Atlantic mackerel are likely to be <strong>negatively</strong> impacted by climate change. Expert certainty was 83%. Regional warming has resulted in northeasterly shifts in mackerel distributions. Spawning habitat could increase in more northern regions such as the Gulf of St Lawrence as mackerel seek out preferred temperatures <span class="citation" data-cites="overholtz2011">(<a href="#ref-overholtz2011" role="doc-biblioref">Overholtz, Hare, and Keith 2011</a>)</span>. This result is similar to the results from the 2016 Climate Vulnerability Assessment for the region <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Atlantic mackerel are sensitive to temperature changes, particularly temperatures greater than 5°C <span class="citation" data-cites="overholtz2011">(<a href="#ref-overholtz2011" role="doc-biblioref">Overholtz, Hare, and Keith 2011</a>)</span>. From 1968 to 2008, the distribution of mackerel in the Northwest Atlantic has shifted roughly 250km north and east in addition to changes in depth distribution to more shallow on-shelf waters. These changes in position and depth are known to be correlated with the gradual warming of the Northwest Atlantic <span class="citation" data-cites="overholtz2011">(<a href="#ref-overholtz2011" role="doc-biblioref">Overholtz, Hare, and Keith 2011</a>)</span>. Atlantic mackerel egg distribution has also shifted northeastward as a consequence of warming, depleting egg production in important spawning locations in southern New England <span class="citation" data-cites="richardson2020">(<a href="#ref-richardson2020" role="doc-biblioref">Richardson et al. 2020</a>)</span>. <span class="citation" data-cites="bruge2016">Bruge et al. (<a href="#ref-bruge2016" role="doc-biblioref">2016</a>)</span> projected changes in Northeast Atlantic mackerel spawning distribution under future climate scenarios, and found that the spawning center of gravity is expected to shift westward and northward. <span class="citation" data-cites="mbaye2019">Mbaye et al. (<a href="#ref-mbaye2019" role="doc-biblioref">2019</a>)</span> investigated effects of environmental conditions on Atlantic mackerel spawning habitat in the Gulf of St.&nbsp;Lawrence. Generalized additive model (GAM) results showed that spawning habitat in the Gulf of St.&nbsp;Lawrence could expand and extend to western and southern Newfoundland.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic mackerel in the Northwest Atlantic inhabit cold and temperate continental shelf waters from the Gulf of St Lawrence to Cape Lookout, North Carolina <span class="citation" data-cites="studholme1999">(<a href="#ref-studholme1999" role="doc-biblioref">Studholme 1999</a>)</span>. Spawning occurs from April to August in the Northwest Atlantic and progresses from south to north with warming temperatures and following migration patterns <span class="citation" data-cites="sette1943">(<a href="#ref-sette1943" role="doc-biblioref">Sette 1943</a>)</span>. There are two spawning contingents: the southern contingent spawns from April to July in the Mid-Atlantic Bight and Gulf of Maine, and the northern contingent spawns in the southern Gulf of St.&nbsp;Lawrence in June and July <span class="citation" data-cites="berrien1982">(<a href="#ref-berrien1982" role="doc-biblioref">Berrien 1982</a>)</span> <span class="citation" data-cites="morse1987">(<a href="#ref-morse1987" role="doc-biblioref">Morse, Fahay, and Smith 1987</a>)</span>. Temperature is a cue for spawning. Spawning does not occur until water has warmed to 8°C with most egg production occurring between 9-14°C <span class="citation" data-cites="sette1943">(<a href="#ref-sette1943" role="doc-biblioref">Sette 1943</a>)</span>. More recent work has shown that mackerel spawning and migration timing is negatively correlated with sea surface temperature <span class="citation" data-cites="jansen2011">(<a href="#ref-jansen2011" role="doc-biblioref">Jansen and Gislason 2011</a>)</span>. Early life stage development happens quickly, with eggs hatching in 4-7.5 hours, depending on temperature <span class="citation" data-cites="berrien1982">(<a href="#ref-berrien1982" role="doc-biblioref">Berrien 1982</a>)</span>. Larvae (&lt; 13 mm) occur primarily in offshore waters from Chesapeake Bay to southern Gulf of St.&nbsp;Lawrence <span class="citation" data-cites="sette1943">(<a href="#ref-sette1943" role="doc-biblioref">Sette 1943</a>)</span>. Larval and juvenile depth varies diurnally and with age <span class="citation" data-cites="collette2002_mack">(<a href="#ref-collette2002_mack" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. Larvae feed primarily on zooplankton and copepods, and larvae &gt; 6.4 mm are known to experience cannibalistic behavior <span class="citation" data-cites="castonguay2008">(<a href="#ref-castonguay2008" role="doc-biblioref">Castonguay et al. 2008</a>)</span>. Juveniles rely on water column habitats, both on the shelf, and in estuaries <span class="citation" data-cites="guyant2022">(<a href="#ref-guyant2022" role="doc-biblioref">Guyant et al. 2022</a>)</span>. Juveniles and adults are opportunistic feeders that prey on a wide range of crustaceans, copepods, planktonic organisms, and fishes <span class="citation" data-cites="sette1950">(<a href="#ref-sette1950" role="doc-biblioref">Sette 1950</a>)</span>. Squid, seabirds and larger piscivores, including Atlantic cod, prey on juvenile mackerel <span class="citation" data-cites="studholme1999">(<a href="#ref-studholme1999" role="doc-biblioref">Studholme 1999</a>)</span>. Adults over winter in moderately deep water, 70-200 m, along the continental shelf. After migrating inshore in April-May, they form the two spawning aggregations <span class="citation" data-cites="berrien1982">(<a href="#ref-berrien1982" role="doc-biblioref">Berrien 1982</a>)</span>. Predators of adult mackerel include larger fish, sharks, skates, seabirds, and marine mammals (primarily whales and seals) <span class="citation" data-cites="studholme1999">(<a href="#ref-studholme1999" role="doc-biblioref">Studholme 1999</a>)</span>. Atlantic mackerel are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. As of the 2025 assessment, the stock is not overfished and overfishing is not occurring, but is rebuilding to target levels <span class="citation" data-cites="nefsc2025_mack">(<a href="#ref-nefsc2025_mack" role="doc-biblioref">Northeast Fisheries Science Center 2025</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -612,6 +630,53 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-berrien1982" class="csl-entry" role="listitem">
+Berrien, P. 1982. <span>“Atlantic Mackerel, Scomber Scombrus.”</span> In <em>Fish Distribution</em>, edited by M. D. Grosslein and T. R. Azarovitz, 99–102. MESA New York Bight Atlas Monograph 15. Albany, NY: N.Y. Sea Grant Institute.
+</div>
+<div id="ref-bruge2016" class="csl-entry" role="listitem">
+Bruge, A., P. Alvarez, A. Font’an, U. Cotano, and G. Chust. 2016. <span>“Thermal Niche Tracking and Future Distribution of Atlantic Mackerel Spawning in Response to Ocean Warming.”</span> <em>Frontiers in Marine Science</em> 3: 86. <a href="https://doi.org/10.3389/fmars.2016.00086">https://doi.org/10.3389/fmars.2016.00086</a>.
+</div>
+<div id="ref-castonguay2008" class="csl-entry" role="listitem">
+Castonguay, M., S. Plourde, D. Robert, J. A. Runge, and L. Fortier. 2008. <span>“Copepod Production Drives Recruitment in a Marine Fish.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 65 (8): 1528–31. <a href="https://doi.org/10.1139/F08-126">https://doi.org/10.1139/F08-126</a>.
+</div>
+<div id="ref-collette2002_mack" class="csl-entry" role="listitem">
+Collette, B. B., and G. Klein-MacPhee. 2002. <span>“Atlantic Mackerel, Scomber Scombrus.”</span> In <em>Bigelow and Schroeder’s Fishes of the Gulf of Maine</em>, edited by B. B. Collette and G. Klein-MacPhee. Washington, DC: Smithsonian Institution Press.
+</div>
+<div id="ref-guyant2022" class="csl-entry" role="listitem">
+Guyant, M., M. Bachman, J. Coakley, G. Fay, M. Johnson, V. Kentner, W. Morrison, and T. Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-jansen2011" class="csl-entry" role="listitem">
+Jansen, T., and H. Gislason. 2011. <span>“Temperature Affects the Timing of Spawning and Migration of North Sea Mackerel.”</span> <em>Continental Shelf Research</em> 31 (1): 64–72. <a href="https://doi.org/10.1016/j.csr.2010.11.003">https://doi.org/10.1016/j.csr.2010.11.003</a>.
+</div>
+<div id="ref-mbaye2019" class="csl-entry" role="listitem">
+Mbaye, B., T. Doniol-Valcroze, P. Brosset, M. Castonguay, E. Van Beveren, A. Smith, C. Lehoux, D. Brickman, Z. Wang, and S. Plourde. 2019. <span>“Modelling Atlantic Mackerel Spawning Habitat Suitability and Its Future Distribution in the North-West Atlantic.”</span> <em>Fisheries Oceanography</em> 29: 84–99. <a href="https://doi.org/10.1111/fog.12456">https://doi.org/10.1111/fog.12456</a>.
+</div>
+<div id="ref-morse1987" class="csl-entry" role="listitem">
+Morse, W. W., W. P. Fahay, and W. G. Smith. 1987. <span>“MARMAP Surveys of the Continental Shelf from Cape Hatteras, North Carolina to Cape Sable, Nova Scotia (1977-1984). Atlas No. 2. Annual Distribution Patterns of Fish Larvae.”</span> NOAA Tech. Memo. NMFS-F/NEC-47.
+</div>
+<div id="ref-nefsc2025_mack" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center. 2025. <span>“Northwest Atlantic Mackerel 2025 Management Track Assessment Report.”</span> NEFSC. <a href="https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/68ee99a1984d0b305a630bdd/1760467362051/e_Northwest_Atlantic_Mackerel_Update_2025.pdf">https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/68ee99a1984d0b305a630bdd/1760467362051/e_Northwest_Atlantic_Mackerel_Update_2025.pdf</a>.
+</div>
+<div id="ref-overholtz2011" class="csl-entry" role="listitem">
+Overholtz, W. J., J. A. Hare, and C. M. Keith. 2011. <span>“Impacts of Interannual Environmental Forcing and Climate Change on the Distribution of Atlantic Mackerel on the u.s. Northeast Continental Shelf.”</span> <em>Marine and Coastal Fisheries</em> 3 (1): 219–32. <a href="https://doi.org/10.1080/19425120.2011.578485">https://doi.org/10.1080/19425120.2011.578485</a>.
+</div>
+<div id="ref-richardson2020" class="csl-entry" role="listitem">
+Richardson, D. E., L. Carter, K. L. Curti, K. E. Marancik, and M. Castonguay. 2020. <span>“Changes in the Spawning Distribution and Biomass of Atlantic Mackerel (Scomber Scombrus) in the Western Atlantic Ocean over 4 Decades.”</span> <em>Fishery Bulletin</em> 118: 120–34. <a href="https://doi.org/10.7755/FB.118.2.2">https://doi.org/10.7755/FB.118.2.2</a>.
+</div>
+<div id="ref-sette1943" class="csl-entry" role="listitem">
+Sette, O. E. 1943. <span>“Biology of Atlantic Mackerel (Scomber Scombrus) of North America. Part i: Early Life History Including Growth, Drift, and Mortality of the Egg and Larval Populations.”</span> <em>U.S. Fish Wildlife Service Fishery Bulletin</em> 50: 149–237.
+</div>
+<div id="ref-sette1950" class="csl-entry" role="listitem">
+———. 1950. <span>“Biology of Atlantic Mackerel (Scomber Scombrus) of North America. Part II. Migrations and Habits.”</span> <em>U.S. Fish Wildlife Service Fishery Bulletin</em> 51: 251–358.
+</div>
+<div id="ref-studholme1999" class="csl-entry" role="listitem">
+Studholme, A. 1999. <span>“Essential Fish Habitat Source Document. Atlantic Mackerel, Scomber Scombrus, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE-141. <a href="https://repository.library.noaa.gov/view/noaa/3138/noaa_3138_DS1.pdf">https://repository.library.noaa.gov/view/noaa/3138/noaa_3138_DS1.pdf</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -354,11 +374,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../chapters/Striped bass.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Striped bass (<em><code>Morone saxatilis</code></em>)</span></a>
   </div>
 </li>
@@ -432,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -496,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
+<col style="width: 25%">
 <col style="width: 23%">
-<col style="width: 28%">
-<col style="width: 21%">
+<col style="width: 27%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -550,14 +565,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
 <p>Atlantic croaker received a sensitivity score of <strong>Moderate</strong>. Certainty was high (90%). Three attributes received scores greater than 2.5: 1) Egg and Larval Survival and Settlement Requirements (2.9), 2) Other Stressors (2.7), and 3) Stock Size (2.5).</p>
-<p>Croaker eggs and larvae rely on currents and tidal activity for transport to suitable nursery habitats (Sempsrott et al 2017). Larvae are selective feeders, only feeding on a subset of plankton species (Govoni et al 1986). Juveniles are also dependent on native salt marsh habitats, which themselves are highly vulnerable (Guyant et al 2022) and are susceptible to eutrophication and hypoxic events. Croaker had a low sensitivity score in the previous assessment (Hare et al 2016). Egg and Larval Survival and Settlement Requirements drove the previous sensitivity score.</p>
+<p>Croaker eggs and larvae rely on currents and tidal activity for transport to suitable nursery habitats <span class="citation" data-cites="sempsrott2017biological">(<a href="#ref-sempsrott2017biological" role="doc-biblioref">Sempsrott et al. 2017</a>)</span>. Larvae are selective feeders, only feeding on a subset of plankton species <span class="citation" data-cites="govoni1986selective">(<a href="#ref-govoni1986selective" role="doc-biblioref">Govoni et al. 1986</a>)</span>. Juveniles are also dependent on native salt marsh habitats, which themselves are highly vulnerable <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span> and are susceptible to eutrophication and hypoxic events. Croaker had a low sensitivity score in the previous assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. Egg and Larval Survival and Settlement Requirements drove the previous sensitivity score.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>73% of sensitivity attribute data quality scores were greater than or equal to 2, indicating good data quality. Four attributes were considered data gaps (mean attribute data quality score &lt; 2): Complexity in Reproductive Strategy, Egg and Larval Survival and Settlement Requirements, Population Growth Rate, and Stock Size/Status.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -572,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>The effect of climate change on croaker is estimated to be <strong>neutral</strong> with 89% certainty in expert scores. Warmer temperatures may decrease young-of-year mortality rates. However, juvenile habitats are highly vulnerable to climate change. In the previous assessment, the effects of climate change were estimated to have a positive impact on croaker <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>As a sub-tropical species, Atlantic croaker may experience both positive and negative effects on their abundance and distribution as a result of climate change. Interannual variability in croaker abundance may be climate related, with colder winters causing increased mortality in overwintering young-of-the-year <span class="citation" data-cites="lankford2001low">(<a href="#ref-lankford2001low" role="doc-biblioref">Lankford Jr and Targett 2001</a>)</span>. Warm winters, however, may result in increased abundances, or “outbursts” of juveniles in the spring that contribute to expansion of the population’s distribution <span class="citation" data-cites="hare2007mechanistic">(<a href="#ref-hare2007mechanistic" role="doc-biblioref">Hare and Able 2007</a>)</span>. <span class="citation" data-cites="diamond2013simulating">Diamond, Murphy, and Rose (<a href="#ref-diamond2013simulating" role="doc-biblioref">2013</a>)</span> modeled Atlantic croaker abundance in the Mid-Atlantic with global climate change projections and found increased croaker abundance with lower inter-annual variability under global climate change. Positive responses in sensitivity analyses stemmed from warmer temperatures, and negative responses were due to rising variability in salinity and increases in offshore transport and sea level rise <span class="citation" data-cites="diamond2013simulating">(<a href="#ref-diamond2013simulating" role="doc-biblioref">Diamond, Murphy, and Rose 2013</a>)</span>. Common juvenile habitat types (submerged aquatic vegetation, salt marshes, and intertidal habitats) are highly vulnerable to climate change <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic croaker are a demersal species found from the Gulf of Maine to Argentina. Along the United States Atlantic coast, they are most abundant from Chesapeake Bay to northern Florida <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. Atlantic croaker spawn from July - December in inshore shelf and estuarine waters between Delaware Bay and Cape Hatteras, peaking in August - October near Chesapeake Bay <span class="citation" data-cites="able1998first">(<a href="#ref-able1998first" role="doc-biblioref">Able and Fahay 1998</a>)</span>. Their name comes from the croaking noises the fish make during spawning by vibrating their abdominal muscles against their swim bladder <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. After 30-90 days post-hatch Atlantic croaker larvae are driven inshore by winds <span class="citation" data-cites="thorrold1997response">(<a href="#ref-thorrold1997response" role="doc-biblioref">Thorrold, Jones, and Campana 1997</a>)</span> where they migrate to estuarine habitats <span class="citation" data-cites="sempsrott2017biological">(<a href="#ref-sempsrott2017biological" role="doc-biblioref">Sempsrott et al. 2017</a>)</span>. Initial fall recruitment of croaker depends on fall continental shelf winds to provide transport into Chesapeake Bay <span class="citation" data-cites="norcross1991estuarine">(<a href="#ref-norcross1991estuarine" role="doc-biblioref">Norcross 1991</a>)</span>. Recruitment to specific estuaries is influenced by tidal activity and currents, such that eggs and larvae are dependent on transport to suitable habitats for survival <span class="citation" data-cites="sempsrott2017biological">(<a href="#ref-sempsrott2017biological" role="doc-biblioref">Sempsrott et al. 2017</a>)</span>. Atlantic croaker larvae are selective feeders, as they eat fewer taxa of suitable size than are present in ambient plankton <span class="citation" data-cites="govoni1986selective">(<a href="#ref-govoni1986selective" role="doc-biblioref">Govoni et al. 1986</a>)</span>. Juvenile croaker are highly dependent on marine, estuarine, and riverine mud and sand substrates, as well as native salt marsh habitats <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. The major prey of young-of-the-year Atlantic croaker are polychaetes, copepods, and mysids. Detritus is also a major component of the juvenile diet <span class="citation" data-cites="ffwcc2010croaker">(<a href="#ref-ffwcc2010croaker" role="doc-biblioref">Florida Fish and Wildlife Conservation Commission 2010</a>)</span> <span class="citation" data-cites="sink2011species">(<a href="#ref-sink2011species" role="doc-biblioref">Sink 2011</a>)</span>. Adult Atlantic croaker perform seasonal migrations, moving northward and inshore to estuaries and bays in the spring - fall and southward and offshore to shelf waters in the winter <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. They reach maturity by 2 years of age and can live up to 17 years, although lifespans are commonly below 10 years <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. Adult Atlantic croaker are opportunistic feeders and are known to consume polychaetes, anchovies, mysid shrimp, amphipods, fishes and crabs, and detritus in Chesapeake Bay <span class="citation" data-cites="nye2011annual">(<a href="#ref-nye2011annual" role="doc-biblioref">Nye, Loewensteiner, and Miller 2011</a>)</span>. Atlantic croaker are managed under Amendment 1 to the Atlantic States Marine Fisheries Commission’s Interstate Fishery Management Plan for Atlantic Croaker (2005) and Addenda I, II, and III (2011, 2014, 2020). <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. The most recent benchmark stock assessment was completed in 2017, where the current stock status could not be determined because the assessment results were sensitive to certain modeling assumptions, but any further depletion in the stock was unlikely <span class="citation" data-cites="asmfc2017croaker">(<a href="#ref-asmfc2017croaker" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2017</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -613,6 +630,53 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-able1998first" class="csl-entry" role="listitem">
+Able, Kenneth W., and Michael P. Fahay. 1998. <em>The First Year in the Life of Estuarine Fishes in the Middle Atlantic Bight</em>. New Brunswick, NJ: Rutgers University Press.
+</div>
+<div id="ref-asmfc2017croaker" class="csl-entry" role="listitem">
+Atlantic States Marine Fisheries Commission. 2017. <span>“2017 Atlantic Croaker Stock Assessment Peer Review.”</span> ASMFC. <a href="https://asmfc.org/wp-content/uploads/2025/01/AtlCroakerAssessmentPeerReviewReport_May2017.pdf">https://asmfc.org/wp-content/uploads/2025/01/AtlCroakerAssessmentPeerReviewReport_May2017.pdf</a>.
+</div>
+<div id="ref-asmfc2020addendum" class="csl-entry" role="listitem">
+———. 2020. <span>“ADDENDUM III TO AMENDMENT 1 TO THE INTERSTATE FISHERY MANAGEMENT PLAN FOR ATLANTIC CROAKER.”</span> ASMFC. <a href="https://asmfc.org/wp-content/uploads/2025/01/AtlCroakerAddendumIII_Feb2020.pdf">https://asmfc.org/wp-content/uploads/2025/01/AtlCroakerAddendumIII_Feb2020.pdf</a>.
+</div>
+<div id="ref-diamond2013simulating" class="csl-entry" role="listitem">
+Diamond, Sandra L, Cheryl A Murphy, and Kenneth A Rose. 2013. <span>“Simulating the Effects of Global Climate Change on Atlantic Croaker Population Dynamics in the Mid-Atlantic Region.”</span> <em>Ecological Modelling</em> 264: 98–114. <a href="https://doi.org/10.1016/j.ecolmodel.2013.05.001">https://doi.org/10.1016/j.ecolmodel.2013.05.001</a>.
+</div>
+<div id="ref-ffwcc2010croaker" class="csl-entry" role="listitem">
+Florida Fish and Wildlife Conservation Commission. 2010. <span>“Atlantic Croaker Report.”</span> FFWCC.
+</div>
+<div id="ref-govoni1986selective" class="csl-entry" role="listitem">
+Govoni, John J, Peter B Ortner, Faiza Al-Yamani, and Lawrence C Hill. 1986. <span>“Selective Feeding of Spot, Leiostomus Xanthurus, and Atlantic Croaker, Micropogonias Undulatus, Larvae in the Northern Gulf of Mexico.”</span> <em>Marine Ecology Progress Series</em> 28: 175–83.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2007mechanistic" class="csl-entry" role="listitem">
+Hare, Jonathan A, and Kenneth W Able. 2007. <span>“Mechanistic Links Between Climate and Fisheries Along the East Coast of the United States: Explaining Population Outbursts of Atlantic Croaker (Micropogonias Undulatus).”</span> <em>Fisheries Oceanography</em> 16 (1): 31–45.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-lankford2001low" class="csl-entry" role="listitem">
+Lankford Jr, Thomas E, and Timothy E Targett. 2001. <span>“Low-Temperature Tolerance of Age-0 Atlantic Croakers: Recruitment Implications for US Mid-Atlantic Estuaries.”</span> <em>Transactions of the American Fisheries Society</em> 130 (2): 236–49.
+</div>
+<div id="ref-norcross1991estuarine" class="csl-entry" role="listitem">
+Norcross, Brenda L. 1991. <span>“Estuarine Recruitment Mechanisms of Larval Atlantic Croakers.”</span> <em>Transactions of the American Fisheries Society</em> 120 (6): 673–83.
+</div>
+<div id="ref-nye2011annual" class="csl-entry" role="listitem">
+Nye, Janet A, David A Loewensteiner, and Thomas J Miller. 2011. <span>“Annual, Seasonal, and Regional Variability in Diet of Atlantic Croaker (Micropogonias Undulatus) in Chesapeake Bay.”</span> <em>Estuaries and Coasts</em> 34 (4): 691–700.
+</div>
+<div id="ref-sempsrott2017biological" class="csl-entry" role="listitem">
+Sempsrott, M, M Norberg, N Beckhan, C Somerset, J Ferguson, et al. 2017. <span>“Biological Profile for the Atlantic Croaker Fishery in the Gulf of Mexico.”</span> 266. Gulf States Marine Fisheries Commission.
+</div>
+<div id="ref-sink2011species" class="csl-entry" role="listitem">
+Sink, Todd D. 2011. <span>“Species Profile: Atlantic Croaker.”</span> 7208. Southern Regional Aquaculture Center (SRAC).
+</div>
+<div id="ref-thorrold1997response" class="csl-entry" role="listitem">
+Thorrold, Simon R, Cynthia M Jones, and Steven E Campana. 1997. <span>“Response of Otolith Microchemistry to Environmental Variations Experienced by Larval and Juvenile Atlantic Croaker (Micropogonias Undulatus).”</span> <em>Limnology and Oceanography</em> 42 (1): 102–11.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -354,11 +374,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../chapters/Striped bass.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Striped bass (<em><code>Morone saxatilis</code></em>)</span></a>
   </div>
 </li>
@@ -432,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -472,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Moderate</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 95%</p>
 </div>
 </div>
 </div>
@@ -496,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -524,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Increase</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -549,14 +564,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Atlantic herring had a <strong>Moderate</strong> sensitivity score, with a certainty of 90%. This score was driven by two attributes: Stock Size (4) and Spawning Cycle (2.8).</p>
+<p>Spawning success and recruitment is highly correlated with temperatures. The optimal spawning temperature window has shortened over the past 30 years <span class="citation" data-cites="Kanwit2009 Molina2025">(<a href="#ref-Kanwit2009" role="doc-biblioref">Kanwit and Libby 2009</a>; <a href="#ref-Molina2025" role="doc-biblioref">Molina 2025</a>)</span>. Mismatches between larvae and prey abundance lead to higher mortality <span class="citation" data-cites="Randall2022">(<a href="#ref-Randall2022" role="doc-biblioref">Randall et al. 2022</a>)</span>. As of the 2024 assessment, herring are overfished but not experiencing overfishing <span class="citation" data-cites="NEFSC2024_herring">(<a href="#ref-NEFSC2024_herring" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2024</a>)</span>.</p>
+<p>In the previous assessment, herring received a low sensitivity score. This score was driven by Early Life History Requirements, citing the need for demersal spawning habitat <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified for this species.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -571,14 +588,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Herring are very likely to be <strong>negatively</strong> impacted by future climate change along the Northeast Shelf (100% certainty in expert scores). Warming temperatures and increasing bottom salinities are decreasing the amount of favorable habitat for herring <span class="citation" data-cites="Suca2021">(<a href="#ref-Suca2021" role="doc-biblioref">Suca et al. 2021</a>)</span>. Mismatches between larvae and prey abundances have resulted in slower growth and higher larval mortality <span class="citation" data-cites="Randall2022">(<a href="#ref-Randall2022" role="doc-biblioref">Randall et al. 2022</a>)</span>. The 2016 Climate Vulnerability Assessment for the Northeast Shelf also suggested that herring would be negatively impacted, but with more uncertainty <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>A number of Atlantic herring life history parameters are linked to drivers of climate change. Climate-related mismatches between Atlantic herring larval feeding and prey abundance have resulted in slower growth and higher mortality <span class="citation" data-cites="Randall2022">(<a href="#ref-Randall2022" role="doc-biblioref">Randall et al. 2022</a>)</span>. <span class="citation" data-cites="Groger2010">J. P. Gröger, Kruse, and Rohlf (<a href="#ref-Groger2010" role="doc-biblioref">2010</a>)</span> found that lags in the North Atlantic Oscillation (NAO) and Atlantic Multi-decadal Oscillation (AMO) were the primary drivers of Atlantic herring recruitment. Winter NAO has also indirectly influenced recruitment in multiple herring stocks <span class="citation" data-cites="Axenrot2003 Oskarsson2010 Lynam2005">(<a href="#ref-Axenrot2003" role="doc-biblioref">Axenrot and Hansson 2003</a>; <a href="#ref-Oskarsson2010" role="doc-biblioref">Oskarsson and Taggart 2010</a>; <a href="#ref-Lynam2005" role="doc-biblioref">Lynam et al. 2005</a>)</span> and may be used to predict recruitment with lead times up to 5 years <span class="citation" data-cites="Groger2010">(<a href="#ref-Groger2010" role="doc-biblioref">J. P. Gröger, Kruse, and Rohlf 2010</a>)</span>. Atlantic herring recruitment is also influenced by larval temperatures, the Gulf Stream Index, and food availability from water mass movement <span class="citation" data-cites="Molina2025">(<a href="#ref-Molina2025" role="doc-biblioref">Molina 2025</a>)</span>. Favorable habitat for Atlantic herring in the Northwest Atlantic is currently decreasing with rising temperatures and bottom salinity <span class="citation" data-cites="Suca2021">(<a href="#ref-Suca2021" role="doc-biblioref">Suca et al. 2021</a>)</span>, with herring populations in warmer waters responding more negatively to increasing temperatures than those in colder waters <span class="citation" data-cites="Beaudry2024">(<a href="#ref-Beaudry2024" role="doc-biblioref">Beaudry-Sylvestre, Benoît, and Hutchings 2024</a>)</span>. Herring larvae in the Baltic Sea are facing more heat stress and cardiac dysfunction with an increase in the number of marine heat waves <span class="citation" data-cites="Groger2024">(<a href="#ref-Groger2024" role="doc-biblioref">M. Gröger et al. 2024</a>)</span>. Migration and distribution of Atlantic herring is also linked with thermal oceanic fronts between colder, less saline continental shelf water and warmer, more salient slope water (where plankton are also usually more abundant) <span class="citation" data-cites="Kelly1986">(<a href="#ref-Kelly1986" role="doc-biblioref">Kelly and Moring 1986</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic herring in the Northwest Atlantic reside from southern Labrador in Canada to Cape Hatteras, NC <span class="citation" data-cites="Stevenson2005">(<a href="#ref-Stevenson2005" role="doc-biblioref">Stevenson and Scott 2005</a>)</span>. They spawn primarily on Jeffreys Ledge and Georges Bank between July and November, with peaks in August - September in the Gulf of Maine. However, recent research has suggested that the optimal spawning temperature window has shortened over the past 30 years <span class="citation" data-cites="Kanwit2009 Molina2025">(<a href="#ref-Kanwit2009" role="doc-biblioref">Kanwit and Libby 2009</a>; <a href="#ref-Molina2025" role="doc-biblioref">Molina 2025</a>)</span>. Early life history development is inversely related to water temperature, with slower growth occurring at higher temperatures <span class="citation" data-cites="Stevenson2005">(<a href="#ref-Stevenson2005" role="doc-biblioref">Stevenson and Scott 2005</a>)</span>. Eggs hatch after 6-15 days, and larval development time ranges from 4-8 months. Larvae absorb their yolk sac within 2.5 - 6 days, at which point the larvae become pelagic and can be transported away from or retained near spawning habitats, depending on prevailing current systems <span class="citation" data-cites="Lough1982">(<a href="#ref-Lough1982" role="doc-biblioref">Lough and Cohen 1982</a>)</span>. Predation of eggs is linked to high mortality. Predators include haddock, cod, mackerel, winter flounder, moon snails, hermit crabs and starfish. Strong haddock recruitment has been linked to low abundances of larval herring <span class="citation" data-cites="Boyar1973">(<a href="#ref-Boyar1973" role="doc-biblioref">Boyar et al. 1973</a>)</span> <span class="citation" data-cites="Burbank2023">(<a href="#ref-Burbank2023" role="doc-biblioref">Burbank et al. 2023</a>)</span>. Larval herring prey on copepods, with size depending on the size of the larvae <span class="citation" data-cites="Sherman1971_larval">(<a href="#ref-Sherman1971_larval" role="doc-biblioref">Sherman and Honey 1971</a>)</span>. Juveniles form large schools in coastal waters (i.e.&nbsp;estuaries and embayments) throughout the Gulf of Maine in the spring and summer, and overwinter in deep bays or offshore <span class="citation" data-cites="Stevenson2005">(<a href="#ref-Stevenson2005" role="doc-biblioref">Stevenson and Scott 2005</a>)</span>. Juveniles and adults are planktivorous and opportunistic feeders. As they grow and the size of their jaws increases, they consume larger organisms. Their diet therefore varies with season, their age and size, and location. <span class="citation" data-cites="Stevenson2005">(<a href="#ref-Stevenson2005" role="doc-biblioref">Stevenson and Scott 2005</a>)</span> <span class="citation" data-cites="Sherman1971_juvenile">(<a href="#ref-Sherman1971_juvenile" role="doc-biblioref">Sherman and Perkins 1971</a>)</span>. A lack of availability of preferred prey in adults (due to strong mixing in the water column) can lead to suboptimal feeding and slow growth resulting in increased mortality from starvation and predation <span class="citation" data-cites="Stevenson2005">(<a href="#ref-Stevenson2005" role="doc-biblioref">Stevenson and Scott 2005</a>)</span>. Adult herring make extensive seasonal migrations between summer spawning grounds on Georges Bank and in the Gulf of Maine and overwintering areas in southern New England and the Mid-Atlantic region <span class="citation" data-cites="Stevenson2005">(<a href="#ref-Stevenson2005" role="doc-biblioref">Stevenson and Scott 2005</a>)</span>. There are two major spawning stocks in the Northwest Atlantic: the Gulf of Maine and Georges Bank/Nantucket Shoals. Stocks are separated based on larval distribution patterns, spawning times/locations, and growth rates <span class="citation" data-cites="Iles1982">(<a href="#ref-Iles1982" role="doc-biblioref">Iles and Sinclair 1982</a>)</span> <span class="citation" data-cites="Boyar1973">(<a href="#ref-Boyar1973" role="doc-biblioref">Boyar et al. 1973</a>)</span> <span class="citation" data-cites="Anthony1980">(<a href="#ref-Anthony1980" role="doc-biblioref">Anthony and Waring 1980</a>)</span>. Both stocks are currently assessed in the U.S. as a single coastal stock complex managed by the New England Fishery Management Council. As of the most recent assessment <span class="citation" data-cites="NEFSC2024_herring">(<a href="#ref-NEFSC2024_herring" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2024</a>)</span>, the stock is overfished but not experiencing overfishing based on the biological reference points for spawning stock biomass (SSB) and fishing mortality (F).</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -612,6 +631,71 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Anthony1980" class="csl-entry" role="listitem">
+Anthony, V. C., and G. T. Waring. 1980. <span>“Estimates of Herring Spawning Stock Biomass and Egg Production for the Georges Bank-Gulf of Maine Region.”</span> Res. Doc. 80/IX/135. Northwest Atl. Fish. Organ. (NAFO) Sci. Counc.
+</div>
+<div id="ref-Axenrot2003" class="csl-entry" role="listitem">
+Axenrot, T., and S. Hansson. 2003. <span>“Predicting Herring Recruitment from Young‐of‐the‐year Densities, Spawning Stock Biomass, and Climate.”</span> <em>Limnology and Oceanography</em> 48 (4): 1716–20.
+</div>
+<div id="ref-Beaudry2024" class="csl-entry" role="listitem">
+Beaudry-Sylvestre, M., H. P. Benoît, and J. A. Hutchings. 2024. <span>“Coherent Long-Term Body-Size Responses Across All Northwest Atlantic Herring Populations to Warming and Environmental Change Despite Contrasting Harvest and Ecological Factors.”</span> <em>Global Change Biology</em> 30: e17187. <a href="https://doi.org/10.1111/gcb.17187">https://doi.org/10.1111/gcb.17187</a>.
+</div>
+<div id="ref-Boyar1973" class="csl-entry" role="listitem">
+Boyar, H. C., R. R. Marak, F. E. Perkins, and R. A. Clifford. 1973. <span>“Seasonal Distribution and Growth of Larval Herring (Clupea Harengus l.) in the Georges Bank – Gulf of Maine Area from 1962 to 1970.”</span> <em>J. Cons. Int. Explor. Mer</em> 35: 36–51.
+</div>
+<div id="ref-Burbank2023" class="csl-entry" role="listitem">
+Burbank, J., J. L. McDermid, F. Turcotte, and N. Rolland. 2023. <span>“Temporal Variation in von Bertalanffy Growth Curves and Generation Time of Southern Gulf of St. Lawrence Spring and Fall Spawning Atlantic Herring (Clupea Harengus).”</span> <em>Fishes</em> 8: 205. <a href="https://doi.org/10.3390/fishes8040205">https://doi.org/10.3390/fishes8040205</a>.
+</div>
+<div id="ref-Groger2010" class="csl-entry" role="listitem">
+Gröger, J. P., G. H. Kruse, and N. Rohlf. 2010. <span>“Slave to the Rhythm: How Large-Scale Climate Cycles Trigger Herring (Clupea Harengus) Regeneration in the North Sea.”</span> <em>ICES Journal of Marine Science</em> 67 (3): 454–65.
+</div>
+<div id="ref-Groger2024" class="csl-entry" role="listitem">
+Gröger, M., F. Börgel, S. Karsten, H. E. M. Meier, K. Safonova, C. Dutheil, A. Receveur, and P. Polte. 2024. <span>“Future Climate Change and Marine Heatwaves - Projected Impact on Key Habitats for Herring Reproduction.”</span> <em>Science of the Total Environment</em> 951: 175756. <a href="https://doi.org/10.1016/j.scitotenv.2024.175756">https://doi.org/10.1016/j.scitotenv.2024.175756</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-Iles1982" class="csl-entry" role="listitem">
+Iles, T. D., and M. Sinclair. 1982. <span>“Atlantic Herring Stock Discreteness and Abundance.”</span> <em>Science</em> 215: 627–33.
+</div>
+<div id="ref-Kanwit2009" class="csl-entry" role="listitem">
+Kanwit, J. K., and D. A. Libby. 2009. <span>“Seasonal Movements of Atlantic Herring (Clupea Harengus): Results from a Four Year Tagging Study Conducted in the Gulf of Maine and Southern New England.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 40: 29–39. <a href="https://doi.org/10.2960/j.v40.m577">https://doi.org/10.2960/j.v40.m577</a>.
+</div>
+<div id="ref-Kelly1986" class="csl-entry" role="listitem">
+Kelly, K. H., and J. R. Moring. 1986. <span>“Species Profiles: Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (North Atlantic) - Atlantic Herring.”</span> Biol. Rep. 82 (11.38). U.S. Fish Wildl. Serv.
+</div>
+<div id="ref-Lough1982" class="csl-entry" role="listitem">
+Lough, R. G., and R. E. Cohen. 1982. <span>“Vertical Distribution of Recently-Hatched Herring Larvae and Associated Zooplankton on Jeffreys Ledge and Georges Bank, October 1974.”</span> Ref. Doc. 82-10. U.S. Natl. Mar. Fish. Serv. Northeast Fish. Cent. Woods Hole Lab.
+</div>
+<div id="ref-Lynam2005" class="csl-entry" role="listitem">
+Lynam, C. P., M. R. Heath, S. J. Hay, and A. S. Brierley. 2005. <span>“Evidence for Impacts by Jellyfish on North Sea Herring Recruitment.”</span> <em>Marine Ecology Progress Series</em> 298: 157–67.
+</div>
+<div id="ref-Molina2025" class="csl-entry" role="listitem">
+Molina, A. 2025. <span>“Atlantic Herring Ecosystem and Socioeconomic Profile.”</span> <a href="https://repository.library.noaa.gov/view/noaa/71713/noaa_71713_DS1.pdf">https://repository.library.noaa.gov/view/noaa/71713/noaa_71713_DS1.pdf</a>.
+</div>
+<div id="ref-NEFSC2024_herring" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2024. <span>“Atlantic Herring 2024 Management Track Assessment Report.”</span> NOAA Fisheries. <a href="https://d23h0vhsm26o6d.cloudfront.net/4.c_Atlantic_Herring_2024-Management-Track-Stock-Assessment-Report.pdf">https://d23h0vhsm26o6d.cloudfront.net/4.c_Atlantic_Herring_2024-Management-Track-Stock-Assessment-Report.pdf</a>.
+</div>
+<div id="ref-Oskarsson2010" class="csl-entry" role="listitem">
+Oskarsson, G. J., and C. T. Taggart. 2010. <span>“Variation in Reproductive Potential and Influence on Icelandic Herring Recruitment.”</span> <em>Fisheries Oceanography</em> 19 (5): 412–26.
+</div>
+<div id="ref-Randall2022" class="csl-entry" role="listitem">
+Randall, J. R., H. M. Murphy, D. Robert, and M. Geoffroy. 2022. <span>“Forage Fish as a Predator: Summer and Autumn Diet of Atlantic Herring in Trinity Bay, Newfoundland.”</span> <em>Fisheries Research</em> 252: 106331. <a href="https://doi.org/10.1016/j.fishres.2022.106331">https://doi.org/10.1016/j.fishres.2022.106331</a>.
+</div>
+<div id="ref-Sherman1971_larval" class="csl-entry" role="listitem">
+Sherman, K., and K. A. Honey. 1971. <span>“Seasonal Variations in the Food of Larval Herring in Coastal Waters of Maine.”</span> <em>Rapp. P.-V. Réun. Cons. Int. Explor. Mer</em> 160: 121–24.
+</div>
+<div id="ref-Sherman1971_juvenile" class="csl-entry" role="listitem">
+Sherman, K., and H. C. Perkins. 1971. <span>“Seasonal Variation in the Food of Juvenile Herring in Coastal Waters of Maine.”</span> <em>Trans. Am. Fish. Soc.</em> 100: 121–24.
+</div>
+<div id="ref-Stevenson2005" class="csl-entry" role="listitem">
+Stevenson, D. K., and M. L. Scott. 2005. <span>“Essential Fish Habitat Source Document: Atlantic Herring, Clupea Harengus, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE-192.
+</div>
+<div id="ref-Suca2021" class="csl-entry" role="listitem">
+Suca, J. J., J. J. Deroba, D. E. Richardson, R. Ji, and J. K. Llopiz. 2021. <span>“Environmental Drivers and Trends in Forage Fish Occupancy of the Northeast US Shelf.”</span> <em>ICES Journal of Marine Science</em> 78 (10): 3687–3708.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
