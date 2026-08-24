@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 98%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low</td>
+<td>Moderate <span class="citation" data-cites="loughran2025climate">(<a href="#ref-loughran2025climate" role="doc-biblioref">Loughran et al. 2025</a>)</span></td>
+<td>Decrease</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral</td>
+<td>Neutral <span class="citation" data-cites="loughran2025climate">(<a href="#ref-loughran2025climate" role="doc-biblioref">Loughran et al. 2025</a>)</span></td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Bluefin Tuna received a <strong>Low</strong> sensitivity score, with a certainty of 67%. The only attribute that received a score greater than 2.5 was Egg and Larval Survival and Settlement Requirements (2.6). Early larval stages are susceptible to starvation and older larvae are susceptible to predation <span class="citation" data-cites="shropshire2022 mcgowan1989">(<a href="#ref-shropshire2022" role="doc-biblioref">Shropshire et al. 2022</a>; <a href="#ref-mcgowan1989" role="doc-biblioref">McGowan and Richards 1989</a>)</span>. Larvae also depend on ocean currents for transport to nursery habitats <span class="citation" data-cites="shropshire2022">(<a href="#ref-shropshire2022" role="doc-biblioref">Shropshire et al. 2022</a>)</span>.</p>
+<p>Bluefin Tuna were not included in the 2016 Climate Vulnerability Assessment for the Northeast Shelf, but were included in the recent Highly Migratory Species Climate Vulnerability Assessment <span class="citation" data-cites="loughran2025climate">(<a href="#ref-loughran2025climate" role="doc-biblioref">Loughran et al. 2025</a>)</span>. In this analysis, Bluefin Tuna received a Moderate sensitivity score across their range <span class="citation" data-cites="loughran2025climate">(<a href="#ref-loughran2025climate" role="doc-biblioref">Loughran et al. 2025</a>)</span>. This score was driven by population growth rates, reproductive cycles, and early life history requirements, similar to our analysis.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>98% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Bluefin tuna were estimated to be <strong>neutrally</strong> impacted by climate change. Expert certainty was 96%. Bluefin distributions have been projected to move poleward into the northeast Atlantic. Habitat losses are expected to be great (60% loss) in the Gulf of America, but smaller (20%) in the Northwest Atlantic <span class="citation" data-cites="braun2023widespread">(<a href="#ref-braun2023widespread" role="doc-biblioref">Braun et al. 2023</a>)</span>. Spawning may shift to early spring due to increasing temperatures <span class="citation" data-cites="muhling2011">(<a href="#ref-muhling2011" role="doc-biblioref">Muhling et al. 2011</a>)</span>. This is similar to the results from the recent Highly Migratory Species Climate Vulnerability Assessment <span class="citation" data-cites="loughran2025climate">(<a href="#ref-loughran2025climate" role="doc-biblioref">Loughran et al. 2025</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Projected surface temperatures in the Gulf of America may alter the spatial and temporal extent of Atlantic bluefin tuna spawning. Model results from <span class="citation" data-cites="muhling2011">Muhling et al. (<a href="#ref-muhling2011" role="doc-biblioref">2011</a>)</span> indicate decreased larval bluefin tuna occurrence in late spring in the Gulf by 39-61% by 2050 and 93-96% by 2100, with early spring spawning becoming more prevalent. <span class="citation" data-cites="erauskin2026">Erauskin-Extramiana et al. (<a href="#ref-erauskin2026" role="doc-biblioref">2026</a>)</span> also modeled decreased habitat suitability for spawning in the Gulf of America. They predict a poleward shift in Atlantic bluefin tuna distribution and greater spatial overlap with prey in higher latitudes. Nursery habitats in the Gulf of America are impacted by oil spills. Upwards of 5% of predicted spawning habitat within the U.S. Exclusive Economic Zone (EEZ) was impacted by the Deepwater Horizon oil spill <span class="citation" data-cites="hazen2016">(<a href="#ref-hazen2016" role="doc-biblioref">Hazen et al. 2016</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Western Atlantic bluefin tuna are a highly migratory species observed from Newfoundland to the Gulf of America; they occupy temperate surface waters but can dive to depths of 1000m <span class="citation" data-cites="fromentin2006">(<a href="#ref-fromentin2006" role="doc-biblioref">Fromentin 2006</a>)</span>. Spawning occurs between spring and summer throughout western North Atlantic spawning grounds, namely the Gulf of America (March-June) and Slope Sea (June-September). Spawning in the Slope Sea occurs one to two months later than the Gulf of America due to differences in sea surface temperatures <span class="citation" data-cites="baglin1982">(<a href="#ref-baglin1982" role="doc-biblioref">Baglin 1982</a>)</span>. Bluefin tuna eggs hatch after 2 days and larvae remain pelagic for 3-4 weeks <span class="citation" data-cites="shropshire2022">(<a href="#ref-shropshire2022" role="doc-biblioref">Shropshire et al. 2022</a>)</span>. Larval bluefin tuna are found near spawning grounds and dispersed via wind and the margins of ocean currents. Edges of ocean currents and eddies provide access to warmer sea surface temperatures and nutrient-rich waters that support larval foraging of zooplankton prey while avoiding predation <span class="citation" data-cites="shropshire2022">(<a href="#ref-shropshire2022" role="doc-biblioref">Shropshire et al. 2022</a>)</span>. Favorable habitat for bluefin larvae in the Gulf of America was determined to be moderately warm waters (23.5-28.5°C) in the eddies of the Loop Current, and outside of cooler, higher chlorophyll continental shelf waters <span class="citation" data-cites="teo2007">(<a href="#ref-teo2007" role="doc-biblioref">Teo, Boustany, and Block 2007</a>)</span>. Along the coast of the southeastern United States, larval stages may benefit from nearshore meanders of the Gulf Stream that can produce upwelling of nutrient rich water along the continental shelf edge <span class="citation" data-cites="shropshire2022">(<a href="#ref-shropshire2022" role="doc-biblioref">Shropshire et al. 2022</a>)</span>. Larvae initially feed on zooplankton and progress to a piscivorous diet at a relatively small size <span class="citation" data-cites="llopiz2015">(<a href="#ref-llopiz2015" role="doc-biblioref">Llopiz and Hobday 2015</a>)</span>. Starvation is the largest cumulative source of mortality in early larval stages, and predation on older larvae is a main source of mortality in later stages <span class="citation" data-cites="mcgowan1989">(<a href="#ref-mcgowan1989" role="doc-biblioref">McGowan and Richards 1989</a>)</span>. Juvenile habitats are located over the continental shelf in the summer and further offshore in the winter. Juvenile life stages follow similar seasonal movements compared to adult life stages, though are generally more restricted to coastal areas <span class="citation" data-cites="nmfs2006">(<a href="#ref-nmfs2006" role="doc-biblioref">National Marine Fisheries Service (NMFS) 2006</a>)</span>. Juvenile and adult bluefin tuna are opportunistic, generalist predators feeding mainly on zooplanktivorous fishes and crustaceans. Predation of larger fish continues with increasing body size, with juveniles moving from sand lance to mackerel and herring as adults <span class="citation" data-cites="logan2011 logan2015">(<a href="#ref-logan2011" role="doc-biblioref">Logan et al. 2011</a>; <a href="#ref-logan2015" role="doc-biblioref">Logan, Golet, and Lutcavage 2015</a>)</span>. Adult bluefin tuna migrate seasonally from winter to early summer spawning grounds in the Gulf of America, Straits of Florida, and Slope Sea to summer and fall foraging grounds throughout the Gulf Stream, South and Mid-Atlantic Bight, Gulf of Maine, Nova Scotia Shelf, and east of the Flemish Cap <span class="citation" data-cites="block2001">(<a href="#ref-block2001" role="doc-biblioref">Block et al. 2001</a>)</span>. Age at 50% maturity estimates for Atlantic bluefin tuna vary between 5 to 12 years, with a maximum age of over 30 years <span class="citation" data-cites="scrs2021">(<a href="#ref-scrs2021" role="doc-biblioref">Standing Committee on Research and Statistics (SCRS) 2021</a>)</span>. NOAA Fisheries, with recommendations from the International Commission for the Conservation of Atlantic Tunas (ICCAT), manages the Atlantic bluefin tuna fishery in the United States through the Atlantic Highly Migratory Species Management Division. As of 2023, the stock is being managed ICCAT Recommendation 21-10. Population numbers are unknown but the stock is not subject to overfishing <span class="citation" data-cites="iccat2022">(<a href="#ref-iccat2022" role="doc-biblioref">International Commission for the Conservation of Atlantic Tunas (ICCAT) 2022</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +630,59 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-baglin1982" class="csl-entry" role="listitem">
+Baglin, R. E. 1982. <span>“Reproductive Biology of Western Atlantic Bluefin Tuna.”</span> <em>Fishery Bulletin</em> 80 (1): 121–34.
+</div>
+<div id="ref-block2001" class="csl-entry" role="listitem">
+Block, B. A., H. Dewar, S. B. Blackwell, T. D. Williams, E. D. Prince, C. J. Farwell, A. Boustany, et al. 2001. <span>“Migratory Movements, Depth Preferences, and Thermal Biology of Atlantic Bluefin Tuna.”</span> <em>Science</em> 293 (5533): 1310–14. <a href="https://doi.org/10.1126/science.1061197">https://doi.org/10.1126/science.1061197</a>.
+</div>
+<div id="ref-braun2023widespread" class="csl-entry" role="listitem">
+Braun, Camrin D, Nerea Lezama-Ochoa, Nima Farchadi, Martin C Arostegui, Michael Alexander, Andrew Allyn, Steven J Bograd, et al. 2023. <span>“Widespread Habitat Loss and Redistribution of Marine Top Predators in a Changing Ocean.”</span> <em>Science Advances</em> 9 (32): eadi2718.
+</div>
+<div id="ref-erauskin2026" class="csl-entry" role="listitem">
+Erauskin-Extramiana, M., M. Valle, L. Cruz, B. Muhling, J. A. Fernandes-Salvador, M. P. Buil, G. O. Crespo, et al. 2026. <span>“Navigating Future Waters: The Resilience of the Atlantic Bluefin Tuna Under Climate Change.”</span> <em>Fish and Fisheries</em> 27 (3): 451–65. <a href="https://doi.org/10.1111/faf.70061">https://doi.org/10.1111/faf.70061</a>.
+</div>
+<div id="ref-fromentin2006" class="csl-entry" role="listitem">
+Fromentin, J. M. 2006. <span>“Atlantic Bluefin Tuna.”</span> In <em>ICCAT Manual</em>, 1st ed. International Commission for the Conservation of Atlantic Tunas. <a href="https://www.iccat.int/en/iccatmanual.html">https://www.iccat.int/en/iccatmanual.html</a>.
+</div>
+<div id="ref-hazen2016" class="csl-entry" role="listitem">
+Hazen, E. L., A. B. Carlisle, S. G. Wilson, J. E. Ganong, M. R. Castleton, R. J. Schallert, M. J. Stokesbury, S. J. Bograd, and B. A. Block. 2016. <span>“Quantifying Overlap Between the Deepwater Horizon Oil Spill and Predicted Bluefin Tuna Spawning Habitat in the Gulf of Mexico.”</span> <em>Scientific Reports</em> 6 (1): 33824. <a href="https://doi.org/10.1038/srep33824">https://doi.org/10.1038/srep33824</a>.
+</div>
+<div id="ref-iccat2022" class="csl-entry" role="listitem">
+International Commission for the Conservation of Atlantic Tunas (ICCAT). 2022. <span>“RECOMMENDATION BY ICCAT FOR a CONSERVATION AND MANAGEMENT PLAN FOR WESTERN ATLANTIC BLUEFIN TUNA.”</span> 2022-10-e. ICCAT. <a href="https://www.iccat.int/Documents/Recs/compendiopdf-e/2022-10-e.pdf">https://www.iccat.int/Documents/Recs/compendiopdf-e/2022-10-e.pdf</a>.
+</div>
+<div id="ref-llopiz2015" class="csl-entry" role="listitem">
+Llopiz, J. K., and A. J. Hobday. 2015. <span>“A Global Comparative Analysis of the Feeding Dynamics and Environmental Conditions of Larval Tunas, Mackerels, and Billfishes.”</span> <em>Deep Sea Research Part II: Topical Studies in Oceanography</em> 113: 113–24. <a href="https://doi.org/10.1016/j.dsr2.2014.05.003">https://doi.org/10.1016/j.dsr2.2014.05.003</a>.
+</div>
+<div id="ref-logan2015" class="csl-entry" role="listitem">
+Logan, J. M., W. J. Golet, and M. E. Lutcavage. 2015. <span>“Diet and Condition of Atlantic Bluefin Tuna (Thunnus Thynnus) in the Gulf of Maine, 2004–2008.”</span> <em>Environmental Biology of Fishes</em> 98 (5): 1411–30. <a href="https://doi.org/10.1007/s10641-014-0368-9">https://doi.org/10.1007/s10641-014-0368-9</a>.
+</div>
+<div id="ref-logan2011" class="csl-entry" role="listitem">
+Logan, J. M., E. Rodriguez-Marin, N. Goni, S. Barreiro, H. Arrizabalaga, W. Golet, and M. Lutcavage. 2011. <span>“Diet of Young Atlantic Bluefin Tuna (Thunnus Thynnus) in Eastern and Western Atlantic Foraging Grounds.”</span> <em>Marine Biology</em> 158: 73–85. <a href="https://doi.org/10.1007/s00227-010-1543-0">https://doi.org/10.1007/s00227-010-1543-0</a>.
+</div>
+<div id="ref-loughran2025climate" class="csl-entry" role="listitem">
+Loughran, Tyler C, Jennifer L Cudney, Daniel P Crear, Lisa M Crawford, Becky J Curtis, Elsa M Gutierrez, Eric R Hoffmayer, et al. 2025. <span>“A Climate Vulnerability Assessment for US Highly Migratory Fishes in the Atlantic Ocean.”</span> <em>PLOS Climate</em> 4 (8): e0000530.
+</div>
+<div id="ref-mcgowan1989" class="csl-entry" role="listitem">
+McGowan, M. F., and W. J. Richards. 1989. <span>“Bluefin Tuna, Thunnus Thynnus, Larvae in the Gulf Stream Off the Southeastern United States: Satellite and Shipboard Observations of Their Environment.”</span> <em>Fishery Bulletin</em> 87: 615–31.
+</div>
+<div id="ref-muhling2011" class="csl-entry" role="listitem">
+Muhling, B. A., S.-K. Lee, J. T. Lamkin, and Y. Liu. 2011. <span>“Predicting the Effects of Climate Change on Bluefin Tuna (Thunnus Thynnus) Spawning Habitat in the Gulf of Mexico.”</span> <em>ICES Journal of Marine Science</em> 68 (6): 1051–62. <a href="https://doi.org/10.1093/icesjms/fsr008">https://doi.org/10.1093/icesjms/fsr008</a>.
+</div>
+<div id="ref-nmfs2006" class="csl-entry" role="listitem">
+National Marine Fisheries Service (NMFS). 2006. <em>Final Consolidated Atlantic Highly Migratory Species Fishery Management Plan</em>. Silver Spring, MD: NMFS. <a href="https://media.fisheries.noaa.gov/dam-migration/atlantic-hms-consolidated-fmp.pdf">https://media.fisheries.noaa.gov/dam-migration/atlantic-hms-consolidated-fmp.pdf</a>.
+</div>
+<div id="ref-shropshire2022" class="csl-entry" role="listitem">
+Shropshire, T. A., S. L. Morey, E. P. Chassignet, M. Karnauskas, V. J. Coles, E. Malca, R. Laiz-Carri’on, et al. 2022. <span>“Trade-Offs Between Risks of Predation and Starvation in Larvae Make the Shelf Break an Optimal Spawning Location for Atlantic Bluefin Tuna.”</span> <em>Journal of Plankton Research</em> 44 (5): 782–98. <a href="https://doi.org/10.1093/plankt/fbac038">https://doi.org/10.1093/plankt/fbac038</a>.
+</div>
+<div id="ref-scrs2021" class="csl-entry" role="listitem">
+Standing Committee on Research and Statistics (SCRS). 2021. <span>“Atlantic Bluefin Tuna Stock Assessment.”</span> Madrid (Spain): International Commission for the Conservation of Atlantic Tunas. <a href="https://www.iccat.int/Documents/SCRS/ExecSum/BFT_W_ENG.pdf">https://www.iccat.int/Documents/SCRS/ExecSum/BFT_W_ENG.pdf</a>.
+</div>
+<div id="ref-teo2007" class="csl-entry" role="listitem">
+Teo, S. L., A. M. Boustany, and B. A. Block. 2007. <span>“Oceanographic Preferences of Atlantic Bluefin Tuna, Thunnus Thynnus, on Their Gulf of Mexico Breeding Grounds.”</span> <em>Marine Biology</em> 152 (5): 1105–19. <a href="https://doi.org/10.1007/s00227-007-0758-1">https://doi.org/10.1007/s00227-007-0758-1</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

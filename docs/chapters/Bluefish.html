@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 97%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low</td>
+<td>Low</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral</td>
+<td>Positive</td>
+<td>Decrease</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Bluefish received a <strong>Low</strong> sensitivity score, with a certainty of 69%. The only attribute that received a score greater than 2.5 was Juvenile Habitat Requirements (4). Bluefish rely entirely on salt marshes and submerged aquatic vegetation as juveniles; both habitats are considered highly vulnerable to future climate change <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>.</p>
+<p>Bluefish also received a Low sensitivity score in the 2016 Assessment. Similar to our results, Early Life History Requirements was the only attribute to score above 2.5 <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Jonathan A. Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>97% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Bluefish are expected to be <strong>neutrally</strong> impacted by climate change. Expert certainty was 95%. Distributions are shifting north and east and warming temperatures may expand the spawning season <span class="citation" data-cites="Tyrell2022">(<a href="#ref-Tyrell2022" role="doc-biblioref">Tyrell et al. 2022</a>)</span>. However, there is a concern that seasonal mismatches may occur if juveniles arrive in estuaries before their prey, which may impact recruitment <span class="citation" data-cites="Taylor2006">(<a href="#ref-Taylor2006" role="doc-biblioref">Taylor and Able 2006</a>)</span>. In the original Assessment, bluefish were predicted to be positively impacted by climate change due to expanding distributions and spawning seasons <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Jonathan A. Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>There has been a documented shift in bluefish distribution, spawning, habitat use in the Mediterranean <span class="citation" data-cites="Sabates2012 VillegasHernandez2015">(<a href="#ref-Sabates2012" role="doc-biblioref">Sabatés, Martín, and Raya 2012</a>; <a href="#ref-VillegasHernandez2015" role="doc-biblioref">Villegas-Hernández, Lloret, and Muñoz 2015</a>)</span>. Bluefish distributions in the Northwest Atlantic seem to be shifting north and east <span class="citation" data-cites="Tyrell2022">(<a href="#ref-Tyrell2022" role="doc-biblioref">Tyrell et al. 2022</a>)</span>. Increasing fall sea surface temperatures may extend spawning season further into the calendar year <span class="citation" data-cites="Tyrell2022">(<a href="#ref-Tyrell2022" role="doc-biblioref">Tyrell et al. 2022</a>)</span>. If warming alters spawning phenology, there are concerns that juveniles may arrive in estuaries before their prey. Seasonal mismatches have been shown to impact growth, body condition, and reproductive success <span class="citation" data-cites="Taylor2006">(<a href="#ref-Taylor2006" role="doc-biblioref">Taylor and Able 2006</a>)</span>. Changing distributions of prey species as a result of climate change may alter interactions between bluefish and their prey <span class="citation" data-cites="Whitfield2026">(<a href="#ref-Whitfield2026" role="doc-biblioref">Whitfield 2026</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Bluefish inhabit temperate and tropical surface waters in the North Atlantic from Maine to the Atlantic coast of Florida <span class="citation" data-cites="Shepherd2006">(<a href="#ref-Shepherd2006" role="doc-biblioref">Shepherd and Packer 2006</a>)</span>. Bluefish in the North Atlantic are a single, migratory stock with two discrete spawning periods. The first occurs during March-May near the edge of the continental shelf of the South-Atlantic Bight. The second occurs between June and August in the Mid-Atlantic Bight <span class="citation" data-cites="Shepherd2006">(<a href="#ref-Shepherd2006" role="doc-biblioref">Shepherd and Packer 2006</a>)</span>. Eggs hatch after 46-48 hours at 18 - 22.2°C to pelagic larvae <span class="citation" data-cites="Deuel1966">(<a href="#ref-Deuel1966" role="doc-biblioref">Deuel, Clark, and Mansueti 1966</a>)</span>. Larvae spawned in the South Atlantic (spring-spawned cohort) are subject to advection north via the Gulf Stream and inshore via warm core rings. Eggs in the southern part of the Mid-Atlantic Bight may be advected south and offshore <span class="citation" data-cites="Shepherd2006">(<a href="#ref-Shepherd2006" role="doc-biblioref">Shepherd and Packer 2006</a>)</span>. Transport of larvae and/or juveniles across the shelf- slope region may be aided by wind-driven surface flow <span class="citation" data-cites="Hare1996">(<a href="#ref-Hare1996" role="doc-biblioref">J. A. Hare and Cowen 1996</a>)</span>. <span class="citation" data-cites="Sherman1984">Sherman et al. (<a href="#ref-Sherman1984" role="doc-biblioref">1984</a>)</span> note that wide distribution of bluefish larvae over the shelf reduces their vulnerability to the predator field and environmental perturbation. Larvae prey on copepods <span class="citation" data-cites="Shepherd2006">(<a href="#ref-Shepherd2006" role="doc-biblioref">Shepherd and Packer 2006</a>)</span>. Peak abundance of larval bluefish in Southern New England and the Mid-Atlantic Bight coincided with zooplankton production <span class="citation" data-cites="Sherman1984">(<a href="#ref-Sherman1984" role="doc-biblioref">Sherman et al. 1984</a>)</span>. Changes in prey availability and distribution can impact bluefish condition and reproductive success <span class="citation" data-cites="Taylor2006">(<a href="#ref-Taylor2006" role="doc-biblioref">Taylor and Able 2006</a>)</span>. Juvenile bluefish inhabit estuaries, bays, and coastal oceans with sand, oyster beds, and submerged aquatic vegetation habitats <span class="citation" data-cites="McBride1991">(<a href="#ref-McBride1991" role="doc-biblioref">McBride and Conover 1991</a>)</span>. Juveniles enter estuaries when temperatures are greater than 13-15°C and leave when temperatures fall below 10-12°C <span class="citation" data-cites="Smith1994">(<a href="#ref-Smith1994" role="doc-biblioref">Smith, Berrien, and Potthoff 1994</a>)</span>. Juvenile migration into estuarine habitats appears tied to a shift in eating other fish. In estuaries, adults and juveniles eat whatever taxa are locally abundant (fish, crustaceans, shrimp, and polychaetes). In ocean habitats, young-of-the-year bluefish switch to piscivory predation with increasing size, similar to estuarine habitats <span class="citation" data-cites="Marks1996">(<a href="#ref-Marks1996" role="doc-biblioref">Marks et al. 1996</a>)</span>. Bluefish are opportunistic foragers, and the composition of adult bluefish diet depends largely on the available prey, but they consume similar prey items as juvenile bluefish <span class="citation" data-cites="Shepherd2006">(<a href="#ref-Shepherd2006" role="doc-biblioref">Shepherd and Packer 2006</a>)</span>. Bluefish have long been recognized as a notable predator of forage fish <span class="citation" data-cites="Tyrell2022">(<a href="#ref-Tyrell2022" role="doc-biblioref">Tyrell et al. 2022</a>)</span>. Adult bluefish conduct seasonal migrations following warmer waters, overwintering in the south and moving north in the spring and summer <span class="citation" data-cites="Shepherd2006">(<a href="#ref-Shepherd2006" role="doc-biblioref">Shepherd and Packer 2006</a>)</span>. Migrations may be cued by photoperiod as well, and have been observed to shift northward in warm years <span class="citation" data-cites="Nye2009">(<a href="#ref-Nye2009" role="doc-biblioref">Nye et al. 2009</a>)</span>. Shortfin mako sharks are identified as a major predator of bluefish and may consume more individuals than removed by the fishery <span class="citation" data-cites="Wood2009">(<a href="#ref-Wood2009" role="doc-biblioref">Wood et al. 2009</a>)</span>. Most bluefish are mature by age 2, with approximately half maturing by age 1 <span class="citation" data-cites="NEFSC2015_bluefish">(<a href="#ref-NEFSC2015_bluefish" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2015</a>)</span>. The maximum age for bluefish in the North Atlantic is 12 years <span class="citation" data-cites="Salerno2001">(<a href="#ref-Salerno2001" role="doc-biblioref">Salerno, Burnett, and Ibara 2001</a>)</span>. In the Northwest Atlantic, bluefish are managed by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission. The last stock assessment occurred in 2025, where bluefish were found to not be overfished nor is overfishing occurring <span class="citation" data-cites="NEFSC2025_bluefish">(<a href="#ref-NEFSC2025_bluefish" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +630,65 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Deuel1966" class="csl-entry" role="listitem">
+Deuel, D. G., J. R. Clark, and A. J. Mansueti. 1966. <span>“Description of Embryonic and Early Larval Stages of Bluefish, <span>Pomatomus</span> Saltatrix.”</span> <em>Transactions of the American Fisheries Society</em> 95 (3): 264–71.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-Hare1996" class="csl-entry" role="listitem">
+Hare, J. A., and R. K. Cowen. 1996. <span>“Transport Mechanisms of Larval and Pelagic Juvenile Bluefish (<span>Pomatomus</span> Saltatrix) from <span>South</span> <span>Atlantic</span> <span>Bight</span> Spawning Grounds to <span>Middle</span> <span>Atlantic</span> <span>Bight</span> Nursery Habitats.”</span> <em>Limnology and Oceanography</em> 41 (6): 1264–80.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-Marks1996" class="csl-entry" role="listitem">
+Marks, R. E., F. Juanes, J. A. Hare, and D. O. Conover. 1996. <span>“Occurrence and Effect of the Parasitic Isopod, <span>Lironeca</span> Ovalis (<span>Isopoda</span>: <span>Cyymothoidae</span>), on Young-of-the-Year Bluefish, <span>Pomatomus</span> Saltatrix (<span>Pisces</span>: <span>Pomatomidae</span>).”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 53 (9): 2052–57.
+</div>
+<div id="ref-McBride1991" class="csl-entry" role="listitem">
+McBride, R. S., and D. O. Conover. 1991. <span>“Recruitment of Young-of-the-Year Bluefish <span>Pomatomus</span> Saltatrix to the <span>New</span> <span>York</span> <span>Bight</span>: Variation in Abundance and Growth of Spring- and Summer-Spawned Cohorts.”</span> <em>Marine Ecology Progress Series</em> 78: 205–16.
+</div>
+<div id="ref-NEFSC2015_bluefish" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2015. <span>“60th <span>Northeast</span> <span>Regional</span> <span>Stock</span> <span>Assessment</span> <span>Workshop</span> (60th <span>SAW</span>) Assessment Report.”</span> 15-08. Northeast Fisheries Science Center.
+</div>
+<div id="ref-NEFSC2025_bluefish" class="csl-entry" role="listitem">
+———. 2025. <span>“<span>Atlantic</span> <span>Bluefish</span> 2025 <span>Management</span> <span>Track</span> <span>Assessment</span> <span>Report</span>.”</span> Northeast Fisheries Science Center. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10334">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10334</a>.
+</div>
+<div id="ref-Nye2009" class="csl-entry" role="listitem">
+Nye, J. A., J. S. Link, J. A. Hare, and W. J. Overholtz. 2009. <span>“Changing Spatial Distribution of Fish Stocks in Relation to Climate and Population Size on the <span>Northeast</span> <span>United</span> <span>States</span> Continental Shelf.”</span> <em>Marine Ecology Progress Series</em> 393: 111–29.
+</div>
+<div id="ref-Sabates2012" class="csl-entry" role="listitem">
+Sabatés, A., P. Martín, and V. Raya. 2012. <span>“Changes in Life-History Traits in Relation to Climate Change: Bluefish (<span>Pomatomus</span> Saltatrix) in the Northwestern <span>Mediterranean</span>.”</span> <em>ICES Journal of Marine Science</em> 69 (6): 1000–1009.
+</div>
+<div id="ref-Salerno2001" class="csl-entry" role="listitem">
+Salerno, D. J., J. Burnett, and R. M. Ibara. 2001. <span>“Age, Growth, Maturity, and Spatial Distribution of Bluefish, <span>Pomatomus</span> Saltatrix (<span>Linnaeus</span>), Off the Northeast Coast of the <span>United</span> <span>States</span>, 1985-96.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 29.
+</div>
+<div id="ref-Shepherd2006" class="csl-entry" role="listitem">
+Shepherd, G. R., and D. B. Packer. 2006. <span>“Essential Fish Habitat Source Document. <span>Bluefish</span>, <span>Pomatomus</span> Saltatrix, Life History and Habitat Characteristics.”</span> NMFS-NE 198. NOAA.
+</div>
+<div id="ref-Sherman1984" class="csl-entry" role="listitem">
+Sherman, K., W. Smith, W. Morse, M. Berman, J. Green, and L. Ejsymont. 1984. <span>“Spawning Strategies of Fishes in Relation to Circulation, Phytoplankton Production, and Pulses in Zooplankton Off the Northeastern <span>United</span> <span>States</span>.”</span> <em>Marine Ecology Progress Series</em> 18: 1–19.
+</div>
+<div id="ref-Smith1994" class="csl-entry" role="listitem">
+Smith, W., P. Berrien, and T. Potthoff. 1994. <span>“Spawning Patterns of Bluefish, <span>Pomatomus</span> Saltatrix, in the Northeast Continental Shelf Ecosystem.”</span> <em>Bulletin of Marine Science</em> 54 (1): 8–16.
+</div>
+<div id="ref-Taylor2006" class="csl-entry" role="listitem">
+Taylor, D. L., and K. W. Able. 2006. <span>“Cohort Dynamics of Summer-Spawned Bluefish as Determined by Length-Frequency and Otolith Microstructure Analyses.”</span> <em>Transactions of the American Fisheries Society</em> 135 (4): 955–69.
+</div>
+<div id="ref-Tyrell2022" class="csl-entry" role="listitem">
+Tyrell, A., M. Celestino, K. Cisneros, K. Drew, S. Gaichas, J. Gartland, S. Truesdell, J. Valenti, S. Werner, and A. Wood. 2022. <span>“Bluefish Ecosystem and Socioeconomic Profile.”</span> <a href="https://doi.org/10.25923/s3xc-ta06" class="uri">https://doi.org/10.25923/s3xc-ta06</a>.
+</div>
+<div id="ref-VillegasHernandez2015" class="csl-entry" role="listitem">
+Villegas-Hernández, H., J. Lloret, and M. Muñoz. 2015. <span>“Reproduction, Condition and Abundance of the <span>Mediterranean</span> Bluefish (<span>Pomatomus</span> Saltatrix) in the Context of Sea Warming.”</span> <em>Fisheries Oceanography</em> 24 (1): 42–56.
+</div>
+<div id="ref-Whitfield2026" class="csl-entry" role="listitem">
+Whitfield, A. K. 2026. <span>“Review of the Biology and Ecology of the Bluefish <span>Pomatomus</span> Saltatrix (<span>Linnaeus</span>, 1766), an Important Global Species in Temperate and Subtropical Coastal Waters.”</span> <em>Environmental Biology of Fishes</em> 109 (2): 64.
+</div>
+<div id="ref-Wood2009" class="csl-entry" role="listitem">
+Wood, A. D., B. M. Wetherbee, F. Juanes, N. E. Kohler, and C. Wilga. 2009. <span>“Recalculated Diet and Daily Ration of the Shortfin Mako (<span>Isurus</span> Oxyrinchus), with a Focus on Quantifying Predation on Bluefish (<span>Pomatomus</span> Saltatrix) in the Northwest <span>Atlantic</span> <span>Ocean</span>.”</span> <em>Fishery Bulletin</em> 107 (1): 76–88.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

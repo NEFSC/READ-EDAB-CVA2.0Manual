@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 95%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low</td>
+<td>Low</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral</td>
+<td>Positive</td>
+<td>Decrease</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Butterfish received a <strong>Low</strong> sensitivity score. Certainty was 100%. No attributes had scores greater than 2.5. The only score greater than 2 was Other Stressors (2.1). Butterfish spawn in estuarine habitats like Long Island Sound and Chesapeake Bay that are impacted by urbanization impacts such as hypoxia, loss of seagrass beds, and changes to freshwater inputs <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>.</p>
+<p>These results are similar to the 2016 Assessment where all attribute scores were less than 2.5 and the overall sensitivity score was Low <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>The effect of climate change on butterfish was predicted to be <strong>neutral</strong>, with 98% certainty in expert scores. Butterfish have expanded their range northward and into deeper waters <span class="citation" data-cites="suca2021environmental adams2022update">(<a href="#ref-suca2021environmental" role="doc-biblioref">Suca et al. 2021</a>; <a href="#ref-adams2022update" role="doc-biblioref">Adams 2022</a>)</span>. However, reliance on zooplankton and copepod prey in the spring may lead to mismatches that impact recruitment <span class="citation" data-cites="suca2018feeding">(<a href="#ref-suca2018feeding" role="doc-biblioref">Suca et al. 2018</a>)</span>. In the previous Assessment, experts predicted that butterfish would be positively impacted by climate change <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Butterfish distributions and abundance in the Mid-Atlantic Bight are strongly related to bottom temperature <span class="citation" data-cites="kohut2013toward">(<a href="#ref-kohut2013toward" role="doc-biblioref">Kohut et al. 2013</a>)</span>. Butterfish have shifted their distribution northward in recent decades. <span class="citation" data-cites="collie2008long">Collie, Wood, and Jeffries (<a href="#ref-collie2008long" role="doc-biblioref">2008</a>)</span> documented an increase in butterfish abundance in Narragansett Bay in the latter half of the 20th century, and they recently have expanded their range into the Gulf of Maine <span class="citation" data-cites="suca2021environmental adams2022update">(<a href="#ref-suca2021environmental" role="doc-biblioref">Suca et al. 2021</a>; <a href="#ref-adams2022update" role="doc-biblioref">Adams 2022</a>)</span>. Their depth distribution has also shifted to inhabiting deeper waters <span class="citation" data-cites="suca2021environmental">(<a href="#ref-suca2021environmental" role="doc-biblioref">Suca et al. 2021</a>)</span>. An increase in butterfish prevalence in the Gulf of Maine has altered seabird diets, and is replacing preferred prey in common terns <span class="citation" data-cites="smith2023effects">(<a href="#ref-smith2023effects" role="doc-biblioref">Smith and Craig 2023</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Butterfish distribution ranges from Newfoundland in Canada to Atlantic Florida, but they are primarily found from the Gulf of Maine to Cape Hatteras. They are a schooling fish and shift distribution in response to changing water temperatures: moving north and inshore over the summer to spawn and south and offshore in the winter to seek warmer water <span class="citation" data-cites="cross1999essential">(<a href="#ref-cross1999essential" role="doc-biblioref">Cross et al. 1999</a>)</span>. Butterfish are broadcast spawners and spawn primarily in the evening or at night, however no direct observations have been made <span class="citation" data-cites="horn1970systematics">(<a href="#ref-horn1970systematics" role="doc-biblioref">Horn 1970</a>)</span>. In general, butterfish spawn starting in May through early fall, peaking in June-July, although timing is dependent on location <span class="citation" data-cites="cross1999essential">(<a href="#ref-cross1999essential" role="doc-biblioref">Cross et al. 1999</a>)</span>. Egg duration and larval growth is temperature dependent <span class="citation" data-cites="colton1963eggs">(<a href="#ref-colton1963eggs" role="doc-biblioref">Colton and Honey 1963</a>)</span>, and most eggs and larvae prefer temperatures 9-19°C <span class="citation" data-cites="cross1999essential">(<a href="#ref-cross1999essential" role="doc-biblioref">Cross et al. 1999</a>)</span>. Butterfish eggs and larvae are widely distributed throughout their range from spring to fall as spawning occurs over their entire range. Larvae are associated with the Gulf Stream, although it is not clear how far they travel <span class="citation" data-cites="morse1987marmap">(<a href="#ref-morse1987marmap" role="doc-biblioref">Morse, Fahay, and Smith 1987</a>)</span>. Later life stages (juveniles and adults) can inhabit surface waters to depth on the continental shelf and into coastal bays and estuaries <span class="citation" data-cites="schreiber1973fishes">(<a href="#ref-schreiber1973fishes" role="doc-biblioref">Schreiber 1973</a>)</span>. Survival is reduced in juveniles and adults below 10°C <span class="citation" data-cites="cross1999essential">(<a href="#ref-cross1999essential" role="doc-biblioref">Cross et al. 1999</a>)</span>. Juvenile and adult butterfish feed mainly on planktonic prey including thaliaceans (primarily <em>Larvacea</em> and <em>Hemimyaria</em>), mollusks (primarily squids), crustaceans, coelenterates, polychaetes, small fishes, and ctenophores <span class="citation" data-cites="horn1970systematics">(<a href="#ref-horn1970systematics" role="doc-biblioref">Horn 1970</a>)</span>. Recent diet analysis on 2013-2015 trawl specimens illustrates that spring diets are dominated by <em>Calanus</em> copepods, amphipods, larvaceans, and fall diets are dominated by amphipods <span class="citation" data-cites="suca2018feeding">(<a href="#ref-suca2018feeding" role="doc-biblioref">Suca et al. 2018</a>)</span>. There is little information about larval predation; juvenile and adult butterfish are preyed upon by haddock, silver hake, goosefish, weakfish, bluefish, swordfish, sharks (hammerhead), and longfin inshore squid <span class="citation" data-cites="bigelow1953fishes_butterfish horn1970systematics">(<a href="#ref-bigelow1953fishes_butterfish" role="doc-biblioref">Bigelow and Schroeder 1953</a>; <a href="#ref-horn1970systematics" role="doc-biblioref">Horn 1970</a>)</span>. Butterfish age at maturity is 1-2 years; the maximum lifespan is 6 years although most butterfish live roughly 2-3 years <span class="citation" data-cites="horn1970systematics draganik1966rate">(<a href="#ref-horn1970systematics" role="doc-biblioref">Horn 1970</a>; <a href="#ref-draganik1966rate" role="doc-biblioref">Draganik and Zukowski 1966</a>)</span>. In the Northwest Atlantic, butterfish are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. As of the 2024 stock assessment, the stock is not overfished and overfishing is not occurring <span class="citation" data-cites="nefsc2024butterfish">(<a href="#ref-nefsc2024butterfish" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2024</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +630,56 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-adams2022update" class="csl-entry" role="listitem">
+Adams, C. F. 2022. <span>“Update on the Spatial Distribution of Butterfish, 1982-2019.”</span> Reference Document 22-04. Northeast Fisheries Science Center.
+</div>
+<div id="ref-bigelow1953fishes_butterfish" class="csl-entry" role="listitem">
+Bigelow, H. B., and W. C. Schroeder. 1953. <em>Fishes of the Gulf of Maine</em>. Vol. 53. Fishery Bulletin. U.S. Fish; Wildlife Service.
+</div>
+<div id="ref-collie2008long" class="csl-entry" role="listitem">
+Collie, J. S., A. D. Wood, and H. P. Jeffries. 2008. <span>“Long-Term Shifts in the Species Composition of a Coastal Fish Community.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 65 (7): 1352–65.
+</div>
+<div id="ref-colton1963eggs" class="csl-entry" role="listitem">
+Colton, J. B., Jr., and K. A. Honey. 1963. <span>“The Eggs and Larval Stages of the Butterfish, <span>P</span>oronotus Triacanthus.”</span> <em>Copeia</em> 1963 (2): 447–50.
+</div>
+<div id="ref-cross1999essential" class="csl-entry" role="listitem">
+Cross, J. N., C. A. Zetlin, P. L. Berrien, D. L. Johnson, and C. McBride. 1999. <span>“Essential Fish Habitat Source Document: Butterfish, <span>P</span>eprilus Triacanthus, Life History and Habitat Characteristics.”</span> Technical Memorandum NMFS-NE 145. NOAA.
+</div>
+<div id="ref-draganik1966rate" class="csl-entry" role="listitem">
+Draganik, B., and C. Zukowski. 1966. <span>“The Rate of Growth of Butterfish (<span>P</span>oronotus Triacanthus (<span>P</span>eck)) and Ocean Pout (<span>M</span>acrozoarces Americanus (<span>B</span>loch and <span>S</span>chneider)) from the Region of <span>G</span>eorges <span>B</span>ank.”</span> Research Document 66-42. International Commission for the Northwest Atlantic Fisheries (ICNAF).
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-horn1970systematics" class="csl-entry" role="listitem">
+Horn, M. H. 1970. <span>“Systematics and Biology of the Stromateoid Fishes of the Genus <span>P</span>eprilus.”</span> <em>Bulletin of the Museum of Comparative Zoology, Harvard University</em> 140: 165–262.
+</div>
+<div id="ref-kohut2013toward" class="csl-entry" role="listitem">
+Kohut, J., L. Palamara, E. Curchitser, J. Manderson, G. DiDomenico, and M. J. Oliver. 2013. <span>“Toward Dynamic Marine Spatial Planning Tools: An Example with Butterfish Assessment in the <span>M</span>id-<span>A</span>tlantic <span>B</span>ight.”</span> In <em>2013 MTS/IEEE OCEANS-Bergen</em>, 1–6. IEEE.
+</div>
+<div id="ref-morse1987marmap" class="csl-entry" role="listitem">
+Morse, W. W., M. P. Fahay, and W. G. Smith. 1987. <span>“<span>MARMAP</span> Surveys of the Continental Shelf from <span>C</span>ape <span>H</span>atteras, <span>N</span>orth <span>C</span>arolina to <span>C</span>ape <span>S</span>able, <span>N</span>ova <span>S</span>cotia (1977-1984). <span>A</span>tlas <span>N</span>o. 2. <span>A</span>nnual Distribution Patterns of Fish Larvae.”</span> Technical Memorandum NMFS-F/NEC-47. NOAA.
+</div>
+<div id="ref-nefsc2024butterfish" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2024. <span>“Butterfish 2024 Management Track Assessment Report.”</span> NOAA Fisheries. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9878">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9878</a>.
+</div>
+<div id="ref-schreiber1973fishes" class="csl-entry" role="listitem">
+Schreiber, R. A. 1973. <span>“The Fishes of <span>G</span>reat <span>S</span>outh <span>B</span>ay.”</span> Master’s thesis, Stony Brook, NY: State University of New York.
+</div>
+<div id="ref-smith2023effects" class="csl-entry" role="listitem">
+Smith, O. A., and E. C. Craig. 2023. <span>“Effects of <span>A</span>tlantic Butterfish (<span>P</span>eprilus Triacanthus) in Diets of <span>C</span>ommon <span>T</span>erns (<span>S</span>terna Hirundo): A Case Study of Climate Change Effects in the <span>G</span>ulf of <span>M</span>aine.”</span> <em>Avian Conservation and Ecology</em>.
+</div>
+<div id="ref-suca2021environmental" class="csl-entry" role="listitem">
+Suca, J. J., J. J. Deroba, D. E. Richardson, R. Ji, and J. K. Llopiz. 2021. <span>“Environmental Drivers and Trends in Forage Fish Occupancy of the <span>N</span>ortheast <span>US</span> Shelf.”</span> <em>ICES Journal of Marine Science</em> 78 (10): 3687–3708.
+</div>
+<div id="ref-suca2018feeding" class="csl-entry" role="listitem">
+Suca, J. J., J. W. Pringle, Z. R. Knorek, S. L. Hamilton, D. E. Richardson, and J. K. Llopiz. 2018. <span>“Feeding Dynamics of <span>N</span>orthwest <span>A</span>tlantic Small Pelagic Fishes.”</span> <em>Progress in Oceanography</em> 165: 52–62.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

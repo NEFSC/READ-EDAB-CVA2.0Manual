@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = Moderate
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 63%
 
 </div>
 :::::
@@ -62,12 +62,12 @@ here::here("test_images/Blueline tilefish_sensitivity_summary_table.png")
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| Metric               | Current Assessment | Previous Assessment(s)   | Change   |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability*      |                    |                          |          |
+| *Exposure*           |                    |                          |          |
+| *Sensitivity*        | Moderate           | High [@Burton2023-sv] | Decrease |
+| *Directional Effect* | Neutral            | Neutral [@Burton2023-sv]    | None     |
 
 ## Score Drivers
 
@@ -81,13 +81,17 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+Blueline tilefish received a **Moderate** sensitivity score. Certainty was 90%. Three attributes had scores greater than 2.5: Adult Mobility (2.8), Population Growth Rate (2.8), and Historical Variability in Temperature (2.5).
+
+Adult blueline tilefish are primarily demersal. They are thought to be sedentary and remain close to their dens, similar to goldenline tilefish [@schmidtke2017life]. Maximum ages upwards of 50 years have been recorded [@schmidtke2017life; @spanik2023validating]. They reach maturity anywhere from a few months to 3.7 years off the coast of Virginia to upwards of 5 years off the southeast US [@ross1982feeding; @harris2004age; @low2023characterizing].
+
+Blueline tilefish were not included in the 2016 Climate Vulnerability Assessment for the Northeast US, but were included in the recent Climate Vulnerability Assessment for the Southeast US [@Burton2023-sv]. Blueline tilefish received a High sensitivity score in that assessment. This score was driven by Sensitivity to Temperature and Population Growth Rate attributes. The experts in that assessment suggested that long-lived, slow-growing nature of blueline tilefish are believed to make them susceptible to overfishing [@Burton2023-sv].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-add text here
+Only 63% of data quality scores were greater than or equal to 2, indicating poor data quality. Most attributes had data gaps (mean attribute data quality score \< 2), including Adult Mobility, Complexity in Reproductive Strategy, Egg and Larval Survival and Settlement Requirements, Historical Variability in Temperature, Other Stressors, and Stock Size/Status.
 
 ### Model Confidence:
 
@@ -101,11 +105,16 @@ add text here
 
 ### Directional Effect:
 
-add text here
+The impact of climate change on blueline tilefish is expected to be **neutral**, with 92% certainty in expert scores. It is possible that blueline tilefish biomass may increase with increasing temperatures, as landings in the Mid-Atlantic have been correlated to increasing temperatures [@pinsky2018preparing; @rogers2019shifting]. However, little research has been conducted on how blueline tilefish will respond to climate change. The Climate Vulnerability Assessment for the Southeast US also predicted that the effect of climate change on blueline tilefish would be neutral [@Burton2023-sv].
 
-## Climate Effects on Abundance and Distribution:
+## Climate Effects on Abundance and Distribution
 
-## Life History Synopsis:
+Little research has been conducted on the response of blueline tilefish to climate change. Rising water temperatures likely drove a rapid increase in landings in the Mid-Atlantic throughout the early 21st century as blueline tilefish distributions expanded north beyond their traditional South Atlantic boundary [@pinsky2018preparing; @rogers2019shifting]. Blueline tilefish may exhibit a moderately-high risk to achieving optimal biomass and yield due to climate change on productivity [@mafmc2025update]. 
+
+## Life History Synopsis
+
+Blueline tilefish have only recently been found on the Northeast U.S. Continental Shelf. They live in crevices or on ledges on the shelf, shelf break, and shelf slope from Georges Bank to Mexico and the Gulf of America [@schmidtke2017life]. Blueline tilefish are multiple batch spawners and presumably spawn on/near the bottom [@low2023characterizing]. Spawning occurs from March through October in the southern portion range, and May - November in the Mid-Atlantic Bight [@harris2004age; @schmidtke2017life]. Eggs and larvae are estimated to remain pelagic for 4-6 weeks and depend on currents for transport. Eddies and gyres may provide local retention while the Gulf Stream transports eggs and larvae up the East Coast. It seems likely that substantial numbers of blueline larvae are transported out of the eastern Gulf of Mexico, to the South Atlantic, and from the South Atlantic into the Mid-Atlantic over the course of a few weeks [@sedar2025report]. Juveniles settle to the bottom and occupy benthic habitats around offshore submarine canyons on the shelf edge, constructing burrows in seafloor sediments or within rocks and boulders [@schmidtke2017life]. Juveniles and adults consume a diverse array of benthic invertebrates, including polychaetes, crustaceans, and decapods. Gastropods and copepods have also been observed and are likely consumed when diel vertical migrations bring them close to the seafloor [@bielsa1987food; @ross1982feeding]. Age at maturity is up to 3.7 years in the Mid-Atlantic and 5 years in the South Atlantic [@harris2004age; @low2023characterizing]. Maximum age is 37 years, although it is theorized that individuals could possibly reach upwards of 50 years in age [@schmidtke2017life; @spanik2023validating]. In the Northwest Atlantic, blueline tilefish are managed by the Mid-Atlantic Fishery Management Council under the Tilefish Fishery Management Plan. Council management of blueline tilefish in the Mid-Atlantic began as a response to increased commercial and recreational landings in the region. The Mid-Atlantic stock has not been assessed. Population levels and fishing status are currently unknown but management measures have been in place since 2017 [@mafmc2017amendment]. 
+
 
 ## Figures
 

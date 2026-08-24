@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Moderate</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 63%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Moderate</td>
+<td>High <span class="citation" data-cites="Burton2023-sv">(<a href="#ref-Burton2023-sv" role="doc-biblioref">Burton 2023</a>)</span></td>
+<td>Decrease</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral</td>
+<td>Neutral <span class="citation" data-cites="Burton2023-sv">(<a href="#ref-Burton2023-sv" role="doc-biblioref">Burton 2023</a>)</span></td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Blueline tilefish received a <strong>Moderate</strong> sensitivity score. Certainty was 90%. Three attributes had scores greater than 2.5: Adult Mobility (2.8), Population Growth Rate (2.8), and Historical Variability in Temperature (2.5).</p>
+<p>Adult blueline tilefish are primarily demersal. They are thought to be sedentary and remain close to their dens, similar to goldenline tilefish <span class="citation" data-cites="schmidtke2017life">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>)</span>. Maximum ages upwards of 50 years have been recorded <span class="citation" data-cites="schmidtke2017life spanik2023validating">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>; <a href="#ref-spanik2023validating" role="doc-biblioref">Spanik and Ballenger 2023</a>)</span>. They reach maturity anywhere from a few months to 3.7 years off the coast of Virginia to upwards of 5 years off the southeast US <span class="citation" data-cites="ross1982feeding harris2004age low2023characterizing">(<a href="#ref-ross1982feeding" role="doc-biblioref">Ross 1982</a>; <a href="#ref-harris2004age" role="doc-biblioref">Harris, Wyanski, and Powers Mikell 2004</a>; <a href="#ref-low2023characterizing" role="doc-biblioref">Low 2023</a>)</span>.</p>
+<p>Blueline tilefish were not included in the 2016 Climate Vulnerability Assessment for the Northeast US, but were included in the recent Climate Vulnerability Assessment for the Southeast US <span class="citation" data-cites="Burton2023-sv">(<a href="#ref-Burton2023-sv" role="doc-biblioref">Burton 2023</a>)</span>. Blueline tilefish received a High sensitivity score in that assessment. This score was driven by Sensitivity to Temperature and Population Growth Rate attributes. The experts in that assessment suggested that long-lived, slow-growing nature of blueline tilefish are believed to make them susceptible to overfishing <span class="citation" data-cites="Burton2023-sv">(<a href="#ref-Burton2023-sv" role="doc-biblioref">Burton 2023</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>Only 63% of data quality scores were greater than or equal to 2, indicating poor data quality. Most attributes had data gaps (mean attribute data quality score &lt; 2), including Adult Mobility, Complexity in Reproductive Strategy, Egg and Larval Survival and Settlement Requirements, Historical Variability in Temperature, Other Stressors, and Stock Size/Status.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +588,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>The impact of climate change on blueline tilefish is expected to be <strong>neutral</strong>, with 92% certainty in expert scores. It is possible that blueline tilefish biomass may increase with increasing temperatures, as landings in the Mid-Atlantic have been correlated to increasing temperatures <span class="citation" data-cites="pinsky2018preparing rogers2019shifting">(<a href="#ref-pinsky2018preparing" role="doc-biblioref">Pinsky et al. 2018</a>; <a href="#ref-rogers2019shifting" role="doc-biblioref">Rogers et al. 2019</a>)</span>. However, little research has been conducted on how blueline tilefish will respond to climate change. The Climate Vulnerability Assessment for the Southeast US also predicted that the effect of climate change on blueline tilefish would be neutral <span class="citation" data-cites="Burton2023-sv">(<a href="#ref-Burton2023-sv" role="doc-biblioref">Burton 2023</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Little research has been conducted on the response of blueline tilefish to climate change. Rising water temperatures likely drove a rapid increase in landings in the Mid-Atlantic throughout the early 21st century as blueline tilefish distributions expanded north beyond their traditional South Atlantic boundary <span class="citation" data-cites="pinsky2018preparing rogers2019shifting">(<a href="#ref-pinsky2018preparing" role="doc-biblioref">Pinsky et al. 2018</a>; <a href="#ref-rogers2019shifting" role="doc-biblioref">Rogers et al. 2019</a>)</span>. Blueline tilefish may exhibit a moderately-high risk to achieving optimal biomass and yield due to climate change on productivity <span class="citation" data-cites="mafmc2025update">(<a href="#ref-mafmc2025update" role="doc-biblioref">Mid-Atlantic Fishery Management Council (MAFMC) 2025</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Blueline tilefish have only recently been found on the Northeast U.S. Continental Shelf. They live in crevices or on ledges on the shelf, shelf break, and shelf slope from Georges Bank to Mexico and the Gulf of America <span class="citation" data-cites="schmidtke2017life">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>)</span>. Blueline tilefish are multiple batch spawners and presumably spawn on/near the bottom <span class="citation" data-cites="low2023characterizing">(<a href="#ref-low2023characterizing" role="doc-biblioref">Low 2023</a>)</span>. Spawning occurs from March through October in the southern portion range, and May - November in the Mid-Atlantic Bight <span class="citation" data-cites="harris2004age schmidtke2017life">(<a href="#ref-harris2004age" role="doc-biblioref">Harris, Wyanski, and Powers Mikell 2004</a>; <a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>)</span>. Eggs and larvae are estimated to remain pelagic for 4-6 weeks and depend on currents for transport. Eddies and gyres may provide local retention while the Gulf Stream transports eggs and larvae up the East Coast. It seems likely that substantial numbers of blueline larvae are transported out of the eastern Gulf of Mexico, to the South Atlantic, and from the South Atlantic into the Mid-Atlantic over the course of a few weeks <span class="citation" data-cites="sedar2025report">(<a href="#ref-sedar2025report" role="doc-biblioref">SouthEast Data, Assessment, and Review (SEDAR) 2025</a>)</span>. Juveniles settle to the bottom and occupy benthic habitats around offshore submarine canyons on the shelf edge, constructing burrows in seafloor sediments or within rocks and boulders <span class="citation" data-cites="schmidtke2017life">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>)</span>. Juveniles and adults consume a diverse array of benthic invertebrates, including polychaetes, crustaceans, and decapods. Gastropods and copepods have also been observed and are likely consumed when diel vertical migrations bring them close to the seafloor <span class="citation" data-cites="bielsa1987food ross1982feeding">(<a href="#ref-bielsa1987food" role="doc-biblioref">Bielsa and Labisky 1987</a>; <a href="#ref-ross1982feeding" role="doc-biblioref">Ross 1982</a>)</span>. Age at maturity is up to 3.7 years in the Mid-Atlantic and 5 years in the South Atlantic <span class="citation" data-cites="harris2004age low2023characterizing">(<a href="#ref-harris2004age" role="doc-biblioref">Harris, Wyanski, and Powers Mikell 2004</a>; <a href="#ref-low2023characterizing" role="doc-biblioref">Low 2023</a>)</span>. Maximum age is 37 years, although it is theorized that individuals could possibly reach upwards of 50 years in age <span class="citation" data-cites="schmidtke2017life spanik2023validating">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>; <a href="#ref-spanik2023validating" role="doc-biblioref">Spanik and Ballenger 2023</a>)</span>. In the Northwest Atlantic, blueline tilefish are managed by the Mid-Atlantic Fishery Management Council under the Tilefish Fishery Management Plan. Council management of blueline tilefish in the Mid-Atlantic began as a response to increased commercial and recreational landings in the region. The Mid-Atlantic stock has not been assessed. Population levels and fishing status are currently unknown but management measures have been in place since 2017 <span class="citation" data-cites="mafmc2017amendment">(<a href="#ref-mafmc2017amendment" role="doc-biblioref">Mid-Atlantic Fishery Management Council (MAFMC) 2017</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +631,44 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bielsa1987food" class="csl-entry" role="listitem">
+Bielsa, L. M., and R. F. Labisky. 1987. <span>“Food Habits of Blueline Tilefish, <span>C</span>aulolatilus Microps, and Snowy Grouper, <span>E</span>pinehpelus Niveatus, from the Lower <span>F</span>lorida <span>K</span>eys.”</span> <em>N.E Gulf Sci.</em> 9 (2): 77–87.
+</div>
+<div id="ref-Burton2023-sv" class="csl-entry" role="listitem">
+Burton, Michael L. 2023. <span>“A Climate Vulnerability Assessment for Fish and Invertebrates in the United States South Atlantic Large Marine Ecosystem.”</span> Southeast Fisheries Science Center (U.S.).
+</div>
+<div id="ref-harris2004age" class="csl-entry" role="listitem">
+Harris, P. J., D. M. Wyanski, and P. T. Powers Mikell. 2004. <span>“Age, Growth, and Reproductive Biology of Blueline Tilefish Along the Southeastern Coast of the <span>U</span>nited <span>S</span>tates, 1982–1999.”</span> <em>Transactions of the American Fisheries Society</em> 133 (5): 1190–1204.
+</div>
+<div id="ref-low2023characterizing" class="csl-entry" role="listitem">
+Low, J. G. 2023. <span>“Characterizing Early Growth and Reproduction of <span>B</span>lueline <span>T</span>ilefish (<span>C</span>aulolatilus Microps) to Inform Stock Assessments.”</span> PhD thesis, Virginia Polytechnic Institute; State University.
+</div>
+<div id="ref-mafmc2017amendment" class="csl-entry" role="listitem">
+Mid-Atlantic Fishery Management Council (MAFMC). 2017. <span>“Amendment 6 to the <span>TILEFISH FISHERY MANAGEMENT PLAN</span>, <span>M</span>easures to <span>M</span>anage <span>B</span>lueline <span>T</span>ilefish.”</span> <a href="https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5c1810d98a922d4272fd4f21/1545081051493/Blueline+Tilefish+Amendment_Final+EA_09-12-2017.pdf">https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5c1810d98a922d4272fd4f21/1545081051493/Blueline+Tilefish+Amendment_Final+EA_09-12-2017.pdf</a>.
+</div>
+<div id="ref-mafmc2025update" class="csl-entry" role="listitem">
+———. 2025. <span>“Mid-<span>A</span>tlantic <span>EAFM</span> <span>R</span>isk <span>A</span>ssessment: 2025 <span>U</span>pdate.”</span> <a href="https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/67eac6c94a7516270521e573/1743439565329/02_2025-EAFM-RA-Report.pdf">https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/67eac6c94a7516270521e573/1743439565329/02_2025-EAFM-RA-Report.pdf</a>.
+</div>
+<div id="ref-pinsky2018preparing" class="csl-entry" role="listitem">
+Pinsky, M. L., G. Reygondeau, R. Caddell, J. Palacios-Abrantes, J. Spijkers, and W. W. Cheung. 2018. <span>“Preparing Ocean Governance for Species on the Move.”</span> <em>Science</em> 360 (6394): 1189–91.
+</div>
+<div id="ref-rogers2019shifting" class="csl-entry" role="listitem">
+Rogers, L. A., R. Griffin, T. Young, E. Fuller, K. St. Martin, and M. L. Pinsky. 2019. <span>“Shifting Habitats Expose Fishing Communities to Risk Under Climate Change.”</span> <em>Nature Climate Change</em> 9 (7): 512–16.
+</div>
+<div id="ref-ross1982feeding" class="csl-entry" role="listitem">
+Ross, J. L. 1982. <span>“Feeding Habits of the Gray Tilefish <span>C</span>aulolatilis Microps (<span>G</span>oode and <span>B</span>ean, 1878) from <span>N</span>orth <span>C</span>arolina and <span>S</span>outh <span>C</span>arolina Waters.”</span> <em>Bull. Mar. Sci.</em> 32: 448–54.
+</div>
+<div id="ref-schmidtke2017life" class="csl-entry" role="listitem">
+Schmidtke, M. A. 2017. <span>“Life <span>H</span>istory and <span>M</span>anagement <span>M</span>ethods for <span>B</span>lueline <span>T</span>ilefish (<span>C</span>aulolatilus Microps) from the <span>U</span>nited <span>S</span>tates <span>M</span>id-<span>A</span>tlantic <span>R</span>egion.”</span> PhD thesis, Old Dominion University.
+</div>
+<div id="ref-sedar2025report" class="csl-entry" role="listitem">
+SouthEast Data, Assessment, and Review (SEDAR). 2025. <span>“<span>SEDAR</span> 92 – <span>S</span>tock <span>A</span>ssessment <span>R</span>eport - <span>A</span>tlantic <span>B</span>lueline <span>T</span>ilefish.”</span> SEDAR, North Charleston SC. <a href="https://sedarweb.org/assessments/sedar-92-atlantic-tilefish/">https://sedarweb.org/assessments/sedar-92-atlantic-tilefish/</a>.
+</div>
+<div id="ref-spanik2023validating" class="csl-entry" role="listitem">
+Spanik, K. R., and J. C. Ballenger. 2023. <span>“Validating Blueline Tilefish <span>C</span>aulolatilus Microps Ages in the <span>US</span> <span>S</span>outh <span>A</span>tlantic Using Bomb Radiocarbon (<span>F14C</span>).”</span> <em>Journal of Fish Biology</em> 103 (5): 994–1002.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
