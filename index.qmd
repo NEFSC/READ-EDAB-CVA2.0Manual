@@ -1,6 +1,5 @@
 ---
-title: "Climate Vulnerability Assessment 2.0"
-subtitle: "An overview of CVA2.0 methods and R Code"
+title: "Introduction"
 page-layout: full
 ---
 

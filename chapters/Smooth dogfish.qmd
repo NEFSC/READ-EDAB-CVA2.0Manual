@@ -1,0 +1,132 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Smooth dogfish (*`Mustelus canis`*)
+
+## Summary
+
+::::: {layout-ncol="2"}
+<div>
+
+**Scores**
+
+Vulnerability =
+
+Climate Exposure =
+
+Biological Sensitivity =
+
+</div>
+
+<div>
+
+**Data Quality**
+
+Model Confidence Score =
+
+Life History Data Quality =
+
+</div>
+:::::
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/Smooth dogfish_sensitivity_summary_table.png")
+
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric               | Current Assessment | Previous Assessment(s) | Change |
+|----------------------|--------------------|------------------------|--------|
+| *Vulnerability*      |                    |                        |        |
+| *Exposure*           |                    |                        |        |
+| *Sensitivity*        |                    |                        |        |
+| *Directional Effect* |                    |                        |        |
+
+## Score Drivers
+
+### Vulnerability:
+
+add text here
+
+### Climate Exposure:
+
+add text here
+
+### Biological Sensitivity:
+
+add text here
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+add text here
+
+### Model Confidence:
+
+add text here
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+add text here
+
+### Directional Effect:
+
+add text here
+
+## Climate Effects on Abundance and Distribution:
+
+## Life History Synopsis:
+
+## Figures
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/Smooth dogfish_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/Smooth dogfish_sdm.png")
+```
+
+## References

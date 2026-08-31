@@ -1,68 +1,95 @@
 project: 
-  type: website
+  type: book
+  output-dir: docs
 
-website: 
-  page-navigation: true
-  title: "Climate Vulnerability Assessment 2.0" 
-  site-url: "https://KGallagher7.github.io/CVA.20" 
-  repo-url: "https://github.com/KGallagher7/CVA2.0"
-  repo-actions: [edit, source, issue]
-  favicon: images/favicon.ico
-  
-  page-footer:
-    right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; CC-1.0"
-  
-  sidebar:
-    background: "#D9E3E4"
-    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
-    favicon: images/favicon.ico
-    pinned: true
-    align: center
-    tools: 
-      - icon: globe
-        href: https://nmfs-opensci.github.io
-        text: "NMFS Open Science"
-      - icon: github
-        href: https://github.com/nmfs-opensci
-        text: "NMFS OpenSci"
+book:
+  title: "Climate Vulnerability Assessment 2.0"
+  author: 
+    name: "Katherine Gallagher"
+    affiliation: 
+      name: Northeast Fisheries Science Center
+  date: today
+  date-format: long
+  chapters:
+    - index.qmd
+    - part: content/methods-overview.qmd
+      chapters:
+        - content/data.qmd
+        - content/sdm-methods.qmd
+        - content/exposure.qmd
+        - content/sensitivity.qmd
+        - content/vulnerability_directionality.qmd
+    - part: content/rpackage-overview.qmd
+      chapters:
+        - content/install-setup.qmd
+        - content/ensemble-sdms.qmd
+        - content/exposure-calculation.qmd
+        - content/sensitivity_calculation.qmd
+    - part: content/species_narrative_intro.qmd
+    #  chapters:
+    #    - chapters/American lobster.qmd
+    #    - chapters/Atlantic cod.qmd
+    #    - chapters/Atlantic croaker.qmd
+    #    - chapters/Atlantic halibut.qmd
+    #    - chapters/Atlantic herring.qmd
+     #   - chapters/Atlantic mackerel.qmd
+      #  - chapters/Atlantic menhaden.qmd
+       # - chapters/Atlantic sea scallop.qmd
+   #     - chapters/Atlantic surfclam.qmd
+    #    - chapters/Atlantic wolffish.qmd
+     #   - chapters/Black sea bass.qmd
+      #  - chapters/Blue crab.qmd
+       # - chapters/Bluefin tuna.qmd
+        #- chapters/Bluefish.qmd
+  #      - chapters/Blueline tilefish.qmd
+   #     - chapters/Butterfish.qmd
+    #    - chapters/Chub mackerel.qmd
+     #   - chapters/Cobia.qmd
+      #  - chapters/Eastern oyster.qmd
+       # - chapters/Golden tilefish.qmd
+        #- chapters/Haddock.qmd
+ #       - chapters/Longfin squid.qmd
+  #      - chapters/Monkfish.qmd
+   #     - chapters/Northern Quahog.qmd
+    #    - chapters/Ocean pout.qmd
+     #   - chapters/Ocean quahog.qmd
+      #  - chapters/Pollock.qmd
+       # - chapters/Red drum.qmd
+        #- chapters/Scup.qmd
+#        - chapters/Shortfin squid.qmd
+ #       - chapters/Smooth dogfish.qmd
+  #      - chapters/Softshell clam.qmd
+   #     - chapters/Spanish mackerel.qmd
+        #- chapters/Spiny dogfish.qmd
+    #    - chapters/Striped bass.qmd
+     #   - chapters/Summer flounder.qmd
+      #  - chapters/Tautog.qmd
+       # - chapters/White hake.qmd
+        #- chapters/Windowpane flounder.qmd
+      #  - chapters/Winter flounder.qmd
+       # - chapters/Witch flounder.qmd
+        #- chapters/Yellowtail flounder.qmd
+    - content/acknowledgements.qmd
 
-    style: "floating"
-    search: true
-    collapse-level: 1
-    contents:
-      - href: index.qmd
-        text: Home
-      - section: 'Methods' 
-        href: content/methods-overview.qmd
-        contents: 
-          - content/data.qmd
-          - content/sdm-methods.qmd
-          - content/exposure.qmd
-          - content/sensitivity.qmd
-          - content/vulnerability_directionality.qmd
-      - section: 'R Package' 
-        href: content/rpackage-overview.qmd
-        contents:
-          - content/install-setup.qmd
-          - content/ensemble-sdms.qmd
-          - content/exposure-calculation.qmd
-          - content/sensitivity_calculation.qmd
-      - href: content/acknowledgements.qmd
-        text: Acknowledgements
+bibliography: utils/references.bib
+citeproc: true
+
+filters:
+  - quarto
+  - section-bibliographies
+
+section-bibliographies:
+  level: 1
+  cleanup-first: true
+  reference-section-title: "References"
 
 format:
   html:
     theme:
-      light: [cosmo, theme.scss] 
-      dark: [cosmo, theme-dark.scss]
-    code-copy: true
-    code-overflow: wrap
-    toc: true
+      - cosmo
+    number-sections: false
+ # pdf:
+  #  number-sections: false
 
-
-filters:
-  - include-files.lua
-  - quarto
-
-  
+execute:
+  echo: false
