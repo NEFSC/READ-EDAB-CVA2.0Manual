@@ -19,10 +19,10 @@ Fisheries independent data comes from sources outside of the fishing industry. T
 * [New Jersey Ocean Stock Assessment Survey](https://dep.nj.gov/njfw/fishing/marine/ocean-stock-assessment-program/#:~:text=The%20New%20Jersey%20Ocean%20Stock,times%20throughout%20a%20calendar%20year.)
 * [Delaware Trawl Surveys](https://dnrec.delaware.gov/fish-wildlife/fishing/research/)
 
+Additional daily positions from tag data were provided by the Highly Migratory Species (HMS) group for smooth dogfish. 
+
 ### Fisheries Dependent Data 
-Fisheries dependent data is data collected by commercial and recreational fishers. In the United States, commercial fisheries data is collected by fisheries observers in the [National Observer Program](https://www.fisheries.noaa.gov/national/fisheries-observers/national-observer-program), [Gillnet Observer Program](https://www.fisheries.noaa.gov/southeast/fisheries-observers/southeast-gillnet-observer-program
-), and [Pelagic Observer Program](https://www.fisheries.noaa.gov/southeast/fisheries-observers/southeast-pelagic-observer-program
-). These are trained individuals who accompany fishing boats on their trips to collect data on the species caught. Data from recreational fisheries is collected using post-effort in person or phone surveys at different docks via the Southeast Fisheries Science Center's Logbook and the National Marine Fisheries Services' [Large Pelagics Survey](https://www.fisheries.noaa.gov/recreational-fishing-data/large-pelagics-survey-glance
+Fisheries dependent data is data collected by commercial and recreational fishers. In the United States, commercial fisheries data is collected by fisheries observers in the [National Observer Program](https://www.fisheries.noaa.gov/national/fisheries-observers/national-observer-program), [Gillnet Observer Program](https://www.fisheries.noaa.gov/southeast/fisheries-observers/southeast-gillnet-observer-program), and [Pelagic Observer Program](https://www.fisheries.noaa.gov/southeast/fisheries-observers/southeast-pelagic-observer-program). These are trained individuals who accompany fishing boats on their trips to collect data on the species caught. Data from recreational fisheries is collected using post-effort in person or phone surveys at different docks via the Southeast Fisheries Science Center's Logbook and the National Marine Fisheries Services' [Large Pelagics Survey](https://www.fisheries.noaa.gov/recreational-fishing-data/large-pelagics-survey-glance
 ) programs. 
 
 ### Combining Fisheries Independent and Dependent Data
@@ -31,8 +31,7 @@ Fisheries independent and dependent data are collected using different methods -
 ## Environmental Data
 We will be using [species distribution modeling](/content/sdm-methods.qmd) to quantify the relationships between species presence and their environment. We are using the Modular Ocean Model (MOM) 6 hindcast data to drive these models. The MOM6 is developed by the [Changing Fisheries and Ecosystem Initiative](https://psl.noaa.gov/cefi_portal/) and includes both a physical ocean model and a coupled biogeochemical model. 
 
-### For the CVA2.0
-We are using the hindcast timeseries from 1993-2023 from the MOM6 for the Northwest Atlantic to build the species distribution models. We will then project these models into the future using the decadal and long-term projections from the MOM6. 
+We are using the hindcast timeseries from 1993-2023 from the MOM6 for the Northwest Atlantic to build the species distribution models. We will then project these models into the future using the decadal projections from the MOM6. 
 
 Covariates used to build the species distribution models include: 
 
