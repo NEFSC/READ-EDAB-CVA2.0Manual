@@ -1,0 +1,143 @@
+---
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+#bibliography: ../utils/references.bib
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# American lobster (*`Homarus americanus`*)
+
+## Summary
+
+::::: {layout-ncol="2"}
+<div>
+
+**Scores**
+
+Vulnerability =
+
+Climate Exposure =
+
+Biological Sensitivity = High (Gulf of Maine/Georges Bank stock) - Very High (Southern New England stock)
+
+</div>
+
+<div>
+
+**Data Quality**
+
+Model Confidence Score =
+
+Life History Data Quality = 97%
+
+</div>
+:::::
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_exposure_summary_table.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+
+here::here("test_images/American lobster_sensitivity_summary_table.png")
+
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|------------------|------------------|--------------------|------------------|
+| *Vulnerability* |  |  |  |
+| *Exposure* |  |  |  |
+| *Sensitivity* | High (Gulf of Maine/Georges Bank) - Very High (Southern New England) | Moderate (All Stocks) | Increase |
+| *Directional Effect* | Negative | Neutral | Decrease |
+
+## Score Drivers
+
+### Vulnerability:
+
+add text here
+
+### Climate Exposure:
+
+add text here
+
+### Biological Sensitivity:
+
+The **Gulf of Maine/Georges Bank** stock of American lobster received a **High** sensitivity score and the **Southern New England** stock scored **Very High.** Certainty was high for both stocks, with 99% certainty for the Gulf of Maine/Georges Bank stock and 92% certainty for the Southern New England stock.
+
+Population growth rate and other stressors drove the scores for both stocks. Relationships to calcified organisms contributed to the High score for the Gulf of Maine/Georges Bank stock, and received a score of 3.5 for the Southern New England stock. Stock size had the highest score for the Southern New England Stock.
+
+Lobsters are long-lived, slow growing species that can reach ages of 50+ years. Disease and the introduction of new predators such as black sea bass and spiny dogfish impact lobsters across their range [@asmfc2025; @goldstein2025]. American lobsters are omnivores but diets are dominated by mollusks [@elner1987], which are likely to be impacted by ocean acidification.
+
+Sensitivity has increased since the last assessment, where lobsters received a Moderate score [@hare2016vulnerability]. Population growth rate and other stressors drove scores in both assessments.
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+The percent of data quality scores greater than 2 was 97% for the Gulf of Maine/Georges Bank stock and 95% for the Southern New England stock, indicating excellent data quality. For both stocks, Stock Size/Status was the only data gap (mean attribute data quality score \< 2).
+
+### Model Confidence:
+
+add text here
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+add text here
+
+### Directional Effect:
+
+Both stocks are likely to be **negatively** impacted by climate change (certainties range from 81 – 100% based on bootstrap analysis of expert scores). Increased thermal stress and disease will continue to decrease the productivity of the stocks. In addition, new demersal predators such as black sea bass and spiny dogfish will increase predation pressures of juvenile and adult lobster. The directional effect was estimated to be neutral in the previous Assessment [@hare2016vulnerability].
+
+## Climate Effects on Abundance and Distribution
+
+The Northwest Atlantic has been warming at an exceptionally fast rate [@saba2016], which has contributed to declines in fecundity and population size in Southern New England [@goldstein2022] while the fishery in the central Gulf of Maine has increased dramatically [@lebris2018]. Temperatures have increased in the lobster’s inshore range, and evidence suggests that the productivity of the stock is severely compromised with increased thermal stress and disease [@asmfc2025]. The assemblage of predators of American lobster has shifted with warming conditions in the Gulf of Maine, with benthic and demersal predators, such as black sea bass (*Centropristis striata*) and spiny dogfish (*Squalus acanthias*) becoming increasingly present throughout the lobster’s range, taking the place of traditional predators, such as Atlantic cod (*Gadus morhua*). The effects of invasive and range-expanding species may also lead to greater predation risk for juvenile lobsters [@goldstein2025].
+
+## Life History Synopsis
+
+American lobsters inhabit the coastal and oceanic waters of the Atlantic Ocean from Labrador to North Carolina. They are widely distributed within most of the coastal waters in the Northeast U.S. with some major offshore concentrations along the outer edge of the Continental Shelf and upper slope between Georges Bank and Delaware Bay [@mackenzie1985]. Spawning takes place during a 4 month period from late May through much of September, when females leave their solitary shelters about 7 days before molting to share the shelter of a dominant male [@factor1995] [@mackenzie1985]. Lobster larvae are planktonic for 6-8 weeks [@factor1995] and travel from surface waters offshore to inshore areas of Southern New England and the Gulf of Maine. Larval distribution is affected by the distribution of spawning females and by surface current velocity and direction, temperature, salinity, light intensity, and hydrostatic pressure [@katz1994] [@harding1988] [@hudson1993] [@mackenzie1985]. Larval survival is likely affected by pollution of the marine environment by human activity, especially coastal waters [@connor1972]. There is an inverse relationship between temperature and the time from hatching to the postlarval stage (when they settle). Larvae take as few as 11 days at 22°C and as many as 54 days at 10°C to reach the postlarval stage. It is speculated that thermoclines are a negative cue for larvae/post larvae settlement [@factor1995] [@templeman1936]. Juvenile lobsters utilize shelters (rocks and vegetation) in the benthic habitat, and may also burrow in mud [@wahle1991]. Juveniles are omnivorous but also scavenge for food. Much of their diet consists of bottom invertebrates, crabs, urchins, mussels, polychaetes, periwinkles, and sea stars, but they may also consume fish and plants [@lawton1987]. Adult lobsters are also considered omnivores and scavengers . However, their diet is dominated by mollusks (especially mussels), echinoderms, and polychaetes [@elner1987]. Juveniles and adults prefer bottom water temperatures of 8-14°C [@mackenzie1985]. Inshore, adult lobsters appear to have a limited home range of about 2.2 km, however offshore lobsters tend to migrate greater distances (up to 345 km in 71 days) [@mackenzie1985]. American lobster are managed by the Atlantic States Marine Fisheries Commission as three stock units based on life history differences: Gulf of Maine, Georges Bank, and southern New England [@asmfc2025].
+
+## Figures
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_exposure_allvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_exposure_impvars.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_distribution_center_of_gravity.png")
+```
+
+```{r,echo=FALSE, fig.align='left'}
+here::here("test_images/American lobster_distribution_area_of_high_probability.png")
+```
+
+```{r,echo=FALSE, out.width="200%", fig.align='left'}
+here::here("test_images/American lobster_sdm.png")
+```
+
+## References

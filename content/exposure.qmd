@@ -2,8 +2,10 @@
 title: Species Exposure
 ---
 
-Species exposure is quantified using the decadal from the MOM6 model. In the CVA1.0, exposure to surface temperatures, salinities, and changes in ocean acidification were quantified using a z-score. This quantity describes how many standard deviations over the present mean conditions a value, in this case mean future conditions, are. 
+Species exposure is quantified using the forecasts from the MOM6 model. The CVA2.0 follows similar methods to the original analysis while also integrating the species distribution model results. 
 
-For the CVA2.0, we will use this same metric. Z-scores will be calculated across space and time using average monthly timesteps. Exposure values will be averaged across time and space each month to produce an exposure map and monthly timeseries for each variable, using predicted species distributions to perform weighted averages so that only expsoure within the species ranges are considered and habitat use by the species is taken into account. 
+Exposure of each variable is calculated as a z-score using monthly averages across future (2025-2034) and present time periods (2014-2023). Global (not spatially or temporally explicit) averages and standard deviations were calculated from the present time series and used to calculate the z-score on monthly averaged future data to produce a spatially and temporally explicit exposure. 
 
-We will calculate total exposure using the same logic rule implimented in the CVA 1.0 in two different ways: 1) counting all ecologicaly relevant variables and 2) only counting variables that have relative weights over 10% in the species distribution models. This will be done across both time and space to produce both a total timeseries and map of exposure for each species. 
+Exposure values are then averaged across time and space each month to produce an exposure map and monthly timeseries for each variable, using predicted species distributions to perform weighted averages so that only expsoure within the species ranges are considered and habitat use by the species is taken into account. 
+
+Total exposure is calculated using the same logic rule implimented in the CVA 1.0 in two different ways: 1) counting all ecologicaly relevant variables and 2) only counting variables that have relative weights over 10% in the species distribution models. This will be done across both time and space to produce both a total timeseries and map of exposure for each species. 
