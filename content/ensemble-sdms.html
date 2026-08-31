@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -23,45 +26,11 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -69,21 +38,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <link href="../content/exposure-calculation.html" rel="next">
 <link href="../content/install-setup.html" rel="prev">
-<link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8a97fbe1f53dae5753ac0367257cefaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-57b604383f96d31493fa168b7b4e1104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-8a97fbe1f53dae5753ac0367257cefaf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3d497cff885f6278d37568d0ef0763f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -115,169 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -286,7 +88,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">R Package</a></li><li class="breadcrumb-item"><a href="../content/ensemble-sdms.html">Building &amp; Predicting Ensemble Species Distribution Models</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/ensemble-sdms.html"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -299,16 +101,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main tools-wide">
-    <a href="https://nmfs-opensci.github.io" title="NMFS Open Science" class="quarto-navigation-tool px-1" aria-label="NMFS Open Science"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/nmfs-opensci" title="NMFS OpenSci" class="quarto-navigation-tool px-1" aria-label="NMFS OpenSci"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Climate Vulnerability Assessment 2.0</a> 
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -319,47 +115,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../content/methods-overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Methods</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+ <span class="menu-text">Methods Overview</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data</span></a>
+  <a href="../content/data.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/sdm-methods.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Species Distribution Modeling</span></a>
+  <a href="../content/sdm-methods.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Species Distribution Modeling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Species Exposure</span></a>
+  <a href="../content/exposure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Species Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/sensitivity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sensitivity</span></a>
+  <a href="../content/sensitivity.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sensitivity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/vulnerability_directionality.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vulnerability &amp; Directionality</span></a>
+  <a href="../content/vulnerability_directionality.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vulnerability &amp; Directionality</span></a>
   </div>
 </li>
       </ul>
@@ -367,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../content/rpackage-overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Package</span></a>
+ <span class="menu-text">RPackage Overview</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -375,34 +165,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/install-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Installation &amp; Setup</span></a>
+  <a href="../content/install-setup.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation &amp; Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/ensemble-sdms.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Building &amp; Predicting Ensemble Species Distribution Models</span></a>
+  <a href="../content/ensemble-sdms.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Calculating Exposure</span></a>
+  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calculating Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/sensitivity_calculation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sensitivity Calculation</span></a>
+  <a href="../content/sensitivity_calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sensitivity Calculation</span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Species Narratives</span></span>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/acknowledgements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Acknowledgements</span></a>
+  <a href="../content/acknowledgements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acknowledgments</span></a>
   </div>
 </li>
     </ul>
@@ -412,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
@@ -428,15 +217,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#building-predicting-ensemble" id="toc-building-predicting-ensemble" class="nav-link" data-scroll-target="#building-predicting-ensemble">Building &amp; Predicting Ensemble</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/KGallagher7/CVA2.0/edit/main/content/ensemble-sdms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/KGallagher7/CVA2.0/blob/main/content/ensemble-sdms.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/KGallagher7/CVA2.0/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">R Package</a></li><li class="breadcrumb-item"><a href="../content/ensemble-sdms.html">Building &amp; Predicting Ensemble Species Distribution Models</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/ensemble-sdms.html"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Building &amp; Predicting Ensemble Species Distribution Models</h1>
+<h1 class="title"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></h1>
 </div>
 
 
@@ -470,13 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="fisheries-data">Fisheries Data</h3>
 <p>The function <code>standardize_data</code> can be used to standardize provided csv files or pull NEFSC survey or observer data from NEFSC databases via ROracle. This can also be accomplished in R outside of the package, but <code>standardize_data</code> provides a single function to format data in a way that will be accepted by downstream functions. If you are pulling together data from a variety of sources, you will likely still need to manipulate data outside of this function to make sure that data are in a single csv file and that dates and times are in the correct format.</p>
 <p>To pull NEFSC survey or observer data, a channel from the package <code>dbutils</code> must be provided:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>surv <span class="ot">&lt;-</span> <span class="fu">standardize_data</span>(<span class="at">dataType =</span> <span class="st">'Surveys'</span>, <span class="at">channel =</span> dbutils<span class="sc">::</span><span class="fu">connect_to_database</span>(<span class="at">server=</span><span class="st">"NEFSC_pw_oraprod"</span>,<span class="at">uid=</span><span class="st">"KGALLAGHER"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>To standardize CSV data, a file path to the csv file, as well as column names for station IDs; position (longitude/latitude); date; the column corresponding to the presence/absence, or count of the species; and species name.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>neamap <span class="ot">&lt;-</span> <span class="fu">standardize_data</span>(<span class="at">dataType =</span> <span class="st">'CSV'</span>, <span class="at">csv =</span> <span class="st">"./Data/csvs/raw/NEAMAP_Tow_Catch_2025-08-14.csv"</span>, <span class="at">csvCols =</span> <span class="fu">c</span>(<span class="st">'station'</span>, <span class="st">'lon'</span>, <span class="st">'lat'</span>, <span class="st">'date'</span>, <span class="st">'present_absent'</span>, <span class="st">'SCI_NAME'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>This function results in a dataframe being transformed from this:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -538,30 +320,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>To ensure that fisheries and environmental data are on the same scale, and to convert any abundance data to presence/absence, the fisheries csvs produced by <code>standardize_data</code> are then converted into rasters of effort/presence/absence with the function <code>create_rast</code>. While the source datasets are generated for the entire dataset, one rasterStack is produced for each target species and data source. <code>create_rast</code> produces rasters with the same resolution as the environmental data where values range from 0 to 2, where 0 means that no effort was present in the grid cell, 1 means that there was fishing effort but the target species was not caught, and 2 indicates that the target species was caught in that grid cell.</p>
 <p>Users must provide the standardized csv files generated by <code>standardize_data</code>, a link to a netcdf file that the desired grid and timesteps can be extracted from, the start date of the timeseries, and a vector of alternate names for the target species to account for any differences in species names across data sources. The user must also indicate if the data come from fisheries independent (surveys) or dependent sources (observer or logbook programs). If data come from fisheries dependent sources, then a threshold is applied before the raster is created, following McHenry et al 2019; rasters are only created if the species is present at least 30 times throughout the dataset.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rast <span class="ot">&lt;-</span> <span class="fu">create_rast</span>(<span class="at">data =</span> csv, <span class="at">isObs =</span> <span class="cn">FALSE</span>, <span class="at">grid =</span> <span class="st">"http://psl.noaa.gov/thredds/dodsC/Projects/CEFI/regional_mom6/cefi_portal/northwest_atlantic/full_domain/hindcast/monthly/regrid/r20250715/tob.nwa.full.hcast.monthly.regrid.r20250715.199301-202312.nc"</span>, <span class="at">origin =</span> <span class="st">'1993-01-01'</span>, <span class="at">targetVec =</span> <span class="st">"Atlantic cod ,ATLANTIC COD ,Gadus morhua,Cod Atlantic,GADUS MORHUA"</span>) <span class="co">#example to make raster for Atlantic Cod</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The resulting rasterStack will have a range from 0-2 with a number of layers equal to the length of the timeseries. Below is an example layer from the produced rasterStack for Atlantic Cod from the NEFSC survey data. <img src="raster_example.png" class="img-fluid" alt="Example layer from rasterStack"></p>
 <p>The wrapper function <code>saveRast</code> is provided for <code>create_rast</code>. This wrapper function provides logging functionality to keep track of progress, which is especially helpful if running the code in parallel, and also adds a skip functionality to skip making the raster if it already exists for that species and data source. It also saves the resulting rasterStack in the <code>input_rasters</code> directory within the species-specific folder in the working directory.</p>
 <p>Here is an example of using <code>saveRast</code> in parallel using the package <code>furrr</code> with <code>future_pmap</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">5</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">future_pmap</span>(<span class="fu">list</span>(<span class="at">..1 =</span> argsList<span class="sc">$</span>csvName, <span class="at">..2 =</span> argsList<span class="sc">$</span>spp, <span class="at">..3 =</span> altNames, <span class="at">..4 =</span> argsList<span class="sc">$</span>skip, <span class="at">..5 =</span> argsList<span class="sc">$</span>isObs), <span class="sc">~</span> <span class="fu">saveRast</span>(<span class="at">csvName =</span> ..<span class="dv">1</span>, <span class="at">spp =</span> ..<span class="dv">2</span>, <span class="at">sppNames =</span> ..<span class="dv">3</span>, <span class="at">skip =</span> ..<span class="dv">4</span>, <span class="at">isObs =</span> ..<span class="dv">5</span>, <span class="at">grid =</span> <span class="st">"http://psl.noaa.gov/thredds/dodsC/Projects/CEFI/regional_mom6/cefi_portal/northwest_atlantic/full_domain/hindcast/monthly/regrid/r20230520/tob.nwa.full.hcast.monthly.regrid.r20230520.199301-201912.nc"</span>, <span class="at">origin =</span> <span class="st">'1993-01-01'</span>), <span class="at">.progress =</span> T)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(sequential)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Where <code>argsList</code> is a dataframe with a row for each desired call of <code>saveRast</code>, and a column associated with most arguments for <code>saveRast</code> and <code>create_rast</code>. This is generated using <code>tidyr::expand_grid</code> to create a dataframe of every combination of target species and data sources.</p>
 <p><code>create_rast</code> creates a seperate rasterStack for each species, which is saved to the species-specific <code>input_rasters</code> folder bv the <code>saveRast</code> wrapper function. This allows the user to examine the raster for each data source independently to ensure that it meets expectations. Before these can be matched with the environmental data, the rasters must be combined into a single rasterStack, while maintaining the 0-2 range to document presences, absences, and lack of effort. This is done with the <code>merge_rasts</code> and associated <code>combineSave</code> wrapper function. The <code>combineSave</code> wrapper function, in addition to providing logging and skip functionality, also automatically creates a list of raster objects in the <code>input_rasters</code> folder for the <code>merge_rasts</code> function.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>combinedRasts <span class="ot">&lt;-</span> <span class="fu">merge_rasts</span>(rasts)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#where rasts is a list of rasterStacks to combine</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The wrapper function <code>combineSave</code> is similar to <code>saveRast</code> where is provides logging and skip functionality. This function also handles creating the list of rasterStacks necessary to provide to <code>create_rast</code>. It is also written to be run in parallel:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">future.globals.maxSize =</span> <span class="cn">Inf</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">5</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>combs <span class="ot">&lt;-</span> <span class="fu">future_pmap</span>(<span class="fu">list</span>(<span class="at">..1 =</span> args<span class="sc">$</span>name, <span class="at">..2 =</span> args<span class="sc">$</span>skip), <span class="sc">~</span> <span class="fu">combineSave</span>(<span class="at">name =</span> ..<span class="dv">1</span>, <span class="at">skip =</span> ..<span class="dv">2</span>), <span class="at">.progress =</span> T)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(sequential)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The resulting combined rasterStack will retain the range from 0-2 with a number of layers equal to the length of the timeseries. It works by retaining the maximum value in a grid cell across a given layer (which represent different timestamps) of the provided rasterStacks. Below is an example layer from the merged rasterStack for Atlantic Cod from the NEFSC survey data. <img src="combined_raster_example.png" class="img-fluid" alt="Example layer from merged rasterStack"></p>
 </section>
 <section id="environmental-data" class="level3">
@@ -569,35 +333,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The example below illustrates how to grab and normalize monthly data from the Modular Ocean Model (MOM6) from the Northeast Shelf. The <code>pull_hind</code> and <code>pull_forecast</code> functions are designed to work with any MOM6 output. Other environmental data can be used as well, and normalized using the same functions, as long as the raw data is in the expected format.</p>
 <p>The first step in getting the environmental data is pulling and spatially subsetting the raw MOM6 data. The functions provided default to pulling the entire time series of the specified model release. Functionality to subset the data by time may be added at a later date, as the length of the timeseries impacts how long the functions take the spatially subset the data.</p>
 <p>The function <code>pull_hind</code> is designed to pull data from the hindcast simulations:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a> r <span class="ot">&lt;-</span> <span class="fu">pull_hind</span>(<span class="at">jsonURL =</span> <span class="st">"https://psl.noaa.gov/cefi_portal/data_index/cefi_data_indexing.Projects.CEFI.regional_mom6.cefi_portal.northwest_atlantic.full_domain.hindcast.json"</span>, <span class="at">reqVars =</span> <span class="st">'Bottom Temperature'</span>, <span class="at">shortNames =</span> <span class="st">'bottomT'</span>, <span class="at">release =</span> <span class="st">'r20230520'</span>, <span class="at">gt =</span> <span class="st">'regrid'</span>, <span class="at">of =</span> <span class="st">'monthly'</span>, <span class="at">bounds =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">78</span>,<span class="sc">-</span><span class="dv">65</span>, <span class="dv">35</span>,<span class="dv">45</span>), <span class="at">static =</span> <span class="st">"http://psl.noaa.gov/thredds/dodsC/Projects/CEFI/regional_mom6/cefi_portal/northwest_atlantic/full_domain/hindcast/monthly/raw/r20230520/ocean_static.nc"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The function ‘pull_forecast’ pulls data from the specified forecast similations:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a> r <span class="ot">&lt;-</span> <span class="fu">pull_forecast</span>(<span class="at">jsonURL =</span> <span class="st">"https://psl.noaa.gov/cefi_portal/data_index/cefi_data_indexing.Projects.CEFI.regional_mom6.cefi_portal.northwest_atlantic.full_domain.decadal_forecast.json"</span>, <span class="at">reqVars =</span> <span class="st">'Sea Water Potential Temperature at Sea Floor'</span>, <span class="at">shortNames =</span> <span class="st">'bottomT'</span>, <span class="at">release =</span> <span class="st">'r20250925'</span>, <span class="at">init =</span> <span class="st">'i202501'</span>, <span class="at">ens =</span> <span class="dv">1</span>, <span class="at">gt =</span> <span class="st">'regrid'</span>, <span class="at">of =</span> <span class="st">'monthly'</span>, <span class="at">bounds =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">78</span>,<span class="sc">-</span><span class="dv">65</span>, <span class="dv">35</span>,<span class="dv">45</span>), <span class="at">static =</span> <span class="st">"http://psl.noaa.gov/thredds/dodsC/Projects/CEFI/regional_mom6/cefi_portal/northwest_atlantic/full_domain/hindcast/monthly/raw/r20230520/ocean_static.nc"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Note that <code>pull_forecast</code> has the additional arguments ‘init’ and ‘ens’, which represent the initalization date and the ensemble member desired. As of October 2025, the seasonal and decadal forecasts from MOM6 include 10 ensembles with slightly different initial forcing parameters, and as a result can be averaged across ensembles if desired, whereas the long-term forecasts have ensembles that represent different projected CO2 and climate conditions.</p>
 <p>For either function, the JSON file link can be found on the <a href="https://psl.noaa.gov/cefi_portal/">CEFI portal</a> in the ‘Data Access’ tab. The arguments <code>reqVars</code>, <code>release</code>, <code>gt</code>, <code>of</code>, <code>init</code>, and <code>ens</code> help specify which variables to pull, at what output frequency, and what grid to pull (raw vs regrid; the latter is recommended). These need to match their corresponding columns in the JSON file <strong>exactly</strong>. See the documentation for these functions for more details.</p>
 <p>Since spatially subsetting the data can take some time (upwards of 30 minutes per variable), if you are pulling a lot of environmental variables, it is recommended to run this command in parallel. Generally, this is not a memory-intensive activity; it just takes some time depending on the length of the timeseries (AKA the number of layers in the resulting rasterBrick). Below is an example of running the <code>pull_hind</code> function in parallel with <code>doParallel</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>cluster <span class="ot">&lt;-</span> <span class="fu">makeCluster</span>(<span class="dv">10</span>, <span class="at">type=</span><span class="st">'PSOCK'</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">registerDoParallel</span>(cluster)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>raw <span class="ot">&lt;-</span> <span class="fu">foreach</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(var.list), <span class="at">.packages =</span> <span class="fu">c</span>(<span class="st">"ncdf4"</span>, <span class="st">'raster'</span>, <span class="st">'jsonlite'</span>)) <span class="sc">%dopar%</span> {</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  r <span class="ot">&lt;-</span> <span class="fu">pull_hind</span>(<span class="at">varURL =</span> <span class="st">"https://psl.noaa.gov/cefi_portal/data_index/cefi_data_indexing.Projects.CEFI.regional_mom6.cefi_portal.northwest_atlantic.full_domain.hindcast.json"</span>, <span class="at">reqVars =</span> var.list<span class="sc">$</span>Long.Name[x], <span class="at">shortNames =</span> var.list<span class="sc">$</span>Short.Name[x], <span class="at">release =</span> <span class="st">'r20230520'</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  raw[[x]] <span class="ot">&lt;-</span> r</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">stopCluster</span>(cluster)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(raw) <span class="ot">&lt;-</span> var.list<span class="sc">$</span>Short.Name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Where <code>var.list</code> is a two column data frame with the full names of the desired variable (<code>Long.Name</code>) and an abbreviated variable name (<code>Short.Name</code>) which will eventually become the column name in the final dataframe.</p>
 <p>Once the raw hindcast or forecast data is pulled, the workflow moving forward is the same: mean and standard deviations are calculated monthly to calculate z-scores for the complete timeseries. It is recommended to normalize the data in some way prior to building the models to help with interpretation since all the environmental data will likely have different units. We chose to normalize using a z-score to be consistent with exposure calculation methods.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># r is a list of rasterStacks of raw bottom temperature, bottom salinity, and bottom oxygen data </span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">avg_env</span>(r) <span class="co">#calculate monthly average</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">sd_env</span>(r) <span class="co">#calculate monthly standard deviation</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">norm_env</span>(<span class="at">rawList =</span> r, <span class="at">avgList =</span> a, <span class="at">sdList =</span> s, <span class="at">shortNames =</span> <span class="fu">c</span>(<span class="st">'bottomT'</span>, <span class="st">'bottomS'</span>, <span class="st">'bottomO2'</span>)) <span class="co">#calculate z-score for every time step</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>You could also perform each of these steps in parallel following the example above. However, it is not really necessary since these steps are faster than the initial data pull. That being said, it is important to note that the <code>avg_env</code>, <code>sd_env</code>, and <code>norm_env</code> functions expect lists of rasterStacks (which would be the outcome of running <code>pull_hind</code> or <code>pull_forecast</code> in parallel as illustrated above).</p>
 <p>Unlike other functions in this package, no wrapper function is provided. It is not shown here but the resulting lists should be stored in the <code>./Data/MOM6/</code> folder so that the data pull only needs to be performed once; it is also recommended to save the raw, mean, and standard deviations, even if they aren’t used in the models. This will allow you to 1) easily examine the raw data and 2) calculate z-scores relative to different time series if you wish to do so (for example, normalize forecast data to the present-day mean and standard deviations).</p>
 <p>If you have static environmental data such as bathymetry or distance to shore, these should also be normalized to their respective means and standard deviations. You should create an R object that is a named list of your static variables and put it in the <code>./Data/MOM6/</code> folder. Names will correspond to the columns in the data frame if you choose to include these data in your final data frame. Cropping these rasters to the same extent as the MOM6 data is helpful for managing file size. We do not provide functions for this process as these data can come from a variety of sources.</p>
@@ -606,11 +347,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="creating-data-frames">Creating Data Frames</h3>
 <p>At this point, you should have two sets of raster files: one containing the fisheries effort/presence/absence data and another containing your environmental data. If you want to include static environmental covariates such as bathymetry, you will have a third set of raster files. While rasters are easy to plot, most of our ensemble model members do not take rasters as inputs, so these need to be converted to data frames.</p>
 <p>The function <code>merge_spp_env</code> is provided to merge species and environmental rasters together, as well as add static environmental variables if provided.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">merge_spp_env</span>(<span class="at">rastStack =</span> combinedRasts, <span class="at">envData =</span> norm, <span class="at">addStatic =</span> <span class="cn">TRUE</span>, <span class="at">staticData =</span> <span class="st">'./Data/staticVariables_cropped_normZ.RData'</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#combinedRasts is the combined rasterStack for the species created by the function 'merge_rasts'</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#staticData is the path to the RData object containing a list of static environmental rasters </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The resulting data frame will have the following structure:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -647,9 +383,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Additional functions are provided to clean/simplify the data frame: <code>match_guilds</code>, <code>clean_data</code>, and <code>remove_corr</code>. Of these, only <code>clean_data</code> is required, <code>remove_corr</code> is recommended, and <code>match_guilds</code> is optional.</p>
 <p>These could be run in any order, with the exception of if the user is utlizing the <code>match_guilds</code> function. This should be run prior to <code>remove_corr</code> if using.</p>
 <p>Here, we will run <code>match_guilds</code> first. This function uses the habitat and feeding guilds keys to subset the columns in the data frame to only those relevant to the target species. For example, you may have environmental covariates from the ocean surface and sea floor, like surface and bottom temperatures. Species more associated with the sea floor, such as groundfish or flatfish, are more likely to be impacted by bottom temperatures than surface temperatures they may rarely interact with.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>dfG <span class="ot">&lt;-</span> <span class="fu">match_guilds</span>(<span class="at">spp_env =</span> df, <span class="at">spp =</span> <span class="fu">c</span>(<span class="st">"PARALICHTHYS DENTATUS"</span>), <span class="at">spp_col =</span> <span class="st">'SCI_NAME'</span>, <span class="at">spp_guild =</span> <span class="st">'spp_list.csv'</span>, <span class="at">feeding_key =</span> <span class="st">'feeding_guilds.csv'</span>, <span class="at">feeding_col =</span> <span class="st">'Feeding.Guild'</span>, <span class="at">habitat_key =</span> <span class="st">'habitat_guilds.csv'</span>,  <span class="at">habitat_col =</span> <span class="st">'Habitat.Guild'</span>, <span class="at">static_vars =</span> <span class="fu">c</span>(<span class="st">'x'</span>, <span class="st">'y'</span>, <span class="st">'month'</span>, <span class="st">'year'</span>, <span class="st">'bathy'</span>, <span class="st">'rugosity'</span>, <span class="st">'dist2coast'</span>), <span class="at">pa_col =</span> <span class="st">'value'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>For example, based on the habitat and feeding keys provided, the data frame for Summer flounder will be subset to the following variables:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -672,9 +405,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Next we will run <code>clean_data</code> to turn the data into “true” binary data. The fisheries rasters, and resulting data frames, had values ranging from 0 to 2, representing no effort (0), effort but no catch (1), and catch (2). For presence/absence modeling, the only accepted values are 0 and 1, and these models do not need to know where there was an absence of effort (while is generally good for users to know to understand the scope of the fishing effort). The function <code>clean_data</code> will remove all existing 0 values, and remap the presence and absence data to 1s and 0s.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>dfB <span class="ot">&lt;-</span> <span class="fu">clean_data</span>(dfG, <span class="at">pa_col =</span> <span class="st">'value'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The histograms below illustrate how the data have been transformed.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -687,52 +417,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><em>Note that these datasets are random subsets of the complete dataset so the number of presences/absences is not equal in each. These histograms are only to illustrate the shift in range from 0-2 to 0-1.</em></p>
 <p>Finally, we will run <code>remove_corr</code> to remove any correlated environmental covariates before building the model. Position and time (month &amp; year) are retained.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>dfC <span class="ot">&lt;-</span> <span class="fu">remove_corr</span>(dfB, <span class="at">pa_col =</span> <span class="st">'value'</span>, <span class="at">xy_col =</span> <span class="fu">c</span>(<span class="st">'x'</span>, <span class="st">'y'</span>), <span class="at">month_col =</span> <span class="st">'month'</span>, <span class="at">year_col =</span> <span class="st">'year'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>If covariates are removed due to correlation with other covariates, the corresponding column names will be printed in the console or the log file.</p>
 <p>The wrapper function <code>makeDF</code> includes all of the functions related to making and cleaning the data frame and provides skip and log file functionalities. This function also makes sure that the combined fisheries raster is loaded and the layers have the appropriate names. Like other wrapper functions, this function also saves the results from each call in the appropriate species-specific folder.</p>
 <p>This function is generally not very computationally expensive (takes &lt;10 minutes), unless you are matching a lot of environmental covariates. If you need to perform this operation for a long list of species, the wrapper function is designed to be run in parallel.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">'./Data/MOM6/norm_MOM6_092025.RData'</span>) <span class="co">#normalized environmental data needs to be loaded prior to launching the code in parallel</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">future.globals.maxSize =</span> <span class="cn">Inf</span>) <span class="co">#remove check for sharing large files so that norm is shared across workers since this is a relatively low memory intensive job otherwise</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">5</span>)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>dfs <span class="ot">&lt;-</span> <span class="fu">future_pmap</span>(<span class="fu">list</span>(<span class="at">..1 =</span> args<span class="sc">$</span>name, <span class="at">..2 =</span> args<span class="sc">$</span>skip, <span class="at">..3 =</span> args<span class="sc">$</span>mMin, <span class="at">..4 =</span> args<span class="sc">$</span>mMax, <span class="at">..5 =</span> args<span class="sc">$</span>yMin, <span class="at">..6 =</span> args<span class="sc">$</span>yMax), <span class="sc">~</span> <span class="fu">makeDF</span>(<span class="at">name =</span> ..<span class="dv">1</span>, <span class="at">skip =</span> ..<span class="dv">2</span>, <span class="at">mMin =</span> ..<span class="dv">3</span>, <span class="at">mMax =</span> ..<span class="dv">4</span>, <span class="at">yMin =</span> ..<span class="dv">5</span>, <span class="at">yMax =</span> ..<span class="dv">6</span>), <span class="at">.progress =</span> T,  <span class="at">.options =</span> <span class="fu">furrr_options</span>(<span class="at">seed =</span> <span class="dv">2025</span>))</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(sequential)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
 </section>
 <section id="building-predicting-species-distribution-models" class="level2">
 <h2 class="anchored" data-anchor-id="building-predicting-species-distribution-models">Building &amp; Predicting Species Distribution Models</h2>
 <p>Now that the data frames have been constructed and cleaned, you can build the species distribution models. A series of functions are provided to build, perform cross-validation on, evaluate, and extract variable importance from the models for each of the component models for the ensemble: Generalized Additive Model (GAM), MAXENT, Random Forest (RF), Boosted Regression Trees (BRT), sdmTMB.</p>
 <p>The first step is building the base model:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a> mod <span class="ot">&lt;-</span> <span class="fu">make_sdm</span>(<span class="at">se =</span> dfC, <span class="at">pa_col =</span> <span class="st">'value'</span>, <span class="at">xy_col =</span> <span class="fu">c</span>(<span class="st">'x'</span>, <span class="st">'y'</span>), <span class="at">month_col =</span> <span class="st">'month'</span>, <span class="at">year_col =</span> <span class="st">'year'</span>, <span class="at">model =</span> model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p><code>model</code> is one of the five component models: <code>gam</code>, <code>maxent</code>, <code>rf</code>, <code>brt</code>, <code>sdmtmb</code> or the ensemble (<code>ens</code>). This function first creates the base model and simplifies it as necessary.</p>
 <p>The <code>sdm_cv</code> function performs a cross-validation of the model with k = 5.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a> cv <span class="ot">&lt;-</span> <span class="fu">sdm_cv</span>(<span class="at">mod =</span> mod, <span class="at">se =</span> dfC, <span class="at">pa_col =</span> <span class="st">'value'</span>, <span class="at">xy_col =</span> <span class="fu">c</span>(<span class="st">'x'</span>, <span class="st">'y'</span>), <span class="at">month_col =</span> <span class="st">'month'</span>, <span class="at">year_col =</span> <span class="st">'year'</span>, <span class="at">model =</span> model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The predicted values are extracted from the cross-validation output to help build the ensemble and calculate the evaluation metric using the <code>sdm_preds</code> function.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a> preds <span class="ot">&lt;-</span> <span class="fu">sdm_preds</span>(<span class="at">cv =</span> cv, <span class="at">model =</span> model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The model is then evaluated using the predicted values. This function can calculate a Root Mean Squared Error (RMSE) or Area under the Curve (AUC).</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a> ev <span class="ot">&lt;-</span> <span class="fu">sdm_eval</span>(<span class="at">preds =</span> preds, <span class="at">metric =</span> <span class="st">'auc'</span>, <span class="at">model =</span> model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Variable importance for each of the ensemble model components can be extracted from the models:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>imp <span class="ot">&lt;-</span> <span class="fu">sdm_importance</span>(<span class="at">mod =</span> mod, <span class="at">se =</span> dfC, <span class="at">pa_col =</span> <span class="st">'value'</span>, <span class="at">xy_col =</span> <span class="fu">c</span>(<span class="st">'x'</span>, <span class="st">'y'</span>), <span class="at">month_col =</span> <span class="st">'month'</span>, <span class="at">year_col =</span> <span class="st">'year'</span>, <span class="at">model =</span> model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p><em>It is important to note that variable importance from the different models should not be compared without normalizing the values between 0 and 1 as they are all generated using different methods.</em></p>
 <p>The wrapper function <code>makeMods</code> combines the above 5 functions, and includes skip and logging functionality. Like previous wrapper functions, it is easy to launch this in parallel with the <code>furrr</code> functionality.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">5</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>checks <span class="ot">&lt;-</span> <span class="fu">future_pmap</span>(<span class="fu">list</span>(<span class="at">..1 =</span> args<span class="sc">$</span>spp, <span class="at">..2 =</span> args<span class="sc">$</span>model, <span class="at">..3 =</span> args<span class="sc">$</span>skip), <span class="sc">~</span> <span class="fu">makeMods</span>(<span class="at">spp =</span> ..<span class="dv">1</span>, <span class="at">model =</span> ..<span class="dv">2</span>, <span class="at">skip =</span> ..<span class="dv">3</span>), <span class="at">.progress =</span> T,  <span class="at">.options =</span> <span class="fu">furrr_options</span>(<span class="at">seed =</span> <span class="dv">2025</span>))</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(sequential)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Where args is the combination of target species and models to be run, along with the flag to enable the skip functionality.</p>
 <p>Here, it is important to note that the different models have different memory demands. The GAM, RF, and MAXENT models are the least computationally expensive, followed by BRT. The sdmTMB is the most expensive. Run times will depend on the dataset size, computational resources, and your R environment. Therefore, it is recommended that you generate sdmTMB models in sequence, but all other models can be generated in parallel.</p>
 <p>Below are example run times and run conditions for the final model runs for the Northeast CVA2.0 with 36 target species. This includes all of the steps outlined above: 1) building &amp; simplying the model, 2) performing cross validations, and extracting 3) predictions, 4) AUC, and 5) variable importance. All models were run in a remote R terminal, in an environment linked to <a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html">Intel’s oneAPI</a>, which includes a BLAS library (sdmTMB recommends linking R to an optimized BLAS library to improve runtimes; see the <a href="https://pbs-assess.github.io/sdmTMB/#installation">sdmTMB installation guide</a>), with 96 GB of available memory. Final datasets for each species had 100,000+ observations and were not downsampled. The exception to this was the random forest models which perform better with even distributions of presences and absences. All presences were retained and absences were randomly selected across regions in time and space to ensure an even distribution of absences.</p>
@@ -788,50 +488,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><em>Note 2: The addition of the oneAPI BLAS library increased MAXENT model run times in comparison to previous runs in environments not linked to oneAPI. These previous MAXENT run times in a standard R environment were more similar to GAM run times. However, sdmTMB run times decreased by ~2x (based on small scale tests), but needed to be run in sequence due to memory constraints (yes, even with 96GB of memory, there were memory contrains due to the size of the data set and memory needs of the model), whereas MAXENT models were memory-light enough to be run in parallel.</em></li>
 </ul>
 <p>The function <code>make_predictions</code> will predict the model to a provided timeseries. It has the option to mask off the predictions based on a provided bathymetry raster (<code>bathyR</code>).</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">'./Data/MOM6/norm_MOM6_082025.RData'</span>) <span class="co">#list of normalized environmental rasterStacks to predict to; number of layers will dictate the time series predicted to</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>abund <span class="ot">&lt;-</span> <span class="fu">make_predictions</span>(<span class="at">mod =</span> mod, <span class="at">model =</span> model, <span class="at">rasts =</span> norm, <span class="at">mask =</span> T, <span class="at">bathyR =</span> bathyR, <span class="at">bathy_max =</span> <span class="dv">1000</span>, <span class="at">se =</span> dfC, <span class="at">staticData =</span> <span class="st">'./Data/staticVariables_cropped_normZ.RData'</span>, <span class="at">xy_col =</span> <span class="fu">c</span>(<span class="st">'x'</span>, <span class="st">'y'</span>), <span class="at">month_col =</span> <span class="st">'month'</span>, <span class="at">year_col =</span> <span class="st">'year'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The output will be a rasterStack with the same resolution and number of layers as the time series of environmental data provided.</p>
 <p>The wrapper function <code>predictMods</code> loads the necessary data frames and models, and saves the output to the <code>output_rasters</code> directory within the working directory. Similar to other wrapper functions, it also includes skip and logging functionality, and it is written to be easily run in parallel.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">5</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>checks <span class="ot">&lt;-</span> <span class="fu">future_pmap</span>(<span class="fu">list</span>(<span class="at">..1 =</span> args<span class="sc">$</span>spp, <span class="at">..2 =</span> args<span class="sc">$</span>model, <span class="at">..3 =</span> args<span class="sc">$</span>skip), <span class="sc">~</span> <span class="fu">predictMods</span>(<span class="at">spp =</span> ..<span class="dv">1</span>, <span class="at">model =</span> ..<span class="dv">2</span>, <span class="at">skip =</span> ..<span class="dv">3</span>), <span class="at">.progress =</span> T,  <span class="at">.options =</span> <span class="fu">furrr_options</span>(<span class="at">seed =</span> <span class="dv">2025</span>))</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(sequential)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>It is important to note that for whatever reason, the MAXENT model cannot be predicted in parallel, so it must be run in sequence. However, predicting the models is much quicker and less memory-intensive than making the models themselves.</p>
 <p><code>make_predictions</code> will produce a list of rasters, one raster for each time in the time series, that can be converted to a rasterStack with the <code>stack</code> function. Predictions will range between 0 and 1, representing the probability of a species occuring in that grid cell at that time. If <code>mask = T</code>, predictions will be limited to a certain depth range. For example if <code>bathy_max = 1000</code> then predictions will not be made for areas where the bathymetry is greater than 1000 m as in the example from a GAM model for Atlantic cod below: <img src="gam_example.png" class="img-fluid" alt="Example layer from GAM predictions rasterStack"></p>
 <section id="alternative-for-sdmtmb-predictions" class="level3">
 <h3 class="anchored" data-anchor-id="alternative-for-sdmtmb-predictions">Alternative for sdmTMB Predictions</h3>
 <p>Regardless of working environment, predictions of sdmTMB models with <code>predictMods</code> can take significant amounts of time. The functions <code>makePredDF</code> and <code>predictSDM</code> offer an alternative workflow similar to <code>predictMods</code>. While <code>predictMods</code> performs the predictions for each timestep, this workflow generates a large dataframe of all environmental raster data across all timesteps, performs the prediction once for all timesteps, then creates the individual rasters for each timestep.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#all arguments are the same as `make_predictions`</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>allData <span class="ot">&lt;-</span> <span class="fu">makePredDF</span>(norm, <span class="at">bathyR =</span> bathyR, <span class="at">bathy_max =</span> <span class="dv">1000</span>, <span class="at">staticData =</span> <span class="st">'./Data/staticVariables_cropped_normZ.RData'</span>, <span class="at">mask =</span> T)</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod, <span class="at">newdata =</span> allData, <span class="at">type =</span> <span class="st">'response'</span>) <span class="co">#predict everything all at once in a single call </span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>pred<span class="sc">$</span>my <span class="ot">&lt;-</span> <span class="fu">paste</span>(pred<span class="sc">$</span>month, pred<span class="sc">$</span>year, <span class="at">sep =</span> <span class="st">'.'</span>)</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>abund <span class="ot">&lt;-</span> <span class="fu">predictSDM</span>(<span class="at">mod =</span> mod, <span class="at">df =</span> pred, <span class="at">staticData =</span> <span class="st">'./Data/staticVariables_cropped_normZ.RData'</span>) <span class="co">#make into rasters</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>This workflow can be easily modified to run in a loop across multiple species. It still takes significant amounts of memory (~50GB for the NE Shelf CVA2.0) so running in parallel is not recommended. Luckily, this code takes approximately 25 minutes to run for a single species.</p>
 </section>
 </section>
 <section id="building-predicting-ensemble" class="level2">
 <h2 class="anchored" data-anchor-id="building-predicting-ensemble">Building &amp; Predicting Ensemble</h2>
 <p>The ensemble is built using the framework from the EFHSDM package. Here it is included in the <code>make_sdm</code> function:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>ens <span class="ot">&lt;-</span> <span class="fu">make_sdm</span>(<span class="at">model =</span> <span class="st">'ens'</span>, <span class="at">ensembleWeights =</span> weights, <span class="at">ensemblePreds =</span> pds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Where the <code>weights</code> is a vector of model weights produced either by the EFHSDM function <code>MakeEnsemble</code> if using RMSE or another method and <code>pds</code> is a list of prediction outputs from the cross-validation of the models. The weights vector and predictions list must be in the same order to correctly assign weights to predictions.</p>
 <p>To predict the ensemble model, the <code>make_predictions</code> function is used:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>abund <span class="ot">&lt;-</span> <span class="fu">make_predictions</span>(<span class="at">model =</span> <span class="st">'ens'</span>, <span class="at">rasts =</span> abds, <span class="at">weights =</span> weights, <span class="at">staticData =</span> <span class="cn">NULL</span>, <span class="at">mask =</span> F, <span class="at">bathy_nm =</span> <span class="cn">NULL</span>, <span class="at">bathy_max =</span> <span class="cn">NULL</span>, <span class="at">se =</span> <span class="cn">NULL</span>, <span class="at">month_col =</span> <span class="cn">NULL</span>, <span class="at">year_col =</span> <span class="cn">NULL</span>, <span class="at">xy_col =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Where <code>abds</code> is a list of predicted rasters from each of the component models. Similar to building the model, the order of the rasters must match the order of the models in the <code>weights</code> vector so that the weights can be assigned appropriately. To predict the ensemble, which is just a weighted average of the component model predictions, only a list of predictor rasters and the model weights are required, so many of the other arguments are set to NULL.</p>
 <p>The wrapper function <code>makeEns</code> is provided to combine both the creation and prediction of the ensemble. Creating and predicting the ensemble is fast and quick since it is just performing a weighted average of the existing data, so no skip functionality is provided, but logging functionality remains. This can be run in parallel if desired.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">5</span>)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>checks <span class="ot">&lt;-</span> <span class="fu">future_pmap</span>(<span class="fu">list</span>(<span class="at">..1 =</span> spp.list<span class="sc">$</span>Name), <span class="sc">~</span> <span class="fu">makeEns</span>(<span class="at">spp =</span> ..<span class="dv">1</span>), <span class="at">.progress =</span> T,  <span class="at">.options =</span> <span class="fu">furrr_options</span>(<span class="at">seed =</span> <span class="dv">2025</span>))</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(sequential)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>The resulting list of rasters, which is again a list of raster layers, will be a weighted average of all provided model predictions. So, like the original predictions the values will range between 0 and 1. <img src="ensemble_example.png" class="img-fluid" alt="Example layer from ensemble predictions rasterStack"></p>
 
 
@@ -840,19 +513,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -924,7 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/KGallagher7\.github\.io\/CVA\.20");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1254,29 +914,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../content/install-setup.html" class="pagination-link" aria-label="Installation &amp; Setup">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Installation &amp; Setup</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Installation &amp; Setup</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../content/exposure-calculation.html" class="pagination-link" aria-label="Calculating Exposure">
-        <span class="nav-page-text">Calculating Exposure</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">Calculating Exposure</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>© CC-1.0</p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/KGallagher7/CVA2.0/edit/main/content/ensemble-sdms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/KGallagher7/CVA2.0/blob/main/content/ensemble-sdms.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/KGallagher7/CVA2.0/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
-    <div class="nav-footer-right">
-<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
-</div>
-  </div>
-</footer>
 
 
 
