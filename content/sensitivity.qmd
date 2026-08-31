@@ -3,34 +3,38 @@ title: Sensitivity
 ---
 
 ## Overview
-Species sensitivity to change will be measured qualitatively as in the original CVA. Species experts will rank the impacts of different life history attributes on species sensitivity.  
 
-### A Note on Sensitivity vs Adaptability 
-The Boyce et al 2022 and 2024 papers seperated species sensitivity and adaptability attributes. In the original CVA, sensitivity and adaptive attributes were grouped together, as removing one or the other significantly changed the results. Furthermore, [Morrison et al 2015](http://www.st.nmfs.noaa.gov/Assets/ecosystems/climate/documents/TM%20OSF3.pdf) considered sensitivity and adaptivity inverses of each other (ie higher sensitivity would mean that a species is less adaptive) and decided to group them. 
+Species sensitivity to change will be measured qualitatively as in the original CVA. Species experts will rank the impacts of different life history attributes on species sensitivity.
 
-##Sensitivity Attributes
-The sensitivity attributes used in the CVA2.0 were similar to those used in the Northeast US for the original. A handful were updated to reflect new insights into the impacts of climate change on species life histories since the original analysis. 
+### A Note on Sensitivity vs Adaptability
 
-The following sensitivity attributes were used in the CVA2.0 analysis for the Northeast US. Updated attributes are bolded.  
+The Boyce et al 2022 and 2024 papers seperated species sensitivity and adaptability attributes. In the original CVA, sensitivity and adaptive attributes were grouped together, as removing one or the other significantly changed the results. Furthermore, [Morrison et al 2015](http://www.st.nmfs.noaa.gov/Assets/ecosystems/climate/documents/TM%20OSF3.pdf) considered sensitivity and adaptivity inverses of each other (ie higher sensitivity would mean that a species is less adaptive) and decided to group them.
 
-* **Juvenile Habitat Requirements**
-* Prey Specificity
-* **Relationship to Calcified Organisms**
-* **Complexity in Reproductive Strategy**
-* **Historical Variability in Temmperature**
-* **Egg and Larval Survival and Settlement Requirements**
-* Stock Size/Status
-* **Other Stressors**
-* Population Growth Rate
-* Dispersal of Early Life Stages
-* Adult Mobility
-* Spawning Cycle
+## Sensitivity Attributes 
+
+The sensitivity attributes used in the CVA2.0 were similar to those used in the Northeast US for the original. A handful were updated to reflect new insights into the impacts of climate change on species life histories since the original analysis.
+
+The following sensitivity attributes were used in the CVA2.0 analysis for the Northeast US. Updated attributes are **bolded**.
+
+-   **Juvenile Habitat Requirements**
+-   Prey Specificity
+-   **Relationship to Calcified Organisms**
+-   **Complexity in Reproductive Strategy**
+-   **Historical Variability in Temperature**
+-   **Egg and Larval Survival and Settlement Requirements**
+-   Stock Size/Status
+-   **Other Stressors**
+-   Population Growth Rate
+-   Dispersal of Early Life Stages
+-   Adult Mobility
+-   Spawning Cycle
 
 Full text of the attributes will be made available once finalized.
 
 ## Expert Scoring
-Experts across NOAA, research, and industry were asked to score how species life history traits may make them sensitive to climate change, following the original methods in [Morrison et al 2015](http://www.st.nmfs.noaa.gov/Assets/ecosystems/climate/documents/TM%20OSF3.pdf). Experts were provided basic life history information relevant to the sensitivity attributes. The species profiles from the original analysis were updated and reviewed for consistency by 2 NOAA scientists. Experts were asked to score species both within and outside their field of expertise. Each species was scored by five experts, with at least two scorers per species considered experts on that species guild. 
 
-Briefly, experts assign a score based on four scoring bins (low, moderate, high, and very high) for each attribute using their expert judgement and life history information. Each expert had five tallies to distribute across the four bins to help quantify certainty. If an expert was certain about a score, they could put all five tallies in a single bin. Conversely, if they were uncertain, the tallies could be distributed across multiple bins. Certainty was quantified using a bootstrap analysis by resampling tallies with replacement and recalculating the attribute and sensitivity scores. 
+Experts across NOAA, research, and industry were asked to score how species life history traits may make them sensitive to climate change, following the original methods in [Morrison et al 2015](http://www.st.nmfs.noaa.gov/Assets/ecosystems/climate/documents/TM%20OSF3.pdf). Experts were provided basic life history information relevant to the sensitivity attributes. The species profiles from the original analysis were updated and reviewed for consistency by 2 NOAA scientists. Experts were asked to score species both within and outside their field of expertise. Each species was scored by five experts, with at least two scorers per species considered experts on that species guild.
 
-Experts were asked to score species independently, and then met for three virtual discussion workshops to discuss scores with other experts. They were then given the chance to finalize their scores based on these discussions. We asked experts  to **not** consider the scores from the original analysis to reduce bias in the results. 
+Briefly, experts assign a score based on four scoring bins (low, moderate, high, and very high) for each attribute using their expert judgement and life history information. Each expert had five tallies to distribute across the four bins to help quantify certainty. If an expert was certain about a score, they could put all five tallies in a single bin. Conversely, if they were uncertain, the tallies could be distributed across multiple bins. Certainty was quantified using a bootstrap analysis by resampling tallies with replacement and recalculating the attribute and sensitivity scores.
+
+Experts were asked to score species independently, and then met for three virtual discussion workshops to discuss scores with other experts. They were then given the chance to finalize their scores based on these discussions. We asked experts to **not** consider the scores from the original analysis to reduce bias in the results.

@@ -7,11 +7,12 @@ title: Methods Overview
 The CVA2.0 will take a semi-quantiative approach, using both quantitative and qualitative methods. 
 
 ### Quantitative Methods 
-Species distributions will be quantified using ensemble species distribution models, forced by environmental covariates from the MOM6 hindcast (1993 - 2019) and driven by fisheries dependent and independent datasets. These species distribution models will then be projected into the future using the MOM6 decadal and long-term forecasts to quantify changes in species distribution. 
-
-We will be able to use these same decadal and long-term (to 2100) forecasts to quantify changes in important environmental covariates over time, to determine drivers of change. 
+Species distributions will be quantified using ensemble species distribution models, forced by environmental covariates from the MOM6 hindcast (1993 - 2023) and driven by fisheries dependent and independent datasets. These species distribution models will then be projected into the future using the MOM6 decadal and long-term forecasts to quantify changes in species distribution and their drivers. 
 
 ### Qualitative Methods 
 Species sensitivity will be estimated following similar methods to the original CVA. We will perform a literature review to update our understanding of important life history attributes and solict expert feedback on the most important life history attributes. 
 
+
+### R Package
+All analysis was conducted in R. An R package is under active development to ensure methods can be replicated. Vignettes will be available to describe the functions. Workflows are also being documented and will be provided in their own GitHub repository. 
 

@@ -7,7 +7,10 @@ We utilized two different data types for this work - fisheries independent and d
 ### Fisheries Independent Data
 Fisheries independent data comes from sources outside of the fishing industry. These often come in the form of regular surveys run by federal or state-level management bodies. Traditionally, these surveys occur in the spring and fall. For the CVA2.0 in the Northeast, we used the following surveys: 
 
-* [NOAA Northeast Ecosystems Surveys](https://www.fisheries.noaa.gov/about/northeast-ecosystems-surveys)
+* [Northeast Fisheries Science Center (NEFSC) Bottom Trawl](https://www.fisheries.noaa.gov/about/northeast-ecosystems-surveys)
+* [NEFSC Northern Shrimp Survey](https://www.fisheries.noaa.gov/inport/item/25087)
+* [NEFSC Gulf of Maine Bottom Long Line Survey](https://www.fisheries.noaa.gov/new-england-mid-atlantic/science-data/gulf-maine-bottom-longline-survey)
+* [NEFSC Atlantic Surfclam and Ocean Quahog Survey](https://www.fisheries.noaa.gov/inport/item/22565)
 * [Northeast Area Monitoring and Assessment Program Nearshore Trawl](https://www.neamap.net/neamap-nearshore-trawl/)
 * [Maine-New Hampshire Inshore Trawl Survey](https://www.neamap.net/menh-inshore-trawl/)
 * [Massachusetts Division of Marine Fisheries Bottom Trawl Survey](https://www.neamap.net/madmf-bottom-trawl/)
@@ -17,7 +20,10 @@ Fisheries independent data comes from sources outside of the fishing industry. T
 * [Delaware Trawl Surveys](https://dnrec.delaware.gov/fish-wildlife/fishing/research/)
 
 ### Fisheries Dependent Data 
-Fisheries dependent data is data collected by commercial and recreational fishers. In the United States, commercial fisheries data is collected by fisheries observers in the [National Observer Program](https://www.fisheries.noaa.gov/national/fisheries-observers/national-observer-program), Gillnet Observer Program, and Pelagic Observer Program. These are trained individuals who accompany fishing boats on their trips to collect data on the species caught. Data from recreational fisheries is collected using post-effort in person or phone surveys at different docks via the logbook and Large Pelagics Survey programs. 
+Fisheries dependent data is data collected by commercial and recreational fishers. In the United States, commercial fisheries data is collected by fisheries observers in the [National Observer Program](https://www.fisheries.noaa.gov/national/fisheries-observers/national-observer-program), [Gillnet Observer Program](https://www.fisheries.noaa.gov/southeast/fisheries-observers/southeast-gillnet-observer-program
+), and [Pelagic Observer Program](https://www.fisheries.noaa.gov/southeast/fisheries-observers/southeast-pelagic-observer-program
+). These are trained individuals who accompany fishing boats on their trips to collect data on the species caught. Data from recreational fisheries is collected using post-effort in person or phone surveys at different docks via the Southeast Fisheries Science Center's Logbook and the National Marine Fisheries Services' [Large Pelagics Survey](https://www.fisheries.noaa.gov/recreational-fishing-data/large-pelagics-survey-glance
+) programs. 
 
 ### Combining Fisheries Independent and Dependent Data
 Fisheries independent and dependent data are collected using different methods - they could fish for different lengths of time, at different speeds, or use different equipment. This is especially true for fisheries dependent data, which may used specialized equipment depending on the species being targeted. Therefore, we cannot compare the number of individuals caught across these methods. As a result, we will only examine whether species are present or absent and will not model the number, or abundance, of species. While different fishing methods could impact the ability to catch a particular species, thus impacting our results, we believe that this approach will account for most differences and will assume that all datasets are sampling for long enough periods of time and appropriate equipment to sample all species.
@@ -26,7 +32,7 @@ Fisheries independent and dependent data are collected using different methods -
 We will be using [species distribution modeling](/content/sdm-methods.qmd) to quantify the relationships between species presence and their environment. We are using the Modular Ocean Model (MOM) 6 hindcast data to drive these models. The MOM6 is developed by the [Changing Fisheries and Ecosystem Initiative](https://psl.noaa.gov/cefi_portal/) and includes both a physical ocean model and a coupled biogeochemical model. 
 
 ### For the CVA2.0
-We are using the hindcast timeseries from 1993-2019 from the MOM6 for the Northwest Atlantic to build the species distribution models. We will then project these models into the future using the decadal and long-term projections from the MOM6. 
+We are using the hindcast timeseries from 1993-2023 from the MOM6 for the Northwest Atlantic to build the species distribution models. We will then project these models into the future using the decadal and long-term projections from the MOM6. 
 
 Covariates used to build the species distribution models include: 
 
@@ -40,5 +46,5 @@ Covariates used to build the species distribution models include:
 * Downward particulate organic carbon (POC) flux
 * Water column net primary productivity (NPP)
 
-Covariates will be normalized to long term (1993 - 2019) averages and matched to species based on their habitat and prey preferences. For example, the species distribution model for summer flounder will be built using bottom temperature and salinity, bottom aragonite solubility, downward POC flux, and NPP. 
+Covariates will be normalized to long term (1993 - 2023) averages and matched to species based on their habitat and prey preferences. For example, the species distribution model for summer flounder will be built using bottom temperature and salinity, bottom aragonite solubility, downward POC flux, and NPP. 
 
