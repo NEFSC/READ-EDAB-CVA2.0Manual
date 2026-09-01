@@ -85,7 +85,7 @@ Blueline tilefish received a **Moderate** sensitivity score. Certainty was 90%. 
 
 Adult blueline tilefish are primarily demersal. They are thought to be sedentary and remain close to their dens, similar to goldenline tilefish [@schmidtke2017life]. Maximum ages upwards of 50 years have been recorded [@schmidtke2017life; @spanik2023validating]. They reach maturity anywhere from a few months to 3.7 years off the coast of Virginia to upwards of 5 years off the southeast US [@ross1982feeding; @harris2004age; @low2023characterizing].
 
-Blueline tilefish were not included in the 2016 Climate Vulnerability Assessment for the Northeast US, but were included in the recent Climate Vulnerability Assessment for the Southeast US [@Burton2023-sv]. Blueline tilefish received a High sensitivity score in that assessment. This score was driven by Sensitivity to Temperature and Population Growth Rate attributes. The experts in that assessment suggested that long-lived, slow-growing nature of blueline tilefish are believed to make them susceptible to overfishing [@Burton2023-sv].
+Blueline tilefish were not included in the 2016 Climate Vulnerability Assessment for the Northeast US, but were included in the recent Climate Vulnerability Assessment for the Southeast US [@burton2023climate]. Blueline tilefish received a High sensitivity score in that assessment. This score was driven by Sensitivity to Temperature and Population Growth Rate attributes. The experts in that assessment suggested that long-lived, slow-growing nature of blueline tilefish are believed to make them susceptible to overfishing [@burton2023climate].
 
 ## Data Quality Metrics
 
@@ -105,7 +105,7 @@ add text here
 
 ### Directional Effect:
 
-The impact of climate change on blueline tilefish is expected to be **neutral**, with 92% certainty in expert scores. It is possible that blueline tilefish biomass may increase with increasing temperatures, as landings in the Mid-Atlantic have been correlated to increasing temperatures [@pinsky2018preparing; @rogers2019shifting]. However, little research has been conducted on how blueline tilefish will respond to climate change. The Climate Vulnerability Assessment for the Southeast US also predicted that the effect of climate change on blueline tilefish would be neutral [@Burton2023-sv].
+The impact of climate change on blueline tilefish is expected to be **neutral**, with 92% certainty in expert scores. It is possible that blueline tilefish biomass may increase with increasing temperatures, as landings in the Mid-Atlantic have been correlated to increasing temperatures [@pinsky2018preparing; @rogers2019shifting]. However, little research has been conducted on how blueline tilefish will respond to climate change. The Climate Vulnerability Assessment for the Southeast US also predicted that the effect of climate change on blueline tilefish would be neutral [@burton2023climate].
 
 ## Climate Effects on Abundance and Distribution
 
