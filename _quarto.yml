@@ -26,49 +26,49 @@ book:
         - content/exposure-calculation.qmd
         - content/sensitivity_calculation.qmd
     - part: content/species_narrative_intro.qmd
-    #  chapters:
-    #    - chapters/American lobster.qmd
-    #    - chapters/Atlantic cod.qmd
-    #    - chapters/Atlantic croaker.qmd
-    #    - chapters/Atlantic halibut.qmd
-    #    - chapters/Atlantic herring.qmd
-     #   - chapters/Atlantic mackerel.qmd
-      #  - chapters/Atlantic menhaden.qmd
-       # - chapters/Atlantic sea scallop.qmd
-   #     - chapters/Atlantic surfclam.qmd
-    #    - chapters/Atlantic wolffish.qmd
-     #   - chapters/Black sea bass.qmd
-      #  - chapters/Blue crab.qmd
-       # - chapters/Bluefin tuna.qmd
-        #- chapters/Bluefish.qmd
-  #      - chapters/Blueline tilefish.qmd
-   #     - chapters/Butterfish.qmd
-    #    - chapters/Chub mackerel.qmd
-     #   - chapters/Cobia.qmd
-      #  - chapters/Eastern oyster.qmd
-       # - chapters/Golden tilefish.qmd
-        #- chapters/Haddock.qmd
- #       - chapters/Longfin squid.qmd
-  #      - chapters/Monkfish.qmd
-   #     - chapters/Northern Quahog.qmd
-    #    - chapters/Ocean pout.qmd
-     #   - chapters/Ocean quahog.qmd
-      #  - chapters/Pollock.qmd
-       # - chapters/Red drum.qmd
-        #- chapters/Scup.qmd
-#        - chapters/Shortfin squid.qmd
- #       - chapters/Smooth dogfish.qmd
-  #      - chapters/Softshell clam.qmd
-   #     - chapters/Spanish mackerel.qmd
+      chapters:
+        - chapters/American lobster.qmd
+        - chapters/Atlantic cod.qmd
+        - chapters/Atlantic croaker.qmd
+        - chapters/Atlantic halibut.qmd
+        - chapters/Atlantic herring.qmd
+        - chapters/Atlantic mackerel.qmd
+        - chapters/Atlantic menhaden.qmd
+        - chapters/Atlantic sea scallop.qmd
+        - chapters/Atlantic surfclam.qmd
+        - chapters/Atlantic wolffish.qmd
+        - chapters/Black sea bass.qmd
+        - chapters/Blue crab.qmd
+        - chapters/Bluefin tuna.qmd
+        - chapters/Bluefish.qmd
+        - chapters/Blueline tilefish.qmd
+        - chapters/Butterfish.qmd
+        - chapters/Chub mackerel.qmd
+        - chapters/Cobia.qmd
+        - chapters/Eastern oyster.qmd
+        - chapters/Golden tilefish.qmd
+        - chapters/Haddock.qmd
+        - chapters/Longfin squid.qmd
+        - chapters/Monkfish.qmd
+        - chapters/Northern Quahog.qmd
+        - chapters/Ocean pout.qmd
+        - chapters/Ocean quahog.qmd
+        - chapters/Pollock.qmd
+        - chapters/Red drum.qmd
+        - chapters/Scup.qmd
+        - chapters/Shortfin squid.qmd
+        - chapters/Smooth dogfish.qmd
+        - chapters/Softshell clam.qmd
+        - chapters/Spanish mackerel.qmd
         #- chapters/Spiny dogfish.qmd
-    #    - chapters/Striped bass.qmd
-     #   - chapters/Summer flounder.qmd
-      #  - chapters/Tautog.qmd
-       # - chapters/White hake.qmd
-        #- chapters/Windowpane flounder.qmd
-      #  - chapters/Winter flounder.qmd
-       # - chapters/Witch flounder.qmd
-        #- chapters/Yellowtail flounder.qmd
+        - chapters/Striped bass.qmd
+        - chapters/Summer flounder.qmd
+        - chapters/Tautog.qmd
+        - chapters/White hake.qmd
+        - chapters/Windowpane flounder.qmd
+        - chapters/Winter flounder.qmd
+        - chapters/Witch flounder.qmd
+        - chapters/Yellowtail flounder.qmd
     - content/acknowledgements.qmd
 
 bibliography: utils/references.bib

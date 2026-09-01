@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = Low
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 93%
 
 </div>
 :::::
@@ -62,12 +62,12 @@ here::here("test_images/Longfin squid_sensitivity_summary_table.png")
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| Metric               | Current Assessment | Previous Assessment(s) | Change   |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability*      |                    |                        |          |
+| *Exposure*           |                    |                        |          |
+| *Sensitivity*        | Low                | Low                    | None     |
+| *Directional Effect* | Neutral            | Positive               | Decrease |
 
 ## Score Drivers
 
@@ -81,13 +81,15 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+Long-finned squid received a **Low** sensitivity score. Certainty was 98% according to bootstrap results. No attributes scored greater than 2.5. Complexity in Reproductive Strategy received the highest score (2.4). Eggs are cemented to bottom substrate, which can include algae and boulders that may be impacted by dredging activities in nearshore spawning grounds [@jacobson2005essential; @guyant2022northeast].
+
+Long-finned squid also received a Low sensitivity score in the previous Climate Vulnerability Assessment for the Northeast Shelf. Similar to our results, this previous score was driven by Early Life History Requirements due to the benthic egg masses of this species [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-add text here
+93% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified.
 
 ### Model Confidence:
 
@@ -101,11 +103,15 @@ add text here
 
 ### Directional Effect:
 
-add text here
+Experts predicted that climate change would have **neutral** impacts on long-finned squid. Certainty was 95%. The short life-span of long-finned squid can make it challenging to understand the effects of climate change. In warmer temperatures, squid may grow faster and mature earlier, but they may also be negatively impacted by ocean acidification [@pecl2008potential; @arkhipkin2015world] . In the previous assessment along the Northeast shelf, experts predicted that climate change would have a positive impact on long-finned squid, with a low amount of certainty [@hare2016vulnerability].
 
-## Climate Effects on Abundance and Distribution:
+## Climate Effects on Abundance and Distribution
 
-## Life History Synopsis:
+Cephalopods have been shown to be sensitive to environmental variability and climate change, due to their short lifespan [@moustahfid2021ecological]. Inshore squids, such as longfin, may have complex responses to climate change. As temperatures increase, squids will likely hatch smaller and earlier, grow faster, mature at a smaller size, and have shorter life spans. They may also require more food and oxygen, but a reduced capacity to cope without food [@pecl2008potential]. Longfin squid recruitment may negatively be affected by impacts of increasing ocean acidification on the paralarval stage [@arkhipkin2015world]. Longfin squid raised under elevated pCO^2^ increased hatching time (~24 hours longer) and had shorter mantle lengths as well as significantly reduced statolith surface area (by 25%) and abnormally shaped and porous statoliths [@kaplan2013adverse]. Abundance and distribution changes have been linked to the North Atlantic Oscillation, Gulf Stream, and surface fronts on the outer continental shelf [@dawe2007ocean; @hendrickson2023cyclical; @manderson2011ocean].
+
+## Life History Synopsis
+
+In the Northwest Atlantic, longfin squid are most abundant from Georges Bank to Cape Hatteras although their range expands from Newfoundland to the Gulf of Venezuela [@jacobson2005essential]. The North Atlantic stock undertakes seasonal migrations: moving offshore in the fall to overwinter along the shelf edge and slope and migrating inshore in the spring following warming water temperatures to spawn [@hatfield2002geographic]. More recent studies after the development of statolith aging techniques highlight a peak in spawning from late spring to summer [@hatfield2002geographic; @macy2001seasonal] and hatching in late summer [@jacobson2005essential]. Some spawning occurs throughout the year both inshore and offshore depending on hatching month and length-at-age [@macy1994application; @macy2001seasonal], with winter spawning thought to occur primarily south of Cape Hatteras [@hatfield2002geographic]. Eggs incubate for 11 - 27 days on sandy or muddy bottoms attached to solid substrate, with faster development times are warmer temperatures. The duration of the larval stage is unclear, but they occupy coastal surface waters. Once juveniles, they transition from inhabiting surface waters to a demersal lifestyle [@jacobson2005essential]. The Gulf Stream and warm core rings may facilitate the recruitment transport of  larval and juvenile squid northward, but potential for inputs to the population from the Southeast U.S. Continental Shelf and offshore are difficult to quantify [@hatfield2002geographic]. Juveniles and adults are generally demersal and inhabit the continental shelf and upper slope to depths of 400 m. This varies seasonally, with adults occupying shallower habitats in summer and fall, and deeper habitats in the winter. Diel vertical migrations have been reported [@jacobson2005essential]. Juveniles consume planktonic organisms, primarily copepods. Their preferred prey type varies with size [@jacobson2005essential]. Larger individuals feed on crustaceans and small fish. Diets shift seasonally from crustacean-dominated in the spring to fish-dominated in the fall. Cannibalism is observed in individuals larger than 5 cm [@jacobson2005essential]. Longfin squid are prey for a variety of finfish, marine mammals, and birds [@jacobson2005essential]. Most statolith-aging studies suggest that longfin squid have a short lifespan of around 1 year or less, reaching maturity shortly before spawning and senescence [@macy2001seasonal]. Longfin squid are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. The stock is not overfished, and overfishing reference points are not available [@mafmc2025longfin]. 
 
 ## Figures
 
