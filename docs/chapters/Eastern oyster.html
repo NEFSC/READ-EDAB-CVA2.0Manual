@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Calculating Exposure – Climate Vulnerability Assessment 2.0</title>
+<title>Eastern oyster (Crassostrea virginica) – Climate Vulnerability Assessment 2.0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/sensitivity_calculation.html" rel="next">
-<link href="../content/ensemble-sdms.html" rel="prev">
+<link href="../chapters/Golden tilefish.html" rel="next">
+<link href="../chapters/Cobia.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Eastern oyster.html"><span class="chapter-title">Eastern oyster (<em><code>Crassostrea virginica</code></em>)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Calculating Exposure</span></a>
+  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calculating Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -279,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Eastern oyster.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Eastern oyster (<em><code>Crassostrea virginica</code></em>)</span></a>
+  <a href="../chapters/Eastern oyster.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Eastern oyster (<em><code>Crassostrea virginica</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -409,19 +429,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#calculating-and-ranking-raw-exposure" id="toc-calculating-and-ranking-raw-exposure" class="nav-link" data-scroll-target="#calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</a></li>
-  <li><a href="#creating-species-specific-exposure-time-series-and-maps-for-each-variable" id="toc-creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="nav-link" data-scroll-target="#creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</a></li>
-  <li><a href="#calculating-total-exposure-for-each-species" id="toc-calculating-total-exposure-for-each-species" class="nav-link" data-scroll-target="#calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#changes-from-previous-assessments" id="toc-changes-from-previous-assessments" class="nav-link" data-scroll-target="#changes-from-previous-assessments">Changes from Previous Assessment(s)</a></li>
+  <li><a href="#score-drivers" id="toc-score-drivers" class="nav-link" data-scroll-target="#score-drivers">Score Drivers</a>
+  <ul class="collapse">
+  <li><a href="#vulnerability" id="toc-vulnerability" class="nav-link" data-scroll-target="#vulnerability">Vulnerability:</a></li>
+  <li><a href="#climate-exposure" id="toc-climate-exposure" class="nav-link" data-scroll-target="#climate-exposure">Climate Exposure:</a></li>
+  <li><a href="#biological-sensitivity" id="toc-biological-sensitivity" class="nav-link" data-scroll-target="#biological-sensitivity">Biological Sensitivity:</a></li>
+  </ul></li>
+  <li><a href="#data-quality-metrics" id="toc-data-quality-metrics" class="nav-link" data-scroll-target="#data-quality-metrics">Data Quality Metrics</a>
+  <ul class="collapse">
+  <li><a href="#life-history-data-quality" id="toc-life-history-data-quality" class="nav-link" data-scroll-target="#life-history-data-quality">Life History Data Quality:</a></li>
+  <li><a href="#model-confidence" id="toc-model-confidence" class="nav-link" data-scroll-target="#model-confidence">Model Confidence:</a></li>
+  </ul></li>
+  <li><a href="#additional-metrics" id="toc-additional-metrics" class="nav-link" data-scroll-target="#additional-metrics">Additional Metrics</a>
+  <ul class="collapse">
+  <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
+  <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
+  </ul></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Eastern oyster.html"><span class="chapter-title">Eastern oyster (<em><code>Crassostrea virginica</code></em>)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Calculating Exposure</span></h1>
+<h1 class="title"><span class="chapter-title">Eastern oyster (<em><code>Crassostrea virginica</code></em>)</span></h1>
 </div>
 
 
@@ -438,133 +476,211 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Exposure is calculated from MOM6 forecast data using the same methods to calculate and rank raw exposure as the CVA1.0 on the MOM6 environmental data. We then use the predicted species distributions and the relative importance of covariates in the ensemble models to calculate variable-specific and total exposure for each species.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Scores</strong></p>
+<p>Vulnerability =</p>
+<p>Climate Exposure =</p>
+<p>Biological Sensitivity = Very High</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Data Quality</strong></p>
+<p>Model Confidence Score =</p>
+<p>Life History Data Quality = 90%</p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Eastern oyster_exposure_summary_table.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Eastern oyster_sensitivity_summary_table.png"</code></pre>
+</div>
+</div>
 </section>
-<section id="calculating-and-ranking-raw-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</h2>
-<p>As in the CVA1.0, raw exposure for each environmental variable is calculated using a z-score, which is the difference in mean conditions in a future and present timeseries divided by present day standard deviations.</p>
-<p>The function <code>calcExposure</code> will take the output from <code>pull_hind</code> and/or <code>pull_forecast</code> (a list of rasterStacks) and calculate monthly raw exposure for each environmental variable in the list:</p>
-<p>Where <code>presentRasts</code> and <code>futureRasts</code> are lists of rasterStacks with the same length. These are the raw timeseries over the desired time periods. Remember that <code>pull_hind</code> and <code>pull_forecast</code> pull the complete timeseries for the desired MOM6 run, so you will need to subset their outputs accordingly if desired. <code>calcExposure</code> will produce a list of rasterStacks with the same length as the provided lists. Each rasterStack will have 12 layers, one for each month. <img src="bottomT_exposure.jpg" class="img-fluid" alt="Bottom Temperature Raw Exposure comparing 2019-2019 and 2025-2035"></p>
-<p>The next step is to rank the raw exposure. Since the CVA is designed to help determine which species are at risk to the greatest exposure, these ranks are based on this goal, rather than the distribution of the data themselves. We use the same ranks as the CVA1.0:</p>
+<section id="changes-from-previous-assessments" class="level2">
+<h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
-<caption>Raw Exposure Ranks</caption>
+<colgroup>
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Score</th>
-<th style="text-align: center;">Raw Exposure</th>
-<th style="text-align: center;">Rank</th>
+<th>Metric</th>
+<th>Current Assessment</th>
+<th>Previous Assessment(s)</th>
+<th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">&lt; 0.5</td>
-<td style="text-align: center;">1</td>
+<td><em>Vulnerability</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">0.5 - 1.5</td>
-<td style="text-align: center;">2</td>
+<td><em>Exposure</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">1.5 - 2</td>
-<td style="text-align: center;">3</td>
+<td><em>Sensitivity</em></td>
+<td>Very High</td>
+<td>High</td>
+<td>Increase</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">&gt; 2</td>
-<td style="text-align: center;">4</td>
+<td><em>Directional Effect</em></td>
+<td>Neutral</td>
+<td>Negative</td>
+<td>Increase</td>
 </tr>
 </tbody>
 </table>
-<p>The function <code>rankExposure</code> performs the ranking. It also provides the option to multiply raw exposure values for certain by -1 (aka flip). This option was included because the direction of change and the meaning of that change may differ across environmental variables. For example, an increase in surface temperatures would have a positive exposure, whereas a decrease in pH would have a negative exposure; both changes are considered bad for the environment, but the signs differ due to how these variables are quantified. The <code>flip</code> and <code>noFlipList</code> options provide the option to flip the signs of raw exposure for all variables <em>except</em> those listed in <code>noFlipList</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bottomT_exposure_ranked.jpg" class="img-fluid figure-img"></p>
-<figcaption>Bottom Temperature Ranked Exposure comparing 2019-2019 and 2025-2035</figcaption>
-</figure>
+</section>
+<section id="score-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="score-drivers">Score Drivers</h2>
+<section id="vulnerability" class="level3">
+<h3 class="anchored" data-anchor-id="vulnerability">Vulnerability:</h3>
+<p>add text here</p>
+</section>
+<section id="climate-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="climate-exposure">Climate Exposure:</h3>
+<p>add text here</p>
+</section>
+<section id="biological-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
+<p>The Eastern oyster received a <strong>Very High</strong> sensitivity score, with 100% certainty according to bootstrap analysis. Five attributes had scores greater than 3.5: Adult Mobility (4), Other Stressors (4), Relationship to Calcified Organisms (3.9), Complexity in Reproductive Strategy (3.8), and Egg and Larval Survival and Settlement Requirements (3.5).</p>
+<p>Eastern Oysters are sessile once they settle out of the plankton, and settle in estuarine habitats. As a result, they are exposed to a variety of stressors due to urbanization impacts such as hypoxia, loss of seagrass beds, dredging, and changes to freshwater inputs <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. Spawning is initiated by warmer temperatures. Settling out of the plankton also is dependent on temperature and the presence of conspecifics. Because recruitment is density dependent, population collapse can be sudden.</p>
+<p>In the 2016 Assessment, Eastern Oysters received a High sensitivity score <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. This was driven by Sensitivity to Ocean Acidification, Adult Mobility, and Other Stressors, similar to our results.</p>
+</section>
+</section>
+<section id="data-quality-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
+<section id="life-history-data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
+<p>90% of data quality scores were greater than or equal to 2, indicating excellent data quality. Population Growth Rate and Stock Size/Status were identified as data gaps (mean attribute data quality score &lt; 2).</p>
+</section>
+<section id="model-confidence" class="level3">
+<h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
+<p>add text here</p>
+</section>
+</section>
+<section id="additional-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="additional-metrics">Additional Metrics</h2>
+<section id="distribution-shifts" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-shifts">Distribution Shifts:</h3>
+<p>add text here</p>
+</section>
+<section id="directional-effect" class="level3">
+<h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
+<p>Experts predicted that climate change would have a <strong>neutral</strong> effect on Eastern Oysters. Certainty was low at 60%. While oysters live in vulnerable estuarine habitats <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>, spawning occurs throughout the year when temperatures are warm <span class="citation" data-cites="berringan1991oyster">(<a href="#ref-berringan1991oyster" role="doc-biblioref">Berringan et al. 1991</a>)</span>. Aquaculture programs also help contribute to population recovery <span class="citation" data-cites="mackenzie1981biotic">(<a href="#ref-mackenzie1981biotic" role="doc-biblioref">MacKenzie 1981</a>)</span>. In the previous Assessment, experts predicted that climate change would have a negative impact on Eastern Oysters.</p>
+</section>
+</section>
+<section id="climate-effects-on-abundance-and-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Climate change, warmer temperatures, and perhaps different tidal ranges, may increase competition for resources with current competitors, like hooked mussel, invasive species such as <em>Didemnum</em> sp., or increase exposure to predators like veined rapa whelk <span class="citation" data-cites="white1996predators">(<a href="#ref-white1996predators" role="doc-biblioref">White and Wilson 1996</a>)</span>. Depletion of oyster beds will also likely have negative effects for many marine species and habitats, for they provide refuge and homes for many fish and invertebrates species and help prevent erosion <span class="citation" data-cites="eobrt2007status">(<a href="#ref-eobrt2007status" role="doc-biblioref">Eastern Oyster Biological Review Team (EOBRT) 2007</a>)</span>. Hurricanes can cover oysters in silt, wash them off beds, or impose extended “freshettes” on oyster beds to the degree that they are significantly impaired and need restoration. This may become more problematic, for hurricanes are thought to increase with increased warming temperatures and climate change <span class="citation" data-cites="perret1999oyster">(<a href="#ref-perret1999oyster" role="doc-biblioref">Perret et al. 1999</a>)</span>. Since adult oysters are sessile and inhabit mainly highly vulnerable habitats in areas with high climate exposure, their spawning habitat is also highly vulnerable <span class="citation" data-cites="farr2021assessment">(<a href="#ref-farr2021assessment" role="doc-biblioref">Farr et al. 2021</a>)</span>.</p>
+</section>
+<section id="life-history-synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Eastern oysters are found along the eastern U.S. from the Gulf of St.&nbsp;Lawrence to the Gulf of America. They inhabit brackish and salty waters, forming beds or reefs by attaching to each other or other hard substrate <span class="citation" data-cites="ozbay2014eastern">(<a href="#ref-ozbay2014eastern" role="doc-biblioref">Ozbay et al. 2014</a>)</span>. Eastern oysters are a keystone species, and provide valuable habitat for benthic and intertidal organisms. Oysters are sessile filter feeders, contributing to increased water quality through reduced sediment suspension and nutrient uptake and sequestration <span class="citation" data-cites="ozbay2014eastern">(<a href="#ref-ozbay2014eastern" role="doc-biblioref">Ozbay et al. 2014</a>)</span>. Eastern oyster populations in the Mid-Atlantic and Gulf declined in the 19th and 20th centuries, mainly from anthropogenic factors such as land use, habitat degradation, and overharvesting. Disease mortality from Dermo and MSX continues to diminish oyster recovery <span class="citation" data-cites="eobrt2007status">(<a href="#ref-eobrt2007status" role="doc-biblioref">Eastern Oyster Biological Review Team (EOBRT) 2007</a>)</span>. Aquaculture production of oysters contributes to population recovery and habitat restoration programs across the East Coast <span class="citation" data-cites="mackenzie1981biotic">(<a href="#ref-mackenzie1981biotic" role="doc-biblioref">MacKenzie 1981</a>)</span>. Oysters spawn during the summer in the North and Mid-Atlantic and throughout most of the year in the South Atlantic when temperatures remain above 20°C and salinities above 10ppt <span class="citation" data-cites="berringan1991oyster">(<a href="#ref-berringan1991oyster" role="doc-biblioref">Berringan et al. 1991</a>)</span>. The first larval stage (trochophore) is formed four to six hours following fertilization. Larvae normally settle two to three weeks after hatching, but can last up to 2 months <span class="citation" data-cites="eobrt2007status">(<a href="#ref-eobrt2007status" role="doc-biblioref">Eastern Oyster Biological Review Team (EOBRT) 2007</a>)</span>. Larvae move both by passive and active (as development progresses) transport, although larval transport in estuaries seems to be minimal. A balance is reached where the larvae can find suitable areas to settle while still being retained in estuaries <span class="citation" data-cites="eobrt2007status">(<a href="#ref-eobrt2007status" role="doc-biblioref">Eastern Oyster Biological Review Team (EOBRT) 2007</a>)</span>. Settlement ends at the end of the larval stage, and the larval duration is highly temperature dependent <span class="citation" data-cites="shumway1996natural">(<a href="#ref-shumway1996natural" role="doc-biblioref">Shumway 1996</a>)</span>. <span class="citation" data-cites="fritz1984selective">Fritz et al. (<a href="#ref-fritz1984selective" role="doc-biblioref">1984</a>)</span> found that planktotrophic oyster larvae fed upon a variety of phytoplankton taxa (coccoids, centrate diatoms, pennate diatoms, dinoflagellates, and flagellates). <span class="citation" data-cites="baldwin1991omnivorous">Baldwin and Newell (<a href="#ref-baldwin1991omnivorous" role="doc-biblioref">1991</a>)</span> found that the larvae are actually omnivorous, preying on both autotrophic and heterotrophic plankton. Predation on oyster larvae is extremely high by filter-feeders in the water column and in the benthos. Along the Atlantic coast, drills have been responsible for mortality on 33% of spat in Long Island Sound. Oysters can compete with other mussels and barnacles for shell and substrate spaces, resulting in increased mortality when competitors are abundant <span class="citation" data-cites="kennedy1996biology">(<a href="#ref-kennedy1996biology" role="doc-biblioref">Kennedy 1996</a>)</span>. Juveniles and adults feed primarily on phytoplankton and suspended detritus, relying on food-laden water being moved past them in order to extract food from the water column <span class="citation" data-cites="langdon1996digestion">(<a href="#ref-langdon1996digestion" role="doc-biblioref">Langdon and Newell 1996</a>)</span>. Maturity occurs between 1 and 3 years of age <span class="citation" data-cites="fsuml_oyster_lifecycle">(<a href="#ref-fsuml_oyster_lifecycle" role="doc-biblioref">Florida State University Marine Lab n.d.</a>)</span>. Several ages have been proposed, the most common being 20 years. Oysters in Maryland appear to survive at at least 10 years based on plantings at restoration sites which are not thought to have received natural spat sets. It is likely that the maximum longevity is substantially longer than 10 years <span class="citation" data-cites="mddnr2025stock">(<a href="#ref-mddnr2025stock" role="doc-biblioref">Maryland Department of Natural Resources 2025</a>)</span>. Wild and aquaculture harvest is managed by individual jurisdictions or states, and management guidelines vary <span class="citation" data-cites="ozbay2014eastern">(<a href="#ref-ozbay2014eastern" role="doc-biblioref">Ozbay et al. 2014</a>)</span>.</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Eastern oyster_exposure_allvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Eastern oyster_exposure_impvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Eastern oyster_distribution_center_of_gravity.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Eastern oyster_distribution_area_of_high_probability.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Eastern oyster_sdm.png"</code></pre>
+</div>
 </div>
 </section>
-<section id="creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="level2">
-<h2 class="anchored" data-anchor-id="creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</h2>
-<p>Once raw exposure is ranked, species-specific exposure for each environmental variable can be calculated using the functions <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. These functions are nearly identical and only require the ranked exposure values and the mean ensemble species distribution model (SDM) predictions. Ranked exposure values are averaged across space within each month in <code>makeExposureTimeseries</code> and averaged across months in each model grid cell in <code>makeExposureMaps</code>, using the SDM results as weights to account for species distributions and habitat use. The results are a time series of average ranked species-specific exposure within each month and a raster of average species-specific exposure across time for each environmental variable.</p>
-<p>The ensemble SDM results produced by <code>make_predictions</code> should be converted into a monthly average prior to using <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. It is also recommended that you remove low SDM values after averaging. In the NE Shelf CVA2.0, we removed all SDM values less than 0.1 (representing areas with less than a 10% likelihood of finding the species). Not removing these low values resulted in higher than expected exposure results in areas where the species is rare.</p>
-<p>The output from <code>makeExposureTimeseries</code> is a matrix with 12 columns (1 for each month) and a number of rows equal to the number of environmental variables in <code>expRanked</code>. <code>makeExposureMaps</code> produces a rasterStack, with each layer representing one of the environmental variables. Values should range from 1 to 4.</p>
-<p>The wrapper function <code>makeVariableAverages</code> is provided and can be run in parallel using the <code>furrr</code> package, similar to the SDM wrapper functions. Like those wrapper functions, your directory must be set up according to the Installation and Setup Guide provided for them to function. <code>makeVariableAverages</code> also generates the monthly average SDM results, and removes low values for you.</p>
-<p>Like the SDM wrapper functions, <code>args</code> is a dataframe where each row is a set of arguments to be passed to the function. Here, the arguments include the species name (<code>spp</code>), ensemble name to help locate the appropriate ensemble model (<code>ensName</code>), and start and end years for the present and future timeseries (<code>pStart</code>/<code>pEnd</code>/<code>fStart</code>/<code>fEnd</code>) to load in the correct exposure values, as well as save the results from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code> appropriately. These are not memory or time-intensive calculations, so it is not necessary to run them in parallel - it is just helpful if you have a lot of species to work through.</p>
-<p>Below are example variable-specific exposures for Atlantic cod: <img src="exposure_variable_timeseries.png" class="img-fluid" alt="Variable-specific exposures across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_variable_maps.png" class="img-fluid figure-img"></p>
-<figcaption>Variable-specific exposures across space</figcaption>
-</figure>
-</div>
-</section>
-<section id="calculating-total-exposure-for-each-species" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</h2>
-<p>Once you have the species-specific exposure calculated for each variable, they must be combined to estimate total species-specific exposure. These will be the final spatially and temporally explicit values that are combined with species sensitivity to estimate vulnerability.</p>
-<p>To combine the species-specific exposures for each variable, we use the same logic rule as the CVA1.0:</p>
-<table class="caption-top table">
-<caption>Logic Rule used to Calculate Total Species Exposure</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Overall Score</th>
-<th style="text-align: center;">Numeric Score</th>
-<th style="text-align: center;">Logic Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">All other scores</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2 or more attributes &gt;= 2.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2 or more attributes &gt;= 3.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3 or more attributes &gt;= 3.5</td>
-</tr>
-</tbody>
-</table>
-<p>We calculate total exposure in two ways: 1) Applying the logic rule to all ecologically relevant environmental variables as defined by the feeding and habitat keys and 2) Only applying the logic rule to ecological variables that have relative weights in the final ensemble SDM greater than a set value (for the NE Shelf CVA2.0, we chose 10% or 0.1). This was done to account for possible unknown changes in variable importance under future climate change. The latter method (only counting the most important variables), assumes that these values will continue to be very important under future climate change scenarios. It is unclear if this will be the case, especially for variables such as pH where it is unclear how they will impact species. Calculating total exposure using all the ecologically relevant variables allows us and stakeholders to consider all variables regardless of their model importance.</p>
-<p>The functions <code>combineTimeseries</code> and <code>combineMaps</code> provide options for both methods with the option <code>countAll</code>. Setting <code>countAll</code> to TRUE will automatically count all provided variables in <code>matExp</code> for <code>combineTimeseries</code> or <code>mapExp</code> for <code>combineMaps</code>, which are the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, respectively. If set to FALSE, you will need to provide the relative weights and the threshold to use to count variables in the logic rule. It is important that, if you have not yet done so, that you subset <code>matExp</code> and <code>mapExp</code> to only the ecologically relevant variables before running the <code>combineTimeseries</code> and <code>combineMaps</code> functions. This can be done using the relative weights of the variables.</p>
-<p>The function <code>combineWeights</code> estimates the relative variable importance across the models. Since every component model of the ensemble SDM estimates variable importance differently, all importance data is normalized to their respective sums such that they total 1. A weighted average is then performed across models using the weights of each component model in the ensemble. The result is a vector of values representing the relative importance of each of the ecologically relevant variables to the model.</p>
-<p>Where <code>vars</code> is a vector of character strings including the ecologically relevant variables, <code>ensWeights</code> is the weights of each component model of the ensemble model generated by <code>make_sdm</code>, <code>impFlist</code> is a vector of character strings including the file paths to the model variable importance files made by <code>sdm_importance</code>, and <code>staticNames</code> are the names of any static environmental variables to be excluded.</p>
-<p>The names of the vector resulting from <code>combineWeights</code> can be used to subset the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, since these output contain all possible environmental variables from MOM6, before running <code>combineTimeseries</code> and <code>combineMaps</code>.</p>
-<p>Below are examples of total exposure using both methods for Atlantic cod: <img src="exposure_timeseries_all.png" class="img-fluid" alt="Total Exposure using all ecologically-relevant variables across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_timeseries_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across time</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_all.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using all ecologically-relevant variables across space</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across space</figcaption>
-</figure>
-</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-baldwin1991omnivorous" class="csl-entry" role="listitem">
+Baldwin, B. S., and R. I. E. Newell. 1991. <span>“Omnivorous Feeding by Planktotrophic Larvae of the Eastern Oyster <span>C</span>rassostrea Virginica.”</span> <em>Marine Ecology Progress Series</em> 78: 285–301.
+</div>
+<div id="ref-berringan1991oyster" class="csl-entry" role="listitem">
+Berringan, M., T. Candies, J. Cirino, R. Dugas, C. Dyer, J. Gray, T. Herrington, et al. 1991. <span>“The Oyster Fishery of the <span>G</span>ulf of <span>M</span>exico, <span>U</span>nited <span>S</span>tates: A Regional Management Plan.”</span> Gulf States Marine Fisheries Commission.
+</div>
+<div id="ref-eobrt2007status" class="csl-entry" role="listitem">
+Eastern Oyster Biological Review Team (EOBRT). 2007. <span>“Status Review of the Eastern Oyster (<span>C</span>rassostrea Virginica).”</span> Report to the National Marine Fisheries Service, Northeast Regional Office.
+</div>
+<div id="ref-farr2021assessment" class="csl-entry" role="listitem">
+Farr, E. R., M. R. Johnson, M. W. Nelson, J. A. Hare, W. E. Morrison, M. D. Lettrich, B. Vogt, et al. 2021. <span>“An Assessment of Marine, Estuarine, and Riverine Habitat Vulnerability to Climate Change in the <span>N</span>ortheast <span>US</span>.”</span> <em>PLoS One</em> 16 (12): e0260654.
+</div>
+<div id="ref-fsuml_oyster_lifecycle" class="csl-entry" role="listitem">
+Florida State University Marine Lab. n.d. <span>“The Oyster Life Cycle.”</span> <a href="https://marinelab.fsu.edu/absi/community-engagement/aboutoyster/lifecycle_anatomy/">https://marinelab.fsu.edu/absi/community-engagement/aboutoyster/lifecycle_anatomy/</a>.
+</div>
+<div id="ref-fritz1984selective" class="csl-entry" role="listitem">
+Fritz, L. W., R. A. Lutz, M. A. Foote, C. L. Van Dover, and J. W. Ewart. 1984. <span>“Selective Feeding and Grazing Rates of Oyster (<span>C</span>rassostrea Virginica) Larvae on Natural Phytoplankton Assemblages.”</span> <em>Estuaries</em> 7: 513–18.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-kennedy1996biology" class="csl-entry" role="listitem">
+Kennedy, V. S. 1996. <span>“Biology of Larvae and Spat.”</span> In <em>The Eastern Oyster <span>C</span>rassostrea Virginica</em>, edited by V. S. Kennedy, R. I. E. Newell, and A. F. Eble, 371–421. College Park, Maryland: Maryland Sea Grant College, University of Maryland.
+</div>
+<div id="ref-langdon1996digestion" class="csl-entry" role="listitem">
+Langdon, C. J., and R. I. E. Newell. 1996. <span>“Digestion and Nutrition in Larvae and Adults.”</span> In <em>The Eastern Oyster <span>C</span>rassostrea Virginica</em>, edited by V. S. Kennedy, R. I. E. Newell, and A. F. Eble, 231–69. College Park, Maryland: Maryland Sea Grant College, University of Maryland.
+</div>
+<div id="ref-mackenzie1981biotic" class="csl-entry" role="listitem">
+MacKenzie, C. L., Jr. 1981. <span>“Biotic Potential and Environmental Resistance in the <span>A</span>merican Oyster (<span>C</span>rassostrea Virginica) in <span>L</span>ong <span>I</span>sland <span>S</span>ound.”</span> <em>Aquaculture</em> 22: 229–68.
+</div>
+<div id="ref-mddnr2025stock" class="csl-entry" role="listitem">
+Maryland Department of Natural Resources. 2025. <span>“A Stock Assessment of the Eastern Oyster, <span>C</span>rassostrea Virginica, in the <span>M</span>aryland Waters of <span>C</span>hesapeake <span>B</span>ay.”</span> <a href="https://dnr.maryland.gov/fisheries/Documents/2024MDOysterAssessment_DraftforPeerReview.pdf">https://dnr.maryland.gov/fisheries/Documents/2024MDOysterAssessment_DraftforPeerReview.pdf</a>.
+</div>
+<div id="ref-ozbay2014eastern" class="csl-entry" role="listitem">
+Ozbay, G., B. Reckenbeil, F. Marenghi, and P. Erbland. 2014. <span>“Eastern Oyster (<span>C</span>rassostrea Virginica) Aquaculture and Diversity of Associated Species.”</span> In <em>Oysters: Biology, Consumption, and Ecological Importance</em>, 128. NOVA Science Publishers.
+</div>
+<div id="ref-perret1999oyster" class="csl-entry" role="listitem">
+Perret, W. S., R. Dugas, J. Roussel, C. A. Wilson, and J. Supan. 1999. <span>“Oyster Habitat Restoration: A Response to <span>H</span>urricane <span>A</span>ndrew.”</span> In <em>Oyster Reef Habitat Restoration: A Synopsis and Synthesis of Approaches</em>, edited by M. W. Luckenbach, R. Mann, and J. A. Wesson, 366. Gloucester Point, VA: VIMS Press.
+</div>
+<div id="ref-shumway1996natural" class="csl-entry" role="listitem">
+Shumway, S. E. 1996. <span>“Natural Environmental Factors.”</span> In <em>The Eastern Oyster <span>C</span>rassostrea Virginica</em>, edited by V. S. Kennedy, R. I. E. Newell, and A. F. Eble, 467–513. College Park, Maryland: Maryland Sea Grant College, University of Maryland.
+</div>
+<div id="ref-white1996predators" class="csl-entry" role="listitem">
+White, M. E., and E. A. Wilson. 1996. <span>“Predators, Pests, and Competitors.”</span> In <em>The Eastern Oyster <span>C</span>rassostrea Virginica</em>, edited by V. S. Kennedy, R. I. E. Newell, and A. F. Eble, 559–79. College Park, Maryland: Maryland Sea Grant College, University of Maryland.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -990,13 +1106,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/ensemble-sdms.html" class="pagination-link" aria-label="Building &amp; Predicting Ensemble Species Distribution Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></span>
+      <a href="../chapters/Cobia.html" class="pagination-link" aria-label="Cobia (*`Rachycentron canadum`*)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Cobia (<em><code>Rachycentron canadum</code></em>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/sensitivity_calculation.html" class="pagination-link" aria-label="Sensitivity Calculation">
-        <span class="nav-page-text"><span class="chapter-title">Sensitivity Calculation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Golden tilefish.html" class="pagination-link" aria-label="Golden tilefish (*`Lopholatilus chamaeleonticeps`*)">
+        <span class="nav-page-text"><span class="chapter-title">Golden tilefish (<em><code>Lopholatilus chamaeleonticeps</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

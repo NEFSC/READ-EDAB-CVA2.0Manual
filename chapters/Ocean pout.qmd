@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = High
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 83%
 
 </div>
 :::::
@@ -66,8 +66,8 @@ here::here("test_images/Ocean pout_sensitivity_summary_table.png")
 |----------------------|--------------------|------------------------|--------|
 | *Vulnerability*      |                    |                        |        |
 | *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| *Sensitivity*        | High               | High                   | None   |
+| *Directional Effect* | Negative           | Negative               | None   |
 
 ## Score Drivers
 
@@ -81,13 +81,15 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+The ocean pout received a **High** sensitivity score, with a certainty of 100%. Two attributes had scores greater than 3: Stock Size (4) and Dispersal of Early Life Stages (3.6). The stock is currently overfished, but overfishing is not occurring [@nefsc2022ocean]. Eggs masses and larvae are both demersal, with larvae quickly associating with benthic habitats after hatching [@steimle1999_pout].
+
+In the 2016 Climate Vulnerability Assessment, ocean pout also received a High sensitivity score. This was driven by Dispersal and Early Life History, Stock Status, and Population Growth Rates [@hare2016vulnerability]. In our assessment, Population Growth Rate received a score of 2.8.
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-add text here
+83% of data quality scores were greater than or equal to 2, indicating strong data quality. Adult Mobility and Egg and Larval Survival and Settlement Requirements were considered data gaps (mean attribute data quality score \< 2).
 
 ### Model Confidence:
 
@@ -101,11 +103,15 @@ add text here
 
 ### Directional Effect:
 
-add text here
+Experts predict that ocean pout will be **negatively** impacted by climate change with 99% certainty. Ocean pout prefer colder waters and are sluggish movers [@steimle1999_pout], which may make it difficult to avoid stressful conditions such as hypoxia ([@azarovitz1976effects]. In the previous Climate Vulnerability Assessment, experts made a similar prediction, but certainty was lower [@hare2016vulnerability].
 
-## Climate Effects on Abundance and Distribution:
+## Climate Effects on Abundance and Distribution
 
-## Life History Synopsis:
+@nye2009changing identified an increase in depth of occurrence of ocean pout in the Gulf of Maine. Although ocean pout have been reported to be quite hardy, they appear to have limited tolerance of hypoxic and anoxic conditions; they are common victims of these conditions which occasionally occur in the New York Bight [@azarovitz1976effects]. Ocean pout are sluggish swimmers, which can explain their inability to avoid stressful conditions, such as hypoxia [@steimle1999_pout]. @killen2008lack found that young ocean pout from Newfoundland do not show thermal compensation in response to long-term temperature changes.
+
+## Life History Synopsis
+
+Ocean pout are a non-migratory, bottom dwelling fish found along the Atlantic coast from Labrador to Delaware [@steimle1999_pout]. Spawning occurs in the late summer through early winter (peak in September-October) with earlier peaks (August-October) in the south [@wilk1979annual]. Eggs are laid in gelatinous masses in a sheltered place on the bottom, such as rocky crevices, where they are guarded either by one or both parents until hatching [@steimle1999_pout]. Eggs develop in 2-3 months, temperature dependent [@olsen1946studies]. Larvae are about 30 mm long at hatching [@clark1982ocean] and live at the bottom at temperatures below 10°C [@steimle1999_pout]. Juvenile and adult ocean pout use both open and rough habitats. @sedberry1983food reported that juveniles were common during the summer on the sandy, mid- to outer-continental shelf (approximately 35-95 m). In the Gulf of Maine, juveniles occur in shallow coastal waters around rocks and attached algae, and in rivers with saline bottom waters [@auster1985some]. @macdonald1983laboratory reported that ocean pout feed by sorting mouthfuls of sediments for infauna and do not use visual cues to stimulate feeding; they maintained that ocean pout were not very effective at capturing moving prey and rarely left the bottom to feed. @auster1985some and @auster1995patterns, however, considered ocean pout an "ambush predator" that waits in sediment depressions for prey to approach or drift by in the current. Juveniles feed primarily on gammarid amphipods and polychaetes [@sedberry1983food]. Adult ocean pout feed on a variety of benthic invertebrates, including polychaetes, mollusks, crustaceans, and echinoderms [@steimle1999_pout]. Adults reach maturity at 2+ years [@steimle1999_pout], with a maximum age of 18 years [@hoenig1983empirical]. Although they do not migrate, ocean pout move seasonally within a region: offshore in late summer and inshore in the spring in the Gulf of Maine, and offshore to cooler waters in the summer returning inshore in the fall in Southern New England and Georges Bank [@steimle1999_pout]. Ocean pout are managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. As of the 2022 management track assessment, the stock is not overfished and overfishing is not occurring [@nefsc2022ocean].
 
 ## Figures
 

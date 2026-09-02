@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = Low
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 88%
 
 </div>
 :::::
@@ -62,12 +62,12 @@ here::here("test_images/Monkfish_sensitivity_summary_table.png")
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability* |  |  |  |
+| *Exposure* |  |  |  |
+| *Sensitivity* | Low (Both Stocks) | Low (Both Stocks) | None (Both Stocks) |
+| *Directional Effect* | Negative (Both Stocks) | Neutral (Both Stocks) | Decrease (Both Stocks) |
 
 ## Score Drivers
 
@@ -81,13 +81,15 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+Both the **Northern** and **Southern** Stocks of Monkfish received a **Low** sensitivity score. Certainties were 99% and 98% respectively. For both stocks, the only attribute that received a score greater than 2.5 was Population Growth Rate (2.6 for both stocks). Monkfish mature slowly, reaching maturity at 4-5 years [@richards2008population]. Maximum ages range from 7 years for males to 14 years for females [@nefsc2010fifty].
+
+Monkfish also received a Low sensitivity score in the 2016 Climate Vulnerability Assessment for the Northeast Shelf. Like in this assessment, this result was driven by Population Growth Rate [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-add text here
+88% of data quality scores were greater than or equal to 2, indicating strong data quality. No data gaps (mean attribute data quality score \< 2) were identified.
 
 ### Model Confidence:
 
@@ -101,11 +103,15 @@ add text here
 
 ### Directional Effect:
 
-add text here
+Climate change is predicted to **negatively** impact both the **northern** and **southern** stocks of Monkfish. Certainties were 94% and 87% respectively. Monkfish are most abundant on Georges Bank when bottom temperatures are between 5-14 C, suggesting that warming temperatures would decrease the amount of preferred habitat [@siemann2018summering]. Experts in the previous Assessment predicted that climate change would have a neutral impact on Monkfish with a high degree of uncertainty [@hare2016vulnerability].
 
-## Climate Effects on Abundance and Distribution:
+## Climate Effects on Abundance and Distribution
 
-## Life History Synopsis:
+In Icelandic waters, monkfish distribution changes and increased stock size have been correlated with rising water temperatures and expanding suitable habitat [@solmundsson2007recent]. Monkfish movement and relative abundance on Georges Bank is driven by seasonal changes in bottom temperature. Their distribution may shift in response to future changes in thermal habitat, highlighting the need for further management strategies [@siemann2018summering]. Maximum size of monkfish in the Northwest Atlantic has decreased, and is related to seasonality and bottom temperature [@charbonneau2020pervasive]. 
+
+## Life History Synopsis
+
+Monkfish are a bottom dwelling fish ranging from the northern Gulf of St. Lawrence to Cape Hatteras. The commercial fishery operates from Maine to North Carolina [@steimle1999monkfish]. Spawning takes place from spring through early autumn, progressing from south to north over a 6 month period [@richards2008population]. Pelagic larvae hatch from egg veils (up 12 m long and 1.5 m wide) 1-3 weeks after being laid, depending on temperature. Larvae remain in the egg veil 2-3 days after hatching. Monkfish larvae feed on zooplankton, including copepods, crustacean larvae, and chaetognaths [@bigelow1953fishes]. Larval to juvenile transition occurs at 5-10 cm TL (total length) when the elongate fins and body gradually assume the adult form [@nefsc2010fifty]. Once larvae transition to juveniles, they move to the benthos. Juveniles and adults settle on mud, gravelly sand, algae, and rock substrates [@steimle1999monkfish]. Once moved to the bottom, juveniles can eat sand lance, but invertebrates such as red shrimp and squid make up the majority of their diet. The amount of invertebrates eaten by juveniles decreases as they get older [@steimle1999monkfish]. Monkfish are ambush predators and opportunistic feeders; prey found in their stomachs include a variety of benthic and pelagic species. Monkfish are also cannibalistic and can eat sea birds and diving ducks. Adults spend most of their time resting on the bottom, but have been reported at the surface after a storm event, preying on seabirds [@richards2008population]. Large monkfish have few predators, but smaller monkfish are common prey for swordfish, sharks, and skates [@steimle1999monkfish]. Monkfish move by slow swimming or by using their sturdy pectoral fins to "walk." Despite slow speeds, juveniles and adults migrate in response to thermal conditions, spawning, or food availability [@steimle1999monkfish]. Monkfish were found on Georges Bank in summer and early fall, and found in deeper waters/on the edge of the bank in winter months, suggesting that movements may be influenced by temperature [@rountree2006extraction]. Age at maturity is 4-5 years, longer for females and for the Mid-Atlantic stock [@richards2008population]. Maximum age is listed at 7 years for males and 12-14 years for females [@nefsc2010fifty]. Monkfish in the Northwest Atlantic are divided into two stocks: the Gulf of Maine/Northern Georges Bank and Southern Georges Bank/Mid-Atlantic. Both stocks do not have stock assessments that provide indices on overfishing and overfished status, although an index based assessment is used for catch advice [@deroba2022draft]. 
 
 ## Figures
 

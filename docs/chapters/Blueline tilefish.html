@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Calculating Exposure – Climate Vulnerability Assessment 2.0</title>
+<title>Blueline tilefish (Caulolatilus microps) – Climate Vulnerability Assessment 2.0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/sensitivity_calculation.html" rel="next">
-<link href="../content/ensemble-sdms.html" rel="prev">
+<link href="../chapters/Butterfish.html" rel="next">
+<link href="../chapters/Bluefish.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Blueline tilefish.html"><span class="chapter-title">Blueline tilefish (<em><code>Caulolatilus microps</code></em>)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Calculating Exposure</span></a>
+  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calculating Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -259,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Blueline tilefish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Blueline tilefish (<em><code>Caulolatilus microps</code></em>)</span></a>
+  <a href="../chapters/Blueline tilefish.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Blueline tilefish (<em><code>Caulolatilus microps</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -409,19 +429,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#calculating-and-ranking-raw-exposure" id="toc-calculating-and-ranking-raw-exposure" class="nav-link" data-scroll-target="#calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</a></li>
-  <li><a href="#creating-species-specific-exposure-time-series-and-maps-for-each-variable" id="toc-creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="nav-link" data-scroll-target="#creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</a></li>
-  <li><a href="#calculating-total-exposure-for-each-species" id="toc-calculating-total-exposure-for-each-species" class="nav-link" data-scroll-target="#calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#changes-from-previous-assessments" id="toc-changes-from-previous-assessments" class="nav-link" data-scroll-target="#changes-from-previous-assessments">Changes from Previous Assessment(s)</a></li>
+  <li><a href="#score-drivers" id="toc-score-drivers" class="nav-link" data-scroll-target="#score-drivers">Score Drivers</a>
+  <ul class="collapse">
+  <li><a href="#vulnerability" id="toc-vulnerability" class="nav-link" data-scroll-target="#vulnerability">Vulnerability:</a></li>
+  <li><a href="#climate-exposure" id="toc-climate-exposure" class="nav-link" data-scroll-target="#climate-exposure">Climate Exposure:</a></li>
+  <li><a href="#biological-sensitivity" id="toc-biological-sensitivity" class="nav-link" data-scroll-target="#biological-sensitivity">Biological Sensitivity:</a></li>
+  </ul></li>
+  <li><a href="#data-quality-metrics" id="toc-data-quality-metrics" class="nav-link" data-scroll-target="#data-quality-metrics">Data Quality Metrics</a>
+  <ul class="collapse">
+  <li><a href="#life-history-data-quality" id="toc-life-history-data-quality" class="nav-link" data-scroll-target="#life-history-data-quality">Life History Data Quality:</a></li>
+  <li><a href="#model-confidence" id="toc-model-confidence" class="nav-link" data-scroll-target="#model-confidence">Model Confidence:</a></li>
+  </ul></li>
+  <li><a href="#additional-metrics" id="toc-additional-metrics" class="nav-link" data-scroll-target="#additional-metrics">Additional Metrics</a>
+  <ul class="collapse">
+  <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
+  <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
+  </ul></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Blueline tilefish.html"><span class="chapter-title">Blueline tilefish (<em><code>Caulolatilus microps</code></em>)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Calculating Exposure</span></h1>
+<h1 class="title"><span class="chapter-title">Blueline tilefish (<em><code>Caulolatilus microps</code></em>)</span></h1>
 </div>
 
 
@@ -438,133 +476,199 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Exposure is calculated from MOM6 forecast data using the same methods to calculate and rank raw exposure as the CVA1.0 on the MOM6 environmental data. We then use the predicted species distributions and the relative importance of covariates in the ensemble models to calculate variable-specific and total exposure for each species.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Scores</strong></p>
+<p>Vulnerability =</p>
+<p>Climate Exposure =</p>
+<p>Biological Sensitivity = Moderate</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Data Quality</strong></p>
+<p>Model Confidence Score =</p>
+<p>Life History Data Quality = 63%</p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blueline tilefish_exposure_summary_table.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blueline tilefish_sensitivity_summary_table.png"</code></pre>
+</div>
+</div>
 </section>
-<section id="calculating-and-ranking-raw-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</h2>
-<p>As in the CVA1.0, raw exposure for each environmental variable is calculated using a z-score, which is the difference in mean conditions in a future and present timeseries divided by present day standard deviations.</p>
-<p>The function <code>calcExposure</code> will take the output from <code>pull_hind</code> and/or <code>pull_forecast</code> (a list of rasterStacks) and calculate monthly raw exposure for each environmental variable in the list:</p>
-<p>Where <code>presentRasts</code> and <code>futureRasts</code> are lists of rasterStacks with the same length. These are the raw timeseries over the desired time periods. Remember that <code>pull_hind</code> and <code>pull_forecast</code> pull the complete timeseries for the desired MOM6 run, so you will need to subset their outputs accordingly if desired. <code>calcExposure</code> will produce a list of rasterStacks with the same length as the provided lists. Each rasterStack will have 12 layers, one for each month. <img src="bottomT_exposure.jpg" class="img-fluid" alt="Bottom Temperature Raw Exposure comparing 2019-2019 and 2025-2035"></p>
-<p>The next step is to rank the raw exposure. Since the CVA is designed to help determine which species are at risk to the greatest exposure, these ranks are based on this goal, rather than the distribution of the data themselves. We use the same ranks as the CVA1.0:</p>
+<section id="changes-from-previous-assessments" class="level2">
+<h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
-<caption>Raw Exposure Ranks</caption>
+<colgroup>
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Score</th>
-<th style="text-align: center;">Raw Exposure</th>
-<th style="text-align: center;">Rank</th>
+<th>Metric</th>
+<th>Current Assessment</th>
+<th>Previous Assessment(s)</th>
+<th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">&lt; 0.5</td>
-<td style="text-align: center;">1</td>
+<td><em>Vulnerability</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">0.5 - 1.5</td>
-<td style="text-align: center;">2</td>
+<td><em>Exposure</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">1.5 - 2</td>
-<td style="text-align: center;">3</td>
+<td><em>Sensitivity</em></td>
+<td>Moderate</td>
+<td>High <span class="citation" data-cites="Burton2023-sv">(<a href="#ref-Burton2023-sv" role="doc-biblioref"><strong>Burton2023-sv?</strong></a>)</span></td>
+<td>Decrease</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">&gt; 2</td>
-<td style="text-align: center;">4</td>
+<td><em>Directional Effect</em></td>
+<td>Neutral</td>
+<td>Neutral <span class="citation" data-cites="Burton2023-sv">(<a href="#ref-Burton2023-sv" role="doc-biblioref"><strong>Burton2023-sv?</strong></a>)</span></td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
-<p>The function <code>rankExposure</code> performs the ranking. It also provides the option to multiply raw exposure values for certain by -1 (aka flip). This option was included because the direction of change and the meaning of that change may differ across environmental variables. For example, an increase in surface temperatures would have a positive exposure, whereas a decrease in pH would have a negative exposure; both changes are considered bad for the environment, but the signs differ due to how these variables are quantified. The <code>flip</code> and <code>noFlipList</code> options provide the option to flip the signs of raw exposure for all variables <em>except</em> those listed in <code>noFlipList</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bottomT_exposure_ranked.jpg" class="img-fluid figure-img"></p>
-<figcaption>Bottom Temperature Ranked Exposure comparing 2019-2019 and 2025-2035</figcaption>
-</figure>
+</section>
+<section id="score-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="score-drivers">Score Drivers</h2>
+<section id="vulnerability" class="level3">
+<h3 class="anchored" data-anchor-id="vulnerability">Vulnerability:</h3>
+<p>add text here</p>
+</section>
+<section id="climate-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="climate-exposure">Climate Exposure:</h3>
+<p>add text here</p>
+</section>
+<section id="biological-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
+<p>Blueline tilefish received a <strong>Moderate</strong> sensitivity score. Certainty was 90%. Three attributes had scores greater than 2.5: Adult Mobility (2.8), Population Growth Rate (2.8), and Historical Variability in Temperature (2.5).</p>
+<p>Adult blueline tilefish are primarily demersal. They are thought to be sedentary and remain close to their dens, similar to goldenline tilefish <span class="citation" data-cites="schmidtke2017life">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>)</span>. Maximum ages upwards of 50 years have been recorded <span class="citation" data-cites="schmidtke2017life spanik2023validating">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>; <a href="#ref-spanik2023validating" role="doc-biblioref">Spanik and Ballenger 2023</a>)</span>. They reach maturity anywhere from a few months to 3.7 years off the coast of Virginia to upwards of 5 years off the southeast US <span class="citation" data-cites="ross1982feeding harris2004age low2023characterizing">(<a href="#ref-ross1982feeding" role="doc-biblioref">Ross 1982</a>; <a href="#ref-harris2004age" role="doc-biblioref">Harris, Wyanski, and Powers Mikell 2004</a>; <a href="#ref-low2023characterizing" role="doc-biblioref">Low 2023</a>)</span>.</p>
+<p>Blueline tilefish were not included in the 2016 Climate Vulnerability Assessment for the Northeast US, but were included in the recent Climate Vulnerability Assessment for the Southeast US <span class="citation" data-cites="burton2023climate">(<a href="#ref-burton2023climate" role="doc-biblioref">Burton et al. 2023</a>)</span>. Blueline tilefish received a High sensitivity score in that assessment. This score was driven by Sensitivity to Temperature and Population Growth Rate attributes. The experts in that assessment suggested that long-lived, slow-growing nature of blueline tilefish are believed to make them susceptible to overfishing <span class="citation" data-cites="burton2023climate">(<a href="#ref-burton2023climate" role="doc-biblioref">Burton et al. 2023</a>)</span>.</p>
+</section>
+</section>
+<section id="data-quality-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
+<section id="life-history-data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
+<p>Only 63% of data quality scores were greater than or equal to 2, indicating poor data quality. Most attributes had data gaps (mean attribute data quality score &lt; 2), including Adult Mobility, Complexity in Reproductive Strategy, Egg and Larval Survival and Settlement Requirements, Historical Variability in Temperature, Other Stressors, and Stock Size/Status.</p>
+</section>
+<section id="model-confidence" class="level3">
+<h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
+<p>add text here</p>
+</section>
+</section>
+<section id="additional-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="additional-metrics">Additional Metrics</h2>
+<section id="distribution-shifts" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-shifts">Distribution Shifts:</h3>
+<p>add text here</p>
+</section>
+<section id="directional-effect" class="level3">
+<h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
+<p>The impact of climate change on blueline tilefish is expected to be <strong>neutral</strong>, with 92% certainty in expert scores. It is possible that blueline tilefish biomass may increase with increasing temperatures, as landings in the Mid-Atlantic have been correlated to increasing temperatures <span class="citation" data-cites="pinsky2018preparing rogers2019shifting">(<a href="#ref-pinsky2018preparing" role="doc-biblioref">Pinsky et al. 2018</a>; <a href="#ref-rogers2019shifting" role="doc-biblioref">Rogers et al. 2019</a>)</span>. However, little research has been conducted on how blueline tilefish will respond to climate change. The Climate Vulnerability Assessment for the Southeast US also predicted that the effect of climate change on blueline tilefish would be neutral <span class="citation" data-cites="burton2023climate">(<a href="#ref-burton2023climate" role="doc-biblioref">Burton et al. 2023</a>)</span>.</p>
+</section>
+</section>
+<section id="climate-effects-on-abundance-and-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Little research has been conducted on the response of blueline tilefish to climate change. Rising water temperatures likely drove a rapid increase in landings in the Mid-Atlantic throughout the early 21st century as blueline tilefish distributions expanded north beyond their traditional South Atlantic boundary <span class="citation" data-cites="pinsky2018preparing rogers2019shifting">(<a href="#ref-pinsky2018preparing" role="doc-biblioref">Pinsky et al. 2018</a>; <a href="#ref-rogers2019shifting" role="doc-biblioref">Rogers et al. 2019</a>)</span>. Blueline tilefish may exhibit a moderately-high risk to achieving optimal biomass and yield due to climate change on productivity <span class="citation" data-cites="mafmc2025update">(<a href="#ref-mafmc2025update" role="doc-biblioref">Mid-Atlantic Fishery Management Council (MAFMC) 2025</a>)</span>.</p>
+</section>
+<section id="life-history-synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Blueline tilefish have only recently been found on the Northeast U.S. Continental Shelf. They live in crevices or on ledges on the shelf, shelf break, and shelf slope from Georges Bank to Mexico and the Gulf of America <span class="citation" data-cites="schmidtke2017life">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>)</span>. Blueline tilefish are multiple batch spawners and presumably spawn on/near the bottom <span class="citation" data-cites="low2023characterizing">(<a href="#ref-low2023characterizing" role="doc-biblioref">Low 2023</a>)</span>. Spawning occurs from March through October in the southern portion range, and May - November in the Mid-Atlantic Bight <span class="citation" data-cites="harris2004age schmidtke2017life">(<a href="#ref-harris2004age" role="doc-biblioref">Harris, Wyanski, and Powers Mikell 2004</a>; <a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>)</span>. Eggs and larvae are estimated to remain pelagic for 4-6 weeks and depend on currents for transport. Eddies and gyres may provide local retention while the Gulf Stream transports eggs and larvae up the East Coast. It seems likely that substantial numbers of blueline larvae are transported out of the eastern Gulf of Mexico, to the South Atlantic, and from the South Atlantic into the Mid-Atlantic over the course of a few weeks <span class="citation" data-cites="sedar2025report">(<a href="#ref-sedar2025report" role="doc-biblioref">SouthEast Data, Assessment, and Review (SEDAR) 2025</a>)</span>. Juveniles settle to the bottom and occupy benthic habitats around offshore submarine canyons on the shelf edge, constructing burrows in seafloor sediments or within rocks and boulders <span class="citation" data-cites="schmidtke2017life">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>)</span>. Juveniles and adults consume a diverse array of benthic invertebrates, including polychaetes, crustaceans, and decapods. Gastropods and copepods have also been observed and are likely consumed when diel vertical migrations bring them close to the seafloor <span class="citation" data-cites="bielsa1987food ross1982feeding">(<a href="#ref-bielsa1987food" role="doc-biblioref">Bielsa and Labisky 1987</a>; <a href="#ref-ross1982feeding" role="doc-biblioref">Ross 1982</a>)</span>. Age at maturity is up to 3.7 years in the Mid-Atlantic and 5 years in the South Atlantic <span class="citation" data-cites="harris2004age low2023characterizing">(<a href="#ref-harris2004age" role="doc-biblioref">Harris, Wyanski, and Powers Mikell 2004</a>; <a href="#ref-low2023characterizing" role="doc-biblioref">Low 2023</a>)</span>. Maximum age is 37 years, although it is theorized that individuals could possibly reach upwards of 50 years in age <span class="citation" data-cites="schmidtke2017life spanik2023validating">(<a href="#ref-schmidtke2017life" role="doc-biblioref">Schmidtke 2017</a>; <a href="#ref-spanik2023validating" role="doc-biblioref">Spanik and Ballenger 2023</a>)</span>. In the Northwest Atlantic, blueline tilefish are managed by the Mid-Atlantic Fishery Management Council under the Tilefish Fishery Management Plan. Council management of blueline tilefish in the Mid-Atlantic began as a response to increased commercial and recreational landings in the region. The Mid-Atlantic stock has not been assessed. Population levels and fishing status are currently unknown but management measures have been in place since 2017 <span class="citation" data-cites="mafmc2017amendment">(<a href="#ref-mafmc2017amendment" role="doc-biblioref">Mid-Atlantic Fishery Management Council (MAFMC) 2017</a>)</span>.</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blueline tilefish_exposure_allvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blueline tilefish_exposure_impvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blueline tilefish_distribution_center_of_gravity.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blueline tilefish_distribution_area_of_high_probability.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blueline tilefish_sdm.png"</code></pre>
+</div>
 </div>
 </section>
-<section id="creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="level2">
-<h2 class="anchored" data-anchor-id="creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</h2>
-<p>Once raw exposure is ranked, species-specific exposure for each environmental variable can be calculated using the functions <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. These functions are nearly identical and only require the ranked exposure values and the mean ensemble species distribution model (SDM) predictions. Ranked exposure values are averaged across space within each month in <code>makeExposureTimeseries</code> and averaged across months in each model grid cell in <code>makeExposureMaps</code>, using the SDM results as weights to account for species distributions and habitat use. The results are a time series of average ranked species-specific exposure within each month and a raster of average species-specific exposure across time for each environmental variable.</p>
-<p>The ensemble SDM results produced by <code>make_predictions</code> should be converted into a monthly average prior to using <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. It is also recommended that you remove low SDM values after averaging. In the NE Shelf CVA2.0, we removed all SDM values less than 0.1 (representing areas with less than a 10% likelihood of finding the species). Not removing these low values resulted in higher than expected exposure results in areas where the species is rare.</p>
-<p>The output from <code>makeExposureTimeseries</code> is a matrix with 12 columns (1 for each month) and a number of rows equal to the number of environmental variables in <code>expRanked</code>. <code>makeExposureMaps</code> produces a rasterStack, with each layer representing one of the environmental variables. Values should range from 1 to 4.</p>
-<p>The wrapper function <code>makeVariableAverages</code> is provided and can be run in parallel using the <code>furrr</code> package, similar to the SDM wrapper functions. Like those wrapper functions, your directory must be set up according to the Installation and Setup Guide provided for them to function. <code>makeVariableAverages</code> also generates the monthly average SDM results, and removes low values for you.</p>
-<p>Like the SDM wrapper functions, <code>args</code> is a dataframe where each row is a set of arguments to be passed to the function. Here, the arguments include the species name (<code>spp</code>), ensemble name to help locate the appropriate ensemble model (<code>ensName</code>), and start and end years for the present and future timeseries (<code>pStart</code>/<code>pEnd</code>/<code>fStart</code>/<code>fEnd</code>) to load in the correct exposure values, as well as save the results from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code> appropriately. These are not memory or time-intensive calculations, so it is not necessary to run them in parallel - it is just helpful if you have a lot of species to work through.</p>
-<p>Below are example variable-specific exposures for Atlantic cod: <img src="exposure_variable_timeseries.png" class="img-fluid" alt="Variable-specific exposures across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_variable_maps.png" class="img-fluid figure-img"></p>
-<figcaption>Variable-specific exposures across space</figcaption>
-</figure>
-</div>
-</section>
-<section id="calculating-total-exposure-for-each-species" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</h2>
-<p>Once you have the species-specific exposure calculated for each variable, they must be combined to estimate total species-specific exposure. These will be the final spatially and temporally explicit values that are combined with species sensitivity to estimate vulnerability.</p>
-<p>To combine the species-specific exposures for each variable, we use the same logic rule as the CVA1.0:</p>
-<table class="caption-top table">
-<caption>Logic Rule used to Calculate Total Species Exposure</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Overall Score</th>
-<th style="text-align: center;">Numeric Score</th>
-<th style="text-align: center;">Logic Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">All other scores</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2 or more attributes &gt;= 2.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2 or more attributes &gt;= 3.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3 or more attributes &gt;= 3.5</td>
-</tr>
-</tbody>
-</table>
-<p>We calculate total exposure in two ways: 1) Applying the logic rule to all ecologically relevant environmental variables as defined by the feeding and habitat keys and 2) Only applying the logic rule to ecological variables that have relative weights in the final ensemble SDM greater than a set value (for the NE Shelf CVA2.0, we chose 10% or 0.1). This was done to account for possible unknown changes in variable importance under future climate change. The latter method (only counting the most important variables), assumes that these values will continue to be very important under future climate change scenarios. It is unclear if this will be the case, especially for variables such as pH where it is unclear how they will impact species. Calculating total exposure using all the ecologically relevant variables allows us and stakeholders to consider all variables regardless of their model importance.</p>
-<p>The functions <code>combineTimeseries</code> and <code>combineMaps</code> provide options for both methods with the option <code>countAll</code>. Setting <code>countAll</code> to TRUE will automatically count all provided variables in <code>matExp</code> for <code>combineTimeseries</code> or <code>mapExp</code> for <code>combineMaps</code>, which are the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, respectively. If set to FALSE, you will need to provide the relative weights and the threshold to use to count variables in the logic rule. It is important that, if you have not yet done so, that you subset <code>matExp</code> and <code>mapExp</code> to only the ecologically relevant variables before running the <code>combineTimeseries</code> and <code>combineMaps</code> functions. This can be done using the relative weights of the variables.</p>
-<p>The function <code>combineWeights</code> estimates the relative variable importance across the models. Since every component model of the ensemble SDM estimates variable importance differently, all importance data is normalized to their respective sums such that they total 1. A weighted average is then performed across models using the weights of each component model in the ensemble. The result is a vector of values representing the relative importance of each of the ecologically relevant variables to the model.</p>
-<p>Where <code>vars</code> is a vector of character strings including the ecologically relevant variables, <code>ensWeights</code> is the weights of each component model of the ensemble model generated by <code>make_sdm</code>, <code>impFlist</code> is a vector of character strings including the file paths to the model variable importance files made by <code>sdm_importance</code>, and <code>staticNames</code> are the names of any static environmental variables to be excluded.</p>
-<p>The names of the vector resulting from <code>combineWeights</code> can be used to subset the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, since these output contain all possible environmental variables from MOM6, before running <code>combineTimeseries</code> and <code>combineMaps</code>.</p>
-<p>Below are examples of total exposure using both methods for Atlantic cod: <img src="exposure_timeseries_all.png" class="img-fluid" alt="Total Exposure using all ecologically-relevant variables across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_timeseries_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across time</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_all.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using all ecologically-relevant variables across space</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across space</figcaption>
-</figure>
-</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bielsa1987food" class="csl-entry" role="listitem">
+Bielsa, L. M., and R. F. Labisky. 1987. <span>“Food Habits of Blueline Tilefish, <span>C</span>aulolatilus Microps, and Snowy Grouper, <span>E</span>pinehpelus Niveatus, from the Lower <span>F</span>lorida <span>K</span>eys.”</span> <em>N.E Gulf Sci.</em> 9 (2): 77–87.
+</div>
+<div id="ref-burton2023climate" class="csl-entry" role="listitem">
+Burton, Michael L, Roldan C Muñoz, John A Quinlan, Mark W Nelson, Nathan M Bacheler, Brendan J Runde, Samantha M Binion-Rock, et al. 2023. <span>“A Climate Vulnerability Assessment for Fish and Invertebrates in the United States South Atlantic Large Marine Ecosystem.”</span>
+</div>
+<div id="ref-harris2004age" class="csl-entry" role="listitem">
+Harris, P. J., D. M. Wyanski, and P. T. Powers Mikell. 2004. <span>“Age, Growth, and Reproductive Biology of Blueline Tilefish Along the Southeastern Coast of the <span>U</span>nited <span>S</span>tates, 1982–1999.”</span> <em>Transactions of the American Fisheries Society</em> 133 (5): 1190–1204.
+</div>
+<div id="ref-low2023characterizing" class="csl-entry" role="listitem">
+Low, J. G. 2023. <span>“Characterizing Early Growth and Reproduction of <span>B</span>lueline <span>T</span>ilefish (<span>C</span>aulolatilus Microps) to Inform Stock Assessments.”</span> PhD thesis, Virginia Polytechnic Institute; State University.
+</div>
+<div id="ref-mafmc2017amendment" class="csl-entry" role="listitem">
+Mid-Atlantic Fishery Management Council (MAFMC). 2017. <span>“Amendment 6 to the <span>TILEFISH FISHERY MANAGEMENT PLAN</span>, <span>M</span>easures to <span>M</span>anage <span>B</span>lueline <span>T</span>ilefish.”</span> <a href="https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5c1810d98a922d4272fd4f21/1545081051493/Blueline+Tilefish+Amendment_Final+EA_09-12-2017.pdf">https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5c1810d98a922d4272fd4f21/1545081051493/Blueline+Tilefish+Amendment_Final+EA_09-12-2017.pdf</a>.
+</div>
+<div id="ref-mafmc2025update" class="csl-entry" role="listitem">
+———. 2025. <span>“Mid-<span>A</span>tlantic <span>EAFM</span> <span>R</span>isk <span>A</span>ssessment: 2025 <span>U</span>pdate.”</span> <a href="https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/67eac6c94a7516270521e573/1743439565329/02_2025-EAFM-RA-Report.pdf">https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/67eac6c94a7516270521e573/1743439565329/02_2025-EAFM-RA-Report.pdf</a>.
+</div>
+<div id="ref-pinsky2018preparing" class="csl-entry" role="listitem">
+Pinsky, M. L., G. Reygondeau, R. Caddell, J. Palacios-Abrantes, J. Spijkers, and W. W. Cheung. 2018. <span>“Preparing Ocean Governance for Species on the Move.”</span> <em>Science</em> 360 (6394): 1189–91.
+</div>
+<div id="ref-rogers2019shifting" class="csl-entry" role="listitem">
+Rogers, L. A., R. Griffin, T. Young, E. Fuller, K. St. Martin, and M. L. Pinsky. 2019. <span>“Shifting Habitats Expose Fishing Communities to Risk Under Climate Change.”</span> <em>Nature Climate Change</em> 9 (7): 512–16.
+</div>
+<div id="ref-ross1982feeding" class="csl-entry" role="listitem">
+Ross, J. L. 1982. <span>“Feeding Habits of the Gray Tilefish <span>C</span>aulolatilis Microps (<span>G</span>oode and <span>B</span>ean, 1878) from <span>N</span>orth <span>C</span>arolina and <span>S</span>outh <span>C</span>arolina Waters.”</span> <em>Bull. Mar. Sci.</em> 32: 448–54.
+</div>
+<div id="ref-schmidtke2017life" class="csl-entry" role="listitem">
+Schmidtke, M. A. 2017. <span>“Life <span>H</span>istory and <span>M</span>anagement <span>M</span>ethods for <span>B</span>lueline <span>T</span>ilefish (<span>C</span>aulolatilus Microps) from the <span>U</span>nited <span>S</span>tates <span>M</span>id-<span>A</span>tlantic <span>R</span>egion.”</span> PhD thesis, Old Dominion University.
+</div>
+<div id="ref-sedar2025report" class="csl-entry" role="listitem">
+SouthEast Data, Assessment, and Review (SEDAR). 2025. <span>“<span>SEDAR</span> 92 – <span>S</span>tock <span>A</span>ssessment <span>R</span>eport - <span>A</span>tlantic <span>B</span>lueline <span>T</span>ilefish.”</span> SEDAR, North Charleston SC. <a href="https://sedarweb.org/assessments/sedar-92-atlantic-tilefish/">https://sedarweb.org/assessments/sedar-92-atlantic-tilefish/</a>.
+</div>
+<div id="ref-spanik2023validating" class="csl-entry" role="listitem">
+Spanik, K. R., and J. C. Ballenger. 2023. <span>“Validating Blueline Tilefish <span>C</span>aulolatilus Microps Ages in the <span>US</span> <span>S</span>outh <span>A</span>tlantic Using Bomb Radiocarbon (<span>F14C</span>).”</span> <em>Journal of Fish Biology</em> 103 (5): 994–1002.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -990,13 +1094,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/ensemble-sdms.html" class="pagination-link" aria-label="Building &amp; Predicting Ensemble Species Distribution Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></span>
+      <a href="../chapters/Bluefish.html" class="pagination-link" aria-label="Bluefish (*`Pomatomus saltatrix`*)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Bluefish (<em><code>Pomatomus saltatrix</code></em>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/sensitivity_calculation.html" class="pagination-link" aria-label="Sensitivity Calculation">
-        <span class="nav-page-text"><span class="chapter-title">Sensitivity Calculation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Butterfish.html" class="pagination-link" aria-label="Butterfish (*`Peprilus triacanthus`*)">
+        <span class="nav-page-text"><span class="chapter-title">Butterfish (<em><code>Peprilus triacanthus</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

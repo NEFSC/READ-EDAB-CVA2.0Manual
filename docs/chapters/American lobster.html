@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Calculating Exposure – Climate Vulnerability Assessment 2.0</title>
+<title>American lobster (Homarus americanus) – Climate Vulnerability Assessment 2.0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/sensitivity_calculation.html" rel="next">
-<link href="../content/ensemble-sdms.html" rel="prev">
+<link href="../chapters/Atlantic cod.html" rel="next">
+<link href="../content/species_narrative_intro.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/American lobster.html"><span class="chapter-title">American lobster (<em><code>Homarus americanus</code></em>)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Calculating Exposure</span></a>
+  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calculating Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -189,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/American lobster.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">American lobster (<em><code>Homarus americanus</code></em>)</span></a>
+  <a href="../chapters/American lobster.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">American lobster (<em><code>Homarus americanus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -409,19 +429,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#calculating-and-ranking-raw-exposure" id="toc-calculating-and-ranking-raw-exposure" class="nav-link" data-scroll-target="#calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</a></li>
-  <li><a href="#creating-species-specific-exposure-time-series-and-maps-for-each-variable" id="toc-creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="nav-link" data-scroll-target="#creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</a></li>
-  <li><a href="#calculating-total-exposure-for-each-species" id="toc-calculating-total-exposure-for-each-species" class="nav-link" data-scroll-target="#calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#changes-from-previous-assessments" id="toc-changes-from-previous-assessments" class="nav-link" data-scroll-target="#changes-from-previous-assessments">Changes from Previous Assessment(s)</a></li>
+  <li><a href="#score-drivers" id="toc-score-drivers" class="nav-link" data-scroll-target="#score-drivers">Score Drivers</a>
+  <ul class="collapse">
+  <li><a href="#vulnerability" id="toc-vulnerability" class="nav-link" data-scroll-target="#vulnerability">Vulnerability:</a></li>
+  <li><a href="#climate-exposure" id="toc-climate-exposure" class="nav-link" data-scroll-target="#climate-exposure">Climate Exposure:</a></li>
+  <li><a href="#biological-sensitivity" id="toc-biological-sensitivity" class="nav-link" data-scroll-target="#biological-sensitivity">Biological Sensitivity:</a></li>
+  </ul></li>
+  <li><a href="#data-quality-metrics" id="toc-data-quality-metrics" class="nav-link" data-scroll-target="#data-quality-metrics">Data Quality Metrics</a>
+  <ul class="collapse">
+  <li><a href="#life-history-data-quality" id="toc-life-history-data-quality" class="nav-link" data-scroll-target="#life-history-data-quality">Life History Data Quality:</a></li>
+  <li><a href="#model-confidence" id="toc-model-confidence" class="nav-link" data-scroll-target="#model-confidence">Model Confidence:</a></li>
+  </ul></li>
+  <li><a href="#additional-metrics" id="toc-additional-metrics" class="nav-link" data-scroll-target="#additional-metrics">Additional Metrics</a>
+  <ul class="collapse">
+  <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
+  <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
+  </ul></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/American lobster.html"><span class="chapter-title">American lobster (<em><code>Homarus americanus</code></em>)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Calculating Exposure</span></h1>
+<h1 class="title"><span class="chapter-title">American lobster (<em><code>Homarus americanus</code></em>)</span></h1>
 </div>
 
 
@@ -438,133 +476,212 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Exposure is calculated from MOM6 forecast data using the same methods to calculate and rank raw exposure as the CVA1.0 on the MOM6 environmental data. We then use the predicted species distributions and the relative importance of covariates in the ensemble models to calculate variable-specific and total exposure for each species.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Scores</strong></p>
+<p>Vulnerability =</p>
+<p>Climate Exposure =</p>
+<p>Biological Sensitivity = High (Gulf of Maine/Georges Bank stock) - Very High (Southern New England stock)</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Data Quality</strong></p>
+<p>Model Confidence Score =</p>
+<p>Life History Data Quality = 97%</p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/American lobster_exposure_summary_table.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/American lobster_sensitivity_summary_table.png"</code></pre>
+</div>
+</div>
 </section>
-<section id="calculating-and-ranking-raw-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</h2>
-<p>As in the CVA1.0, raw exposure for each environmental variable is calculated using a z-score, which is the difference in mean conditions in a future and present timeseries divided by present day standard deviations.</p>
-<p>The function <code>calcExposure</code> will take the output from <code>pull_hind</code> and/or <code>pull_forecast</code> (a list of rasterStacks) and calculate monthly raw exposure for each environmental variable in the list:</p>
-<p>Where <code>presentRasts</code> and <code>futureRasts</code> are lists of rasterStacks with the same length. These are the raw timeseries over the desired time periods. Remember that <code>pull_hind</code> and <code>pull_forecast</code> pull the complete timeseries for the desired MOM6 run, so you will need to subset their outputs accordingly if desired. <code>calcExposure</code> will produce a list of rasterStacks with the same length as the provided lists. Each rasterStack will have 12 layers, one for each month. <img src="bottomT_exposure.jpg" class="img-fluid" alt="Bottom Temperature Raw Exposure comparing 2019-2019 and 2025-2035"></p>
-<p>The next step is to rank the raw exposure. Since the CVA is designed to help determine which species are at risk to the greatest exposure, these ranks are based on this goal, rather than the distribution of the data themselves. We use the same ranks as the CVA1.0:</p>
+<section id="changes-from-previous-assessments" class="level2">
+<h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
-<caption>Raw Exposure Ranks</caption>
+<colgroup>
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 27%">
+<col style="width: 24%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Score</th>
-<th style="text-align: center;">Raw Exposure</th>
-<th style="text-align: center;">Rank</th>
+<th>Metric</th>
+<th>Current Assessment</th>
+<th>Previous Assessment(s)</th>
+<th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">&lt; 0.5</td>
-<td style="text-align: center;">1</td>
+<td><em>Vulnerability</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">0.5 - 1.5</td>
-<td style="text-align: center;">2</td>
+<td><em>Exposure</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">1.5 - 2</td>
-<td style="text-align: center;">3</td>
+<td><em>Sensitivity</em></td>
+<td>High (Gulf of Maine/Georges Bank) - Very High (Southern New England)</td>
+<td>Moderate (All Stocks)</td>
+<td>Increase</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">&gt; 2</td>
-<td style="text-align: center;">4</td>
+<td><em>Directional Effect</em></td>
+<td>Negative</td>
+<td>Neutral</td>
+<td>Decrease</td>
 </tr>
 </tbody>
 </table>
-<p>The function <code>rankExposure</code> performs the ranking. It also provides the option to multiply raw exposure values for certain by -1 (aka flip). This option was included because the direction of change and the meaning of that change may differ across environmental variables. For example, an increase in surface temperatures would have a positive exposure, whereas a decrease in pH would have a negative exposure; both changes are considered bad for the environment, but the signs differ due to how these variables are quantified. The <code>flip</code> and <code>noFlipList</code> options provide the option to flip the signs of raw exposure for all variables <em>except</em> those listed in <code>noFlipList</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bottomT_exposure_ranked.jpg" class="img-fluid figure-img"></p>
-<figcaption>Bottom Temperature Ranked Exposure comparing 2019-2019 and 2025-2035</figcaption>
-</figure>
+</section>
+<section id="score-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="score-drivers">Score Drivers</h2>
+<section id="vulnerability" class="level3">
+<h3 class="anchored" data-anchor-id="vulnerability">Vulnerability:</h3>
+<p>add text here</p>
+</section>
+<section id="climate-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="climate-exposure">Climate Exposure:</h3>
+<p>add text here</p>
+</section>
+<section id="biological-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
+<p>The <strong>Gulf of Maine/Georges Bank</strong> stock of American lobster received a <strong>High</strong> sensitivity score and the <strong>Southern New England</strong> stock scored <strong>Very High.</strong> Certainty was high for both stocks, with 99% certainty for the Gulf of Maine/Georges Bank stock and 92% certainty for the Southern New England stock.</p>
+<p>Population growth rate and other stressors drove the scores for both stocks. Relationships to calcified organisms contributed to the High score for the Gulf of Maine/Georges Bank stock, and received a score of 3.5 for the Southern New England stock. Stock size had the highest score for the Southern New England Stock.</p>
+<p>Lobsters are long-lived, slow growing species that can reach ages of 50+ years. Disease and the introduction of new predators such as black sea bass and spiny dogfish impact lobsters across their range <span class="citation" data-cites="asmfc2025 goldstein2025">(<a href="#ref-asmfc2025" role="doc-biblioref">Atlantic States Marine Fisheries Commission (ASMFC) 2025</a>; <a href="#ref-goldstein2025" role="doc-biblioref">Goldstein et al. 2025</a>)</span>. American lobsters are omnivores but diets are dominated by mollusks <span class="citation" data-cites="elner1987">(<a href="#ref-elner1987" role="doc-biblioref">Elner and Campbell 1987</a>)</span>, which are likely to be impacted by ocean acidification.</p>
+<p>Sensitivity has increased since the last assessment, where lobsters received a Moderate score <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. Population growth rate and other stressors drove scores in both assessments.</p>
+</section>
+</section>
+<section id="data-quality-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
+<section id="life-history-data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
+<p>The percent of data quality scores greater than 2 was 97% for the Gulf of Maine/Georges Bank stock and 95% for the Southern New England stock, indicating excellent data quality. For both stocks, Stock Size/Status was the only data gap (mean attribute data quality score &lt; 2).</p>
+</section>
+<section id="model-confidence" class="level3">
+<h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
+<p>add text here</p>
+</section>
+</section>
+<section id="additional-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="additional-metrics">Additional Metrics</h2>
+<section id="distribution-shifts" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-shifts">Distribution Shifts:</h3>
+<p>add text here</p>
+</section>
+<section id="directional-effect" class="level3">
+<h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
+<p>Both stocks are likely to be <strong>negatively</strong> impacted by climate change (certainties range from 81 – 100% based on bootstrap analysis of expert scores). Increased thermal stress and disease will continue to decrease the productivity of the stocks. In addition, new demersal predators such as black sea bass and spiny dogfish will increase predation pressures of juvenile and adult lobster. The directional effect was estimated to be neutral in the previous Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
+</section>
+</section>
+<section id="climate-effects-on-abundance-and-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>The Northwest Atlantic has been warming at an exceptionally fast rate <span class="citation" data-cites="saba2016">(<a href="#ref-saba2016" role="doc-biblioref">Saba et al. 2016</a>)</span>, which has contributed to declines in fecundity and population size in Southern New England <span class="citation" data-cites="goldstein2022">(<a href="#ref-goldstein2022" role="doc-biblioref">Goldstein, Zarrella-Smith, and Pugh 2022</a>)</span> while the fishery in the central Gulf of Maine has increased dramatically <span class="citation" data-cites="lebris2018">(<a href="#ref-lebris2018" role="doc-biblioref">Le Bris et al. 2018</a>)</span>. Temperatures have increased in the lobster’s inshore range, and evidence suggests that the productivity of the stock is severely compromised with increased thermal stress and disease <span class="citation" data-cites="asmfc2025">(<a href="#ref-asmfc2025" role="doc-biblioref">Atlantic States Marine Fisheries Commission (ASMFC) 2025</a>)</span>. The assemblage of predators of American lobster has shifted with warming conditions in the Gulf of Maine, with benthic and demersal predators, such as black sea bass (<em>Centropristis striata</em>) and spiny dogfish (<em>Squalus acanthias</em>) becoming increasingly present throughout the lobster’s range, taking the place of traditional predators, such as Atlantic cod (<em>Gadus morhua</em>). The effects of invasive and range-expanding species may also lead to greater predation risk for juvenile lobsters <span class="citation" data-cites="goldstein2025">(<a href="#ref-goldstein2025" role="doc-biblioref">Goldstein et al. 2025</a>)</span>.</p>
+</section>
+<section id="life-history-synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>American lobsters inhabit the coastal and oceanic waters of the Atlantic Ocean from Labrador to North Carolina. They are widely distributed within most of the coastal waters in the Northeast U.S. with some major offshore concentrations along the outer edge of the Continental Shelf and upper slope between Georges Bank and Delaware Bay <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. Spawning takes place during a 4 month period from late May through much of September, when females leave their solitary shelters about 7 days before molting to share the shelter of a dominant male <span class="citation" data-cites="factor1995">(<a href="#ref-factor1995" role="doc-biblioref">Factor 1995</a>)</span> <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. Lobster larvae are planktonic for 6-8 weeks <span class="citation" data-cites="factor1995">(<a href="#ref-factor1995" role="doc-biblioref">Factor 1995</a>)</span> and travel from surface waters offshore to inshore areas of Southern New England and the Gulf of Maine. Larval distribution is affected by the distribution of spawning females and by surface current velocity and direction, temperature, salinity, light intensity, and hydrostatic pressure <span class="citation" data-cites="katz1994">(<a href="#ref-katz1994" role="doc-biblioref">Katz, Cobb, and Spaulding 1994</a>)</span> <span class="citation" data-cites="harding1988">(<a href="#ref-harding1988" role="doc-biblioref">Harding and Trites 1988</a>)</span> <span class="citation" data-cites="hudson1993">(<a href="#ref-hudson1993" role="doc-biblioref">Hudson and Fradette 1993</a>)</span> <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. Larval survival is likely affected by pollution of the marine environment by human activity, especially coastal waters <span class="citation" data-cites="connor1972">(<a href="#ref-connor1972" role="doc-biblioref">Connor 1972</a>)</span>. There is an inverse relationship between temperature and the time from hatching to the postlarval stage (when they settle). Larvae take as few as 11 days at 22°C and as many as 54 days at 10°C to reach the postlarval stage. It is speculated that thermoclines are a negative cue for larvae/post larvae settlement <span class="citation" data-cites="factor1995">(<a href="#ref-factor1995" role="doc-biblioref">Factor 1995</a>)</span> <span class="citation" data-cites="templeman1936">(<a href="#ref-templeman1936" role="doc-biblioref">Templeman 1936</a>)</span>. Juvenile lobsters utilize shelters (rocks and vegetation) in the benthic habitat, and may also burrow in mud <span class="citation" data-cites="wahle1991">(<a href="#ref-wahle1991" role="doc-biblioref">Wahle and Steneck 1991</a>)</span>. Juveniles are omnivorous but also scavenge for food. Much of their diet consists of bottom invertebrates, crabs, urchins, mussels, polychaetes, periwinkles, and sea stars, but they may also consume fish and plants <span class="citation" data-cites="lawton1987">(<a href="#ref-lawton1987" role="doc-biblioref">Lawton 1987</a>)</span>. Adult lobsters are also considered omnivores and scavengers . However, their diet is dominated by mollusks (especially mussels), echinoderms, and polychaetes <span class="citation" data-cites="elner1987">(<a href="#ref-elner1987" role="doc-biblioref">Elner and Campbell 1987</a>)</span>. Juveniles and adults prefer bottom water temperatures of 8-14°C <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. Inshore, adult lobsters appear to have a limited home range of about 2.2 km, however offshore lobsters tend to migrate greater distances (up to 345 km in 71 days) <span class="citation" data-cites="mackenzie1985">(<a href="#ref-mackenzie1985" role="doc-biblioref">Mackenzie and Moring 1985</a>)</span>. American lobster are managed by the Atlantic States Marine Fisheries Commission as three stock units based on life history differences: Gulf of Maine, Georges Bank, and southern New England <span class="citation" data-cites="asmfc2025">(<a href="#ref-asmfc2025" role="doc-biblioref">Atlantic States Marine Fisheries Commission (ASMFC) 2025</a>)</span>.</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/American lobster_exposure_allvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/American lobster_exposure_impvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/American lobster_distribution_center_of_gravity.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/American lobster_distribution_area_of_high_probability.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/American lobster_sdm.png"</code></pre>
+</div>
 </div>
 </section>
-<section id="creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="level2">
-<h2 class="anchored" data-anchor-id="creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</h2>
-<p>Once raw exposure is ranked, species-specific exposure for each environmental variable can be calculated using the functions <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. These functions are nearly identical and only require the ranked exposure values and the mean ensemble species distribution model (SDM) predictions. Ranked exposure values are averaged across space within each month in <code>makeExposureTimeseries</code> and averaged across months in each model grid cell in <code>makeExposureMaps</code>, using the SDM results as weights to account for species distributions and habitat use. The results are a time series of average ranked species-specific exposure within each month and a raster of average species-specific exposure across time for each environmental variable.</p>
-<p>The ensemble SDM results produced by <code>make_predictions</code> should be converted into a monthly average prior to using <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. It is also recommended that you remove low SDM values after averaging. In the NE Shelf CVA2.0, we removed all SDM values less than 0.1 (representing areas with less than a 10% likelihood of finding the species). Not removing these low values resulted in higher than expected exposure results in areas where the species is rare.</p>
-<p>The output from <code>makeExposureTimeseries</code> is a matrix with 12 columns (1 for each month) and a number of rows equal to the number of environmental variables in <code>expRanked</code>. <code>makeExposureMaps</code> produces a rasterStack, with each layer representing one of the environmental variables. Values should range from 1 to 4.</p>
-<p>The wrapper function <code>makeVariableAverages</code> is provided and can be run in parallel using the <code>furrr</code> package, similar to the SDM wrapper functions. Like those wrapper functions, your directory must be set up according to the Installation and Setup Guide provided for them to function. <code>makeVariableAverages</code> also generates the monthly average SDM results, and removes low values for you.</p>
-<p>Like the SDM wrapper functions, <code>args</code> is a dataframe where each row is a set of arguments to be passed to the function. Here, the arguments include the species name (<code>spp</code>), ensemble name to help locate the appropriate ensemble model (<code>ensName</code>), and start and end years for the present and future timeseries (<code>pStart</code>/<code>pEnd</code>/<code>fStart</code>/<code>fEnd</code>) to load in the correct exposure values, as well as save the results from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code> appropriately. These are not memory or time-intensive calculations, so it is not necessary to run them in parallel - it is just helpful if you have a lot of species to work through.</p>
-<p>Below are example variable-specific exposures for Atlantic cod: <img src="exposure_variable_timeseries.png" class="img-fluid" alt="Variable-specific exposures across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_variable_maps.png" class="img-fluid figure-img"></p>
-<figcaption>Variable-specific exposures across space</figcaption>
-</figure>
-</div>
-</section>
-<section id="calculating-total-exposure-for-each-species" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</h2>
-<p>Once you have the species-specific exposure calculated for each variable, they must be combined to estimate total species-specific exposure. These will be the final spatially and temporally explicit values that are combined with species sensitivity to estimate vulnerability.</p>
-<p>To combine the species-specific exposures for each variable, we use the same logic rule as the CVA1.0:</p>
-<table class="caption-top table">
-<caption>Logic Rule used to Calculate Total Species Exposure</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Overall Score</th>
-<th style="text-align: center;">Numeric Score</th>
-<th style="text-align: center;">Logic Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">All other scores</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2 or more attributes &gt;= 2.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2 or more attributes &gt;= 3.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3 or more attributes &gt;= 3.5</td>
-</tr>
-</tbody>
-</table>
-<p>We calculate total exposure in two ways: 1) Applying the logic rule to all ecologically relevant environmental variables as defined by the feeding and habitat keys and 2) Only applying the logic rule to ecological variables that have relative weights in the final ensemble SDM greater than a set value (for the NE Shelf CVA2.0, we chose 10% or 0.1). This was done to account for possible unknown changes in variable importance under future climate change. The latter method (only counting the most important variables), assumes that these values will continue to be very important under future climate change scenarios. It is unclear if this will be the case, especially for variables such as pH where it is unclear how they will impact species. Calculating total exposure using all the ecologically relevant variables allows us and stakeholders to consider all variables regardless of their model importance.</p>
-<p>The functions <code>combineTimeseries</code> and <code>combineMaps</code> provide options for both methods with the option <code>countAll</code>. Setting <code>countAll</code> to TRUE will automatically count all provided variables in <code>matExp</code> for <code>combineTimeseries</code> or <code>mapExp</code> for <code>combineMaps</code>, which are the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, respectively. If set to FALSE, you will need to provide the relative weights and the threshold to use to count variables in the logic rule. It is important that, if you have not yet done so, that you subset <code>matExp</code> and <code>mapExp</code> to only the ecologically relevant variables before running the <code>combineTimeseries</code> and <code>combineMaps</code> functions. This can be done using the relative weights of the variables.</p>
-<p>The function <code>combineWeights</code> estimates the relative variable importance across the models. Since every component model of the ensemble SDM estimates variable importance differently, all importance data is normalized to their respective sums such that they total 1. A weighted average is then performed across models using the weights of each component model in the ensemble. The result is a vector of values representing the relative importance of each of the ecologically relevant variables to the model.</p>
-<p>Where <code>vars</code> is a vector of character strings including the ecologically relevant variables, <code>ensWeights</code> is the weights of each component model of the ensemble model generated by <code>make_sdm</code>, <code>impFlist</code> is a vector of character strings including the file paths to the model variable importance files made by <code>sdm_importance</code>, and <code>staticNames</code> are the names of any static environmental variables to be excluded.</p>
-<p>The names of the vector resulting from <code>combineWeights</code> can be used to subset the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, since these output contain all possible environmental variables from MOM6, before running <code>combineTimeseries</code> and <code>combineMaps</code>.</p>
-<p>Below are examples of total exposure using both methods for Atlantic cod: <img src="exposure_timeseries_all.png" class="img-fluid" alt="Total Exposure using all ecologically-relevant variables across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_timeseries_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across time</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_all.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using all ecologically-relevant variables across space</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across space</figcaption>
-</figure>
-</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-asmfc2025" class="csl-entry" role="listitem">
+Atlantic States Marine Fisheries Commission (ASMFC). 2025. <span>“ASMFC Stock Assessment Overview: American Lobster.”</span> Atlantic States Marine Fisheries Commission. <a href="https://asmfc.org/wp-content/uploads/2025/11/AmericanLobsterStockAssmtOverview_Oct2025.pdf">https://asmfc.org/wp-content/uploads/2025/11/AmericanLobsterStockAssmtOverview_Oct2025.pdf</a>.
+</div>
+<div id="ref-connor1972" class="csl-entry" role="listitem">
+Connor, P. M. 1972. <span>“Acute Toxicity of Heavy Metals to Some Marine Larvae.”</span> <em>Marine Pollution Bulletin</em> 3: 190–92. <a href="https://doi.org/10.1016/0025-326X(72)90234-8">https://doi.org/10.1016/0025-326X(72)90234-8</a>.
+</div>
+<div id="ref-elner1987" class="csl-entry" role="listitem">
+Elner, R. W., and A. Campbell. 1987. <span>“Natural Diets of Lobster <span>Homarus</span> Americanus from Barren Ground and Macroalgal Habitats Off Southwestern <span>Nova Scotia</span>, <span>Canada</span>.”</span> <em>Marine Ecology Progress Series</em> 37: 131–40.
+</div>
+<div id="ref-factor1995" class="csl-entry" role="listitem">
+Factor, J. R. 1995. <em>Biology of Lobster: <span>Homarus</span> Americanus</em>. Academic Press, Inc.
+</div>
+<div id="ref-goldstein2025" class="csl-entry" role="listitem">
+Goldstein, J. S., B. C. Gutzler, A. S. Kough, J. T. Carloni, A. M. Dayton, C. M. Guenther, S. H. Jury, and W. H. Watson III. 2025. <span>“A Review of <span>American</span> Lobster (<span>Homarus</span> Americanus) Research Since 2000.”</span> <em>Reviews in Fisheries Science &amp; Aquaculture</em> 34 (1). <a href="https://doi.org/10.1080/23308249.2025.2514440">https://doi.org/10.1080/23308249.2025.2514440</a>.
+</div>
+<div id="ref-goldstein2022" class="csl-entry" role="listitem">
+Goldstein, J. S., K. A. Zarrella-Smith, and T. L. Pugh. 2022. <span>“Recent Declines in <span>American</span> Lobster Fecundity in Southern <span>New England</span>: Drivers and Implications.”</span> <em>ICES Journal of Marine Science</em> 79 (5): 1662–74. <a href="https://doi.org/10.1093/icesjms/fsac083">https://doi.org/10.1093/icesjms/fsac083</a>.
+</div>
+<div id="ref-harding1988" class="csl-entry" role="listitem">
+Harding, G. C., and K. W. Trites. 1988. <span>“Dispersal of <span>Homarus</span> Americanus Larvae in the <span class="nocase">Gulf of Maine</span> from <span>Browns Bank</span>.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 21: 180–99.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-hudson1993" class="csl-entry" role="listitem">
+Hudson, C., and P. Fradette. 1993. <span>“Wind-Induced Advection of Larval Decapods into <span class="nocase">Baie de Plaisance</span> (<span class="nocase">Iles de la Madeleine, Quebec</span>).”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 40: 1422–32.
+</div>
+<div id="ref-katz1994" class="csl-entry" role="listitem">
+Katz, C. H., J. S. Cobb, and M. Spaulding. 1994. <span>“Larval Behavior, Hydrodynamic Transport and Potential Offshore-to-Inshore Recruitment in the <span>American</span> Lobster <span>Homarus</span> Americanus.”</span> <em>Marine Ecology Progress Series</em> 103: 265–73.
+</div>
+<div id="ref-lawton1987" class="csl-entry" role="listitem">
+Lawton, P. 1987. <span>“Diel Activity and Foraging Behavior of Juvenile <span>American</span> Lobsters, <span>Homarus</span> Americanus.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 44 (6): 1195–205.
+</div>
+<div id="ref-lebris2018" class="csl-entry" role="listitem">
+Le Bris, A., K. E. Mills, R. A. Wahle, Y. Chen, M. A. Alexander, A. J. Allyn, J. G. Schuetz, J. D. Scott, and A. J. Pershing. 2018. <span>“Climate Vulnerability and Resilience in the Most Valuable <span>North American</span> Fishery.”</span> <em>Proceedings of the National Academy of Sciences</em> 115 (8): 1831–36. <a href="https://doi.org/10.1073/pnas.1711122115">https://doi.org/10.1073/pnas.1711122115</a>.
+</div>
+<div id="ref-mackenzie1985" class="csl-entry" role="listitem">
+Mackenzie, C., and J. R. Moring. 1985. <span>“Species Profiles: Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (<span>North Atlantic</span>) <span>AMERICAN LOBSTER</span>.”</span> Biological Report 82(11.33). U.S. Fish; Wildlife Service.
+</div>
+<div id="ref-saba2016" class="csl-entry" role="listitem">
+Saba, V. S., S. M. Griffies, W. G. Anderson, M. Winton, M. A. Alexander, T. L. Delworth, J. A. Hare, et al. 2016. <span>“Enhanced Warming of the <span>Northwest Atlantic Ocean</span> Under Climate Change.”</span> <em>Journal of Geophysical Research: Oceans</em> 121: 118–32. <a href="https://doi.org/10.1002/2015JC011346">https://doi.org/10.1002/2015JC011346</a>.
+</div>
+<div id="ref-templeman1936" class="csl-entry" role="listitem">
+Templeman, W. 1936. <span>“The Influence of Temperature, Salinity, Light and Food Conditions on the Survival and Growth of the Larvae of the Lobster (<span>Homarus</span> Americanus).”</span> <em>Journal of the Biological Board of Canada</em> 2: 485–97.
+</div>
+<div id="ref-wahle1991" class="csl-entry" role="listitem">
+Wahle, R. A., and R. S. Steneck. 1991. <span>“Recruitment Habitats and Nursery Grounds of the <span>American</span> Lobster <span>Homarus</span> Americanus: A Demographic Bottleneck?”</span> <em>Marine Ecology Progress Series</em> 69: 231–43.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -990,13 +1107,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/ensemble-sdms.html" class="pagination-link" aria-label="Building &amp; Predicting Ensemble Species Distribution Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></span>
+      <a href="../content/species_narrative_intro.html" class="pagination-link" aria-label="Species Narratives">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Species Narratives</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/sensitivity_calculation.html" class="pagination-link" aria-label="Sensitivity Calculation">
-        <span class="nav-page-text"><span class="chapter-title">Sensitivity Calculation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Atlantic cod.html" class="pagination-link" aria-label="Atlantic cod (*`Gadus morhua`*)">
+        <span class="nav-page-text"><span class="chapter-title">Atlantic cod (<em><code>Gadus morhua</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

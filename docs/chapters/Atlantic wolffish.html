@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Calculating Exposure – Climate Vulnerability Assessment 2.0</title>
+<title>Atlantic wolffish (Anarhichas lupus) – Climate Vulnerability Assessment 2.0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/sensitivity_calculation.html" rel="next">
-<link href="../content/ensemble-sdms.html" rel="prev">
+<link href="../chapters/Black sea bass.html" rel="next">
+<link href="../chapters/Atlantic surfclam.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Atlantic wolffish.html"><span class="chapter-title">Atlantic wolffish (<em><code>Anarhichas lupus</code></em>)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Calculating Exposure</span></a>
+  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calculating Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -234,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Atlantic wolffish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Atlantic wolffish (<em><code>Anarhichas lupus</code></em>)</span></a>
+  <a href="../chapters/Atlantic wolffish.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Atlantic wolffish (<em><code>Anarhichas lupus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -409,19 +429,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#calculating-and-ranking-raw-exposure" id="toc-calculating-and-ranking-raw-exposure" class="nav-link" data-scroll-target="#calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</a></li>
-  <li><a href="#creating-species-specific-exposure-time-series-and-maps-for-each-variable" id="toc-creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="nav-link" data-scroll-target="#creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</a></li>
-  <li><a href="#calculating-total-exposure-for-each-species" id="toc-calculating-total-exposure-for-each-species" class="nav-link" data-scroll-target="#calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#changes-from-previous-assessments" id="toc-changes-from-previous-assessments" class="nav-link" data-scroll-target="#changes-from-previous-assessments">Changes from Previous Assessment(s)</a></li>
+  <li><a href="#score-drivers" id="toc-score-drivers" class="nav-link" data-scroll-target="#score-drivers">Score Drivers</a>
+  <ul class="collapse">
+  <li><a href="#vulnerability" id="toc-vulnerability" class="nav-link" data-scroll-target="#vulnerability">Vulnerability:</a></li>
+  <li><a href="#climate-exposure" id="toc-climate-exposure" class="nav-link" data-scroll-target="#climate-exposure">Climate Exposure:</a></li>
+  <li><a href="#biological-sensitivity" id="toc-biological-sensitivity" class="nav-link" data-scroll-target="#biological-sensitivity">Biological Sensitivity:</a></li>
+  </ul></li>
+  <li><a href="#data-quality-metrics" id="toc-data-quality-metrics" class="nav-link" data-scroll-target="#data-quality-metrics">Data Quality Metrics</a>
+  <ul class="collapse">
+  <li><a href="#life-history-data-quality" id="toc-life-history-data-quality" class="nav-link" data-scroll-target="#life-history-data-quality">Life History Data Quality:</a></li>
+  <li><a href="#model-confidence" id="toc-model-confidence" class="nav-link" data-scroll-target="#model-confidence">Model Confidence:</a></li>
+  </ul></li>
+  <li><a href="#additional-metrics" id="toc-additional-metrics" class="nav-link" data-scroll-target="#additional-metrics">Additional Metrics</a>
+  <ul class="collapse">
+  <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
+  <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
+  </ul></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Atlantic wolffish.html"><span class="chapter-title">Atlantic wolffish (<em><code>Anarhichas lupus</code></em>)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Calculating Exposure</span></h1>
+<h1 class="title"><span class="chapter-title">Atlantic wolffish (<em><code>Anarhichas lupus</code></em>)</span></h1>
 </div>
 
 
@@ -438,133 +476,205 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Exposure is calculated from MOM6 forecast data using the same methods to calculate and rank raw exposure as the CVA1.0 on the MOM6 environmental data. We then use the predicted species distributions and the relative importance of covariates in the ensemble models to calculate variable-specific and total exposure for each species.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Scores</strong></p>
+<p>Vulnerability =</p>
+<p>Climate Exposure =</p>
+<p>Biological Sensitivity = High</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Data Quality</strong></p>
+<p>Model Confidence Score =</p>
+<p>Life History Data Quality = 97%</p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic wolffish_exposure_summary_table.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic wolffish_sensitivity_summary_table.png"</code></pre>
+</div>
+</div>
 </section>
-<section id="calculating-and-ranking-raw-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</h2>
-<p>As in the CVA1.0, raw exposure for each environmental variable is calculated using a z-score, which is the difference in mean conditions in a future and present timeseries divided by present day standard deviations.</p>
-<p>The function <code>calcExposure</code> will take the output from <code>pull_hind</code> and/or <code>pull_forecast</code> (a list of rasterStacks) and calculate monthly raw exposure for each environmental variable in the list:</p>
-<p>Where <code>presentRasts</code> and <code>futureRasts</code> are lists of rasterStacks with the same length. These are the raw timeseries over the desired time periods. Remember that <code>pull_hind</code> and <code>pull_forecast</code> pull the complete timeseries for the desired MOM6 run, so you will need to subset their outputs accordingly if desired. <code>calcExposure</code> will produce a list of rasterStacks with the same length as the provided lists. Each rasterStack will have 12 layers, one for each month. <img src="bottomT_exposure.jpg" class="img-fluid" alt="Bottom Temperature Raw Exposure comparing 2019-2019 and 2025-2035"></p>
-<p>The next step is to rank the raw exposure. Since the CVA is designed to help determine which species are at risk to the greatest exposure, these ranks are based on this goal, rather than the distribution of the data themselves. We use the same ranks as the CVA1.0:</p>
+<section id="changes-from-previous-assessments" class="level2">
+<h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
-<caption>Raw Exposure Ranks</caption>
+<colgroup>
+<col style="width: 29%">
+<col style="width: 27%">
+<col style="width: 32%">
+<col style="width: 10%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Score</th>
-<th style="text-align: center;">Raw Exposure</th>
-<th style="text-align: center;">Rank</th>
+<th>Metric</th>
+<th>Current Assessment</th>
+<th>Previous Assessment(s)</th>
+<th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">&lt; 0.5</td>
-<td style="text-align: center;">1</td>
+<td><em>Vulnerability</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">0.5 - 1.5</td>
-<td style="text-align: center;">2</td>
+<td><em>Exposure</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">1.5 - 2</td>
-<td style="text-align: center;">3</td>
+<td><em>Sensitivity</em></td>
+<td>High</td>
+<td>High</td>
+<td>None</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">&gt; 2</td>
-<td style="text-align: center;">4</td>
+<td><em>Directional Effect</em></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
-<p>The function <code>rankExposure</code> performs the ranking. It also provides the option to multiply raw exposure values for certain by -1 (aka flip). This option was included because the direction of change and the meaning of that change may differ across environmental variables. For example, an increase in surface temperatures would have a positive exposure, whereas a decrease in pH would have a negative exposure; both changes are considered bad for the environment, but the signs differ due to how these variables are quantified. The <code>flip</code> and <code>noFlipList</code> options provide the option to flip the signs of raw exposure for all variables <em>except</em> those listed in <code>noFlipList</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bottomT_exposure_ranked.jpg" class="img-fluid figure-img"></p>
-<figcaption>Bottom Temperature Ranked Exposure comparing 2019-2019 and 2025-2035</figcaption>
-</figure>
+</section>
+<section id="score-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="score-drivers">Score Drivers</h2>
+<section id="vulnerability" class="level3">
+<h3 class="anchored" data-anchor-id="vulnerability">Vulnerability:</h3>
+<p>add text here</p>
+</section>
+<section id="climate-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="climate-exposure">Climate Exposure:</h3>
+<p>add text here</p>
+</section>
+<section id="biological-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
+<p>Atlantic Wolffish received a <strong>High</strong> sensitivity score. This score had a certainty of 99% from bootstrap analysis. Three attributes had scores greater than 3: Stock Size (3.5), Population Growth Rate (3.3), and Historical Variability in Temperature (3).</p>
+<p>Wolffish are a long lived (maximum documented age is 33 years) and late maturing species (most reach maturity by age 6) <span class="citation" data-cites="Rountree2002 McBride2022">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>; <a href="#ref-McBride2022" role="doc-biblioref">McBride et al. 2022</a>)</span>. Furthermore, wolffish prefer colder waters and previous studies have illustrated that they will shift to seek out preferred temperature <span class="citation" data-cites="Kulka2011 Rountree2002">(<a href="#ref-Kulka2011" role="doc-biblioref">Kulka et al. 2011</a>; <a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span>. Wolffish are not currently overfished and overfishing is not occurring <span class="citation" data-cites="NEFSC2022_wolffish">(<a href="#ref-NEFSC2022_wolffish" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2022</a>)</span>.</p>
+<p>In the previous Climate Vulnerability Assessment, Atlantic wolffish also received a High sensitivity score <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. This was driven by Stock Status, Population Growth Rate, and Spawning Cycle, similar to our results. Previous research suggested that spawning only occurred in the autumn in the Northwest Atlantic, which likely drove the high Spawning Cycle score in the previous Assessment. However, more recent work has shown that timing may vary according to local conditions <span class="citation" data-cites="Rountree2002 McBride2022">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>; <a href="#ref-McBride2022" role="doc-biblioref">McBride et al. 2022</a>)</span>.</p>
+</section>
+</section>
+<section id="data-quality-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
+<section id="life-history-data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
+<p>97% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
+</section>
+<section id="model-confidence" class="level3">
+<h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
+<p>add text here</p>
+</section>
+</section>
+<section id="additional-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="additional-metrics">Additional Metrics</h2>
+<section id="distribution-shifts" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-shifts">Distribution Shifts:</h3>
+<p>add text here</p>
+</section>
+<section id="directional-effect" class="level3">
+<h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
+<p>Atlantic wolffish are expected to be <strong>negatively</strong> impacted by future climate change. Certainty scores from experts were 100%. Atlantic wolffish are known temperature seekers and prefer cold waters <span class="citation" data-cites="Kulka2011">(<a href="#ref-Kulka2011" role="doc-biblioref">Kulka et al. 2011</a>)</span>. Low dissolved oxygen concentrations may also impact wolffish <span class="citation" data-cites="Bianucci2016">(<a href="#ref-Bianucci2016" role="doc-biblioref">Bianucci et al. 2016</a>)</span>. These results are similar to those from the 2016 Climate Vulnerability Assessment for the region <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
+</section>
+</section>
+<section id="climate-effects-on-abundance-and-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Atlantic wolffish is a cold water species and has been termed a “temperature seeker” <span class="citation" data-cites="Kulka2011">(<a href="#ref-Kulka2011" role="doc-biblioref">Kulka et al. 2011</a>)</span>. Early life history stages and fish near the southern stock boundary may be the most vulnerable to surface water temperatures exceeding 9-11°C <span class="citation" data-cites="Rountree2002">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span>. Juvenile Atlantic wolffish exposed to temperatures of 15°C exhibited reduced growth and higher metabolic rates compared to those at 10°C <span class="citation" data-cites="Hinchcliffe2025">(<a href="#ref-Hinchcliffe2025" role="doc-biblioref">Hinchcliffe et al. 2025</a>)</span>. In the North Sea, Atlantic wolffish have shifted their distribution and decreased abundance at the southern end of their range and in shallow waters <span class="citation" data-cites="Bluemel2022">(<a href="#ref-Bluemel2022" role="doc-biblioref">Bluemel et al. 2022</a>)</span>. <span class="citation" data-cites="Bianucci2016">Bianucci et al. (<a href="#ref-Bianucci2016" role="doc-biblioref">2016</a>)</span> observed a connection between low dissolved oxygen and contraction of the Atlantic wolffish population on the Scotian Shelf. Model results of future dissolved oxygen conditions also extend to areas with high Atlantic wolffish biomass <span class="citation" data-cites="Bianucci2016">(<a href="#ref-Bianucci2016" role="doc-biblioref">Bianucci et al. 2016</a>)</span>. Similar results were also observed in <span class="citation" data-cites="Brennan2016">(<a href="#ref-Brennan2016" role="doc-biblioref">Brennan, Blanchard, and Fennel 2016</a>)</span> which predicted declines in dissolved oxygen concentrations and increases in temperature outside of known adult wolffish tolerances.</p>
+</section>
+<section id="life-history-synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic wolffish inhabit deep, rocky waters of the Northwest Atlantic from Labrador to the Great South Channel and Georges Bank <span class="citation" data-cites="Rountree2002">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span>. In the Northwest Atlantic, wolffish are believed to spawn primarily in autumn <span class="citation" data-cites="Rountree2002">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span>. Spawning is likely temperature dependent <span class="citation" data-cites="AWBRT2009">(<a href="#ref-AWBRT2009" role="doc-biblioref">Atlantic Wolffish Biological Review Team 2009</a>)</span>. Wolffish will migrate to colder temperatures before the spawning season, and egg laying and guarding behavior could be disrupted if bottom temperatures increase above 10°C <span class="citation" data-cites="Collette2002">(<a href="#ref-Collette2002" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. However, laboratory experiments suggest that timing may be highly plastic and dependent on local conditions, including photoperiod <span class="citation" data-cites="McBride2022">(<a href="#ref-McBride2022" role="doc-biblioref">McBride et al. 2022</a>)</span>. Spatial and temporal variation in spawning may be contributing to the stock’s regional reproductive isolation <span class="citation" data-cites="AWBRT2009">(<a href="#ref-AWBRT2009" role="doc-biblioref">Atlantic Wolffish Biological Review Team 2009</a>)</span>. Eggs are deposited in rocky dens and incubation time is highly dependent on water temperature, varying between 3 - 9 months <span class="citation" data-cites="AWBRT2009">(<a href="#ref-AWBRT2009" role="doc-biblioref">Atlantic Wolffish Biological Review Team 2009</a>)</span>. After hatching, prolarvae stay close to the bottom. Larvae consume a broad range of amphipod, crustacean, and fish larvae <span class="citation" data-cites="Rountree2002">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span>. The prolarval stage can last from a few hours to 6 days <span class="citation" data-cites="Collette2002">(<a href="#ref-Collette2002" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. The larvae become pelagic shortly after and stay within the water column from 20 days to 2 months, with colder temperatures prolonging the larval period, before migrating back to the bottom <span class="citation" data-cites="Rountree2002">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span>. Juvenile and adult wolffish occupy the bottom habitats of the continental shelf and slope, using large stones and rocks for shelter and nesting and soft substrates for feeding <span class="citation" data-cites="AWBRT2009">(<a href="#ref-AWBRT2009" role="doc-biblioref">Atlantic Wolffish Biological Review Team 2009</a>)</span> <span class="citation" data-cites="Collette2002">(<a href="#ref-Collette2002" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. Juvenile wolffish primarily consume echinoderms <span class="citation" data-cites="AWBRT2009">(<a href="#ref-AWBRT2009" role="doc-biblioref">Atlantic Wolffish Biological Review Team 2009</a>)</span>. Adults prey upon hard-shelled invertebrates such as mollusks, crustaceans and echinoderms. Stomach contents have included sea urchins, whelks, cockles, sea clams, brittle stars, crabs, scallops and other shellfish in addition to an occasional redfish <span class="citation" data-cites="AWBRT2009">(<a href="#ref-AWBRT2009" role="doc-biblioref">Atlantic Wolffish Biological Review Team 2009</a>)</span> <span class="citation" data-cites="Rountree2002">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span>. While previous studies have suggested that wolffish migrate inshore/offshore seasonally for spawning or maturity, it is unclear if this is a true migration or if behavioral changes are affecting catchability as eggs are found both inshore and offshore. More recent tagging studies have illustrated that movements in the Northwest Atlantic are limited, but the species has been shown to migrate in the Northeast Atlantic <span class="citation" data-cites="Rountree2002">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span> <span class="citation" data-cites="Simpson2015">(<a href="#ref-Simpson2015" role="doc-biblioref">Simpson et al. 2015</a>)</span> <span class="citation" data-cites="Gunnarsson2019">(<a href="#ref-Gunnarsson2019" role="doc-biblioref">Gunnarsson et al. 2019</a>)</span>. Spiny dogfish, sea raven and Atlantic cod are the dominant predators for juveniles. For adults, the occurrence of predation is low and is not likely to be having a significant effect at the population level <span class="citation" data-cites="AWBRT2009">(<a href="#ref-AWBRT2009" role="doc-biblioref">Atlantic Wolffish Biological Review Team 2009</a>)</span>. The maximum reported age for wolffish in the Gulf of Maine is 33 years <span class="citation" data-cites="Fairchild2015">(<a href="#ref-Fairchild2015" role="doc-biblioref">Fairchild et al. 2015</a>)</span>. Most individuals reach maturity by age 6, but this may vary regionally due to temperature <span class="citation" data-cites="Rountree2002">(<a href="#ref-Rountree2002" role="doc-biblioref">Rountree 2002</a>)</span> <span class="citation" data-cites="McBride2022">(<a href="#ref-McBride2022" role="doc-biblioref">McBride et al. 2022</a>)</span>. Atlantic wolffish are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. As of the 2022 Management Track Assessment, the stock is not overfished and overfishing is not occurring <span class="citation" data-cites="NEFSC2022_wolffish">(<a href="#ref-NEFSC2022_wolffish" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2022</a>)</span>.</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic wolffish_exposure_allvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic wolffish_exposure_impvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic wolffish_distribution_center_of_gravity.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic wolffish_distribution_area_of_high_probability.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic wolffish_sdm.png"</code></pre>
+</div>
 </div>
 </section>
-<section id="creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="level2">
-<h2 class="anchored" data-anchor-id="creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</h2>
-<p>Once raw exposure is ranked, species-specific exposure for each environmental variable can be calculated using the functions <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. These functions are nearly identical and only require the ranked exposure values and the mean ensemble species distribution model (SDM) predictions. Ranked exposure values are averaged across space within each month in <code>makeExposureTimeseries</code> and averaged across months in each model grid cell in <code>makeExposureMaps</code>, using the SDM results as weights to account for species distributions and habitat use. The results are a time series of average ranked species-specific exposure within each month and a raster of average species-specific exposure across time for each environmental variable.</p>
-<p>The ensemble SDM results produced by <code>make_predictions</code> should be converted into a monthly average prior to using <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. It is also recommended that you remove low SDM values after averaging. In the NE Shelf CVA2.0, we removed all SDM values less than 0.1 (representing areas with less than a 10% likelihood of finding the species). Not removing these low values resulted in higher than expected exposure results in areas where the species is rare.</p>
-<p>The output from <code>makeExposureTimeseries</code> is a matrix with 12 columns (1 for each month) and a number of rows equal to the number of environmental variables in <code>expRanked</code>. <code>makeExposureMaps</code> produces a rasterStack, with each layer representing one of the environmental variables. Values should range from 1 to 4.</p>
-<p>The wrapper function <code>makeVariableAverages</code> is provided and can be run in parallel using the <code>furrr</code> package, similar to the SDM wrapper functions. Like those wrapper functions, your directory must be set up according to the Installation and Setup Guide provided for them to function. <code>makeVariableAverages</code> also generates the monthly average SDM results, and removes low values for you.</p>
-<p>Like the SDM wrapper functions, <code>args</code> is a dataframe where each row is a set of arguments to be passed to the function. Here, the arguments include the species name (<code>spp</code>), ensemble name to help locate the appropriate ensemble model (<code>ensName</code>), and start and end years for the present and future timeseries (<code>pStart</code>/<code>pEnd</code>/<code>fStart</code>/<code>fEnd</code>) to load in the correct exposure values, as well as save the results from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code> appropriately. These are not memory or time-intensive calculations, so it is not necessary to run them in parallel - it is just helpful if you have a lot of species to work through.</p>
-<p>Below are example variable-specific exposures for Atlantic cod: <img src="exposure_variable_timeseries.png" class="img-fluid" alt="Variable-specific exposures across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_variable_maps.png" class="img-fluid figure-img"></p>
-<figcaption>Variable-specific exposures across space</figcaption>
-</figure>
-</div>
-</section>
-<section id="calculating-total-exposure-for-each-species" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</h2>
-<p>Once you have the species-specific exposure calculated for each variable, they must be combined to estimate total species-specific exposure. These will be the final spatially and temporally explicit values that are combined with species sensitivity to estimate vulnerability.</p>
-<p>To combine the species-specific exposures for each variable, we use the same logic rule as the CVA1.0:</p>
-<table class="caption-top table">
-<caption>Logic Rule used to Calculate Total Species Exposure</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Overall Score</th>
-<th style="text-align: center;">Numeric Score</th>
-<th style="text-align: center;">Logic Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">All other scores</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2 or more attributes &gt;= 2.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2 or more attributes &gt;= 3.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3 or more attributes &gt;= 3.5</td>
-</tr>
-</tbody>
-</table>
-<p>We calculate total exposure in two ways: 1) Applying the logic rule to all ecologically relevant environmental variables as defined by the feeding and habitat keys and 2) Only applying the logic rule to ecological variables that have relative weights in the final ensemble SDM greater than a set value (for the NE Shelf CVA2.0, we chose 10% or 0.1). This was done to account for possible unknown changes in variable importance under future climate change. The latter method (only counting the most important variables), assumes that these values will continue to be very important under future climate change scenarios. It is unclear if this will be the case, especially for variables such as pH where it is unclear how they will impact species. Calculating total exposure using all the ecologically relevant variables allows us and stakeholders to consider all variables regardless of their model importance.</p>
-<p>The functions <code>combineTimeseries</code> and <code>combineMaps</code> provide options for both methods with the option <code>countAll</code>. Setting <code>countAll</code> to TRUE will automatically count all provided variables in <code>matExp</code> for <code>combineTimeseries</code> or <code>mapExp</code> for <code>combineMaps</code>, which are the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, respectively. If set to FALSE, you will need to provide the relative weights and the threshold to use to count variables in the logic rule. It is important that, if you have not yet done so, that you subset <code>matExp</code> and <code>mapExp</code> to only the ecologically relevant variables before running the <code>combineTimeseries</code> and <code>combineMaps</code> functions. This can be done using the relative weights of the variables.</p>
-<p>The function <code>combineWeights</code> estimates the relative variable importance across the models. Since every component model of the ensemble SDM estimates variable importance differently, all importance data is normalized to their respective sums such that they total 1. A weighted average is then performed across models using the weights of each component model in the ensemble. The result is a vector of values representing the relative importance of each of the ecologically relevant variables to the model.</p>
-<p>Where <code>vars</code> is a vector of character strings including the ecologically relevant variables, <code>ensWeights</code> is the weights of each component model of the ensemble model generated by <code>make_sdm</code>, <code>impFlist</code> is a vector of character strings including the file paths to the model variable importance files made by <code>sdm_importance</code>, and <code>staticNames</code> are the names of any static environmental variables to be excluded.</p>
-<p>The names of the vector resulting from <code>combineWeights</code> can be used to subset the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, since these output contain all possible environmental variables from MOM6, before running <code>combineTimeseries</code> and <code>combineMaps</code>.</p>
-<p>Below are examples of total exposure using both methods for Atlantic cod: <img src="exposure_timeseries_all.png" class="img-fluid" alt="Total Exposure using all ecologically-relevant variables across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_timeseries_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across time</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_all.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using all ecologically-relevant variables across space</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across space</figcaption>
-</figure>
-</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-AWBRT2009" class="csl-entry" role="listitem">
+Atlantic Wolffish Biological Review Team. 2009. <span>“Status Review of <span>A</span>tlantic Wolffish (<span>A</span>narhichas Lupus).”</span> Report to National Marine Fisheries Service, Northeast Regional Office.
+</div>
+<div id="ref-Bianucci2016" class="csl-entry" role="listitem">
+Bianucci, L., K. Fennel, D. Chabot, N. Shackell, and D. Lavoie. 2016. <span>“Ocean Biogeochemical Models as Management Tools: A Case Study for <span>A</span>tlantic Wolffish and Declining Oxygen.”</span> <em>ICES Journal of Marine Science</em> 73 (2): 263–74. <a href="https://doi.org/10.1093/icesjms/fsv184">https://doi.org/10.1093/icesjms/fsv184</a>.
+</div>
+<div id="ref-Bluemel2022" class="csl-entry" role="listitem">
+Bluemel, J. K., S. H. Fischer, D. W. Kulka, C. P. Lynam, and J. R. Ellis. 2022. <span>“Decline in <span>A</span>tlantic Wolffish <span>A</span>narhichas Lupus in the <span>N</span>orth <span>S</span>ea: <span>I</span>mpacts of Fishing Pressure and Climate Change.”</span> <em>Journal of Fish Biology</em> 100 (1): 253–67. <a href="https://doi.org/10.1111/jfb.14930">https://doi.org/10.1111/jfb.14930</a>.
+</div>
+<div id="ref-Brennan2016" class="csl-entry" role="listitem">
+Brennan, C. E., H. Blanchard, and K. Fennel. 2016. <span>“Putting <span>T</span>emperature and <span>O</span>xygen <span>T</span>hresholds of <span>M</span>arine <span>A</span>nimals in <span>C</span>ontext of <span>E</span>nvironmental <span>C</span>hange: <span>A</span> <span>R</span>egional <span>P</span>erspective for the <span>S</span>cotian <span>S</span>helf and <span>G</span>ulf of <span>S</span>t. <span>L</span>awrence.”</span> <em>PLOS ONE</em> 11 (12): e0167411. <a href="https://doi.org/10.1371/journal.pone.0167411">https://doi.org/10.1371/journal.pone.0167411</a>.
+</div>
+<div id="ref-Collette2002" class="csl-entry" role="listitem">
+Collette, B. B., and G. Klein-MacPhee, eds. 2002. <em>Bigelow and <span>S</span>chroeder’s <span>F</span>ishes of the <span>G</span>ulf of <span>M</span>aine</em>. 3rd ed. Washington, D.C.: Smithsonian Institution Press.
+</div>
+<div id="ref-Fairchild2015" class="csl-entry" role="listitem">
+Fairchild, E. A., S. Tallack, S. P. Elzey, and M. P. Armstrong. 2015. <span>“Spring Feeding of <span>A</span>tlantic Wolffish (<span>A</span>narhichas Lupus) on <span>S</span>tellwagen <span>B</span>ank, <span>M</span>assachusetts.”</span> <em>Fishery Bulletin</em> 113 (2).
+</div>
+<div id="ref-Gunnarsson2019" class="csl-entry" role="listitem">
+Gunnarsson, ’A., J. S’olmundsson, H. Bj"ornsson, G. Sigursson, and C. Pampoulie. 2019. <span>“Migration Pattern and Evidence of Homing in <span>A</span>tlantic Wolffish (<span>A</span>narhichas Lupus).”</span> <em>Fisheries Research</em> 215: 69–75. <a href="https://doi.org/10.1016/j.fishres.2019.02.015">https://doi.org/10.1016/j.fishres.2019.02.015</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-Hinchcliffe2025" class="csl-entry" role="listitem">
+Hinchcliffe, J., J. A. Roques, A. Ekstr"om, I. Hed’en, K. Sundell, H. Sundh, E. Sandblom, B. T. Bj"ornsson, and E. J"onsson. 2025. <span>“Insights into Thermal Sensitivity: <span>E</span>ffects of Elevated Temperature on Growth, Metabolic Rate, and Stress Responses in <span>A</span>tlantic Wolffish (<span>A</span>narhichas Lupus).”</span> <em>Journal of Fish Biology</em> 106 (1): 61–74. <a href="https://doi.org/10.1111/jfb.16104">https://doi.org/10.1111/jfb.16104</a>.
+</div>
+<div id="ref-Kulka2011" class="csl-entry" role="listitem">
+Kulka, D. W., S. D. Simpson, R. van Hal, D. Duplisea, A. Sell, L. Teal, and M. Peck. 2011. <span>“Effects of Climate Variability and Change on Fish.”</span> In <em><span>ICES</span> Status Report on Climate Change in the <span>N</span>orth <span>A</span>tlantic</em>, 310:147–58. ICES Cooperative Research Report.
+</div>
+<div id="ref-McBride2022" class="csl-entry" role="listitem">
+McBride, R. S., E. A. Fairchild, Y. K. Press, S. P. Elzey, C. F. Adams, and P. Bentzen. 2022. <span>“A <span>L</span>ife <span>H</span>istory <span>S</span>tudy of <span>A</span>tlantic <span>W</span>olffish <span>R</span>esolves <span>B</span>ias and <span>I</span>mprecision in <span>L</span>ength and <span>A</span>ge at <span>M</span>aturity <span>S</span>chedules by <span>R</span>ecognizing <span>A</span>bortive <span>M</span>aturation.”</span> <em>Marine and Coastal Fisheries</em> 14 (5): e10222. <a href="https://doi.org/10.1002/mcf2.10222">https://doi.org/10.1002/mcf2.10222</a>.
+</div>
+<div id="ref-NEFSC2022_wolffish" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2022. <span>“Atlantic Wolffish 2022 <span>M</span>anagement <span>T</span>rack <span>A</span>ssessment <span>R</span>eport.”</span> <a href="https://d23h0vhsm26o6d.cloudfront.net/5_2022_CAT_UNIT_RPT_UPDATED.pdf">https://d23h0vhsm26o6d.cloudfront.net/5_2022_CAT_UNIT_RPT_UPDATED.pdf</a>.
+</div>
+<div id="ref-Rountree2002" class="csl-entry" role="listitem">
+Rountree, R. A. 2002. <span>“Wolffishes; <span>F</span>amily <span>A</span>narhichadidae.”</span> In <em>Bigelow and <span>S</span>chroeder’s Fishes of the <span>G</span>ulf of <span>M</span>aine</em>, edited by B. B. Collette and G. Klein-MacPhee, 3rd ed., 485–96. Washington; London: Smithsonian Institution Press.
+</div>
+<div id="ref-Simpson2015" class="csl-entry" role="listitem">
+Simpson, M., L. G. S. Mello, C. M. Miri, R. Collins, C. Holloway, and T. Maddigan. 2015. <span>“A Preliminary Analysis of Habitat Use and Movement Patterns of Wolffish (<span>A</span>narhichas Spp.) in Coastal <span>N</span>ewfoundland Waters.”</span> DFO Can. Sci. Advis. Sec. Res. Doc. 2014/033.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -990,13 +1100,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/ensemble-sdms.html" class="pagination-link" aria-label="Building &amp; Predicting Ensemble Species Distribution Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></span>
+      <a href="../chapters/Atlantic surfclam.html" class="pagination-link" aria-label="Atlantic surfclam (*`Spisula solidissima`*)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Atlantic surfclam (<em><code>Spisula solidissima</code></em>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/sensitivity_calculation.html" class="pagination-link" aria-label="Sensitivity Calculation">
-        <span class="nav-page-text"><span class="chapter-title">Sensitivity Calculation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Black sea bass.html" class="pagination-link" aria-label="Black sea bass (*`Centropristis striata`*)">
+        <span class="nav-page-text"><span class="chapter-title">Black sea bass (<em><code>Centropristis striata</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

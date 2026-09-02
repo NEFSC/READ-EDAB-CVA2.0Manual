@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Calculating Exposure – Climate Vulnerability Assessment 2.0</title>
+<title>Blue crab (Callinectes sapidus) – Climate Vulnerability Assessment 2.0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/sensitivity_calculation.html" rel="next">
-<link href="../content/ensemble-sdms.html" rel="prev">
+<link href="../chapters/Bluefin tuna.html" rel="next">
+<link href="../chapters/Black sea bass.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Blue crab.html"><span class="chapter-title">Blue crab (<em><code>Callinectes sapidus</code></em>)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Calculating Exposure</span></a>
+  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calculating Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -244,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Blue crab.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Blue crab (<em><code>Callinectes sapidus</code></em>)</span></a>
+  <a href="../chapters/Blue crab.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Blue crab (<em><code>Callinectes sapidus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -409,19 +429,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#calculating-and-ranking-raw-exposure" id="toc-calculating-and-ranking-raw-exposure" class="nav-link" data-scroll-target="#calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</a></li>
-  <li><a href="#creating-species-specific-exposure-time-series-and-maps-for-each-variable" id="toc-creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="nav-link" data-scroll-target="#creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</a></li>
-  <li><a href="#calculating-total-exposure-for-each-species" id="toc-calculating-total-exposure-for-each-species" class="nav-link" data-scroll-target="#calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#changes-from-previous-assessments" id="toc-changes-from-previous-assessments" class="nav-link" data-scroll-target="#changes-from-previous-assessments">Changes from Previous Assessment(s)</a></li>
+  <li><a href="#score-drivers" id="toc-score-drivers" class="nav-link" data-scroll-target="#score-drivers">Score Drivers</a>
+  <ul class="collapse">
+  <li><a href="#vulnerability" id="toc-vulnerability" class="nav-link" data-scroll-target="#vulnerability">Vulnerability:</a></li>
+  <li><a href="#climate-exposure" id="toc-climate-exposure" class="nav-link" data-scroll-target="#climate-exposure">Climate Exposure:</a></li>
+  <li><a href="#biological-sensitivity" id="toc-biological-sensitivity" class="nav-link" data-scroll-target="#biological-sensitivity">Biological Sensitivity:</a></li>
+  </ul></li>
+  <li><a href="#data-quality-metrics" id="toc-data-quality-metrics" class="nav-link" data-scroll-target="#data-quality-metrics">Data Quality Metrics</a>
+  <ul class="collapse">
+  <li><a href="#life-history-data-quality" id="toc-life-history-data-quality" class="nav-link" data-scroll-target="#life-history-data-quality">Life History Data Quality:</a></li>
+  <li><a href="#model-confidence" id="toc-model-confidence" class="nav-link" data-scroll-target="#model-confidence">Model Confidence:</a></li>
+  </ul></li>
+  <li><a href="#additional-metrics" id="toc-additional-metrics" class="nav-link" data-scroll-target="#additional-metrics">Additional Metrics</a>
+  <ul class="collapse">
+  <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
+  <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
+  </ul></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Blue crab.html"><span class="chapter-title">Blue crab (<em><code>Callinectes sapidus</code></em>)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Calculating Exposure</span></h1>
+<h1 class="title"><span class="chapter-title">Blue crab (<em><code>Callinectes sapidus</code></em>)</span></h1>
 </div>
 
 
@@ -438,133 +476,199 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Exposure is calculated from MOM6 forecast data using the same methods to calculate and rank raw exposure as the CVA1.0 on the MOM6 environmental data. We then use the predicted species distributions and the relative importance of covariates in the ensemble models to calculate variable-specific and total exposure for each species.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Scores</strong></p>
+<p>Vulnerability =</p>
+<p>Climate Exposure =</p>
+<p>Biological Sensitivity = Moderate</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Data Quality</strong></p>
+<p>Model Confidence Score =</p>
+<p>Life History Data Quality = 93%</p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blue crab_exposure_summary_table.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blue crab_sensitivity_summary_table.png"</code></pre>
+</div>
+</div>
 </section>
-<section id="calculating-and-ranking-raw-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</h2>
-<p>As in the CVA1.0, raw exposure for each environmental variable is calculated using a z-score, which is the difference in mean conditions in a future and present timeseries divided by present day standard deviations.</p>
-<p>The function <code>calcExposure</code> will take the output from <code>pull_hind</code> and/or <code>pull_forecast</code> (a list of rasterStacks) and calculate monthly raw exposure for each environmental variable in the list:</p>
-<p>Where <code>presentRasts</code> and <code>futureRasts</code> are lists of rasterStacks with the same length. These are the raw timeseries over the desired time periods. Remember that <code>pull_hind</code> and <code>pull_forecast</code> pull the complete timeseries for the desired MOM6 run, so you will need to subset their outputs accordingly if desired. <code>calcExposure</code> will produce a list of rasterStacks with the same length as the provided lists. Each rasterStack will have 12 layers, one for each month. <img src="bottomT_exposure.jpg" class="img-fluid" alt="Bottom Temperature Raw Exposure comparing 2019-2019 and 2025-2035"></p>
-<p>The next step is to rank the raw exposure. Since the CVA is designed to help determine which species are at risk to the greatest exposure, these ranks are based on this goal, rather than the distribution of the data themselves. We use the same ranks as the CVA1.0:</p>
+<section id="changes-from-previous-assessments" class="level2">
+<h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
-<caption>Raw Exposure Ranks</caption>
+<colgroup>
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Score</th>
-<th style="text-align: center;">Raw Exposure</th>
-<th style="text-align: center;">Rank</th>
+<th>Metric</th>
+<th>Current Assessment</th>
+<th>Previous Assessment(s)</th>
+<th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">&lt; 0.5</td>
-<td style="text-align: center;">1</td>
+<td><em>Vulnerability</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">0.5 - 1.5</td>
-<td style="text-align: center;">2</td>
+<td><em>Exposure</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">1.5 - 2</td>
-<td style="text-align: center;">3</td>
+<td><em>Sensitivity</em></td>
+<td>Moderate</td>
+<td>High</td>
+<td>Decrease</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">&gt; 2</td>
-<td style="text-align: center;">4</td>
+<td><em>Directional Effect</em></td>
+<td>Neutral</td>
+<td>Neutral</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
-<p>The function <code>rankExposure</code> performs the ranking. It also provides the option to multiply raw exposure values for certain by -1 (aka flip). This option was included because the direction of change and the meaning of that change may differ across environmental variables. For example, an increase in surface temperatures would have a positive exposure, whereas a decrease in pH would have a negative exposure; both changes are considered bad for the environment, but the signs differ due to how these variables are quantified. The <code>flip</code> and <code>noFlipList</code> options provide the option to flip the signs of raw exposure for all variables <em>except</em> those listed in <code>noFlipList</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bottomT_exposure_ranked.jpg" class="img-fluid figure-img"></p>
-<figcaption>Bottom Temperature Ranked Exposure comparing 2019-2019 and 2025-2035</figcaption>
-</figure>
+</section>
+<section id="score-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="score-drivers">Score Drivers</h2>
+<section id="vulnerability" class="level3">
+<h3 class="anchored" data-anchor-id="vulnerability">Vulnerability:</h3>
+<p>add text here</p>
+</section>
+<section id="climate-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="climate-exposure">Climate Exposure:</h3>
+<p>add text here</p>
+</section>
+<section id="biological-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
+<p>Blue crabs had a <strong>Moderate</strong> sensitivity score, with 79% certainty. Three attributes received scores greater than 2.5: Complexity in Reproductive Strategy (3.4), Other Stressors (2.8), and Egg and Larval Survival and Settlement Requirements (2.7).</p>
+<p>Blue crabs rely on estuaries throughout their life cycles, including for spawning. Estuaries are highly vulnerable habitats due to urbanization impacts such as hypoxia, loss of seagrass beds, and changes to freshwater inputs <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. Temperatures have been shown to impact spawning behaviors and larvae require low salinities (10-30) for proper development <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>.</p>
+<p>Blue crabs received a High sensitivity score in the previous Climate Vulnerability Assessment. This was driven by similar attributes to our scores: Other Stressors and Complexity in Reproductive Strategy <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
+</section>
+</section>
+<section id="data-quality-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
+<section id="life-history-data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
+<p>93% of data quality scores were greater than or equal to 2, indicating excellent data quality. Only Stock Size/Status was considered a data gap (mean attribute data quality score &lt; 2).</p>
+</section>
+<section id="model-confidence" class="level3">
+<h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
+<p>add text here</p>
+</section>
+</section>
+<section id="additional-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="additional-metrics">Additional Metrics</h2>
+<section id="distribution-shifts" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-shifts">Distribution Shifts:</h3>
+<p>add text here</p>
+</section>
+<section id="directional-effect" class="level3">
+<h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
+<p>Blue crab are expected to be <strong>neutrally</strong> impacted by climate change. Expert scores had 93% certainty. This is consistent with the previous Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. While degradation of estuarine habitats may limit food sources or force crabs into new areas, warmer temperatures are predicted to increase survival rates, particularly over winter <span class="citation" data-cites="aguilar2008importance glandon2019winter">(<a href="#ref-aguilar2008importance" role="doc-biblioref">Aguilar et al. 2008</a>; <a href="#ref-glandon2019winter" role="doc-biblioref">Glandon, Kilbourne, and Miller 2019</a>)</span>.</p>
+</section>
+</section>
+<section id="climate-effects-on-abundance-and-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>As an estuary dependent species, blue crab habitats have been degraded through urbanization impacts including hypoxia, reduction in seagrass beds, and changes in timing and volume of freshwater inputs. Low oxygen conditions may force crabs into shallower, more spatially restricted areas of Chesapeake Bay, increasing their vulnerability to predation or capture. Prolonged hypoxia may limit food resources (mainly infaunal bivalves) in affected areas even after normoxic conditions resume <span class="citation" data-cites="aguilar2008importance">(<a href="#ref-aguilar2008importance" role="doc-biblioref">Aguilar et al. 2008</a>)</span>. <span class="citation" data-cites="glandon2019winter">Glandon, Kilbourne, and Miller (<a href="#ref-glandon2019winter" role="doc-biblioref">2019</a>)</span> estimated water temperatures in Chesapeake Bay through 2100 and found that a 50% shorter winter will increase overwinter survival rates in blue crab by 20%. Faster growth, a longer growing season, and lower winter mortality would lead to increased productivity <span class="citation" data-cites="glandon2019winter">(<a href="#ref-glandon2019winter" role="doc-biblioref">Glandon, Kilbourne, and Miller 2019</a>)</span>. Blue crabs may also adapt phenologically to warming temperatures by shifting the timing of biological events such as spawning <span class="citation" data-cites="schneider2024reproductive">(<a href="#ref-schneider2024reproductive" role="doc-biblioref">Schneider, Fabrizio, and Lipcius 2024</a>)</span>. Blue crabs have been observed in the Gulf of Maine, indicating a possible range extension from climate-driven rising temperatures <span class="citation" data-cites="johnson2015savory">(<a href="#ref-johnson2015savory" role="doc-biblioref">Johnson 2015</a>)</span>.</p>
+</section>
+<section id="life-history-synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>The blue crab’s native range is along the western Atlantic coast from Nova Scotia to Argentina, including the Gulf of America <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. The blue crab fishery is the most valuable fishery in the Chesapeake Bay <span class="citation" data-cites="hines2007ecology">(<a href="#ref-hines2007ecology" role="doc-biblioref">Hines 2007</a>)</span>. In Chesapeake Bay, adults spawn from May to October, however spawning is likely more limited in cooler waters <span class="citation" data-cites="umces2011stock">(<a href="#ref-umces2011stock" role="doc-biblioref">University of Maryland Center for Environmental Science (UMCES) 2011</a>)</span>. To spawn, adults aggregate in low salinity areas of upper estuaries to mate. Adult females then travel to higher salinity spawning grounds <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. The timing of the migration varies with water temperature and occurs earlier in the year at lower latitudes <span class="citation" data-cites="aguilar2008importance">(<a href="#ref-aguilar2008importance" role="doc-biblioref">Aguilar et al. 2008</a>)</span>. Eggs (7-14 days) and larvae (40-70 days) are pelagic <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span> and are carried by currents offshore before using physical transport methods to return to bays and eventually estuaries <span class="citation" data-cites="millikin1984synopsis">(<a href="#ref-millikin1984synopsis" role="doc-biblioref">Millikin and Williams 1984</a>)</span>. Larvae require temperatures of 20-30°C and salinities of 10-30 ppt for proper development <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. Settlement into estuarine habitats is associated with Ekman flow from southward wind events resulting in strong subtidal flow into the estuaries. Once in the estuary, settlement and metamorphosis of the megalopae are stimulated by chemical cues associated with appropriate nursery habitat <span class="citation" data-cites="epifanio2016behavioral">(<a href="#ref-epifanio2016behavioral" role="doc-biblioref">Epifanio and Cohen 2016</a>)</span>. Larvae are phytoplanktivorous, consuming dinoflagellates and copepod nauplii <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. They are preyed upon by a large number of estuarine and marine animals , including other commercially important species such as the striped bass <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. Once reaching the juvenile stage, blue crabs gradually migrate into shallower, less saline waters in upper estuaries and rivers, where they grow and mature. Males, which prefer low-salinity waters, generally migrate farther upstream than do females, which tend to stay in the lower rivers and estuaries <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. Post-larval and juvenile crabs are considered general scavengers, bottom carnivores, detritivores, and omnivores, consuming a wide range of dead and live fish, crabs, organic debris, shrimp, mollusks (including mussels, clams, oysters, and snails), and aquatic plants <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. Adult blue crab prey is very similar to juveniles; they will consume most available prey and freely switch among preferred prey types <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. Juvenile and adult blue crabs are consumed by mammals, sea turtles, birds, and several fishes <span class="citation" data-cites="hill1989species">(<a href="#ref-hill1989species" role="doc-biblioref">Hill, Fowler, and Van Den Avyle 1989</a>)</span>. Blue crabs reach maturity at 12-18 months, with a maximum lifespan around 4 years of age and a maximum size of 9 inches carapace length (CL) <span class="citation" data-cites="umces2011stock">(<a href="#ref-umces2011stock" role="doc-biblioref">University of Maryland Center for Environmental Science (UMCES) 2011</a>)</span> <span class="citation" data-cites="millikin1984synopsis">(<a href="#ref-millikin1984synopsis" role="doc-biblioref">Millikin and Williams 1984</a>)</span>. Adults prefer temperatures of 9-10°C for feeding, growth, and migration <span class="citation" data-cites="hines2007ecology">(<a href="#ref-hines2007ecology" role="doc-biblioref">Hines 2007</a>)</span>. In the Northwest Atlantic, blue crabs are managed by the Maryland Department of Natural Resources, Virginia Marine Resources Commission, and Potomac River Fisheries Commission. These entities work together with NOAA to conduct stock assessments for blue crab. The Chesapeake Bay blue crab population is not overfished based on current biological reference points, but abundance and recruitment remain low. A benchmark stock assessment is underway to improve understanding of blue crab population dynamics and its fishery <span class="citation" data-cites="cbsac2025advisory">(<a href="#ref-cbsac2025advisory" role="doc-biblioref">Chesapeake Bay Stock Assessment Committee (CBSAC) 2025</a>)</span>.</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blue crab_exposure_allvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blue crab_exposure_impvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blue crab_distribution_center_of_gravity.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blue crab_distribution_area_of_high_probability.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Blue crab_sdm.png"</code></pre>
+</div>
 </div>
 </section>
-<section id="creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="level2">
-<h2 class="anchored" data-anchor-id="creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</h2>
-<p>Once raw exposure is ranked, species-specific exposure for each environmental variable can be calculated using the functions <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. These functions are nearly identical and only require the ranked exposure values and the mean ensemble species distribution model (SDM) predictions. Ranked exposure values are averaged across space within each month in <code>makeExposureTimeseries</code> and averaged across months in each model grid cell in <code>makeExposureMaps</code>, using the SDM results as weights to account for species distributions and habitat use. The results are a time series of average ranked species-specific exposure within each month and a raster of average species-specific exposure across time for each environmental variable.</p>
-<p>The ensemble SDM results produced by <code>make_predictions</code> should be converted into a monthly average prior to using <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. It is also recommended that you remove low SDM values after averaging. In the NE Shelf CVA2.0, we removed all SDM values less than 0.1 (representing areas with less than a 10% likelihood of finding the species). Not removing these low values resulted in higher than expected exposure results in areas where the species is rare.</p>
-<p>The output from <code>makeExposureTimeseries</code> is a matrix with 12 columns (1 for each month) and a number of rows equal to the number of environmental variables in <code>expRanked</code>. <code>makeExposureMaps</code> produces a rasterStack, with each layer representing one of the environmental variables. Values should range from 1 to 4.</p>
-<p>The wrapper function <code>makeVariableAverages</code> is provided and can be run in parallel using the <code>furrr</code> package, similar to the SDM wrapper functions. Like those wrapper functions, your directory must be set up according to the Installation and Setup Guide provided for them to function. <code>makeVariableAverages</code> also generates the monthly average SDM results, and removes low values for you.</p>
-<p>Like the SDM wrapper functions, <code>args</code> is a dataframe where each row is a set of arguments to be passed to the function. Here, the arguments include the species name (<code>spp</code>), ensemble name to help locate the appropriate ensemble model (<code>ensName</code>), and start and end years for the present and future timeseries (<code>pStart</code>/<code>pEnd</code>/<code>fStart</code>/<code>fEnd</code>) to load in the correct exposure values, as well as save the results from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code> appropriately. These are not memory or time-intensive calculations, so it is not necessary to run them in parallel - it is just helpful if you have a lot of species to work through.</p>
-<p>Below are example variable-specific exposures for Atlantic cod: <img src="exposure_variable_timeseries.png" class="img-fluid" alt="Variable-specific exposures across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_variable_maps.png" class="img-fluid figure-img"></p>
-<figcaption>Variable-specific exposures across space</figcaption>
-</figure>
-</div>
-</section>
-<section id="calculating-total-exposure-for-each-species" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</h2>
-<p>Once you have the species-specific exposure calculated for each variable, they must be combined to estimate total species-specific exposure. These will be the final spatially and temporally explicit values that are combined with species sensitivity to estimate vulnerability.</p>
-<p>To combine the species-specific exposures for each variable, we use the same logic rule as the CVA1.0:</p>
-<table class="caption-top table">
-<caption>Logic Rule used to Calculate Total Species Exposure</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Overall Score</th>
-<th style="text-align: center;">Numeric Score</th>
-<th style="text-align: center;">Logic Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">All other scores</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2 or more attributes &gt;= 2.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2 or more attributes &gt;= 3.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3 or more attributes &gt;= 3.5</td>
-</tr>
-</tbody>
-</table>
-<p>We calculate total exposure in two ways: 1) Applying the logic rule to all ecologically relevant environmental variables as defined by the feeding and habitat keys and 2) Only applying the logic rule to ecological variables that have relative weights in the final ensemble SDM greater than a set value (for the NE Shelf CVA2.0, we chose 10% or 0.1). This was done to account for possible unknown changes in variable importance under future climate change. The latter method (only counting the most important variables), assumes that these values will continue to be very important under future climate change scenarios. It is unclear if this will be the case, especially for variables such as pH where it is unclear how they will impact species. Calculating total exposure using all the ecologically relevant variables allows us and stakeholders to consider all variables regardless of their model importance.</p>
-<p>The functions <code>combineTimeseries</code> and <code>combineMaps</code> provide options for both methods with the option <code>countAll</code>. Setting <code>countAll</code> to TRUE will automatically count all provided variables in <code>matExp</code> for <code>combineTimeseries</code> or <code>mapExp</code> for <code>combineMaps</code>, which are the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, respectively. If set to FALSE, you will need to provide the relative weights and the threshold to use to count variables in the logic rule. It is important that, if you have not yet done so, that you subset <code>matExp</code> and <code>mapExp</code> to only the ecologically relevant variables before running the <code>combineTimeseries</code> and <code>combineMaps</code> functions. This can be done using the relative weights of the variables.</p>
-<p>The function <code>combineWeights</code> estimates the relative variable importance across the models. Since every component model of the ensemble SDM estimates variable importance differently, all importance data is normalized to their respective sums such that they total 1. A weighted average is then performed across models using the weights of each component model in the ensemble. The result is a vector of values representing the relative importance of each of the ecologically relevant variables to the model.</p>
-<p>Where <code>vars</code> is a vector of character strings including the ecologically relevant variables, <code>ensWeights</code> is the weights of each component model of the ensemble model generated by <code>make_sdm</code>, <code>impFlist</code> is a vector of character strings including the file paths to the model variable importance files made by <code>sdm_importance</code>, and <code>staticNames</code> are the names of any static environmental variables to be excluded.</p>
-<p>The names of the vector resulting from <code>combineWeights</code> can be used to subset the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, since these output contain all possible environmental variables from MOM6, before running <code>combineTimeseries</code> and <code>combineMaps</code>.</p>
-<p>Below are examples of total exposure using both methods for Atlantic cod: <img src="exposure_timeseries_all.png" class="img-fluid" alt="Total Exposure using all ecologically-relevant variables across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_timeseries_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across time</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_all.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using all ecologically-relevant variables across space</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across space</figcaption>
-</figure>
-</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-aguilar2008importance" class="csl-entry" role="listitem">
+Aguilar, Robert, Eric G Johnson, Anson H Hines, Margaret A Kramer, and Michael R Goodison. 2008. <span>“Importance of Blue Crab Life History for Stock Enhancement and Spatial Management of the Fishery in Chesapeake Bay.”</span> <em>Reviews in Fisheries Science</em> 16 (1-3): 117–24.
+</div>
+<div id="ref-cbsac2025advisory" class="csl-entry" role="listitem">
+Chesapeake Bay Stock Assessment Committee (CBSAC). 2025. <span>“2025 Chesapeake Bay Blue Crab Advisory Report.”</span> Chesapeake Bay Program. <a href="https://www.chesapeakebay.net/files/2025_Blue-Crab-Advisory-Report_FINAL-DRAFT.pdf">https://www.chesapeakebay.net/files/2025_Blue-Crab-Advisory-Report_FINAL-DRAFT.pdf</a>.
+</div>
+<div id="ref-epifanio2016behavioral" class="csl-entry" role="listitem">
+Epifanio, Charles E, and Jonathan H Cohen. 2016. <span>“Behavioral Adaptations in Larvae of Brachyuran Crabs: A Review.”</span> <em>Journal of Experimental Marine Biology and Ecology</em> 482: 85–105. <a href="https://doi.org/10.1016/j.jembe.2016.05.006">https://doi.org/10.1016/j.jembe.2016.05.006</a>.
+</div>
+<div id="ref-glandon2019winter" class="csl-entry" role="listitem">
+Glandon, Heather L, K Halimeda Kilbourne, and Thomas J Miller. 2019. <span>“Winter Is (Not) Coming: Warming Temperatures Will Affect the Overwinter Behavior and Survival of Blue Crab.”</span> <em>PLoS One</em> 14 (7): e0219555.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-hill1989species" class="csl-entry" role="listitem">
+Hill, J, DL Fowler, and MJ Van Den Avyle. 1989. <span>“Species Profiles: Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (Mid-Atlantic)–Blue Crab.”</span> U.S. Fish Wildl. Serv. Biol. Rep. 82(11.100). U.S. Army Corps of Engineers, TR EL-82-4.
+</div>
+<div id="ref-hines2007ecology" class="csl-entry" role="listitem">
+Hines, Anson H. 2007. <span>“Ecology of Juvenile and Adult Blue Crabs.”</span> In <em>The Blue Crab: Callinectes Sapidus</em>, edited by Victor S Kennedy and L Eugene Cronin, 575–665. College Park, MD: Maryland Sea Grant College.
+</div>
+<div id="ref-johnson2015savory" class="csl-entry" role="listitem">
+Johnson, David Samuel. 2015. <span>“The Savory Swimmer Swims North: A Northern Range Extension of the Blue Crab Callinectes Sapidus?”</span> <em>Journal of Crustacean Biology</em> 35 (1): 105–10.
+</div>
+<div id="ref-millikin1984synopsis" class="csl-entry" role="listitem">
+Millikin, MR, and AB Williams. 1984. <span>“Synopsis of Biological Data on the Blue Crab, Callinectes Sapidus Rathbun.”</span> NOAA Tech. Rep. NMFS 1.
+</div>
+<div id="ref-schneider2024reproductive" class="csl-entry" role="listitem">
+Schneider, AK, MC Fabrizio, and RN Lipcius. 2024. <span>“Reproductive Phenology of the Chesapeake Bay Blue Crab Population in a Changing Climate.”</span> <em>Frontiers in Ecology and Evolution</em> 11: 1304021.
+</div>
+<div id="ref-umces2011stock" class="csl-entry" role="listitem">
+University of Maryland Center for Environmental Science (UMCES). 2011. <span>“Stock Assessment of the Blue Crab in Chesapeake Bay.”</span> Final Report TS-614-11. University of Maryland Center for Environmental Science.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -990,13 +1094,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/ensemble-sdms.html" class="pagination-link" aria-label="Building &amp; Predicting Ensemble Species Distribution Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></span>
+      <a href="../chapters/Black sea bass.html" class="pagination-link" aria-label="Black sea bass (*`Centropristis striata`*)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Black sea bass (<em><code>Centropristis striata</code></em>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/sensitivity_calculation.html" class="pagination-link" aria-label="Sensitivity Calculation">
-        <span class="nav-page-text"><span class="chapter-title">Sensitivity Calculation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Bluefin tuna.html" class="pagination-link" aria-label="Bluefin tuna (*`Thunnus thynnus`*)">
+        <span class="nav-page-text"><span class="chapter-title">Bluefin tuna (<em><code>Thunnus thynnus</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

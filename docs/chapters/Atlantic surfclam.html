@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Calculating Exposure – Climate Vulnerability Assessment 2.0</title>
+<title>Atlantic surfclam (Spisula solidissima) – Climate Vulnerability Assessment 2.0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/sensitivity_calculation.html" rel="next">
-<link href="../content/ensemble-sdms.html" rel="prev">
+<link href="../chapters/Atlantic wolffish.html" rel="next">
+<link href="../chapters/Atlantic sea scallop.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Atlantic surfclam.html"><span class="chapter-title">Atlantic surfclam (<em><code>Spisula solidissima</code></em>)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Calculating Exposure</span></a>
+  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calculating Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -229,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Atlantic surfclam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Atlantic surfclam (<em><code>Spisula solidissima</code></em>)</span></a>
+  <a href="../chapters/Atlantic surfclam.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Atlantic surfclam (<em><code>Spisula solidissima</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -409,19 +429,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#calculating-and-ranking-raw-exposure" id="toc-calculating-and-ranking-raw-exposure" class="nav-link" data-scroll-target="#calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</a></li>
-  <li><a href="#creating-species-specific-exposure-time-series-and-maps-for-each-variable" id="toc-creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="nav-link" data-scroll-target="#creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</a></li>
-  <li><a href="#calculating-total-exposure-for-each-species" id="toc-calculating-total-exposure-for-each-species" class="nav-link" data-scroll-target="#calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#changes-from-previous-assessments" id="toc-changes-from-previous-assessments" class="nav-link" data-scroll-target="#changes-from-previous-assessments">Changes from Previous Assessment(s)</a></li>
+  <li><a href="#score-drivers" id="toc-score-drivers" class="nav-link" data-scroll-target="#score-drivers">Score Drivers</a>
+  <ul class="collapse">
+  <li><a href="#vulnerability" id="toc-vulnerability" class="nav-link" data-scroll-target="#vulnerability">Vulnerability:</a></li>
+  <li><a href="#climate-exposure" id="toc-climate-exposure" class="nav-link" data-scroll-target="#climate-exposure">Climate Exposure:</a></li>
+  <li><a href="#biological-sensitivity" id="toc-biological-sensitivity" class="nav-link" data-scroll-target="#biological-sensitivity">Biological Sensitivity:</a></li>
+  </ul></li>
+  <li><a href="#data-quality-metrics" id="toc-data-quality-metrics" class="nav-link" data-scroll-target="#data-quality-metrics">Data Quality Metrics</a>
+  <ul class="collapse">
+  <li><a href="#life-history-data-quality" id="toc-life-history-data-quality" class="nav-link" data-scroll-target="#life-history-data-quality">Life History Data Quality:</a></li>
+  <li><a href="#model-confidence" id="toc-model-confidence" class="nav-link" data-scroll-target="#model-confidence">Model Confidence:</a></li>
+  </ul></li>
+  <li><a href="#additional-metrics" id="toc-additional-metrics" class="nav-link" data-scroll-target="#additional-metrics">Additional Metrics</a>
+  <ul class="collapse">
+  <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
+  <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
+  </ul></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Atlantic surfclam.html"><span class="chapter-title">Atlantic surfclam (<em><code>Spisula solidissima</code></em>)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Calculating Exposure</span></h1>
+<h1 class="title"><span class="chapter-title">Atlantic surfclam (<em><code>Spisula solidissima</code></em>)</span></h1>
 </div>
 
 
@@ -438,133 +476,213 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Exposure is calculated from MOM6 forecast data using the same methods to calculate and rank raw exposure as the CVA1.0 on the MOM6 environmental data. We then use the predicted species distributions and the relative importance of covariates in the ensemble models to calculate variable-specific and total exposure for each species.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Scores</strong></p>
+<p>Vulnerability =</p>
+<p>Climate Exposure =</p>
+<p>Biological Sensitivity = High</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Data Quality</strong></p>
+<p>Model Confidence Score =</p>
+<p>Life History Data Quality = 95%</p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic surfclam_exposure_summary_table.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic surfclam_sensitivity_summary_table.png"</code></pre>
+</div>
+</div>
 </section>
-<section id="calculating-and-ranking-raw-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</h2>
-<p>As in the CVA1.0, raw exposure for each environmental variable is calculated using a z-score, which is the difference in mean conditions in a future and present timeseries divided by present day standard deviations.</p>
-<p>The function <code>calcExposure</code> will take the output from <code>pull_hind</code> and/or <code>pull_forecast</code> (a list of rasterStacks) and calculate monthly raw exposure for each environmental variable in the list:</p>
-<p>Where <code>presentRasts</code> and <code>futureRasts</code> are lists of rasterStacks with the same length. These are the raw timeseries over the desired time periods. Remember that <code>pull_hind</code> and <code>pull_forecast</code> pull the complete timeseries for the desired MOM6 run, so you will need to subset their outputs accordingly if desired. <code>calcExposure</code> will produce a list of rasterStacks with the same length as the provided lists. Each rasterStack will have 12 layers, one for each month. <img src="bottomT_exposure.jpg" class="img-fluid" alt="Bottom Temperature Raw Exposure comparing 2019-2019 and 2025-2035"></p>
-<p>The next step is to rank the raw exposure. Since the CVA is designed to help determine which species are at risk to the greatest exposure, these ranks are based on this goal, rather than the distribution of the data themselves. We use the same ranks as the CVA1.0:</p>
+<section id="changes-from-previous-assessments" class="level2">
+<h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
-<caption>Raw Exposure Ranks</caption>
+<colgroup>
+<col style="width: 29%">
+<col style="width: 27%">
+<col style="width: 32%">
+<col style="width: 10%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Score</th>
-<th style="text-align: center;">Raw Exposure</th>
-<th style="text-align: center;">Rank</th>
+<th>Metric</th>
+<th>Current Assessment</th>
+<th>Previous Assessment(s)</th>
+<th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">&lt; 0.5</td>
-<td style="text-align: center;">1</td>
+<td><em>Vulnerability</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">0.5 - 1.5</td>
-<td style="text-align: center;">2</td>
+<td><em>Exposure</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">1.5 - 2</td>
-<td style="text-align: center;">3</td>
+<td><em>Sensitivity</em></td>
+<td>High</td>
+<td>High</td>
+<td>None</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">&gt; 2</td>
-<td style="text-align: center;">4</td>
+<td><em>Directional Effect</em></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
-<p>The function <code>rankExposure</code> performs the ranking. It also provides the option to multiply raw exposure values for certain by -1 (aka flip). This option was included because the direction of change and the meaning of that change may differ across environmental variables. For example, an increase in surface temperatures would have a positive exposure, whereas a decrease in pH would have a negative exposure; both changes are considered bad for the environment, but the signs differ due to how these variables are quantified. The <code>flip</code> and <code>noFlipList</code> options provide the option to flip the signs of raw exposure for all variables <em>except</em> those listed in <code>noFlipList</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bottomT_exposure_ranked.jpg" class="img-fluid figure-img"></p>
-<figcaption>Bottom Temperature Ranked Exposure comparing 2019-2019 and 2025-2035</figcaption>
-</figure>
+</section>
+<section id="score-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="score-drivers">Score Drivers</h2>
+<section id="vulnerability" class="level3">
+<h3 class="anchored" data-anchor-id="vulnerability">Vulnerability:</h3>
+<p>add text here</p>
+</section>
+<section id="climate-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="climate-exposure">Climate Exposure:</h3>
+<p>add text here</p>
+</section>
+<section id="biological-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
+<p>Atlantic surfclams received a <strong>High</strong> sensitivity score, with 100% certainty. Two attributes had scores greater than 3: Adult Mobility (4) and Relationship to Calcified Organisms (4). Like other bivalves, they have a calcium carbonate shell and are therefore susceptible to ocean acidification <span class="citation" data-cites="Cargnelli1999_surfclam">(<a href="#ref-Cargnelli1999_surfclam" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. In addition, they are primarily sessile, other than burrowing into sediments to avoid predators <span class="citation" data-cites="Cargnelli1999_surfclam">(<a href="#ref-Cargnelli1999_surfclam" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>.</p>
+<p>Surfclams received the same sensitivity score in the 2016 Climate Vulnerability Assessment. Adult Mobility and Relationship to Calcified Organisms also drove that score <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
+</section>
+</section>
+<section id="data-quality-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
+<section id="life-history-data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
+<p>95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
+</section>
+<section id="model-confidence" class="level3">
+<h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
+<p>add text here</p>
+</section>
+</section>
+<section id="additional-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="additional-metrics">Additional Metrics</h2>
+<section id="distribution-shifts" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-shifts">Distribution Shifts:</h3>
+<p>add text here</p>
+</section>
+<section id="directional-effect" class="level3">
+<h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
+<p>Atlantic surfclams are expected to be <strong>negatively</strong> impacted by climate change. Certainty in expert scores was 80%. Warming bottom waters have shifted surfclam populations from nearshore to more northern and offshore waters <span class="citation" data-cites="Timbs2019 Stromp2023 Hofmann2018">(<a href="#ref-Timbs2019" role="doc-biblioref">Timbs, Powell, and Mann 2019</a>; <a href="#ref-Stromp2023" role="doc-biblioref">Stromp et al. 2023</a>; <a href="#ref-Hofmann2018" role="doc-biblioref">Hofmann et al. 2018</a>)</span>. This northern shift may lead to future competition with ocean quahogs <span class="citation" data-cites="Spencer2026 Stromp2023">(<a href="#ref-Spencer2026" role="doc-biblioref">Spencer et al. 2026</a>; <a href="#ref-Stromp2023" role="doc-biblioref">Stromp et al. 2023</a>)</span>. Ocean acidification will also likely impact the surfclam. These results are similar to those from the 2016 Climate Vulnerability Assessment. Certainty was higher in the previous assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
+</section>
+</section>
+<section id="climate-effects-on-abundance-and-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Warming bottom water temperatures in the Northwest Atlantic have produced a range shift in Atlantic surfclams from southern, inshore waters of the Mid-Atlantic Bight into deeper waters north and offshore <span class="citation" data-cites="Timbs2019 Stromp2023">(<a href="#ref-Timbs2019" role="doc-biblioref">Timbs, Powell, and Mann 2019</a>; <a href="#ref-Stromp2023" role="doc-biblioref">Stromp et al. 2023</a>)</span>. The southern range boundary of the species likely began to migrate northward and offshore in the 1970s <span class="citation" data-cites="Hofmann2018">(<a href="#ref-Hofmann2018" role="doc-biblioref">Hofmann et al. 2018</a>)</span>. A mass mortality event in the inshore waters of Delmarva occurred in 2000, where surfclams were in a “transient event margin”, a physiological range where scope for growth is negative but temperatures remain non-lethal, leading to decreased energetics and mortality <span class="citation" data-cites="Weinberg2005">(<a href="#ref-Weinberg2005" role="doc-biblioref">Weinberg et al. 2005</a>)</span> <span class="citation" data-cites="Woodin2013">(<a href="#ref-Woodin2013" role="doc-biblioref">Woodin et al. 2013</a>)</span>. Thermal stress in surfclams occurs at 21°C and mortality above 25°C <span class="citation" data-cites="Munroe2013">(<a href="#ref-Munroe2013" role="doc-biblioref">Munroe et al. 2013</a>)</span> <span class="citation" data-cites="Powell2017">(<a href="#ref-Powell2017" role="doc-biblioref">Powell, Kuykendall, and Moreno 2017</a>)</span>. Model projections through the end of the 21st century show a positive trend in Atlantic surfclam biomass as their range continues to shift, with biomass expanding in deeper waters off of New Jersey, Long Island, and Southern New England and declines in Georges Bank and Delmarva <span class="citation" data-cites="Spencer2026">(<a href="#ref-Spencer2026" role="doc-biblioref">Spencer et al. 2026</a>)</span>. Warming waters may result in declines in maximum size in the southern portion of the species’ range <span class="citation" data-cites="Powell2025">(<a href="#ref-Powell2025" role="doc-biblioref">Powell et al. 2025</a>)</span>. This range shift may lead to potential competition between Atlantic surfclams and ocean quahogs (<em>Arctica islandica</em>) and changes to the spatial extent of the fishery <span class="citation" data-cites="Spencer2026">(<a href="#ref-Spencer2026" role="doc-biblioref">Spencer et al. 2026</a>)</span> <span class="citation" data-cites="Stromp2023">(<a href="#ref-Stromp2023" role="doc-biblioref">Stromp et al. 2023</a>)</span>.</p>
+</section>
+<section id="life-history-synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic surfclams are a benthic biomass dominant species on the Northeast U.S. continental shelf from the Gulf of St.&nbsp;Lawrence to Cape Hatteras, North Carolina <span class="citation" data-cites="Hofmann2018">(<a href="#ref-Hofmann2018" role="doc-biblioref">Hofmann et al. 2018</a>)</span>. The fishery operates in the Mid-Atlantic Bight and Georges Bank and produces over $30 million in exvessel annual revenue <span class="citation" data-cites="Murray2016">(<a href="#ref-Murray2016" role="doc-biblioref">Murray 2016</a>)</span>. Spawning occurs in summer to early fall, with earlier spawning occurring in southern habitats <span class="citation" data-cites="Cargnelli1999_surfclam">(<a href="#ref-Cargnelli1999_surfclam" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Temperature is a determinant for gonadal development and spawning <span class="citation" data-cites="Loosanoff1963">(<a href="#ref-Loosanoff1963" role="doc-biblioref">Loosanoff and Davis 1963</a>)</span>. Spawning occurs when temperatures exceed 15°C, and may be delayed due to cold temperatures <span class="citation" data-cites="Cargnelli1999_surfclam">(<a href="#ref-Cargnelli1999_surfclam" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Fertilized eggs develop into planktonic larvae approximately 9 hours after fertilization at 21.7°C and 40 hours at 14°C <span class="citation" data-cites="Ropes1980">(<a href="#ref-Ropes1980" role="doc-biblioref">Ropes 1980</a>)</span>. Larvae mature into the pediveliger stage, a transitional “swimming-crawling” larval stage with development of a foot for burrowing, around 18 days after fertilization <span class="citation" data-cites="Loosanoff1963">(<a href="#ref-Loosanoff1963" role="doc-biblioref">Loosanoff and Davis 1963</a>)</span>. Larvae are dispersed by currents (generally southward along the Northeast shelf) and settlement coincides with a relaxation of upwelling events <span class="citation" data-cites="Fay1983">(<a href="#ref-Fay1983" role="doc-biblioref">Fay, Neves, and Pardue 1983</a>)</span>. Variable reproductive success has been linked to variability in current dynamics in the Mid-Atlantic Bight <span class="citation" data-cites="Zhang2016">(<a href="#ref-Zhang2016" role="doc-biblioref">Zhang et al. 2016</a>)</span>. Metamorphosis to juveniles, which consists of complete absorption of the velum and settlement to the substrate, occurs anywhere from 19 to 35 days after fertilization depending on temperature <span class="citation" data-cites="Fay1983">(<a href="#ref-Fay1983" role="doc-biblioref">Fay, Neves, and Pardue 1983</a>)</span>. Juveniles settle in sandy habitats in the intertidal and up to depths of 178m <span class="citation" data-cites="Cargnelli1999_surfclam">(<a href="#ref-Cargnelli1999_surfclam" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Juveniles and adults are planktivorous siphon feeders, feeding on phytoplankton ≥ 4µm diameter. Food varies with the season, geographic location, and depth of shell bed <span class="citation" data-cites="Cargnelli1999_surfclam">(<a href="#ref-Cargnelli1999_surfclam" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Atlantic surfclams have many predators, including the naticid snails <em>Euspira heros</em> and <em>Neverita duplicata</em>, the sea star <em>Asterias forbesi</em>, lady crabs (<em>Ovalipes ocellatus</em>), Jonah crabs (<em>Cancer borealis</em>) and horseshoe crabs (<em>Limulus polyphemus</em>). Fish predators include haddock (<em>Melanogrammus aeglefinus</em>) and Atlantic cod (<em>Gadus morhua</em>) <span class="citation" data-cites="Ropes1980">(<a href="#ref-Ropes1980" role="doc-biblioref">Ropes 1980</a>)</span>. Age at maturity ranges anywhere from 3 months to 4 years, however size is likely more important to maturation rates <span class="citation" data-cites="Cargnelli1999_surfclam">(<a href="#ref-Cargnelli1999_surfclam" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Atlantic surfclams have a maximum age of 31 years <span class="citation" data-cites="Cargnelli1999_surfclam">(<a href="#ref-Cargnelli1999_surfclam" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. The stock is managed by the Mid-Atlantic Fishery Management Council under the Atlantic surfclam and ocean quahog Fishery Management Plan. As of the 2024 Management Track Assessment, the stock is not overfished and overfishing is not occurring. However, spawning stock biomass continues to decline and is currently at 95% of the target biomass <span class="citation" data-cites="NEFSC2024_surfclam">(<a href="#ref-NEFSC2024_surfclam" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2024</a>)</span>.</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic surfclam_exposure_allvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic surfclam_exposure_impvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic surfclam_distribution_center_of_gravity.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic surfclam_distribution_area_of_high_probability.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic surfclam_sdm.png"</code></pre>
+</div>
 </div>
 </section>
-<section id="creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="level2">
-<h2 class="anchored" data-anchor-id="creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</h2>
-<p>Once raw exposure is ranked, species-specific exposure for each environmental variable can be calculated using the functions <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. These functions are nearly identical and only require the ranked exposure values and the mean ensemble species distribution model (SDM) predictions. Ranked exposure values are averaged across space within each month in <code>makeExposureTimeseries</code> and averaged across months in each model grid cell in <code>makeExposureMaps</code>, using the SDM results as weights to account for species distributions and habitat use. The results are a time series of average ranked species-specific exposure within each month and a raster of average species-specific exposure across time for each environmental variable.</p>
-<p>The ensemble SDM results produced by <code>make_predictions</code> should be converted into a monthly average prior to using <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. It is also recommended that you remove low SDM values after averaging. In the NE Shelf CVA2.0, we removed all SDM values less than 0.1 (representing areas with less than a 10% likelihood of finding the species). Not removing these low values resulted in higher than expected exposure results in areas where the species is rare.</p>
-<p>The output from <code>makeExposureTimeseries</code> is a matrix with 12 columns (1 for each month) and a number of rows equal to the number of environmental variables in <code>expRanked</code>. <code>makeExposureMaps</code> produces a rasterStack, with each layer representing one of the environmental variables. Values should range from 1 to 4.</p>
-<p>The wrapper function <code>makeVariableAverages</code> is provided and can be run in parallel using the <code>furrr</code> package, similar to the SDM wrapper functions. Like those wrapper functions, your directory must be set up according to the Installation and Setup Guide provided for them to function. <code>makeVariableAverages</code> also generates the monthly average SDM results, and removes low values for you.</p>
-<p>Like the SDM wrapper functions, <code>args</code> is a dataframe where each row is a set of arguments to be passed to the function. Here, the arguments include the species name (<code>spp</code>), ensemble name to help locate the appropriate ensemble model (<code>ensName</code>), and start and end years for the present and future timeseries (<code>pStart</code>/<code>pEnd</code>/<code>fStart</code>/<code>fEnd</code>) to load in the correct exposure values, as well as save the results from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code> appropriately. These are not memory or time-intensive calculations, so it is not necessary to run them in parallel - it is just helpful if you have a lot of species to work through.</p>
-<p>Below are example variable-specific exposures for Atlantic cod: <img src="exposure_variable_timeseries.png" class="img-fluid" alt="Variable-specific exposures across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_variable_maps.png" class="img-fluid figure-img"></p>
-<figcaption>Variable-specific exposures across space</figcaption>
-</figure>
-</div>
-</section>
-<section id="calculating-total-exposure-for-each-species" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</h2>
-<p>Once you have the species-specific exposure calculated for each variable, they must be combined to estimate total species-specific exposure. These will be the final spatially and temporally explicit values that are combined with species sensitivity to estimate vulnerability.</p>
-<p>To combine the species-specific exposures for each variable, we use the same logic rule as the CVA1.0:</p>
-<table class="caption-top table">
-<caption>Logic Rule used to Calculate Total Species Exposure</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Overall Score</th>
-<th style="text-align: center;">Numeric Score</th>
-<th style="text-align: center;">Logic Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">All other scores</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2 or more attributes &gt;= 2.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2 or more attributes &gt;= 3.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3 or more attributes &gt;= 3.5</td>
-</tr>
-</tbody>
-</table>
-<p>We calculate total exposure in two ways: 1) Applying the logic rule to all ecologically relevant environmental variables as defined by the feeding and habitat keys and 2) Only applying the logic rule to ecological variables that have relative weights in the final ensemble SDM greater than a set value (for the NE Shelf CVA2.0, we chose 10% or 0.1). This was done to account for possible unknown changes in variable importance under future climate change. The latter method (only counting the most important variables), assumes that these values will continue to be very important under future climate change scenarios. It is unclear if this will be the case, especially for variables such as pH where it is unclear how they will impact species. Calculating total exposure using all the ecologically relevant variables allows us and stakeholders to consider all variables regardless of their model importance.</p>
-<p>The functions <code>combineTimeseries</code> and <code>combineMaps</code> provide options for both methods with the option <code>countAll</code>. Setting <code>countAll</code> to TRUE will automatically count all provided variables in <code>matExp</code> for <code>combineTimeseries</code> or <code>mapExp</code> for <code>combineMaps</code>, which are the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, respectively. If set to FALSE, you will need to provide the relative weights and the threshold to use to count variables in the logic rule. It is important that, if you have not yet done so, that you subset <code>matExp</code> and <code>mapExp</code> to only the ecologically relevant variables before running the <code>combineTimeseries</code> and <code>combineMaps</code> functions. This can be done using the relative weights of the variables.</p>
-<p>The function <code>combineWeights</code> estimates the relative variable importance across the models. Since every component model of the ensemble SDM estimates variable importance differently, all importance data is normalized to their respective sums such that they total 1. A weighted average is then performed across models using the weights of each component model in the ensemble. The result is a vector of values representing the relative importance of each of the ecologically relevant variables to the model.</p>
-<p>Where <code>vars</code> is a vector of character strings including the ecologically relevant variables, <code>ensWeights</code> is the weights of each component model of the ensemble model generated by <code>make_sdm</code>, <code>impFlist</code> is a vector of character strings including the file paths to the model variable importance files made by <code>sdm_importance</code>, and <code>staticNames</code> are the names of any static environmental variables to be excluded.</p>
-<p>The names of the vector resulting from <code>combineWeights</code> can be used to subset the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, since these output contain all possible environmental variables from MOM6, before running <code>combineTimeseries</code> and <code>combineMaps</code>.</p>
-<p>Below are examples of total exposure using both methods for Atlantic cod: <img src="exposure_timeseries_all.png" class="img-fluid" alt="Total Exposure using all ecologically-relevant variables across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_timeseries_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across time</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_all.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using all ecologically-relevant variables across space</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across space</figcaption>
-</figure>
-</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Cargnelli1999_surfclam" class="csl-entry" role="listitem">
+Cargnelli, L. M., S. J. Griesbach, D. B. Packer, and E. Weissberger. 1999. <span>“Essential Fish Habitat Source Document. <span>A</span>tlantic Surfclam, <span>S</span>pisula Solidissima, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE 142. <a href="https://repository.library.noaa.gov/view/noaa/3144">https://repository.library.noaa.gov/view/noaa/3144</a>.
+</div>
+<div id="ref-Fay1983" class="csl-entry" role="listitem">
+Fay, C. W., R. J. Neves, and G. B. Pardue. 1983. <span>“Species Profiles: Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (<span>M</span>id-<span>A</span>tlantic): Surf Clam.”</span> U.S. Fish Wildl. Serv., Div. Biol. Serv., FWS/OBS-82/11.13.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-Hofmann2018" class="csl-entry" role="listitem">
+Hofmann, E. E., E. N. Powell, J. M. Klinck, D. M. Munroe, R. Mann, D. B. Haidvogel, D. A. Narv’aez, X. Zhang, and K. M. Kuykendall. 2018. <span>“An Overview of Factors Affecting Distribution of the <span>A</span>tlantic Surfclam (<span>S</span>pisula Solidissima), a Continental Shelf Biomass Dominant, During a Period of Climate Change.”</span> <em>Journal of Shellfish Research</em> 37: 821–31.
+</div>
+<div id="ref-Loosanoff1963" class="csl-entry" role="listitem">
+Loosanoff, V. L., and H. C. Davis. 1963. <span>“Rearing of Bivalve Mollusks.”</span> <em>Advances in Marine Biology</em> 1: 1–136.
+</div>
+<div id="ref-Munroe2013" class="csl-entry" role="listitem">
+Munroe, D. M., E. N. Powell, R. Mann, J. M. Klinck, and E. E. Hofmann. 2013. <span>“Underestimation of Primary Productivity on Continental Shelves: Evidence from Maximum Size of Extant Surfclam (<span>S</span>pisula Solidissima) Populations.”</span> <em>Fisheries Oceanography</em> 22: 220–33.
+</div>
+<div id="ref-Murray2016" class="csl-entry" role="listitem">
+Murray, T. 2016. <span>“Economic Activity Associated with <span>SCeMFiS</span> Supported Fisheries Products (Ocean Quahog &amp; <span>A</span>tlantic Surfclams).”</span> Science Center for Marine Fisheries, Alexandria, Virginia.
+</div>
+<div id="ref-NEFSC2024_surfclam" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2024. <span>“Atlantic Surfclam 2024 <span>M</span>anagement <span>T</span>rack <span>A</span>ssessment <span>R</span>eport.”</span> <a href="https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/66969a0ea8d9e66ef9a44ab3/1721145870331/d1_2024+Surfclam+MT+assessment+report.pdf">https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/66969a0ea8d9e66ef9a44ab3/1721145870331/d1_2024+Surfclam+MT+assessment+report.pdf</a>.
+</div>
+<div id="ref-Powell2017" class="csl-entry" role="listitem">
+Powell, E. N., K. M. Kuykendall, and P. Moreno. 2017. <span>“The Death Assemblage as a Marker for Habitat and an Indicator of Climate Change: <span>G</span>eorges <span>B</span>ank, Surfclams and Ocean Quahogs.”</span> <em>Continental Shelf Research</em> 142: 14–31.
+</div>
+<div id="ref-Powell2025" class="csl-entry" role="listitem">
+Powell, E. N., A. L. Moya, D. M. Munroe, R. Mann, S. Borsetti, and K. M. Kuykendall. 2025. <span>“Temperature, Maximum Size, and the <span>A</span>tlantic Surfclam <span>S</span>pisula Solidissima: The Sensitivity of Demographics to Climate Warming, the Perfidy of Food, and a Vignette on Size-Limited Management in Bivalve Fisheries.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 82: 1–23. <a href="https://doi.org/10.1139/cjfas-2024-0392">https://doi.org/10.1139/cjfas-2024-0392</a>.
+</div>
+<div id="ref-Ropes1980" class="csl-entry" role="listitem">
+Ropes, J. W. 1980. <span>“Biological and Fisheries Data on the <span>A</span>tlantic Surf Clam, <span>S</span>pisula Solidissima (<span>D</span>illwyn).”</span> U.S. Natl. Mar. Fish. Serv., Northeast Fish. Cent. Sandy Hook Lab Tech. Ser. Rep. No. 24.
+</div>
+<div id="ref-Spencer2026" class="csl-entry" role="listitem">
+Spencer, M., E. Powell, J. Klinck, D. M. Munroe, S. Borsetti, E. E. Hofmann, and E. Curchitser. 2026. <span>“What <span>I</span>s the <span>F</span>uture of the <span>A</span>tlantic <span>S</span>urfclam (<span>S</span>pisula Solidissima) <span>F</span>ishery <span>U</span>nder <span>C</span>limate-<span>I</span>nduced <span>W</span>arming on the <span>M</span>id-<span>A</span>tlantic <span>B</span>ight <span>C</span>ontinental <span>S</span>helf: <span>A</span> <span>M</span>ultidecadal <span>A</span>ssessment.”</span> <em>Fisheries Oceanography</em> 35 (1): 62–94. <a href="https://doi.org/10.1111/fog.12708">https://doi.org/10.1111/fog.12708</a>.
+</div>
+<div id="ref-Stromp2023" class="csl-entry" role="listitem">
+Stromp, S., A. M. Scheld, J. M. Klinck, D. M. Munroe, E. N. Powell, R. Mann, S. Borsetti, and E. E. Hofmann. 2023. <span>“Interactive <span>E</span>ffects of <span>C</span>limate <span>C</span>hange‐<span>I</span>nduced <span>R</span>ange <span>S</span>hifts and <span>W</span>ind <span>E</span>nergy <span>D</span>evelopment on <span>F</span>uture <span>E</span>conomic <span>C</span>onditions of the <span>A</span>tlantic <span>S</span>urfclam <span>F</span>ishery.”</span> <em>Marine and Coastal Fisheries</em> 15 (2): e210232.
+</div>
+<div id="ref-Timbs2019" class="csl-entry" role="listitem">
+Timbs, J. R., E. N. Powell, and R. Mann. 2019. <span>“Changes in the Spatial Distribution and Anatomy of a Range Shift for the <span>A</span>tlantic Surfclam <span>S</span>pisula Solidissima in the <span>M</span>id-<span>A</span>tlantic <span>B</span>ight and on <span>G</span>eorges <span>B</span>ank.”</span> <em>Marine Ecology Progress Series</em> 620: 77–97.
+</div>
+<div id="ref-Weinberg2005" class="csl-entry" role="listitem">
+Weinberg, J. R., E. N. Powell, V. A. Pickett C. Nordahl Jr., and L. D. Jacobson. 2005. <span>“Results from the 2004 Cooperative Survey of <span>A</span>tlantic Surfclams.”</span> Woods Hole, Massachusetts: Northeast Fisheries Science Center, Reference Document 05-01.
+</div>
+<div id="ref-Woodin2013" class="csl-entry" role="listitem">
+Woodin, S., T. J. Hilbish, B. Helmuth, and S. J. Jones. 2013. <span>“Climate Change, Species Distribution Models, and Physiological Performance Metrics: <span>P</span>redicting When Biogeographic Models Are Likely to Fail.”</span> <em>Ecology and Evolution</em> 3 (10): 3334–46. <a href="https://doi.org/10.1002/ece3.680">https://doi.org/10.1002/ece3.680</a>.
+</div>
+<div id="ref-Zhang2016" class="csl-entry" role="listitem">
+Zhang, X., D. Munroe, D. Haidvogel, and E. N. Powell. 2016. <span>“Atlantic Surfclam Connectivity Within the <span>M</span>iddle <span>A</span>tlantic <span>B</span>ight: Mechanisms Underlying Variation in Larval Transport and Settlement.”</span> <em>Estuarine, Coastal and Shelf Science</em> 173: 65–78.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -990,13 +1108,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/ensemble-sdms.html" class="pagination-link" aria-label="Building &amp; Predicting Ensemble Species Distribution Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></span>
+      <a href="../chapters/Atlantic sea scallop.html" class="pagination-link" aria-label="Atlantic sea scallop (*`Placopecten magellanicus`*)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Atlantic sea scallop (<em><code>Placopecten magellanicus</code></em>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/sensitivity_calculation.html" class="pagination-link" aria-label="Sensitivity Calculation">
-        <span class="nav-page-text"><span class="chapter-title">Sensitivity Calculation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Atlantic wolffish.html" class="pagination-link" aria-label="Atlantic wolffish (*`Anarhichas lupus`*)">
+        <span class="nav-page-text"><span class="chapter-title">Atlantic wolffish (<em><code>Anarhichas lupus</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Calculating Exposure – Climate Vulnerability Assessment 2.0</title>
+<title>Atlantic croaker (Micropogonias undulates) – Climate Vulnerability Assessment 2.0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/sensitivity_calculation.html" rel="next">
-<link href="../content/ensemble-sdms.html" rel="prev">
+<link href="../chapters/Atlantic halibut.html" rel="next">
+<link href="../chapters/Atlantic cod.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Atlantic croaker.html"><span class="chapter-title">Atlantic croaker (<em><code>Micropogonias undulates</code></em>)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Calculating Exposure</span></a>
+  <a href="../content/exposure-calculation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calculating Exposure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -199,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Atlantic croaker.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Atlantic croaker (<em><code>Micropogonias undulates</code></em>)</span></a>
+  <a href="../chapters/Atlantic croaker.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Atlantic croaker (<em><code>Micropogonias undulates</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -409,19 +429,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#calculating-and-ranking-raw-exposure" id="toc-calculating-and-ranking-raw-exposure" class="nav-link" data-scroll-target="#calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</a></li>
-  <li><a href="#creating-species-specific-exposure-time-series-and-maps-for-each-variable" id="toc-creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="nav-link" data-scroll-target="#creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</a></li>
-  <li><a href="#calculating-total-exposure-for-each-species" id="toc-calculating-total-exposure-for-each-species" class="nav-link" data-scroll-target="#calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#changes-from-previous-assessments" id="toc-changes-from-previous-assessments" class="nav-link" data-scroll-target="#changes-from-previous-assessments">Changes from Previous Assessment(s)</a></li>
+  <li><a href="#score-drivers" id="toc-score-drivers" class="nav-link" data-scroll-target="#score-drivers">Score Drivers</a>
+  <ul class="collapse">
+  <li><a href="#vulnerability" id="toc-vulnerability" class="nav-link" data-scroll-target="#vulnerability">Vulnerability:</a></li>
+  <li><a href="#climate-exposure" id="toc-climate-exposure" class="nav-link" data-scroll-target="#climate-exposure">Climate Exposure:</a></li>
+  <li><a href="#biological-sensitivity" id="toc-biological-sensitivity" class="nav-link" data-scroll-target="#biological-sensitivity">Biological Sensitivity:</a></li>
+  </ul></li>
+  <li><a href="#data-quality-metrics" id="toc-data-quality-metrics" class="nav-link" data-scroll-target="#data-quality-metrics">Data Quality Metrics</a>
+  <ul class="collapse">
+  <li><a href="#life-history-data-quality" id="toc-life-history-data-quality" class="nav-link" data-scroll-target="#life-history-data-quality">Life History Data Quality:</a></li>
+  <li><a href="#model-confidence" id="toc-model-confidence" class="nav-link" data-scroll-target="#model-confidence">Model Confidence:</a></li>
+  </ul></li>
+  <li><a href="#additional-metrics" id="toc-additional-metrics" class="nav-link" data-scroll-target="#additional-metrics">Additional Metrics</a>
+  <ul class="collapse">
+  <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
+  <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
+  </ul></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rpackage-overview.html">RPackage Overview</a></li><li class="breadcrumb-item"><a href="../content/exposure-calculation.html"><span class="chapter-title">Calculating Exposure</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/species_narrative_intro.html">Species Narratives</a></li><li class="breadcrumb-item"><a href="../chapters/Atlantic croaker.html"><span class="chapter-title">Atlantic croaker (<em><code>Micropogonias undulates</code></em>)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Calculating Exposure</span></h1>
+<h1 class="title"><span class="chapter-title">Atlantic croaker (<em><code>Micropogonias undulates</code></em>)</span></h1>
 </div>
 
 
@@ -438,133 +476,207 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Exposure is calculated from MOM6 forecast data using the same methods to calculate and rank raw exposure as the CVA1.0 on the MOM6 environmental data. We then use the predicted species distributions and the relative importance of covariates in the ensemble models to calculate variable-specific and total exposure for each species.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Scores</strong></p>
+<p>Vulnerability =</p>
+<p>Climate Exposure =</p>
+<p>Biological Sensitivity = Moderate</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Data Quality</strong></p>
+<p>Model Confidence Score =</p>
+<p>Life History Data Quality = 73%</p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic croaker_exposure_summary_table.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic croaker_sensitivity_summary_table.png"</code></pre>
+</div>
+</div>
 </section>
-<section id="calculating-and-ranking-raw-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-and-ranking-raw-exposure">Calculating and Ranking Raw Exposure</h2>
-<p>As in the CVA1.0, raw exposure for each environmental variable is calculated using a z-score, which is the difference in mean conditions in a future and present timeseries divided by present day standard deviations.</p>
-<p>The function <code>calcExposure</code> will take the output from <code>pull_hind</code> and/or <code>pull_forecast</code> (a list of rasterStacks) and calculate monthly raw exposure for each environmental variable in the list:</p>
-<p>Where <code>presentRasts</code> and <code>futureRasts</code> are lists of rasterStacks with the same length. These are the raw timeseries over the desired time periods. Remember that <code>pull_hind</code> and <code>pull_forecast</code> pull the complete timeseries for the desired MOM6 run, so you will need to subset their outputs accordingly if desired. <code>calcExposure</code> will produce a list of rasterStacks with the same length as the provided lists. Each rasterStack will have 12 layers, one for each month. <img src="bottomT_exposure.jpg" class="img-fluid" alt="Bottom Temperature Raw Exposure comparing 2019-2019 and 2025-2035"></p>
-<p>The next step is to rank the raw exposure. Since the CVA is designed to help determine which species are at risk to the greatest exposure, these ranks are based on this goal, rather than the distribution of the data themselves. We use the same ranks as the CVA1.0:</p>
+<section id="changes-from-previous-assessments" class="level2">
+<h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
-<caption>Raw Exposure Ranks</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 23%">
+<col style="width: 27%">
+<col style="width: 23%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Score</th>
-<th style="text-align: center;">Raw Exposure</th>
-<th style="text-align: center;">Rank</th>
+<th>Metric</th>
+<th>Current Assessment</th>
+<th>Previous Assessment(s)</th>
+<th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">&lt; 0.5</td>
-<td style="text-align: center;">1</td>
+<td><em>Vulnerability</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">0.5 - 1.5</td>
-<td style="text-align: center;">2</td>
+<td><em>Exposure</em></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">1.5 - 2</td>
-<td style="text-align: center;">3</td>
+<td><em>Sensitivity</em></td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Increase</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">&gt; 2</td>
-<td style="text-align: center;">4</td>
+<td><em>Directional Effect</em></td>
+<td>Neutral</td>
+<td>Positive</td>
+<td>Increase</td>
 </tr>
 </tbody>
 </table>
-<p>The function <code>rankExposure</code> performs the ranking. It also provides the option to multiply raw exposure values for certain by -1 (aka flip). This option was included because the direction of change and the meaning of that change may differ across environmental variables. For example, an increase in surface temperatures would have a positive exposure, whereas a decrease in pH would have a negative exposure; both changes are considered bad for the environment, but the signs differ due to how these variables are quantified. The <code>flip</code> and <code>noFlipList</code> options provide the option to flip the signs of raw exposure for all variables <em>except</em> those listed in <code>noFlipList</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bottomT_exposure_ranked.jpg" class="img-fluid figure-img"></p>
-<figcaption>Bottom Temperature Ranked Exposure comparing 2019-2019 and 2025-2035</figcaption>
-</figure>
+</section>
+<section id="score-drivers" class="level2">
+<h2 class="anchored" data-anchor-id="score-drivers">Score Drivers</h2>
+<section id="vulnerability" class="level3">
+<h3 class="anchored" data-anchor-id="vulnerability">Vulnerability:</h3>
+<p>add text here</p>
+</section>
+<section id="climate-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="climate-exposure">Climate Exposure:</h3>
+<p>add text here</p>
+</section>
+<section id="biological-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
+<p>Atlantic croaker received a sensitivity score of <strong>Moderate</strong>. Certainty was high (90%). Three attributes received scores greater than 2.5: 1) Egg and Larval Survival and Settlement Requirements (2.9), 2) Other Stressors (2.7), and 3) Stock Size (2.5).</p>
+<p>Croaker eggs and larvae rely on currents and tidal activity for transport to suitable nursery habitats <span class="citation" data-cites="sempsrott2017biological">(<a href="#ref-sempsrott2017biological" role="doc-biblioref">Sempsrott et al. 2017</a>)</span>. Larvae are selective feeders, only feeding on a subset of plankton species <span class="citation" data-cites="govoni1986selective">(<a href="#ref-govoni1986selective" role="doc-biblioref">Govoni et al. 1986</a>)</span>. Juveniles are also dependent on native salt marsh habitats, which themselves are highly vulnerable <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span> and are susceptible to eutrophication and hypoxic events. Croaker had a low sensitivity score in the previous assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. Egg and Larval Survival and Settlement Requirements drove the previous sensitivity score.</p>
+</section>
+</section>
+<section id="data-quality-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
+<section id="life-history-data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
+<p>73% of sensitivity attribute data quality scores were greater than or equal to 2, indicating good data quality. Four attributes were considered data gaps (mean attribute data quality score &lt; 2): Complexity in Reproductive Strategy, Egg and Larval Survival and Settlement Requirements, Population Growth Rate, and Stock Size/Status.</p>
+</section>
+<section id="model-confidence" class="level3">
+<h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
+<p>add text here</p>
+</section>
+</section>
+<section id="additional-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="additional-metrics">Additional Metrics</h2>
+<section id="distribution-shifts" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-shifts">Distribution Shifts:</h3>
+<p>add text here</p>
+</section>
+<section id="directional-effect" class="level3">
+<h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
+<p>The effect of climate change on croaker is estimated to be <strong>neutral</strong> with 89% certainty in expert scores. Warmer temperatures may decrease young-of-year mortality rates. However, juvenile habitats are highly vulnerable to climate change. In the previous assessment, the effects of climate change were estimated to have a positive impact on croaker <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
+</section>
+</section>
+<section id="climate-effects-on-abundance-and-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>As a sub-tropical species, Atlantic croaker may experience both positive and negative effects on their abundance and distribution as a result of climate change. Interannual variability in croaker abundance may be climate related, with colder winters causing increased mortality in overwintering young-of-the-year <span class="citation" data-cites="lankford2001low">(<a href="#ref-lankford2001low" role="doc-biblioref">Lankford Jr and Targett 2001</a>)</span>. Warm winters, however, may result in increased abundances, or “outbursts” of juveniles in the spring that contribute to expansion of the population’s distribution <span class="citation" data-cites="hare2007mechanistic">(<a href="#ref-hare2007mechanistic" role="doc-biblioref">Hare and Able 2007</a>)</span>. <span class="citation" data-cites="diamond2013simulating">Diamond, Murphy, and Rose (<a href="#ref-diamond2013simulating" role="doc-biblioref">2013</a>)</span> modeled Atlantic croaker abundance in the Mid-Atlantic with global climate change projections and found increased croaker abundance with lower inter-annual variability under global climate change. Positive responses in sensitivity analyses stemmed from warmer temperatures, and negative responses were due to rising variability in salinity and increases in offshore transport and sea level rise <span class="citation" data-cites="diamond2013simulating">(<a href="#ref-diamond2013simulating" role="doc-biblioref">Diamond, Murphy, and Rose 2013</a>)</span>. Common juvenile habitat types (submerged aquatic vegetation, salt marshes, and intertidal habitats) are highly vulnerable to climate change <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>.</p>
+</section>
+<section id="life-history-synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic croaker are a demersal species found from the Gulf of Maine to Argentina. Along the United States Atlantic coast, they are most abundant from Chesapeake Bay to northern Florida <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. Atlantic croaker spawn from July - December in inshore shelf and estuarine waters between Delaware Bay and Cape Hatteras, peaking in August - October near Chesapeake Bay <span class="citation" data-cites="able1998first">(<a href="#ref-able1998first" role="doc-biblioref">Able and Fahay 1998</a>)</span>. Their name comes from the croaking noises the fish make during spawning by vibrating their abdominal muscles against their swim bladder <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. After 30-90 days post-hatch Atlantic croaker larvae are driven inshore by winds <span class="citation" data-cites="thorrold1997response">(<a href="#ref-thorrold1997response" role="doc-biblioref">Thorrold, Jones, and Campana 1997</a>)</span> where they migrate to estuarine habitats <span class="citation" data-cites="sempsrott2017biological">(<a href="#ref-sempsrott2017biological" role="doc-biblioref">Sempsrott et al. 2017</a>)</span>. Initial fall recruitment of croaker depends on fall continental shelf winds to provide transport into Chesapeake Bay <span class="citation" data-cites="norcross1991estuarine">(<a href="#ref-norcross1991estuarine" role="doc-biblioref">Norcross 1991</a>)</span>. Recruitment to specific estuaries is influenced by tidal activity and currents, such that eggs and larvae are dependent on transport to suitable habitats for survival <span class="citation" data-cites="sempsrott2017biological">(<a href="#ref-sempsrott2017biological" role="doc-biblioref">Sempsrott et al. 2017</a>)</span>. Atlantic croaker larvae are selective feeders, as they eat fewer taxa of suitable size than are present in ambient plankton <span class="citation" data-cites="govoni1986selective">(<a href="#ref-govoni1986selective" role="doc-biblioref">Govoni et al. 1986</a>)</span>. Juvenile croaker are highly dependent on marine, estuarine, and riverine mud and sand substrates, as well as native salt marsh habitats <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. The major prey of young-of-the-year Atlantic croaker are polychaetes, copepods, and mysids. Detritus is also a major component of the juvenile diet <span class="citation" data-cites="ffwcc2010croaker">(<a href="#ref-ffwcc2010croaker" role="doc-biblioref">Florida Fish and Wildlife Conservation Commission 2010</a>)</span> <span class="citation" data-cites="sink2011species">(<a href="#ref-sink2011species" role="doc-biblioref">Sink 2011</a>)</span>. Adult Atlantic croaker perform seasonal migrations, moving northward and inshore to estuaries and bays in the spring - fall and southward and offshore to shelf waters in the winter <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. They reach maturity by 2 years of age and can live up to 17 years, although lifespans are commonly below 10 years <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. Adult Atlantic croaker are opportunistic feeders and are known to consume polychaetes, anchovies, mysid shrimp, amphipods, fishes and crabs, and detritus in Chesapeake Bay <span class="citation" data-cites="nye2011annual">(<a href="#ref-nye2011annual" role="doc-biblioref">Nye, Loewensteiner, and Miller 2011</a>)</span>. Atlantic croaker are managed under Amendment 1 to the Atlantic States Marine Fisheries Commission’s Interstate Fishery Management Plan for Atlantic Croaker (2005) and Addenda I, II, and III (2011, 2014, 2020). <span class="citation" data-cites="asmfc2020addendum">(<a href="#ref-asmfc2020addendum" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2020</a>)</span>. The most recent benchmark stock assessment was completed in 2017, where the current stock status could not be determined because the assessment results were sensitive to certain modeling assumptions, but any further depletion in the stock was unlikely <span class="citation" data-cites="asmfc2017croaker">(<a href="#ref-asmfc2017croaker" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2017</a>)</span>.</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic croaker_exposure_allvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic croaker_exposure_impvars.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic croaker_distribution_center_of_gravity.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic croaker_distribution_area_of_high_probability.png"</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic croaker_sdm.png"</code></pre>
+</div>
 </div>
 </section>
-<section id="creating-species-specific-exposure-time-series-and-maps-for-each-variable" class="level2">
-<h2 class="anchored" data-anchor-id="creating-species-specific-exposure-time-series-and-maps-for-each-variable">Creating Species-Specific Exposure Time Series and Maps for Each Variable</h2>
-<p>Once raw exposure is ranked, species-specific exposure for each environmental variable can be calculated using the functions <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. These functions are nearly identical and only require the ranked exposure values and the mean ensemble species distribution model (SDM) predictions. Ranked exposure values are averaged across space within each month in <code>makeExposureTimeseries</code> and averaged across months in each model grid cell in <code>makeExposureMaps</code>, using the SDM results as weights to account for species distributions and habitat use. The results are a time series of average ranked species-specific exposure within each month and a raster of average species-specific exposure across time for each environmental variable.</p>
-<p>The ensemble SDM results produced by <code>make_predictions</code> should be converted into a monthly average prior to using <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>. It is also recommended that you remove low SDM values after averaging. In the NE Shelf CVA2.0, we removed all SDM values less than 0.1 (representing areas with less than a 10% likelihood of finding the species). Not removing these low values resulted in higher than expected exposure results in areas where the species is rare.</p>
-<p>The output from <code>makeExposureTimeseries</code> is a matrix with 12 columns (1 for each month) and a number of rows equal to the number of environmental variables in <code>expRanked</code>. <code>makeExposureMaps</code> produces a rasterStack, with each layer representing one of the environmental variables. Values should range from 1 to 4.</p>
-<p>The wrapper function <code>makeVariableAverages</code> is provided and can be run in parallel using the <code>furrr</code> package, similar to the SDM wrapper functions. Like those wrapper functions, your directory must be set up according to the Installation and Setup Guide provided for them to function. <code>makeVariableAverages</code> also generates the monthly average SDM results, and removes low values for you.</p>
-<p>Like the SDM wrapper functions, <code>args</code> is a dataframe where each row is a set of arguments to be passed to the function. Here, the arguments include the species name (<code>spp</code>), ensemble name to help locate the appropriate ensemble model (<code>ensName</code>), and start and end years for the present and future timeseries (<code>pStart</code>/<code>pEnd</code>/<code>fStart</code>/<code>fEnd</code>) to load in the correct exposure values, as well as save the results from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code> appropriately. These are not memory or time-intensive calculations, so it is not necessary to run them in parallel - it is just helpful if you have a lot of species to work through.</p>
-<p>Below are example variable-specific exposures for Atlantic cod: <img src="exposure_variable_timeseries.png" class="img-fluid" alt="Variable-specific exposures across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_variable_maps.png" class="img-fluid figure-img"></p>
-<figcaption>Variable-specific exposures across space</figcaption>
-</figure>
-</div>
-</section>
-<section id="calculating-total-exposure-for-each-species" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-total-exposure-for-each-species">Calculating Total Exposure for Each Species</h2>
-<p>Once you have the species-specific exposure calculated for each variable, they must be combined to estimate total species-specific exposure. These will be the final spatially and temporally explicit values that are combined with species sensitivity to estimate vulnerability.</p>
-<p>To combine the species-specific exposures for each variable, we use the same logic rule as the CVA1.0:</p>
-<table class="caption-top table">
-<caption>Logic Rule used to Calculate Total Species Exposure</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Overall Score</th>
-<th style="text-align: center;">Numeric Score</th>
-<th style="text-align: center;">Logic Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">All other scores</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2 or more attributes &gt;= 2.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2 or more attributes &gt;= 3.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3 or more attributes &gt;= 3.5</td>
-</tr>
-</tbody>
-</table>
-<p>We calculate total exposure in two ways: 1) Applying the logic rule to all ecologically relevant environmental variables as defined by the feeding and habitat keys and 2) Only applying the logic rule to ecological variables that have relative weights in the final ensemble SDM greater than a set value (for the NE Shelf CVA2.0, we chose 10% or 0.1). This was done to account for possible unknown changes in variable importance under future climate change. The latter method (only counting the most important variables), assumes that these values will continue to be very important under future climate change scenarios. It is unclear if this will be the case, especially for variables such as pH where it is unclear how they will impact species. Calculating total exposure using all the ecologically relevant variables allows us and stakeholders to consider all variables regardless of their model importance.</p>
-<p>The functions <code>combineTimeseries</code> and <code>combineMaps</code> provide options for both methods with the option <code>countAll</code>. Setting <code>countAll</code> to TRUE will automatically count all provided variables in <code>matExp</code> for <code>combineTimeseries</code> or <code>mapExp</code> for <code>combineMaps</code>, which are the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, respectively. If set to FALSE, you will need to provide the relative weights and the threshold to use to count variables in the logic rule. It is important that, if you have not yet done so, that you subset <code>matExp</code> and <code>mapExp</code> to only the ecologically relevant variables before running the <code>combineTimeseries</code> and <code>combineMaps</code> functions. This can be done using the relative weights of the variables.</p>
-<p>The function <code>combineWeights</code> estimates the relative variable importance across the models. Since every component model of the ensemble SDM estimates variable importance differently, all importance data is normalized to their respective sums such that they total 1. A weighted average is then performed across models using the weights of each component model in the ensemble. The result is a vector of values representing the relative importance of each of the ecologically relevant variables to the model.</p>
-<p>Where <code>vars</code> is a vector of character strings including the ecologically relevant variables, <code>ensWeights</code> is the weights of each component model of the ensemble model generated by <code>make_sdm</code>, <code>impFlist</code> is a vector of character strings including the file paths to the model variable importance files made by <code>sdm_importance</code>, and <code>staticNames</code> are the names of any static environmental variables to be excluded.</p>
-<p>The names of the vector resulting from <code>combineWeights</code> can be used to subset the outputs from <code>makeExposureTimeseries</code> and <code>makeExposureMaps</code>, since these output contain all possible environmental variables from MOM6, before running <code>combineTimeseries</code> and <code>combineMaps</code>.</p>
-<p>Below are examples of total exposure using both methods for Atlantic cod: <img src="exposure_timeseries_all.png" class="img-fluid" alt="Total Exposure using all ecologically-relevant variables across time"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_timeseries_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across time</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_all.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using all ecologically-relevant variables across space</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exposure_total_maps_subset.png" class="img-fluid figure-img"></p>
-<figcaption>Total Exposure using only important variables across space</figcaption>
-</figure>
-</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-able1998first" class="csl-entry" role="listitem">
+Able, Kenneth W., and Michael P. Fahay. 1998. <em>The First Year in the Life of Estuarine Fishes in the Middle Atlantic Bight</em>. New Brunswick, NJ: Rutgers University Press.
+</div>
+<div id="ref-asmfc2017croaker" class="csl-entry" role="listitem">
+Atlantic States Marine Fisheries Commission. 2017. <span>“2017 Atlantic Croaker Stock Assessment Peer Review.”</span> ASMFC. <a href="https://asmfc.org/wp-content/uploads/2025/01/AtlCroakerAssessmentPeerReviewReport_May2017.pdf">https://asmfc.org/wp-content/uploads/2025/01/AtlCroakerAssessmentPeerReviewReport_May2017.pdf</a>.
+</div>
+<div id="ref-asmfc2020addendum" class="csl-entry" role="listitem">
+———. 2020. <span>“ADDENDUM III TO AMENDMENT 1 TO THE INTERSTATE FISHERY MANAGEMENT PLAN FOR ATLANTIC CROAKER.”</span> ASMFC. <a href="https://asmfc.org/wp-content/uploads/2025/01/AtlCroakerAddendumIII_Feb2020.pdf">https://asmfc.org/wp-content/uploads/2025/01/AtlCroakerAddendumIII_Feb2020.pdf</a>.
+</div>
+<div id="ref-diamond2013simulating" class="csl-entry" role="listitem">
+Diamond, Sandra L, Cheryl A Murphy, and Kenneth A Rose. 2013. <span>“Simulating the Effects of Global Climate Change on Atlantic Croaker Population Dynamics in the Mid-Atlantic Region.”</span> <em>Ecological Modelling</em> 264: 98–114. <a href="https://doi.org/10.1016/j.ecolmodel.2013.05.001">https://doi.org/10.1016/j.ecolmodel.2013.05.001</a>.
+</div>
+<div id="ref-ffwcc2010croaker" class="csl-entry" role="listitem">
+Florida Fish and Wildlife Conservation Commission. 2010. <span>“Atlantic Croaker Report.”</span> FFWCC.
+</div>
+<div id="ref-govoni1986selective" class="csl-entry" role="listitem">
+Govoni, John J, Peter B Ortner, Faiza Al-Yamani, and Lawrence C Hill. 1986. <span>“Selective Feeding of Spot, Leiostomus Xanthurus, and Atlantic Croaker, Micropogonias Undulatus, Larvae in the Northern Gulf of Mexico.”</span> <em>Marine Ecology Progress Series</em> 28: 175–83.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2007mechanistic" class="csl-entry" role="listitem">
+Hare, Jonathan A, and Kenneth W Able. 2007. <span>“Mechanistic Links Between Climate and Fisheries Along the East Coast of the United States: Explaining Population Outbursts of Atlantic Croaker (Micropogonias Undulatus).”</span> <em>Fisheries Oceanography</em> 16 (1): 31–45.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-lankford2001low" class="csl-entry" role="listitem">
+Lankford Jr, Thomas E, and Timothy E Targett. 2001. <span>“Low-Temperature Tolerance of Age-0 Atlantic Croakers: Recruitment Implications for US Mid-Atlantic Estuaries.”</span> <em>Transactions of the American Fisheries Society</em> 130 (2): 236–49.
+</div>
+<div id="ref-norcross1991estuarine" class="csl-entry" role="listitem">
+Norcross, Brenda L. 1991. <span>“Estuarine Recruitment Mechanisms of Larval Atlantic Croakers.”</span> <em>Transactions of the American Fisheries Society</em> 120 (6): 673–83.
+</div>
+<div id="ref-nye2011annual" class="csl-entry" role="listitem">
+Nye, Janet A, David A Loewensteiner, and Thomas J Miller. 2011. <span>“Annual, Seasonal, and Regional Variability in Diet of Atlantic Croaker (Micropogonias Undulatus) in Chesapeake Bay.”</span> <em>Estuaries and Coasts</em> 34 (4): 691–700.
+</div>
+<div id="ref-sempsrott2017biological" class="csl-entry" role="listitem">
+Sempsrott, M, M Norberg, N Beckhan, C Somerset, J Ferguson, et al. 2017. <span>“Biological Profile for the Atlantic Croaker Fishery in the Gulf of Mexico.”</span> 266. Gulf States Marine Fisheries Commission.
+</div>
+<div id="ref-sink2011species" class="csl-entry" role="listitem">
+Sink, Todd D. 2011. <span>“Species Profile: Atlantic Croaker.”</span> 7208. Southern Regional Aquaculture Center (SRAC).
+</div>
+<div id="ref-thorrold1997response" class="csl-entry" role="listitem">
+Thorrold, Simon R, Cynthia M Jones, and Steven E Campana. 1997. <span>“Response of Otolith Microchemistry to Environmental Variations Experienced by Larval and Juvenile Atlantic Croaker (Micropogonias Undulatus).”</span> <em>Limnology and Oceanography</em> 42 (1): 102–11.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -990,13 +1102,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/ensemble-sdms.html" class="pagination-link" aria-label="Building &amp; Predicting Ensemble Species Distribution Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Building &amp; Predicting Ensemble Species Distribution Models</span></span>
+      <a href="../chapters/Atlantic cod.html" class="pagination-link" aria-label="Atlantic cod (*`Gadus morhua`*)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Atlantic cod (<em><code>Gadus morhua</code></em>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/sensitivity_calculation.html" class="pagination-link" aria-label="Sensitivity Calculation">
-        <span class="nav-page-text"><span class="chapter-title">Sensitivity Calculation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Atlantic halibut.html" class="pagination-link" aria-label="Atlantic halibut (*`Hippoglossus hippoglossus`*)">
+        <span class="nav-page-text"><span class="chapter-title">Atlantic halibut (<em><code>Hippoglossus hippoglossus</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
