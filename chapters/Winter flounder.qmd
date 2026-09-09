@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = Moderate - High
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 95 - 100%
 
 </div>
 :::::
@@ -62,12 +62,12 @@ here::here("test_images/Winter flounder_sensitivity_summary_table.png")
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability* |  |  |  |
+| *Exposure* |  |  |  |
+| *Sensitivity* | Moderate (Gulf of Maine/Georges Bank) - High (Southern New England/Mid Atlantic) | High | Decrease (Gulf of Maine/Georges Bank) - None (Southern New England/Mid Atlantic) |
+| *Directional Effect* | Negative (All Stocks) | Negative | None |
 
 ## Score Drivers
 
@@ -81,13 +81,19 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+The **Georges Bank** and **Gulf of Maine** stocks of Winter Flounder both received **Moderate** sensitivity scores. Certainty for both stocks was 58%. For these stocks, five attributes had scores greater than 2.5: Complexity in Reproductive Strategy (3.3 and 3.4), Egg and Larval Survival and Settlement Requirements (2.7 and 2.9), Other Stressors (2.6 and 2.9), Spawning Cycle (2.8), and Stock Size (3 and 2.7).
+
+The **Southern New England/Mid-Atlantic** stock received a **High** sensitivity score, with a certainty of 91%. Three attributes had scores greater than 3: Complexity in Reproductive Strategy (3.5), Egg and Larval Survival and Settlement Requirements (3.2), and Other Stressors (3.1).
+
+Winter flounder spawn in winter and early spring before waters reach temperatures of 6C [@pereira1999essential]. Spawning occurs in nearshore and estuarine habitats, including muddy and sandy substrates, and native salt marsh habitats which are considered highly vulnerable [@guyant2022northeast]. Larvae are dependent on bottom currents to help retain them in and around spawning areas and nursery habitats. Adults depend on estuarine habitats, which may be impacted by hypoxia and changes to freshwater inputs [@guyant2022northeast]. Predators include striped bass, spiny dogfish, and seals, which have all experienced distribution shifts that could result in increased predation pressure [@pereira1999essential].
+
+These results are similar to those from the 2016 Climate Vulnerability Assessment where winter flounder were given a High sensitivity score. This score was also driven by Stock Status and Early Life History Requirements [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-add text here
+Between 95 and 100% of data quality scores were greater than or equal to 2 for both stocks of winter flounder, indicating excellent data quality. The only data gap (mean attribute data quality score \< 2) identified was Stock Size/Status for the Gulf of Maine stock.
 
 ### Model Confidence:
 
@@ -101,11 +107,15 @@ add text here
 
 ### Directional Effect:
 
-add text here
+Climate change was predicted to **negatively** impact all three stocks of winter flounder. Certainties ranged from 58% - 100% across stocks, with the lowest certainty for the Gulf of Maine stock and the highest for the Southern New England/Mid-Atlantic stock. Increasing temperatures have been linked to poor spring recruitment and higher summer time mortality, in addition to shifts in migration timing [@able2014temporal; @langan2021role; @klein2017effects]. The Southern New England/Mid Atlantic stock has also shifted norward [@able2014temporal; @langan2021role]. The previous Assessment also predicted that winter flounder would be negatively impacted by climate change [@hare2016vulnerability].
 
-## Climate Effects on Abundance and Distribution:
+## Climate Effects on Abundance and Distribution
 
-## Life History Synopsis:
+A number of studies describe evidence of changes in winter flounder growth, abundance, and distribution as a result of climate change. The Southern New England/Mid-Atlantic Bight stock declined sharply in the 1980s from overfishing, has not recovered, and is shifting northward [@able2014temporal; @langan2021role]. Warm spring temperatures have resulted in poor recruitment [@able2014temporal], and declining productivity due to warming estuarine waters has blocked recovery efforts [@bell2014externally]. Elevated water temperatures can cause faster development rates of early life history winter flounder; length of incubation time is crucial as a nearshore and estuarine species as these areas are more susceptible to anthropogenic impacts [@klein2017effects]. Increasing temperatures may alter predation rates, affecting survival of larval winter flounder, as well as migration and distribution patterns [@klein2017effects]. In Narragansett Bay, warmer summer temperatures were linked to increasing mortality in young-of-the-year winter flounder. Greater abundance of mature winter flounder in the lower bay during spring may also indicate a potential shift in spawning migration timing [@langan2021role].
+
+## Life History Synopsis
+
+Winter flounder are found in estuaries and on the continental shelf from Nova Scotia to North Carolina, and are most common in the Mid-Atlantic north of Delaware Bay [@pereira1999essential]. They prefer temperatures between 0-20°C and depths less than 30m inshore and 100m offshore [@pereira1999essential]. The fishery is divided into 3 stocks: Gulf of Maine, Georges Bank, and Southern New England/Mid-Atlantic. They reach maturity at 2- 3 years, varying across stocks with southern populations maturing younger than northern ones, and live to a maximum age of 15 years [@nefsc2011assessment_winter]. Winter flounder spawn inshore in the winter through spring, peaking in February/March in the Mid-Atlantic and Southern New England and continuing into May in the Gulf of Maine [@pereira1999essential]. Timing of spawning aggregations is linked to inshore migration timing, which is complex and possibly related to time of year, temperature, lunar cycle, and photoperiod, as well as varying across years. Individuals migrate inshore in the fall, and migrate offshore in the spring. The Georges Bank population does not migrate [@pearcy1962ecology]. Females deposit eggs at night and on bottom substrates, usually sand or algal mats, and can deposit multiple batches of eggs per spawning season [@ziegler2019migration]. Eggs are demersal and hatch within 2-3 weeks, depending on temperature. Larvae are initially planktonic but become more demersal as they metamorphosize, which starts 5-6 weeks after hatching. Larvae rely on bottom currents to keep them in and around spawning areas in inshore bays and estuaries. They are tolerant to a wide range of temperatures, salinities, and dissolved oxygen concentrations [@pearcy1962ecology]. Metamorphosis is complete about 8 weeks after hatching, and is temperature dependent [@pereira1999essential]. Size, rather than age, tends to drive metamorphosis and settlement [@manderson2003winter]. Larvae consume a variety of planktonic prey including nauplii, invertebrate eggs, calanoids, and polychaetes, with larger larvae consuming larger prey. Copepods and other zooplankton are important during metamorphosis [@stehlik2000diet]. Small medusae are important predators to larvae. Larvae can also be preyed upon by amphipods and Atlantic mackerel [@pereira1999essential]. Juveniles utilize marine and estuarine rocky, sand, and mud substrates, particularly fine sand and gravel as well as marine and estuarine water columns. They also occupy submerged aquatic vegetation, marshes, oyster reefs, and macroalgae habitats [@bigelow1953fishes]. Juveniles consume a variety of prey including copepods, amphipods, and polychaetes. The diversity of prey increases and the importance of smaller zooplankton decreases with size [@pearcy1962ecology; @pereira1999essential]. Adults are omnivorous opportunistic feeders. They feed during the day as they depend on sight to locate prey. Their diet is limited by mouth size; diets primarily consist of polychaetes and crustaceans (mostly amphipods), but also include bivalves, fish eggs, and fish. Diets can shift based on available prey [@stehlik2000diet; @pereira1999essential]. Predators of adult winter flounder include striped bass, spiny dogfish, and seals [@pereira1999essential]. The New England Fishery Management Council manages winter flounder in federal waters under the Northeast Multispecies (Groundfish) Fishery Management Plan. The Atlantic States Marine Fisheries Commission coordinates management in state waters. None of the 3 stocks are subject to overfishing. The Georges Bank and Southern New England/Mid-Atlantic stocks are not overfished; the Gulf of Maine stock has not been assessed and population abundance is unknown [@nefsc2025gom_winter; @nefsc2025snema_winter; @nefsc2025gb_winter].
 
 ## Figures
 

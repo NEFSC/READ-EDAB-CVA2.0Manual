@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = Low - Moderate
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 75%
 
 </div>
 :::::
@@ -62,12 +62,12 @@ here::here("test_images/Windowpane flounder_sensitivity_summary_table.png")
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability* |  |  |  |
+| *Exposure* |  |  |  |
+| *Sensitivity* | Moderate (Gulf of Maine/Georges Bank) - Low (Southern New England/Mid Atlantic) | Low | Increase (Gulf of Maine/Georges Bank) - None (Southern New England/Mid Atlantic) |
+| *Directional Effect* | Neutral (Gulf of Maine/Georges Bank) - Negative (Southern New England/Mid Atlantic) | Neutral | None (Gulf of Maine/Georges Bank) - Decrease (Southern New England/Mid Atlantic) |
 
 ## Score Drivers
 
@@ -81,13 +81,19 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+The **Gulf of Maine/Georges Bank** stock of Windowpane flounder received a **Moderate** sensitivity score, with a certainty of 69%. This score was driven by Stock Size (3.5) and Complexity in Reproductive Strategy (2.6).
+
+The **Southern New England/Mid Atlantic** stock received a **Low** sensitivity score, with a certainty of 74%. No attributes received a score greater than 2.5 for this stock. Stock Size and Complexity in Reproductive Strategy both received scores of 2.4.
+
+Spawning occurs throughout most of the year [@AbleFahay2010; @Cadrin2021], but relies on cold bottom temperature (8.5-13.5 C) [@Chang1999_windowpane]. Spawning occurs in estuaries and nearshore environments; estuarine water column habitats are considered highly vulnerable [@guyant2022northeast]. The stock status of the Gulf of Maine/Georges Bank stock is unknown. The southern stock is not overfished and overfishing is not occurring [@NEFSC2023a_windowpane; @NEFSC2023b_windowpane].
+
+In the previous Climate Vulnerability Assessment, Windowpane flounder received a Low sensitivity score. This was driven by Stock Status [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-add text here
+75% of data quality scores were greater than or equal to 2, indicating good data quality. Across both stocks, Complexity in Reproductive Strategy, Dispersal of Early Life Stages, Egg and Larval Survival and Settlement Requirements, Population Growth Rate, and Relationship to Calcified Organisms were all identified as data gaps (mean attribute data quality score \< 2).
 
 ### Model Confidence:
 
@@ -101,11 +107,16 @@ add text here
 
 ### Directional Effect:
 
-add text here
+Experts predicted that effects of climate change would be **neutral** for the Gulf of Maine/Georges Bank stock, with 73% certainty. For the Southern New England/Mid-Atlantic stock, the effects were predicted to be **negative**, with 58% certainty. Increasing temperatures have been shown to displace windowpane flounder, and extreme cold winters have increased juvenile mortality [@Bell2021; @Wilber2016]. In the previous Climate Vulnerability Assessment, experts predicted that impacts of climate change on windowpane flounder would be neutral [@hare2016vulnerability].
 
-## Climate Effects on Abundance and Distribution:
+## Climate Effects on Abundance and Distribution
 
-## Life History Synopsis:
+Percent biomass of windowpane flounder in the Northwest Atlantic increases with changes in seasonality, from cold springs, to warm springs, to fall [@Dunn2016]. Increasing temperatures (> 7-10°C) have been shown to displace windowpane flounder [@Bell2021]. In New York/New Jersey Harbor, cold winter temperatures decreased windowpane abundance and overwinter mortality in small juveniles [@Wilber2016]. Overwintering success appears to be driven in part by temperatures, with extreme cold conditions resulting in high overwinter mortality of age-0 individuals. This likely has a larger impact on fall-spawned juveniles since resilience to extreme cold temperatures is size-dependent and fall-spawned individuals have less time to grow [@Neuman2009_windowpane]. Individual windowpane have also demonstrated avoiding hypoxic conditions [@Cadrin2021].
+
+## Life History Synopsis
+
+Windowpane flounder inhabit shallow waters from the Gulf of St. Lawrence to Florida, but are most abundant from Georges Bank to Chesapeake Bay [@Chang1999_windowpane]. They reach maturity around 1.5 years of age and can live up to 8 years [@Cadrin2021]. Windowpane spawn from February to November on the inner continental shelf, Georges Bank, and within estuaries. Spawning occurs in the Mid-Atlantic Bight in both spring and fall, whereas spawning in Georges Bank peaks in summer [@AbleFahay2010] [@Cadrin2021]. Windowpane spawn in the evening or at night on or near bottom at temperatures ranging from 6-21°C  [@Chang1999_windowpane]. Eggs hatch after 8 days. The duration of the larval stage is unknown, but eggs and larvae remain in the water column feeding on suspended copepods [@Chang1999_windowpane]. Surveys from Canadian waters suggest that small (< 10 cm TL) windowpane consume bay shrimp and crab larvae, which may be a transition point from zooplankton prey to larger prey items [@Hanson2014]. Larvae settle to the bottom at approximately 10 mm TL. However, individuals collected on Georges Bank may be planktonic up to 20 mm. There is no indication that settlement is driven by environmental factors [@Morse1995_windowpane]. Juveniles that settle in shallow inshore waters move to deeper offshore waters as they grow. Juveniles inhabiting Georges Bank (< 60 m) undergo seasonal movements to deeper waters along the southern flank of the Bank occur during late autumn, as bottom temperatures drop, and overwintering occurs in deeper areas until late spring [@KleinMacPhee2002_windowpane]. From Massachusetts to the Gulf of Maine, they can be found in estuaries and on the shelf [@Chang1999_windowpane]. Adults are found on the benthos in waters < 100 m and tolerate a wide range of temperatures (0-26.8°C) [@Chang1999_windowpane]. Adult windowpane may travel along the coast for considerable distances. Juveniles and adults may migrate to nearshore or estuarine habitats in the Mid-Atlantic Bight. Seasonal movements into offshore overwintering habitats have also been documented [@Chang1999_windowpane]. Stomach content data collected during Northeast Fisheries Science Center (NEFSC) bottom trawl surveys indicate windowpane feed on small crustaceans (e.g., mysids and decapod shrimp) and various fish larvae including hakes and tomcod, as well as their own species [@Langton1981; @Chang1999_windowpane]. Windowpane flounder are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. The fishery is divided into two stocks: Northern Gulf of Maine/Georges Bank and Southern New England/Mid-Atlantic. Overfishing and overfished status of the northern stock is unknown, as the assessment has not estimated reference points since 2020 [@NEFSC2023a_windowpane]. The southern stock is not overfished and overfishing is not occurring [@NEFSC2023b_windowpane].
+
 
 ## Figures
 

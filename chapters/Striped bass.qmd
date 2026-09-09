@@ -35,7 +35,7 @@ Vulnerability =
 
 Climate Exposure =
 
-Biological Sensitivity =
+Biological Sensitivity = High
 
 </div>
 
@@ -45,7 +45,7 @@ Biological Sensitivity =
 
 Model Confidence Score =
 
-Life History Data Quality =
+Life History Data Quality = 98%
 
 </div>
 :::::
@@ -62,12 +62,12 @@ here::here("test_images/Striped bass_sensitivity_summary_table.png")
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        |                    |                        |        |
-| *Directional Effect* |                    |                        |        |
+| Metric               | Current Assessment | Previous Assessment(s) | Change   |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability*      |                    |                        |          |
+| *Exposure*           |                    |                        |          |
+| *Sensitivity*        | High               | High                   | None     |
+| *Directional Effect* | Negative           | Neutral                | Decrease |
 
 ## Score Drivers
 
@@ -81,13 +81,19 @@ add text here
 
 ### Biological Sensitivity:
 
-add text here
+Striped Bass received a **High** sensitivity score. Certainty was 85%. A total of seven attributes had scores greater than 3: Egg and Larval Survival and Settlement Requirements (3.7), Complexity in Reproductive Strategy (3.4), Other Stressors (3.4), Spawning Cycle (3.4), Population Growth Rate (3.2), Stock Size (3.1), and Dispersal of Early Life Stages (3.1).
+
+Striped Bass are anadromous, spawning in fresh water once a year [@bigelow1953striped]. Estuarine and river water column habitats used by spawning adults are considered highly vulnerable [@guyant2022northeast]. Eggs and larvae are semi-buoyant drift downstream away from spawning sites and require relatively fast current speeds (0.3 m/s) to avoid sinking and being smothered [@fay1983species]. Predation and temperature play a large role in larval survival [@nefsc2019saw66; @fay1983species; @smith1981predation]. 
+
+Striped bass are long lived, reaching maturity between 2-8 years of age and living up to 30 years [@nefsc2019saw66]. The stock is currently overfished, but overfishing is not occurring [@asmfc2024assessment_stripedbass].
+
+In the previous Climate Vulnerability Assessment, striped bass received a High sensitivity score. Similar to our results, Spawning Cycle and Early Life History Requirements drove this score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-add text here
+98% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified.
 
 ### Model Confidence:
 
@@ -101,11 +107,16 @@ add text here
 
 ### Directional Effect:
 
-add text here
+Experts predicted that striped bass would be **negatively** impacted by climate change. Certainty amongst expert scores was 100%. Spawning and recruitment success is driven by freshwater outputs and subnormal winter temperatures [@oconnor2012findings; @dixon2026climate; @heinle1977contribution]. Estuarine and river spawning habitats are also highly vulnerable [@guyant2022northeast]. The previous Climate Vulnerability Assessment predicted that climate change would have a neutral effect on striped bass [@hare2016vulnerability].
 
-## Climate Effects on Abundance and Distribution:
+## Climate Effects on Abundance and Distribution
 
-## Life History Synopsis:
+@coutant1990temperature analyzed habitat suitability for striped bass on the U.S. east coast with predicted temperature increases and declines in precipitation. In freshwater areas, high temperatures, altered streamflow, and low oxygen may constrain suitable habitat in the summer. Habitat loss in the Chesapeake Bay is predicted, with a possible range expansion into Nova Scotia and further into the Gulf of St. Lawrence [@coutant1990temperature]. Onset and cessation of the spawning season in two spawning grounds of the Hudson River Estuary have occurred earlier in recent years. Spawning sites in the upper estuary are more vulnerable to climate change compared to sites in the lower estuary [@pan2023spatial]. Larval striped bass abundance in the Hudson River Estuary is positively correlated with high freshwater flows, which may decrease under predicted climate scenarios [@oconnor2012findings]. Striped bass recruitment has been linked to winter North Atlantic Oscillation (NAO) and marine heatwaves [@dixon2026climate]. Several studies support a general conclusion that dominant year classes through recent history have always been preceded by a colder than normal winter (i.e. subnormal winter temperatures). One proposed mechanism of the severe winter-strong year class association is through the estuarine food chain [@heinle1975carbon; @heinle1977contribution]. 
+
+## Life History Synopsis
+
+Atlantic striped bass inhabit freshwater coastal and estuarine waters from Canada to Florida, including the Gulf of America from Florida to Louisiana [@nefsc2019saw66]. Striped bass are anadromous, spawning once a year in fresh or nearly fresh water. Along the Atlantic coast, the spawning period ranges from mid-February in Florida to June and July in the Gulf of St. Lawrence. In the mid-Atlantic, spawning is concentrated during the months of April - June [@bigelow1953striped]. Spawning peaks are apparently triggered by a noticeable increase in water temperature, generally beginning at temperatures of at least 14°C [@johnson1975production]. Eggs hatch within 30 - 74 hrs, occurring faster at higher temperatures. Larval stages last up until age 1 when juveniles migrate out of rivers and into estuaries [@nefsc2019saw66]. Larvae and eggs may drift down stream in rivers, away from spawning sites. Eggs are semi-buoyant, requiring a current of 30 cm/sec in order to keep the eggs afloat so they don't settle to the bottom and die [@fay1983species]. Egg and larval mortality, as well as larval growth rates and yolk utilization are all linked to water temperatures greater than 18°C [@nefsc2019saw66]. Predation and competition by American shad are important factors in spawning and larval locations [@fay1983species]. In addition, adult and juvenile white perch and copepod *Cyclops bicuspidatus* probably consume large numbers of striped bass larvae [@smith1981predation]. Larval striped bass feed on zooplankton; juveniles eat small shrimps and other crustaceans, annelid worms, bay anchovies, gobies, and insects [@bason1971ecology]. Most juveniles remain in the river and estuarine areas where they were spawned. During the first summer, young-of-the-year striped bass generally move downstream and shoreward [@fay1983species]. A variety of environmental factors influence the timing of this migration, including temperature, pH, and salinity [@nefsc2019saw66]. Males reach maturity at age 2-4 and females from age 4-8. Striped bass have a fairly long lifespan, up to 30 years [@nefsc2019saw66]. Adults are generalists, consuming a variety of fish and invertebrates, depending on fish size, time of year, and habitat [@nefsc2019saw66]. Adults have few predators, with the exception of some seals and sharks [@nefsc2019saw66]. The Atlantic States Marine Fisheries Commission manages striped bass in coastal and estuarine waters from Maine to Virginia, and coastal areas of North Carolina under Amendment 7 of the Interstate Fishery Management Plan [@asmfc2022amendment7]. Estuarine waters of North Carolina are managed by the state. The stock is currently overfished, with management measures and a rebuilding plan in place, but not subject to overfishing [@asmfc2024assessment_stripedbass].
+
 
 ## Figures
 
