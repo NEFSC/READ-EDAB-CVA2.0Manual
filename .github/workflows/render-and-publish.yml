@@ -34,14 +34,15 @@ jobs:
         run: quarto install tinytex
 
       # 2. Add this step to generate the PDFs
-      - name: Render all QMD files to PDF
+      - name: Render Narratives to PDF
         run: |
-          mkdir -p pdfs
           for file in chapters/*.qmd; do
             if [ "$file" != "chapters/index.qmd" ]; then
-              quarto render "$file" --to pdf
-              # ${file%.qmd} strips the .qmd extension so we can append .pdf
-              mv "${file%.qmd}.pdf" pdfs/
+              # Extract just the filename without the 'chapters/' path or '.qmd' extension
+              base=$(basename "$file" .qmd)
+              
+              # Force Quarto to use the chapter name and put it directly in the pdfs folder
+              quarto render "$file" --to pdf --output "$base.pdf" --output-dir pdfs
             fi
           done
       # add software dependencies here
