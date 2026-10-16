@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Moderate - High</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 95 - 100%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Moderate (Gulf of Maine/Georges Bank) - High (Southern New England/Mid Atlantic)</td>
+<td>High</td>
+<td>Decrease (Gulf of Maine/Georges Bank) - None (Southern New England/Mid Atlantic)</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative (All Stocks)</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>The <strong>Georges Bank</strong> and <strong>Gulf of Maine</strong> stocks of Winter Flounder both received <strong>Moderate</strong> sensitivity scores. Certainty for both stocks was 58%. For these stocks, five attributes had scores greater than 2.5: Complexity in Reproductive Strategy (3.3 and 3.4), Egg and Larval Survival and Settlement Requirements (2.7 and 2.9), Other Stressors (2.6 and 2.9), Spawning Cycle (2.8), and Stock Size (3 and 2.7).</p>
+<p>The <strong>Southern New England/Mid-Atlantic</strong> stock received a <strong>High</strong> sensitivity score, with a certainty of 91%. Three attributes had scores greater than 3: Complexity in Reproductive Strategy (3.5), Egg and Larval Survival and Settlement Requirements (3.2), and Other Stressors (3.1).</p>
+<p>Winter flounder spawn in winter and early spring before waters reach temperatures of 6C <span class="citation" data-cites="pereira1999essential">(<a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. Spawning occurs in nearshore and estuarine habitats, including muddy and sandy substrates, and native salt marsh habitats which are considered highly vulnerable <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. Larvae are dependent on bottom currents to help retain them in and around spawning areas and nursery habitats. Adults depend on estuarine habitats, which may be impacted by hypoxia and changes to freshwater inputs <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. Predators include striped bass, spiny dogfish, and seals, which have all experienced distribution shifts that could result in increased predation pressure <span class="citation" data-cites="pereira1999essential">(<a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>.</p>
+<p>These results are similar to those from the 2016 Climate Vulnerability Assessment where winter flounder were given a High sensitivity score. This score was also driven by Stock Status and Early Life History Requirements <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>Between 95 and 100% of data quality scores were greater than or equal to 2 for both stocks of winter flounder, indicating excellent data quality. The only data gap (mean attribute data quality score &lt; 2) identified was Stock Size/Status for the Gulf of Maine stock.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +589,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Climate change was predicted to <strong>negatively</strong> impact all three stocks of winter flounder. Certainties ranged from 58% - 100% across stocks, with the lowest certainty for the Gulf of Maine stock and the highest for the Southern New England/Mid-Atlantic stock. Increasing temperatures have been linked to poor spring recruitment and higher summer time mortality, in addition to shifts in migration timing <span class="citation" data-cites="able2014temporal langan2021role klein2017effects">(<a href="#ref-able2014temporal" role="doc-biblioref">Able et al. 2014</a>; <a href="#ref-langan2021role" role="doc-biblioref">Langan 2021</a>; <a href="#ref-klein2017effects" role="doc-biblioref">Klein, Smith, and Kritzer 2017</a>)</span>. The Southern New England/Mid Atlantic stock has also shifted norward <span class="citation" data-cites="able2014temporal langan2021role">(<a href="#ref-able2014temporal" role="doc-biblioref">Able et al. 2014</a>; <a href="#ref-langan2021role" role="doc-biblioref">Langan 2021</a>)</span>. The previous Assessment also predicted that winter flounder would be negatively impacted by climate change <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>A number of studies describe evidence of changes in winter flounder growth, abundance, and distribution as a result of climate change. The Southern New England/Mid-Atlantic Bight stock declined sharply in the 1980s from overfishing, has not recovered, and is shifting northward <span class="citation" data-cites="able2014temporal langan2021role">(<a href="#ref-able2014temporal" role="doc-biblioref">Able et al. 2014</a>; <a href="#ref-langan2021role" role="doc-biblioref">Langan 2021</a>)</span>. Warm spring temperatures have resulted in poor recruitment <span class="citation" data-cites="able2014temporal">(<a href="#ref-able2014temporal" role="doc-biblioref">Able et al. 2014</a>)</span>, and declining productivity due to warming estuarine waters has blocked recovery efforts <span class="citation" data-cites="bell2014externally">(<a href="#ref-bell2014externally" role="doc-biblioref">Bell et al. 2014</a>)</span>. Elevated water temperatures can cause faster development rates of early life history winter flounder; length of incubation time is crucial as a nearshore and estuarine species as these areas are more susceptible to anthropogenic impacts <span class="citation" data-cites="klein2017effects">(<a href="#ref-klein2017effects" role="doc-biblioref">Klein, Smith, and Kritzer 2017</a>)</span>. Increasing temperatures may alter predation rates, affecting survival of larval winter flounder, as well as migration and distribution patterns <span class="citation" data-cites="klein2017effects">(<a href="#ref-klein2017effects" role="doc-biblioref">Klein, Smith, and Kritzer 2017</a>)</span>. In Narragansett Bay, warmer summer temperatures were linked to increasing mortality in young-of-the-year winter flounder. Greater abundance of mature winter flounder in the lower bay during spring may also indicate a potential shift in spawning migration timing <span class="citation" data-cites="langan2021role">(<a href="#ref-langan2021role" role="doc-biblioref">Langan 2021</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Winter flounder are found in estuaries and on the continental shelf from Nova Scotia to North Carolina, and are most common in the Mid-Atlantic north of Delaware Bay <span class="citation" data-cites="pereira1999essential">(<a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. They prefer temperatures between 0-20°C and depths less than 30m inshore and 100m offshore <span class="citation" data-cites="pereira1999essential">(<a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. The fishery is divided into 3 stocks: Gulf of Maine, Georges Bank, and Southern New England/Mid-Atlantic. They reach maturity at 2- 3 years, varying across stocks with southern populations maturing younger than northern ones, and live to a maximum age of 15 years <span class="citation" data-cites="nefsc2011assessment_winter">(<a href="#ref-nefsc2011assessment_winter" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2011</a>)</span>. Winter flounder spawn inshore in the winter through spring, peaking in February/March in the Mid-Atlantic and Southern New England and continuing into May in the Gulf of Maine <span class="citation" data-cites="pereira1999essential">(<a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. Timing of spawning aggregations is linked to inshore migration timing, which is complex and possibly related to time of year, temperature, lunar cycle, and photoperiod, as well as varying across years. Individuals migrate inshore in the fall, and migrate offshore in the spring. The Georges Bank population does not migrate <span class="citation" data-cites="pearcy1962ecology">(<a href="#ref-pearcy1962ecology" role="doc-biblioref">Pearcy 1962</a>)</span>. Females deposit eggs at night and on bottom substrates, usually sand or algal mats, and can deposit multiple batches of eggs per spawning season <span class="citation" data-cites="ziegler2019migration">(<a href="#ref-ziegler2019migration" role="doc-biblioref">Ziegler, Zacharias, and Frisk 2019</a>)</span>. Eggs are demersal and hatch within 2-3 weeks, depending on temperature. Larvae are initially planktonic but become more demersal as they metamorphosize, which starts 5-6 weeks after hatching. Larvae rely on bottom currents to keep them in and around spawning areas in inshore bays and estuaries. They are tolerant to a wide range of temperatures, salinities, and dissolved oxygen concentrations <span class="citation" data-cites="pearcy1962ecology">(<a href="#ref-pearcy1962ecology" role="doc-biblioref">Pearcy 1962</a>)</span>. Metamorphosis is complete about 8 weeks after hatching, and is temperature dependent <span class="citation" data-cites="pereira1999essential">(<a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. Size, rather than age, tends to drive metamorphosis and settlement <span class="citation" data-cites="manderson2003winter">(<a href="#ref-manderson2003winter" role="doc-biblioref">Manderson et al. 2003</a>)</span>. Larvae consume a variety of planktonic prey including nauplii, invertebrate eggs, calanoids, and polychaetes, with larger larvae consuming larger prey. Copepods and other zooplankton are important during metamorphosis <span class="citation" data-cites="stehlik2000diet">(<a href="#ref-stehlik2000diet" role="doc-biblioref">Stehlik and Meise 2000</a>)</span>. Small medusae are important predators to larvae. Larvae can also be preyed upon by amphipods and Atlantic mackerel <span class="citation" data-cites="pereira1999essential">(<a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. Juveniles utilize marine and estuarine rocky, sand, and mud substrates, particularly fine sand and gravel as well as marine and estuarine water columns. They also occupy submerged aquatic vegetation, marshes, oyster reefs, and macroalgae habitats <span class="citation" data-cites="bigelow1953fishes">(<a href="#ref-bigelow1953fishes" role="doc-biblioref">Bigelow and Schroeder 1953</a>)</span>. Juveniles consume a variety of prey including copepods, amphipods, and polychaetes. The diversity of prey increases and the importance of smaller zooplankton decreases with size <span class="citation" data-cites="pearcy1962ecology pereira1999essential">(<a href="#ref-pearcy1962ecology" role="doc-biblioref">Pearcy 1962</a>; <a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. Adults are omnivorous opportunistic feeders. They feed during the day as they depend on sight to locate prey. Their diet is limited by mouth size; diets primarily consist of polychaetes and crustaceans (mostly amphipods), but also include bivalves, fish eggs, and fish. Diets can shift based on available prey <span class="citation" data-cites="stehlik2000diet pereira1999essential">(<a href="#ref-stehlik2000diet" role="doc-biblioref">Stehlik and Meise 2000</a>; <a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. Predators of adult winter flounder include striped bass, spiny dogfish, and seals <span class="citation" data-cites="pereira1999essential">(<a href="#ref-pereira1999essential" role="doc-biblioref">Pereira 1999</a>)</span>. The New England Fishery Management Council manages winter flounder in federal waters under the Northeast Multispecies (Groundfish) Fishery Management Plan. The Atlantic States Marine Fisheries Commission coordinates management in state waters. None of the 3 stocks are subject to overfishing. The Georges Bank and Southern New England/Mid-Atlantic stocks are not overfished; the Gulf of Maine stock has not been assessed and population abundance is unknown <span class="citation" data-cites="nefsc2025gom_winter nefsc2025snema_winter nefsc2025gb_winter">(<a href="#ref-nefsc2025gom_winter" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025b</a>, <a href="#ref-nefsc2025snema_winter" role="doc-biblioref">2025c</a>, <a href="#ref-nefsc2025gb_winter" role="doc-biblioref">2025a</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +632,56 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-able2014temporal" class="csl-entry" role="listitem">
+Able, K. W., T. M. Grothues, J. M. Morson, and K. E. Coleman. 2014. <span>“Temporal Variation in Winter Flounder Recruitment at the Southern Margin of Their Range: Is the Decline Due to Increasing Temperatures?”</span> <em>ICES Journal of Marine Science</em> 71 (8): 2186–97.
+</div>
+<div id="ref-bell2014externally" class="csl-entry" role="listitem">
+Bell, R. J., J. A. Hare, J. P. Manderson, and D. E. Richardson. 2014. <span>“Externally Driven Changes in the Abundance of Summer and Winter Flounder.”</span> <em>ICES Journal of Marine Science</em> 71 (9): 2416–28.
+</div>
+<div id="ref-bigelow1953fishes" class="csl-entry" role="listitem">
+Bigelow, H. B., and W. C. Schroeder. 1953. <em>Fishes of the Gulf of Maine</em>. Vol. 53. U.s. Fish and Wildlife Service Fishery Bulletin. U.S. Government Printing Office.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-klein2017effects" class="csl-entry" role="listitem">
+Klein, E. S., S. L. Smith, and J. P. Kritzer. 2017. <span>“Effects of Climate Change on Four New England Groundfish Species.”</span> <em>Reviews in Fish Biology and Fisheries</em> 27 (2): 317–38.
+</div>
+<div id="ref-langan2021role" class="csl-entry" role="listitem">
+Langan, J. A. 2021. <span>“The Role of Climate Change in the Decline of Narragansett Bay Winter Flounder.”</span> Doctoral dissertation, University of Rhode Island.
+</div>
+<div id="ref-manderson2003winter" class="csl-entry" role="listitem">
+Manderson, J. P., J. Pessutti, C. Meise, D. Johnson, and P. Shaheen. 2003. <span>“Winter Flounder Settlement Dynamics and the Modification of Settlement Patterns by Post-Settlement Processes in a NW Atlantic Estuary.”</span> <em>Marine Ecology Progress Series</em> 253: 253–67.
+</div>
+<div id="ref-nefsc2011assessment_winter" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2011. <span>“52nd Northeast Regional Stock Assessment Workshop (52nd SAW) Assessment Report.”</span> CRD-11-17. National Marine Fisheries Service. <a href="https://repository.library.noaa.gov/view/noaa/3881">https://repository.library.noaa.gov/view/noaa/3881</a>.
+</div>
+<div id="ref-nefsc2025gb_winter" class="csl-entry" role="listitem">
+———. 2025a. <span>“Georges Bank Winter Flounder 2025 Management Track Assessment Report.”</span> National Marine Fisheries Service. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10433">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10433</a>.
+</div>
+<div id="ref-nefsc2025gom_winter" class="csl-entry" role="listitem">
+———. 2025b. <span>“Gulf of Maine Winter Flounder 2025 Management Track Assessment Report.”</span> National Marine Fisheries Service. <a href="https://asmfc.org/wp-content/uploads/2026/01/GOM_WFlounderMgmtTrackAssmtReport_Sept2025.pdf">https://asmfc.org/wp-content/uploads/2026/01/GOM_WFlounderMgmtTrackAssmtReport_Sept2025.pdf</a>.
+</div>
+<div id="ref-nefsc2025snema_winter" class="csl-entry" role="listitem">
+———. 2025c. <span>“Southern New England Mid-Atlantic Winter Flounder 2025 Management Track Assessment Report.”</span> National Marine Fisheries Service. <a href="https://asmfc.org/wp-content/uploads/2026/01/SNEMA_WFlounderMgmtTrackAssmtReport_Sept2025.pdf">https://asmfc.org/wp-content/uploads/2026/01/SNEMA_WFlounderMgmtTrackAssmtReport_Sept2025.pdf</a>.
+</div>
+<div id="ref-pearcy1962ecology" class="csl-entry" role="listitem">
+Pearcy, W. G. 1962. <span>“Ecology of an Estuarine Population of Winter Flounder, <em>Pseudopleuronectes Americanus</em> (Walbaum). Parts i-IV.”</span> <em>Bulletin of the Bingham Oceanographic Collection</em> 18 (1): 5–78.
+</div>
+<div id="ref-pereira1999essential" class="csl-entry" role="listitem">
+Pereira, J. J. 1999. <span>“Essential Fish Habitat Source Document: Winter Flounder, <em>Pseudopleuronectes Americanus</em>, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE 138. National Marine Fisheries Service.
+</div>
+<div id="ref-stehlik2000diet" class="csl-entry" role="listitem">
+Stehlik, L., and C. Meise. 2000. <span>“Diet of Winter Flounder in a New Jersey Estuary: Ontogenetic and Spatial Variation, and Prey Selection.”</span> <em>Estuaries</em> 23 (3): 381–91.
+</div>
+<div id="ref-ziegler2019migration" class="csl-entry" role="listitem">
+Ziegler, C. M., J. P. Zacharias, and M. G. Frisk. 2019. <span>“Migration Diversity, Spawning Behavior, and Habitat Utilization of Winter Flounder.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 76 (9): 1503–14.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

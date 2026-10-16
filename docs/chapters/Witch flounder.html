@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = High</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 78%</p>
 </div>
 </div>
 </div>
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>High</td>
+<td>High</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Witch flounder received a <strong>High</strong> sensitivity score, with 100% certainty. Two attributes had scores greater than 3: Stock Size (3.9) and Population Growth Rate (3.5).</p>
+<p>Winter flounder are a long-lived, slowly maturing species, reaching maturity at 4.5-6 years and living up to 30 year <span class="citation" data-cites="burnett1992several cargnelli1999_witch">(<a href="#ref-burnett1992several" role="doc-biblioref">Burnett, Ross, and Clark 1992</a>; <a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. The stock status is poorly understood; the stock is overfished but it is unclear if overfishing is occurring due to lack of data <span class="citation" data-cites="nefsc2024witch">(<a href="#ref-nefsc2024witch" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2024</a>)</span>.</p>
+<p>Witch flounder also received a High sensitivity score in the 2016 Climate Vulnerability Assessment. This was also driven by Stock Size and Population Growth Rate <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>78% of data quality scores were greater than or equal to 2, indicating good data quality. Both Adult Mobility and Egg and Larval Survival and Settlement Requirements were identified as data gaps (mean attribute data quality score &lt; 2).</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +588,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted that witch flounder will be <strong>negatively</strong> impacted by climate change, with certainty equal to 95%. This is similar, but with higher certainty, to the 2016 Climate Vulnerability Assessment, which also predicted negative impacts from climate change on witch flounder <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. While there are few direct studies of the impacts of climate change on witch flounder, adults are known to prefer relatively cold temperatures between 4-11 C <span class="citation" data-cites="cargnelli1999_witch">(<a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. A recent study suggests that distributions are shifting southward <span class="citation" data-cites="mills2024multispecies">(<a href="#ref-mills2024multispecies" role="doc-biblioref">Mills et al. 2024</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>There have been few direct studies on the effect of climate change on witch flounder. Larval growth and survival has been linked to temperature in laboratory conditions <span class="citation" data-cites="bidwell2001effect">(<a href="#ref-bidwell2001effect" role="doc-biblioref">Bidwell and Howell 2001</a>)</span>. <span class="citation" data-cites="murawski1993climate">Murawski (<a href="#ref-murawski1993climate" role="doc-biblioref">1993</a>)</span> included witch flounder in a list of species that exhibit low variation in seasonal temperature or depth of occurrence. <span class="citation" data-cites="mills2024multispecies">Mills et al. (<a href="#ref-mills2024multispecies" role="doc-biblioref">2024</a>)</span> found that witch flounder distribution has actually shifted significantly toward more southern latitudes.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Witch flounder are a long-lived flatfish species inhabiting deep, cold waters in the Northwest Atlantic from Labrador to North Carolina <span class="citation" data-cites="cargnelli1999_witch">(<a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. They are slow-growing, reaching maturity at 4.5 years for males and 6 years for females in Georges Bank and the Gulf of Maine <span class="citation" data-cites="burnett1992several">(<a href="#ref-burnett1992several" role="doc-biblioref">Burnett, Ross, and Clark 1992</a>)</span>. Witch flounder can live up to 30 years, reaching a maximum length of 78 cm <span class="citation" data-cites="cargnelli1999_witch">(<a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Witch flounder spawn from March to November, with peak spawning occurring in summer. The general trend is for spawning to occur progressively later from south to north. In the Gulf of Maine-Georges Bank region, spawning occurs from April to November, and peaks from May to August <span class="citation" data-cites="martin1978development burnett1992several">(<a href="#ref-martin1978development" role="doc-biblioref">Martin and Drewry 1978</a>; <a href="#ref-burnett1992several" role="doc-biblioref">Burnett, Ross, and Clark 1992</a>)</span>. <span class="citation" data-cites="powles1970depth">Powles and Kohler (<a href="#ref-powles1970depth" role="doc-biblioref">1970</a>)</span> suggested that witch flounder occupy three largely discrete ecological niches, resulting in the different life stages being geographically separated from each other. The pelagic egg and larval stages are spent in the water column over deep water. Egg hatching occurs 7 to 8 days after spawning, with the yolk sac absorbed 10 days after hatching. Larvae are pelagic, and the larval stage lasts from 4-6 months to 1 year <span class="citation" data-cites="cargnelli1999_witch">(<a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Eggs generally drift southward, and shelf currents may transport some larvae. Length may be the biggest cue for settlement <span class="citation" data-cites="cargnelli1999_witch">(<a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. The juvenile stage occurs in very deep water when metamorphosed fish settle to the bottom. They are found over mud, clay, silt, or muddy sand substrates <span class="citation" data-cites="cargnelli1999_witch">(<a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Juveniles remain separated from the adult population, occupying deeper areas until the onset of sexual maturity. <span class="citation" data-cites="walsh1987habitat">Walsh (<a href="#ref-walsh1987habitat" role="doc-biblioref">1987</a>)</span> suggests however that while the juveniles and adults are in different areas, the niche separation may not be true. Witch flounder are capable of inhabiting depths up to 1500 m, although the majority are found at 90-300 m <span class="citation" data-cites="martin1978development kleinmacphee2002witch">(<a href="#ref-martin1978development" role="doc-biblioref">Martin and Drewry 1978</a>; <a href="#ref-kleinmacphee2002witch" role="doc-biblioref">Klein-MacPhee 2002</a>)</span>. The main food items in the witch flounder diet are polychaetes and crustaceans, although mollusks and echinoderms are also important. Overall, polychaetes were by far the most important food item, accounting for greater than 70% of the diet <span class="citation" data-cites="maurer1975food">(<a href="#ref-maurer1975food" role="doc-biblioref">Maurer and Bowman 1975</a>)</span>. However, there is a distinct ontogenetic shift in diet, with polychaetes increasing in importance and crustaceans decreasing in importance with age <span class="citation" data-cites="cargnelli1999_witch">(<a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Adult witch flounder generally do not migrate, although they prefer to stay within temperatures of 4-11°C. Some subpopulations may move from shallower waters in warmer months to deeper overwintering waters. Migration was not observed in the Gulf of Maine <span class="citation" data-cites="cargnelli1999_witch">(<a href="#ref-cargnelli1999_witch" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Predators of witch flounder include monkfish, spiny dogfish, harp seals, Atlantic halibut, white hake, and some skates <span class="citation" data-cites="kleinmacphee2002witch">(<a href="#ref-kleinmacphee2002witch" role="doc-biblioref">Klein-MacPhee 2002</a>)</span>. Witch flounder are managed as a single stock unit by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. In the last Management Track Assessment, the stock status could not be determined due to a lack of biological reference points. The stock condition appears to be improving but is poor relative to historical levels <span class="citation" data-cites="nefsc2024witch">(<a href="#ref-nefsc2024witch" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2024</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +631,44 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bidwell2001effect" class="csl-entry" role="listitem">
+Bidwell, D. A., and W. H. Howell. 2001. <span>“The Effect of Temperature on First Feeding, Growth, and Survival of Larval Witch Flounder <em>Glyptocephalus Cynoglossus</em>.”</span> <em>Journal of the World Aquaculture Society</em> 32 (4): 373–84.
+</div>
+<div id="ref-burnett1992several" class="csl-entry" role="listitem">
+Burnett, J., M. R. Ross, and S. H. Clark. 1992. <span>“Several Biological Aspects of the Witch Flounder (<em>Glyptocephalus Cynoglossus</em> (l.)) in the Gulf of Maine-Georges Bank Region.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 12: 15–25.
+</div>
+<div id="ref-cargnelli1999_witch" class="csl-entry" role="listitem">
+Cargnelli, L. M., S. J. Griesbach, D. B. Packer, P. L. Berrien, W. W. Morse, and D. L. Johnson. 1999. <span>“Essential Fish Habitat Source Document: Witch Flounder, <em>Glyptocephalus Cynoglossus</em>, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE-139.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-kleinmacphee2002witch" class="csl-entry" role="listitem">
+Klein-MacPhee, G. 2002. <span>“Witch Flounder, <em>Glyptocephalus Cynoglossus</em>.”</span> In <em>Bigelow and Schroeder’s Fishes of the Gulf of Maine</em>, edited by B. B. Collette and G. Klein-MacPhee. Washington, DC: Smithsonian Institution Press.
+</div>
+<div id="ref-martin1978development" class="csl-entry" role="listitem">
+Martin, F. D., and G. E. Drewry. 1978. <span>“Development of Fishes of the Mid-Atlantic Bight: An Atlas of Egg, Larval and Juvenile Stages. Vol. 6: Stromateidae Through Ogcocephalidae.”</span> FWS/OBS 78/12. U.S. Fish; Wildlife Service, Biological Services Program.
+</div>
+<div id="ref-maurer1975food" class="csl-entry" role="listitem">
+Maurer, R. O., Jr., and R. E. Bowman. 1975. <span>“Food Habits of Marine Fishes of the Northwest Atlantic – Data Report.”</span> Reference Document 75-3. U.S. National Marine Fisheries Service, Northeast Fisheries Center, Woods Hole Laboratory.
+</div>
+<div id="ref-mills2024multispecies" class="csl-entry" role="listitem">
+Mills, K. E., A. Kemberling, L. A. Kerr, S. M. Lucey, R. S. McBride, J. A. Nye, A. J. Pershing, M. Barajas, and C. S. Lovas. 2024. <span>“Multispecies Population-Scale Emergence of Climate Change Signals in an Ocean Warming Hotspot.”</span> <em>ICES Journal of Marine Science</em> 81 (2): 375–89.
+</div>
+<div id="ref-murawski1993climate" class="csl-entry" role="listitem">
+Murawski, S. A. 1993. <span>“Climate Change and Marine Fish Distributions: Forecasting from Historical Analogy.”</span> <em>Transactions of the American Fisheries Society</em> 122 (5): 647–58.
+</div>
+<div id="ref-nefsc2024witch" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2024. <span>“Witch Flounder 2024 Management Track Assessment Report.”</span> National Oceanic; Atmospheric Administration (NOAA). <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9884">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9884</a>.
+</div>
+<div id="ref-powles1970depth" class="csl-entry" role="listitem">
+Powles, P. M., and A. C. Kohler. 1970. <span>“Depth Distribution of Various Stages of Witch Flounder, <em>Glyptocephalus Cynoglossus</em> Off Nova Scotia and in the Gulf of St. Lawrence.”</span> <em>Journal of the Fisheries Research Board of Canada</em> 27: 2053–62.
+</div>
+<div id="ref-walsh1987habitat" class="csl-entry" role="listitem">
+Walsh, S. J. 1987. <span>“Habitat Partitioning in Witch Flounder <em>Glyptocephalus Cynoglossus</em>: A Re-Evaluation with Additional Data and Adjustment for Gear Selectivity.”</span> <em>Fishery Bulletin (U.S.)</em> 88: 147–53.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

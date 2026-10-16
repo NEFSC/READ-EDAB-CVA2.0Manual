@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = High</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 83%</p>
 </div>
 </div>
 </div>
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>High</td>
+<td>High</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>The ocean pout received a <strong>High</strong> sensitivity score, with a certainty of 100%. Two attributes had scores greater than 3: Stock Size (4) and Dispersal of Early Life Stages (3.6). The stock is currently overfished, but overfishing is not occurring <span class="citation" data-cites="nefsc2022ocean">(<a href="#ref-nefsc2022ocean" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2022</a>)</span>. Eggs masses and larvae are both demersal, with larvae quickly associating with benthic habitats after hatching <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>.</p>
+<p>In the 2016 Climate Vulnerability Assessment, ocean pout also received a High sensitivity score. This was driven by Dispersal and Early Life History, Stock Status, and Population Growth Rates <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. In our assessment, Population Growth Rate received a score of 2.8.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>83% of data quality scores were greater than or equal to 2, indicating strong data quality. Adult Mobility and Egg and Larval Survival and Settlement Requirements were considered data gaps (mean attribute data quality score &lt; 2).</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predict that ocean pout will be <strong>negatively</strong> impacted by climate change with 99% certainty. Ocean pout prefer colder waters and are sluggish movers <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>, which may make it difficult to avoid stressful conditions such as hypoxia (<span class="citation" data-cites="azarovitz1976effects">(<a href="#ref-azarovitz1976effects" role="doc-biblioref">Azarovitz et al. 1976</a>)</span>. In the previous Climate Vulnerability Assessment, experts made a similar prediction, but certainty was lower <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p><span class="citation" data-cites="nye2009changing">Nye et al. (<a href="#ref-nye2009changing" role="doc-biblioref">2009</a>)</span> identified an increase in depth of occurrence of ocean pout in the Gulf of Maine. Although ocean pout have been reported to be quite hardy, they appear to have limited tolerance of hypoxic and anoxic conditions; they are common victims of these conditions which occasionally occur in the New York Bight <span class="citation" data-cites="azarovitz1976effects">(<a href="#ref-azarovitz1976effects" role="doc-biblioref">Azarovitz et al. 1976</a>)</span>. Ocean pout are sluggish swimmers, which can explain their inability to avoid stressful conditions, such as hypoxia <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>. <span class="citation" data-cites="killen2008lack">Killen, Brown, and Gamperl (<a href="#ref-killen2008lack" role="doc-biblioref">2008</a>)</span> found that young ocean pout from Newfoundland do not show thermal compensation in response to long-term temperature changes.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Ocean pout are a non-migratory, bottom dwelling fish found along the Atlantic coast from Labrador to Delaware <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Spawning occurs in the late summer through early winter (peak in September-October) with earlier peaks (August-October) in the south <span class="citation" data-cites="wilk1979annual">(<a href="#ref-wilk1979annual" role="doc-biblioref">Wilk and Morse 1979</a>)</span>. Eggs are laid in gelatinous masses in a sheltered place on the bottom, such as rocky crevices, where they are guarded either by one or both parents until hatching <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Eggs develop in 2-3 months, temperature dependent <span class="citation" data-cites="olsen1946studies">(<a href="#ref-olsen1946studies" role="doc-biblioref">Olsen and Merriman 1946</a>)</span>. Larvae are about 30 mm long at hatching <span class="citation" data-cites="clark1982ocean">(<a href="#ref-clark1982ocean" role="doc-biblioref">Clark and Livingstone 1982</a>)</span> and live at the bottom at temperatures below 10°C <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Juvenile and adult ocean pout use both open and rough habitats. <span class="citation" data-cites="sedberry1983food">Sedberry (<a href="#ref-sedberry1983food" role="doc-biblioref">1983</a>)</span> reported that juveniles were common during the summer on the sandy, mid- to outer-continental shelf (approximately 35-95 m). In the Gulf of Maine, juveniles occur in shallow coastal waters around rocks and attached algae, and in rivers with saline bottom waters <span class="citation" data-cites="auster1985some">(<a href="#ref-auster1985some" role="doc-biblioref">Auster 1985</a>)</span>. <span class="citation" data-cites="macdonald1983laboratory">MacDonald (<a href="#ref-macdonald1983laboratory" role="doc-biblioref">1983</a>)</span> reported that ocean pout feed by sorting mouthfuls of sediments for infauna and do not use visual cues to stimulate feeding; they maintained that ocean pout were not very effective at capturing moving prey and rarely left the bottom to feed. <span class="citation" data-cites="auster1985some">Auster (<a href="#ref-auster1985some" role="doc-biblioref">1985</a>)</span> and <span class="citation" data-cites="auster1995patterns">Auster, Malatesta, and LaRosa (<a href="#ref-auster1995patterns" role="doc-biblioref">1995</a>)</span>, however, considered ocean pout an “ambush predator” that waits in sediment depressions for prey to approach or drift by in the current. Juveniles feed primarily on gammarid amphipods and polychaetes <span class="citation" data-cites="sedberry1983food">(<a href="#ref-sedberry1983food" role="doc-biblioref">Sedberry 1983</a>)</span>. Adult ocean pout feed on a variety of benthic invertebrates, including polychaetes, mollusks, crustaceans, and echinoderms <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Adults reach maturity at 2+ years <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>, with a maximum age of 18 years <span class="citation" data-cites="hoenig1983empirical">(<a href="#ref-hoenig1983empirical" role="doc-biblioref">Hoenig 1983</a>)</span>. Although they do not migrate, ocean pout move seasonally within a region: offshore in late summer and inshore in the spring in the Gulf of Maine, and offshore to cooler waters in the summer returning inshore in the fall in Southern New England and Georges Bank <span class="citation" data-cites="steimle1999_pout">(<a href="#ref-steimle1999_pout" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Ocean pout are managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. As of the 2022 management track assessment, the stock is not overfished and overfishing is not occurring <span class="citation" data-cites="nefsc2022ocean">(<a href="#ref-nefsc2022ocean" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2022</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +630,50 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-auster1985some" class="csl-entry" role="listitem">
+Auster, P. J. 1985. <span>“Some Observations of Fish Orientation to Current Direction and Effects on Predator-Prey Interactions.”</span> <em>Northwest Atlantic Fisheries Organization (NAFO) Scientific Council Studies</em> 8: 53–55.
+</div>
+<div id="ref-auster1995patterns" class="csl-entry" role="listitem">
+Auster, P. J., R. J. Malatesta, and S. C. LaRosa. 1995. <span>“Patterns of Microhabitat Utilization by Mobile Megafauna on the Southern <span>New England</span> (<span>USA</span>) Continental Shelf and Slope.”</span> <em>Marine Ecology Progress Series</em> 127: 77–85.
+</div>
+<div id="ref-azarovitz1976effects" class="csl-entry" role="listitem">
+Azarovitz, T. R., C. J. Byrne, M. J. Silverman, B. L. Freeman, W. G. Smith, S. C. Turner, B. A. Halgren, and P. J. Festa. 1976. <span>“Effects on Finfish and Lobster.”</span> In <em>Oxygen Depletion and Associated Benthic Mortalities in the <span>New York Bight</span></em>, 295–314.
+</div>
+<div id="ref-clark1982ocean" class="csl-entry" role="listitem">
+Clark, S. H., and R. Livingstone Jr. 1982. <span>“Ocean Pout <span class="nocase">Macrozoarces americanus</span>.”</span> In <em>Fish Distribution</em>, edited by M. D. Grosslein and T. R. Azarovitz, 15:76–79. <span>MESA</span> <span>New York Bight</span> Atlas Monograph. Albany, NY: N.Y. Sea Grant Institute.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-hoenig1983empirical" class="csl-entry" role="listitem">
+Hoenig, J. M. 1983. <span>“Empirical Use of Longevity Data to Estimate Mortality Rates.”</span> <em>Fishery Bulletin</em> 82 (1): 898–905.
+</div>
+<div id="ref-killen2008lack" class="csl-entry" role="listitem">
+Killen, S. S., J. A. Brown, and A. K. Gamperl. 2008. <span>“Lack of Metabolic Thermal Compensation During the Early Life Stages of Ocean Pout <span class="nocase">Zoarces americanus</span> (<span>Bloch</span> &amp; <span>Schneider</span>): A Benthic, Cold-Water Marine Species.”</span> <em>Journal of Fish Biology</em> 72 (3): 763–72.
+</div>
+<div id="ref-macdonald1983laboratory" class="csl-entry" role="listitem">
+MacDonald, J. S. 1983. <span>“Laboratory Observations of Feeding Behavior of the Ocean Pout (<span class="nocase">Macrozoarces americanus</span>) and Winter Flounder (<span class="nocase">Pseudopleuronectes americanus</span>) with Reference to Niche Overlap of Natural Populations.”</span> <em>Canadian Journal of Zoology</em> 61: 539–46.
+</div>
+<div id="ref-nefsc2022ocean" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2022. <span>“Ocean Pout 2022 Management Track Assessment Report.”</span> NOAA Northeast Fisheries Science Center. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=8463">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=8463</a>.
+</div>
+<div id="ref-nye2009changing" class="csl-entry" role="listitem">
+Nye, Janet A., Jason S. Link, Jonathan A. Hare, and William J. Overholtz. 2009. <span>“Changing Spatial Distribution of Fish Stocks in Relation to Climate and Population Size on the <span>Northeast</span> <span>United</span> <span>States</span> Continental Shelf.”</span> <em>Marine Ecology Progress Series</em> 393: 111–29.
+</div>
+<div id="ref-olsen1946studies" class="csl-entry" role="listitem">
+Olsen, Y. N., and D. Merriman. 1946. <span>“Studies of the Marine Resources of Southern <span>New England</span>. <span>IV</span>. <span>The</span> Biology and Economic Importance of the Ocean Pout, <span class="nocase">Macrozoarces americanus</span> (<span>Bloch</span> and <span>Schneider</span>).”</span> <em>Bulletin of the Bingham Oceanographic Collection</em> 9 (4): 1–184.
+</div>
+<div id="ref-sedberry1983food" class="csl-entry" role="listitem">
+Sedberry, G. R. 1983. <span>“Food Habits and Trophic Relationships of a Community of Fishes on the Outer Continental Shelf.”</span> NOAA Technical Report NMFS SSRF 773. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-steimle1999_pout" class="csl-entry" role="listitem">
+Steimle, F. W., W. W. Morse, P. L. Berrien, D. L. Johnson, and C. A. Zetlin. 1999. <span>“Essential Fish Habitat Source Document: Ocean Pout, <span class="nocase">Macrozoarces americanus</span>, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE 129. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-wilk1979annual" class="csl-entry" role="listitem">
+Wilk, S. J., and W. W. Morse. 1979. <span>“Annual Cycle of Gonad-Somatic Indices as Indicators of Spawning Times for Fifteen Species of Fishes Collected from the <span>New York Bight</span>, <span>June</span> 1974 to <span>June</span> 1975.”</span> Report 79-11. U.S. National Marine Fisheries Service, Northeast Fisheries Center, Sandy Hook Laboratory.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

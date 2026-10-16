@@ -1,4 +1,65 @@
 # Species Narratives
 
-Species Narratives summarize the vulnerability results for each species, and provide additional context on known climate change impacts on the species and known life history characteristics. PDF versions of the narratives will be available for download. 
+Species Narratives summarize the vulnerability results for each species, and provide additional context on known climate change impacts on the species and known life history characteristics. PDF versions of the narratives will be available for download.
 
+Each narrative contains the following information:
+
+## Summary
+
+A summary section providing the final average Vulnerability, Exposure, and Sensitivity scores. If scores were calculated across species stocks and scores differed across stocks, a range of scores will be provided. Data quality scores associated with both Exposure and Sensitivity scores will also be provided.
+
+This section also contains a summary table. Click on the table to enlarge it.
+
+## Changes from Previous Assessments
+
+This section contains a table highlighting the scores from this assessment, and compares them to previous assessments. If a citation for the previous assessment is not provided, it comes from [@hare2016vulnerability].
+
+## Stocks
+
+If a species was scored within different stock groups, a map of the different stocks is provided here and referenced throughout the narrative.
+
+## Score Descriptions
+
+These sections go into the scores in-depth, describing average scores, spatial patterns, and drivers. Each section has a map of scores. Climate Exposure has two sets of maps - one illustrating total exposure and the second illustrating factor exposures.
+
+## Data Quality Metrics
+
+This section describes the Life History Data Quality and Model Confidence Scores. Both were provided by the experts and range from 0 - 3. Following the original analysis, a score above 2 was deemed "acceptable". The rubrics for these scores are provided below
+
+### Life History Data Quality Rubric
+
+| Data Quality Score | Description |
+|------------------------------------|------------------------------------|
+| *3* | **Adequate Data.** The score is based on data which have been observed, modeled or empirically measured for the species in question and comes a from reputable source. |
+| *2* | **Limited Data.** The score is based on data which has a higher degree of uncertainty. The data used to score the attribute may be based on related or similar species, come from outside the study area, or the reliability of the source may be limited. |
+| *1* | **Expert Judgment.** The attribute score reflects the expert judgment of the reviewer and is based on their general knowledge of the species, or other related species, and their relative role in the ecosystem. |
+| *0* | **No Data.** No information to base an attribute score on. Very little is known about the species or related species and there is no basis for forming an expert opinion (please use judiciously). |
+
+This is the same rubric used in [@hare2016vulnerability].
+
+### Model Confidence Rubric
+
+| Model Confidence Score | Description |
+|------------------------------------|------------------------------------|
+| *3* | **High Confidence.** The model highly accurately reflects the species' realized niche. It captures fine-scale nuances, matches expert field observations, and handles environmental transitions realistically. |
+| *2* | **Moderate Confidence.** The model aligns well with known distributions and environmental drivers. Most key habitats are represented, though there may be minor inaccuracies at the range edges or in data-poor regions. |
+| *1* | **Low Confidence.** The model captures broad trends but has significant "noise." Environmental drivers likely don't reflect actual species needs. |
+| *0* | **No Confidence.** The model fails to represent known species range. It predicts species in unsuitable areas or misses well-known core areas entirely. |
+
+This rubric was developed to mimic the Life History Data Quality rubric.
+
+The Area under the Receiver-Operator Curve (AUC) is also provided for the ensemble model with the Model Confidence Scores. This statistic quantifies how well models classify binary data. The closer the value is to one, the better the model did at predicting observed presences and absences. This metric was not provided to the experts while scoring Model Confidence.
+
+## Additional Metrics
+
+This section describes the Distribution Shifts and Directional Effect results. Directional Effect is consistent with the previous analysis - experts were asked to score how they left the species would be impacted (postive/negative/neutral) by climate change.
+
+Distribution Shifts were previously assessed using a subset of Sensitivity Attributes. In this analysis, they are quantified with the ensemble species distribution models when possible. The provided map illustrates average species ranges using 5 year averages from the first and last 5 years of the hindcast data and the last 5 years of the most recent decadal forecast. The provided timeseries illustrate how core and total (quantified by 50 and 95% KDE respectively) habitat areas, latitude range, and longitude ranges change throughout the MOM6 hindcast (black points) and decadal forecast (yellow points) datasets. 
+
+In the online version of the narratives, an animated gif is also provided to illustrate how species distributions and the edges of these distributions shift through time in both the hindcast and forecasts. 
+
+## Climate Effects & Life History Synopsis
+
+The final two sections of the narratives include summaries of known climate impacts on a species and a summary of their life histories. 
+
+## References

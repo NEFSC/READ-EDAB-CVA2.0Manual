@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,7 +51,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../chapters/Summer flounder.html" rel="next">
-<link href="../chapters/Spanish mackerel.html" rel="prev">
+<link href="../chapters/Spiny dogfish.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = High</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 98%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>High</td>
+<td>High</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Neutral</td>
+<td>Decrease</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Striped Bass received a <strong>High</strong> sensitivity score. Certainty was 85%. A total of seven attributes had scores greater than 3: Egg and Larval Survival and Settlement Requirements (3.7), Complexity in Reproductive Strategy (3.4), Other Stressors (3.4), Spawning Cycle (3.4), Population Growth Rate (3.2), Stock Size (3.1), and Dispersal of Early Life Stages (3.1).</p>
+<p>Striped Bass are anadromous, spawning in fresh water once a year <span class="citation" data-cites="bigelow1953striped">(<a href="#ref-bigelow1953striped" role="doc-biblioref">Bigelow and Schroeder 1953</a>)</span>. Estuarine and river water column habitats used by spawning adults are considered highly vulnerable <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. Eggs and larvae are semi-buoyant drift downstream away from spawning sites and require relatively fast current speeds (0.3 m/s) to avoid sinking and being smothered <span class="citation" data-cites="fay1983species">(<a href="#ref-fay1983species" role="doc-biblioref">Fay, Neves, and Pardue 1983</a>)</span>. Predation and temperature play a large role in larval survival <span class="citation" data-cites="nefsc2019saw66 fay1983species smith1981predation">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>; <a href="#ref-fay1983species" role="doc-biblioref">Fay, Neves, and Pardue 1983</a>; <a href="#ref-smith1981predation" role="doc-biblioref">Smith and Kernehan 1981</a>)</span>.</p>
+<p>Striped bass are long lived, reaching maturity between 2-8 years of age and living up to 30 years <span class="citation" data-cites="nefsc2019saw66">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>)</span>. The stock is currently overfished, but overfishing is not occurring <span class="citation" data-cites="asmfc2024assessment_stripedbass">(<a href="#ref-asmfc2024assessment_stripedbass" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2024</a>)</span>.</p>
+<p>In the previous Climate Vulnerability Assessment, striped bass received a High sensitivity score. Similar to our results, Spawning Cycle and Early Life History Requirements drove this score <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>98% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +589,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted that striped bass would be <strong>negatively</strong> impacted by climate change. Certainty amongst expert scores was 100%. Spawning and recruitment success is driven by freshwater outputs and subnormal winter temperatures <span class="citation" data-cites="oconnor2012findings dixon2026climate heinle1977contribution">(<a href="#ref-oconnor2012findings" role="doc-biblioref">O’Connor et al. 2012</a>; <a href="#ref-dixon2026climate" role="doc-biblioref">Dixon et al. 2026</a>; <a href="#ref-heinle1977contribution" role="doc-biblioref">Heinle, Flemer, and Ustach 1977</a>)</span>. Estuarine and river spawning habitats are also highly vulnerable <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. The previous Climate Vulnerability Assessment predicted that climate change would have a neutral effect on striped bass <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p><span class="citation" data-cites="coutant1990temperature">Coutant (<a href="#ref-coutant1990temperature" role="doc-biblioref">1990</a>)</span> analyzed habitat suitability for striped bass on the U.S. east coast with predicted temperature increases and declines in precipitation. In freshwater areas, high temperatures, altered streamflow, and low oxygen may constrain suitable habitat in the summer. Habitat loss in the Chesapeake Bay is predicted, with a possible range expansion into Nova Scotia and further into the Gulf of St.&nbsp;Lawrence <span class="citation" data-cites="coutant1990temperature">(<a href="#ref-coutant1990temperature" role="doc-biblioref">Coutant 1990</a>)</span>. Onset and cessation of the spawning season in two spawning grounds of the Hudson River Estuary have occurred earlier in recent years. Spawning sites in the upper estuary are more vulnerable to climate change compared to sites in the lower estuary <span class="citation" data-cites="pan2023spatial">(<a href="#ref-pan2023spatial" role="doc-biblioref">Pan et al. 2023</a>)</span>. Larval striped bass abundance in the Hudson River Estuary is positively correlated with high freshwater flows, which may decrease under predicted climate scenarios <span class="citation" data-cites="oconnor2012findings">(<a href="#ref-oconnor2012findings" role="doc-biblioref">O’Connor et al. 2012</a>)</span>. Striped bass recruitment has been linked to winter North Atlantic Oscillation (NAO) and marine heatwaves <span class="citation" data-cites="dixon2026climate">(<a href="#ref-dixon2026climate" role="doc-biblioref">Dixon et al. 2026</a>)</span>. Several studies support a general conclusion that dominant year classes through recent history have always been preceded by a colder than normal winter (i.e.&nbsp;subnormal winter temperatures). One proposed mechanism of the severe winter-strong year class association is through the estuarine food chain <span class="citation" data-cites="heinle1975carbon heinle1977contribution">(<a href="#ref-heinle1975carbon" role="doc-biblioref">Heinle and Flemer 1975</a>; <a href="#ref-heinle1977contribution" role="doc-biblioref">Heinle, Flemer, and Ustach 1977</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic striped bass inhabit freshwater coastal and estuarine waters from Canada to Florida, including the Gulf of America from Florida to Louisiana <span class="citation" data-cites="nefsc2019saw66">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>)</span>. Striped bass are anadromous, spawning once a year in fresh or nearly fresh water. Along the Atlantic coast, the spawning period ranges from mid-February in Florida to June and July in the Gulf of St.&nbsp;Lawrence. In the mid-Atlantic, spawning is concentrated during the months of April - June <span class="citation" data-cites="bigelow1953striped">(<a href="#ref-bigelow1953striped" role="doc-biblioref">Bigelow and Schroeder 1953</a>)</span>. Spawning peaks are apparently triggered by a noticeable increase in water temperature, generally beginning at temperatures of at least 14°C <span class="citation" data-cites="johnson1975production">(<a href="#ref-johnson1975production" role="doc-biblioref">Johnson and Koo 1975</a>)</span>. Eggs hatch within 30 - 74 hrs, occurring faster at higher temperatures. Larval stages last up until age 1 when juveniles migrate out of rivers and into estuaries <span class="citation" data-cites="nefsc2019saw66">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>)</span>. Larvae and eggs may drift down stream in rivers, away from spawning sites. Eggs are semi-buoyant, requiring a current of 30 cm/sec in order to keep the eggs afloat so they don’t settle to the bottom and die <span class="citation" data-cites="fay1983species">(<a href="#ref-fay1983species" role="doc-biblioref">Fay, Neves, and Pardue 1983</a>)</span>. Egg and larval mortality, as well as larval growth rates and yolk utilization are all linked to water temperatures greater than 18°C <span class="citation" data-cites="nefsc2019saw66">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>)</span>. Predation and competition by American shad are important factors in spawning and larval locations <span class="citation" data-cites="fay1983species">(<a href="#ref-fay1983species" role="doc-biblioref">Fay, Neves, and Pardue 1983</a>)</span>. In addition, adult and juvenile white perch and copepod <em>Cyclops bicuspidatus</em> probably consume large numbers of striped bass larvae <span class="citation" data-cites="smith1981predation">(<a href="#ref-smith1981predation" role="doc-biblioref">Smith and Kernehan 1981</a>)</span>. Larval striped bass feed on zooplankton; juveniles eat small shrimps and other crustaceans, annelid worms, bay anchovies, gobies, and insects <span class="citation" data-cites="bason1971ecology">(<a href="#ref-bason1971ecology" role="doc-biblioref">Bason 1971</a>)</span>. Most juveniles remain in the river and estuarine areas where they were spawned. During the first summer, young-of-the-year striped bass generally move downstream and shoreward <span class="citation" data-cites="fay1983species">(<a href="#ref-fay1983species" role="doc-biblioref">Fay, Neves, and Pardue 1983</a>)</span>. A variety of environmental factors influence the timing of this migration, including temperature, pH, and salinity <span class="citation" data-cites="nefsc2019saw66">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>)</span>. Males reach maturity at age 2-4 and females from age 4-8. Striped bass have a fairly long lifespan, up to 30 years <span class="citation" data-cites="nefsc2019saw66">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>)</span>. Adults are generalists, consuming a variety of fish and invertebrates, depending on fish size, time of year, and habitat <span class="citation" data-cites="nefsc2019saw66">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>)</span>. Adults have few predators, with the exception of some seals and sharks <span class="citation" data-cites="nefsc2019saw66">(<a href="#ref-nefsc2019saw66" role="doc-biblioref">Northeast Fisheries Science Center 2019</a>)</span>. The Atlantic States Marine Fisheries Commission manages striped bass in coastal and estuarine waters from Maine to Virginia, and coastal areas of North Carolina under Amendment 7 of the Interstate Fishery Management Plan <span class="citation" data-cites="asmfc2022amendment7">(<a href="#ref-asmfc2022amendment7" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2022</a>)</span>. Estuarine waters of North Carolina are managed by the state. The stock is currently overfished, with management measures and a rebuilding plan in place, but not subject to overfishing <span class="citation" data-cites="asmfc2024assessment_stripedbass">(<a href="#ref-asmfc2024assessment_stripedbass" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2024</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +632,56 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-asmfc2022amendment7" class="csl-entry" role="listitem">
+Atlantic States Marine Fisheries Commission. 2022. <span>“Amendment 7 to the Interstate Fishery Management Plan for Atlantic Striped Bass.”</span> Atlantic States Marine Fisheries Commission (ASMFC). <a href="https://asmfc.org/wp-content/uploads/2025/01/AtlStripedBassAm7_May2022.pdf">https://asmfc.org/wp-content/uploads/2025/01/AtlStripedBassAm7_May2022.pdf</a>.
+</div>
+<div id="ref-asmfc2024assessment_stripedbass" class="csl-entry" role="listitem">
+———. 2024. <span>“2024 Atlantic Striped Bass Stock Assessment Update Report.”</span> Atlantic States Marine Fisheries Commission (ASMFC). <a href="https://asmfc.org/wp-content/uploads/2025/01/2024_AtlStripedBassAssessmentUpdate.pdf">https://asmfc.org/wp-content/uploads/2025/01/2024_AtlStripedBassAssessmentUpdate.pdf</a>.
+</div>
+<div id="ref-bason1971ecology" class="csl-entry" role="listitem">
+Bason, W. H. 1971. <span>“Ecology and Early Life History of the Striped Bass in the Delaware Estuary.”</span> Bulletin No. 4. Ichthyological Associates.
+</div>
+<div id="ref-bigelow1953striped" class="csl-entry" role="listitem">
+Bigelow, H. B., and W. C. Schroeder. 1953. <span>“The Striped Bass.”</span> In <em>Fishes of the Gulf of Maine</em>, 53:389–404. Fishery Bulletin. U.S. Fish; Wildlife Service.
+</div>
+<div id="ref-coutant1990temperature" class="csl-entry" role="listitem">
+Coutant, C. C. 1990. <span>“Temperature-Oxygen Habitat for Freshwater and Coastal Striped Bass in a Changing Climate.”</span> <em>Transactions of the American Fisheries Society</em> 119 (2): 240–53.
+</div>
+<div id="ref-dixon2026climate" class="csl-entry" role="listitem">
+Dixon, R. L., M. C. Fabrizio, P. L. Mazzini, and R. J. Latour. 2026. <span>“Climate Change Threatens Stability Conferred by Asynchronous Coastwide Recruitment of Atlantic Striped Bass, <em>Morone Saxatilis</em>.”</span> <em>Fisheries Research</em> 293: 107629.
+</div>
+<div id="ref-fay1983species" class="csl-entry" role="listitem">
+Fay, C. W., R. J. Neves, and G. B. Pardue. 1983. <span>“Species Profiles: Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (Mid-Atlantic) – Striped Bass.”</span> TR EL-82-4. U.S. Fish; Wildlife Service.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-heinle1975carbon" class="csl-entry" role="listitem">
+Heinle, D. R., and D. A. Flemer. 1975. <span>“Carbon Requirements of a Population of the Estuarine Copepod, <em>Eurytemora Affinis</em>.”</span> <em>Marine Biology</em> 31: 235–47.
+</div>
+<div id="ref-heinle1977contribution" class="csl-entry" role="listitem">
+Heinle, D. R., D. A. Flemer, and J. F. Ustach. 1977. <span>“Contribution of Tidal Marshlands to Mid-Atlantic Estuarine Food Chains.”</span> In <em>Estuarine Processes</em>, 309–20. Academic Press.
+</div>
+<div id="ref-johnson1975production" class="csl-entry" role="listitem">
+Johnson, R. K., and T. S. Koo. 1975. <span>“Production and Distribution of Striped Bass (<em>Morone Saxatilis</em>) Eggs in the Chesapeake and Delaware Canal.”</span> <em>Chesapeake Science</em> 16 (1): 39–55.
+</div>
+<div id="ref-nefsc2019saw66" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center. 2019. <span>“66th Northeast Regional Stock Assessment Workshop (66th SAW) Assessment Report.”</span> 19-08. Northeast Fisheries Science Center (NEFSC). <a href="https://doi.org/10.25923/nhqe-jd35">https://doi.org/10.25923/nhqe-jd35</a>.
+</div>
+<div id="ref-oconnor2012findings" class="csl-entry" role="listitem">
+O’Connor, M. P., F. Juanes, K. McGarigal, and S. Gaurin. 2012. <span>“Findings on American Shad and Striped Bass in the Hudson River Estuary: A Fish Community Study of the Long-Term Effects of Local Hydrology and Regional Climate Change.”</span> <em>Marine and Coastal Fisheries</em> 4 (1): 327–36.
+</div>
+<div id="ref-pan2023spatial" class="csl-entry" role="listitem">
+Pan, X., S. Arsenault, K. Rokosz, and Y. Chen. 2023. <span>“Spatial Variability of Striped Bass Spawning Responses to Climate Change.”</span> <em>Global Ecology and Conservation</em> 42: e02405.
+</div>
+<div id="ref-smith1981predation" class="csl-entry" role="listitem">
+Smith, R. E., and R. J. Kernehan. 1981. <span>“Predation by the Free Living Copepod <em>Cyclops Bicuspidatus</em> on Larvae of Striped Bass and White Perch.”</span> <em>Estuaries</em> 21 (4): 32–38.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1032,8 +1107,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/Spanish mackerel.html" class="pagination-link" aria-label="Spanish mackerel (*`Scomberomorus maculatus`*)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></span>
+      <a href="../chapters/Spiny dogfish.html" class="pagination-link" aria-label="Spiny Dogfish (*`Squalus acanthias`*)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

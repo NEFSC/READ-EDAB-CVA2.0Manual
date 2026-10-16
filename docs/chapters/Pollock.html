@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = High</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 85%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>High</td>
+<td>Moderate</td>
+<td>Increase</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Pollock received a <strong>High</strong> sensitivity score, with 100% certainty according to bootstrap analysis. Two attributes had scores greater than 3: Population Growth Rate (3.6) and Complexity in Reproductive Strategy (3.4). Pollock are long-lived and relatively slow to mature, reaching maturity at 4-7 years of age and living for up to 24 years <span class="citation" data-cites="nefsc201355th">(<a href="#ref-nefsc201355th" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2013</a>)</span>. Spawning occurs at a narrow range of temperatures <span class="citation" data-cites="cargnelli1999_pollock collette2002bigelow">(<a href="#ref-cargnelli1999_pollock" role="doc-biblioref">Cargnelli et al. 1999</a>; <a href="#ref-collette2002bigelow" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. Sound production, and conversely the ability to hear sounds, may play a role in reproduction <span class="citation" data-cites="looby2022quantitative hawkins2019importance">(<a href="#ref-looby2022quantitative" role="doc-biblioref">Looby et al. 2022</a>; <a href="#ref-hawkins2019importance" role="doc-biblioref">Hawkins and Picciulin 2019</a>)</span>.</p>
+<p>In the 2016 Climate Vulnerability Assessment, Pollock received a Moderate sensitivity score. This was driven by Population Growth Rate, similar to our study, and Early Life History Requirements, because juveniles rely on inshore habitats <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. Our corresponding attribute, Egg and Larval Survival and Settlement Requirements, received a score of 3 in this assessment, up slightly from the previous assessment.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>85% of data quality scores were greater than or equal to 2, indicating strong data quality. Egg and Larval Survival and Settlement Requirements and Relationship to Calcified Organisms were considered data gaps (mean attribute data quality score &lt; 2).</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted that Pollock would be <strong>negatively</strong> impacted by climate change. Certainty was 70%. This is similar, albeit with lower certainty, than the results from the 2016 Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. Pollock spawn at a narrow range of temperatures and prefer temperatures between 3 and 11 C <span class="citation" data-cites="cargnelli1999_pollock collette2002bigelow">(<a href="#ref-cargnelli1999_pollock" role="doc-biblioref">Cargnelli et al. 1999</a>; <a href="#ref-collette2002bigelow" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. Shifts to deeper waters have already been observed <span class="citation" data-cites="nye2009changing murawski1993climate">(<a href="#ref-nye2009changing" role="doc-biblioref">Nye et al. 2009</a>; <a href="#ref-murawski1993climate" role="doc-biblioref">Murawski 1993</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Because of the narrow range for when spawning occurs (4.5-6°C) <span class="citation" data-cites="cargnelli1999_pollock collette2002bigelow">(<a href="#ref-cargnelli1999_pollock" role="doc-biblioref">Cargnelli et al. 1999</a>; <a href="#ref-collette2002bigelow" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>, increase in temperatures and climate change could have implications on the stock’s success. The center of biomass for Northwest Atlantic pollock has not shifted and distribution has not moved northward, although they have been recently found at greater depths <span class="citation" data-cites="nye2009changing">(<a href="#ref-nye2009changing" role="doc-biblioref">Nye et al. 2009</a>)</span>. <span class="citation" data-cites="murawski1993climate">Murawski (<a href="#ref-murawski1993climate" role="doc-biblioref">1993</a>)</span> noted a range contraction, increased depth of occurrence, and increased temperature of occurrence in pollock and other deep-water fish in the Gulf of Maine.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Atlantic pollock are found in the Northwest Atlantic from the Grand Banks and Gulf of St.&nbsp;Lawrence to the Delmarva Peninsula, with highest abundances on the Scotian Shelf and in the Gulf of Maine <span class="citation" data-cites="cargnelli1999_pollock">(<a href="#ref-cargnelli1999_pollock" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Spawning takes place from September to April on the Scotian Shelf and November to February in the Gulf of Maine <span class="citation" data-cites="cargnelli1999_pollock">(<a href="#ref-cargnelli1999_pollock" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Optimal egg development occurs between 2.2 and 8.9°C <span class="citation" data-cites="cargnelli1999_pollock">(<a href="#ref-cargnelli1999_pollock" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Eggs are pelagic and free-floating, usually found in water 50-250 m in depth. Larvae are normally occurring from the shore out to the 200 m depth contour, but have been reported in waters as deep as 1550 m <span class="citation" data-cites="hardy1978development">(<a href="#ref-hardy1978development" role="doc-biblioref">Hardy 1978</a>)</span>. Eggs and larvae undergo significant movement away from the spawning area as they drift with currents. For example, larvae from the northern Gulf of Maine are thought to originate from spawning grounds in the southern Gulf of Maine <span class="citation" data-cites="hardy1978development">(<a href="#ref-hardy1978development" role="doc-biblioref">Hardy 1978</a>)</span>. Larvae are pelagic, consuming generally the most abundant copepods in their preferred size range, and metamorphose into juveniles at 3-4 months of age <span class="citation" data-cites="cargnelli1999_pollock">(<a href="#ref-cargnelli1999_pollock" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Juveniles have been reported over a wide variety of substrates, including sand, mud, or rocky bottom and vegetation <span class="citation" data-cites="ojeda1990diversity">(<a href="#ref-ojeda1990diversity" role="doc-biblioref">Ojeda and Dearborn 1990</a>)</span>. Inshore subtidal and intertidal zones are utilized by age 0-1 juveniles and serve as important nursery areas. Age 2+ juveniles move offshore, inhabiting depths of 130-150 m <span class="citation" data-cites="hardy1978development">(<a href="#ref-hardy1978development" role="doc-biblioref">Hardy 1978</a>)</span>. The primary prey of juvenile pollock are crustaceans. Euphausiids, in particular <em>Meganyctiphanes norvegica</em>, are the most important crustacean prey of juveniles <span class="citation" data-cites="tyler1972food">(<a href="#ref-tyler1972food" role="doc-biblioref">Tyler 1972</a>)</span>. Fish and mollusks make up a smaller proportion of the juvenile diet; however, in some cases fish may play a more important role in the diet <span class="citation" data-cites="collette2002bigelow">(<a href="#ref-collette2002bigelow" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. Pollock reach maturity at 3-7 years of age, longer for females, and reach a maximum age of 24 years <span class="citation" data-cites="nefsc201355th">(<a href="#ref-nefsc201355th" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2013</a>)</span>. Adults inhabit a wide range of depths, 35-365 m, but most occur within the 137 m depth contour and depths of 100-125 m are preferred <span class="citation" data-cites="scott1982depth">(<a href="#ref-scott1982depth" role="doc-biblioref">Scott 1982</a>)</span>. They prefer temperatures 0-14°C , although they tend to avoid temperatures &gt; 11°C and &lt; 3°C <span class="citation" data-cites="scott1982depth">(<a href="#ref-scott1982depth" role="doc-biblioref">Scott 1982</a>)</span>. For most of the year, adult pollock undergo minor inshore-offshore movements linked to temperature. Pollock migration rates vary with stock areas, but there is considerable movement across the Scotian Shelf and Gulf of Maine <span class="citation" data-cites="mayo1989patterns">(<a href="#ref-mayo1989patterns" role="doc-biblioref">Mayo, McGlade, and Clark 1989</a>)</span>. The diet of adults consists of, in order of decreasing importance, euphausiids, fish and mollusks. <em>M. norvegica</em> is the single most important prey item and Atlantic herring is the most important fish species <span class="citation" data-cites="steele1963pollock">(<a href="#ref-steele1963pollock" role="doc-biblioref">Steele 1963</a>)</span>. The primary predator of adult pollock are monkfish, although spiny dogfish and other pollock also prey on adults <span class="citation" data-cites="cargnelli1999_pollock">(<a href="#ref-cargnelli1999_pollock" role="doc-biblioref">Cargnelli et al. 1999</a>)</span>. Atlantic pollock are managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. The stock is not currently overfished and overfishing is not occurring <span class="citation" data-cites="nefsc2024pollock">(<a href="#ref-nefsc2024pollock" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2024</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +630,53 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cargnelli1999_pollock" class="csl-entry" role="listitem">
+Cargnelli, L. M., S. J. Griesbach, D. B. Packer, P. L. Berrien, D. L. Johnson, and W. W. Morse. 1999. <span>“Essential Fish Habitat Source Document: Pollock, <span>P</span>ollachius Virens, Life History and Habitat Characteristics.”</span> Tech Memo 131. NOAA.
+</div>
+<div id="ref-collette2002bigelow" class="csl-entry" role="listitem">
+Collette, B. B., and G. Klein-MacPhee. 2002. <em>Bigelow and <span>S</span>chroeder’s Fishes of the Gulf of Maine</em>. Washington, DC: Smithsonian Institution Press.
+</div>
+<div id="ref-hardy1978development" class="csl-entry" role="listitem">
+Hardy, J. D., Jr. 1978. <span>“Development of Fishes of the <span>M</span>id-<span>A</span>tlantic <span>B</span>ight: An Atlas of Egg, Larval and Juvenile Stages. <span>V</span>ol. 2 <span>A</span>nguillidae Through <span>S</span>yngnathidae.”</span> Report FWS/OBS-78/12. U.S. Fish; Wildlife Service, Biological Services Program.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-hawkins2019importance" class="csl-entry" role="listitem">
+Hawkins, Anthony D, and Marta Picciulin. 2019. <span>“The Importance of Underwater Sounds to Gadoid Fishes.”</span> <em>The Journal of the Acoustical Society of America</em> 146 (5): 3536–51.
+</div>
+<div id="ref-looby2022quantitative" class="csl-entry" role="listitem">
+Looby, Audrey, Kieran Cox, Santiago Bravo, Rodney Rountree, Francis Juanes, Laura K Reynolds, and Charles W Martin. 2022. <span>“A Quantitative Inventory of Global Soniferous Fish Diversity.”</span> <em>Reviews in Fish Biology and Fisheries</em> 32 (2): 581–95.
+</div>
+<div id="ref-mayo1989patterns" class="csl-entry" role="listitem">
+Mayo, R. K., J. M. McGlade, and S. H. Clark. 1989. <span>“Patterns of Exploitation and Biological Status of Pollock (<span>P</span>ollachius Virens <span>L</span>.) in the <span>S</span>cotian <span>S</span>helf, <span>G</span>eorges <span>B</span>ank, and <span>G</span>ulf of <span>M</span>aine Area.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 9: 13–36.
+</div>
+<div id="ref-murawski1993climate" class="csl-entry" role="listitem">
+Murawski, S. A. 1993. <span>“Climate Change and Marine Fish Distributions: Forecasting from Historical Analogy.”</span> <em>Transactions of the American Fisheries Society</em> 122 (5): 647–58.
+</div>
+<div id="ref-nefsc201355th" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2013. <span>“55th <span>Northeast</span> Regional Stock Assessment Workshop (55th <span>SAW</span>) Assessment Report.”</span> Reference Document 2013-11. Northeast Fisheries Science Center.
+</div>
+<div id="ref-nefsc2024pollock" class="csl-entry" role="listitem">
+———. 2024. <span>“Pollock 2024 Update Assessment Report.”</span> Northeast Fisheries Science Center. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9883">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9883</a>.
+</div>
+<div id="ref-nye2009changing" class="csl-entry" role="listitem">
+Nye, Janet A., Jason S. Link, Jonathan A. Hare, and William J. Overholtz. 2009. <span>“Changing Spatial Distribution of Fish Stocks in Relation to Climate and Population Size on the <span>Northeast</span> <span>United</span> <span>States</span> Continental Shelf.”</span> <em>Marine Ecology Progress Series</em> 393: 111–29.
+</div>
+<div id="ref-ojeda1990diversity" class="csl-entry" role="listitem">
+Ojeda, F. P., and J. H. Dearborn. 1990. <span>“Diversity, Abundance, and Spatial Distribution of Fishes and Crustaceans in the Rocky Subtidal Zone of the <span>G</span>ulf of <span>M</span>aine.”</span> <em>Fishery Bulletin (U.S.)</em> 88: 403–10.
+</div>
+<div id="ref-scott1982depth" class="csl-entry" role="listitem">
+Scott, J. S. 1982. <span>“Depth, Temperature and Salinity Preferences of Common Fishes of the <span>S</span>cotian <span>S</span>helf.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 3: 29–39.
+</div>
+<div id="ref-steele1963pollock" class="csl-entry" role="listitem">
+Steele, D. H. 1963. <span>“Pollock (<span>P</span>ollachius Virens (<span>L</span>.)) in the <span>B</span>ay of <span>F</span>undy.”</span> <em>Journal of the Fisheries Research Board of Canada</em> 20: 1267–1314.
+</div>
+<div id="ref-tyler1972food" class="csl-entry" role="listitem">
+Tyler, A. V. 1972. <span>“Food Resource Division Among Northern Marine Demersal Fishes.”</span> <em>Journal of the Fisheries Research Board of Canada</em> 29: 997–1003.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

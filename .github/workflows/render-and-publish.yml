@@ -1,6 +1,9 @@
 on:
   push:
-    branches: main
+    branches: 
+      - main
+      - i2-update-narratives
+  workflow_dispatch:
 
 name: Render and Publish
 
@@ -25,11 +28,27 @@ jobs:
           # uncomment below and fill to pin a version
           # version: 0.9.600
       
+      #render narrative PDFs
+      # 1. Add this step to install the PDF engine
+      - name: Install TinyTeX
+        run: quarto install tinytex
+
+      # 2. Add this step to generate the PDFs
+      - name: Render all QMD files to PDF
+        run: |
+          mkdir -p pdfs
+          for file in chapters/*.qmd; do
+            if [ "$file" != "chapters/index.qmd" ]; then
+              quarto render "$file" --to pdf
+              # ${file%.qmd} strips the .qmd extension so we can append .pdf
+              mv "${file%.qmd}.pdf" pdfs/
+            fi
+          done
       # add software dependencies here
 
-      - name: Publish to GitHub Pages (and render)
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+    #  - name: Publish to GitHub Pages (and render)
+    #    uses: quarto-dev/quarto-actions/publish@v2
+    #    with:
+    #      target: gh-pages
+    #    env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 88%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low (Both Stocks)</td>
+<td>Low (Both Stocks)</td>
+<td>None (Both Stocks)</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative (Both Stocks)</td>
+<td>Neutral (Both Stocks)</td>
+<td>Decrease (Both Stocks)</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Both the <strong>Northern</strong> and <strong>Southern</strong> Stocks of Monkfish received a <strong>Low</strong> sensitivity score. Certainties were 99% and 98% respectively. For both stocks, the only attribute that received a score greater than 2.5 was Population Growth Rate (2.6 for both stocks). Monkfish mature slowly, reaching maturity at 4-5 years <span class="citation" data-cites="richards2008population">(<a href="#ref-richards2008population" role="doc-biblioref">Richards, Nitschke, and Sosebee 2008</a>)</span>. Maximum ages range from 7 years for males to 14 years for females <span class="citation" data-cites="nefsc2010fifty">(<a href="#ref-nefsc2010fifty" role="doc-biblioref">Northeast Fisheries Science Center 2010</a>)</span>.</p>
+<p>Monkfish also received a Low sensitivity score in the 2016 Climate Vulnerability Assessment for the Northeast Shelf. Like in this assessment, this result was driven by Population Growth Rate <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>88% of data quality scores were greater than or equal to 2, indicating strong data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Climate change is predicted to <strong>negatively</strong> impact both the <strong>northern</strong> and <strong>southern</strong> stocks of Monkfish. Certainties were 94% and 87% respectively. Monkfish are most abundant on Georges Bank when bottom temperatures are between 5-14 C, suggesting that warming temperatures would decrease the amount of preferred habitat <span class="citation" data-cites="siemann2018summering">(<a href="#ref-siemann2018summering" role="doc-biblioref">Siemann et al. 2018</a>)</span>. Experts in the previous Assessment predicted that climate change would have a neutral impact on Monkfish with a high degree of uncertainty <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>In Icelandic waters, monkfish distribution changes and increased stock size have been correlated with rising water temperatures and expanding suitable habitat <span class="citation" data-cites="solmundsson2007recent">(<a href="#ref-solmundsson2007recent" role="doc-biblioref">Solmundsson, Jonsson, and Bjornsson 2007</a>)</span>. Monkfish movement and relative abundance on Georges Bank is driven by seasonal changes in bottom temperature. Their distribution may shift in response to future changes in thermal habitat, highlighting the need for further management strategies <span class="citation" data-cites="siemann2018summering">(<a href="#ref-siemann2018summering" role="doc-biblioref">Siemann et al. 2018</a>)</span>. Maximum size of monkfish in the Northwest Atlantic has decreased, and is related to seasonality and bottom temperature <span class="citation" data-cites="charbonneau2020pervasive">(<a href="#ref-charbonneau2020pervasive" role="doc-biblioref">Charbonneau et al. 2020</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Monkfish are a bottom dwelling fish ranging from the northern Gulf of St.&nbsp;Lawrence to Cape Hatteras. The commercial fishery operates from Maine to North Carolina <span class="citation" data-cites="steimle1999monkfish">(<a href="#ref-steimle1999monkfish" role="doc-biblioref">Steimle, Morse, and Johnson 1999</a>)</span>. Spawning takes place from spring through early autumn, progressing from south to north over a 6 month period <span class="citation" data-cites="richards2008population">(<a href="#ref-richards2008population" role="doc-biblioref">Richards, Nitschke, and Sosebee 2008</a>)</span>. Pelagic larvae hatch from egg veils (up 12 m long and 1.5 m wide) 1-3 weeks after being laid, depending on temperature. Larvae remain in the egg veil 2-3 days after hatching. Monkfish larvae feed on zooplankton, including copepods, crustacean larvae, and chaetognaths <span class="citation" data-cites="bigelow1953fishes">(<a href="#ref-bigelow1953fishes" role="doc-biblioref">Bigelow and Schroeder 1953</a>)</span>. Larval to juvenile transition occurs at 5-10 cm TL (total length) when the elongate fins and body gradually assume the adult form <span class="citation" data-cites="nefsc2010fifty">(<a href="#ref-nefsc2010fifty" role="doc-biblioref">Northeast Fisheries Science Center 2010</a>)</span>. Once larvae transition to juveniles, they move to the benthos. Juveniles and adults settle on mud, gravelly sand, algae, and rock substrates <span class="citation" data-cites="steimle1999monkfish">(<a href="#ref-steimle1999monkfish" role="doc-biblioref">Steimle, Morse, and Johnson 1999</a>)</span>. Once moved to the bottom, juveniles can eat sand lance, but invertebrates such as red shrimp and squid make up the majority of their diet. The amount of invertebrates eaten by juveniles decreases as they get older <span class="citation" data-cites="steimle1999monkfish">(<a href="#ref-steimle1999monkfish" role="doc-biblioref">Steimle, Morse, and Johnson 1999</a>)</span>. Monkfish are ambush predators and opportunistic feeders; prey found in their stomachs include a variety of benthic and pelagic species. Monkfish are also cannibalistic and can eat sea birds and diving ducks. Adults spend most of their time resting on the bottom, but have been reported at the surface after a storm event, preying on seabirds <span class="citation" data-cites="richards2008population">(<a href="#ref-richards2008population" role="doc-biblioref">Richards, Nitschke, and Sosebee 2008</a>)</span>. Large monkfish have few predators, but smaller monkfish are common prey for swordfish, sharks, and skates <span class="citation" data-cites="steimle1999monkfish">(<a href="#ref-steimle1999monkfish" role="doc-biblioref">Steimle, Morse, and Johnson 1999</a>)</span>. Monkfish move by slow swimming or by using their sturdy pectoral fins to “walk.” Despite slow speeds, juveniles and adults migrate in response to thermal conditions, spawning, or food availability <span class="citation" data-cites="steimle1999monkfish">(<a href="#ref-steimle1999monkfish" role="doc-biblioref">Steimle, Morse, and Johnson 1999</a>)</span>. Monkfish were found on Georges Bank in summer and early fall, and found in deeper waters/on the edge of the bank in winter months, suggesting that movements may be influenced by temperature <span class="citation" data-cites="rountree2006extraction">(<a href="#ref-rountree2006extraction" role="doc-biblioref">Rountree, Gr"oger, and Martins 2006</a>)</span>. Age at maturity is 4-5 years, longer for females and for the Mid-Atlantic stock <span class="citation" data-cites="richards2008population">(<a href="#ref-richards2008population" role="doc-biblioref">Richards, Nitschke, and Sosebee 2008</a>)</span>. Maximum age is listed at 7 years for males and 12-14 years for females <span class="citation" data-cites="nefsc2010fifty">(<a href="#ref-nefsc2010fifty" role="doc-biblioref">Northeast Fisheries Science Center 2010</a>)</span>. Monkfish in the Northwest Atlantic are divided into two stocks: the Gulf of Maine/Northern Georges Bank and Southern Georges Bank/Mid-Atlantic. Both stocks do not have stock assessments that provide indices on overfishing and overfished status, although an index based assessment is used for catch advice <span class="citation" data-cites="deroba2022draft">(<a href="#ref-deroba2022draft" role="doc-biblioref">Deroba 2022</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +630,38 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bigelow1953fishes" class="csl-entry" role="listitem">
+Bigelow, H. B., and W. C. Schroeder. 1953. <em>Fishes of the Gulf of Maine</em>. Vol. 53. U.s. Fish and Wildlife Service Fishery Bulletin. U.S. Government Printing Office.
+</div>
+<div id="ref-charbonneau2020pervasive" class="csl-entry" role="listitem">
+Charbonneau, J. A., D. M. Keith, M. A. MacNeil, J. A. Sameoto, and J. A. Hutchings. 2020. <span>“Pervasive Declines in Monkfish (<span class="nocase">Lophius americanus</span>) Size Structure Throughout the Northwest <span>Atlantic</span>.”</span> <em>Fisheries Research</em> 230: 105633. <a href="https://doi.org/10.1016/j.fishres.2020.105633">https://doi.org/10.1016/j.fishres.2020.105633</a>.
+</div>
+<div id="ref-deroba2022draft" class="csl-entry" role="listitem">
+Deroba, J. 2022. <span>“Draft 2022 Monkfish Management Track Assessment Report.”</span> National Oceanic; Atmospheric Administration (NOAA). <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=8456">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=8456</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-nefsc2010fifty" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center. 2010. <span>“50th Northeast Regional Stock Assessment Workshop (50th SAW) Assessment Report.”</span> 10-17. Northeast Fisheries Science Center Reference Document. National Marine Fisheries Service. <a href="https://repository.library.noaa.gov/view/noaa/3744">https://repository.library.noaa.gov/view/noaa/3744</a>.
+</div>
+<div id="ref-richards2008population" class="csl-entry" role="listitem">
+Richards, R. A., P. Nitschke, and K. Sosebee. 2008. <span>“Population Biology of Monkfish <span class="nocase">Lophius americanus</span>.”</span> <em>ICES Journal of Marine Science</em> 65 (7): 1291–1305. <a href="https://doi.org/10.1093/icesjms/fsn131">https://doi.org/10.1093/icesjms/fsn131</a>.
+</div>
+<div id="ref-rountree2006extraction" class="csl-entry" role="listitem">
+Rountree, R. A., J. P. Gr"oger, and D. Martins. 2006. <span>“Extraction of Daily Activity Pattern and Vertical Migration Behavior from the Benthic Fish, <span class="nocase">Lophius americanus</span>, Based on Depth Analysis from Data Storage Tags.”</span> In <em>ICES Annual Science Conference 2006</em>. Theme Session q. International Council for the Exploration of the Sea. <a href="https://doi.org/10.17895/ices.pub.25259230.v1">https://doi.org/10.17895/ices.pub.25259230.v1</a>.
+</div>
+<div id="ref-siemann2018summering" class="csl-entry" role="listitem">
+Siemann, L. A., C. J. Huntsberger, J. S. Leavitt, and R. J. Smolowitz. 2018. <span>“Summering on the Bank: Seasonal Distribution and Abundance of Monkfish on <span>Georges Bank</span>.”</span> <em>PLOS ONE</em> 13 (11): e0206829. <a href="https://doi.org/10.1371/journal.pone.0206829">https://doi.org/10.1371/journal.pone.0206829</a>.
+</div>
+<div id="ref-solmundsson2007recent" class="csl-entry" role="listitem">
+Solmundsson, J., E. Jonsson, and H. Bjornsson. 2007. <span>“Recent Changes in the Distribution and Abundance of Monkfish (<span class="nocase">Lophius piscatorius</span>) in <span>Icelandic</span> Waters.”</span> ICES Document CM 2007/B:02. International Council for the Exploration of the Sea.
+</div>
+<div id="ref-steimle1999monkfish" class="csl-entry" role="listitem">
+Steimle, F. W., W. W. Morse, and D. Johnson. 1999. <span>“Essential Fish Habitat Source Document: Goosefish, <span class="nocase">Lophius americanus</span>, Life History and Habitat Characteristics.”</span> 127. NOAA Technical Memorandum NMFS-NE. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

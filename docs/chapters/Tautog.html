@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Moderate</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 92-93%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 23%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,17 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Moderate (All Stocks)</td>
+<td>High</td>
+<td>Decrease (All Stocks)</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td><p>Negative (DelMarVa)</p>
+<p>Neutral (LIS, NY/NJ, MA/RI)</p></td>
+<td>Neutral</td>
+<td><p>Decrease (DelMarVa)</p>
+<p>None (LIS, NY/NJ, MA/RI)</p></td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +566,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>All four stocks of Tautog (<strong>DelMarVa, Long Island Sound, NJ/NY, and MA/RI</strong>) received <strong>Moderate</strong> sensitivity scores. Certainty for all stocks was 94%. These scores were driven by Population Growth Rate (3.5) and Juvenile Habitat Requirements (2.8) for all stocks.</p>
+<p>Tautog are long-lived, slowly maturing species. They mature at 3-4 years of age and maximum ages range between 25-30 years <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>. Juveniles prefer areas with high amounts of cover, including algal habitats, which are considered highly vulnerable <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>.</p>
+<p>In the 2016 Climate Vulnerability Assessment, Tautog received a High sensitivity score. This was driven by Adult Mobility and Population Growth Rate <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>Between 92 - 93% of data quality scores were greater than or equal to 2 across all four Tautog stocks, indicating excellent data quality. Stock Size/Status was identified as a data gap (mean attribute data quality score &lt; 2) for all stocks.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +590,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted different directional effects for different Tautog stocks. The DelMarVa stock were predicted to be <strong>negatively</strong> impacted by climate change, whereas experts predicted that climate change would <strong>neutrally</strong> impact the Long Island Sound, NJ/NY, and MA/RI stocks. Certainty was greatest for the MA/RI stocks (96%) followed by the Long Island Sound ( 88%), NJ/NY (79%) and DelMarVa stocks (57%). Temperature has been linked to recruitment, migration timing, spawning, and feeding behaviors <span class="citation" data-cites="steimle1999tautog moran2023impacts">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>; <a href="#ref-moran2023impacts" role="doc-biblioref">Moran and Gerry 2023</a>)</span>. Tautog are not tolerant of anoxic conditions <span class="citation" data-cites="howell1994abundance">(<a href="#ref-howell1994abundance" role="doc-biblioref">Howell and Simpson 1994</a>)</span>. In the previous Climate Vulnerability Assessment for the Northeast Shelf, the impacts of climate change on tautog were predicted to be neutral, with a high degree of uncertainty <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Temperature is linked to recruitment, spawning, and migration timing in tautog <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>, but it is unclear how warming temperatures will affect phenology. Tautog exhibit some site fidelity, which may present a limited ability to expand or shift their range in response to warming temperatures <span class="citation" data-cites="langan2021climate">(<a href="#ref-langan2021climate" role="doc-biblioref">Langan et al. 2021</a>)</span>. <span class="citation" data-cites="moran2023impacts">Moran and Gerry (<a href="#ref-moran2023impacts" role="doc-biblioref">2023</a>)</span> observed differences in prey type and feeding behavior in tautog exposed to varying temperatures, highlighting the need for further research on the relationship between increasing temperature and feeding behavior. <span class="citation" data-cites="howell1994abundance">Howell and Simpson (<a href="#ref-howell1994abundance" role="doc-biblioref">1994</a>)</span> reported that tautog are not tolerant of dissolved oxygen (DO) concentrations below 2 mg/l, and prefer DO levels above 3 mg/l. Tautog mortalities were reported by commercial fishers and were observed on the beach during a major anoxia-hypoxia episode off New Jersey in 1976.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Tautog are a slow-growing, long-lived coastal species inhabiting the outer coast of Nova Scotia to Georgia, although they are most abundant from Cape Cod to Chesapeake Bay <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>. They do not reach maturity until age 3 (males) or 4 (females) and can live up to 25-30 years <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>. Tautog spawn in pairs, or in small groups with a single female and several males. The method depends on sex-ratios, the presence of a patriarchy, and availability of shelter and food <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>. They spawn from April to August; occurring earlier (April) in the southern portion of the range. Peak spawning occurs in June/July in northern portions of habitat. They perform inshore/offshore migrations in order to spawn. In the north, tautog overwinter offshore and migrate inshore in the spring to spawn and feed before moving back offshore as temperatures decline (below 11°C) in the fall and winter. Southern populations may undertake shorter seasonal migrations or remain either inshore or offshore for the entire year <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>. Tautog enter a torpor state in waters between 7-10°C and prefer temperatures 10-22°C <span class="citation" data-cites="olla1974daily">(<a href="#ref-olla1974daily" role="doc-biblioref">Olla, Bejda, and Martin 1974</a>)</span>. In a laboratory setting, eggs hatch in 42-48 hours at 20-22°C with longer development times at lower temperatures <span class="citation" data-cites="perry1994artificial">(<a href="#ref-perry1994artificial" role="doc-biblioref">Perry 1994</a>)</span>. Larval duration lasts about 20-25 days, depending on location <span class="citation" data-cites="sogard1992variability">(<a href="#ref-sogard1992variability" role="doc-biblioref">Sogard 1992</a>)</span>. Larvae consume small fish and copepods, such as <em>Acartia tonsa</em> <span class="citation" data-cites="simpson1989population">(<a href="#ref-simpson1989population" role="doc-biblioref">Simpson 1989</a>)</span>. Larvae survival is dependent on temperatures for both incubation period and recruitment. There was no direct evidence in the literature to support reliance on specific hydrographic conditions, however, spawning locations near the mouths of nursery habitats,and possible offshore advection suggest that local current patterns may play a role in larval distribution <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>. Juveniles prefer areas with high amounts of cover that they can hide in/around. However, they can utilize a variety of vertical habitats, including piers, artificial and real seagrass/algal beds, shells, and marine debris. Larger juvenile and adult tautog are closely associated with hard- surface, reef-like habitats, remaining close to their preferred home location <span class="citation" data-cites="sogard1992variability">(<a href="#ref-sogard1992variability" role="doc-biblioref">Sogard 1992</a>)</span>. Juvenile tautog forage on benthic, as well as planktonic, prey. As they grow, juvenile tautog rely less on planktonic food resources and feed primarily on benthic prey, although the prey remain primarily crustaceans, such as decapods <span class="citation" data-cites="dorf1994ecology">(<a href="#ref-dorf1994ecology" role="doc-biblioref">Dorf 1994</a>)</span>. Adult tautog are durophagous and feed chiefly on blue mussels and other shellfish throughout the year <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>. Seabirds, particularly cormorants, prey on juvenile tautog. Hakes, smooth and spiny dogfish, skates, and sea ravens have been reported to consume adult tautog <span class="citation" data-cites="steimle1999tautog">(<a href="#ref-steimle1999tautog" role="doc-biblioref">Steimle and Shaheen 1999</a>)</span>. Tautog is managed by the Atlantic States Marine Fisheries Commission. The Tautog Fishery Management Plan divides the stock into four regions: Massachusetts-Rhode Island (MARI), Long Island Sound (LIS), New Jersey-New York Bight (NJ-NYB), and Delaware-Maryland-Virginia (DMV) <span class="citation" data-cites="asmfc2017tautog">(<a href="#ref-asmfc2017tautog" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2017</a>)</span>. The 2025 stock assessment update indicated tautog are not overfished in MARI, LIS, or NJ-NYB, but overfished in DMV. Overfishing is not occurring in MARI or LIS, but the NJ-NYB and DMV regions are experiencing overfishing <span class="citation" data-cites="asmfc2025tautog">(<a href="#ref-asmfc2025tautog" role="doc-biblioref">Atlantic States Marine Fisheries Commission 2025</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +633,47 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-asmfc2017tautog" class="csl-entry" role="listitem">
+Atlantic States Marine Fisheries Commission. 2017. <span>“Amendment 1 to the Interstate Fishery Management Plan for Tautog.”</span> Atlantic States Marine Fisheries Commission (ASMFC). <a href="https://asmfc.org/wp-content/uploads/2025/01/TautogAmendment1_Oct2017.pdf">https://asmfc.org/wp-content/uploads/2025/01/TautogAmendment1_Oct2017.pdf</a>.
+</div>
+<div id="ref-asmfc2025tautog" class="csl-entry" role="listitem">
+———. 2025. <span>“2025 Tautog Regional Stock Assessment Update.”</span> Atlantic States Marine Fisheries Commission (ASMFC). <a href="https://asmfc.org/wp-content/uploads/2025/11/2025TautogStockAssessmentUpdate_Oct2025.pdf">https://asmfc.org/wp-content/uploads/2025/11/2025TautogStockAssessmentUpdate_Oct2025.pdf</a>.
+</div>
+<div id="ref-dorf1994ecology" class="csl-entry" role="listitem">
+Dorf, B. A. 1994. <span>“Ecology of Juvenile Tautog (<em>Tautoga Onitis</em>) in Narragansett Bay, Rhode Island.”</span> PhD thesis, Kingston, RI: University of Rhode Island.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-howell1994abundance" class="csl-entry" role="listitem">
+Howell, P., and D. Simpson. 1994. <span>“Abundance of Marine Resources in Relation to Dissolved Oxygen in Long Island Sound.”</span> <em>Estuaries</em> 17: 394–402.
+</div>
+<div id="ref-langan2021climate" class="csl-entry" role="listitem">
+Langan, J. A., G. Puggioni, C. A. Oviatt, M. E. Henderson, and J. S. Collie. 2021. <span>“Climate Alters the Migration Phenology of Coastal Marine Species.”</span> <em>Marine Ecology Progress Series</em> 660: 1–18.
+</div>
+<div id="ref-moran2023impacts" class="csl-entry" role="listitem">
+Moran, C. J., and S. P. Gerry. 2023. <span>“The Impacts of Temperature on Feeding Behaviors in Tautog (Family: Labridae; <em>Tautoga Onitis</em>).”</span> <em>Environmental Biology of Fishes</em> 106 (11): 2059–67.
+</div>
+<div id="ref-olla1974daily" class="csl-entry" role="listitem">
+Olla, B. L., A. J. Bejda, and A. D. Martin. 1974. <span>“Daily Activity, Movements, Feeding, and Seasonal Occurrence in the Tautog, <em>Tautoga Onitis</em>.”</span> <em>Fishery Bulletin</em> 72 (1): 27–35.
+</div>
+<div id="ref-perry1994artificial" class="csl-entry" role="listitem">
+Perry, D. M. 1994. <span>“Artificial Spawning of Tautog Under Laboratory Conditions.”</span> <em>The Progressive Fish-Culturist</em> 56: 33–36.
+</div>
+<div id="ref-simpson1989population" class="csl-entry" role="listitem">
+Simpson, D. G. 1989. <span>“Population Dynamics of the Tautog, <em>Tautoga Onitis</em>, in Long Island Sound.”</span> Master’s thesis, New Haven, CT: Southern Connecticut State University.
+</div>
+<div id="ref-sogard1992variability" class="csl-entry" role="listitem">
+Sogard, S. M. 1992. <span>“Variability in Growth Rates of Juvenile Fishes in Different Estuarine Habitats.”</span> <em>Marine Ecology Progress Series</em> 85: 35–53.
+</div>
+<div id="ref-steimle1999tautog" class="csl-entry" role="listitem">
+Steimle, F. W., and P. A. Shaheen. 1999. <span>“Tautog (<em>Tautoga Onitis</em>) Life History and Habitat Requirements.”</span> NOAA Technical Memorandum NMFS-NE-118. National Marine Fisheries Service.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

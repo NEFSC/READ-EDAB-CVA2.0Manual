@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low - Moderate</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 75%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Moderate (Gulf of Maine/Georges Bank) - Low (Southern New England/Mid Atlantic)</td>
+<td>Low</td>
+<td>Increase (Gulf of Maine/Georges Bank) - None (Southern New England/Mid Atlantic)</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral (Gulf of Maine/Georges Bank) - Negative (Southern New England/Mid Atlantic)</td>
+<td>Neutral</td>
+<td>None (Gulf of Maine/Georges Bank) - Decrease (Southern New England/Mid Atlantic)</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>The <strong>Gulf of Maine/Georges Bank</strong> stock of Windowpane flounder received a <strong>Moderate</strong> sensitivity score, with a certainty of 69%. This score was driven by Stock Size (3.5) and Complexity in Reproductive Strategy (2.6).</p>
+<p>The <strong>Southern New England/Mid Atlantic</strong> stock received a <strong>Low</strong> sensitivity score, with a certainty of 74%. No attributes received a score greater than 2.5 for this stock. Stock Size and Complexity in Reproductive Strategy both received scores of 2.4.</p>
+<p>Spawning occurs throughout most of the year <span class="citation" data-cites="AbleFahay2010 Cadrin2021">(<a href="#ref-AbleFahay2010" role="doc-biblioref">Able and Fahay 2010</a>; <a href="#ref-Cadrin2021" role="doc-biblioref">Cadrin et al. 2021</a>)</span>, but relies on cold bottom temperature (8.5-13.5 C) <span class="citation" data-cites="Chang1999_windowpane">(<a href="#ref-Chang1999_windowpane" role="doc-biblioref">Chang et al. 1999</a>)</span>. Spawning occurs in estuaries and nearshore environments; estuarine water column habitats are considered highly vulnerable <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. The stock status of the Gulf of Maine/Georges Bank stock is unknown. The southern stock is not overfished and overfishing is not occurring <span class="citation" data-cites="NEFSC2023a_windowpane NEFSC2023b_windowpane">(<a href="#ref-NEFSC2023a_windowpane" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2023a</a>, <a href="#ref-NEFSC2023b_windowpane" role="doc-biblioref">2023b</a>)</span>.</p>
+<p>In the previous Climate Vulnerability Assessment, Windowpane flounder received a Low sensitivity score. This was driven by Stock Status <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>75% of data quality scores were greater than or equal to 2, indicating good data quality. Across both stocks, Complexity in Reproductive Strategy, Dispersal of Early Life Stages, Egg and Larval Survival and Settlement Requirements, Population Growth Rate, and Relationship to Calcified Organisms were all identified as data gaps (mean attribute data quality score &lt; 2).</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +589,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted that effects of climate change would be <strong>neutral</strong> for the Gulf of Maine/Georges Bank stock, with 73% certainty. For the Southern New England/Mid-Atlantic stock, the effects were predicted to be <strong>negative</strong>, with 58% certainty. Increasing temperatures have been shown to displace windowpane flounder, and extreme cold winters have increased juvenile mortality <span class="citation" data-cites="Bell2021 Wilber2016">(<a href="#ref-Bell2021" role="doc-biblioref">Bell et al. 2021</a>; <a href="#ref-Wilber2016" role="doc-biblioref">Wilber et al. 2016</a>)</span>. In the previous Climate Vulnerability Assessment, experts predicted that impacts of climate change on windowpane flounder would be neutral <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Percent biomass of windowpane flounder in the Northwest Atlantic increases with changes in seasonality, from cold springs, to warm springs, to fall <span class="citation" data-cites="Dunn2016">(<a href="#ref-Dunn2016" role="doc-biblioref">Dunn, Moxley, and Halpin 2016</a>)</span>. Increasing temperatures (&gt; 7-10°C) have been shown to displace windowpane flounder <span class="citation" data-cites="Bell2021">(<a href="#ref-Bell2021" role="doc-biblioref">Bell et al. 2021</a>)</span>. In New York/New Jersey Harbor, cold winter temperatures decreased windowpane abundance and overwinter mortality in small juveniles <span class="citation" data-cites="Wilber2016">(<a href="#ref-Wilber2016" role="doc-biblioref">Wilber et al. 2016</a>)</span>. Overwintering success appears to be driven in part by temperatures, with extreme cold conditions resulting in high overwinter mortality of age-0 individuals. This likely has a larger impact on fall-spawned juveniles since resilience to extreme cold temperatures is size-dependent and fall-spawned individuals have less time to grow <span class="citation" data-cites="Neuman2009_windowpane">(<a href="#ref-Neuman2009_windowpane" role="doc-biblioref">Neuman and Able 2009</a>)</span>. Individual windowpane have also demonstrated avoiding hypoxic conditions <span class="citation" data-cites="Cadrin2021">(<a href="#ref-Cadrin2021" role="doc-biblioref">Cadrin et al. 2021</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Windowpane flounder inhabit shallow waters from the Gulf of St.&nbsp;Lawrence to Florida, but are most abundant from Georges Bank to Chesapeake Bay <span class="citation" data-cites="Chang1999_windowpane">(<a href="#ref-Chang1999_windowpane" role="doc-biblioref">Chang et al. 1999</a>)</span>. They reach maturity around 1.5 years of age and can live up to 8 years <span class="citation" data-cites="Cadrin2021">(<a href="#ref-Cadrin2021" role="doc-biblioref">Cadrin et al. 2021</a>)</span>. Windowpane spawn from February to November on the inner continental shelf, Georges Bank, and within estuaries. Spawning occurs in the Mid-Atlantic Bight in both spring and fall, whereas spawning in Georges Bank peaks in summer <span class="citation" data-cites="AbleFahay2010">(<a href="#ref-AbleFahay2010" role="doc-biblioref">Able and Fahay 2010</a>)</span> <span class="citation" data-cites="Cadrin2021">(<a href="#ref-Cadrin2021" role="doc-biblioref">Cadrin et al. 2021</a>)</span>. Windowpane spawn in the evening or at night on or near bottom at temperatures ranging from 6-21°C <span class="citation" data-cites="Chang1999_windowpane">(<a href="#ref-Chang1999_windowpane" role="doc-biblioref">Chang et al. 1999</a>)</span>. Eggs hatch after 8 days. The duration of the larval stage is unknown, but eggs and larvae remain in the water column feeding on suspended copepods <span class="citation" data-cites="Chang1999_windowpane">(<a href="#ref-Chang1999_windowpane" role="doc-biblioref">Chang et al. 1999</a>)</span>. Surveys from Canadian waters suggest that small (&lt; 10 cm TL) windowpane consume bay shrimp and crab larvae, which may be a transition point from zooplankton prey to larger prey items <span class="citation" data-cites="Hanson2014">(<a href="#ref-Hanson2014" role="doc-biblioref">Hanson and Wilson 2014</a>)</span>. Larvae settle to the bottom at approximately 10 mm TL. However, individuals collected on Georges Bank may be planktonic up to 20 mm. There is no indication that settlement is driven by environmental factors <span class="citation" data-cites="Morse1995_windowpane">(<a href="#ref-Morse1995_windowpane" role="doc-biblioref">Morse and Able 1995</a>)</span>. Juveniles that settle in shallow inshore waters move to deeper offshore waters as they grow. Juveniles inhabiting Georges Bank (&lt; 60 m) undergo seasonal movements to deeper waters along the southern flank of the Bank occur during late autumn, as bottom temperatures drop, and overwintering occurs in deeper areas until late spring <span class="citation" data-cites="KleinMacPhee2002_windowpane">(<a href="#ref-KleinMacPhee2002_windowpane" role="doc-biblioref">Klein-MacPhee 2002</a>)</span>. From Massachusetts to the Gulf of Maine, they can be found in estuaries and on the shelf <span class="citation" data-cites="Chang1999_windowpane">(<a href="#ref-Chang1999_windowpane" role="doc-biblioref">Chang et al. 1999</a>)</span>. Adults are found on the benthos in waters &lt; 100 m and tolerate a wide range of temperatures (0-26.8°C) <span class="citation" data-cites="Chang1999_windowpane">(<a href="#ref-Chang1999_windowpane" role="doc-biblioref">Chang et al. 1999</a>)</span>. Adult windowpane may travel along the coast for considerable distances. Juveniles and adults may migrate to nearshore or estuarine habitats in the Mid-Atlantic Bight. Seasonal movements into offshore overwintering habitats have also been documented <span class="citation" data-cites="Chang1999_windowpane">(<a href="#ref-Chang1999_windowpane" role="doc-biblioref">Chang et al. 1999</a>)</span>. Stomach content data collected during Northeast Fisheries Science Center (NEFSC) bottom trawl surveys indicate windowpane feed on small crustaceans (e.g., mysids and decapod shrimp) and various fish larvae including hakes and tomcod, as well as their own species <span class="citation" data-cites="Langton1981 Chang1999_windowpane">(<a href="#ref-Langton1981" role="doc-biblioref">Langton and Bowman 1981</a>; <a href="#ref-Chang1999_windowpane" role="doc-biblioref">Chang et al. 1999</a>)</span>. Windowpane flounder are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. The fishery is divided into two stocks: Northern Gulf of Maine/Georges Bank and Southern New England/Mid-Atlantic. Overfishing and overfished status of the northern stock is unknown, as the assessment has not estimated reference points since 2020 <span class="citation" data-cites="NEFSC2023a_windowpane">(<a href="#ref-NEFSC2023a_windowpane" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2023a</a>)</span>. The southern stock is not overfished and overfishing is not occurring <span class="citation" data-cites="NEFSC2023b_windowpane">(<a href="#ref-NEFSC2023b_windowpane" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2023b</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +632,53 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-AbleFahay2010" class="csl-entry" role="listitem">
+Able, Kenneth W., and Michael P. Fahay. 2010. <em>Ecology of Estuarine Fishes: Temperate Waters of the Western North Atlantic</em>. Baltimore, MD: Johns Hopkins University Press.
+</div>
+<div id="ref-Bell2021" class="csl-entry" role="listitem">
+Bell, R. J., M. C. McManus, J. McNamee, J. Gartland, B. Galuardi, and C. McGuire. 2021. <span>“Perspectives from the Water: Utilizing Fisher’s Observations to Inform <span>SNE/MA</span> Windowpane Science and Management.”</span> <em>Fisheries Research</em> 243: 106090. <a href="https://doi.org/10.1016/j.fishres.2021.106090">https://doi.org/10.1016/j.fishres.2021.106090</a>.
+</div>
+<div id="ref-Cadrin2021" class="csl-entry" role="listitem">
+Cadrin, S., M. Siskey, T. A. Munroe, and B. Chanet. 2021. <span>“Scophthalmus Aquosus.”</span> <em>The IUCN Red List of Threatened Species 2021</em>, e.T190417A16510832. <a href="https://doi.org/10.2305/IUCN.UK.2021-2.RLTS.T190417A16510832.en">https://doi.org/10.2305/IUCN.UK.2021-2.RLTS.T190417A16510832.en</a>.
+</div>
+<div id="ref-Chang1999_windowpane" class="csl-entry" role="listitem">
+Chang, Sukwoo, Peter L. Berrien, David L. Johnson, and Wallace W. Morse. 1999. <span>“Essential Fish Habitat Source Document: Windowpane, <span><em>Scophthalmus Aquosus</em></span>, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE 137. National Oceanic; Atmospheric Administration, National Marine Fisheries Service, Northeast Fisheries Science Center.
+</div>
+<div id="ref-Dunn2016" class="csl-entry" role="listitem">
+Dunn, Daniel C., Jerod H. Moxley, and Patrick N. Halpin. 2016. <span>“Temperature-Based Targeting in a Multispecies Fishery Under Climate Change.”</span> <em>Fisheries Oceanography</em> 25 (2): 105–18. <a href="https://doi.org/10.1111/fog.12139">https://doi.org/10.1111/fog.12139</a>.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-Hanson2014" class="csl-entry" role="listitem">
+Hanson, J. Mark, and Tyler Wilson. 2014. <span>“Abundance, Distribution, and Diet of a Small-Bodied Ecotype of Windowpane.”</span> <em>Transactions of the American Fisheries Society</em> 143 (3): 650–59. <a href="https://doi.org/10.1080/00028487.2014.880740">https://doi.org/10.1080/00028487.2014.880740</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-KleinMacPhee2002_windowpane" class="csl-entry" role="listitem">
+Klein-MacPhee, G. 2002. <span>“Windowpane <span><em>Scophthalmus Aquosus</em></span> (<span>Mitchill</span> 1814).”</span> In <em>Bigelow and Schroeder’s Fishes of the Gulf of Maine</em>, edited by B. B. Collette and G. Klein-MacPhee. Washington, DC: Smithsonian Institution Press.
+</div>
+<div id="ref-Langton1981" class="csl-entry" role="listitem">
+Langton, Ray W., and Ray E. Bowman. 1981. <span>“Food of Eight Northwest <span>Atlantic</span> Pleuronectiform Fishes.”</span> NOAA Technical Report NMFS SSRF 749. National Oceanic; Atmospheric Administration, National Marine Fisheries Service.
+</div>
+<div id="ref-Morse1995_windowpane" class="csl-entry" role="listitem">
+Morse, Wallace W., and Kenneth W. Able. 1995. <span>“Distribution and Life History of Windowpane, <span><em>Scophthalmus Aquosus</em></span>, Off the Northeastern <span>United States</span>.”</span> <em>Fishery Bulletin</em> 93 (4): 675–93.
+</div>
+<div id="ref-Neuman2009_windowpane" class="csl-entry" role="listitem">
+Neuman, M. J., and K. W. Able. 2009. <span>“Overwinter Growth and Mortality of <span class="nocase">Young-of-the-Year</span> Windowpanes: Cohort-Specific Responses.”</span> <em>Marine and Coastal Fisheries</em> 1 (1): 133–42. <a href="https://doi.org/10.1577/C08-013.1">https://doi.org/10.1577/C08-013.1</a>.
+</div>
+<div id="ref-NEFSC2023a_windowpane" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2023a. <span>“Northern Windowpane - 2023 Management Track Assessment.”</span> National Marine Fisheries Service. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9039">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9039</a>.
+</div>
+<div id="ref-NEFSC2023b_windowpane" class="csl-entry" role="listitem">
+———. 2023b. <span>“Southern Windowpane - 2023 Management Track Assessment.”</span> National Marine Fisheries Service. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9040">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9040</a>.
+</div>
+<div id="ref-Wilber2016" class="csl-entry" role="listitem">
+Wilber, Dara H., Douglas G. Clarke, Carlos M. Alcoba, and John Gallo. 2016. <span>“Windowpane Flounder (<span><em>Scophthalmus Aquosus</em></span>) and Winter Flounder (<span><em>Pseudopleuronectes Americanus</em></span>) Responses to Cold Temperature Extremes in a <span>Northwest Atlantic</span> Estuary.”</span> <em>Journal of Sea Research</em> 107: 23–30. <a href="https://doi.org/10.1016/j.seares.2015.06.014">https://doi.org/10.1016/j.seares.2015.06.014</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

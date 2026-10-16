@@ -344,12 +344,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -456,11 +456,10 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Generalized Additive Model (GAM) using methods in <a href="https://github.com/alaska-groundfish-efh/EFHSDM">EFHSDM</a></li>
 <li>MAXimum ENTropy (MAXENT) using methods in <a href="https://github.com/alaska-groundfish-efh/EFHSDM">EFHSDM</a></li>
-<li><a href="https://www.mdpi.com/2072-4292/12/10/1687">Random Forest with Spatial Interpolation (RFSI)</a></li>
-<li>Boosted Regression Trees (BRTs) using <a href="https://cran.r-project.org/web/packages/gbm/index.html">gbm</a> and following methods from <a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.2893">Braun et al 2023</a></li>
+<li>Boosted Regression Trees (BRTs) using methods from <a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.2893">Braun et al 2023</a></li>
 <li>Spatio-temporal Generalized Linear Mixed Models (GLMMs) with <a href="https://pbs-assess.github.io/sdmTMB/">sdmTMB</a></li>
 </ol>
-<p>All of these models accept presence/absence data; can be made spatially and temporally explicit, which was important for our analysis; and combine more “traditional” SDM methods such as GAM and MAXENT included in the AFSC’s ensemble with machine learning/decision tree-based models such as RFSI and BRTs. sdmTMB models are similar to other SDM methods common in fisheries work like <a href="https://academic.oup.com/icesjms/article/74/5/1311/2907795#186891657">VAST</a> and <a href="https://arxiv.org/pdf/2401.10193">tinyVAST</a>. These models use spatial and temporal random fields to account for spatial and random variation in species distributions that the environmental variables cannot describe. In addition, these or similar models have been used on the Northeast Shelf in previously published works.</p>
+<p>All of these models accept presence/absence data; can be made spatially and temporally explicit, which was important for our analysis; and combine more “traditional” SDM methods such as GAM and MAXENT included in the AFSC’s ensemble with machine learning/decision tree-based models such as BRTs. sdmTMB models are similar to other SDM methods common in fisheries work like <a href="https://academic.oup.com/icesjms/article/74/5/1311/2907795#186891657">VAST</a> and <a href="https://arxiv.org/pdf/2401.10193">tinyVAST</a>. These models use spatial and temporal random fields to account for spatial and random variation in species distributions that the environmental variables cannot describe. In addition, these or similar models have been used on the Northeast Shelf in previously published works.</p>
 <p>We will generate our ensemble model by performing a weighted average on our components’ outputs. Weights will be calculated using the same methods as the AFSC. However, we will use Area under the Curve (AUC) rather than root mean squared error (RMSE) because AUC is a better accuracy metric for presence/absence models than RMSE. AUC will be scaled from 0-1, rather than its native 0.5 - 1 range, using the Gini Index to help better illustrate the spread of component model performance.</p>
 
 

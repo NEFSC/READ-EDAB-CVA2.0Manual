@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -69,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -344,12 +393,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +476,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +516,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 100%</p>
 </div>
 </div>
 </div>
@@ -491,10 +540,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +568,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low</td>
+<td>Low</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Positive</td>
+<td>Neutral</td>
+<td>Increase</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +593,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Summary flounder received a <strong>Low</strong> sensitivity score. Certainty was 75% according to bootstrap analysis. The only attribute that received a score greater than 2.5 was Juvenile Habitat Requirements (2.7). Juvenile summer flounder rely on estuary habitats, including marshes, oyster reefs, and seagrass beds for important nursery habitats. Many of these are considered highly vulnerable habitats <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>.</p>
+<p>In the 2016 Climate Vulnerability Assessment, summer flounder also received a Low sensitivity score. In that assessment, no attributes scored above 2.5 <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Jonathan A. Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>100% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +616,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predict that summer flounder will be <strong>positively</strong> impacted by climate change. Certainty was 65%. Spatio-temporal models have suggested that summer flounder abundance will increase with increasing temperatures <span class="citation" data-cites="deen2025estimating">(<a href="#ref-deen2025estimating" role="doc-biblioref">Deen, Jauss, and Sullivan 2025</a>)</span>. Increasing winter water temperatures may help summer flounder expand their distributions northward <span class="citation" data-cites="bell2014externally">(<a href="#ref-bell2014externally" role="doc-biblioref">Bell et al. 2014</a>)</span>. In the previous Assessment, experts predicted that the impacts of climate change on summer flounder would be neutral; however, certainty was low <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Jonathan A. Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Summer flounder distributions are correlated with depth, bottom temperature, sea surface temperature (SST), and bottom salinity <span class="citation" data-cites="deen2025estimating">(<a href="#ref-deen2025estimating" role="doc-biblioref">Deen, Jauss, and Sullivan 2025</a>)</span>. Their distribution in the Northwest Atlantic may shifting north due to increasing winter temperatures, but could also be affected by reductions in fishing pressure or range expansion <span class="citation" data-cites="bell2014externally">(<a href="#ref-bell2014externally" role="doc-biblioref">Bell et al. 2014</a>)</span>. Large-scale climate drivers, such as the Gulf Stream Index, may affect summer flounder recruitment and distribution <span class="citation" data-cites="oleary2019understanding">(<a href="#ref-oleary2019understanding" role="doc-biblioref">O’Leary et al. 2019</a>)</span>. Spatio-temporal modeling results from <span class="citation" data-cites="deen2025estimating">(<a href="#ref-deen2025estimating" role="doc-biblioref">Deen, Jauss, and Sullivan 2025</a>)</span> report increased abundance of summer flounder in the fall by 10-15% with a 1°C increase in SST, 12% with a 1°C increase in bottom temperature and 3-4% increase with each meter in depth. In the spring, abundance increased by 30% with a 1°C increase in SST. Summer flounder embryos exhibit reduced survival when exposed to elevated CO<sup>2</sup>. Larvae exposed to elevated CO<sup>2</sup> had tissue damage and initiated metamorphosis earlier and at smaller sizes <span class="citation" data-cites="chambers2014effects">(<a href="#ref-chambers2014effects" role="doc-biblioref">Chambers et al. 2014</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Summer flounder are found both inshore and offshore in waters from Nova Scotia to Florida <span class="citation" data-cites="packer1999_sf">(<a href="#ref-packer1999_sf" role="doc-biblioref">Packer et al. 1999</a>)</span>. Spawning season lasts from September through February/March, with lower latitudes starting sooner. Spawning adults migrate to overwintering habitats on the continental shelf edge. In the late spring, they move back inshore into shallow waters and estuaries <span class="citation" data-cites="packer1999_sf">(<a href="#ref-packer1999_sf" role="doc-biblioref">Packer et al. 1999</a>)</span>. The timing of peak spawning in October/November coincides with the breakdown of thermal stratification on the continental shelf and the maximum production of autumn plankton which is characteristic of temperate ocean waters of the northern hemisphere <span class="citation" data-cites="packer1999_sf morse1981reproduction">(<a href="#ref-packer1999_sf" role="doc-biblioref">Packer et al. 1999</a>; <a href="#ref-morse1981reproduction" role="doc-biblioref">Morse 1981</a>)</span>. Egg development takes anywhere from 48-142 hours, depending on water temperatures. At 14°C, larvae metamorphosize into juveniles within approximately 65 days of hatching. Time to metamorphosis also was dependent on temperatures, with metamorphosis completing as fast as 46.5 days at 14.5°C <span class="citation" data-cites="smith1973distribution">(<a href="#ref-smith1973distribution" role="doc-biblioref">Smith 1973</a>)</span>. Larvae do not drift far from spawning regions; however, tidal stream transport and vertical migration behavior may be important to determining larval distributions <span class="citation" data-cites="packer1999_sf hare2006sinking">(<a href="#ref-packer1999_sf" role="doc-biblioref">Packer et al. 1999</a>; <a href="#ref-hare2006sinking" role="doc-biblioref">J. A. Hare, Walsh, and Wuenschel 2006</a>)</span>. Larvae prefer waters with warmer temperatures and intermediate salinities. Temperature affects the rate of larvae yolk sac absorption (which impacts when larvae have to depend on exogenous feeding), development and growth <span class="citation" data-cites="watanabe1998light">(<a href="#ref-watanabe1998light" role="doc-biblioref">Watanabe et al. 1998</a>)</span>. Studies have also shown that larval size increases with greater light intensity (presumably affecting activity and energy metabolism) and higher salinities <span class="citation" data-cites="watanabe1998light burke1998influence">(<a href="#ref-watanabe1998light" role="doc-biblioref">Watanabe et al. 1998</a>; <a href="#ref-burke1998influence" role="doc-biblioref">Burke et al. 1998</a>)</span>. Larvae are preyed upon by a variety of predators, including blue crabs and sea robins. The type and abundance of predators (ex: <em>Crangon septemspinosa</em> or pelagic mummichugs) could determine whether a metamorphic summer flounder stays in the substrate or the water column (<em>C. septemspinosa</em> would force them to the water column, and vice versa for mummichugs) <span class="citation" data-cites="keefe1994contributions">(<a href="#ref-keefe1994contributions" role="doc-biblioref">Keefe and Able 1994</a>)</span>. Larvae preferentially settle on sandy substrate; bottom type, presence of predators, and water temperatures may all impact settlement <span class="citation" data-cites="keefe1994contributions">(<a href="#ref-keefe1994contributions" role="doc-biblioref">Keefe and Able 1994</a>)</span>. Young-of-the-year can occur in a variety of habitats, including shallow, mud-bottomed marsh creeks, shallow sand substrates (including seagrass beds), deep sand substrate, and deep fine-sand substrates <span class="citation" data-cites="szedlmayer1993ultrasonic">(<a href="#ref-szedlmayer1993ultrasonic" role="doc-biblioref">Szedlmayer and Able 1993</a>)</span>. Juveniles are opportunistic feeders and differences in diet are often related to the availability of prey. There also appears to be ontogenetic changes in diet. Smaller individuals eat polychaetes and crustaceans. Metamorphic stage individuals reflect calanoid copepod diets (pelagic), while late metamorphosis stage individual and juveniles’ diets reflected shrimp, polychaetes, harpactoid copepods, amphipods, small fishes, small gastropod mollusks, and plant material (benthic) <span class="citation" data-cites="grover1998feeding">(<a href="#ref-grover1998feeding" role="doc-biblioref">Grover 1998</a>)</span>. Adults are demersal, with highest abundance in waters deeper than 30m and at temperatures 2-27°C <span class="citation" data-cites="packer1999_sf">(<a href="#ref-packer1999_sf" role="doc-biblioref">Packer et al. 1999</a>)</span>. Adults are also opportunistic feeders. Fish and crustaceans make up the majority of their diet, but dominant prey items shift following prey availability <span class="citation" data-cites="cernadas2021composition">(<a href="#ref-cernadas2021composition" role="doc-biblioref">Cernadas-Martı́n et al. 2021</a>)</span>. Adult summer flounder are preyed upon by sharks, rays, and monkfish <span class="citation" data-cites="packer1999_sf">(<a href="#ref-packer1999_sf" role="doc-biblioref">Packer et al. 1999</a>)</span>. Summer flounder reach maturity at approximately 13-17 months. Males can reach 12 years of age and females 14 years, although individuals living upwards of 20 years have been reported <span class="citation" data-cites="nefsc2019assessment_sf">(<a href="#ref-nefsc2019assessment_sf" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2019</a>)</span>. The summer flounder stock is cooperatively managed by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission under the Summer Founder, Scup, and Black Sea Bass Fishery Management Plan. The stock is not overfished and overfishing is not occurring <span class="citation" data-cites="nefsc2025assessment_sf">(<a href="#ref-nefsc2025assessment_sf" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +659,62 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bell2014externally" class="csl-entry" role="listitem">
+Bell, R. J., J. A. Hare, J. P. Manderson, and D. E. Richardson. 2014. <span>“Externally Driven Changes in the Abundance of Summer and Winter Flounder.”</span> <em>ICES Journal of Marine Science</em> 71 (9): 2416–28.
+</div>
+<div id="ref-burke1998influence" class="csl-entry" role="listitem">
+Burke, J. S., M. Ueno, Y. Tanaka, H. Walsh, T. Maeda, I. Kinoshita, T. Seikai, D. E. Hoss, and M. Tanaka. 1998. <span>“The Influence of Environmental Factors on Early Life History Patterns of Flounders.”</span> <em>Journal of Sea Research</em> 40 (1-2): 19–32.
+</div>
+<div id="ref-cernadas2021composition" class="csl-entry" role="listitem">
+Cernadas-Martı́n, S., K. J. Rountos, J. A. Nye, M. G. Frisk, and E. K. Pikitch. 2021. <span>“Composition and Intraspecific Variability in Summer Flounder (<span class="nocase">Paralichthys dentatus</span>) Diets in a Eutrophic Estuary.”</span> <em>Frontiers in Marine Science</em> 8: 632751.
+</div>
+<div id="ref-chambers2014effects" class="csl-entry" role="listitem">
+Chambers, R. C., A. C. Candelmo, E. A. Habeck, M. E. Poach, D. Wieczorek, K. R. Cooper, C. E. Greenfield, and B. A. Phelan. 2014. <span>“Effects of Elevated <span>CO</span><span class="math inline">\(_2\)</span> in the Early Life Stages of Summer Flounder, <span class="nocase">Paralichthys dentatus</span>, and Potential Consequences of Ocean Acidification.”</span> <em>Biogeosciences</em> 11 (6): 1613–26.
+</div>
+<div id="ref-deen2025estimating" class="csl-entry" role="listitem">
+Deen, S., V. Jauss, and P. J. Sullivan. 2025. <span>“Estimating Effects of Ocean Environmental Conditions on Summer Flounder (<span class="nocase">Paralichthys dentatus</span>) Distribution.”</span> <em>Environmental and Ecological Statistics</em> 32 (1): 283–310.
+</div>
+<div id="ref-grover1998feeding" class="csl-entry" role="listitem">
+Grover, J. J. 1998. <span>“Feeding Habits of Pelagic Summer Flounder, (<span class="nocase">Paralichthys dentatus</span>), Larvae in Oceanic and Estuarine Habitats.”</span> <em>Fishery Bulletin</em> 96: 248–57.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2006sinking" class="csl-entry" role="listitem">
+Hare, J. A., H. J. Walsh, and M. J. Wuenschel. 2006. <span>“Sinking Rates of Late-Stage Fish Larvae: Implications for Larval Ingress into Estuarine Nursery Habitats.”</span> <em>Journal of Experimental Marine Biology and Ecology</em> 330 (2): 493–504.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-keefe1994contributions" class="csl-entry" role="listitem">
+Keefe, M., and K. W. Able. 1994. <span>“Contributions of Biotic Factors to Settlement in Summer Flounder, <span class="nocase">Paralichthys dentatus</span>.”</span> <em>Copeia</em> 1994 (2): 458–65.
+</div>
+<div id="ref-morse1981reproduction" class="csl-entry" role="listitem">
+Morse, W. W. 1981. <span>“Reproduction of the Summer Flounder, <span class="nocase">Paralichthys dentatus</span> (<span>L</span>.).”</span> <em>Journal of Fish Biology</em> 19: 189–203.
+</div>
+<div id="ref-nefsc2019assessment_sf" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2019. <span>“66th Northeast Regional Stock Assessment Workshop (66th SAW) Assessment Report.”</span> 19-08. National Marine Fisheries Service. <a href="https://doi.org/10.25923/nhqe-jd35">https://doi.org/10.25923/nhqe-jd35</a>.
+</div>
+<div id="ref-nefsc2025assessment_sf" class="csl-entry" role="listitem">
+———. 2025. <span>“Summer Flounder 2025 Management Track Assessment Report.”</span> Atlantic States Marine Fisheries Commission. <a href="https://asmfc.org/wp-content/uploads/2025/08/SF_Management_Track_Assessment_2025.pdf">https://asmfc.org/wp-content/uploads/2025/08/SF_Management_Track_Assessment_2025.pdf</a>.
+</div>
+<div id="ref-oleary2019understanding" class="csl-entry" role="listitem">
+O’Leary, C. A., T. J. Miller, J. T. Thorson, and J. A. Nye. 2019. <span>“Understanding Historical Summer Flounder (<span class="nocase">Paralichthys dentatus</span>) Abundance Patterns Through the Incorporation of Oceanography-Dependent Vital Rates in Bayesian Hierarchical Models.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 76 (8): 1275–94.
+</div>
+<div id="ref-packer1999_sf" class="csl-entry" role="listitem">
+Packer, D. B., S. J. Griesbach, P. B. Berrien, C. A. Zetlin, D. L. Johnson, and W. W. Morse. 1999. <span>“Essential Fish Habitat Source Document. Summer Flounder, <span class="nocase">Paralichthys dentatus</span>, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE 151. National Marine Fisheries Service.
+</div>
+<div id="ref-smith1973distribution" class="csl-entry" role="listitem">
+Smith, W. G. 1973. <span>“The Distribution of Summer Flounder, <span class="nocase">Paralichthys dentatus</span>, Eggs and Larvae on the Continental Shelf Between Cape Cod and Cape Lookout, 1965-66.”</span> <em>Fishery Bulletin</em> 71: 527–48.
+</div>
+<div id="ref-szedlmayer1993ultrasonic" class="csl-entry" role="listitem">
+Szedlmayer, S. T., and K. W. Able. 1993. <span>“Ultrasonic Telemetry of Age-0 Summer Flounder, <span class="nocase">Paralichthys dentatus</span>, Movements in a Southern New Jersey Estuary.”</span> <em>Copeia</em> 1993 (3): 728–36.
+</div>
+<div id="ref-watanabe1998light" class="csl-entry" role="listitem">
+Watanabe, W. O., M. W. Feeley, S. C. Ellis, and E. P. Ellis. 1998. <span>“Light Intensity and Salinity Effects on Eggs and Yolk Sac Larvae of the Summer Flounder.”</span> <em>North American Journal of Aquaculture</em> 60 (1): 9–19.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low - Moderate</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 93-97%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low (Gulf of Maine/Cape Cod) - Moderate (Southern New England/Mid Atlantic &amp; Georges Bank)</td>
+<td>Low</td>
+<td>None (Gulf of Maine/Cape Cod) - Increase (Southern New England/Mid Atlantic &amp; Georges Bank)</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral (Gulf of Maine/Cape Cod) - Negative (Southern New England/Mid Atlantic &amp; Georges Bank)</td>
+<td>Negative</td>
+<td>None (Southern New England/Mid Atlantic &amp; Georges Bank) - Increase (Gulf of Maine/Cape Cod)</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>The <strong>Southern New England/Mid-Atlantic</strong> and <strong>Georges Bank</strong> stocks of Yellowtail flounder both received <strong>Moderate</strong> sensitivity scores. Both scores had 88% certainty. These scores were driven by Stock Size (4 and 3.6), Spawning Cycle (2.7 and 2.6) and Egg and Larval Survival and Settlement Requirements (2.6). Adult Mobility (2.5) also played a role in the score for the Georges Bank stock.</p>
+<p>The <strong>Gulf of Maine/Cape Cod</strong> stock of Yellowtail flounder received a <strong>Low</strong> sensitivity score, with 56% certainty. For this stock, only the Stock Size (2.8) attribute had a score greater than 2.5.</p>
+<p>Spawning occurs from mid-February to July on Georges Bank and in nearshore habitats in Southern New England and the Mid-Atlantic <span class="citation" data-cites="MartinDrewry1978">(<a href="#ref-MartinDrewry1978" role="doc-biblioref">Martin and Drewry 1978</a>)</span>. Larvae feed on zooplankton prey and zooplankton abundance has been linked to recruitment success. Although it is also worth noting that studies directly testing for mismatches did not find evidence of mismatches between larvae and zooplankton overlap and recruitment <span class="citation" data-cites="Kittel2025 Johnsonetal1999">(<a href="#ref-Kittel2025" role="doc-biblioref">J. Kittel 2025</a>; <a href="#ref-Johnsonetal1999" role="doc-biblioref">Johnson et al. 1999</a>)</span>. Larvae perform vertical migrations to help increase retention in and around nursery locations. Recruitment has also been correlated with circulation patterns and the Mid Atlantic Cold Pool. Both the Georges Bank and Southern New England stocks are under rebuilding plans <span class="citation" data-cites="NEFSC2025c_yellowtail">(<a href="#ref-NEFSC2025c_yellowtail" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025c</a>)</span>.</p>
+<p>In the 2016 Climate Vulnerability Assessment, yellowtail flounder also received a Low sensitivity score. Similar to the Gulf of Maine/Cape Cod stock, the only attribute that scored above 2.5 in the 2016 Assessment was Stock Status <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>Between 93 - 97% of data quality scores were greater than or equal to 2 across both stocks, indicating excellent data quality. Complexity in Reproductive Strategy was identified as a data gap (mean attribute data quality score &lt; 2) for the Southern New England/Mid-Atlantic stock.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +589,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted that the effects of climate change on Yellowtail flounder would be <strong>negative</strong> for both the Georges Bank and Southern New England/Mid-Atlantic stocks. Certainty for both stocks was high at 98% and 100% respectively. In the 2016 Climate Vulnerability Assessment, experts also predicted that yellowtail would be negatively impacted by climate change <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. For the Gulf of Maine/Cape Cod stock, the effect was predicted to be <strong>neutral</strong>, but with lower certainty (86%). Increased temperatures have been linked to decreased productivity, increased larval mortality, and reduced settlement rates <span class="citation" data-cites="Kitteletal2026 Kleinetal2017">(<a href="#ref-Kitteletal2026" role="doc-biblioref">J. A. Kittel et al. 2026</a>; <a href="#ref-Kleinetal2017" role="doc-biblioref">Klein, Smith, and Kritzer 2017</a>)</span>. Recruitment has also been linked to the Mid-Atlantic Cold Pool <span class="citation" data-cites="Kittel2025">(<a href="#ref-Kittel2025" role="doc-biblioref">J. Kittel 2025</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Yellowtail flounder abundance, distribution, and recruitment have been associated with a number of environmental and climate indices. Rapid warming of the Northwest Atlantic has resulted in decreased productivity in yellow flounder <span class="citation" data-cites="Kitteletal2026">(<a href="#ref-Kitteletal2026" role="doc-biblioref">J. A. Kittel et al. 2026</a>)</span>. Higher temperatures can increase mortality in yellowtail flounder larvae, and faster rates of warming causing earlier stratification may reduce settlement rates in juveniles <span class="citation" data-cites="Kleinetal2017">(<a href="#ref-Kleinetal2017" role="doc-biblioref">Klein, Smith, and Kritzer 2017</a>)</span>. Yellowtail recruitment in Southern New England is highly correlated with the North Atlantic Oscillation (NAO) and air temperature <span class="citation" data-cites="Sullivanetal2005">(<a href="#ref-Sullivanetal2005" role="doc-biblioref">Sullivan, Cowen, and Steves 2005</a>)</span>. Low recruitment since 1990 was associated with unfavorable environmental conditions caused by a northward shift in the Gulf Stream <span class="citation" data-cites="Xu2016 Kittel2025">(<a href="#ref-Xu2016" role="doc-biblioref">Xu 2016</a>; <a href="#ref-Kittel2025" role="doc-biblioref">J. Kittel 2025</a>)</span>. The Mid-Atlantic Cold Pool, bottom temperature, and the Atlantic Multidecadal Oscillation (AMO) are also linked to recruitment <span class="citation" data-cites="Kittel2025">(<a href="#ref-Kittel2025" role="doc-biblioref">J. Kittel 2025</a>)</span>. As warming continues, joint management between the United States and Canada may be more challenging as distributions change <span class="citation" data-cites="Sumailaetal2020">(<a href="#ref-Sumailaetal2020" role="doc-biblioref">Sumaila, Palacios-Abrantes, and Cheung 2020</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Yellowtail flounder are found in the Northwest Atlantic from Newfoundland to Chesapeake Bay, inhabiting sandy bottom waters between 130-230 m depth <span class="citation" data-cites="Johnsonetal1999">(<a href="#ref-Johnsonetal1999" role="doc-biblioref">Johnson et al. 1999</a>)</span> and at temperatures of -1 to 18°C <span class="citation" data-cites="OverholtzCadrin1998">(<a href="#ref-OverholtzCadrin1998" role="doc-biblioref">Overholtz and Cadrin 1998</a>)</span>. Previous research has suggested that fish live up to 17 years, possibly as high as 20 years, although fish older than 7 years is unusual <span class="citation" data-cites="NEFSC2012_yellowtail">(<a href="#ref-NEFSC2012_yellowtail" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2012</a>)</span>. The fishery is divided into 3 stocks: Gulf of Maine/Cape Cod, Georges Bank, and Southern New England/Mid-Atlantic <span class="citation" data-cites="NEFSC2025a_yellowtail NEFSC2025b_yellowtail NEFSC2025c_yellowtail">(<a href="#ref-NEFSC2025a_yellowtail" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025a</a>, <a href="#ref-NEFSC2025b_yellowtail" role="doc-biblioref">2025b</a>, <a href="#ref-NEFSC2025c_yellowtail" role="doc-biblioref">2025c</a>)</span>. Most females are mature by ages 2-3 <span class="citation" data-cites="NEFSC2012_yellowtail">(<a href="#ref-NEFSC2012_yellowtail" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2012</a>)</span>. Spawning occurs from mid-February to July along the continental shelf waters of Georges Bank, northwest of Cape Cod, Southern New England and nearshore along New Jersey and southern Long Island <span class="citation" data-cites="MartinDrewry1978">(<a href="#ref-MartinDrewry1978" role="doc-biblioref">Martin and Drewry 1978</a>)</span>. Spawning peaks from April to June in southern New England and late June to July in Canada <span class="citation" data-cites="BerrienSibunka1999">(<a href="#ref-BerrienSibunka1999" role="doc-biblioref">Berrien and Sibunka 1999</a>)</span>. Laboratory studies show eggs begin to hatch 6-7 days after fertilization <span class="citation" data-cites="BenoitPepin1999">(<a href="#ref-BenoitPepin1999" role="doc-biblioref">Benoit and Pepin 1999</a>)</span>. At sea hatching times range from 14.5 days at 4⁰C to 4.5 days at 14⁰C <span class="citation" data-cites="WalshMorgan2004">(<a href="#ref-WalshMorgan2004" role="doc-biblioref">Walsh and Morgan 2004</a>)</span>. Eggs are pelagic (most at 10-90m depth), with movement limited to currents in spawning locations <span class="citation" data-cites="Smithetal1975">(<a href="#ref-Smithetal1975" role="doc-biblioref">Smith, Sibunka, and Wells 1975</a>)</span>. Larvae move from the surface down to about 20 m, with larger larvae making longer migrations. This habit may assist in the dispersal of larvae because circulation at the surface transports the larvae further and is likely associated with feeding behavior <span class="citation" data-cites="Smithetal1978">(<a href="#ref-Smithetal1978" role="doc-biblioref">Smith, Sibunka, and Wells 1978</a>)</span>. Larvae feed on zooplankton, particularly <em>Calanus</em> <span class="citation" data-cites="Kittel2025">(<a href="#ref-Kittel2025" role="doc-biblioref">J. Kittel 2025</a>)</span>. Once larvae reach metamorphosis size (11.6-16 mm) bottom temperature (4-8°C) and depth (41-70m) are the most important parameters for determining settlement <span class="citation" data-cites="ColletteKleinMacPhee2002">(<a href="#ref-ColletteKleinMacPhee2002" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. Juveniles utilize marine and estuarine sandy and muddy substrates, as well as estuarine and marine water columns <span class="citation" data-cites="ColletteKleinMacPhee2002">(<a href="#ref-ColletteKleinMacPhee2002" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. Rotifers, copepods, and brine shrimp nauplii were fed to juveniles in laboratory studies <span class="citation" data-cites="BenoitPepin1999">(<a href="#ref-BenoitPepin1999" role="doc-biblioref">Benoit and Pepin 1999</a>)</span>. <em>Calanus</em> copepods are considered a critical food source for larvae/juveniles <span class="citation" data-cites="Purchaseetal2000">(<a href="#ref-Purchaseetal2000" role="doc-biblioref">Purchase, Boyce, and Brown 2000</a>)</span>. Amphipods (41% by weight) and polychaetes (38.5%) dominate the diet of adult yellowtail, but they also can consume cnidarians, small crabs and shrimps, mysids, cumaceans, isopods, univalve and bivalve mollusks, echinoderms, and sometimes small fish <span class="citation" data-cites="Bowmanetal1987 Bowmanetal2000">(<a href="#ref-Bowmanetal1987" role="doc-biblioref">Bowman et al. 1987</a>, <a href="#ref-Bowmanetal2000" role="doc-biblioref">2000</a>)</span>. Similar to other groundfish, yellowtail may be impacted by increasing grey seal and dogfish populations and resulting increased predation pressures <span class="citation" data-cites="Kittel2025">(<a href="#ref-Kittel2025" role="doc-biblioref">J. Kittel 2025</a>)</span>. Other predators of juvenile and adult yellowtail include spiny dogfish, skates, cod, hakes, and monkfish <span class="citation" data-cites="Johnsonetal1999">(<a href="#ref-Johnsonetal1999" role="doc-biblioref">Johnson et al. 1999</a>)</span>. Minimal migration patterns show that Southern New England yellowtail traveled eastward during spring and summer and westward in the fall and winter as a result of seasonal changes in temperature <span class="citation" data-cites="Smithetal1975">(<a href="#ref-Smithetal1975" role="doc-biblioref">Smith, Sibunka, and Wells 1975</a>)</span>. Recent tagging studies, however, show that individuals generally don’t move between stocks <span class="citation" data-cites="Goetheletal2015">(<a href="#ref-Goetheletal2015" role="doc-biblioref">Goethel, Legault, and Cadrin 2015</a>)</span>. Yellowtail flounder are managed by the New England Fishery Management Council through the Northeast Multispecies (Groundfish) Fishery Management Plan. The Georges Bank stock is jointly managed by the Council and Canada, as the stock extends beyond the international boundary. The Cape Cod/Gulf of Maine stock is not overfished and not subject to overfishing <span class="citation" data-cites="NEFSC2025a_yellowtail">(<a href="#ref-NEFSC2025a_yellowtail" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025a</a>)</span>. The Georges Bank stock is overfished but under a rebuilding plan; overfishing status is unknown <span class="citation" data-cites="NEFSC2025b_yellowtail">(<a href="#ref-NEFSC2025b_yellowtail" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025b</a>)</span>. The Southern New England/Mid-Atlantic stock is overfished but under a rebuilding plan, but not subject to overfishing <span class="citation" data-cites="NEFSC2025c_yellowtail">(<a href="#ref-NEFSC2025c_yellowtail" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025c</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +632,80 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-BenoitPepin1999" class="csl-entry" role="listitem">
+Benoit, H. P., and P. Pepin. 1999. <span>“Individual Variability in Growth Rate and the Timing of Metamorphosis in Yellowtail Flounder, <span class="nocase">Pleuronectes ferrugineus</span>.”</span> <em>Marine Ecology Progress Series</em> 184: 231–44. <a href="https://doi.org/10.3354/meps184231">https://doi.org/10.3354/meps184231</a>.
+</div>
+<div id="ref-BerrienSibunka1999" class="csl-entry" role="listitem">
+Berrien, P., and J. Sibunka. 1999. <span>“Distribution Patterns of Fish Eggs in the <span>U.S.</span> Northeast Continental Shelf Ecosystem, 1977–1987.”</span> NOAA Technical Report NMFS 145. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-Bowmanetal1987" class="csl-entry" role="listitem">
+Bowman, R. E., T. R. Azarowitz, E. S. Howard, and B. P. Hayden. 1987. <span>“Food and Distribution of Juveniles of Seventeen Northwest <span>Atlantic</span> Fish Species, 1973–1976.”</span> NOAA Technical Memorandum NMFS-F/NEC 45. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-Bowmanetal2000" class="csl-entry" role="listitem">
+Bowman, R. E., C. E. Stillwell, W. L. Michaels, and M. D. Grosslein. 2000. <span>“Food of <span>Northwest Atlantic</span> Fishes and Two Common Species of Squid.”</span> NOAA Technical Memorandum NMFS-F/NEC 155. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-ColletteKleinMacPhee2002" class="csl-entry" role="listitem">
+Collette, B. B., and G. Klein-MacPhee, eds. 2002. <em>Bigelow and <span class="nocase">Schroeder’s</span> Fishes of the <span class="nocase">Gulf of Maine</span></em>. 3rd ed. Washington, D.C.: Smithsonian Institution Press.
+</div>
+<div id="ref-Goetheletal2015" class="csl-entry" role="listitem">
+Goethel, D. R., C. M. Legault, and S. X. Cadrin. 2015. <span>“Demonstration of a Spatially Explicit, Tag-Integrated Stock Assessment Model with Application to Three Interconnected Stocks of Yellowtail Flounder Off of <span>New England</span>.”</span> <em>ICES Journal of Marine Science</em> 72 (1): 164–77. <a href="https://doi.org/10.1093/icesjms/fsu141">https://doi.org/10.1093/icesjms/fsu141</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-Johnsonetal1999" class="csl-entry" role="listitem">
+Johnson, D. L., W. W. Morse, P. L. Berrien, and J. J. Vitaliano. 1999. <span>“Essential Fish Habitat Source Document: Yellowtail Flounder, <span class="nocase">Limanda ferruginea</span>, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE 140. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-Kittel2025" class="csl-entry" role="listitem">
+Kittel, J. 2025. <span>“Environmental Effects on Population Dynamics of <span>New England</span> Yellowtail Flounder.”</span> Doctoral dissertation, University of Massachusetts Dartmouth.
+</div>
+<div id="ref-Kitteletal2026" class="csl-entry" role="listitem">
+Kittel, J. A., A. C. Hansell, C. Carrano, and S. X. Cadrin. 2026. <span>“Incorporating Environmental Covariates into a State-Space Stock Assessment Model for Yellowtail Flounder.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em>. <a href="https://doi.org/10.1139/cjfas-2025-0289">https://doi.org/10.1139/cjfas-2025-0289</a>.
+</div>
+<div id="ref-Kleinetal2017" class="csl-entry" role="listitem">
+Klein, E. S., S. L. Smith, and J. P. Kritzer. 2017. <span>“Effects of Climate Change on Four <span>New England</span> Groundfish Species.”</span> <em>Reviews in Fish Biology and Fisheries</em> 27 (2): 317–38. <a href="https://doi.org/10.1007/s11160-017-9472-2">https://doi.org/10.1007/s11160-017-9472-2</a>.
+</div>
+<div id="ref-MartinDrewry1978" class="csl-entry" role="listitem">
+Martin, F. D., and G. E. Drewry. 1978. <em>Development of Fishes of the <span>Mid-Atlantic Bight</span>: An Atlas of Egg, Larval and Juvenile Stages. Vol. 6: <span>Stromateidae</span> Through <span>Ogcocephalidae</span></em>. Biological Services Program FWS/OBS-78/12. U.S. Fish; Wildlife Service.
+</div>
+<div id="ref-NEFSC2012_yellowtail" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2012. <span>“54th <span>Northeast Regional Stock Assessment Workshop</span> (54th <span>SAW</span>) Assessment Report.”</span> 12-18. Northeast Fisheries Science Center Reference Document. National Marine Fisheries Service. <a href="https://repository.library.noaa.gov/view/noaa/4193">https://repository.library.noaa.gov/view/noaa/4193</a>.
+</div>
+<div id="ref-NEFSC2025a_yellowtail" class="csl-entry" role="listitem">
+———. 2025a. <span>“<span class="nocase">Cape Cod-Gulf of Maine</span> Yellowtail Flounder 2025 Management Track Assessment Report.”</span> National Marine Fisheries Service. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10438">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10438</a>.
+</div>
+<div id="ref-NEFSC2025b_yellowtail" class="csl-entry" role="listitem">
+———. 2025b. <span>“<span>Georges Bank</span> Yellowtail Flounder 2025 Management Track Assessment Report.”</span> National Marine Fisheries Service. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10437">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10437</a>.
+</div>
+<div id="ref-NEFSC2025c_yellowtail" class="csl-entry" role="listitem">
+———. 2025c. <span>“<span>Southern New England-Mid-Atlantic</span> Yellowtail Flounder 2025 Management Track Assessment Report.”</span> National Marine Fisheries Service. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10439">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10439</a>.
+</div>
+<div id="ref-OverholtzCadrin1998" class="csl-entry" role="listitem">
+Overholtz, W. J., and S. X. Cadrin. 1998. <span>“Yellowtail Flounder.”</span> In <em>Status of Fishery Resources Off the Northeastern United States for 1998</em>, edited by S. H. Clarke, 108–9. NOAA Technical Memorandum NMFS-NE 115.
+</div>
+<div id="ref-Purchaseetal2000" class="csl-entry" role="listitem">
+Purchase, C. F., D. L. Boyce, and J. A. Brown. 2000. <span>“Growth and Survival of Juvenile Yellowtail Flounder <span class="nocase">Pleuronectes ferrugineus</span> (<span>Storer</span>) Under Different Photoperiods.”</span> <em>Aquaculture Research</em> 31 (7): 547–52. <a href="https://doi.org/10.1046/j.1365-2109.2000.00475.x">https://doi.org/10.1046/j.1365-2109.2000.00475.x</a>.
+</div>
+<div id="ref-Smithetal1975" class="csl-entry" role="listitem">
+Smith, W. G., J. D. Sibunka, and A. Wells. 1975. <span>“Seasonal Distributions of Larval Flatfishes (<span>Pleuronectiformes</span>) on the Continental Shelf Between <span>Cape Cod, Massachusetts</span>, and <span>Cape Lookout, North Carolina</span>, 1965-66.”</span> NOAA Technical Report NMFS SSRF 691. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-Smithetal1978" class="csl-entry" role="listitem">
+———. 1978. <span>“Diel Movements of Larval Yellowtail Flounder, <span class="nocase">Limanda ferruginea</span>, Determined from Discrete Depth Sampling.”</span> <em>Fishery Bulletin, U.S.</em> 76: 167–78.
+</div>
+<div id="ref-Sullivanetal2005" class="csl-entry" role="listitem">
+Sullivan, M. C., R. K. Cowen, and B. P. Steves. 2005. <span>“Evidence for Atmosphere–Ocean Forcing of Yellowtail Flounder (<span class="nocase">Limanda ferruginea</span>) Recruitment in the <span>Middle Atlantic Bight</span>.”</span> <em>Fisheries Oceanography</em> 14 (5): 386–99. <a href="https://doi.org/10.1111/j.1365-2419.2005.00343.x">https://doi.org/10.1111/j.1365-2419.2005.00343.x</a>.
+</div>
+<div id="ref-Sumailaetal2020" class="csl-entry" role="listitem">
+Sumaila, U. R., J. Palacios-Abrantes, and W. W. L. Cheung. 2020. <span>“Climate Change, Shifting Threat Points, and the Management of Transboundary Fish Stocks.”</span> <em>Ecology and Society</em> 25 (4). <a href="https://doi.org/10.5751/ES-11913-250411">https://doi.org/10.5751/ES-11913-250411</a>.
+</div>
+<div id="ref-WalshMorgan2004" class="csl-entry" role="listitem">
+Walsh, S. J., and M. J. Morgan. 2004. <span>“Observations of Natural Behaviour of Yellowtail Flounder Derived from Data Storage Tags.”</span> <em>ICES Journal of Marine Science</em> 61 (7): 1151–56. <a href="https://doi.org/10.1016/j.icesjms.2004.07.012">https://doi.org/10.1016/j.icesjms.2004.07.012</a>.
+</div>
+<div id="ref-Xu2016" class="csl-entry" role="listitem">
+Xu, H. 2016. <span>“Understanding and Projecting the Effects of Climate Variability and Change on <span>Southern New England-Mid Atlantic</span> Yellowtail Flounder Population Dynamics.”</span> Doctoral dissertation, State University of New York at Stony Brook.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

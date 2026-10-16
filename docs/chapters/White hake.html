@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Moderate</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 85%</p>
 </div>
 </div>
 </div>
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>White hake received a <strong>Moderate</strong> sensitivity score, with a certainty of 59%. Four attributes had scores greater than 2.5: Stock Size (3), Juvenile Habitat Requirements (2.9), Population Growth Rate (2.8), and Spawning Cycle (2.8).</p>
+<p>Spawning occurs in the spring months along the continental shelf near Georges Bank and the Mid Atlantic Bight (Lang et al 1996). Juveniles transition from pelagic to demersal at approximately two months, where eelgrass becomes an important habitat. These habitats are highly vulnerable <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. White hake reach maturity at 2.5-2.8 years and have lifespans of approximately 20 years <span class="citation" data-cites="nefsc2013saw56">(<a href="#ref-nefsc2013saw56" role="doc-biblioref">Northeast Fisheries Science Center 2013</a>)</span>. The stock is under a rebuilding plan, but is not overfished nor is overfishing occurring <span class="citation" data-cites="nefsc2025whitehake">(<a href="#ref-nefsc2025whitehake" role="doc-biblioref">Northeast Fisheries Science Center 2025</a>)</span>.</p>
+<p>White hake also received a Moderate sensitivity score in the 2016 Climate Vulnerability Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. This was driven by Stock Status, Population Growth Rate, and Spawning Cycle, similar to our results.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>85% of data quality scores were greater than or equal to 2, indicating strong data quality. Egg and Larval Survival and Settlement Requirements and Other Stressors were identified as data gaps (mean attribute data quality score &lt; 2).</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +588,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted that white hake will be <strong>negatively</strong> impacted by climate change. Certainty was 70%. This is similar to the results of the previous Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. White hake have a narrow temperature preference (9-13C) and as a result, distributions have been shifting northward as bottom waters warm <span class="citation" data-cites="lafreniere2023what">(<a href="#ref-lafreniere2023what" role="doc-biblioref">LaFreniere et al. 2023</a>)</span>. Recruitment is strongly linked to circulation patterns, which may be impacted by future change <span class="citation" data-cites="han2008dispersion ings2008episodic">(<a href="#ref-han2008dispersion" role="doc-biblioref">Han and Kulka 2008</a>; <a href="#ref-ings2008episodic" role="doc-biblioref">Ings, Gregory, and Schneider 2008</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>White hake are a common groundfish species in the Gulf of Maine, which is warming faster than most of the world’s oceans <span class="citation" data-cites="pershing2021climate">(<a href="#ref-pershing2021climate" role="doc-biblioref">Pershing et al. 2021</a>)</span>. In response to warming in the Gulf of Maine, white hake show a preference for narrow temperature (9-13°C) and depth (55-100 m) ranges and display a gradual northward movement in their center of gravity <span class="citation" data-cites="lafreniere2023what">(<a href="#ref-lafreniere2023what" role="doc-biblioref">LaFreniere et al. 2023</a>)</span>. <span class="citation" data-cites="nye2009changing">Nye et al. (<a href="#ref-nye2009changing" role="doc-biblioref">2009</a>)</span> observed a range contraction in white hake in the Gulf of Maine. White hake may be affected by changes in circulation patterns. Small white hake larvae have been collected in early summer in a Gulf Stream warm core ring seaward of southern Scotian Shelf and southeast of Georges Bank. Patterns of strong recruitment have been linked to the strength of the Labrador Current on the Great Banks and strong onshore transport and downwelling conditions in coastal Newfoundland <span class="citation" data-cites="han2008dispersion ings2008episodic">(<a href="#ref-han2008dispersion" role="doc-biblioref">Han and Kulka 2008</a>; <a href="#ref-ings2008episodic" role="doc-biblioref">Ings, Gregory, and Schneider 2008</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>White hake are a groundfish species inhabiting deep water from Newfoundland to the Mid-Atlantic Bight <span class="citation" data-cites="chang1999essential">(<a href="#ref-chang1999essential" role="doc-biblioref">Chang, Morse, and Berrien 1999</a>)</span>. Males reach maturity at 2.5 years and females at 2.8 years; both males and females have a lifespan of around 20 years of age <span class="citation" data-cites="nefsc2013saw56">(<a href="#ref-nefsc2013saw56" role="doc-biblioref">Northeast Fisheries Science Center 2013</a>)</span>. In the Gulf of Maine, white hake of all ages tend to migrate inshore in warmer months and disperse into deeper waters in colder months, while hake in the south move offshore to spawn in the spring; fall movements may be linked to prey movements <span class="citation" data-cites="langton1994selected">(<a href="#ref-langton1994selected" role="doc-biblioref">Langton, Pearce, and Gibson 1994</a>)</span>. Based on the distribution and abundance of pelagic juveniles, as well as circulation patterns throughout the region, <span class="citation" data-cites="fahay1989white">Fahay and Able (<a href="#ref-fahay1989white" role="doc-biblioref">1989</a>)</span> suggested that the southern portion of the stock (below the Gulf of St.&nbsp;Lawrence) spawns in early spring (April-May) in deep waters along the continental slope, primarily off southern Georges Bank and the Mid-Atlantic Bight. White hake eggs are buoyant, and hatch in the water column in 3-7 days <span class="citation" data-cites="fahay1983guide">(<a href="#ref-fahay1983guide" role="doc-biblioref">Fahay 1983</a>)</span>. Larvae may be affected by oceanographic conditions like warm core rings, the Gulf Stream, and Labrador Current for transport <span class="citation" data-cites="han2008dispersion ings2008episodic">(<a href="#ref-han2008dispersion" role="doc-biblioref">Han and Kulka 2008</a>; <a href="#ref-ings2008episodic" role="doc-biblioref">Ings, Gregory, and Schneider 2008</a>)</span>. White hake prefer temperatures between 7-20°C <span class="citation" data-cites="chang1999essential">(<a href="#ref-chang1999essential" role="doc-biblioref">Chang, Morse, and Berrien 1999</a>)</span>. Eggs, larvae, and early juveniles are pelagic; older juveniles and adults are demersal. Most catches occur in Canadian waters at depths between 175 to 375 m with no differences between mature and immature hake. In the Gulf of Maine, depth preferences are 55-100 m <span class="citation" data-cites="fahay1989white nozeres2015review">(<a href="#ref-fahay1989white" role="doc-biblioref">Fahay and Able 1989</a>; <a href="#ref-nozeres2015review" role="doc-biblioref">Nozères et al. 2015</a>)</span>. Juvenile white hake settle to the bottom at around 2 months of age. Pelagic juveniles are in the upper water column during the daytime. Demersal juveniles inhabit muddy and fine grained sandy bottom sediment <span class="citation" data-cites="chang1999essential fahay1989white">(<a href="#ref-chang1999essential" role="doc-biblioref">Chang, Morse, and Berrien 1999</a>; <a href="#ref-fahay1989white" role="doc-biblioref">Fahay and Able 1989</a>)</span>. Demersal juveniles feed primarily on polychaetes, shrimps, and other crustaceans <span class="citation" data-cites="bowman1981food">(<a href="#ref-bowman1981food" role="doc-biblioref">Bowman 1981</a>)</span>. Adults feed on fish, including juveniles of their own and similar species (silver hake), Atlantic herring, Gulf Stream flounder, and possibly alewife, shrimps, krill, and other crustaceans <span class="citation" data-cites="langton1994selected nozeres2015review">(<a href="#ref-langton1994selected" role="doc-biblioref">Langton, Pearce, and Gibson 1994</a>; <a href="#ref-nozeres2015review" role="doc-biblioref">Nozères et al. 2015</a>)</span>. The white hake fishery is managed as a single stock by the New England Fisheries Management Council, under the Northeast Multispecies (Small-Mesh) Fishery Management Plan. The stock is under a rebuilding plan, but is not overfished and overfishing is not occurring <span class="citation" data-cites="nefsc2025whitehake">(<a href="#ref-nefsc2025whitehake" role="doc-biblioref">Northeast Fisheries Science Center 2025</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +631,53 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bowman1981food" class="csl-entry" role="listitem">
+Bowman, R. E. 1981. <span>“Food of 10 Species of Northwest <span>Atlantic</span> Juvenile Groundfish.”</span> <em>Fishery Bulletin (U.S.)</em> 79 (2): 200–206.
+</div>
+<div id="ref-chang1999essential" class="csl-entry" role="listitem">
+Chang, S., W. W. Morse, and P. L. Berrien. 1999. <span>“Essential Fish Habitat Source Document: <span>White</span> Hake, <em>Urophycis Tenuis</em>, Life History and Habitat Characteristics.”</span> {NOAA} Technical Memorandum {NMFS-NE} 136. National Oceanic; Atmospheric Administration, National Marine Fisheries Service, Northeast Fisheries Science Center.
+</div>
+<div id="ref-fahay1983guide" class="csl-entry" role="listitem">
+Fahay, Michael P. 1983. <span>“Guide to the Early Stages of Marine Fishes Occurring in the Western <span>North</span> <span>Atlantic</span> <span>Ocean</span>, <span>Cape</span> <span>Hatteras</span> to the Southern <span>Scotian</span> <span>Shelf</span>.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 4: 1–423.
+</div>
+<div id="ref-fahay1989white" class="csl-entry" role="listitem">
+Fahay, Michael P., and Kenneth W. Able. 1989. <span>“White Hake, <em>Urophycis Tenuis</em>, in the <span>Gulf</span> of <span>Maine</span>: Spawning Seasonality, Habitat Use, and Growth in Young of the Year and Relationships to the <span>Scotian</span> <span>Shelf</span> Population.”</span> <em>Canadian Journal of Zoology</em> 67 (7): 1715–24.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-han2008dispersion" class="csl-entry" role="listitem">
+Han, G., and D. Kulka. 2008. <span>“Dispersion of Eggs, Larvae and Pelagic Juveniles of <span>White</span> <span>Hake</span> (<em>Urophycis Tenuis</em>) in Relation to Ocean Currents of the <span>Grand</span> <span>Bank</span>: <span>A</span> Modelling Approach.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 41: 115–25.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-ings2008episodic" class="csl-entry" role="listitem">
+Ings, D. W., R. S. Gregory, and D. C. Schneider. 2008. <span>“Episodic Downwelling Predicts Recruitment of <span>Atlantic</span> Cod, <span>Greenland</span> Cod and White Hake to <span>Newfoundland</span> Coastal Waters.”</span> <em>Journal of Marine Research</em> 66 (2): 205–27.
+</div>
+<div id="ref-lafreniere2023what" class="csl-entry" role="listitem">
+LaFreniere, B. R., Peters R. Donahue, B. McBride, R. Mohan, and J. A. Mohan. 2023. <span>“What the <span>Hakes</span>? <span>Correlating</span> Environmental Factors with Hake Abundance in the <span>Gulf</span> of <span>Maine</span>.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 53: 17–29. <a href="https://doi.org/10.2960/J.v54.m742">https://doi.org/10.2960/J.v54.m742</a>.
+</div>
+<div id="ref-langton1994selected" class="csl-entry" role="listitem">
+Langton, R. W., J. B. Pearce, and J. A. Gibson. 1994. <span>“Selected Living Resources, Habitat Conditions, and Human Perturbations of the <span>Gulf</span> of <span>Maine</span>: <span>Environmental</span> and Ecological Considerations for Fishery Management.”</span> {NOAA} Technical Memorandum {NMFS-NE} 105. National Oceanic; Atmospheric Administration, National Marine Fisheries Service.
+</div>
+<div id="ref-nefsc2013saw56" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center. 2013. <span>“56th <span>Northeast</span> <span>Regional</span> <span>Stock</span> <span>Assessment</span> <span>Workshop</span> (56th <span>SAW</span>) Assessment Report.”</span> {Northeast Fisheries Science Center Reference Document} 13-10. National Marine Fisheries Service, Northeast Fisheries Science Center. <a href="https://repository.library.noaa.gov/view/noaa/4424">https://repository.library.noaa.gov/view/noaa/4424</a>.
+</div>
+<div id="ref-nefsc2025whitehake" class="csl-entry" role="listitem">
+———. 2025. <span>“White Hake - 2025 Management Track Assessment Report.”</span> National Marine Fisheries Service, Northeast Fisheries Science Center. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10633">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10633</a>.
+</div>
+<div id="ref-nozeres2015review" class="csl-entry" role="listitem">
+Nozères, C., J. Gauthier, H. Bourdages, and Y. Lambert. 2015. <span>“Review of <span>White</span> <span>Hake</span> (<em>Urophycis Tenuis</em>) in the <span>Northern</span> <span>Gulf</span> of <span>St.</span> <span>Lawrence</span> in Support of a <span>Recovery</span> <span>Potential</span> <span>Assessment</span>.”</span> {DFO} Canadian Science Advisory Secretariat Research Document 2015/076. Fisheries; Oceans Canada.
+</div>
+<div id="ref-nye2009changing" class="csl-entry" role="listitem">
+Nye, Janet A., Jason S. Link, Jonathan A. Hare, and William J. Overholtz. 2009. <span>“Changing Spatial Distribution of Fish Stocks in Relation to Climate and Population Size on the <span>Northeast</span> <span>United</span> <span>States</span> Continental Shelf.”</span> <em>Marine Ecology Progress Series</em> 393: 111–29.
+</div>
+<div id="ref-pershing2021climate" class="csl-entry" role="listitem">
+Pershing, Andrew J., Michael A. Alexander, Damian C. Brady, David Brickman, Enrique N. Curchitser, Antony W. Diamond, Loren McClenachan, et al. 2021. <span>“Climate Impacts on the <span>Gulf</span> of <span>Maine</span> Ecosystem: A Review of Observed and Expected Changes in 2050 from Rising Temperatures.”</span> <em>Elementa: Science of the Anthropocene</em> 9 (1): 00076. <a href="https://doi.org/10.1525/elementa.2020.00076">https://doi.org/10.1525/elementa.2020.00076</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

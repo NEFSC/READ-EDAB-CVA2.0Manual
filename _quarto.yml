@@ -1,6 +1,8 @@
 project: 
   type: book
   output-dir: docs
+  resources: 
+    - "pdfs/*.pdf"
 
 book:
   title: "Climate Vulnerability Assessment 2.0"

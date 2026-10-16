@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Moderate</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 98%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Increase</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral</td>
+<td>Positive</td>
+<td>Increase</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Scup received a <strong>Moderate</strong> sensitivity score with a certainty of 59%. A total of four attributes had scores greater than 2.5: Spawning Cycle (3), Complexity in Reproductive Strategy (2.9), Dispersal of Early Life Stages (2.9), and Other Stressors (2.8).</p>
+<p>Scup only spawn once per year between May and August <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Spawning occurs in inshore waters once they are warmer than 10C and rely on highly vulnerable habitats such as submerged aquatic vegetation and estuarine habitats <span class="citation" data-cites="steimle1999_scup guyant2022northeast">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>; <a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. Spawning may also rely on soniferous behaviors <span class="citation" data-cites="looby2022quantitative">(<a href="#ref-looby2022quantitative" role="doc-biblioref">Looby et al. 2022</a>)</span>. Eggs and larvae do not disperse far from spawning locations <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Adults utilize benthic habitats on the continental shelf and in estuaries. As a result, they are exposed to a variety of stressors due to urbanization impacts such as hypoxia, changes to freshwater inputs, and dredging <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>.</p>
+<p>In the 2016 Climate Vulnerability Assessment, Scup received a Low sensitivity score. Similar to our analysis, this score was driven by Spawning Cycle and Early Life History Requirements, as well as Population Growth Rate <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. In our analysis, Population Growth Rate received a score of 2.4.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>98% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +588,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted that climate change will have a <strong>neutral</strong> effect on Scup. Certainty was 93%. Scup distributions have shifted northward and offshore <span class="citation" data-cites="bell2015disentangling palacios2023quantifying">(<a href="#ref-bell2015disentangling" role="doc-biblioref">Bell et al. 2015</a>; <a href="#ref-palacios2023quantifying" role="doc-biblioref">Palacios-Abrantes et al. 2023</a>)</span>, likely in search of preferred temperatures, which range between 9-24C <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>, but their center of distribution has not changed <span class="citation" data-cites="roday2026recreational">(<a href="#ref-roday2026recreational" role="doc-biblioref">Roday et al. 2026</a>)</span>. Juveniles and adults both utilize vulnerable estuarine habitats <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. In the previous assessment, experts predicted that Scup would be positively impacted by climate change, however, uncertainty was high <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Scup distributions in the spring and fall have shifted northward and offshore, which may necessitate new management strategies <span class="citation" data-cites="bell2015disentangling palacios2023quantifying">(<a href="#ref-bell2015disentangling" role="doc-biblioref">Bell et al. 2015</a>; <a href="#ref-palacios2023quantifying" role="doc-biblioref">Palacios-Abrantes et al. 2023</a>)</span>. <span class="citation" data-cites="roday2026recreational">Roday et al. (<a href="#ref-roday2026recreational" role="doc-biblioref">2026</a>)</span> analyzed fish distribution shifts using recreational catch and fishery independent data. Scup distributions showed a moderate range expansion but little to no change to center of distribution <span class="citation" data-cites="roday2026recreational">(<a href="#ref-roday2026recreational" role="doc-biblioref">Roday et al. 2026</a>)</span>. Juvenile scup exposed to elevated pCO<sup>2</sup> in a laboratory setting had no significant effect on growth, survival, or otolith condition. Scup spawning areas in Long Island Sound are already exposed to high pCO<sup>2</sup>, indicating some tolerance to ocean acidification <span class="citation" data-cites="perry2015effect">(<a href="#ref-perry2015effect" role="doc-biblioref">Perry et al. 2015</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Scup are found in the Northwest Atlantic from Cape Cod, Massachusetts to Cape Hatteras, North Carolina <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. There are two U.S. stocks: Mid-Atlantic/New England (Atlantic coast) and South Atlantic <span class="citation" data-cites="nefsc2025scup">(<a href="#ref-nefsc2025scup" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025</a>)</span>. Spawning occurs once per year in coastal bays and estuaries in May-August, beginning with lower latitudes <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Eggs take 2-3 days to hatch depending on temperature. The larval stage lasts from 2 mm TL to 18-19 TL; the duration of this period is unclear. Larval distributions are highest in inshore bays and estuaries, suggesting that eggs and larvae do not travel far during planktonic stages <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. The biggest cue for larval settlement is size (~25 mm), with size in part being a function of temperature - most common at 15-20°C <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Larval diets are poorly understood, but larvae have been successfully reared on zooplankton in lab experiments <span class="citation" data-cites="bowman1987food">(<a href="#ref-bowman1987food" role="doc-biblioref">Bowman et al. 1987</a>)</span>. Early juveniles consume copepods, so larval scup may also consume copepods <span class="citation" data-cites="michelman1988biology">(<a href="#ref-michelman1988biology" role="doc-biblioref">Michelman 1988</a>)</span>. Larval predators include plantivorous medusae, crustaceans, and fishes <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Juveniles have been caught in intertidal and subtidal habitats, over sand, silty-sand, shell, mud, mussel beds and eelgrass (<em>Zosteria marina</em>). Offshore winter-spring distributions indicate that they occur in habitats ranging from relatively flat, open, sandy-silty bottoms to the head of submarine canyons, and other areas with topographical relief and varying sediments. Juveniles can use biogenic depressions, sand wave troughs, and possibly mollusk shell fields for shelter in winter, suggesting structure may be important to juveniles <span class="citation" data-cites="able1998first">(<a href="#ref-able1998first" role="doc-biblioref">Able and Fahay 1998</a>)</span>. Juveniles primarily feed on polychaetes, epibenthic amphipods and other small crustaceans, mollusks, and fish eggs and larvae <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Prey size increases with individual size, with copepods and mysids being important to early juveniles and bivalve mollusks consumed by larger fish <span class="citation" data-cites="bowman1987food">(<a href="#ref-bowman1987food" role="doc-biblioref">Bowman et al. 1987</a>)</span>. Adult scup are also benthic feeders and forage on a variety of prey, including small crustaceans (including zooplankton), polychaetes, mollusks, small squid, vegetable detritus, insect larvae, hydroids, sand dollars, amphipods, and small fish <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Similar to juveniles, their prey size scales with individual size. Diets can vary based on location, and season. Feeding slows or stops entirely in winter <span class="citation" data-cites="byron2010stability">(<a href="#ref-byron2010stability" role="doc-biblioref">Byron and Link 2010</a>)</span>. Adults are primarily benthic and utilize both estuarine and shelf benthos <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. Age at maturity is around 2 years of age, with a maximum age between 15-20 years <span class="citation" data-cites="nefsc2015sixtieth">(<a href="#ref-nefsc2015sixtieth" role="doc-biblioref">Northeast Fisheries Science Center 2015</a>)</span>. Scup undertake extensive inshore/offshore migrations driven by temperature preferences. They migrate south and offshore in the fall and return to inshore bays and estuaries in the spring to spawn. Scup can become inactive or dormant if caught in cold pockets &lt; 6°C during their inshore spring migration and prefer temperatures 9-24°C <span class="citation" data-cites="steimle1999_scup">(<a href="#ref-steimle1999_scup" role="doc-biblioref">Steimle et al. 1999</a>)</span>. The North Atlantic scup fishery is managed jointly by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission. The 2025 Management Track Assessment reported the Atlantic coast stock as not overfished and overfishing not occurring <span class="citation" data-cites="nefsc2025scup">(<a href="#ref-nefsc2025scup" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2025</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +631,50 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-able1998first" class="csl-entry" role="listitem">
+Able, Kenneth W., and Michael P. Fahay. 1998. <em>The First Year in the Life of Estuarine Fishes in the Middle Atlantic Bight</em>. New Brunswick, NJ: Rutgers University Press.
+</div>
+<div id="ref-bell2015disentangling" class="csl-entry" role="listitem">
+Bell, R. J., D. E. Richardson, J. A. Hare, P. D. Lynch, and P. S. Fratantoni. 2015. <span>“Disentangling the Effects of Climate, Abundance, and Size on the Distribution of Marine Fish: An Example Based on Four Stocks from the Northeast US Shelf.”</span> <em>ICES Journal of Marine Science</em> 72 (5): 1311–22.
+</div>
+<div id="ref-bowman1987food" class="csl-entry" role="listitem">
+Bowman, R. E., T. R. Azarovitz, E. S. Howard, and B. P. Hayden. 1987. <span>“Food and Distribution of Juveniles of Seventeen Northwest Atlantic Fish Species, 1973-1976.”</span> NOAA Tech. Mem. NMFS-F/NEC-45. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-byron2010stability" class="csl-entry" role="listitem">
+Byron, C. J., and J. S. Link. 2010. <span>“Stability in the Feeding Ecology of Four Demersal Fish Predators in the US Northeast Shelf Large Marine Ecosystem.”</span> <em>Marine Ecology Progress Series</em> 406: 239–50.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-looby2022quantitative" class="csl-entry" role="listitem">
+Looby, Audrey, Kieran Cox, Santiago Bravo, Rodney Rountree, Francis Juanes, Laura K Reynolds, and Charles W Martin. 2022. <span>“A Quantitative Inventory of Global Soniferous Fish Diversity.”</span> <em>Reviews in Fish Biology and Fisheries</em> 32 (2): 581–95.
+</div>
+<div id="ref-michelman1988biology" class="csl-entry" role="listitem">
+Michelman, M. S. 1988. <span>“The Biology of Juvenile Scup (<span>S</span>tenotomus Chrysops (<span>L</span>.)) in <span>N</span>arragansett <span>B</span>ay, <span>RI</span>: Food Habits, Metabolic Rate and Growth Rate.”</span> Master’s thesis, Kingston, RI: University of Rhode Island.
+</div>
+<div id="ref-nefsc2015sixtieth" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center. 2015. <span>“60th Northeast Regional Stock Assessment Workshop (60th SAW) Assessment Report.”</span> 15-08. National Marine Fisheries Service. <a href="https://doi.org/10.7289/V5W37T9T">https://doi.org/10.7289/V5W37T9T</a>.
+</div>
+<div id="ref-nefsc2025scup" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center (NEFSC). 2025. <span>“Scup 2025 Management Track Assessment Report.”</span> Atlantic States Marine Fisheries Commission. <a href="https://asmfc.org/wp-content/uploads/2025/08/Scup_Managment_Track_Assessment_2025.pdf">https://asmfc.org/wp-content/uploads/2025/08/Scup_Managment_Track_Assessment_2025.pdf</a>.
+</div>
+<div id="ref-palacios2023quantifying" class="csl-entry" role="listitem">
+Palacios-Abrantes, J., S. Crosson, C. Dumas, R. Fujita, A. Levine, C. Longo, and O. P. Jensen. 2023. <span>“Quantifying Fish Range Shifts Across Poorly Defined Management Boundaries.”</span> <em>PLoS One</em> 18 (1): e0279025.
+</div>
+<div id="ref-perry2015effect" class="csl-entry" role="listitem">
+Perry, D. M., D. H. Redman, J. C. Widman Jr, S. Meseck, A. King, and J. J. Pereira. 2015. <span>“Effect of Ocean Acidification on Growth and Otolith Condition of Juvenile Scup, <span>S</span>tenotomus Chrysops.”</span> <em>Ecology and Evolution</em> 5 (18): 4187–96.
+</div>
+<div id="ref-roday2026recreational" class="csl-entry" role="listitem">
+Roday, R. E., R. E. Hudock, D. R. Millea, A. B. Carlisle, and E. A. Hale. 2026. <span>“Recreational Fisheries as Indicators of Change: Species Range Shifts from MRIP (1981–2024).”</span> <em>BMC Zoology</em>.
+</div>
+<div id="ref-steimle1999_scup" class="csl-entry" role="listitem">
+Steimle, F. W., C. A. Zetlin, P. L. Berrien, D. L. Johnson, and S. Chang. 1999. <span>“Essential Fish Habitat Source Document: Scup, <span>S</span>tenotomus Chrysops, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE-149. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

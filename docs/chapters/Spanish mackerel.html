@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/Striped bass.html" rel="next">
-<link href="../chapters/Softshell clam.html" rel="prev">
+<link href="../chapters/Spiny dogfish.html" rel="next">
+<link href="../chapters/Smooth dogfish.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 85%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low</td>
+<td>Low</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral</td>
+<td>Positive</td>
+<td>Decrease</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Spanish mackerel received a <strong>Low</strong> sensitivity score. Certainty was 100% according to bootstrap analysis. No attributes scored higher than 2.5. The highest attribute score was for Other Stressors (2.4). Spanish mackerel adults use estuarine water column habitats, which are classified as highly vulnerable due to impacts of stratification, hypoxia, increased fresh water runoff, and habitat loss <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>.</p>
+<p>Similarly, in the previous Climate Vulnerability Assessment, Spanish Mackerel was also given a Low sensitivity score and no attributes scored above 2.5 <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>85% of data quality scores were greater than or equal to 2, indicating strong data quality. No data gaps (mean attribute data quality score &lt; 2) were identified.</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predict that climate change will have a <strong>neutral</strong> effect on Spanish mackerel. Certainty was 92%. Spanish mackerel prefer temperatures between 21-27 C, so warming temperatures will likely expand suitable habitat <span class="citation" data-cites="berrien1977biological">(<a href="#ref-berrien1977biological" role="doc-biblioref">Berrien and Finan 1977</a>)</span>. Spawning, however, occurs in coastal areas and estuaries such as Chesapeake Bay <span class="citation" data-cites="cooksey1996reproductive mceachran1980distribution">(<a href="#ref-cooksey1996reproductive" role="doc-biblioref">Cooksey 1996</a>; <a href="#ref-mceachran1980distribution" role="doc-biblioref">McEachran, Finucane, and Hall 1980</a>)</span>. These habitats are vulnerable due to anthropogenic impacts and may impact reproductive success <span class="citation" data-cites="guyant2022northeast">(<a href="#ref-guyant2022northeast" role="doc-biblioref">Guyant et al. 2022</a>)</span>. The previous Climate Vulnerability Assessment predicted that Spanish mackerel would be positively impacted by climate change <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Little work exists on the effects of climate on Spanish mackerel populations in the Northwest Atlantic. Temperature likely limits movement; they are not found in waters colder than 18°C <span class="citation" data-cites="berrien1977biological">(<a href="#ref-berrien1977biological" role="doc-biblioref">Berrien and Finan 1977</a>)</span>. Rising ocean temperatures may expand suitable habitat in the Mid-Atlantic and north to New England. Larval Spanish mackerel were largely resistant to contaminants from the Deepwater Horizon oil spill, and larval abundance did not differ before v. after the spill <span class="citation" data-cites="ransom2016condition">(<a href="#ref-ransom2016condition" role="doc-biblioref">Ransom, Filbrun, and Hernandez Jr 2016</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>Spanish mackerel are a migratory, schooling fish found along the eastern United States and Gulf from New York to Florida <span class="citation" data-cites="godcharles1986species">(<a href="#ref-godcharles1986species" role="doc-biblioref">Godcharles and Murphy 1986</a>)</span>. There are two Spanish mackerel stocks, one in the South Atlantic and one in the Gulf of America <span class="citation" data-cites="sedar2022sedar78 sedar2023sedar81">(<a href="#ref-sedar2022sedar78" role="doc-biblioref">SouthEast Data, Assessment, and Review (SEDAR) 2022</a>, <a href="#ref-sedar2023sedar81" role="doc-biblioref">2023</a>)</span>. The Atlantic stock overwinters off the Florida coast and migrates northward to the Mid-Atlantic in the spring and early summer. They return south to Florida once the Mid-Atlantic cools in the fall <span class="citation" data-cites="berrien1977biological">(<a href="#ref-berrien1977biological" role="doc-biblioref">Berrien and Finan 1977</a>)</span>. Spanish mackerel prefer temperatures 21-27°C and are not seen below 18°C <span class="citation" data-cites="berrien1977biological">(<a href="#ref-berrien1977biological" role="doc-biblioref">Berrien and Finan 1977</a>)</span>. Spawning occurs from May to September along the southeast Atlantic coast, with lower latitudes spawning earlier than higher latitudes <span class="citation" data-cites="collins1987larval">(<a href="#ref-collins1987larval" role="doc-biblioref">Collins and Stender 1987</a>)</span>. In Chesapeake Bay, spawning occurs from June to August, peaking in June <span class="citation" data-cites="cooksey1996reproductive">(<a href="#ref-cooksey1996reproductive" role="doc-biblioref">Cooksey 1996</a>)</span>. Females are batch spawners, releasing as many as 1.5 million eggs over the spawning season <span class="citation" data-cites="collins1987larval">(<a href="#ref-collins1987larval" role="doc-biblioref">Collins and Stender 1987</a>)</span>. Larval collection data indicate that spawning occurs at depths of 12-35 meters over the inner continental shelf including estuarine and coastal areas <span class="citation" data-cites="mceachran1980distribution">(<a href="#ref-mceachran1980distribution" role="doc-biblioref">McEachran, Finucane, and Hall 1980</a>)</span>. Hatching occurs approximately 25 hours after fertilization at water temperatures averaging 26ºC. Larvae and early juveniles grow 1.9 mm per day for approximately the first 23 days of life. From 23-40 days, growth is accelerated, with young fishes growing as much as 5 mm per day. Thereafter, growth slows to approximately 2.1 mm per day <span class="citation" data-cites="schmidt1993age">(<a href="#ref-schmidt1993age" role="doc-biblioref">Schmidt, Collins, and Wyanski 1993</a>)</span>. Larvae are found in surface waters between 19.6–29.8°C with a salinity of 28.3–37.4 ppt. It is unclear if there is a dependency on currents for transport to nursery habitats <span class="citation" data-cites="godcharles1986species">(<a href="#ref-godcharles1986species" role="doc-biblioref">Godcharles and Murphy 1986</a>)</span>. Larvae feed on other larval fishes such as carngids, clupeids, and engraulids and crustaceans <span class="citation" data-cites="berrien1977biological">(<a href="#ref-berrien1977biological" role="doc-biblioref">Berrien and Finan 1977</a>)</span>. Juveniles and adults are voracious, opportunistic, carnivores. Food consists mostly of small fishes with lesser quantities of pandalid and penaeoid shrimps and squids. Clupeoids such as round herring, thread herring, menhaden, and alewives, along with anchovies, are important forage species. They seldom feed on bottom invertebrates <span class="citation" data-cites="bowman2000food berrien1977biological">(<a href="#ref-bowman2000food" role="doc-biblioref">Bowman et al. 2000</a>; <a href="#ref-berrien1977biological" role="doc-biblioref">Berrien and Finan 1977</a>)</span>. Spanish mackerel reach maturity around 1-1.5 years of age <span class="citation" data-cites="juan2013life">(<a href="#ref-juan2013life" role="doc-biblioref">Juan-Jord’a et al. 2013</a>)</span> with a maximum lifespan of around 12 years <span class="citation" data-cites="sedar2022sedar78">(<a href="#ref-sedar2022sedar78" role="doc-biblioref">SouthEast Data, Assessment, and Review (SEDAR) 2022</a>)</span>. They are largely preyed upon by dolphins, sharks, and tunas <span class="citation" data-cites="berrien1977biological">(<a href="#ref-berrien1977biological" role="doc-biblioref">Berrien and Finan 1977</a>)</span>. Management of Spanish mackerel in state waters is coordinated by the Atlantic States Marine Fisheries Commission (ASMFC) Coastal Pelagics Management Board. Both stocks are not overfished or subject to overfishing <span class="citation" data-cites="sedar2022sedar78 sedar2023sedar81">(<a href="#ref-sedar2022sedar78" role="doc-biblioref">SouthEast Data, Assessment, and Review (SEDAR) 2022</a>, <a href="#ref-sedar2023sedar81" role="doc-biblioref">2023</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +630,47 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-berrien1977biological" class="csl-entry" role="listitem">
+Berrien, P. L., and D. Finan. 1977. <span>“Biological and Fisheries Data on Spanish Mackerel, <span>S</span>comberomorus Maculatus (<span>M</span>itchill).”</span> NEFSC Technical Series Report No. 9.
+</div>
+<div id="ref-bowman2000food" class="csl-entry" role="listitem">
+Bowman, R. E., C. E. Stillwell, W. L. Michaels, and M. D. Grosslein. 2000. <span>“Food of Northwest Atlantic Fishes and Two Common Species of Squid.”</span> NOAA Tech. Memo. NMFS-F/NE-155.
+</div>
+<div id="ref-collins1987larval" class="csl-entry" role="listitem">
+Collins, M. R., and B. W. Stender. 1987. <span>“Larval King Mackerel (<span>S</span>comberomorus Cavalla), Spanish Mackerel (<span>S</span>. Maculatus), and Bluefish (<span>P</span>otomatus Saltatrix) Off the Southeast Coast of the <span>U</span>nited <span>S</span>tates, 1973–1980.”</span> <em>Bulletin of Marine Science</em> 41 (3): 822–34.
+</div>
+<div id="ref-cooksey1996reproductive" class="csl-entry" role="listitem">
+Cooksey, C. L. 1996. <span>“Reproductive Biology of Spanish Mackerel, <span>S</span>comberomorus Maculatus, in the Lower <span>C</span>hesapeake <span>B</span>ay.”</span> PhD thesis, College of William; Mary. <a href="https://scholarworks.wm.edu/server/api/core/bitstreams/2f415b0b-99be-4e8d-b669-49892657e0e0/content">https://scholarworks.wm.edu/server/api/core/bitstreams/2f415b0b-99be-4e8d-b669-49892657e0e0/content</a>.
+</div>
+<div id="ref-godcharles1986species" class="csl-entry" role="listitem">
+Godcharles, M. F., and M. D. Murphy. 1986. <span>“Species Profiles. Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (<span>S</span>outh <span>F</span>lorida). King Mackerel and Spanish Mackerel.”</span> FWS821158. U.S. Fish; Wildlife Service.
+</div>
+<div id="ref-guyant2022northeast" class="csl-entry" role="listitem">
+Guyant, M, M Bachman, J Coakley, G Fay, M Johnson, V Kentner, W Morrison, and T Rankin. 2022. <span>“Northeast Regional Habitat Assessment-Habitat Climate Vulnerability Assessment Crosswalk, Including Species Narratives, Habitat-Species Matrix, and Final Report.”</span> Northeast Regional Habitat Assessment. <a href="https://nrha.shinyapps.io/dataexplorer/#!/crosswalk">https://nrha.shinyapps.io/dataexplorer/#!/crosswalk</a>.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-juan2013life" class="csl-entry" role="listitem">
+Juan-Jord’a, M. J., I. Mosqueira, J. Freire, and N. K. Dulvy. 2013. <span>“Life in 3-<span>D</span>: Life History Strategies in Tunas, Mackerels and Bonitos.”</span> <em>Reviews in Fish Biology and Fisheries</em> 23 (2): 135–55.
+</div>
+<div id="ref-mceachran1980distribution" class="csl-entry" role="listitem">
+McEachran, J. D., J. H. Finucane, and L. S. Hall. 1980. <span>“Distribution, Seasonality and Abundance of King and Spanish Mackerel Larvae in the Northwestern <span>G</span>ulf of <span>M</span>exico (<span>P</span>isces: <span>S</span>combridae).”</span> <em>Northeast Gulf Science</em> 4 (1): 1–16.
+</div>
+<div id="ref-ransom2016condition" class="csl-entry" role="listitem">
+Ransom, J. T., J. E. Filbrun, and F. J. Hernandez Jr. 2016. <span>“Condition of Larval Spanish Mackerel <span>S</span>comberomorus Maculatus in Relation to the <span>D</span>eepwater <span>H</span>orizon Oil Spill.”</span> <em>Marine Ecology Progress Series</em> 558: 143–52.
+</div>
+<div id="ref-schmidt1993age" class="csl-entry" role="listitem">
+Schmidt, D. J., M. R. Collins, and D. M. Wyanski. 1993. <span>“Age, Growth, Maturity, and Spawning of Spanish Mackerel, <span>S</span>comberomorus Maculatus (<span>M</span>itchill), from the <span>A</span>tlantic Coast of the Southeastern <span>U</span>nited <span>S</span>tates.”</span> <em>Fishery Bulletin</em> 91: 526–26.
+</div>
+<div id="ref-sedar2022sedar78" class="csl-entry" role="listitem">
+SouthEast Data, Assessment, and Review (SEDAR). 2022. <span>“<span>SEDAR</span> 78 <span>S</span>outh <span>A</span>tlantic Spanish Mackerel Stock Assessment Report.”</span> SEDAR. <a href="https://asmfc.org/wp-content/uploads/2025/01/SpMackerelSEDAR78_July2022.pdf">https://asmfc.org/wp-content/uploads/2025/01/SpMackerelSEDAR78_July2022.pdf</a>.
+</div>
+<div id="ref-sedar2023sedar81" class="csl-entry" role="listitem">
+———. 2023. <span>“<span>SEDAR</span> 81 Stock Assessment Report <span>G</span>ulf of <span>M</span>exico Spanish Mackerel.”</span> SEDAR. <a href="https://sedarweb.org/documents/sedar-81-gulf-of-mexico-spanish-mackerel-final-stock-assessment/">https://sedarweb.org/documents/sedar-81-gulf-of-mexico-spanish-mackerel-final-stock-assessment/</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1032,13 +1096,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/Softshell clam.html" class="pagination-link" aria-label="Softshell clam (*`Mya arenaria`*)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></span>
+      <a href="../chapters/Smooth dogfish.html" class="pagination-link" aria-label="Smooth dogfish (*`Mustelus canis`*)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Smooth dogfish (<em><code>Mustelus canis</code></em>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/Striped bass.html" class="pagination-link" aria-label="Striped bass (*`Morone saxatilis`*)">
-        <span class="nav-page-text"><span class="chapter-title">Striped bass (<em><code>Morone saxatilis</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/Spiny dogfish.html" class="pagination-link" aria-label="Spiny Dogfish (*`Squalus acanthias`*)">
+        <span class="nav-page-text"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = Low</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 85%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
+<col style="width: 25%">
+<col style="width: 23%">
 <col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Low</td>
+<td>Low</td>
+<td>None</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Neutral</td>
+<td>Positive</td>
+<td>Decrease</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>Short-finned squid received a <strong>Low</strong> sensitivity score, with a certainty of 89%. Only one attribute – Egg and Larval Survival and Settlement Requirements (2.9) – received a score greater than 2.5. Short-finned squid rely on the Gulf Stream for transport between southern spawning habitats and northern feeding grounds. Therefore, recruitment has been linked to climate oscillations such as the North Atlantic Oscillation that drive shifts in the Gulf Stream <span class="citation" data-cites="dawe2000environmental odor2013chapter hendrickson2004population">(<a href="#ref-dawe2000environmental" role="doc-biblioref">Dawe, Colbourne, and Drinkwater 2000</a>; <a href="#ref-odor2013chapter" role="doc-biblioref">O’Dor and Dawe 2013</a>; <a href="#ref-hendrickson2004population" role="doc-biblioref">Hendrickson 2004</a>)</span>.</p>
+<p>In the previous Climate Vulnerability Assessment for the Northeast Shelf, Short-finned squid also received a Low sensitivity score. In that analysis, no attributes had a score greater than 2.5 <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>85% of data quality scores were greater than or equal to 2, indicating strong data quality. Only Stock Size/Status was considered a data gap (mean attribute data quality score &lt; 2).</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +587,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predicted that climate change will have a <strong>neutral</strong> effect on short-finned squid. Certainty was 96%. Recruitment is highly dependent on transport mechanisms such as the Gulf Stream and catch per unit effort is correlated with cooler bottom temperatures <span class="citation" data-cites="dawe2000environmental salois2023shelf odor2013chapter hendrickson2004population">(<a href="#ref-dawe2000environmental" role="doc-biblioref">Dawe, Colbourne, and Drinkwater 2000</a>; <a href="#ref-salois2023shelf" role="doc-biblioref">Salois et al. 2023</a>; <a href="#ref-odor2013chapter" role="doc-biblioref">O’Dor and Dawe 2013</a>; <a href="#ref-hendrickson2004population" role="doc-biblioref">Hendrickson 2004</a>)</span>. However, short-finned squid are able to adapt to the available niche space in response to predators, competitors, and prey due to their short life cycle <span class="citation" data-cites="dawe2000environmental">(<a href="#ref-dawe2000environmental" role="doc-biblioref">Dawe, Colbourne, and Drinkwater 2000</a>)</span>. In the previous Assessment, short-finned squid were predicted to be positively impacted by climate change, although with high uncertainty <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Distribution and abundance of shortfin squid on the Northeast U.S. Continental Shelf is highly related to oceanographic conditions such as shelf-slope dynamics and positions of the shelf-slope front and Gulf Stream <span class="citation" data-cites="dawe2007ocean">(<a href="#ref-dawe2007ocean" role="doc-biblioref">Dawe et al. 2007</a>)</span>. <span class="citation" data-cites="dawe2000environmental">Dawe, Colbourne, and Drinkwater (<a href="#ref-dawe2000environmental" role="doc-biblioref">2000</a>)</span> theorized based on catch data from Newfoundland that squid abundance may co-vary with that of its most important predators, competitors, and prey in an adaptive manner such that the population increases and expands when niche space becomes available. These shifts appear to result from high water temperatures, a negative North Atlantic Oscillation (NAO) index, and a southward shift in the Gulf Stream position. Greater catch per unit effort (CPUE) of shortfin squid has been associated with cooler bottom temperatures, timing and location of warm core rings in the winter and spring, and slope water/shelf slope front dynamics <span class="citation" data-cites="salois2023shelf">(<a href="#ref-salois2023shelf" role="doc-biblioref">Salois et al. 2023</a>)</span>. These features may contribute to areas of high primary productivity, food sources, and transport mechanisms for larvae.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>The northern shortfin squid inhabits Northwest Atlantic shelf and slope waters from the Labrador Sea to the Florida Straits <span class="citation" data-cites="hendrickson2004essential">(<a href="#ref-hendrickson2004essential" role="doc-biblioref">Hendrickson and Holmes 2004</a>)</span>. Spawning occurs year round, but peaks seasonally from October to June. Shortfin squid are semelparous; females release multiple egg capsules during a single spawning season, after which they die <span class="citation" data-cites="hendrickson2004essential">(<a href="#ref-hendrickson2004essential" role="doc-biblioref">Hendrickson and Holmes 2004</a>)</span>. Laboratory studies indicate that hatching occurs in 16 days at 13°C, 12 days at 16°C, and 8 days at 21°C. In the laboratory, paralarvae enter a transitional stage at approximately 5.0 mm ML, followed by a juvenile stage at about 7.0 mm ML <span class="citation" data-cites="odor1982embryonic">(<a href="#ref-odor1982embryonic" role="doc-biblioref">O’Dor et al. 1982</a>)</span>. The Gulf Stream and associated eddies are hypothesized to be the primary mechanisms for transport of larvae to northern latitudes and then inshore via the eddies <span class="citation" data-cites="trites1983physical">(<a href="#ref-trites1983physical" role="doc-biblioref">Trites 1983</a>)</span>. Larvae have small yolk-sacs, so they rely on rapid transportation to food-rich habitats <span class="citation" data-cites="hendrickson2004population">(<a href="#ref-hendrickson2004population" role="doc-biblioref">Hendrickson 2004</a>)</span>. Larvae feed on a variety of prey items (fish, nematodes, euphausiids). Larvae and juveniles are abundant in the slope water of the Gulf Stream and in the adjacent upwelling regions at times of maximum production such as the spring plankton bloom <span class="citation" data-cites="hendrickson2004essential">(<a href="#ref-hendrickson2004essential" role="doc-biblioref">Hendrickson and Holmes 2004</a>)</span>. As the initial biomass of the bloom is transferred up through various trophic levels, the squid grow at a pace which allows them to feed continuously at the level where biomass is peaking <span class="citation" data-cites="odor2013chapter">(<a href="#ref-odor2013chapter" role="doc-biblioref">O’Dor and Dawe 2013</a>)</span>. Paralarvae, juveniles and adults of Illex exhibit diel vertical migrations to feed at night, and remain near the seabed during the day <span class="citation" data-cites="arkhipkin1986diel">(<a href="#ref-arkhipkin1986diel" role="doc-biblioref">Arkhipkin and Fedulov 1986</a>)</span>. An ontogenetic shift in diet from a predominance of crustaceans to a predominance of fish and squid is evident as the squid mature <span class="citation" data-cites="dawe1988length">(<a href="#ref-dawe1988length" role="doc-biblioref">Dawe 1988</a>)</span>. Larger, older Northern shortfin squid feed primarily on fish, but cannibalism of small individuals (most likely males) by larger females also occurs, particularly during autumn. Fish prey consists of the early life history stages of Atlantic cod, Arctic cod, redfish, sand lance, mackerel, Atlantic herring, haddock, and sculpin <span class="citation" data-cites="dawe1988length">(<a href="#ref-dawe1988length" role="doc-biblioref">Dawe 1988</a>)</span>. Shortfin squid are important prey for seabirds and many fish species, including tunas, hakes, spiny dogfish, monkfish, and Atlantic cod <span class="citation" data-cites="hendrickson2004essential">(<a href="#ref-hendrickson2004essential" role="doc-biblioref">Hendrickson and Holmes 2004</a>)</span>. Juveniles and adults make seasonal migrations off the continental shelf in the fall and back onto the shelf to spawning grounds in the Mid-Atlantic in the spring <span class="citation" data-cites="hendrickson2004essential">(<a href="#ref-hendrickson2004essential" role="doc-biblioref">Hendrickson and Holmes 2004</a>)</span>. Shortfin squid are a short lived species, reaching maturity at 40-60 days and a maximum lifespan of less than one year <span class="citation" data-cites="hendrickson2004population">(<a href="#ref-hendrickson2004population" role="doc-biblioref">Hendrickson 2004</a>)</span>. Adults are found at bottom temperatures between 3.5-15°C and surface temperatures greater than 20°C <span class="citation" data-cites="hendrickson2004essential">(<a href="#ref-hendrickson2004essential" role="doc-biblioref">Hendrickson and Holmes 2004</a>)</span>. Shortfin squid in the Northwest Atlantic are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. The most recent stock assessment occurred in 2025; management measures are in place but stock status is unknown as there are no reference points for this stock <span class="citation" data-cites="nefsc2025northern">(<a href="#ref-nefsc2025northern" role="doc-biblioref">Northeast Fisheries Science Center 2025</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +630,44 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-arkhipkin1986diel" class="csl-entry" role="listitem">
+Arkhipkin, A. I., and P. P. Fedulov. 1986. <span>“Diel Movements of Juvenile <span>I</span>llex Illecebrosus and Other Cephalopods in the Shelf Water-Slope Water Frontal Zone Off the <span>S</span>cotian <span>S</span>helf in Spring.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 7 (1): 15–24.
+</div>
+<div id="ref-dawe1988length" class="csl-entry" role="listitem">
+Dawe, E. G. 1988. <span>“Length-Weight Relationships for Short-Finned Squid in <span>N</span>ewfoundland and the Effect of Diet on Condition and Growth.”</span> <em>Transactions of the American Fisheries Society</em> 117 (6): 591–99.
+</div>
+<div id="ref-dawe2000environmental" class="csl-entry" role="listitem">
+Dawe, E. G., E. B. Colbourne, and K. F. Drinkwater. 2000. <span>“Environmental Effects on Recruitment of Short-Finned Squid (<span>I</span>llex Illecebrosus).”</span> <em>ICES Journal of Marine Science</em> 57 (4): 1002–13.
+</div>
+<div id="ref-dawe2007ocean" class="csl-entry" role="listitem">
+Dawe, E. G., L. C. Hendrickson, E. B. Colbourne, K. F. Drinkwater, and M. A. Showell. 2007. <span>“Ocean Climate Effects on the Relative Abundance of Short‐finned (<span>I</span>llex Illecebrosus) and Long‐finned (<span>L</span>oligo Pealeii) Squid in the Northwest <span>A</span>tlantic <span>O</span>cean.”</span> <em>Fisheries Oceanography</em> 16 (4): 303–16.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-hendrickson2004population" class="csl-entry" role="listitem">
+Hendrickson, L. C. 2004. <span>“Population Biology of Northern Shortfin Squid (<span>I</span>llex Illecebrosus) in the <span>N</span>orthwest <span>A</span>tlantic <span>O</span>cean and Initial Documentation of a Spawning Area.”</span> <em>ICES Journal of Marine Science</em> 61 (2): 252–66.
+</div>
+<div id="ref-hendrickson2004essential" class="csl-entry" role="listitem">
+Hendrickson, L. C., and E. M. Holmes. 2004. <span>“Essential Fish Habitat Source Document. <span>N</span>orthern Shortfin Squid, <span>I</span>llex Illecebrosus, Life History and Habitat Characteristics.”</span> NOAA Technical Memorandum NMFS-NE-191. National Oceanic; Atmospheric Administration (NOAA).
+</div>
+<div id="ref-nefsc2025northern" class="csl-entry" role="listitem">
+Northeast Fisheries Science Center. 2025. <span>“Northern Shortfin Squid 2025 <span>M</span>anagement <span>T</span>rack <span>A</span>ssessment <span>R</span>eport.”</span> National Marine Fisheries Service (NMFS). <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10335">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=10335</a>.
+</div>
+<div id="ref-odor1982embryonic" class="csl-entry" role="listitem">
+O’Dor, R. K., N. Balch, E. A. Foy, R. W. M. Hirtle, and D. A. Johnston. 1982. <span>“Embryonic Development of the Squid, <span>I</span>llex Illecebrosus, and Effect of Temperature on Development Rates.”</span> <em>Journal of Northwest Atlantic Fishery Science</em> 3 (1): 41–45.
+</div>
+<div id="ref-odor2013chapter" class="csl-entry" role="listitem">
+O’Dor, R. K., and E. G. Dawe. 2013. <span>“Chapter <span>III</span>: <span>I</span>llex Illecebrosus, <span>N</span>orthern <span>S</span>hort-<span>F</span>inned <span>S</span>quid.”</span> In <em>Advances in Squid Biology, Ecology and Fisheries</em>, edited by R. Rosa, G. Pierce, and R. O’Dor, 73–108. Nova Science Publishers, Inc.
+</div>
+<div id="ref-salois2023shelf" class="csl-entry" role="listitem">
+Salois, S. L., K. J. Hyde, A. Silver, B. A. Lowman, A. Gangopadhyay, G. Gawarkiewicz, A. J. Mercer, et al. 2023. <span>“Shelf Break Exchange Processes Influence the Availability of the Northern Shortfin Squid, <span>I</span>llex Illecebrosus, in the <span>N</span>orthwest <span>A</span>tlantic.”</span> <em>Fisheries Oceanography</em> 32 (5): 461–78.
+</div>
+<div id="ref-trites1983physical" class="csl-entry" role="listitem">
+Trites, R. W. 1983. <span>“Physical Oceanographic Features and Processes Relevant to <span>I</span>llex Illecebrosus Spawning in the Western <span>N</span>orth <span>A</span>tlantic and Subsequent Larval Distribution.”</span> <em>Northwest Atlantic Fisheries Organization (NAFO) Scientific Council Studies</em> 6: 39–55.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,12 +364,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Softshell clam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Softshell clam (<em><code>Mya arenaria</code></em>)</span></a>
+  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spanish mackerel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spanish mackerel (<em><code>Scomberomorus maculatus</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -427,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#distribution-shifts" id="toc-distribution-shifts" class="nav-link" data-scroll-target="#distribution-shifts">Distribution Shifts:</a></li>
   <li><a href="#directional-effect" id="toc-directional-effect" class="nav-link" data-scroll-target="#directional-effect">Directional Effect:</a></li>
   </ul></li>
-  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</a></li>
-  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis:</a></li>
+  <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
+  <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -467,12 +487,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Scores</strong></p>
 <p>Vulnerability =</p>
 <p>Climate Exposure =</p>
-<p>Biological Sensitivity =</p>
+<p>Biological Sensitivity = High</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>Data Quality</strong></p>
 <p>Model Confidence Score =</p>
-<p>Life History Data Quality =</p>
+<p>Life History Data Quality = 88%</p>
 </div>
 </div>
 </div>
@@ -491,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -519,15 +539,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><em>Sensitivity</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>High</td>
+<td>Very High</td>
+<td>Decrease</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Negative</td>
+<td>Negative</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
@@ -544,14 +564,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-sensitivity" class="level3">
 <h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>add text here</p>
+<p>The Northern Quahog received a <strong>High</strong> Sensitivity score, with 100% certainty. Three attributes received scores greater than 3: Adult Mobility (4), Relationship to Calcified Organisms (3.8), and Population Growth Rate (3.1).</p>
+<p>Northern Quahogs, like other bivalves, are mostly sessile, only capable of small-scale movements <span class="citation" data-cites="stanley1983species">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>)</span>. Similarly, they also have calcium carbonate shells that put them at risk of ocean acidification <span class="citation" data-cites="stanley1983species">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>)</span>. They are long-lived, slowly maturing species, reaching maturity at 1-3 years and maximum ages usually around 12-20 years, although 46 year old quahogs have been observed <span class="citation" data-cites="bricelj1992aspects ridgway2011new">(<a href="#ref-bricelj1992aspects" role="doc-biblioref">Bricelj 1992</a>; <a href="#ref-ridgway2011new" role="doc-biblioref">Ridgway et al. 2011</a>)</span>.</p>
+<p>In the previous Climate Vulnerability Assessment for the Northeast Shelf, Northern Quahogs received a Very High sensitivity score. This was driven by Sensitivity to Ocean Acidification, Adult Mobility, and Other Stressors <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. In our analysis, Other Stressors received a score of 2.9.</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>add text here</p>
+<p>88% of data quality scores were greater than or equal to 2, indicating strong data quality. Only Stock Size/Status was considered a data gap (mean attribute data quality &lt; 2).</p>
 </section>
 <section id="model-confidence" class="level3">
 <h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
@@ -566,14 +588,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>add text here</p>
+<p>Experts predict that the Northern Quahog will be <strong>negatively</strong> impacted by climate change, with 70% certainty. Temperature and salinity are important to reproductive success and settlement – increasing temperatures outside the preferred temperature range could inhibit spawning and increased freshwater intrusions could inhibit metamorphosis <span class="citation" data-cites="stanley1983species kennish1975effects">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>; <a href="#ref-kennish1975effects" role="doc-biblioref">Kennish and Olsson 1975</a>)</span>. Eutrophication and ocean acidification could also impact stock fitness <span class="citation" data-cites="carmichael2004changes ivanina2013interactive">(<a href="#ref-carmichael2004changes" role="doc-biblioref">Carmichael, Shriver, and Valiela 2004</a>; <a href="#ref-ivanina2013interactive" role="doc-biblioref">Ivanina et al. 2013</a>)</span>. In the previous Climate Vulnerability Assessment for the Northeast shelf, experts also predicted that Northern Quahogs would be negatively impacted by climate change <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution:</h2>
+<h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
+<p>Temperature is the decisive factor for final gamete maturation in northern quahogs. <span class="citation" data-cites="kennish1975effects">Kennish and Olsson (<a href="#ref-kennish1975effects" role="doc-biblioref">1975</a>)</span> cited 21 to 25°C as the required or preferred temperature range for spawning. Metamorphosis is inhibited at salinities below 17.5 to 20 ppt <span class="citation" data-cites="stanley1983species">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>)</span>. Increased freshwater intrusions (man-made or otherwise) have resulted in clam die offs. Eutrophication of habitat has resulted in reduced growth and health of stocks <span class="citation" data-cites="carmichael2004changes">(<a href="#ref-carmichael2004changes" role="doc-biblioref">Carmichael, Shriver, and Valiela 2004</a>)</span>. Recent research suggests that quahogs are relatively resilient to suboxic conditions, which may help protect them from predators that are more sensitive to these conditions <span class="citation" data-cites="altieri2006local">(<a href="#ref-altieri2006local" role="doc-biblioref">Altieri and Witman 2006</a>)</span>. Northern quahogs exposed to higher temperatures and elevated pCO<sup>2</sup> led to decreased shell hardness and energy deficiency <span class="citation" data-cites="ivanina2013interactive">(<a href="#ref-ivanina2013interactive" role="doc-biblioref">Ivanina et al. 2013</a>)</span>. Alternatively, northern quahogs exposed to marine heat wave conditions exhibited increased absorption efficiency, respiration rate, excretion rate, and scope for growth, indicating their ability to recover from persistent or repeated marine heat waves <span class="citation" data-cites="liang2024hard">(<a href="#ref-liang2024hard" role="doc-biblioref">Liang et al. 2024</a>)</span>.</p>
 </section>
 <section id="life-history-synopsis" class="level2">
-<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis:</h2>
+<h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
+<p>The northern quahog, or hard clam, is a hard shell clam inhabiting intertidal and subtidal waters from the Gulf of St.&nbsp;Lawrence south to Florida <span class="citation" data-cites="kraeuter2001biology">(<a href="#ref-kraeuter2001biology" role="doc-biblioref">Kraeuter and Castagna 2001</a>)</span>. Spawning occurs from May through August, depending on latitude and temperature. Female hard clams require 2 - 2.5 months to spawn out completely, but the greatest release of eggs is during the initial spawning of the season <span class="citation" data-cites="stanley1983species">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>)</span>. Eggs hatch within 12-14 hours. Larvae are planktonic until metamorphosis, which occurs within 5-7 days at 30°C, or 16-24 days at 18°C <span class="citation" data-cites="stanley1983species rice1992review">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>; <a href="#ref-rice1992review" role="doc-biblioref">Rice and Pechenik 1992</a>)</span>. Eggs may be carried by currents up to 25km from spawning sites. Larvae feed on phytoplankton, primarily dinoflagellates and use physical transport mechanisms to travel to the entrance of estuaries <span class="citation" data-cites="stanley1983species">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>)</span>. The clams prefer to settle on sandy substrate with a few small rocks and/or shells, and set more densely in sand than mud <span class="citation" data-cites="mackenzie1979management">(<a href="#ref-mackenzie1979management" role="doc-biblioref">MacKenzie 1979</a>)</span>. Juveniles likely consume phytoplankton or small zooplankton. The adult hard clam feeds by filtering out plankton and microorganisms that are carried along the bottom by currents <span class="citation" data-cites="stanley1983species">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>)</span>, burrowing into the sediment and leaving their siphons exposed to feed. However, adults cease filter feeding at 6°C <span class="citation" data-cites="kraeuter2001biology">(<a href="#ref-kraeuter2001biology" role="doc-biblioref">Kraeuter and Castagna 2001</a>)</span>. They are preyed upon by gastropods, crabs, and starfish <span class="citation" data-cites="stanley1983species">(<a href="#ref-stanley1983species" role="doc-biblioref">Stanley and DeWitt 1983</a>)</span>. These clams have slow growth rates, reaching maturity at 1-3 years with a maximum lifespan of 12-20 years <span class="citation" data-cites="bricelj1992aspects">(<a href="#ref-bricelj1992aspects" role="doc-biblioref">Bricelj 1992</a>)</span>, although they have been found up to 46 years <span class="citation" data-cites="ridgway2011new">(<a href="#ref-ridgway2011new" role="doc-biblioref">Ridgway et al. 2011</a>)</span>. There are numerous reports of isolated incidents of hard clam disease causing high mortality rates. Disease may be related to a parasite (QPX - Quahog parasite unknown). The prevalence of QPX appears to be increasing <span class="citation" data-cites="smolowitz1998observations dove2004histological">(<a href="#ref-smolowitz1998observations" role="doc-biblioref">Smolowitz, Leavitt, and Perkins 1998</a>; <a href="#ref-dove2004histological" role="doc-biblioref">Dove, Bowser, and Cerrato 2004</a>)</span>. Quahogs occur in areas of harmful algal blooms (HABs) and may act to reduce prevalence and length of HABs due to filtration. Negative effects of HABs on quahog have been noted, specifically the presence of HABs have been shown to impact growth rates <span class="citation" data-cites="cerrato2004effect">(<a href="#ref-cerrato2004effect" role="doc-biblioref">Cerrato et al. 2004</a>)</span>. Because these clams are primarily estuarine and inhabit specific bays and coastal zones, the fishery is managed on a localized, state-by-state basis rather than by federal fishery councils. Primary management tools include minimum legal size limits (typically 50 mm), gear restrictions, and daily bag limits <span class="citation" data-cites="ncdmf2025north njdep2014inventory">(<a href="#ref-ncdmf2025north" role="doc-biblioref">North Carolina Division of Marine Fisheries (NCDMF) 2025</a>; <a href="#ref-njdep2014inventory" role="doc-biblioref">New Jersey Department of Environmental Protection (NJDEP) 2014</a>)</span>.</p>
 </section>
 <section id="figures" class="level2">
 <h2 class="anchored" data-anchor-id="figures">Figures</h2>
@@ -607,6 +631,59 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-altieri2006local" class="csl-entry" role="listitem">
+Altieri, Andrew H., and Jon D. Witman. 2006. <span>“Local Extinction of a Foundation Species in a Hypoxic Estuary: Integrating Individuals to Ecosystem.”</span> <em>Ecology</em> 87 (3): 717–30.
+</div>
+<div id="ref-bricelj1992aspects" class="csl-entry" role="listitem">
+Bricelj, V. Monica. 1992. <span>“Aspects of the Biology of the Northern Quahog, Extit<span>Mercenaria Mercenaria</span>, with Emphasis on Growth and Survival During Early Life History.”</span> In <em>Proceedings of the 2nd Rhode Island Industry Conference, Narragansett, RI</em>, 4:29–61.
+</div>
+<div id="ref-carmichael2004changes" class="csl-entry" role="listitem">
+Carmichael, Ruth H., Andrea C. Shriver, and Ivan Valiela. 2004. <span>“Changes in Shell and Soft Tissue Growth, Tissue Composition, and Survival of Quahogs, Extit<span>Mercenaria Mercenaria</span>, and Softshell Clams, Extit<span>Mya Arenaria</span>, in Response to Eutrophic-Driven Changes in Food Supply and Habitat.”</span> <em>Journal of Experimental Marine Biology and Ecology</em> 313 (1): 75–104.
+</div>
+<div id="ref-cerrato2004effect" class="csl-entry" role="listitem">
+Cerrato, Robert M., David A. Caron, Darcy J. Lonsdale, Julie M. Rose, and Rodney A. Schaffner. 2004. <span>“Effect of the Northern Quahog Extit<span>Mercenaria Mercenaria</span> on the Development of Blooms of the Brown Tide Alga Extit<span>Aureococcus Anophagefferens</span>.”</span> <em>Marine Ecology Progress Series</em> 281: 93–108.
+</div>
+<div id="ref-dove2004histological" class="csl-entry" role="listitem">
+Dove, Alistair D. M., Paul R. Bowser, and Robert M. Cerrato. 2004. <span>“Histological Analysis of an Outbreak of <span>QPX</span> Disease in Wild Hard Clams Extit<span>Mercenaria Mercenaria</span> in New York.”</span> <em>Journal of Aquatic Animal Health</em> 16 (4): 246–50.
+</div>
+<div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
+Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
+</div>
+<div id="ref-ivanina2013interactive" class="csl-entry" role="listitem">
+Ivanina, Anna V., Gary H. Dickinson, Oksana B. Matoo, Radhika Bagwe, Amanda Dickinson, Elia Beniash, and Inna M. Sokolova. 2013. <span>“Interactive Effects of Elevated Temperature and <span>CO2</span> Levels on Energy Metabolism and Biomineralization of Marine Bivalves Extit<span>Crassostrea Virginica</span> and Extit<span>Mercenaria Mercenaria</span>.”</span> <em>Comparative Biochemistry and Physiology Part A: Molecular &amp; Integrative Physiology</em> 166 (1): 101–11.
+</div>
+<div id="ref-kennish1975effects" class="csl-entry" role="listitem">
+Kennish, Michael J., and Richard K. Olsson. 1975. <span>“Effects of Thermal Discharges on the Microstructural Growth of Extit<span>Mercenaria Mercenaria</span>.”</span> <em>Environmental Geology</em> 1 (1): 41–64.
+</div>
+<div id="ref-kraeuter2001biology" class="csl-entry" role="listitem">
+Kraeuter, John N., and Michael Castagna, eds. 2001. <em>Biology of the Hard Clam</em>. Vol. 31. Developments in Aquaculture and Fisheries Science. Elsevier.
+</div>
+<div id="ref-liang2024hard" class="csl-entry" role="listitem">
+Liang, Jing, Farhat Masanja, Yanan Rogelio Li, Ying Guo, Yuewen Deng, and Liqiang Zhao. 2024. <span>“Hard Clam Resilience to Marine Heatwaves in the Face of Climate Change.”</span> <em>Frontiers in Marine Science</em> 11: 1382825.
+</div>
+<div id="ref-mackenzie1979management" class="csl-entry" role="listitem">
+MacKenzie, Clyde L. 1979. <span>“Management for Increasing Clam Abundance.”</span> <em>Marine Fisheries Review</em> 41 (10): 10–22.
+</div>
+<div id="ref-njdep2014inventory" class="csl-entry" role="listitem">
+New Jersey Department of Environmental Protection (NJDEP). 2014. <span>“Inventory of New Jersey’s Estuarine Shellfish Resources: Hard Clam Stock Assessment.”</span> New Jersey Department of Fish &amp; Wildlife. <a href="https://dep.nj.gov/wp-content/uploads/njfw/clam_assessment_rbshb14.pdf">https://dep.nj.gov/wp-content/uploads/njfw/clam_assessment_rbshb14.pdf</a>.
+</div>
+<div id="ref-ncdmf2025north" class="csl-entry" role="listitem">
+North Carolina Division of Marine Fisheries (NCDMF). 2025. <span>“North Carolina Hard Clam Fishery Management Plan Amendment 3.”</span> Morehead City, North Carolina: North Carolina Division of Marine Fisheries.
+</div>
+<div id="ref-rice1992review" class="csl-entry" role="listitem">
+Rice, Michael A., and Jan A. Pechenik. 1992. <span>“A Review of the Factors Influencing the Growth of the Northern Quahog, Extit<span>Mercenaria Mercenaria</span>.”</span> <em>Journal of Shellfish Research</em> 11 (2): 279–87.
+</div>
+<div id="ref-ridgway2011new" class="csl-entry" role="listitem">
+Ridgway, Ian D., Christopher A. Richardson, Edward Enos, Zoltan Ungvari, Steven N. Austad, Eva E. R. Philipp, and Anna Csiszar. 2011. <span>“New Species Longevity Record for the Northern Quahog (= Hard Clam), Extit<span>Mercenaria Mercenaria</span>.”</span> <em>Journal of Shellfish Research</em> 30 (1): 35–38.
+</div>
+<div id="ref-smolowitz1998observations" class="csl-entry" role="listitem">
+Smolowitz, Roxanna, Dale Leavitt, and Frank Perkins. 1998. <span>“Observations of a Protistan Disease Similar to <span>QPX</span> in Extit<span>Mercenaria Mercenaria</span> (Hard Clams) from the Coast of <span>M</span>assachusetts.”</span> <em>Journal of Invertebrate Pathology</em> 71 (1): 9–25.
+</div>
+<div id="ref-stanley1983species" class="csl-entry" role="listitem">
+Stanley, Jon G., and R. DeWitt. 1983. <span>“Species Profiles: Life Histories and Environmental Requirements of Coastal Fishes and Invertebrates (<span>North Atlantic</span>) – Hard Clam.”</span> FWS/OBS-82/11.18; TR EL-82-4. U.S. Fish; Wildlife Service / U.S. Army Corps of Engineers.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
