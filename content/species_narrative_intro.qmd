@@ -22,6 +22,8 @@ If a species was scored within different stock groups, a map of the different st
 
 These sections go into the scores in-depth, describing average scores, spatial patterns, and drivers. Each section has a map of scores. Climate Exposure has two sets of maps - one illustrating total exposure and the second illustrating factor exposures.
 
+Climate Exposure also contains two subsections - one that describes monthly variability in both total and factor exposures, and a second that focuses on only factors that were important in the species distribution model. 
+
 ## Data Quality Metrics
 
 This section describes the Life History Data Quality and Model Confidence Scores. Both were provided by the experts and range from 0 - 3. Following the original analysis, a score above 2 was deemed "acceptable". The rubrics for these scores are provided below

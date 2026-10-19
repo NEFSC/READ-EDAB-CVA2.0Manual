@@ -36,6 +36,8 @@ jobs:
       # 2. Add this step to generate the PDFs
       - name: Render Narratives to PDF
         run: |
+          # Hide the config file so Quarto doesn't treat this as a book
+          mv _quarto.yml _quarto.yml.hidden
           for file in chapters/*.qmd; do
             if [ "$file" != "chapters/index.qmd" ]; then
               # Extract just the filename without the 'chapters/' path or '.qmd' extension
@@ -45,6 +47,9 @@ jobs:
               quarto render "$file" --to pdf --output "$base.pdf" --output-dir pdfs
             fi
           done
+          
+          # Restore the config file for the final HTML book publish step
+          mv _quarto.yml.hidden _quarto.yml
       # add software dependencies here
 
     #  - name: Publish to GitHub Pages (and render)
