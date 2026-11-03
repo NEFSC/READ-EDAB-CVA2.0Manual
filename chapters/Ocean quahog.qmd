@@ -1,4 +1,5 @@
 ---
+bibliography: ../utils/references.bib
 format:
   pdf:
     engine: knitr
@@ -10,11 +11,13 @@ format:
     include-in-header: 
       text: |
         \usepackage{fvextra}
+        \usepackage{float}
         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
         \pagenumbering{gobble}
 ---
 
 ```{r setup}
+#| include: false
 knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
@@ -24,117 +27,585 @@ knitr::opts_chunk$set(
 
 # Ocean quahog (*`Arctica islandica`*)
 
-## Summary
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Ocean quahog.pdf){.btn .btn-primary target="_blank"}
+:::
 
-::::: {layout-ncol="2"}
-<div>
+## Summary Scores
 
-**Scores**
+-   **Sensitivity:** [INSERT]
+-   **Exposure:** [INSERT]
+-   **Vulnerability:** [INSERT]
 
-Vulnerability =
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
 
-Climate Exposure =
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_allvars*", ext), 
+  full.names = TRUE
+)
 
-Biological Sensitivity = Very High
+has_figure <- length(found_files) > 0
 
-</div>
-
-<div>
-
-**Data Quality**
-
-Model Confidence Score =
-
-Life History Data Quality = 87%
-
-</div>
-:::::
-
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Ocean quahog_exposure_summary_table.png")
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-
-here::here("test_images/Ocean quahog_sensitivity_summary_table.png")
-
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Ocean quahog. Exposure and Vulnerability scores are averaged spatially across the species distribution and within stocks if applicable (see @fig-vuln and @fig-exp). Life History Data Quality (LH DQ) and Standard Deviations (SD) are reported for senstivity and exposure/vulnerability scores, respectively."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
 ```
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change |
-|----------------------|--------------------|------------------------|--------|
-| *Vulnerability*      |                    |                        |        |
-| *Exposure*           |                    |                        |        |
-| *Sensitivity*        | Very High          | Very High              | None   |
-| *Directional Effect* | Negative           | Negative               | None   |
+| Metric               |Previous Assessment(s)  | Current Assessment | Change     |
+|-------------------|-----------------|--------------------|-----------------|
+| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
+| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
+| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
+| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
 
-## Score Drivers
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("stock_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Ocean quahog Stocks along the Northeast Shelf"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Ocean quahog is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Sensitivity:
+
+```{r}
+#| echo: false
+
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("sensitivity_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Ocean quahog Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+
+### Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Maps of each Exposure Factor for Ocean quahog. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Ocean quahog/variable_exposure_maps", ext)))
+```
+
+[INSERT EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure on the Northeast Shelf for Ocean quahog. Total Exposure is calculated by applying the logic rule from @hare2016vulnerability within grid cells across exposure factors (see @fig-fact-exp)"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
 ### Vulnerability:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
 
-### Climate Exposure:
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_vulnerability_map_all*", ext), 
+  full.names = TRUE
+)
 
-add text here
+has_figure <- length(found_files) > 0
 
-### Biological Sensitivity:
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 
-The ocean quahog received a **Very High** sensitivity score, with a certainty of 71%. Three attributes had scores greater than 3.5: Adult Mobility (4), Population Growth Rate (4), and Relationship to Calcified Organisms (3.6).
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
 
-Similar to other bivalves, ocean quahogs have calcium carbonate shells and are sessile [@cargnelli1999_oq]. They are also one of the longest-lived bivalve species, with maximum ages high as 507 years old documented, and ages over 300 years old common in the Northwest Atlantic [@sower2023examination]. They mature at 13 years of age [@cargnelli1999_oq].
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Ocean quahog. Vulnerability is the product of sensitivity and exposure (see @fig-exp and @fig-sens)"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
-Ocean quahogs also received a Very High sensitivity score in the previous Climate Vulnerability Assessment for the Northeast Shelf. The same attributes: Adult Mobility, Population Growth Rate, and Sensitivity to Ocean Acidification, drove the score [@hare2016vulnerability].
+[INSERT VULNERABILITY NARRATIVE TEXT HERE]
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-87% of data quality scores were greater than or equal to 2, indicating strong data quality. No data gaps (mean attribute data quality score \< 2) were identified.
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
-### Model Confidence:
+### Model Confidence Score:
 
-add text here
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
 ## Additional Metrics
 
 ### Distribution Shifts:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("distribution_shifts_static*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_figure == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Ocean quahog. Polygons illustrate core habitat (left) and species range (right) for five-year average periods. Points illustrate weighted centroid, calculated as the average position with species distribution models as weights. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+
+| Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Ocean quahog Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/%3C%%20species%20%%3E/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
 
 ### Directional Effect:
 
-Experts predicted that Ocean Quahog would be **negatively** impacted by climate change. Certainty was 100%. Warming conditions are expected to shift the species’ distribution north and further offshore, possibly leading to competition between surfclams and ocean quahogs  [@weinberg2002influence; @stromp2023evaluation; @spencer2024climate]. Ocean acidification will also negatively impact the species. The 2016 Climate Vulnerability Assessment also suggested that Ocean Quahogs would be negatively impacted by climate change [@hare2016vulnerability].
+[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
 
 ## Climate Effects on Abundance and Distribution
 
-Radiocarbon aging on ocean quahog shells suggest past (200 years) ocean quahog distributions inshore of their current range, indicating a range shift coinciding with the regression of the Cold Pool after the Little Ice Age [@leclaire2022historical]. With settlement occurring at the end of the larval stage, it may be presumed that temperature impacts settlement rate. @weinberg2002influence note that an increase in temperature would shift the species offshore and north. Future warming conditions are predicted to result in range shifts in Atlantic surfclams that would lead to potential competition for food and space between surfclams and ocean quahogs [@stromp2023evaluation; @spencer2024climate]. 
+[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
 
 ## Life History Synopsis
 
-Ocean quahogs are bivalve mollusks that inhabit the Northeast U.S. Continental Shelf from Newfoundland to Cape Hatteras [@cargnelli1999_oq]. The ocean quahog is among the longest-lived and slowest growing of marine bivalves, reaching maturity around 13 years of age and harvestable size at age 20 [@cargnelli1999_oq]. Maximum ages have been documented as high as 507 years old, with ages over 300 years old more common in the Northwest Atlantic [@sower2023examination]. Spawning occurs either in summer or fall, and can extend for months, releasing eggs and sperm into the water column at low levels over time [@cargnelli1999_oq]. Multiple annual spawnings may occur at the individual and population levels [@mann1982seasonal]. Eggs and larvae drift with currents until metamorphosis, then settle to the bottom [@mafmc1997_oq]. Larval development, at minimum, lasts for 55 days and decreases with increasing temperature [@lutz1981experimental]. Larvae go through three stages of development (trochophores, veligers and pediveligers) with the duration of each stage being temperature dependent [@cargnelli1999_oq]. @vandewater1997biological noted that wind-forced circulation may play a significant role in planktonic and benthic recruitment on Georges Bank and that interannual differences in these winds can yield very different abundance patterns over the bank. Once settled to the bottom, juvenile ocean quahogs are found offshore in sandy substrates, but may survive in muddy intertidal environments if protected from predators [@kraus1989growth]. Cross-shelf distributions of juveniles and adults remain within a 10°C optimal temperature range, as temperatures above 16°C limit distribution [@cargnelli1999_oq]. Ocean quahogs are suspension feeders on phytoplankton, using their relatively short siphons which are extended above the surface of the substrate to pump in water [@cargnelli1999_oq]. Juvenile and small ocean quahogs are commonly preyed upon by crustaceans (rock crabs, sea stars) and fish (haddock, cod) [@cargnelli1999_oq]. Ocean quahogs are managed by the Mid-Atlantic Fishery Management Council under the Atlantic Surfclam-Ocean Quahog Fishery Management Plan. The species is mainly harvested off of Maine and Long Island. The last stock assessment was conducted in 2019, where the stock was not overfished and overfishing was not occurring [@mafmc2025_oq]. 
+[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
 
-## Figures
+## Supplemental Scores
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Ocean quahog_exposure_allvars.png")
+### Exposure Timeseries
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("variable_exposure_timeseries.*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Ocean quahog_exposure_impvars.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Monthly Timeseries of each Exposure Factor for Ocean quahog. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Ocean quahog_distribution_center_of_gravity.png")
+[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_timeseries_only_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Ocean quahog_distribution_area_of_high_probability.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Timeseries of Total Exposure  for Ocean quahog"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, out.width="200%", fig.align='left'}
-here::here("test_images/Ocean quahog_sdm.png")
+### Exposure due to Significant Factors
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("dynamic_variable_importance_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Dynamic Factors driving American lobster distributions. The closer the polygon is to the edge of the figure, the more important the variable is. Each ring represents 10% variance explained. Factors must explain at least 10% of variance in the ensemble model to be used to calculate total exposure."
+#| label: fig-radar
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_timeseries_imp*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Ocean quahog distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Ocean quahog")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_impvars*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-imp
+#| fig-cap: "As in @fig-sum-tab for Ocean quahog, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
+```
+
 
 ## References

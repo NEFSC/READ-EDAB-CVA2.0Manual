@@ -1,4 +1,5 @@
 ---
+bibliography: ../utils/references.bib
 format:
   pdf:
     engine: knitr
@@ -10,11 +11,13 @@ format:
     include-in-header: 
       text: |
         \usepackage{fvextra}
+        \usepackage{float}
         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
         \pagenumbering{gobble}
 ---
 
 ```{r setup}
+#| include: false
 knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
@@ -24,117 +27,585 @@ knitr::opts_chunk$set(
 
 # Smooth dogfish (*`Mustelus canis`*)
 
-## Summary
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Smooth dogfish.pdf){.btn .btn-primary target="_blank"}
+:::
 
-::::: {layout-ncol="2"}
-<div>
+## Summary Scores
 
-**Scores**
+-   **Sensitivity:** [INSERT]
+-   **Exposure:** [INSERT]
+-   **Vulnerability:** [INSERT]
 
-Vulnerability =
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
 
-Climate Exposure =
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_allvars*", ext), 
+  full.names = TRUE
+)
 
-Biological Sensitivity = Moderate
+has_figure <- length(found_files) > 0
 
-</div>
-
-<div>
-
-**Data Quality**
-
-Model Confidence Score =
-
-Life History Data Quality = 95%
-
-</div>
-:::::
-
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Smooth dogfish_exposure_summary_table.png")
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-
-here::here("test_images/Smooth dogfish_sensitivity_summary_table.png")
-
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Smooth dogfish. Exposure and Vulnerability scores are averaged spatially across the species distribution and within stocks if applicable (see @fig-vuln and @fig-exp). Life History Data Quality (LH DQ) and Standard Deviations (SD) are reported for senstivity and exposure/vulnerability scores, respectively."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
 ```
 
 ## Changes from Previous Assessment(s)
 
-| Metric | Current Assessment | Previous Assessment(s) | Change |
-|-------------------|-----------------|---------------------|----------------|
-| *Vulnerability* |  |  |  |
-| *Exposure* |  |  |  |
-| *Sensitivity* | Moderate | Low [@hare2016vulnerability; @loughran2025climate] | Increase |
-| *Directional Effect* | Neutral | Neutral [@hare2016vulnerability; @loughran2025climate] | None |
+| Metric               |Previous Assessment(s)  | Current Assessment | Change     |
+|-------------------|-----------------|--------------------|-----------------|
+| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
+| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
+| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
+| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
 
-## Score Drivers
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("stock_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Smooth dogfish Stocks along the Northeast Shelf"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Smooth dogfish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Sensitivity:
+
+```{r}
+#| echo: false
+
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("sensitivity_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Smooth dogfish Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+
+### Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Smooth dogfish/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Maps of each Exposure Factor for Smooth dogfish. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Smooth dogfish/variable_exposure_maps", ext)))
+```
+
+[INSERT EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure on the Northeast Shelf for Smooth dogfish. Total Exposure is calculated by applying the logic rule from @hare2016vulnerability within grid cells across exposure factors (see @fig-fact-exp)"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
 ### Vulnerability:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
 
-### Climate Exposure:
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_vulnerability_map_all*", ext), 
+  full.names = TRUE
+)
 
-add text here
+has_figure <- length(found_files) > 0
 
-### Biological Sensitivity:
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 
-Smooth dogfish received a **Moderate** sensitivity score, with a certainty of 69% according to bootstrap analysis. Two attributes had scores greater than 2.5: Other Stressors (2.7) and Juvenile Habitat Requirements (2.6).
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
 
-Smooth dogfish rely on coastal habitats throughout their life-cycles, which are impacted by eutrophication and hypoxia, changes in freshwater input, and increases in turbidity due to activities such as dredging [@plumlee2018community]. Juveniles in particular rely on nursery estuary and seagrass bed habitats, which are vulnerable habitats [@guyant2022northeast; @farr2021assessment].
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Smooth dogfish. Vulnerability is the product of sensitivity and exposure (see @fig-exp and @fig-sens)"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
-In the previous Northeast Climate Vulnerability Assessment, smooth dogfish received a Low sensitivity score. This was driven by Population Growth Rate, which only received a score of 2.2 in our assessment [@hare2016vulnerability]. The Atlantic stock of Smooth dogfish were also assessed in the recent Highly Migratory Species Climate Vulnerability Assessment, where it also received a Low score because no attributes scored higher than 2.5 [@loughran2025climate].
+[INSERT VULNERABILITY NARRATIVE TEXT HERE]
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified.
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
-### Model Confidence:
+### Model Confidence Score:
 
-add text here
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
 ## Additional Metrics
 
 ### Distribution Shifts:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("distribution_shifts_static*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_figure == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Smooth dogfish. Polygons illustrate core habitat (left) and species range (right) for five-year average periods. Points illustrate weighted centroid, calculated as the average position with species distribution models as weights. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+
+| Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Smooth dogfish Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/%3C%%20species%20%%3E/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
 
 ### Directional Effect:
 
-Experts predict that climate change will have a **neutral** impact on smooth dogfish with 96% certainty. While smooth dogfish occupy estuarine habitats that are more likely to be degraded and are highly vulnerable [@guyant2022northeast; @plumlee2018community], smooth dogfish may be tolerant of future warming and could possibly expand their range [@bockus2020thermal]. Both the previous Climate Vulnerability Assessment in the Northeast and the Highly Migratory Species Assessment also predicted that climate change would have a neutral impact on climate change [@hare2016vulnerability; @loughran2025climate].
+[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
 
 ## Climate Effects on Abundance and Distribution
 
-Little information exists on the potential effects of climate on smooth dogfish abundance and distribution. Coastal areas, including estuaries and smooth dogfish nursing grounds, are affected by anthropogenic activities that degrade a portion of smooth dogfish habitat. These areas are also more likely to be impacted by hypoxia and changes to freshwater input/increases in turbidity [@plumlee2018community]. Smooth dogfish exposed to higher temperatures (increase of 6°C) did not result in a thermal stress response, indicating a possible tolerance and ability for range expansion [@bockus2020thermal]. 
+[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
 
 ## Life History Synopsis
 
-Smooth dogfish are a demersal, highly migratory shark species (HMS). The Northwest Atlantic population of smooth dogfish ranges from Cape Cod to Florida and the northern Gulf of America [@conrath2002age]. The species undergoes temperature-driven seasonal migrations north in the summer and south in the winter. They overwinter in Chesapeake Bay to South Carolina from January to May, migrating north to Southern New England beginning in early spring to give birth to pups [@castro2010sharks; @dellapa2018hierarchical]. Females ovulate between June and July, with gestation lasting 10 months. Birth occurs in southern New England between early May to mid-July [@castro2010sharks]. Once females have given birth in nearshore or estuarine areas,, young of year and immature age classes may remain in nursery grounds while females migrate north to suitable temperatures [@bangley2017habitat]. Smooth dogfish prefer temperatures 9-32°C. They begin appearing in the mid-Atlantic and New England when temperatures are greater than 6-7°C, and are most abundant along the East Coast between 13-15°C [@bockus2020thermal]. Young of year individuals use shallow shoals and marsh creek habitats particularly during night hours. Juveniles are found throughout temperate coastal estuaries, creeks, and seagrass beds, which may serve as nursery grounds [@castro2010sharks]. Juveniles prey on small shrimp, polychaete worms, and crabs, and may fill an important predatory role during times of year when other piscivores are rare [@rountree1996seasonal_smooth]. Adult smooth dogfish are bottom feeders, primarily consuming crustaceans and mainly feeling at night. They are described as a trophic specialist due to the morphological and functional modifications that allow them to feed on hard-shelled/exoskeleton-bearing prey [@castro2010sharks; @bangley2017habitat]. Smooth dogfish are prey items for a variety of larger sharks and fishes [@gelsleichter1999food]. Age at maturity is 2-3 years for males and 4-7 years for females, with a maximum age of 11 years for males and 13 years for females [@conrath2002age; @giresi2013morphological]. In state waters, smooth dogfish are managed by the Atlantic States Marine Fisheries Commission’s Interstate Fishery Management Plan for Coastal Sharks [@asmfc2024_smooth]. NOAA Fisheries produces an annual Stock Assessment and Fisheries Evaluation (SAFE) Report detailing the status of HMS in federal waters [@nmfs2023safe]. The current stock status is not overfished and overfishing is not occurring [@sedar2015smoothdogfish]. 
+[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
 
-## Figures
+## Supplemental Scores
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Smooth dogfish_exposure_allvars.png")
+### Exposure Timeseries
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("variable_exposure_timeseries.*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Smooth dogfish_exposure_impvars.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Monthly Timeseries of each Exposure Factor for Smooth dogfish. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Smooth dogfish_distribution_center_of_gravity.png")
+[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_timeseries_only_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Smooth dogfish_distribution_area_of_high_probability.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Timeseries of Total Exposure  for Smooth dogfish"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, out.width="200%", fig.align='left'}
-here::here("test_images/Smooth dogfish_sdm.png")
+### Exposure due to Significant Factors
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("dynamic_variable_importance_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Dynamic Factors driving American lobster distributions. The closer the polygon is to the edge of the figure, the more important the variable is. Each ring represents 10% variance explained. Factors must explain at least 10% of variance in the ensemble model to be used to calculate total exposure."
+#| label: fig-radar
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_timeseries_imp*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Smooth dogfish distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Smooth dogfish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_impvars*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-imp
+#| fig-cap: "As in @fig-sum-tab for Smooth dogfish, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
+```
+
 
 ## References

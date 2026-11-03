@@ -1,4 +1,5 @@
 ---
+bibliography: ../utils/references.bib
 format:
   pdf:
     engine: knitr
@@ -10,11 +11,13 @@ format:
     include-in-header: 
       text: |
         \usepackage{fvextra}
+        \usepackage{float}
         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
         \pagenumbering{gobble}
 ---
 
 ```{r setup}
+#| include: false
 knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
@@ -24,120 +27,585 @@ knitr::opts_chunk$set(
 
 # Windowpane flounder (*`Scophthalmus aquosus`*)
 
-## Summary
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Windowpane flounder.pdf){.btn .btn-primary target="_blank"}
+:::
 
-::::: {layout-ncol="2"}
-<div>
+## Summary Scores
 
-**Scores**
+-   **Sensitivity:** [INSERT]
+-   **Exposure:** [INSERT]
+-   **Vulnerability:** [INSERT]
 
-Vulnerability =
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
 
-Climate Exposure =
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_allvars*", ext), 
+  full.names = TRUE
+)
 
-Biological Sensitivity = Low - Moderate
+has_figure <- length(found_files) > 0
 
-</div>
-
-<div>
-
-**Data Quality**
-
-Model Confidence Score =
-
-Life History Data Quality = 75%
-
-</div>
-:::::
-
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Windowpane flounder_exposure_summary_table.png")
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-
-here::here("test_images/Windowpane flounder_sensitivity_summary_table.png")
-
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Windowpane flounder. Exposure and Vulnerability scores are averaged spatially across the species distribution and within stocks if applicable (see @fig-vuln and @fig-exp). Life History Data Quality (LH DQ) and Standard Deviations (SD) are reported for senstivity and exposure/vulnerability scores, respectively."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
 ```
 
 ## Changes from Previous Assessment(s)
 
-| Metric | Current Assessment | Previous Assessment(s) | Change |
-|-------------------|-----------------|---------------------|----------------|
-| *Vulnerability* |  |  |  |
-| *Exposure* |  |  |  |
-| *Sensitivity* | Moderate (Gulf of Maine/Georges Bank) - Low (Southern New England/Mid Atlantic) | Low | Increase (Gulf of Maine/Georges Bank) - None (Southern New England/Mid Atlantic) |
-| *Directional Effect* | Neutral (Gulf of Maine/Georges Bank) - Negative (Southern New England/Mid Atlantic) | Neutral | None (Gulf of Maine/Georges Bank) - Decrease (Southern New England/Mid Atlantic) |
+| Metric               |Previous Assessment(s)  | Current Assessment | Change     |
+|-------------------|-----------------|--------------------|-----------------|
+| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
+| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
+| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
+| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
 
-## Score Drivers
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("stock_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Windowpane flounder Stocks along the Northeast Shelf"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Windowpane flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Sensitivity:
+
+```{r}
+#| echo: false
+
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("sensitivity_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Windowpane flounder Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+
+### Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Windowpane flounder/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Maps of each Exposure Factor for Windowpane flounder. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Windowpane flounder/variable_exposure_maps", ext)))
+```
+
+[INSERT EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure on the Northeast Shelf for Windowpane flounder. Total Exposure is calculated by applying the logic rule from @hare2016vulnerability within grid cells across exposure factors (see @fig-fact-exp)"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
 ### Vulnerability:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
 
-### Climate Exposure:
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_vulnerability_map_all*", ext), 
+  full.names = TRUE
+)
 
-add text here
+has_figure <- length(found_files) > 0
 
-### Biological Sensitivity:
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 
-The **Gulf of Maine/Georges Bank** stock of Windowpane flounder received a **Moderate** sensitivity score, with a certainty of 69%. This score was driven by Stock Size (3.5) and Complexity in Reproductive Strategy (2.6).
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
 
-The **Southern New England/Mid Atlantic** stock received a **Low** sensitivity score, with a certainty of 74%. No attributes received a score greater than 2.5 for this stock. Stock Size and Complexity in Reproductive Strategy both received scores of 2.4.
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Windowpane flounder. Vulnerability is the product of sensitivity and exposure (see @fig-exp and @fig-sens)"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
-Spawning occurs throughout most of the year [@AbleFahay2010; @Cadrin2021], but relies on cold bottom temperature (8.5-13.5 C) [@Chang1999_windowpane]. Spawning occurs in estuaries and nearshore environments; estuarine water column habitats are considered highly vulnerable [@guyant2022northeast]. The stock status of the Gulf of Maine/Georges Bank stock is unknown. The southern stock is not overfished and overfishing is not occurring [@NEFSC2023a_windowpane; @NEFSC2023b_windowpane].
-
-In the previous Climate Vulnerability Assessment, Windowpane flounder received a Low sensitivity score. This was driven by Stock Status [@hare2016vulnerability].
+[INSERT VULNERABILITY NARRATIVE TEXT HERE]
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-75% of data quality scores were greater than or equal to 2, indicating good data quality. Across both stocks, Complexity in Reproductive Strategy, Dispersal of Early Life Stages, Egg and Larval Survival and Settlement Requirements, Population Growth Rate, and Relationship to Calcified Organisms were all identified as data gaps (mean attribute data quality score \< 2).
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
-### Model Confidence:
+### Model Confidence Score:
 
-add text here
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
 ## Additional Metrics
 
 ### Distribution Shifts:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("distribution_shifts_static*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_figure == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Windowpane flounder. Polygons illustrate core habitat (left) and species range (right) for five-year average periods. Points illustrate weighted centroid, calculated as the average position with species distribution models as weights. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+
+| Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Windowpane flounder Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/%3C%%20species%20%%3E/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
 
 ### Directional Effect:
 
-Experts predicted that effects of climate change would be **neutral** for the Gulf of Maine/Georges Bank stock, with 73% certainty. For the Southern New England/Mid-Atlantic stock, the effects were predicted to be **negative**, with 58% certainty. Increasing temperatures have been shown to displace windowpane flounder, and extreme cold winters have increased juvenile mortality [@Bell2021; @Wilber2016]. In the previous Climate Vulnerability Assessment, experts predicted that impacts of climate change on windowpane flounder would be neutral [@hare2016vulnerability].
+[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
 
 ## Climate Effects on Abundance and Distribution
 
-Percent biomass of windowpane flounder in the Northwest Atlantic increases with changes in seasonality, from cold springs, to warm springs, to fall [@Dunn2016]. Increasing temperatures (> 7-10°C) have been shown to displace windowpane flounder [@Bell2021]. In New York/New Jersey Harbor, cold winter temperatures decreased windowpane abundance and overwinter mortality in small juveniles [@Wilber2016]. Overwintering success appears to be driven in part by temperatures, with extreme cold conditions resulting in high overwinter mortality of age-0 individuals. This likely has a larger impact on fall-spawned juveniles since resilience to extreme cold temperatures is size-dependent and fall-spawned individuals have less time to grow [@Neuman2009_windowpane]. Individual windowpane have also demonstrated avoiding hypoxic conditions [@Cadrin2021].
+[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
 
 ## Life History Synopsis
 
-Windowpane flounder inhabit shallow waters from the Gulf of St. Lawrence to Florida, but are most abundant from Georges Bank to Chesapeake Bay [@Chang1999_windowpane]. They reach maturity around 1.5 years of age and can live up to 8 years [@Cadrin2021]. Windowpane spawn from February to November on the inner continental shelf, Georges Bank, and within estuaries. Spawning occurs in the Mid-Atlantic Bight in both spring and fall, whereas spawning in Georges Bank peaks in summer [@AbleFahay2010] [@Cadrin2021]. Windowpane spawn in the evening or at night on or near bottom at temperatures ranging from 6-21°C  [@Chang1999_windowpane]. Eggs hatch after 8 days. The duration of the larval stage is unknown, but eggs and larvae remain in the water column feeding on suspended copepods [@Chang1999_windowpane]. Surveys from Canadian waters suggest that small (< 10 cm TL) windowpane consume bay shrimp and crab larvae, which may be a transition point from zooplankton prey to larger prey items [@Hanson2014]. Larvae settle to the bottom at approximately 10 mm TL. However, individuals collected on Georges Bank may be planktonic up to 20 mm. There is no indication that settlement is driven by environmental factors [@Morse1995_windowpane]. Juveniles that settle in shallow inshore waters move to deeper offshore waters as they grow. Juveniles inhabiting Georges Bank (< 60 m) undergo seasonal movements to deeper waters along the southern flank of the Bank occur during late autumn, as bottom temperatures drop, and overwintering occurs in deeper areas until late spring [@KleinMacPhee2002_windowpane]. From Massachusetts to the Gulf of Maine, they can be found in estuaries and on the shelf [@Chang1999_windowpane]. Adults are found on the benthos in waters < 100 m and tolerate a wide range of temperatures (0-26.8°C) [@Chang1999_windowpane]. Adult windowpane may travel along the coast for considerable distances. Juveniles and adults may migrate to nearshore or estuarine habitats in the Mid-Atlantic Bight. Seasonal movements into offshore overwintering habitats have also been documented [@Chang1999_windowpane]. Stomach content data collected during Northeast Fisheries Science Center (NEFSC) bottom trawl surveys indicate windowpane feed on small crustaceans (e.g., mysids and decapod shrimp) and various fish larvae including hakes and tomcod, as well as their own species [@Langton1981; @Chang1999_windowpane]. Windowpane flounder are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. The fishery is divided into two stocks: Northern Gulf of Maine/Georges Bank and Southern New England/Mid-Atlantic. Overfishing and overfished status of the northern stock is unknown, as the assessment has not estimated reference points since 2020 [@NEFSC2023a_windowpane]. The southern stock is not overfished and overfishing is not occurring [@NEFSC2023b_windowpane].
+[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
 
+## Supplemental Scores
 
-## Figures
+### Exposure Timeseries
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Windowpane flounder_exposure_allvars.png")
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("variable_exposure_timeseries.*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Windowpane flounder_exposure_impvars.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Monthly Timeseries of each Exposure Factor for Windowpane flounder. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Windowpane flounder_distribution_center_of_gravity.png")
+[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_timeseries_only_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Windowpane flounder_distribution_area_of_high_probability.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Timeseries of Total Exposure  for Windowpane flounder"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, out.width="200%", fig.align='left'}
-here::here("test_images/Windowpane flounder_sdm.png")
+### Exposure due to Significant Factors
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("dynamic_variable_importance_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Dynamic Factors driving American lobster distributions. The closer the polygon is to the edge of the figure, the more important the variable is. Each ring represents 10% variance explained. Factors must explain at least 10% of variance in the ensemble model to be used to calculate total exposure."
+#| label: fig-radar
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_timeseries_imp*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Windowpane flounder distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Windowpane flounder")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_impvars*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-imp
+#| fig-cap: "As in @fig-sum-tab for Windowpane flounder, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
+```
+
 
 ## References

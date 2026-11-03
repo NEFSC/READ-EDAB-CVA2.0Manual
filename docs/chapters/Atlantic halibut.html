@@ -61,6 +61,9 @@ div.csl-indent {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -369,7 +372,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny Dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
+  <a href="../chapters/Spiny dogfish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spiny dogfish (<em><code>Squalus acanthias</code></em>)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -429,18 +432,19 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#summary-scores" id="toc-summary-scores" class="nav-link active" data-scroll-target="#summary-scores">Summary Scores</a></li>
   <li><a href="#changes-from-previous-assessments" id="toc-changes-from-previous-assessments" class="nav-link" data-scroll-target="#changes-from-previous-assessments">Changes from Previous Assessment(s)</a></li>
-  <li><a href="#score-drivers" id="toc-score-drivers" class="nav-link" data-scroll-target="#score-drivers">Score Drivers</a>
+  <li><a href="#stocks" id="toc-stocks" class="nav-link" data-scroll-target="#stocks">Stocks</a></li>
+  <li><a href="#score-descriptions" id="toc-score-descriptions" class="nav-link" data-scroll-target="#score-descriptions">Score Descriptions:</a>
   <ul class="collapse">
+  <li><a href="#sensitivity" id="toc-sensitivity" class="nav-link" data-scroll-target="#sensitivity">Sensitivity:</a></li>
+  <li><a href="#exposure" id="toc-exposure" class="nav-link" data-scroll-target="#exposure">Exposure:</a></li>
   <li><a href="#vulnerability" id="toc-vulnerability" class="nav-link" data-scroll-target="#vulnerability">Vulnerability:</a></li>
-  <li><a href="#climate-exposure" id="toc-climate-exposure" class="nav-link" data-scroll-target="#climate-exposure">Climate Exposure:</a></li>
-  <li><a href="#biological-sensitivity" id="toc-biological-sensitivity" class="nav-link" data-scroll-target="#biological-sensitivity">Biological Sensitivity:</a></li>
   </ul></li>
   <li><a href="#data-quality-metrics" id="toc-data-quality-metrics" class="nav-link" data-scroll-target="#data-quality-metrics">Data Quality Metrics</a>
   <ul class="collapse">
   <li><a href="#life-history-data-quality" id="toc-life-history-data-quality" class="nav-link" data-scroll-target="#life-history-data-quality">Life History Data Quality:</a></li>
-  <li><a href="#model-confidence" id="toc-model-confidence" class="nav-link" data-scroll-target="#model-confidence">Model Confidence:</a></li>
+  <li><a href="#model-confidence-score" id="toc-model-confidence-score" class="nav-link" data-scroll-target="#model-confidence-score">Model Confidence Score:</a></li>
   </ul></li>
   <li><a href="#additional-metrics" id="toc-additional-metrics" class="nav-link" data-scroll-target="#additional-metrics">Additional Metrics</a>
   <ul class="collapse">
@@ -449,7 +453,11 @@ div.csl-indent {
   </ul></li>
   <li><a href="#climate-effects-on-abundance-and-distribution" id="toc-climate-effects-on-abundance-and-distribution" class="nav-link" data-scroll-target="#climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</a></li>
   <li><a href="#life-history-synopsis" id="toc-life-history-synopsis" class="nav-link" data-scroll-target="#life-history-synopsis">Life History Synopsis</a></li>
-  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#supplemental-scores" id="toc-supplemental-scores" class="nav-link" data-scroll-target="#supplemental-scores">Supplemental Scores</a>
+  <ul class="collapse">
+  <li><a href="#exposure-timeseries" id="toc-exposure-timeseries" class="nav-link" data-scroll-target="#exposure-timeseries">Exposure Timeseries</a></li>
+  <li><a href="#exposure-due-to-significant-factors" id="toc-exposure-due-to-significant-factors" class="nav-link" data-scroll-target="#exposure-due-to-significant-factors">Exposure due to Significant Factors</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -476,201 +484,270 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><strong>Scores</strong></p>
-<p>Vulnerability =</p>
-<p>Climate Exposure =</p>
-<p>Biological Sensitivity = High</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><strong>Data Quality</strong></p>
-<p>Model Confidence Score =</p>
-<p>Life History Data Quality = 87%</p>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="left">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic halibut_exposure_summary_table.png"</code></pre>
-</div>
-</div>
-<div class="cell" data-layout-align="left">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic halibut_sensitivity_summary_table.png"</code></pre>
-</div>
-</div>
+<p><a href="Atlantic halibut.pdf" class="btn btn-primary" target="_blank">Download Species Narrative as a PDF</a></p>
+<section id="summary-scores" class="level2">
+<h2 class="anchored" data-anchor-id="summary-scores">Summary Scores</h2>
+<ul>
+<li><strong>Sensitivity:</strong> [INSERT]</li>
+<li><strong>Exposure:</strong> [INSERT]</li>
+<li><strong>Vulnerability:</strong> [INSERT]</li>
+</ul>
 </section>
 <section id="changes-from-previous-assessments" class="level2">
 <h2 class="anchored" data-anchor-id="changes-from-previous-assessments">Changes from Previous Assessment(s)</h2>
 <table class="caption-top table">
+<caption>Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from <span class="citation" data-cites="hare2016vulnerability">Hare et al. (<a href="#ref-hare2016vulnerability" role="doc-biblioref">2016</a>)</span>.</caption>
 <colgroup>
-<col style="width: 29%">
+<col style="width: 26%">
+<col style="width: 23%">
 <col style="width: 27%">
-<col style="width: 32%">
-<col style="width: 10%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Metric</th>
-<th>Current Assessment</th>
 <th>Previous Assessment(s)</th>
+<th>Current Assessment</th>
 <th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><em>Vulnerability</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td><em>Sensitivity</em></td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
 </tr>
 <tr class="even">
 <td><em>Exposure</em></td>
-<td></td>
-<td></td>
-<td></td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
 </tr>
 <tr class="odd">
-<td><em>Sensitivity</em></td>
-<td>High</td>
-<td>High</td>
-<td>None</td>
+<td><em>Vulnerability</em></td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
 </tr>
 <tr class="even">
 <td><em>Directional Effect</em></td>
-<td>Negative</td>
-<td>Negative</td>
-<td>None</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
 </tr>
 </tbody>
 </table>
+<div style="page-break-after: always;"></div>
 </section>
-<section id="score-drivers" class="level2">
-<h2 class="anchored" data-anchor-id="score-drivers">Score Drivers</h2>
+<section id="stocks" class="level2">
+<h2 class="anchored" data-anchor-id="stocks">Stocks</h2>
+<p>Atlantic halibut is managed as a single stock or stock information was not considered for this iteration of the CVA.</p>
+</section>
+<section id="score-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="score-descriptions">Score Descriptions:</h2>
+<section id="sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity">Sensitivity:</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-sens" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sens-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/Atlantic halibut/sensitivity_map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;14.1: Atlantic halibut Sensitivity on the Northeast Shelf"><img src="../figures/Atlantic halibut/sensitivity_map.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sens-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.1: Atlantic halibut Sensitivity on the Northeast Shelf
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>[INSERT SENSITIVITY NARRATIVE TEXT HERE]</p>
+</section>
+<section id="exposure" class="level3">
+<h3 class="anchored" data-anchor-id="exposure">Exposure:</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-fact-exp" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fact-exp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/Atlantic halibut/variable_exposure_maps.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;14.2: Maps of each Exposure Factor for Atlantic halibut. Exposure was calculated between 2014-2023 and 2025-2035"><img src="../figures/Atlantic halibut/variable_exposure_maps.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fact-exp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.2: Maps of each Exposure Factor for Atlantic halibut. Exposure was calculated between 2014-2023 and 2025-2035
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>[INSERT EXPOSURE NARRATIVE TEXT HERE]</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-exp" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-exp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/Atlantic halibut/total_exposure_map_all.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;14.3: Total Exposure on the Northeast Shelf for Atlantic halibut. Total Exposure is calculated by applying the logic rule from @hare2016vulnerability within grid cells across exposure factors (see Figure&nbsp;fig-fact-exp)"><img src="../figures/Atlantic halibut/total_exposure_map_all.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.3: Total Exposure on the Northeast Shelf for Atlantic halibut. Total Exposure is calculated by applying the logic rule from <span class="citation" data-cites="hare2016vulnerability">Hare et al. (<a href="#ref-hare2016vulnerability" role="doc-biblioref">2016</a>)</span> within grid cells across exposure factors (see <a href="#fig-fact-exp" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-fact-exp</span></a>)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="vulnerability" class="level3">
 <h3 class="anchored" data-anchor-id="vulnerability">Vulnerability:</h3>
-<p>add text here</p>
-</section>
-<section id="climate-exposure" class="level3">
-<h3 class="anchored" data-anchor-id="climate-exposure">Climate Exposure:</h3>
-<p>add text here</p>
-</section>
-<section id="biological-sensitivity" class="level3">
-<h3 class="anchored" data-anchor-id="biological-sensitivity">Biological Sensitivity:</h3>
-<p>Atlantic halibut scored <strong>High</strong> with a certainty of 100%. The score was driven by Stock Size (3.8) and Population Growth Rate (3.6) attributes. While it did not contribute to the score, it is worth noting that the only other attribute that scored higher than 2.5 was Spawning Cycle (2.6). Halibut mature slowly and are long lived species, living upwards of 50 years and maturing between 5-13 years <span class="citation" data-cites="Armsworthy2014">(<a href="#ref-Armsworthy2014" role="doc-biblioref">Armsworthy, Trzcinski, and Campana 2014</a>)</span>. While the most recent stock assessment could not determine the stock status analytically, previous assessments have suggested that halibut are overfished <span class="citation" data-cites="Northeast_Fisheries_Science_Center_US2015-cv">(<a href="#ref-Northeast_Fisheries_Science_Center_US2015-cv" role="doc-biblioref">Northeast Fisheries Science Center (U.S.) 2015</a>)</span>. Halibut also received a score of high sensitivity in the previous Climate Vulnerability Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>. This score was also driven by Stock Size/Status and Population Growth Rate.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-vuln" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vuln-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/Atlantic halibut/total_vulnerability_map_all.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;14.4: Vulnerability on the Northeast Shelf for Atlantic halibut. Vulnerability is the product of sensitivity and exposure (see Figure&nbsp;fig-exp and Figure&nbsp;fig-sens)"><img src="../figures/Atlantic halibut/total_vulnerability_map_all.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vuln-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.4: Vulnerability on the Northeast Shelf for Atlantic halibut. Vulnerability is the product of sensitivity and exposure (see <a href="#fig-exp" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-exp</span></a> and <a href="#fig-sens" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-sens</span></a>)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>[INSERT VULNERABILITY NARRATIVE TEXT HERE]</p>
 </section>
 </section>
 <section id="data-quality-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality-metrics">Data Quality Metrics</h2>
 <section id="life-history-data-quality" class="level3">
 <h3 class="anchored" data-anchor-id="life-history-data-quality">Life History Data Quality:</h3>
-<p>87% of data quality scores for the sensitivity attributes were greater than or equal to 2, indicating strong data quality. Stock Size/Status was the only identified data gap (mean attribute data quality score &lt; 2).</p>
+<p>[INSERT DATA QUALITY NARRATIVE TEXT HERE]</p>
 </section>
-<section id="model-confidence" class="level3">
-<h3 class="anchored" data-anchor-id="model-confidence">Model Confidence:</h3>
-<p>add text here</p>
+<section id="model-confidence-score" class="level3">
+<h3 class="anchored" data-anchor-id="model-confidence-score">Model Confidence Score:</h3>
+<p>[INSERT DATA QUALITY NARRATIVE TEXT HERE]</p>
 </section>
 </section>
 <section id="additional-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="additional-metrics">Additional Metrics</h2>
 <section id="distribution-shifts" class="level3">
 <h3 class="anchored" data-anchor-id="distribution-shifts">Distribution Shifts:</h3>
-<p>add text here</p>
+<p>[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]</p>
+<table class="caption-top table">
+<caption>Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period.</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Time Period</th>
+<th>Weighted Centroid Shift (km &amp; bearing)</th>
+<th>Core Habitat Area (change) (km<sup>2</sup>)</th>
+<th>Habitat Total Area (change) (km<sup>2</sup>)</th>
+<th>Latitude Range (change) (deg)</th>
+<th>Change in Longitude Range (deg)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1993-1997</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+</tr>
+<tr class="even">
+<td>2019-2023</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+</tr>
+<tr class="odd">
+<td>2031-2035</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+<td>[INSERT]</td>
+</tr>
+</tbody>
+</table>
+<div id="fig-movement" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-movement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/%3C%%20species%20%%3E/distribution_shift_drivers.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;14.5: Atlantic halibut Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep."><img src="../figures/%3C%%20species%20%%3E/distribution_shift_drivers.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-movement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.5: Atlantic halibut Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="directional-effect" class="level3">
 <h3 class="anchored" data-anchor-id="directional-effect">Directional Effect:</h3>
-<p>Halibut will likely be <strong>negatively</strong> impacted by climate change (100% certainty in expert scores). While halibut distributions are expanding due to warmer temperatures, they are shifting northward and off the Northeast shelf into Canadian waters. This is similar to the result from the 2016 Assessment <span class="citation" data-cites="hare2016vulnerability">(<a href="#ref-hare2016vulnerability" role="doc-biblioref">Hare et al. 2016</a>)</span>.</p>
+<p>[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]</p>
 </section>
 </section>
 <section id="climate-effects-on-abundance-and-distribution" class="level2">
 <h2 class="anchored" data-anchor-id="climate-effects-on-abundance-and-distribution">Climate Effects on Abundance and Distribution</h2>
-<p><span class="citation" data-cites="Nye2009">Nye et al. (<a href="#ref-Nye2009" role="doc-biblioref">2009</a>)</span> observed a northward shift in Atlantic halibut distribution and an increase in the depth of occurrence on the Northeast U.S. continental shelf. The species’ thermal habitat has widened, likely contributing to its range expansion <span class="citation" data-cites="Shackell2022">(<a href="#ref-Shackell2022" role="doc-biblioref">Shackell et al. 2022</a>)</span>, and biomass and landings in Canadian waters have thus increased greatly since the early 2000s <span class="citation" data-cites="Trzcinski2016">(<a href="#ref-Trzcinski2016" role="doc-biblioref">Trzcinski and Bowen 2016</a>)</span>. <span class="citation" data-cites="Shackell2022">Shackell et al. (<a href="#ref-Shackell2022" role="doc-biblioref">2022</a>)</span> calculated growth rates from tagging studies and found faster growth in Atlantic halibut in warmer, southern waters. From 1990 to 2018, thermal habitat rose by 11.6% (+/- 7.35%) and the number of degree days where Atlantic halibut are experiencing growth increased by 13.5 °C days (+/- 7.86 °C days) <span class="citation" data-cites="Czich2023">(<a href="#ref-Czich2023" role="doc-biblioref">Czich et al. 2023</a>)</span>. Continued warming is likely to increase abundance in the northern end of the species’ range; however elevated CO^2^ levels and rising temperatures may lead to oxidative stress <span class="citation" data-cites="Almroth2019">(<a href="#ref-Almroth2019" role="doc-biblioref">Almroth et al. 2019</a>)</span>.</p>
+<p>[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]</p>
 </section>
 <section id="life-history-synopsis" class="level2">
 <h2 class="anchored" data-anchor-id="life-history-synopsis">Life History Synopsis</h2>
-<p>Atlantic halibut are found from the Labrador Shelf in the North to Virginia, although they are rare south of Long Island <span class="citation" data-cites="Cargnelli1999">(<a href="#ref-Cargnelli1999" role="doc-biblioref">Cargnelli, Griesbach, and Morse 1999</a>)</span>. Adult halibut spawn from late fall to late spring in deep continental shelf waters, with presumed spawning peaks occurring at 2 - 9 day intervals between October and January <span class="citation" data-cites="Collette2002 Armsworthy2014">(<a href="#ref-Collette2002" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>; <a href="#ref-Armsworthy2014" role="doc-biblioref">Armsworthy, Trzcinski, and Campana 2014</a>)</span>. Eggs hatch in 13-20 days depending on the temperature <span class="citation" data-cites="Blaxter1983">(<a href="#ref-Blaxter1983" role="doc-biblioref">Blaxter et al. 1983</a>)</span>; larvae have been found in the plankton as much as a year after spawning <span class="citation" data-cites="Collette2002">(<a href="#ref-Collette2002" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span>. Depending on current speeds and larval duration, eggs and larvae may drift anywhere from 300-500 km. Tagging studies of spawning individuals suggest that larvae can be transported into the Gulf of St Lawrence, which may provide nursery habitats <span class="citation" data-cites="Armsworthy2014">(<a href="#ref-Armsworthy2014" role="doc-biblioref">Armsworthy, Trzcinski, and Campana 2014</a>)</span>. Juveniles are most common in shallow water from 20-60 m in nursery areas on the shelf <span class="citation" data-cites="Cargnelli1999">(<a href="#ref-Cargnelli1999" role="doc-biblioref">Cargnelli, Griesbach, and Morse 1999</a>)</span>. Juvenile halibut up to 30 cm in length consume invertebrates, mostly annelid worms and crustaceans; they then feed on fish and invertebrates from 30-80 cm in length, and then almost exclusively on fish as they grow larger <span class="citation" data-cites="Scott1988">(<a href="#ref-Scott1988" role="doc-biblioref">Scott and Scott 1988</a>)</span> <span class="citation" data-cites="Bowman2000">(<a href="#ref-Bowman2000" role="doc-biblioref">Bowman et al. 2000</a>)</span>. Adults normally inhabit benthic waters from 2-15°C, but occupy the entire water column to feed and spawn <span class="citation" data-cites="Cargnelli1999">(<a href="#ref-Cargnelli1999" role="doc-biblioref">Cargnelli, Griesbach, and Morse 1999</a>)</span> <span class="citation" data-cites="Collette2002">(<a href="#ref-Collette2002" role="doc-biblioref">Collette and Klein-MacPhee 2002</a>)</span> <span class="citation" data-cites="Armsworthy2014">(<a href="#ref-Armsworthy2014" role="doc-biblioref">Armsworthy, Trzcinski, and Campana 2014</a>)</span>. In the Gulf of Maine, tagged individuals have been observed conducting both shore and long distance migrations, as well as being resident year-round <span class="citation" data-cites="Shackell2022">(<a href="#ref-Shackell2022" role="doc-biblioref">Shackell et al. 2022</a>)</span>. Age at maturity ranges from 7 - 13 years (females) and 5 - 12 years (males), and their maximum age is between 38-50 years <span class="citation" data-cites="Armsworthy2014">(<a href="#ref-Armsworthy2014" role="doc-biblioref">Armsworthy, Trzcinski, and Campana 2014</a>)</span>. Atlantic halibut is currently managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. The most recent management track assessment was completed in 2024, where stock status could not be determined analytically due to a lack of biological reference points <span class="citation" data-cites="NEFSC2024_halibut">(<a href="#ref-NEFSC2024_halibut" role="doc-biblioref">Northeast Fisheries Science Center (NEFSC) 2024</a>)</span>.</p>
+<p>[INSERT LIFE HISTORY NARRATIVE TEXT HERE]</p>
 </section>
-<section id="figures" class="level2">
-<h2 class="anchored" data-anchor-id="figures">Figures</h2>
-<div class="cell" data-layout-align="left">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic halibut_exposure_allvars.png"</code></pre>
+<section id="supplemental-scores" class="level2">
+<h2 class="anchored" data-anchor-id="supplemental-scores">Supplemental Scores</h2>
+<section id="exposure-timeseries" class="level3">
+<h3 class="anchored" data-anchor-id="exposure-timeseries">Exposure Timeseries</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-exp-month-tm" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-exp-month-tm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/Atlantic halibut/variable_exposure_timeseries.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;14.6: Monthly Timeseries of each Exposure Factor for Atlantic halibut. Exposure was calculated between 2014-2023 and 2025-2035"><img src="../figures/Atlantic halibut/variable_exposure_timeseries.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exp-month-tm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.6: Monthly Timeseries of each Exposure Factor for Atlantic halibut. Exposure was calculated between 2014-2023 and 2025-2035
+</figcaption>
+</figure>
 </div>
 </div>
-<div class="cell" data-layout-align="left">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic halibut_exposure_impvars.png"</code></pre>
+</div>
+<p>[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]</p>
+</section>
+<section id="exposure-due-to-significant-factors" class="level3">
+<h3 class="anchored" data-anchor-id="exposure-due-to-significant-factors">Exposure due to Significant Factors</h3>
+<p>[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-exp-imp" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-exp-imp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/Atlantic halibut/total_exposure_map_timeseries_imp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;14.7: Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Atlantic halibut distributions"><img src="../figures/Atlantic halibut/total_exposure_map_timeseries_imp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exp-imp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.7: Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Atlantic halibut distributions
+</figcaption>
+</figure>
 </div>
 </div>
-<div class="cell" data-layout-align="left">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic halibut_distribution_center_of_gravity.png"</code></pre>
 </div>
-</div>
-<div class="cell" data-layout-align="left">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic halibut_distribution_area_of_high_probability.png"</code></pre>
-</div>
-</div>
-<div class="cell" data-layout-align="left">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/katherine.gallagher/Documents/READ-EDAB-CVA2.0Manual/test_images/Atlantic halibut_sdm.png"</code></pre>
-</div>
-</div>
+</section>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-Almroth2019" class="csl-entry" role="listitem">
-Almroth, B. C., K. B. de Souza, E. Jönsson, and J. Sturve. 2019. <span>“Oxidative Stress and Biomarker Responses in the Atlantic Halibut After Long Term Exposure to Elevated CO2 and a Range of Temperatures.”</span> <em>Comparative Biochemistry and Physiology Part B: Biochemistry and Molecular Biology</em> 238. <a href="https://doi.org/10.1016/j.cbpb.2019.110321">https://doi.org/10.1016/j.cbpb.2019.110321</a>.
-</div>
-<div id="ref-Armsworthy2014" class="csl-entry" role="listitem">
-Armsworthy, S. L., M. K. Trzcinski, and S. E. Campana. 2014. <span>“Movements, Environmental Associations, and Presumed Spawning Locations of Atlantic Halibut (Hippoglossus Hippoglossus) in the Northwest Atlantic Determined Using Archival Satellite Pop-up Tags.”</span> <em>Marine Biology</em> 161: 645–56. <a href="https://doi.org/10.1007/s00227-013-2367-5">https://doi.org/10.1007/s00227-013-2367-5</a>.
-</div>
-<div id="ref-Blaxter1983" class="csl-entry" role="listitem">
-Blaxter, J. H. S., D. Danielssen, E. Mokness, and V. Øiestad. 1983. <span>“Description of the Early Development of the Halibut Hippoglossus Hippoglossus and Attempts to Rear the Larvae Past First Feeding.”</span> <em>Marine Biology</em> 73: 99–107.
-</div>
-<div id="ref-Bowman2000" class="csl-entry" role="listitem">
-Bowman, R. E., C. E. Stillwell, W. L. Michaels, and M. D. Grosslein. 2000. <span>“Food of Northwest Atlantic Fishes and Two Common Species of Squid.”</span> Technical Memorandum NMFS-F/NE-155. NOAA.
-</div>
-<div id="ref-Cargnelli1999" class="csl-entry" role="listitem">
-Cargnelli, L. M., S. J. Griesbach, and W. W. Morse. 1999. <span>“Essential Fish Habitat Source Document: Atlantic Halibut, Hippoglossus Hippoglossus, Life History and Habitat Characteristics.”</span> Technical Memorandum NMFS-NE-125. NOAA.
-</div>
-<div id="ref-Collette2002" class="csl-entry" role="listitem">
-Collette, B. B., and G. Klein-MacPhee, eds. 2002. <em>Bigelow and <span>S</span>chroeder’s <span>F</span>ishes of the <span>G</span>ulf of <span>M</span>aine</em>. 3rd ed. Washington, D.C.: Smithsonian Institution Press.
-</div>
-<div id="ref-Czich2023" class="csl-entry" role="listitem">
-Czich, A. N., R. R. E. Stanley, T. S. Avery, C. E. den Heyer, and N. L. Shackell. 2023. <span>“Recent and Projected Climate Change–Induced Expansion of Atlantic Halibut in the Northwest Atlantic.”</span> <em>FACETS</em> 8: 1–14. <a href="https://doi.org/10.1139/facets-2021-0202">https://doi.org/10.1139/facets-2021-0202</a>.
-</div>
 <div id="ref-hare2016vulnerability" class="csl-entry" role="listitem">
 Hare, Jonathan A, Wendy E Morrison, Mark W Nelson, Megan M Stachura, Eric J Teeters, Roger B Griffis, Michael A Alexander, et al. 2016. <span>“A Vulnerability Assessment of Fish and Invertebrates to Climate Change on the Northeast US Continental Shelf.”</span> <em>PloS One</em> 11 (2): e0146756.
-</div>
-<div id="ref-NEFSC2024_halibut" class="csl-entry" role="listitem">
-Northeast Fisheries Science Center (NEFSC). 2024. <span>“Atlantic Halibut 2024 Management Track Assessment Report.”</span> NOAA Fisheries. <a href="https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9875">https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&amp;fileId=9875</a>.
-</div>
-<div id="ref-Northeast_Fisheries_Science_Center_US2015-cv" class="csl-entry" role="listitem">
-Northeast Fisheries Science Center (U.S.). 2015. <span>“Operational Assessment of 20 Northeast Groundfish Stocks, Updated Through 2014.”</span> Northeast Fisheries Science Center (U.S.).
-</div>
-<div id="ref-Nye2009" class="csl-entry" role="listitem">
-Nye, J. A., J. S. Link, J. A. Hare, and W. J. Overholtz. 2009. <span>“Changing Spatial Distribution of Fish Stocks in Relation to Climate and Population Size on the <span>Northeast</span> <span>United</span> <span>States</span> Continental Shelf.”</span> <em>Marine Ecology Progress Series</em> 393: 111–29.
-</div>
-<div id="ref-Scott1988" class="csl-entry" role="listitem">
-Scott, W. B., and M. G. Scott. 1988. <em>Atlantic Fishes of Canada</em>. Vol. 219. Canadian Bulletin of Fisheries; Aquatic Sciences.
-</div>
-<div id="ref-Shackell2022" class="csl-entry" role="listitem">
-Shackell, N. L., J. A. D. Fisher, C. E. den Heyer, D. R. Hennen, A. C. Seitz, et al. 2022. <span>“Spatial Ecology of Atlantic Halibut Across the Northwest Atlantic: A Recovering Species in an Era of Climate Change.”</span> <em>Reviews in Fisheries Science &amp; Aquaculture</em> 30 (3): 281–305. <a href="https://doi.org/10.1080/23308249.2021.1948502">https://doi.org/10.1080/23308249.2021.1948502</a>.
-</div>
-<div id="ref-Trzcinski2016" class="csl-entry" role="listitem">
-Trzcinski, M. K., and W. D. Bowen. 2016. <span>“The Recovery of Atlantic Halibut: A Large, Long-Lived, and Exploited Marine Predator.”</span> <em>ICES Journal of Marine Science</em> 73 (4): 1104–14. <a href="https://doi.org/10.1093/icesjms/fsv266">https://doi.org/10.1093/icesjms/fsv266</a>.
 </div>
 </div>
 </section>
@@ -1109,6 +1186,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

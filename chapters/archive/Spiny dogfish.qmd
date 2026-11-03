@@ -1,0 +1,364 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Spiny dogfish (*`Squalus acanthias`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Spiny%20dogfish.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** Low
+-   **Climate Exposure:** Moderate
+-   **Biological Sensitivity:** Low
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Spiny dogfish/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Spiny dogfish."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Spiny dogfish/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric               | Current Assessment | Previous Assessment(s) | Change   |
+|------------------|------------------|------------------|------------------|
+| *Vulnerability*      | Low                | Low                    | None     |
+| *Exposure*           | Moderate           | High                   | Decrease |
+| *Sensitivity*        | Low                | Low                    | None     |
+| *Directional Effect* | Neutral            | Neutral                | None     |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Spiny dogfish/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Spiny dogfish Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Spiny dogfish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Spiny dogfish/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Spiny dogfish"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Spiny dogfish/total_vulnerability_map_all", ext)))
+```
+
+Mean Vulnerability scores for Spiny dogfish were Low (2 +/- 0.94) (@fig-sum-tab). Exposure was mostly uniform across the model species range. There were some Moderate scores over Georges Bank (@fig-vuln).
+
+In the previous Assessment, spiny dogfish also received a Low Vulnerability score [@hare2016vulnerability].
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Spiny dogfish/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Spiny dogfish"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Spiny dogfish/total_exposure_map_all", ext)))
+```
+
+Mean Exposure scores for Spiny dogfish were **Moderate** (2 +/- 0.94) (@fig-sum-tab). Exposure was Very High over Georges Bank and High along the coast of the Gulf of Maine and in Southern New England. Scores were also High on the continental shelf break (@fig-exp). These patterns were driven by bottom temperature, oxygen, salinity, and aragonite saturation scores (@fig-fact-exp). 
+
+In the previous Assessment, spiny dogfish received a High Exposure score, driven by high sea surface temperature and ocean acidification exposure scores [@hare2016vulnerability].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Spiny dogfish/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Spiny dogfish"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Spiny dogfish/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Spiny dogfish/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Spiny dogfish"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Spiny dogfish/total_exposure_map_timeseries_all", ext)))
+```
+
+There was little monthly variation in Exposure scores for spiny dogfish (@fig-exp-month). Scores ranged from Low to Moderate and were lowest from February through May due to low bottom temperature and oxygen exposure scores (@fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Spiny dogfish/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Spiny dogfish"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Spiny dogfish/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Spiny dogfish/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Spiny dogfish distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Spiny dogfish/total_exposure_map_timeseries_imp", ext)))
+```
+
+Bottom temperature, oxygen, and salinity, as well as large zooplankton biomass were important dynamic drivers of spiny dogfish distributions (@fig-sum-tab).. Temperatures drive migration patterns [@stehlik2007] [@carlson2014]. Spiny dogfish are also generalist piscivores [@stehlik2007] [@devries2025]. When exposure was calculated using only these important factors, scores remained Moderate and distributions of scores remained relatively similar (@fig-sum-tab, @fig-exp-imp).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Spiny dogfish/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Spiny dogfish/sensitivity_map", ext)))
+```
+
+Spiny dogfish received a **Low** sensitivity score, with a certainty of 100%. The only attribute with a score greater than 2.5 was Population Growth Rate (3.6) (@fig-sum-tab). They are a long-lived, slowly maturing species. Age at maturity ranges from 6 years for males and 12 years for females, with maximum lifespans of 35-40 years [@stehlik2007]. Gestation periods last from 18-24 months [@stehlik2007].
+
+Spiny dogfish also received a Low sensitivity score in the previous Climate Vulnerability Assessment. This score was also driven by Population Growth Rates [@hare2016vulnerability].
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+90% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Spiny dogfish/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Spiny dogfish. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Spiny dogfish distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Spiny%20dogfish/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+Experts predict that climate change will have a **neutral** effect on spiny dogfish. Certainty was 91%. Occurrence of spiny dogfish is correlated with warmer temperatures [@sagarese2014a]. They are highly migratory and will move north-south to follow waters within their preferred temperature range (6-13C) [@stehlik2007] [@carlson2014]. They may benefit from the loss of cod as they occupy similar feeding niches [@neuenhoff2019] [@ono2019]. The previous Assessment also predicted that climate change would have a neutral impact on spiny dogfish [@hare2016vulnerability].
+
+## Climate Effects on Abundance and Distribution
+
+@nye2009 observed a range expansion and southward shift in center of biomass in spiny dogfish, although changes in biomass over the study period may have influenced these shifts. Seasonal occurrence of spiny dogfish is highly correlated with depth and bottom temperature, with a higher probability of occurrence in warmer years versus colder years [@sagarese2014a]. Spiny dogfish shift their distribution seasonally; variation in environmental drivers may impact population and fishery dynamics as temperatures continue to increase. Climate-inducing seasonal distribution shifts influencing habitat availability for spiny dogfish may also lead to vulnerability of the inshore fishery in the fall [@sagarese2014b].
+
+## Life History Synopsis
+
+Atlantic spiny dogfish are a schooling, highly migratory shark species (HMS) inhabiting inshore and offshore waters from Labrador to Florida, although they are most abundant from Nova Scotia and Cape Hatteras. Spiny dogfish perform diel vertical migrations; most schools are found around 40-50 m depth, but can descend upwards of 500 m [@stehlik2007] [@carlson2014]. There are populations that occupy the continental shelves of Europe, Asia, and the northeast Pacific, but these populations do not mix [@stehlik2007]. Spiny dogfish perform north-south migrations and move between inshore-offshore waters in response to water temperature, migrating north in the spring and summer and south in the fall and winter to remain in waters between 6-13°C [@stehlik2007] [@carlson2014]. Age at maturity is 6 years for males and 12 years for females, with a lifespan of 35 years for males and 40 years for females. Spawning occurs offshore in the winter, with a gestation period of 18-24 months [@stehlik2007]. Proportions of mature females in catch are correlated with bottom temperatures, with more mature females caught at relatively higher bottom temperatures. However, how temperature impacts reproduction is still unclear [@sagarese2014b]. Spiny dogfish are opportunistic feeders, preying upon a variety of fishes (herring, mackerel, hakes, sand lance, menhaden), squid, ctenophores, polychaetes, crustaceans, bivalves. Diets can shift based on location and availability [@stehlik2007] [@devries2025]. Predators of spiny dogfish include sharks, seals, cod, goosefish, dolphins, and larger fish [@stehlik2007]. Spiny dogfish occupy a similar niche to that of Atlantic cod, whose populations have been impacted by increasing seal populations in the Northwest Atlantic and Canada. It has been hypothesized that the loss of cod could be a benefit to spiny dogfish, since they occupy similar feeding niches [@neuenhoff2019] [@ono2019]. The Mid-Atlantic Fishery Management Council (MAFMC) leads the joint management of the Spiny Dogfish Fishery Management Plan, with support from the New England Fishery Management Council (NEFMC) and Atlantic States Marine Fisheries Commission (ASMFC) [@mafmc2025_spinydog]. The ASMFC manages spiny dogfish in state waters via the Interstate Fishery Management Plan for Spiny Dogfish [@asmfc2002_spinydog]. As of 2023, spiny dogfish in the Northwest Atlantic are not overfished and overfishing is not occurring [@nefsc2023_spinydog].
+
+## References

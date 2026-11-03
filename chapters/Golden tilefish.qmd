@@ -1,4 +1,5 @@
 ---
+bibliography: ../utils/references.bib
 format:
   pdf:
     engine: knitr
@@ -10,11 +11,13 @@ format:
     include-in-header: 
       text: |
         \usepackage{fvextra}
+        \usepackage{float}
         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
         \pagenumbering{gobble}
 ---
 
 ```{r setup}
+#| include: false
 knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
@@ -24,117 +27,585 @@ knitr::opts_chunk$set(
 
 # Golden tilefish (*`Lopholatilus chamaeleonticeps`*)
 
-## Summary
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Golden tilefish.pdf){.btn .btn-primary target="_blank"}
+:::
 
-::::: {layout-ncol="2"}
-<div>
+## Summary Scores
 
-**Scores**
+-   **Sensitivity:** [INSERT]
+-   **Exposure:** [INSERT]
+-   **Vulnerability:** [INSERT]
 
-Vulnerability =
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
 
-Climate Exposure =
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_allvars*", ext), 
+  full.names = TRUE
+)
 
-Biological Sensitivity = Moderate
+has_figure <- length(found_files) > 0
 
-</div>
-
-<div>
-
-**Data Quality**
-
-Model Confidence Score =
-
-Life History Data Quality = 93%
-
-</div>
-:::::
-
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Golden tilefish_exposure_summary_table.png")
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-
-here::here("test_images/Golden tilefish_sensitivity_summary_table.png")
-
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Golden tilefish. Exposure and Vulnerability scores are averaged spatially across the species distribution and within stocks if applicable (see @fig-vuln and @fig-exp). Life History Data Quality (LH DQ) and Standard Deviations (SD) are reported for senstivity and exposure/vulnerability scores, respectively."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
 ```
 
 ## Changes from Previous Assessment(s)
 
-| Metric | Current Assessment | Previous Assessment(s) | Change |
-|-------------------|-----------------|---------------------|----------------|
-| *Vulnerability* |  |  |  |
-| *Exposure* |  |  |  |
-| *Sensitivity* | Moderate | High [@burton2023climate] | Decrease |
-| *Directional Effect* | Neutral | Neutral [@burton2023climate] | None |
+| Metric               |Previous Assessment(s)  | Current Assessment | Change     |
+|-------------------|-----------------|--------------------|-----------------|
+| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
+| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
+| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
+| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
 
-## Score Drivers
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("stock_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Golden tilefish Stocks along the Northeast Shelf"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Golden tilefish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Sensitivity:
+
+```{r}
+#| echo: false
+
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("sensitivity_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Golden tilefish Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+
+### Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Golden tilefish/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Maps of each Exposure Factor for Golden tilefish. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Golden tilefish/variable_exposure_maps", ext)))
+```
+
+[INSERT EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure on the Northeast Shelf for Golden tilefish. Total Exposure is calculated by applying the logic rule from @hare2016vulnerability within grid cells across exposure factors (see @fig-fact-exp)"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
 ### Vulnerability:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
 
-### Climate Exposure:
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_vulnerability_map_all*", ext), 
+  full.names = TRUE
+)
 
-add text here
+has_figure <- length(found_files) > 0
 
-### Biological Sensitivity:
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 
-Golden Tilefish received a **Moderate** sensitivity score with 62% certainty. Four attributes had scores greater than 2.5: Stock Size (3), Adult Mobility (3), Population Growth Rate (2.8), and Historical Variability in Temperature (2.7).
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
 
-Golden Tilefish primarily occupy burrows on the seafloor. Die offs have been observed after meanders in the Gulf Stream, suggesting that they are very sensitive to temperature shifts [@able1982burrow]. Golden tilefish mature at 2-4 years and maximum ages of 45 years have been documented [@steimle1999essential; @bigelow1953fishes], suggesting they are a long-lived species that may be susceptible to overfishing. Overfishing is currently occurring in the Mid-Atlantic stock [@nefsc2024golden].
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Golden tilefish. Vulnerability is the product of sensitivity and exposure (see @fig-exp and @fig-sens)"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
-Golden tilefish were not assessed along the Northeast Shelf in the 2016 Assessment, but were assessed in the recent Southeast US Climate Vulnerability Assessment. They received a High sensitivity score in that assessment. This was driven by two attributes: Habitat Specialization and Population Growth Rate [@burton2023climate], similar to our results.
+[INSERT VULNERABILITY NARRATIVE TEXT HERE]
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-93% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified.
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
-### Model Confidence:
+### Model Confidence Score:
 
-add text here
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
 ## Additional Metrics
 
 ### Distribution Shifts:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("distribution_shifts_static*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_figure == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Golden tilefish. Polygons illustrate core habitat (left) and species range (right) for five-year average periods. Points illustrate weighted centroid, calculated as the average position with species distribution models as weights. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+
+| Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Golden tilefish Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/%3C%%20species%20%%3E/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
 
 ### Directional Effect:
 
-Experts predicted that climate change would have a **neutral** impact on Golden tilefish. Certainty was 92%. Golden Tilefish occupy the ‘warm belt’ where shelf and slope waters meet. Warming temperatures could increase the amount of preferred habitat. In the Southeast Climate Vulnerability Assessment, experts also predicted that climate change will have a neutral impact on Golden Tilefish, and hypothesized that warming temperatures could increase the amount of available habitat in the northeast [@burton2023climate].
+[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
 
 ## Climate Effects on Abundance and Distribution
 
-Golden tilefish prefer a very narrow temperature range (8-17°C); increased ocean acidification may have negative impacts on survival, growth, and abundance [@salois2024golden]. @nesslage2021environmental identified a correlation between negative Atlantic Multidecadal Oscillation (AMO) and positive North Atlantic Oscillation (NAO) and golden tilefish recruitment class pulses. Catch per unit effort is influenced by temperature and oceanographic currents (Gulf Stream and Labrador Current) [@nesslage2021environmental]. A large golden tilefish die-off and resulting fishery collapse in the spring of 1882 has been correlated with meanders in the Gulf Stream, suggesting that they are very sensitive to temperature changes [@fisher2014life]. Changes to weather patterns and a rise in stormy conditions along with very cold bottom temperatures can drive golden tilefish off the shelf and cause a decrease in fishing [@salois2024golden]. 
+[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
 
 ## Life History Synopsis
 
-Golden tilefish inhabit continental shelf and slope waters along the entire U.S. East and Gulf Coasts, although they are most abundant from Nantucket to Cape May, New Jersey [@steimle1999essential]. Two genetically-different tilefish stocks have been identified in United States waters: the Mid-Atlantic Bight and south of Cape Hatteras into the Gulf of America [@steimle1999essential]. Individuals of many species off Cape Hatteras were smaller and less active than their conspecifics off Virginia. Tilefish are classified as serial or fractional spawners from March to November with a peak in activity in June [@idelberger1988reproductive]. However, with serial or fractional spawners there is some doubt whether all of the eggs in the ovaries are released during a single seasonal spawning cycle. Residual eggs could be resorbed during the winter [@grimes1988reproductive]. Artificially-fertilized eggs hatched in 40 hours at 22-24.6°C; it is likely that egg duration increases in colder temperatures [@fahay1981preliminary]. The duration of the larval stage is unknown. Movements of water masses along the shelf break may play a role in recruitment success, including larval survival and retention near spawning grounds. Strong recruitment pulses have been linked to shifts in the Gulf Stream Index, AMO, and NAO [@salois2024golden]. Little is known about larval diets, but they likely prey on zooplankton, particularly *Calanus* [@steimle1999essential]. Common predators of larval and juvenile tilefish are monkfish, spiny dogfish, and bottom-dwelling sharks [@steimle1999essential]. Post-larval tilefish are primarily sedentary and non-migratory. They settle in waters approximately 8-17°C, known as the "warm belt" (where shelf and slope water meet) on the outer continental shelf and upper slope of the Northwest Atlantic [@able1982burrow]. Juveniles and adults often occupy simple vertical shaft burrows in semi-lithified clay of the shelf break, submarine canyon walls, and flanks around 100-200m depth [@able1982burrow]. Lobster pots, red crab traps, ship wrecks and other artificial structures have also been used by tilefish [@steimle1999essential]. Diet shifts with size, with crustaceans, mollusks, and echinoderms dominating young/small tilefish diets. Adult tilefish are opportunistic benthic foragers, feeding on shrimp, crabs, snails, worms, anemones, sea cucumbers, smaller fish, squid, and bivalves. They are known to scavenge on fresh material and reject rancid bait. Adults will also consume anthropogenic material [@steimle1999essential]. Age at maturity is typically 2-4 years [@steimle1999essential], with a maximum age up to 45 years [@bigelow1953fishes]. The Northwest Atlantic stock is managed by the Mid-Atlantic Fishery Management Council under the Tilefish Fishery Management Plan. The most recent benchmark stock assessment occurred in 2024. The stock is not overfished, but overfishing is occurring and the Mid-Atlantic stock is reduced to end overfishing [@nefsc2024golden].
+[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
 
-## Figures
+## Supplemental Scores
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Golden tilefish_exposure_allvars.png")
+### Exposure Timeseries
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("variable_exposure_timeseries.*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Golden tilefish_exposure_impvars.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Monthly Timeseries of each Exposure Factor for Golden tilefish. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Golden tilefish_distribution_center_of_gravity.png")
+[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_timeseries_only_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Golden tilefish_distribution_area_of_high_probability.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Timeseries of Total Exposure  for Golden tilefish"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, out.width="200%", fig.align='left'}
-here::here("test_images/Golden tilefish_sdm.png")
+### Exposure due to Significant Factors
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("dynamic_variable_importance_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Dynamic Factors driving American lobster distributions. The closer the polygon is to the edge of the figure, the more important the variable is. Each ring represents 10% variance explained. Factors must explain at least 10% of variance in the ensemble model to be used to calculate total exposure."
+#| label: fig-radar
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_timeseries_imp*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Golden tilefish distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Golden tilefish")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_impvars*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-imp
+#| fig-cap: "As in @fig-sum-tab for Golden tilefish, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
+```
+
 
 ## References

@@ -1,0 +1,366 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Ocean quahog (*`Arctica islandica`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Ocean%20quahog.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** High
+-   **Climate Exposure:** Moderate
+-   **Biological Sensitivity:** Very High
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Ocean quahog/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Ocean quahog."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Ocean quahog/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric               | Current Assessment | Previous Assessment(s) | Change   |
+|------------------|------------------|------------------|------------------|
+| *Vulnerability*      | High               | Very High              | Decrease |
+| *Exposure*           | Moderate           | High                   | Decrease |
+| *Sensitivity*        | Very High          | Very High              | None     |
+| *Directional Effect* | Negative           | Negative               | None     |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Ocean quahog Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Ocean quahog is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Ocean quahog"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Ocean quahog/total_vulnerability_map_all", ext)))
+```
+
+Mean Vulnerability scores for ocean quahog were **High** (9.85 +/- 3.58) (@fig-sum-tab). Scores were Very High in Southern New England and on Georges Bank and Moderate elsewhere along the continental shelf (@fig-vuln). When exposure was calculated using only factors that were important to its distribution, scores remained High on average (7.42 +/- 3.33) (@fig-sum-tab).
+
+In the previous Assessment, ocean quahog received a Very High Vulnerability score [@hare2016vulnerability].
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Ocean quahog"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Ocean quahog/total_exposure_map_all", ext)))
+```
+
+Mean Exposure scores for the ocean quahog were **Moderate** (2.46 +/- 0.90) (@fig-sum-tab). Exposure was Very High on Georges Bank, and High along the coast of the Gulf of Maine and in Southern New England. Scores were Low elsewhere in the distribution (@fig-exp). These patterns were driven by bottom temperature, oxygen, and salinity exposure (@fig-fact-exp).
+
+In the previous Assessment, ocean quahog received a High Exposure score, driven by high sea surface temperature and ocean acidification scores [@hare2016vulnerability].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Ocean quahog"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Ocean quahog/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Ocean quahog"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Ocean quahog/total_exposure_map_timeseries_all", ext)))
+```
+
+Monthly exposure scores ranged from Low to High. Scores were Low in March and High from June through December (@fig-exp-month). These patterns were driven by changes in bottom temperature and oxygen exposure (@fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Ocean quahog"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Ocean quahog/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Ocean quahog distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Ocean quahog/total_exposure_map_timeseries_imp", ext)))
+```
+
+Bottom oxygen, salinity, aragonite solubility, and net primary productivity were the major dynamic drivers of ocean quahog distributions (@fig-sum-tab). As a benthic shellfish, they occupy the benthos and are filter feeders with calcium carbonate shells [@cargnelli1999_oq]. When only these factors were used to calculate exposure, exposure remained Moderate (1.86 +/- 0.83) (@fig-sum-tab). High exposure scores were found south of Long Island, Cape Cod, and on Georges Bank (@fig-exp-imp).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Ocean quahog/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Ocean quahog/sensitivity_map", ext)))
+```
+
+The ocean quahog received a **Very High** sensitivity score, with a certainty of 71%. Three attributes had scores greater than 3.5: Adult Mobility (4), Population Growth Rate (4), and Relationship to Calcified Organisms (3.6) (@fig-sum-tab).
+
+Similar to other bivalves, ocean quahogs have calcium carbonate shells and are sessile [@cargnelli1999_oq]. They are also one of the longest-lived bivalve species, with maximum ages high as 507 years old documented, and ages over 300 years old common in the Northwest Atlantic [@sower2023examination]. They mature at 13 years of age [@cargnelli1999_oq].
+
+Ocean quahogs also received a Very High sensitivity score in the previous Climate Vulnerability Assessment for the Northeast Shelf. The same attributes: Adult Mobility, Population Growth Rate, and Sensitivity to Ocean Acidification, drove the score [@hare2016vulnerability].
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+87% of data quality scores were greater than or equal to 2, indicating strong data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Ocean quahog/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Ocean quahog. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Ocean quahog distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Ocean%20quahog/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+Experts predicted that Ocean Quahog would be **negatively** impacted by climate change. Certainty was 100%. Warming conditions are expected to shift the species’ distribution north and further offshore, possibly leading to competition between surfclams and ocean quahogs [@weinberg2002influence] [@stromp2023evaluation] [@spencer2024climate]. Ocean acidification will also negatively impact the species. The 2016 Climate Vulnerability Assessment also suggested that Ocean Quahogs would be negatively impacted by climate change [@hare2016vulnerability].
+
+## Climate Effects on Abundance and Distribution
+
+Radiocarbon aging on ocean quahog shells suggest past (200 years) ocean quahog distributions inshore of their current range, indicating a range shift coinciding with the regression of the Cold Pool after the Little Ice Age [@leclaire2022historical]. With settlement occurring at the end of the larval stage, it may be presumed that temperature impacts settlement rate. @weinberg2002influence note that an increase in temperature would shift the species offshore and north. Future warming conditions are predicted to result in range shifts in Atlantic surfclams that would lead to potential competition for food and space between surfclams and ocean quahogs [@stromp2023evaluation] [@spencer2024climate].
+
+## Life History Synopsis
+
+Ocean quahogs are bivalve mollusks that inhabit the Northeast U.S. Continental Shelf from Newfoundland to Cape Hatteras [@cargnelli1999_oq]. The ocean quahog is among the longest-lived and slowest growing of marine bivalves, reaching maturity around 13 years of age and harvestable size at age 20 [@cargnelli1999_oq]. Maximum ages have been documented as high as 507 years old, with ages over 300 years old more common in the Northwest Atlantic [@sower2023examination]. Spawning occurs either in summer or fall, and can extend for months, releasing eggs and sperm into the water column at low levels over time [@cargnelli1999_oq]. Multiple annual spawnings may occur at the individual and population levels [@mann1982seasonal]. Eggs and larvae drift with currents until metamorphosis, then settle to the bottom [@mafmc1997_oq]. Larval development, at minimum, lasts for 55 days and decreases with increasing temperature [@lutz1981experimental]. Larvae go through three stages of development (trochophores, veligers and pediveligers) with the duration of each stage being temperature dependent [@cargnelli1999_oq]. @vandewater1997biological noted that wind-forced circulation may play a significant role in planktonic and benthic recruitment on Georges Bank and that interannual differences in these winds can yield very different abundance patterns over the bank. Once settled to the bottom, juvenile ocean quahogs are found offshore in sandy substrates, but may survive in muddy intertidal environments if protected from predators [@kraus1989growth]. Cross-shelf distributions of juveniles and adults remain within a 10°C optimal temperature range, as temperatures above 16°C limit distribution [@cargnelli1999_oq]. Ocean quahogs are suspension feeders on phytoplankton, using their relatively short siphons which are extended above the surface of the substrate to pump in water [@cargnelli1999_oq]. Juvenile and small ocean quahogs are commonly preyed upon by crustaceans (rock crabs, sea stars) and fish (haddock, cod) [@cargnelli1999_oq]. Ocean quahogs are managed by the Mid-Atlantic Fishery Management Council under the Atlantic Surfclam-Ocean Quahog Fishery Management Plan. The species is mainly harvested off of Maine and Long Island. The last stock assessment was conducted in 2019, where the stock was not overfished and overfishing was not occurring [@mafmc2025_oq].
+
+## References

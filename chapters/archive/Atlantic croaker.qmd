@@ -1,0 +1,364 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic croaker (*`Micropogonias undulates`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Atlantic%20croaker.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** Low
+-   **Climate Exposure:** Low
+-   **Biological Sensitivity:** Moderate
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Atlantic croaker/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Atlantic croaker."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Atlantic croaker/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric               | Current Assessment | Previous Assessment(s) | Change   |
+|------------------|------------------|------------------|------------------|
+| *Vulnerability*      | Low                | Moderate               | Decrease |
+| *Exposure*           | Low                | Very High              | Decrease |
+| *Sensitivity*        | Moderate           | Low                    | Increase |
+| *Directional Effect* | Neutral            | Positive               | Increase |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic croaker/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Atlantic croaker Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Atlantic croaker is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic croaker/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Atlantic croaker"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic croaker/total_vulnerability_map_all", ext)))
+```
+
+Mean Vulnerability was **Low** for Atlantic croaker (2.97 +/- 1.56) (@fig-sum-tab). Scores were Moderate off the coast of New Jersey, in Delaware and Chesapeake Bays, and around the shelf break off the coast of Cape Hatteras. Scores and their distributions were similar when using the exposure scores calculated from only important factors (2.66 +/- 1.29) (@fig-vuln).
+
+Atlantic croaker received a Moderate Vulnerability score in the previous assessment, driven by a Very High Exposure score [@hare2016vulnerability].
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic croaker/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Atlantic croaker"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic croaker/total_exposure_map_all", ext)))
+```
+
+Mean exposure was **Low (1.49 +/- 0.78)** over the range of Atlantic croaker (@fig-sum-tab). Exposure was greatest along the coast of New Jersey, in Chesapeake Bay, and near the shelf break near Cape Hatteras (@fig-exp). On the shelf and in the coastal bays, this high exposure was driven by bottom temperatures, oxygen concentrations, and bottom salinity. On the shelf break, high exposures were due to aragonite saturation state (@fig-fact-exp). In the previous assessment, croaker received a Very High score, driven by high exposure to changes in sea surface temperature, air temperature, and ocean acidification [@hare2016vulnerability].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic croaker/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Atlantic croaker"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic croaker/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic croaker/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Atlantic croaker"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic croaker/total_exposure_map_timeseries_all", ext)))
+```
+
+Across months, exposure ranged between Low and Moderate. Exposure was Low from February to April and June through September due to declines in bottom temperature, oxygen, and salinity exposure (@fig-exp-month; @fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic croaker/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Atlantic croaker"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic croaker/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic croaker/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Atlantic croaker distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic croaker/total_exposure_map_timeseries_imp", ext)))
+```
+
+Bottom temperature, salinity, and aragonite saturation state, in addition to integrated downward particulate organic carbon flux, were all important drivers of croaker distribution (@fig-sum-tab; @fig-exp-imp). Both adult and juvenile croaker use demersal estuarine habitats [@asmfc2020addendum; @guyant2022northeast]. Detritus is a major component of the juvenile diet [@ffwcc2010croaker; @sink2011species] whereas adults are generalist feeders, consuming polychaetes, fishes, crabs, and detritus [@nye2011annual]. Only including these factors in the exposure calculation did not alter the Exposure score (@fig-sum-tab).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic croaker/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic croaker/sensitivity_map", ext)))
+```
+
+Atlantic croaker received a sensitivity score of **Moderate**. Certainty was high (90%). Three attributes received scores greater than 2.5: 1) Egg and Larval Survival and Settlement Requirements (2.9), 2) Other Stressors (2.7), and 3) Stock Size (2.5) (@fig-sum-tab).
+
+Croaker eggs and larvae rely on currents and tidal activity for transport to suitable nursery habitats [@sempsrott2017biological]. Larvae are selective feeders, only feeding on a subset of plankton species [@govoni1986selective]. Juveniles are also dependent on native salt marsh habitats, which themselves are highly vulnerable [@guyant2022northeast] and are susceptible to eutrophication and hypoxic events.
+
+Croaker had a low sensitivity score in the previous assessment [@hare2016vulnerability]. Egg and Larval Survival and Settlement Requirements drove the previous sensitivity score.
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+73% of sensitivity attribute data quality scores were greater than or equal to 2, indicating good data quality. Four attributes were considered data gaps (mean attribute data quality score \< 2): Complexity in Reproductive Strategy, Egg and Larval Survival and Settlement Requirements, Population Growth Rate, and Stock Size/Status (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Atlantic croaker/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Atlantic croaker. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Atlantic croaker distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Atlantic%20croaker/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+The effect of climate change on croaker is estimated to be **neutral** with 89% certainty in expert scores. Warmer temperatures may decrease young-of-year mortality rates. However, juvenile habitats are highly vulnerable to climate change. In the previous assessment, the effects of climate change were estimated to have a positive impact on croaker [@hare2016vulnerability].
+
+## Climate Effects on Abundance and Distribution
+
+As a sub-tropical species, Atlantic croaker may experience both positive and negative effects on their abundance and distribution as a result of climate change. Interannual variability in croaker abundance may be climate related, with colder winters causing increased mortality in overwintering young-of-the-year [@lankford2001low]. Warm winters, however, may result in increased abundances, or “outbursts” of juveniles in the spring that contribute to expansion of the population’s distribution [@hare2007mechanistic]. @diamond2013simulating modeled Atlantic croaker abundance in the Mid-Atlantic with global climate change projections and found increased croaker abundance with lower inter-annual variability under global climate change. Positive responses in sensitivity analyses stemmed from warmer temperatures, and negative responses were due to rising variability in salinity and increases in offshore transport and sea level rise [@diamond2013simulating]. Common juvenile habitat types (submerged aquatic vegetation, salt marshes, and intertidal habitats) are highly vulnerable to climate change [@guyant2022northeast].
+
+## Life History Synopsis
+
+Atlantic croaker are a demersal species found from the Gulf of Maine to Argentina. Along the United States Atlantic coast, they are most abundant from Chesapeake Bay to northern Florida [@asmfc2020addendum]. Atlantic croaker spawn from July - December in inshore shelf and estuarine waters between Delaware Bay and Cape Hatteras, peaking in August - October near Chesapeake Bay [@able1998first]. Their name comes from the croaking noises the fish make during spawning by vibrating their abdominal muscles against their swim bladder [@asmfc2020addendum]. After 30-90 days post-hatch Atlantic croaker larvae are driven inshore by winds [@thorrold1997response] where they migrate to estuarine habitats [@sempsrott2017biological]. Initial fall recruitment of croaker depends on fall continental shelf winds to provide transport into Chesapeake Bay [@norcross1991estuarine]. Recruitment to specific estuaries is influenced by tidal activity and currents, such that eggs and larvae are dependent on transport to suitable habitats for survival [@sempsrott2017biological]. Atlantic croaker larvae are selective feeders, as they eat fewer taxa of suitable size than are present in ambient plankton [@govoni1986selective]. Juvenile croaker are highly dependent on marine, estuarine, and riverine mud and sand substrates, as well as native salt marsh habitats [@guyant2022northeast]. The major prey of young-of-the-year Atlantic croaker are polychaetes, copepods, and mysids. Detritus is also a major component of the juvenile diet [@ffwcc2010croaker; @sink2011species]. Adult Atlantic croaker perform seasonal migrations, moving northward and inshore to estuaries and bays in the spring - fall and southward and offshore to shelf waters in the winter [@asmfc2020addendum]. They reach maturity by 2 years of age and can live up to 17 years, although lifespans are commonly below 10 years [@asmfc2020addendum]. Adult Atlantic croaker are opportunistic feeders and are known to consume polychaetes, anchovies, mysid shrimp, amphipods, fishes and crabs, and detritus in Chesapeake Bay [@nye2011annual]. Atlantic croaker are managed under Amendment 1 to the Atlantic States Marine Fisheries Commission’s Interstate Fishery Management Plan for Atlantic Croaker (2005) and Addenda I, II, and III (2011, 2014, 2020). [@asmfc2020addendum]. The most recent benchmark stock assessment was completed in 2017, where the current stock status could not be determined because the assessment results were sensitive to certain modeling assumptions, but any further depletion in the stock was unlikely [@asmfc2017croaker].
+
+## References

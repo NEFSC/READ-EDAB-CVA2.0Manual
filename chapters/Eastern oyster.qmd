@@ -1,4 +1,5 @@
 ---
+bibliography: ../utils/references.bib
 format:
   pdf:
     engine: knitr
@@ -10,11 +11,13 @@ format:
     include-in-header: 
       text: |
         \usepackage{fvextra}
+        \usepackage{float}
         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
         \pagenumbering{gobble}
 ---
 
 ```{r setup}
+#| include: false
 knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
@@ -24,119 +27,585 @@ knitr::opts_chunk$set(
 
 # Eastern oyster (*`Crassostrea virginica`*)
 
-## Summary
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Eastern oyster.pdf){.btn .btn-primary target="_blank"}
+:::
 
-::::: {layout-ncol="2"}
-<div>
+## Summary Scores
 
-**Scores**
+-   **Sensitivity:** [INSERT]
+-   **Exposure:** [INSERT]
+-   **Vulnerability:** [INSERT]
 
-Vulnerability =
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
 
-Climate Exposure =
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_allvars*", ext), 
+  full.names = TRUE
+)
 
-Biological Sensitivity = Very High
+has_figure <- length(found_files) > 0
 
-</div>
-
-<div>
-
-**Data Quality**
-
-Model Confidence Score =
-
-Life History Data Quality = 90%
-
-</div>
-:::::
-
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Eastern oyster_exposure_summary_table.png")
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-
-here::here("test_images/Eastern oyster_sensitivity_summary_table.png")
-
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Eastern oyster. Exposure and Vulnerability scores are averaged spatially across the species distribution and within stocks if applicable (see @fig-vuln and @fig-exp). Life History Data Quality (LH DQ) and Standard Deviations (SD) are reported for senstivity and exposure/vulnerability scores, respectively."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
 ```
 
 ## Changes from Previous Assessment(s)
 
-| Metric               | Current Assessment | Previous Assessment(s) | Change   |
-|-------------------|-----------------|---------------------|----------------|
-| *Vulnerability*      |                    |                        |          |
-| *Exposure*           |                    |                        |          |
-| *Sensitivity*        | Very High          | High                   | Increase |
-| *Directional Effect* | Neutral            | Negative               | Increase |
+| Metric               |Previous Assessment(s)  | Current Assessment | Change     |
+|-------------------|-----------------|--------------------|-----------------|
+| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
+| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
+| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
+| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
 
-## Score Drivers
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("stock_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Eastern oyster Stocks along the Northeast Shelf"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Eastern oyster is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Sensitivity:
+
+```{r}
+#| echo: false
+
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("sensitivity_map*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Eastern oyster Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+
+### Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Eastern oyster/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Maps of each Exposure Factor for Eastern oyster. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Eastern oyster/variable_exposure_maps", ext)))
+```
+
+[INSERT EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure on the Northeast Shelf for Eastern oyster. Total Exposure is calculated by applying the logic rule from @hare2016vulnerability within grid cells across exposure factors (see @fig-fact-exp)"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
 ### Vulnerability:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
 
-### Climate Exposure:
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_vulnerability_map_all*", ext), 
+  full.names = TRUE
+)
 
-add text here
+has_figure <- length(found_files) > 0
 
-### Biological Sensitivity:
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 
-The Eastern oyster received a **Very High** sensitivity score, with 100% certainty according to bootstrap analysis. Five attributes had scores greater than 3.5: Adult Mobility (4), Other Stressors (4), Relationship to Calcified Organisms (3.9), Complexity in Reproductive Strategy (3.8), and Egg and Larval Survival and Settlement Requirements (3.5).
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
 
-Eastern Oysters are sessile once they settle out of the plankton, and settle in estuarine habitats. As a result, they are exposed to a variety of stressors due to urbanization impacts such as hypoxia, loss of seagrass beds, dredging, and changes to freshwater inputs [@guyant2022northeast]. Spawning is initiated by warmer temperatures. Settling out of the plankton also is dependent on temperature and the presence of conspecifics. Because recruitment is density dependent, population collapse can be sudden.
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Eastern oyster. Vulnerability is the product of sensitivity and exposure (see @fig-exp and @fig-sens)"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
 
-In the 2016 Assessment, Eastern Oysters received a High sensitivity score [@hare2016vulnerability]. This was driven by Sensitivity to Ocean Acidification, Adult Mobility, and Other Stressors, similar to our results.
+[INSERT VULNERABILITY NARRATIVE TEXT HERE]
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-90% of data quality scores were greater than or equal to 2, indicating excellent data quality. Population Growth Rate and Stock Size/Status were identified as data gaps (mean attribute data quality score \< 2).
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
-### Model Confidence:
+### Model Confidence Score:
 
-add text here
+[INSERT DATA QUALITY NARRATIVE TEXT HERE]
 
 ## Additional Metrics
 
 ### Distribution Shifts:
 
-add text here
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("distribution_shifts_static*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_figure == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Eastern oyster. Polygons illustrate core habitat (left) and species range (right) for five-year average periods. Points illustrate weighted centroid, calculated as the average position with species distribution models as weights. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+
+| Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Eastern oyster Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/%3C%%20species%20%%3E/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
 
 ### Directional Effect:
 
-Experts predicted that climate change would have a **neutral** effect on Eastern Oysters. Certainty was low at 60%. While oysters live in vulnerable estuarine habitats [@guyant2022northeast], spawning occurs throughout the year when temperatures are warm [@berringan1991oyster]. Aquaculture programs also help contribute to population recovery [@mackenzie1981biotic]. In the previous Assessment, experts predicted that climate change would have a negative impact on Eastern Oysters.
+[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
 
 ## Climate Effects on Abundance and Distribution
 
-Climate change, warmer temperatures, and perhaps different tidal ranges, may increase competition for resources with current competitors, like hooked mussel, invasive species such as *Didemnum* sp., or increase exposure to predators like veined rapa whelk [@white1996predators]. Depletion of oyster beds will also likely have negative effects for many marine species and habitats, for they provide refuge and homes for many fish and invertebrates species and help prevent erosion [@eobrt2007status]. Hurricanes can cover oysters in silt, wash them off beds, or impose extended “freshettes” on oyster beds to the degree that they are significantly impaired and need restoration. This may become more problematic, for hurricanes are thought to increase with increased warming temperatures and climate change [@perret1999oyster]. Since adult oysters are sessile and inhabit mainly highly vulnerable habitats in areas with high climate exposure, their spawning habitat is also highly vulnerable [@farr2021assessment].
+[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
 
 ## Life History Synopsis
 
-Eastern oysters are found along the eastern U.S. from the Gulf of St. Lawrence to the Gulf of America. They inhabit brackish and salty waters, forming beds or reefs by attaching to each other or other hard substrate [@ozbay2014eastern]. Eastern oysters are a keystone species, and provide valuable habitat for benthic and intertidal organisms. Oysters are sessile filter feeders, contributing to increased water quality through reduced sediment suspension and nutrient uptake and sequestration [@ozbay2014eastern]. Eastern oyster populations in the Mid-Atlantic and Gulf declined in the 19th and 20th centuries, mainly from anthropogenic factors such as land use, habitat degradation, and overharvesting. Disease mortality from Dermo and MSX continues to diminish oyster recovery [@eobrt2007status]. Aquaculture production of oysters contributes to population recovery and habitat restoration programs across the East Coast [@mackenzie1981biotic]. Oysters spawn during the summer in the North and Mid-Atlantic and throughout most of the year in the South Atlantic when temperatures remain above 20°C and salinities above 10ppt [@berringan1991oyster]. The first larval stage (trochophore) is formed four to six hours following fertilization. Larvae normally settle two to three weeks after hatching, but can last up to 2 months [@eobrt2007status]. Larvae move both by passive and active (as development progresses) transport, although larval transport in estuaries seems to be minimal. A balance is reached where the larvae can find suitable areas to settle while still being retained in estuaries [@eobrt2007status]. Settlement ends at the end of the larval stage, and the larval duration is highly temperature dependent [@shumway1996natural]. @fritz1984selective found that planktotrophic oyster larvae fed upon a variety of phytoplankton taxa (coccoids, centrate diatoms, pennate diatoms, dinoflagellates, and flagellates). @baldwin1991omnivorous found that the larvae are actually omnivorous, preying on both autotrophic and heterotrophic plankton. Predation on oyster larvae is extremely high by filter-feeders in the water column and in the benthos. Along the Atlantic coast, drills have been responsible for mortality on 33% of spat in Long Island Sound. Oysters can compete with other mussels and barnacles for shell and substrate spaces, resulting in increased mortality when competitors are abundant [@kennedy1996biology]. Juveniles and adults feed primarily on phytoplankton and suspended detritus, relying on food-laden water being moved past them in order to extract food from the water column [@langdon1996digestion]. Maturity occurs between 1 and 3 years of age [@fsuml_oyster_lifecycle]. Several ages have been proposed, the most common being 20 years. Oysters in Maryland appear to survive at
-at least 10 years based on plantings at restoration sites which are not thought to have received natural spat sets. It is likely that the maximum longevity is substantially longer than 10 years [@mddnr2025stock]. Wild and aquaculture harvest is managed by individual jurisdictions or states, and management guidelines vary [@ozbay2014eastern].
+[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
 
+## Supplemental Scores
 
-## Figures
+### Exposure Timeseries
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Eastern oyster_exposure_allvars.png")
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("variable_exposure_timeseries.*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Eastern oyster_exposure_impvars.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Monthly Timeseries of each Exposure Factor for Eastern oyster. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Eastern oyster_distribution_center_of_gravity.png")
+[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_timeseries_only_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
 
-```{r,echo=FALSE, fig.align='left'}
-here::here("test_images/Eastern oyster_distribution_area_of_high_probability.png")
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Timeseries of Total Exposure  for Eastern oyster"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
 ```
 
-```{r,echo=FALSE, out.width="200%", fig.align='left'}
-here::here("test_images/Eastern oyster_sdm.png")
+### Exposure due to Significant Factors
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("dynamic_variable_importance_all*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
 ```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Dynamic Factors driving American lobster distributions. The closer the polygon is to the edge of the figure, the more important the variable is. Each ring represents 10% variance explained. Factors must explain at least 10% of variance in the ensemble model to be used to calculate total exposure."
+#| label: fig-radar
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_timeseries_imp*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Eastern oyster distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Eastern oyster")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("summary_table_impvars*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-imp
+#| fig-cap: "As in @fig-sum-tab for Eastern oyster, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(img_path)
+```
+
 
 ## References

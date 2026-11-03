@@ -1,0 +1,364 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Cobia (*`Rachycentron canadum`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Cobia.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** Low
+-   **Climate Exposure:** Moderate
+-   **Biological Sensitivity:** Low
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Cobia/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Cobia."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Cobia/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|------------------|------------------|------------------|------------------|
+| *Vulnerability* | Low | High [@burton2023climate] | Decrease |
+| *Exposure* | Moderate | Very High [@burton2023climate] | Decrease |
+| *Sensitivity* | Low | Moderate [@burton2023climate] | Decrease |
+| *Directional Effect* | Neutral | Neutral [@burton2023climate] | None |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Cobia/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Cobia Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Cobia is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Cobia/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Cobia"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Cobia/total_vulnerability_map_all", ext)))
+```
+
+Mean Vulnerability within Cobia’s range on the Northeast Shelf was **Low** (2.17 +/- 0.91) (@fig-sum-tab). This was consistent across the species range in the region (@fig-vuln). Vulnerability was also Low when exposures were calculated using only factors that were important to species distributions (@fig-sum-tab).
+
+Cobia were given a High Vulnerability score in the recent assessment on the Southeast Shelf [@burton2023climate].
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Cobia/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Cobia"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Cobia/total_exposure_map_all", ext)))
+```
+
+Mean Exposure within Cobia’s range on the Northeast Shelf was Moderate (2.17 +/- 0.91) (@fig-sum-tab). Exposure was greatest along the coasts of Delaware, Maryland, North Carolina, and in the mouth of the Delaware Bay. They were lowest at the mouth of the Chesapeake Bay (@fig-exp). These patterns were driven by high surface salinity and pH exposures (@fig-fact-exp).
+
+Cobia was not assessed in the 2016 Climate Vulnerability Assessment for the Northeast Shelf, but was assessed in the recent assessment for the Southeast Shelf. In this assessment, Cobia received a Very High exposure score, driven by sea surface temperature, salinity and ocean acidificiation [@burton2023climate].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Cobia/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Cobia"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Cobia/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Cobia/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Cobia"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Cobia/total_exposure_map_timeseries_all", ext)))
+```
+
+Exposure was High from January through June, due to high salinity and surface pH exposure. Exposures declined to Moderate to Low in the latter half of the year due to declines in temperature and salinity exposure (@fig-exp-month, @fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Cobia/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Cobia"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Cobia/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Cobia/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Cobia distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Cobia/total_exposure_map_timeseries_imp", ext)))
+```
+
+Cobia distributions in the region were driven by sea surface temperature and mixed layer depth. Cobia prefer warmer waters [@crear2020contemporary]. These two variables did not have high exposures within the species range, and as a result, exposure was Low (1.05 +/- 0.25) when exposure was calculated only with these factors (@fig-sum-tab).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Cobia/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Cobia/sensitivity_map", ext)))
+```
+
+Cobia received a **Low** sensitivity score. Certainty was 53% (@fig-sum-tab). The only attribute that received a score greater than 2.5 was Relationship to Calcified Organisms (@fig-sum-tab). Cobia primarily consume crustaceans, which make them vulnerable to ocean acidification [@smith1995life].
+
+Cobia was not assessed in the 2016 Climate Vulnerability Assessment for the Northeast Shelf, but was assessed in the recent assessment for the Southeast Shelf. In this assessment, it received a Moderate sensitivity score. This score was driven by Dispersal of Early Life Stages, Early Life History Survival and Settlement Requirements, Reproductive Complexity, Spawning Cycle, and Sensitivity to Ocean Acidification [@burton2023climate].
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+88% of data quality scores were greater than or equal to 2, indicating strong data quality. Egg and Larval Survival and Settlement Requirements and Juvenile Habitat Requirements were identified as data gaps (mean attribute data quality score \< 2) (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Cobia/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Cobia. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Cobia distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Cobia/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+Experts predicted that climate change would have a **neutral** effect on Cobia. Certainty was 95%. Warmer temperatures could lead to northward shifts in distributions and earlier seasonal migrations [@crear2020contemporary]. The recent Southeast US Climate Vulnerability Assessment also predicted that climate change would have a neutral effect on Cobia [@burton2023climate].
+
+## Climate Effects on Abundance and Distribution
+
+Cobia off the eastern U.S. Atlantic coast currently overwinter offshore in waters south of North Carolina. Suitable habitat increases in the summer months with warming temperatures. Habitat distribution models suggest increased habitat suitability northward, shifting distributions poleward, and possible earlier seasonal migrations [@crear2020contemporary]. This shift northward could prompt revision of management regulations as the fishery expands to new states or regions. Early life stage cobia may be somewhat resistant to projected rises in CO^2^ levels [@ebanks2013influence], although juvenile cobia in a laboratory study exhibited poor growth performance and reduced feeding at elevated temperatures [@le2024impact]. 
+
+## Life History Synopsis
+
+Cobia are a pelagic, continental shelf fish distributed from Massachusetts to Argentina but are most abundant from Virginia to the Gulf of America [@shaffer1989synopsis]. Two stocks are recognized in the United States: one along the Atlantic coast south to Georgia and the other along the Atlantic coast of Florida into the Gulf [@sedar2020sedar58]. Cobia are batch spawners, and move inshore to spawn when temperatures reach 20-25°C. They spawn over a period of 4-6 weeks, peaking in June-July in Virginia [@joseph1964spawning]. Cobia eggs hatch within 36 hours of fertilization. Given the short time frame between fertilization and hatching, it is likely that eggs and larvae do not travel far from spawning grounds [@shaffer1989synopsis]. Little is known about the feeding habits of larval and juvenile cobia. Adult cobia are generalist carnivores, feeding on benthic-epibenthic crustaceans (*Portunids* and *Callinectes* sp.), teleosts, cephalopods, and elasmobranchs [@smith1995life]. Juveniles are pelagic and often associated with structure for feeding and shelter. Juveniles and adults can be found near shipwrecks, buoys, shellfish beds, and submerged aquatic vegetation [@sedar2020sedar58]. Few predators of cobia in U.S. Atlantic waters are known, although dolphinfish (*Coryphaena hippurus*) have been reported to prey on small cobia [@shaffer1989synopsis]. Over 50% of cobia are mature by age 2, and can live up to 15 years [@sedar2020sedar58]. Adults are highly migratory. Cobia exhibit a general migratory trend of overwintering in south Florida and the Florida Keys waters, and then migrating north along the Atlantic and Gulf coasts in late winter-early spring.  They likely return to south Florida coastal waters in the late fall [@hendon2008seasonal]. The Atlantic migratory cobia are managed by the Atlantic States Marine Fisheries Commission. The population is not overfished and overfishing is not occurring as of the last benchmark stock assessment in 2020 [@sedar2020sedar58].
+
+## References

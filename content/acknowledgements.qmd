@@ -17,7 +17,7 @@ Many thanks to the following programs for contributing data:
 * [New York Nearshore Trawl Survey](https://www.neamap.net/ny-nearshore-trawl/)
 * [New Jersey Ocean Stock Assessment Survey](https://dep.nj.gov/njfw/fishing/marine/ocean-stock-assessment-program/#:~:text=The%20New%20Jersey%20Ocean%20Stock,times%20throughout%20a%20calendar%20year.)
 * [Delaware Trawl Surveys](https://dnrec.delaware.gov/fish-wildlife/fishing/research/)
-* [National Observer Program](https://www.fisheries.noaa.gov/national/fisheries-observers/national-observer-program
+* [Commercial Observer Program](https://www.fisheries.noaa.gov/national/fisheries-observers/national-observer-program)
 * [Gillnet Observer Program](https://www.fisheries.noaa.gov/southeast/fisheries-observers/southeast-gillnet-observer-program)
 * [Pelagic Observer Program](https://www.fisheries.noaa.gov/southeast/fisheries-observers/southeast-pelagic-observer-program)
 * Southeast Fisheries Science Center Logbook Program 

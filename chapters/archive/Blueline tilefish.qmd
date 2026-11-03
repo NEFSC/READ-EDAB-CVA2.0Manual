@@ -1,0 +1,366 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Blueline tilefish (*`Caulolatilus microps`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Blueline%20tilefish.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** Moderate
+-   **Climate Exposure:** Moderate
+-   **Biological Sensitivity:** Moderate
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Blueline tilefish/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Blueline tilefish."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Blueline tilefish/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|------------------|------------------|------------------|------------------|
+| *Vulnerability* | Moderate | Very High [@burton2023climate] | Decrease |
+| *Exposure* | Moderate | Very High [@burton2023climate] | Decrease |
+| *Sensitivity* | Moderate | High [@burton2023climate] | Decrease |
+| *Directional Effect* | Neutral | Neutral [@burton2023climate] | None |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Blueline tilefish/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Blueline tilefish Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Blueline tilefish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Blueline tilefish/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Blueline tilefish"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Blueline tilefish/total_vulnerability_map_all", ext)))
+```
+
+Mean Vulnerability for Blueline Tilefish throughout its range on the Northeast Shelf was **Moderate** (4.7 +/- 1.70) (@fig-sum-tab). Vulnerability was consistent throughout its range in the region (@fig-vuln). When exposure was calculated using only factors important to its distribution, Vulnerability decreased to Low (2.22 +/- 0.75) (@fig-sum-tab).
+
+In the previous climate vulnerability assessment for the Southeast US, blueline tilefish received a Very High Vulnerability score, driven by Very High exposure and High sensitivity scores [@burton2023climate]. Blueline tilefish have not been assessed in the Northeast previously [@hare2016vulnerability].
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Blueline tilefish/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Blueline tilefish"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Blueline tilefish/total_exposure_map_all", ext)))
+```
+
+Mean Exposure for Blueline tilefish along the Northeast Shelf was **Moderate** (2.35 +/- 0.85) (@fig-sum-tab). Exposure was relatively consistent across the species distribution in this region and was driven by high bottom salinity and aragonite solubility exposure (@fig-exp, @fig-fact-exp).
+
+Blueline tilefish were not included in the previous assessment on the Northeast Shelf but were recently assessed in the Southeast US [@burton2023climate]. In that assessment they received a Very High exposure score, which was driven by high sea surface temperature, salinity, ocean acidification, and current changes [@burton2023climate].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Blueline tilefish/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Blueline tilefish"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Blueline tilefish/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Blueline tilefish/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Blueline tilefish"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Blueline tilefish/total_exposure_map_timeseries_all", ext)))
+```
+
+There was little month-to-month variation in exposure scores for blueline tilefish. Scores were consistently High, except in October where they decreased to Moderate (@fig-exp-month). This was due to declines in bottom aragonite solubility (@fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Blueline tilefish/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Blueline tilefish"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Blueline tilefish/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Blueline tilefish/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Blueline tilefish distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Blueline tilefish/total_exposure_map_timeseries_imp", ext)))
+```
+
+Bottom temperature, oxygen, salinity, and net primary production were the major dynamic drivers of species distributions along the Northeast Shelf (@fig-sum-tab). Blueline tilefish are demersal species that occupy the shelfbreak and submarine canyons, so they prefer consistent conditions [@schmidtke2017life]. Blueline tilefish are generalist predators, consuming polychaetes, crustaceans, decapods, and zooplankton [@bielsa1987food] [@ross1982feeding]. When exposure was calculated using only these factors, exposure decreased to Low due to low temperature, oxygen, and net primary productivity exposures (@fig-sum-tab; @fig-fact-exp).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Blueline tilefish/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Blueline tilefish/sensitivity_map", ext)))
+```
+
+Blueline tilefish received a **Moderate** sensitivity score. Certainty was 90% (@fig-sum-tab). Three attributes had scores greater than 2.5: Adult Mobility (2.8), Population Growth Rate (2.8), and Historical Variability in Temperature (2.5) (@fig-sum-tab).
+
+Adult blueline tilefish are primarily demersal. They are thought to be sedentary and remain close to their dens, similar to goldenline tilefish [@schmidtke2017life]. Maximum ages upwards of 50 years have been recorded [@schmidtke2017life] [@spanik2023validating]. They reach maturity anywhere from a few months to 3.7 years off the coast of Virginia to upwards of 5 years off the southeast US [@ross1982feeding] [@harris2004age] [@low2023characterizing].
+
+Blueline tilefish were not included in the 2016 Climate Vulnerability Assessment for the Northeast US, but were included in the recent Climate Vulnerability Assessment for the Southeast US [@burton2023climate]. Blueline tilefish received a High sensitivity score in that assessment. This score was driven by Sensitivity to Temperature and Population Growth Rate attributes. The experts in that assessment suggested that long-lived, slow-growing nature of blueline tilefish are believed to make them susceptible to overfishing [@burton2023climate].
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+Only 63% of data quality scores were greater than or equal to 2, indicating poor data quality. Most attributes had data gaps (mean attribute data quality score \< 2), including Adult Mobility, Complexity in Reproductive Strategy, Egg and Larval Survival and Settlement Requirements, Historical Variability in Temperature, Other Stressors, and Stock Size/Status (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Blueline tilefish/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Blueline tilefish. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Blueline tilefish distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Blueline%20tilefish/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+The impact of climate change on blueline tilefish is expected to be **neutral**, with 92% certainty in expert scores. It is possible that blueline tilefish biomass may increase with increasing temperatures, as landings in the Mid-Atlantic have been correlated to increasing temperatures [@pinsky2018preparing] [@rogers2019shifting]. However, little research has been conducted on how blueline tilefish will respond to climate change. The Climate Vulnerability Assessment for the Southeast US also predicted that the effect of climate change on blueline tilefish would be neutral [@burton2023climate].
+
+## Climate Effects on Abundance and Distribution
+
+Little research has been conducted on the response of blueline tilefish to climate change. Rising water temperatures likely drove a rapid increase in landings in the Mid-Atlantic throughout the early 21st century as blueline tilefish distributions expanded north beyond their traditional South Atlantic boundary [@pinsky2018preparing] [@rogers2019shifting]. Blueline tilefish may exhibit a moderately-high risk to achieving optimal biomass and yield due to climate change on productivity [@mafmc2025update]. 
+
+## Life History Synopsis
+
+Blueline tilefish have only recently been found on the Northeast U.S. Continental Shelf. They live in crevices or on ledges on the shelf, shelf break, and shelf slope from Georges Bank to Mexico and the Gulf of America [@schmidtke2017life]. Blueline tilefish are multiple batch spawners and presumably spawn on/near the bottom [@low2023characterizing]. Spawning occurs from March through October in the southern portion range, and May - November in the Mid-Atlantic Bight [@harris2004age] [@schmidtke2017life]. Eggs and larvae are estimated to remain pelagic for 4-6 weeks and depend on currents for transport. Eddies and gyres may provide local retention while the Gulf Stream transports eggs and larvae up the East Coast. It seems likely that substantial numbers of blueline larvae are transported out of the eastern Gulf of Mexico, to the South Atlantic, and from the South Atlantic into the Mid-Atlantic over the course of a few weeks [@sedar2025report]. Juveniles settle to the bottom and occupy benthic habitats around offshore submarine canyons on the shelf edge, constructing burrows in seafloor sediments or within rocks and boulders [@schmidtke2017life]. Juveniles and adults consume a diverse array of benthic invertebrates, including polychaetes, crustaceans, and decapods. Gastropods and copepods have also been observed and are likely consumed when diel vertical migrations bring them close to the seafloor [@bielsa1987food] [@ross1982feeding]. Age at maturity is up to 3.7 years in the Mid-Atlantic and 5 years in the South Atlantic [@harris2004age] [@low2023characterizing]. Maximum age is 37 years, although it is theorized that individuals could possibly reach upwards of 50 years in age [@schmidtke2017life] [@spanik2023validating]. In the Northwest Atlantic, blueline tilefish are managed by the Mid-Atlantic Fishery Management Council under the Tilefish Fishery Management Plan. Council management of blueline tilefish in the Mid-Atlantic began as a response to increased commercial and recreational landings in the region. The Mid-Atlantic stock has not been assessed. Population levels and fishing status are currently unknown but management measures have been in place since 2017 [@mafmc2017amendment]. 
+
+## References

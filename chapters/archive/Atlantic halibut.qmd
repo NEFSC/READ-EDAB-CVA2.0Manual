@@ -1,0 +1,362 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Atlantic halibut (*`Hippoglossus hippoglossus`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Atlantic%20halibut.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** Moderate
+-   **Climate Exposure:** Moderate
+-   **Biological Sensitivity:** High
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Atlantic halibut/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Atlantic halibut."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Atlantic halibut/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric               | Current Assessment | Previous Assessment(s) | Change   |
+|-------------------|-----------------|---------------------|----------------|
+| *Vulnerability*      | Moderate           | High                   | Decrease |
+| *Exposure*           | Moderate           | High                   | Decrease |
+| *Sensitivity*        | High               | High                   | None     |
+| *Directional Effect* | Negative           | Negative               | None     |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic halibut/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Atlantic halibut Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Atlantic halibut is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic halibut/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Atlantic halibut"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic halibut/total_vulnerability_map_all", ext)))
+```
+
+Mean Vulnerability for Atlantic halibut was **Moderate** (5.47 +/- 2.70) (@fig-sum-tab). Vulnerability was High along the coast of the Gulf of Maine and over Georges Bank, but Low throughout the rest of the Gulf (@fig-vuln). In the previous Assessment, halibut received a High vulnerability score, driven by High exposure and sensitivity [@hare2016vulnerability].
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic halibut/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Atlantic halibut"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic halibut/total_exposure_map_all", ext)))
+```
+
+Atlantic halibut received a **Moderate** mean Exposure score (1.82 +/- 0.90) (@fig-sum-tab). Exposure scores were high along the coast of the Gulf of Maine and over Georges Bank, driven by high exposure to bottom temperature, oxygen and salinity changes (@fig-exp, @fig-fact-exp). However, Low exposures over the middle of the Gulf of Maine drove mean scores down. In the previous Assessment, Atlantic halibut received a High exposure score, driven by sea surface temperatures and ocean acidification [@hare2016vulnerability].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic halibut/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Atlantic halibut"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic halibut/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic halibut/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Atlantic halibut"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic halibut/total_exposure_map_timeseries_all", ext)))
+```
+
+Across months, exposure ranged from Low to High. High exposure occurred in August, due to spikes in medium zooplankton biomass (@fig-exp-month, @fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic halibut/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Atlantic halibut"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic halibut/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic halibut/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Atlantic halibut distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic halibut/total_exposure_map_timeseries_imp", ext)))
+```
+
+Bottom temperature, oxygen, and aragonite solubility as well as small and large zooplankton biomass were important dynamic drivers of halibut distributions (@fig-sum-tab). Halibut occupy benthic habitats, and consume fish and invertebrates, including crustaceans [@Cargnelli1999; @Collette2002; @Armsworthy2014; @Scott1988; @Bowman2000]. When Exposure was calculated with only these factors, mean total exposure remained Moderate (1.69 +/- 0.88) (@fig-sum-tab).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Atlantic halibut/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Atlantic halibut/sensitivity_map", ext)))
+```
+
+Atlantic halibut scored **High** with a certainty of 100%. The score was driven by Stock Size (3.8) and Population Growth Rate (3.6) attributes. While it did not contribute to the score, it is worth noting that the only other attribute that scored higher than 2.5 was Spawning Cycle (2.6) (@fig-sum-tab).
+
+Halibut mature slowly and are long lived species, living upwards of 50 years and maturing between 5-13 years [@Armsworthy2014].
+
+Halibut also received a score of high sensitivity in the previous Climate Vulnerability Assessment. This score was also driven by Stock Size/Status and Population Growth Rate [@hare2016vulnerability].
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+87% of data quality scores for the sensitivity attributes were greater than or equal to 2, indicating strong data quality. Stock Size/Status was the only identified data gap (mean attribute data quality score \< 2) (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Atlantic halibut/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Atlantic halibut. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Atlantic halibut distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Atlantic%20halibut/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+Halibut will likely be **negatively** impacted by climate change (100% certainty in expert scores). While halibut distributions are expanding due to warmer temperatures, they are shifting northward and off the Northeast shelf into Canadian waters. This is similar to the result from the 2016 Assessment [@hare2016vulnerability].
+
+## Climate Effects on Abundance and Distribution
+
+@Nye2009 observed a northward shift in Atlantic halibut distribution and an increase in the depth of occurrence on the Northeast U.S. continental shelf. The species’ thermal habitat has widened, likely contributing to its range expansion [@Shackell2022], and biomass and landings in Canadian waters have thus increased greatly since the early 2000s [@Trzcinski2016]. @Shackell2022 calculated growth rates from tagging studies and found faster growth in Atlantic halibut in warmer, southern waters. From 1990 to 2018, thermal habitat rose by 11.6% (+/- 7.35%) and the number of degree days where Atlantic halibut are experiencing growth increased by 13.5 °C days (+/- 7.86 °C days) [@Czich2023]. Continued warming is likely to increase abundance in the northern end of the species’ range; however elevated CO^2^ levels and rising temperatures may lead to oxidative stress [@Almroth2019].
+
+## Life History Synopsis
+
+Atlantic halibut are found from the Labrador Shelf in the North to Virginia, although they are rare south of Long Island [@Cargnelli1999]. Adult halibut spawn from late fall to late spring in deep continental shelf waters, with  presumed spawning peaks occurring at 2 - 9 day intervals between October and January [@Collette2002] [@Armsworthy2014]. Eggs hatch in 13-20 days depending on the temperature [@Blaxter1983]; larvae have been found in the plankton as much as a year after spawning [@Collette2002]. Depending on current speeds and larval duration, eggs and larvae may drift anywhere from 300-500 km. Tagging studies of spawning individuals suggest that larvae can be transported into the Gulf of St Lawrence, which may provide nursery habitats [@Armsworthy2014]. Juveniles are most common in shallow water from 20-60 m in nursery areas on the shelf [@Cargnelli1999]. Juvenile halibut up to 30 cm in length consume invertebrates, mostly annelid worms and crustaceans; they then feed on fish and invertebrates from 30-80 cm in length, and then almost exclusively on fish as they grow larger [@Scott1988] [@Bowman2000]. Adults normally inhabit benthic waters from 2-15°C, but occupy the entire water column to feed and spawn [@Cargnelli1999] [@Collette2002] [@Armsworthy2014]. In the Gulf of Maine, tagged individuals have been observed conducting both shore and long distance migrations, as well as being resident year-round [@Shackell2022]. Age at maturity ranges from 7 - 13 years (females) and  5 - 12 years (males), and their maximum age is between 38-50 years [@Armsworthy2014]. Atlantic halibut is currently managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. The most recent management track assessment was completed in 2024, where stock status could not be determined analytically due to a lack of biological reference points [@NEFSC2024_halibut].
+
+## References

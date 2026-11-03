@@ -1,6 +1,6 @@
 species_names <- c(
   "American lobster",
-  "Atlantic cod",
+ # "Atlantic cod",
   "Atlantic croaker",
   "Atlantic halibut",
   "Atlantic herring",
@@ -45,7 +45,7 @@ species_names <- c(
 
 sci_names <- c(
   "Homarus americanus",
-  "Gadus morhua",
+ # "Gadus morhua",
   "Micropogonias undulates",
  "Hippoglossus hippoglossus",
   "Clupea harengus",
@@ -94,9 +94,10 @@ create_child <- function(species_name, scientific_name) {
 
   # knit_expand accepts both variables as parameters
   content <- knitr::knit_expand(
-    file = here::here("utils/child_doc.qmd"),
+    file = here::here("utils/species_chapter_template.qmd"),
     species = species_name,
-    scientific_name = scientific_name
+    scientific_name = scientific_name,
+    delim = c("<%", "%>")
   )
   
   # writeLines automatically creates/overwrites the file

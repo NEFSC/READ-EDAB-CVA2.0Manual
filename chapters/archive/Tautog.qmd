@@ -1,0 +1,366 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Tautog (*`Tautoga onitis`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Tautog.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** Moderate
+-   **Climate Exposure:** High
+-   **Biological Sensitivity:** Moderate
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Tautog/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Tautog."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Tautog/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|------------------|------------------|------------------|------------------|
+| *Vulnerability* | Moderate | Very High | Decrease |
+| *Exposure* | High | Very High | Decrease |
+| *Sensitivity* | Moderate | High | Decrease |
+| *Directional Effect* | Negative - Neutral | Neutral | Decrease - None |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Tautog/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Tautog Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Tautog is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Tautog/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Tautog"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Tautog/total_vulnerability_map_all", ext)))
+```
+
+Mean Vulnerability scores for Tautog were **Moderate** across their range (5.21 +/- 1.37) (@fig-sum-tab). There was little variation across the species’ range and scores remained Moderate when only factors important to the species distribution were used to calculate exposure (@fig-vuln, @fig-sum-tab).
+
+In the previous Assessment, Tautog received a Very High Vulnerability score [@hare2016vulnerability]. 
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Tautog/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Tautog"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Tautog/total_exposure_map_all", ext)))
+```
+
+Tautog mean exposure score was **High** (2.61 +/- 0.69) across its range (@fig-sum-tab). Exposure was High in Long Island Sound and Southern New England and decreased along the coast of New Jersey (@fig-exp). This was driven by bottom temperature and oxygen exposure (@fig-fact-exp). 
+
+In the previous Assessment, Tautog received a Very High Exposure score [@hare2016vulnerability]. This was driven by high sea surface temperature, air temperature, and ocean acidification exposure [@hare2016vulnerability].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Tautog/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Tautog"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Tautog/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Tautog/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Tautog"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Tautog/total_exposure_map_timeseries_all", ext)))
+```
+
+Exposure varied from Moderate to High across months, with Moderate scores between March and June (@fig-exp-month). This was driven by low bottom temperature and oxygen exposure throughout the same months, and low bottom salinity exposure in early spring (@fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Tautog/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Tautog"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Tautog/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Tautog/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Tautog distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Tautog/total_exposure_map_timeseries_imp", ext)))
+```
+
+Bottom temperature, oxygen, salinity, and net primary productivity were the major dynamic drivers of Tautog distributions (@fig-sum-tab). Temperature is a known driver of distribution and plays a role in migration patterns [@steimle1999tautog]. Tautog consume benthic prey, preferring shellfish [@steimle1999tautog]. Exposure remained High when these factors were the only ones used in the calculation (2.61 +/- 0.69) (@fig-sum-tab, @fig-exp-imp).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Tautog/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Tautog/sensitivity_map", ext)))
+```
+
+All four stocks of Tautog (**DelMarVa, Long Island Sound, NJ/NY, and MA/RI**) received **Moderate** sensitivity scores. Certainty for all stocks was 94%. These scores were driven by Population Growth Rate (3.5) and Juvenile Habitat Requirements (2.8) for all stocks (@fig-sum-tab).
+
+Tautog are long-lived, slowly maturing species. They mature at 3-4 years of age and maximum ages range between 25-30 years [@steimle1999tautog]. Juveniles prefer areas with high amounts of cover, including algal habitats, which are considered highly vulnerable [@guyant2022northeast].
+
+In the 2016 Climate Vulnerability Assessment, Tautog received a High sensitivity score. This was driven by Adult Mobility and Population Growth Rate [@hare2016vulnerability].
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+Between 92 - 93% of data quality scores were greater than or equal to 2 across all four Tautog stocks, indicating excellent data quality. Stock Size/Status was identified as a data gap (mean attribute data quality score \< 2) for all stocks (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Tautog/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Tautog. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Tautog distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Tautog/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+Experts predicted different directional effects for different Tautog stocks. The DelMarVa stock were predicted to be **negatively** impacted by climate change, whereas experts predicted that climate change would **neutrally** impact the Long Island Sound, NJ/NY, and MA/RI stocks. Certainty was greatest for the MA/RI stocks (96%) followed by the Long Island Sound (88%), NJ/NY (79%) and DelMarVa stocks (57%). Temperature has been linked to recruitment, migration timing, spawning, and feeding behaviors [@steimle1999tautog] [@moran2023impacts]. Tautog are not tolerant of anoxic conditions [@howell1994abundance]. In the previous Climate Vulnerability Assessment for the Northeast Shelf, the impacts of climate change on tautog were predicted to be neutral, with a high degree of uncertainty [@hare2016vulnerability].
+
+## Climate Effects on Abundance and Distribution
+
+Temperature is linked to recruitment, spawning, and migration timing in tautog [@steimle1999tautog], but it is unclear how warming temperatures will affect phenology. Tautog exhibit some site fidelity, which may present a limited ability to expand or shift their range in response to warming temperatures [@langan2021climate]. @moran2023impacts observed differences in prey type and feeding behavior in tautog exposed to varying temperatures, highlighting the need for further research on the relationship between increasing temperature and feeding behavior. @howell1994abundance reported that tautog are not tolerant of dissolved oxygen (DO) concentrations below 2 mg/l, and prefer DO levels above 3 mg/l. Tautog mortalities were reported by commercial fishers and were observed on the beach during a major anoxia-hypoxia episode off New Jersey in 1976.
+
+## Life History Synopsis
+
+Tautog are a slow-growing, long-lived coastal species inhabiting the outer coast of Nova Scotia to Georgia, although they are most abundant from Cape Cod to Chesapeake Bay [@steimle1999tautog]. They do not reach maturity until age 3 (males) or 4 (females) and can live up to 25-30 years [@steimle1999tautog]. Tautog spawn in pairs, or in small groups with a single female and several males. The method depends on sex-ratios, the presence of a patriarchy, and availability of shelter and food [@steimle1999tautog]. They spawn from April to August; occurring earlier (April) in the southern portion of the range. Peak spawning occurs in June/July in northern portions of habitat. They perform inshore/offshore migrations in order to spawn. In the north, tautog overwinter offshore and migrate inshore in the spring to spawn and feed before moving back offshore as temperatures decline (below 11°C) in the fall and winter. Southern populations may undertake shorter seasonal migrations or remain either inshore or offshore for the entire year [@steimle1999tautog]. Tautog enter a torpor state in waters between 7-10°C and prefer temperatures 10-22°C [@olla1974daily]. In a laboratory setting, eggs hatch in 42-48 hours at 20-22°C with longer development times at lower temperatures [@perry1994artificial]. Larval duration lasts about 20-25 days, depending on location [@sogard1992variability]. Larvae consume small fish and copepods, such as *Acartia tonsa* [@simpson1989population]. Larvae survival is dependent on temperatures for both incubation period and recruitment. There was no direct evidence in the literature to support reliance on specific hydrographic conditions, however, spawning locations near the mouths of nursery habitats,and possible offshore advection suggest that local current patterns may play a role in larval distribution [@steimle1999tautog]. Juveniles prefer areas with high amounts of cover that they can hide in/around. However, they can utilize a variety of vertical habitats, including piers, artificial and real seagrass/algal beds, shells, and marine debris. Larger juvenile and adult tautog are closely associated with hard- surface, reef-like habitats, remaining close to their preferred home location [@sogard1992variability]. Juvenile tautog forage on benthic, as well as planktonic, prey. As they grow, juvenile tautog rely less on planktonic food resources and feed primarily on benthic prey, although the prey remain primarily crustaceans, such as decapods [@dorf1994ecology]. Adult tautog are durophagous and feed chiefly on blue mussels and other shellfish throughout the year [@steimle1999tautog]. Seabirds, particularly cormorants, prey on juvenile tautog. Hakes, smooth and spiny dogfish, skates, and sea ravens have been reported to consume adult tautog [@steimle1999tautog]. Tautog is managed by the Atlantic States Marine Fisheries Commission. The Tautog Fishery Management Plan divides the stock into four regions: Massachusetts-Rhode Island (MARI), Long Island Sound (LIS), New Jersey-New York Bight (NJ-NYB), and Delaware-Maryland-Virginia (DMV) [@asmfc2017tautog]. The 2025 stock assessment update indicated tautog are not overfished in MARI, LIS, or NJ-NYB, but overfished in DMV. Overfishing is not occurring in MARI or LIS, but the NJ-NYB and DMV regions are experiencing overfishing [@asmfc2025tautog].
+
+## References

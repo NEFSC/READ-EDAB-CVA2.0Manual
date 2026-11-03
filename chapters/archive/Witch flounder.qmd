@@ -1,0 +1,366 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Witch flounder (*`Glyptocephalus cynoglossus`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Witch%20flounder.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** Moderate
+-   **Climate Exposure:** Moderate
+-   **Biological Sensitivity:** High
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Witch flounder/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Witch flounder."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Witch flounder/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric               | Current Assessment | Previous Assessment(s) | Change   |
+|------------------|------------------|------------------|------------------|
+| *Vulnerability*      | Moderate           | High                   | Decrease |
+| *Exposure*           | Moderate           | High                   | Decrease |
+| *Sensitivity*        | High               | High                   | None     |
+| *Directional Effect* | Negative           | Negative               | None     |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Witch flounder/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Witch flounder Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Witch flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Witch flounder/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Witch flounder"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Witch flounder/total_vulnerability_map_all", ext)))
+```
+
+Mean Vulnerability for Witch flounder was **Moderate** (5.93 +/- 2.80) (@fig-sum-tab). Vulnerability was Very High over Georges Bank and High in Southern New England, along the coast of the Gulf of Maine, and on the shelf break (@fig-vuln). When only exposure factors important to witch flounder distributions were used to calculate exposure, the mean score remained Moderate (4.43 +/- 0.79) (@fig-sum-tab), but High to Moderate scores were only found over Georges Bank, in Southern New England, and on the shelf break.
+
+In the previous assessment, Witch flounder received a High Vulnerability score [@hare2016vulnerability].
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Witch flounder/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Witch flounder"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Witch flounder/total_exposure_map_all", ext)))
+```
+
+Mean exposure for Witch flounder was **Moderate** (1.98 +/- 0.93) (@fig-sum-tab). Exposure was Very High over Georges Bank and High in southern New England, along the coast of the Gulf of Maine, and along the continental shelf break (@fig-exp). These patterns were driven by bottom temperature, oxygen, and aragonite solubility exposures (@fig-fact-exp).
+
+In the previous Assessment, witch flounder received a High Exposure score, driven by sea surface temperature and ocean acidification [@hare2016vulnerability].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Witch flounder/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Witch flounder"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Witch flounder/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Witch flounder/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Witch flounder"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Witch flounder/total_exposure_map_timeseries_all", ext)))
+```
+
+Exposure oscillated between Low and Moderate on average across months. Exposure was Moderate in January, March - April, and July - September (@fig-exp-month). These patterns were driven by coincident peaks in bottom temperature, oxygen, and salinity as well as downward particulate organic carbon flux (@fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Witch flounder/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Witch flounder"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Witch flounder/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Witch flounder/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Witch flounder distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Witch flounder/total_exposure_map_timeseries_imp", ext)))
+```
+
+Bottom temperature, salinity, and aragonite solubility were important dynamic drivers of witch flounder distributions (@fig-sum-tab). Witch flounder occupy cold, deep waters [@cargnelli1999_witch]. Diets are dominated by polychaetes but mollusks and echinoderms also play important roles [@maurer1975food]. When only these factors were used to calculate exposure, mean exposure decreased to Low (1.48 +/- 0.79) (@fig-sum-tab).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Witch flounder/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Witch flounder/sensitivity_map", ext)))
+```
+
+Witch flounder received a **High** sensitivity score, with 100% certainty. Two attributes had scores greater than 3: Stock Size (3.9) and Population Growth Rate (3.5) (@fig-sum-tab).
+
+Winter flounder are a long-lived, slowly maturing species, reaching maturity at 4.5-6 years and living up to 30 year [@burnett1992several] [@cargnelli1999_witch]. The stock status is poorly understood; the stock is overfished but it is unclear if overfishing is occurring due to lack of data [@nefsc2024witch].
+
+Witch flounder also received a High sensitivity score in the 2016 Climate Vulnerability Assessment. This was also driven by Stock Size and Population Growth Rate [@hare2016vulnerability].
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+78% of data quality scores were greater than or equal to 2, indicating good data quality. Both Adult Mobility and Egg and Larval Survival and Settlement Requirements were identified as data gaps (mean attribute data quality score \< 2) (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Witch flounder/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Witch flounder. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Witch flounder distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Witch%20flounder/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+Experts predicted that witch flounder will be **negatively** impacted by climate change, with certainty equal to 95%. This is similar, but with higher certainty, to the 2016 Climate Vulnerability Assessment, which also predicted negative impacts from climate change on witch flounder [@hare2016vulnerability]. While there are few direct studies of the impacts of climate change on witch flounder, adults are known to prefer relatively cold temperatures between 4-11 C [@cargnelli1999_witch]. A recent study suggests that distributions are shifting southward [@mills2024multispecies].
+
+## Climate Effects on Abundance and Distribution
+
+There have been few direct studies on the effect of climate change on witch flounder. Larval growth and survival has been linked to temperature in laboratory conditions [@bidwell2001effect]. @murawski1993climate included witch flounder in a list of species that exhibit low variation in seasonal temperature or depth of occurrence. @mills2024multispecies found that witch flounder distribution has actually shifted significantly toward more southern latitudes.
+
+## Life History Synopsis
+
+Witch flounder are a long-lived flatfish species inhabiting deep, cold waters in the Northwest Atlantic from Labrador to North Carolina [@cargnelli1999_witch]. They are slow-growing, reaching maturity at 4.5 years for males and 6 years for females in Georges Bank and the Gulf of Maine [@burnett1992several]. Witch flounder can live up to 30 years, reaching a maximum length of 78 cm [@cargnelli1999_witch]. Witch flounder spawn from March to November, with peak spawning occurring in summer. The general trend is for spawning to occur progressively later from south to north. In the Gulf of Maine-Georges Bank region, spawning occurs from April to November, and peaks from May to August [@martin1978development] [@burnett1992several]. @powles1970depth suggested that witch flounder occupy three largely discrete ecological niches, resulting in the different life stages being geographically separated from each other. The pelagic egg and larval stages are spent in the water column over deep water. Egg hatching occurs 7 to 8 days after spawning, with the yolk sac absorbed 10 days after hatching. Larvae are pelagic, and the larval stage lasts from 4-6 months to 1 year [@cargnelli1999_witch]. Eggs generally drift southward, and shelf currents may transport some larvae. Length may be the biggest cue for settlement [@cargnelli1999_witch]. The juvenile stage occurs in very deep water when metamorphosed fish settle to the bottom. They are found over mud, clay, silt, or muddy sand substrates [@cargnelli1999_witch]. Juveniles remain separated from the adult population, occupying deeper areas until the onset of sexual maturity. @walsh1987habitat suggests however that while the juveniles and adults are in different areas, the niche separation may not be true. Witch flounder are capable of inhabiting depths up to 1500 m, although the majority are found at 90-300 m [@martin1978development] [@kleinmacphee2002witch]. The main food items in the witch flounder diet are polychaetes and crustaceans, although mollusks and echinoderms are also important. Overall, polychaetes were by far the most important food item, accounting for greater than 70% of the diet [@maurer1975food]. However, there is a distinct ontogenetic shift in diet, with polychaetes increasing in importance and crustaceans decreasing in importance with age [@cargnelli1999_witch]. Adult witch flounder generally do not migrate, although they prefer to stay within temperatures of 4-11°C. Some subpopulations may move from shallower waters in warmer months to deeper overwintering waters. Migration was not observed in the Gulf of Maine [@cargnelli1999_witch]. Predators of witch flounder include monkfish, spiny dogfish, harp seals, Atlantic halibut, white hake, and some skates [@kleinmacphee2002witch]. Witch flounder are managed as a single stock unit by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. In the last Management Track Assessment, the stock status could not be determined due to a lack of biological reference points. The stock condition appears to be improving but is poor relative to historical levels [@nefsc2024witch].
+
+## References

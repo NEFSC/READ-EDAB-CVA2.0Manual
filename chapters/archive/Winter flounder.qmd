@@ -1,0 +1,368 @@
+---
+bibliography: ../utils/references.bib
+format:
+  pdf:
+    engine: knitr
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \usepackage{float}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \pagenumbering{gobble}
+---
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Winter flounder (*`Pseudopleuronectes americanus`*)
+
+::: {.content-visible when-format="html"}
+[Download Species Narrative as a PDF](Winter%20flounder.pdf){.btn .btn-primary target="_blank"}
+:::
+
+## Summary Scores
+
+-   **Vulnerability:** Moderate - High
+-   **Climate Exposure:** Moderate - High
+-   **Biological Sensitivity:** Moderate - High
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+img_path <- here::here(("figures/Winter flounder/summary_table.png"))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| out-width: "100%"
+#| label: fig-sum-tab
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Winter flounder."
+#| fig-pos: "H"
+#| fig-align: "center"
+knitr::include_graphics(here::here(("figures/Winter flounder/summary_table.png")))
+```
+
+## Changes from Previous Assessment(s)
+
+| Metric | Current Assessment | Previous Assessment(s) | Change |
+|------------------|------------------|------------------|------------------|
+| *Vulnerability* | Moderate - High | Very High | Decrease |
+| *Exposure* | Moderate - High | Very High | Decrease |
+| *Sensitivity* | Moderate - High | High | Decrease - None |
+| *Directional Effect* | Negative | Negative | None |
+
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
+
+{{< pagebreak >}}
+
+## Stocks
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Winter flounder/stock_map",ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure
+#| lightbox: true
+#| fig-cap: "Map of Winter flounder Stocks"
+#| label: fig-stocks
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+knitr::include_graphics(img_path)
+
+```
+
+```{r}
+#| echo: false
+#| eval: !expr has_figure == FALSE
+#| results: asis
+
+cat("Winter flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+```
+
+## Score Descriptions:
+
+### Vulnerability:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Winter flounder/total_vulnerability_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Vulnerability on the Northeast Shelf for Winter flounder"
+#| label: fig-vuln
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Winter flounder/total_vulnerability_map_all", ext)))
+```
+
+Mean vulnerability across the range of winter flounder was **Moderate** (5.84 +/- 2.71) (@fig-sum-tab). Average scores were **Moderate** within the **Gulf of Maine** and **Georges Bank** stocks (4.41 +/- 1.79 and 4.58 +/- 1.95, respectively) and **High** (7.93 +/- 2.19)in the **Southern New England/Mid Atlantic** stock (@fig-sum-tab). Scores were High throughout Southern New England and over parts of Georges Bank and Moderate along the coast of the Gulf of Maine (@fig-vuln).
+
+In the previous Assessment, winter flounder received a Very High vulnerability score [@hare2016vulnerability].
+
+### Climate Exposure:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Winter flounder/total_exposure_map_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure on the Northeast Shelf for Winter flounder"
+#| label: fig-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Winter flounder/total_exposure_map_all", ext)))
+```
+
+Mean exposure throughout the range of Winter Flounder was **Moderate** (2.37 +/- 0.90) (@fig-sum-tab). Within the **Gulf of Maine** and **Georges Bank** stocks mean exposure was **Moderate** (2.21 +/- 0.89 and 2.29 +/- 0.98, respectively). In the **Southern New England/Mid Atlantic** stock, mean exposure was **High** (2.66 +/- 0.72) (@fig-sum-tab). These patterns were driven by bottom temperature, oxygen, and salinity exposure (@fig-exp, @fig-fact-exp). 
+
+In the previous Assessment, winter flounder received a Very High exposure score [@hare2016vulnerability]. This previous score was driven by high exposure to sea surface temperature, air temperature, and ocean acidification [@hare2016vulnerability].
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Winter flounder/variable_exposure_maps", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor distributions for Winter flounder"
+#| label: fig-fact-exp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Winter flounder/variable_exposure_maps", ext)))
+```
+
+#### Monthly Variability
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Winter flounder/total_exposure_map_timeseries_all", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure across the Northeast Shelf (map) and Monthly Variability (timeseries) for Winter flounder"
+#| label: fig-exp-month
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Winter flounder/total_exposure_map_timeseries_all", ext)))
+```
+
+Exposure ranged from Moderate to High across the species range but there was higher variability across months within the different stock regions (@fig-exp-month). Georges Bank had the highest variability, with exposure ranging from Low in the spring (March - May) and Very High in late summer (July - September). In the Gulf of Maine stock, exposure was Low in February - March and High from July through December. The Southern New England/Mid Atlantic stock was the least variable, ranging from Moderate to High and following the same patterns as the entire species range (@fig-exp-month). These patterns were generally driven by trends in bottom temperature and bottom oxygen exposure. Bottom salinity exposure was greatest across months in the Georges Bank stock region, driving trends there (@fig-exp-month-tm).
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Winter flounder/variable_exposure_timeseries", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure Factor Monthly Variability for Winter flounder"
+#| label: fig-exp-month-tm
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Winter flounder/variable_exposure_timeseries", ext)))
+```
+
+#### Exposure from Significant Variables
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Winter flounder/total_exposure_map_timeseries_imp", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Exposure and Monthly Variability Based on Factors critical to Winter flounder distributions"
+#| label: fig-exp-imp
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Winter flounder/total_exposure_map_timeseries_imp", ext)))
+```
+
+Bottom temperature, salinity, and aragonite solubility were the major dynamic drivers of winter flounder distributions (@fig-sum-tab). Winter flounder are demersal and occupy the continental shelf and inshore habitats like estuaries [@pereira1999essential]. Shellfish beds can be important habitats, especially for juveniles [@bigelow1953fishes]. Adults are opportunistic feeders and prey is mostly limited by mouth size [@stehlik2000diet] [@pereira1999essential]. When only these factors were used to calculate exposure, scores mostly remained Moderate. Scores decreased from Moderate to Low in the Gulf of Maine stock (@fig-sum-tab, @fig-exp-imp).
+
+### Biological Sensitivity:
+
+```{r}
+#| echo: false
+# Define the path to the potential image
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+img_path <- here::here(paste0("figures/Winter flounder/sensitivity_map", ext))
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Sensitivity on the Northeast Shelf"
+#| label: fig-sens
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+knitr::include_graphics(here::here(paste0("figures/Winter flounder/sensitivity_map", ext)))
+```
+
+The **Georges Bank** and **Gulf of Maine** stocks of Winter Flounder both received **Moderate** sensitivity scores. Certainty for both stocks was 58%. For these stocks, five attributes had scores greater than 2.5: Complexity in Reproductive Strategy (3.3 and 3.4), Egg and Larval Survival and Settlement Requirements (2.7 and 2.9), Other Stressors (2.6 and 2.9), Spawning Cycle (2.8), and Stock Size (3 and 2.7) (@fig-sum-tab).
+
+The **Southern New England/Mid-Atlantic** stock received a **High** sensitivity score, with a certainty of 91%. Three attributes had scores greater than 3: Complexity in Reproductive Strategy (3.5), Egg and Larval Survival and Settlement Requirements (3.2), and Other Stressors (3.1) (@fig-sum-tab).
+
+Winter flounder spawn in winter and early spring before waters reach temperatures of 6C [@pereira1999essential]. Spawning occurs in nearshore and estuarine habitats, including muddy and sandy substrates, and native salt marsh habitats which are considered highly vulnerable [@guyant2022northeast]. Larvae are dependent on bottom currents to help retain them in and around spawning areas and nursery habitats. Adults depend on estuarine habitats, which may be impacted by hypoxia and changes to freshwater inputs [@guyant2022northeast]. Predators include striped bass, spiny dogfish, and seals, which have all experienced distribution shifts that could result in increased predation pressure [@pereira1999essential].
+
+These results are similar to those from the 2016 Climate Vulnerability Assessment where winter flounder were given a High sensitivity score. This score was also driven by Stock Status and Early Life History Requirements [@hare2016vulnerability].
+
+## Data Quality Metrics
+
+### Life History Data Quality:
+
+Between 95 and 100% of data quality scores were greater than or equal to 2 for both stocks of winter flounder, indicating excellent data quality. The only data gap (mean attribute data quality score \< 2) identified was Stock Size/Status for the Gulf of Maine stock (@fig-sum-tab).
+
+### Model Confidence Score:
+
+\[INSERT DATA QUALITY NARRATIVE TEXT HERE\]
+
+## Additional Metrics
+
+### Distribution Shifts:
+
+```{r}
+#| echo: false
+# 1. SETUP CHUNK FOR OPTIONAL FIGURE
+# Check if the distribution shift figure exists for this specific species
+ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
+shift_img_path <- here::here(paste0("figures/Winter flounder/distribution_shifts_static", ext))
+has_shift_fig <- file.exists(shift_img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| eval: !expr has_shift_fig == TRUE
+#| lightbox: true
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Winter flounder. Polygons illustrate core (left) and habitat range (right) for five-year average periods. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+
+# 2. IMAGE CHUNK (Only runs if TRUE)
+knitr::include_graphics(shift_img_path)
+```
+
+```{r, echo=FALSE}
+#| eval: !expr has_shift_fig == FALSE
+#| results: asis
+
+# 3. TEXT FALLBACK CHUNK (Only runs if FALSE)
+cat("*No distribution shift figure is currently available for this species.*")
+```
+
+::: {.content-visible when-format="pdf"}
+*Note: For an animated version of this plot, please see the online version of this document.*
+:::
+
+\[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE\]
+
+| Time Period | Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+|------------|------------|------------|------------|------------|------------|
+| 1993-1997 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2019-2023 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+| 2031-2035 | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] | \[INSERT\] |
+
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist}
+
+::: {.content-visible when-format="html"}
+![Winter flounder distribution shifts over time. Maps illustrate predicted habitat with core habitat and range. Timeseries illusttrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Winter%20flounder/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+:::
+
+### Directional Effect:
+
+Climate change was predicted to **negatively** impact all three stocks of winter flounder. Certainties ranged from 58% - 100% across stocks, with the lowest certainty for the Gulf of Maine stock and the highest for the Southern New England/Mid-Atlantic stock. Increasing temperatures have been linked to poor spring recruitment and higher summer time mortality, in addition to shifts in migration timing [@able2014temporal] [@langan2021role] [@klein2017effects]. The Southern New England/Mid Atlantic stock has also shifted norward [@able2014temporal] [@langan2021role]. The previous Assessment also predicted that winter flounder would be negatively impacted by climate change [@hare2016vulnerability].
+
+## Climate Effects on Abundance and Distribution
+
+A number of studies describe evidence of changes in winter flounder growth, abundance, and distribution as a result of climate change. The Southern New England/Mid-Atlantic Bight stock declined sharply in the 1980s from overfishing, has not recovered, and is shifting northward [@able2014temporal] [@langan2021role]. Warm spring temperatures have resulted in poor recruitment [@able2014temporal], and declining productivity due to warming estuarine waters has blocked recovery efforts [@bell2014externally]. Elevated water temperatures can cause faster development rates of early life history winter flounder; length of incubation time is crucial as a nearshore and estuarine species as these areas are more susceptible to anthropogenic impacts [@klein2017effects]. Increasing temperatures may alter predation rates, affecting survival of larval winter flounder, as well as migration and distribution patterns [@klein2017effects]. In Narragansett Bay, warmer summer temperatures were linked to increasing mortality in young-of-the-year winter flounder. Greater abundance of mature winter flounder in the lower bay during spring may also indicate a potential shift in spawning migration timing [@langan2021role].
+
+## Life History Synopsis
+
+Winter flounder are found in estuaries and on the continental shelf from Nova Scotia to North Carolina, and are most common in the Mid-Atlantic north of Delaware Bay [@pereira1999essential]. They prefer temperatures between 0-20°C and depths less than 30m inshore and 100m offshore [@pereira1999essential]. The fishery is divided into 3 stocks: Gulf of Maine, Georges Bank, and Southern New England/Mid-Atlantic. They reach maturity at 2- 3 years, varying across stocks with southern populations maturing younger than northern ones, and live to a maximum age of 15 years [@nefsc2011assessment_winter]. Winter flounder spawn inshore in the winter through spring, peaking in February/March in the Mid-Atlantic and Southern New England and continuing into May in the Gulf of Maine [@pereira1999essential]. Timing of spawning aggregations is linked to inshore migration timing, which is complex and possibly related to time of year, temperature, lunar cycle, and photoperiod, as well as varying across years. Individuals migrate inshore in the fall, and migrate offshore in the spring. The Georges Bank population does not migrate [@pearcy1962ecology]. Females deposit eggs at night and on bottom substrates, usually sand or algal mats, and can deposit multiple batches of eggs per spawning season [@ziegler2019migration]. Eggs are demersal and hatch within 2-3 weeks, depending on temperature. Larvae are initially planktonic but become more demersal as they metamorphosize, which starts 5-6 weeks after hatching. Larvae rely on bottom currents to keep them in and around spawning areas in inshore bays and estuaries. They are tolerant to a wide range of temperatures, salinities, and dissolved oxygen concentrations [@pearcy1962ecology]. Metamorphosis is complete about 8 weeks after hatching, and is temperature dependent [@pereira1999essential]. Size, rather than age, tends to drive metamorphosis and settlement [@manderson2003winter]. Larvae consume a variety of planktonic prey including nauplii, invertebrate eggs, calanoids, and polychaetes, with larger larvae consuming larger prey. Copepods and other zooplankton are important during metamorphosis [@stehlik2000diet]. Small medusae are important predators to larvae. Larvae can also be preyed upon by amphipods and Atlantic mackerel [@pereira1999essential]. Juveniles utilize marine and estuarine rocky, sand, and mud substrates, particularly fine sand and gravel as well as marine and estuarine water columns. They also occupy submerged aquatic vegetation, marshes, oyster reefs, and macroalgae habitats [@bigelow1953fishes]. Juveniles consume a variety of prey including copepods, amphipods, and polychaetes. The diversity of prey increases and the importance of smaller zooplankton decreases with size [@pearcy1962ecology] [@pereira1999essential]. Adults are omnivorous opportunistic feeders. They feed during the day as they depend on sight to locate prey. Their diet is limited by mouth size; diets primarily consist of polychaetes and crustaceans (mostly amphipods), but also include bivalves, fish eggs, and fish. Diets can shift based on available prey [@stehlik2000diet] [@pereira1999essential]. Predators of adult winter flounder include striped bass, spiny dogfish, and seals [@pereira1999essential]. The New England Fishery Management Council manages winter flounder in federal waters under the Northeast Multispecies (Groundfish) Fishery Management Plan. The Atlantic States Marine Fisheries Commission coordinates management in state waters. None of the 3 stocks are subject to overfishing. The Georges Bank and Southern New England/Mid-Atlantic stocks are not overfished; the Gulf of Maine stock has not been assessed and population abundance is unknown [@nefsc2025gom_winter] [@nefsc2025snema_winter] [@nefsc2025gb_winter].
+
+## References
