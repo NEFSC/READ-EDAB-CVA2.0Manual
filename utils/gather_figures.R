@@ -1,11 +1,11 @@
 gather_figures <- function(source_mapping, 
-                           target_dir) {
+                                 target_dir = "./quarto_book/figures") {
   
   # 1. Clean the target directory
   if (dir.exists(target_dir)) {
     cat(sprintf("Cleaning out old figures in %s...\n", target_dir))
     old_files <- list.files(target_dir, 
-                            pattern = "\\.(png|pdf|gif)$", 
+                            pattern = "\\.(png|jpg|jpeg|svg|pdf|gif)$", 
                             ignore.case = TRUE, 
                             full.names = TRUE)
     if (length(old_files) > 0) file.remove(old_files)
@@ -15,49 +15,66 @@ gather_figures <- function(source_mapping,
   
   count <- 0
   
-  # 2. Iterate over the named list 
-  for (src in names(source_mapping)) {
+  # 2. Iterate directly through each configuration block
+  for (config in source_mapping) {
     
-    # Extract the requirements for this specific directory
-    id_string <- source_mapping[[src]]$id
-    must_contain <- source_mapping[[src]]$contains 
+    # Extract the requirements (directory is now inside the config)
+    src_path <- path.expand(config$dir) 
+    id_string <- config$id
+    must_contain <- config$contains 
     
-    src_path <- path.expand(src) 
+    cat(sprintf("\n----------------------------------------\n"))
+    cat(sprintf("Checking Directory: %s\n", src_path))
     
     if (!dir.exists(src_path)) {
-      cat(sprintf("Warning: Source directory %s does not exist. Skipping.\n", src_path))
+      cat("  [!] Warning: Directory does not exist. Skipping.\n")
       next
     }
     
-    # Step 1: Find all files matching the model version
-    file_pattern <- paste0(".*_", id_string, ".*\\.(png|pdf|gif)$")
-    files_to_copy <- list.files(src_path, 
-                                pattern = file_pattern, 
-                                ignore.case = TRUE, 
-                                full.names = TRUE, 
-                                recursive = TRUE)
+    # Step 1: Grab EVERYTHING in the folder first
+    all_files <- list.files(src_path, full.names = TRUE, recursive = TRUE)
+    cat(sprintf("  -> Found %d total files in folder.\n", length(all_files)))
     
-    # Step 2: Filter further if a specific string is required
-    if (!is.null(must_contain) && must_contain != "") {
-      # grepl checks if the 'must_contain' string exists in the filename
-      matches <- grepl(must_contain, basename(files_to_copy), ignore.case = TRUE)
-      files_to_copy <- files_to_copy[matches]
+    if (length(all_files) == 0) next
+    
+    # Step 2: Filter by file extension
+    ext_matches <- grepl("\\.(png|jpg|jpeg|svg|pdf|gif)$", basename(all_files), ignore.case = TRUE)
+    files_to_copy <- all_files[ext_matches]
+    cat(sprintf("  -> %d files passed the extension filter.\n", length(files_to_copy)))
+    
+    if (length(files_to_copy) == 0) next
+    
+    # Step 3: Filter by ID(s)
+    id_regex <- paste(id_string, collapse = "|")
+    id_matches <- grepl(id_regex, basename(files_to_copy), ignore.case = TRUE)
+    files_to_copy <- files_to_copy[id_matches]
+    cat(sprintf("  -> %d files passed the ID filter ('%s').\n", length(files_to_copy), id_regex))
+    
+    if (length(files_to_copy) == 0) next
+    
+    # Step 4: Filter by 'contains' keyword(s)
+    if (!is.null(must_contain) && length(must_contain) > 0) {
+      search_pattern <- paste(must_contain, collapse = "|")
+      keyword_matches <- grepl(search_pattern, basename(files_to_copy), ignore.case = TRUE)
+      files_to_copy <- files_to_copy[keyword_matches]
+      
+      keyword_msg <- paste(must_contain, collapse = " OR ")
+      cat(sprintf("  -> %d files passed the keyword filter ('%s').\n", length(files_to_copy), keyword_msg))
     }
     
-    cat(sprintf("Scanning %s for ID '%s' and keyword '%s'... Found %d files.\n", 
-                src_path, id_string, ifelse(is.null(must_contain), "NONE", must_contain), length(files_to_copy)))
-    
-    # Step 3: Copy the filtered files
+    # Step 5: Copy the filtered files
     for (file_path in files_to_copy) {
       file_name <- basename(file_path)
       dest_path <- file.path(target_dir, file_name)
       
       if (file.copy(from = file_path, to = dest_path, overwrite = TRUE)) {
+        cat(sprintf("  [COPIED]: %s\n", file_name))
         count <- count + 1
       }
     }
   }
   
-  cat(sprintf("\nSuccessfully moved %d new figures.\n", count))
+  cat(sprintf("\n========================================\n"))
+  cat(sprintf("Successfully moved %d total figures.\n", count))
   return(invisible(count))
 }

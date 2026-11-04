@@ -45,29 +45,43 @@ species_names <- c(
   "Yellowtail flounder"
 )
 
-source(here::here('utils', 'gather_figures.R'))
+source(here::here("READ-EDAB-CVA2.0Manual", 'utils', 'gather_figures.R'))
 
 for(x in species_names){
 
-# Define which ID string applies to which external directory
-my_sources <- list(
-  # Vulnerability 
-  here::here("Vulnerability", gsub(' ', '', x), "Figures") = list(id = "r20250715_20142023_r20250925_i202501", contains = c('total_vulnerability_map_only_all_var', "combined_table")),
-  
-  #Exposure
-  here::here("Exposure", gsub(' ', '', x), "Figures") = list(id = "r20250715_20142023_r20250925_i202501", contains = c('total_exposure_map_only_all_var', 'total_exposure_timeseries_only_all_var', 'variable_exposure', 'total_exposure_map_timeseries_imp_var')),
-  
-  #Sensitivity
-  here::here("Sensitivity", 'Final', 'rasters') = list(id = "2.0", contains = gsub(' ', '', x)),
-  
-  #Dist shifts 
-  here::here("AdditionalMetrics", 'DistributionChange', gsub(' ', '', x)) = list(id = "2.0", contains = 'r20250715_r20250925_i202501')
-)
+  # 1. Define the configurations (the right side) as an unnamed list
+  my_sources <- list(
+    # Vulnerability
+    list(dir = here::here("Vulnerability", gsub(' ', '', x), "Figures"),
+           id = c("r20250715_20142023_r20250925_i202501"), 
+         contains = c("combined_table")),
+    
+    list(dir = here::here("Vulnerability", gsub(' ', '', x), "Figures"),
+         id = c("r20250925_i202501_r20250715_20142023"), 
+         contains = c('map_only_all_var')),
+    
+    # Exposure
+    list(dir = here::here("Exposure", gsub(' ', '', x), "Figures"),
+         id = "r20250925_i202501_r20250715_20142023", 
+         contains = c('map_only_all_var', 'timeseries_only_all_var', 'variable_exposure', 'map_timeseries_imp_var')),
+    
+    # Sensitivity
+    list(dir = here::here("Sensitivity", 'Final', 'rasters'),
+         id = "2.0", 
+         contains = gsub(' ', '', x)),
+    
+    # Dist shifts 
+    list(dir = here::here("AdditionalMetrics", 'DistributionChange', gsub(' ', '', x)),
+         id = 'r20250715_r20250925_i202501', 
+         contains = 'distribution_shift')
+  )
 
 # Run the function
 gather_figures(
   source_mapping = my_sources,
   target_dir = here::here('READ-EDAB-CVA2.0Manual', 'figures', x)
 )
+
+print(x)
 
 }
