@@ -309,7 +309,7 @@ has_figure <- file.exists(img_path)
 ```{r,echo=FALSE, fig.align='center'}
 #| lightbox: true
 #| eval: !expr has_figure
-#| fig-cap: "Vulnerability on the Northeast Shelf for Atlantic cod. Vulnerability is the product of sensitivity and exposure (see @fig-exp and @fig-sens)"
+#| fig-cap: "Vulnerability on the Northeast Shelf for Atlantic cod. Vulnerability is the product of sensitivity and exposure across space (see @fig-exp and @fig-sens)"
 #| label: fig-vuln-cod
 #| out-width: "85%"
 #| fig-align: "center"
@@ -382,7 +382,7 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-The weighted distribution centroid shifted 3.8 km ESE between 1993-1997 and 2019-2023 (@tbl-dist-cod). Significant declines in latitudinal range led to significant losses in core and total habitat area. This was driven by the southern edge of the species’ range moving further north (@fig-shifts-cod). 
+The weighted distribution centroid shifted 3.8 km ESE between 1993-1997 and 2019-2023 (@tbl-dist-cod). Declines in latitudinal range led to significant losses in core and total habitat area. This was driven by the southern edge of the species’ range moving further north (@fig-shifts-cod). 
 
 In the next ten years, the distribution weighted centroid is expected to shift a further 7.3 km ENE (@tbl-dist-cod). Cod ranges are predicted to expand between 2025-2035, but will remain similar to the 2019-2023 range (@tbl-dist-cod). 
 

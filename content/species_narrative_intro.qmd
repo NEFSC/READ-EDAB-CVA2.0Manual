@@ -102,7 +102,7 @@ Vulnerability and exposure scores were calculated by averaging results across th
 
 ## Data Quality Metrics
 
-This section describes the Life History Data Quality and Model Confidence Scores. These scores quantify how confident experts were in the data provided that were used to generate the sensitivity (Life History Data Quality) and exposure (Model Confidence) scores. MOM6 forecast data was not scored because forecast data received high data quality scores in the previous assessment and the MOM6 model is known to perform reasonably well \[cite\]. Both data quality scores were provided by the experts and range from 0 - 3. Following the original analysis, a score above 2 was deemed acceptable [@hare2016vulnerability].
+This section describes the Life History Data Quality and Model Confidence Scores. These scores quantify how confident experts were in the data provided that were used to generate the sensitivity (Life History Data Quality) and exposure (Model Confidence) scores. Model forecast data was not scored, as it was in the previous assessment, because forecast data received high data quality scores in the previous assessment. Both data quality scores were provided by the experts and range from 0 - 3. Following the original analysis, a score above 2 was deemed acceptable [@hare2016vulnerability].
 
 ### Life History Data Quality
 
@@ -125,7 +125,7 @@ The confidence in the species distribution models used to quantify exposure was 
 
 Model confidence was calculated analytically using the Area under the Receiver-Operator Curve (AUC). This statistic quantifies how well models classify binary data. The models were built on MOM6 hindcast data from 1993-2019 and AUC scores were calculated on presence/absence data and model predictions from 2020-2023 to explicitly test how well the models predict future conditions, especially in data-poor years such as 2020. The closer the AUC is to one, the better the model did at predicting observed presences and absences.
 
-It is important to note that the AUC is limited by the scope of the data used to calculate it (in this case, the spatial/temporal distribution of samples from 2020-2023). For example, the AUC may not reflect poor predictions of a species being present outside of its known range if the region is undersampled (Type I error). Therefore, we enlisted the experts to provide the additional Model Confidence Score.
+It is important to note that the AUC is limited by the scope of the data used to calculate it (in this case, the spatial/temporal distribution of samples from 2020-2023). For example, the AUC may not reflect poor predictions of a species presence outside of its known range if the region is undersampled (Type I error). Therefore, we enlisted the experts to provide the additional Model Confidence Score.
 
 #### Model Confidence Score
 
@@ -138,7 +138,7 @@ The model confidence score was modeled off of the original Data Quality metric (
 | *1* | **Low Confidence.** The model captures broad trends but has significant "noise." Environmental drivers likely don't reflect actual species needs. |
 | *0* | **No Confidence.** The model fails to represent known species range. It predicts species in unsuitable areas or misses well-known core areas entirely. |
 
-: Rubric used by experts to score Model Confidence  {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-lhdq}
+: Rubric used by experts to score Model Confidence  {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-mcs}
 
 This rubric was developed to mimic the Life History Data Quality rubric.
 
@@ -189,7 +189,7 @@ Ranked exposures were calculated monthly across space. In the analysis described
 
 Timeseries for each exposure factor and total exposure are provided in this section. 
 
-### Exposure due to Important Factors
+### Exposure due to Significant Factors
 The methods described above assume that all of the possible exposure factors will impact the species fitness/vulnerability in the future. However, this may not be the case. Therefore, we calculated total exposure and total vulnerability using only the environmental factors that played a significant role in the final species distribution model. 
 
 Variable importance was calculated using model-specific methods, scaled between 0 and 1 for each component model, and averaged across models according to component model performance. Static variables such as bathymetry, rugosity, and distance to the coast were excluded. An exposure factor was considered important to the species distribution if its average importance was greater than 0.1 (indicating that the factor explains at least 10% of the variance explained by dynamic variables in the final ensemble distribution model). A radar plot is provided illustrating the factor importance in the model.     
