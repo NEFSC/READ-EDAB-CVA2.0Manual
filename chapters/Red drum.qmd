@@ -25,10 +25,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Red drum (*`Sciaenops ocellatus`*)
+# Red Drum (*`Sciaenops ocellatus`*)
 
 ::: {.content-visible when-format="html"}
-[Download Species Narrative as a PDF](Red drum.pdf){.btn .btn-primary target="_blank"}
+[Download Species Narrative as a PDF](Red Drum.pdf){.btn .btn-primary target="_blank"}
 :::
 
 ## Summary Scores
@@ -41,12 +41,12 @@ knitr::opts_chunk$set(
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars*", ext), 
+  pattern = paste0("summary_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -71,8 +71,8 @@ if (has_figure) {
 #| eval: !expr has_figure
 #| lightbox: true
 #| out-width: "100%"
-#| label: fig-sum-tab
-#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Red drum. Exposure and Vulnerability scores are averaged spatially across the species distribution and within stocks if applicable (see @fig-vuln and @fig-exp). Life History Data Quality (LH DQ) and Standard Deviations (SD) are reported for senstivity and exposure/vulnerability scores, respectively."
+#| label: fig-sum-tab-red
+#| fig-cap: "Summary Sensitivity, Exposure, and Vulnerability Scores and Score Distributions for Red Drum. Exposure and Vulnerability scores are averaged spatially across the species distribution and within stocks if applicable (see @fig-vuln-red and @fig-exp-red). Life History Data Quality (LH DQ) and Standard Deviations (SD) are reported for senstivity and exposure/vulnerability scores, respectively."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)
@@ -97,12 +97,12 @@ knitr::include_graphics(img_path)
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("stock_map*", ext), 
+  pattern = paste0("stock_map.*", ext), 
   full.names = TRUE
 )
 
@@ -126,8 +126,8 @@ if (has_figure) {
 #| echo: false
 #| eval: !expr has_figure
 #| lightbox: true
-#| fig-cap: "Red drum Stocks along the Northeast Shelf"
-#| label: fig-stocks
+#| fig-cap: "Red Drum Stocks along the Northeast Shelf"
+#| label: fig-stocks-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -141,7 +141,7 @@ knitr::include_graphics(img_path)
 #| eval: !expr has_figure == FALSE
 #| results: asis
 
-cat("Red drum is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("Red Drum is managed as a single stock or stock information was not considered for this iteration of the CVA.")
 ```
 
 ## Score Descriptions:
@@ -153,12 +153,12 @@ cat("Red drum is managed as a single stock or stock information was not consider
 
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("sensitivity_map*", ext), 
+  pattern = paste0("sensitivity.*", ext), 
   full.names = TRUE
 )
 
@@ -184,8 +184,8 @@ has_figure <- file.exists(img_path)
 ```{r,echo=FALSE, fig.align='center'}
 #| lightbox: true
 #| eval: !expr has_figure
-#| fig-cap: "Red drum Sensitivity on the Northeast Shelf"
-#| label: fig-sens
+#| fig-cap: "Red Drum Sensitivity on the Northeast Shelf"
+#| label: fig-sens-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -199,38 +199,14 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-# Define the path to the potential image
-ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
-img_path <- here::here(paste0("figures/Red drum/variable_exposure_maps", ext))
-
-# Store the TRUE/FALSE result 
-has_figure <- file.exists(img_path)
-```
-
-```{r,echo=FALSE, fig.align='center'}
-#| lightbox: true
-#| eval: !expr has_figure
-#| fig-cap: "Maps of each Exposure Factor for Red drum. Exposure was calculated between 2014-2023 and 2025-2035"
-#| label: fig-fact-exp
-#| out-width: "85%"
-#| fig-align: "center"
-#| fig-pos: "H"
-ext <- ifelse(knitr::is_latex_output(), ".pdf", ".png")
-knitr::include_graphics(here::here(paste0("figures/Red drum/variable_exposure_maps", ext)))
-```
-
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
-
-```{r}
-#| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all*", ext), 
+  pattern = paste0("variable_exposure_maps.*", ext), 
   full.names = TRUE
 )
 
@@ -256,8 +232,53 @@ has_figure <- file.exists(img_path)
 ```{r,echo=FALSE, fig.align='center'}
 #| lightbox: true
 #| eval: !expr has_figure
-#| fig-cap: "Total Exposure on the Northeast Shelf for Red drum. Total Exposure is calculated by applying the logic rule from @hare2016vulnerability within grid cells across exposure factors (see @fig-fact-exp)"
-#| label: fig-exp
+#| fig-cap: "Maps of each Exposure Factor for Red Drum. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-fact-exp-red
+#| out-width: "85%"
+#| fig-align: "center"
+#| fig-pos: "H"
+knitr::include_graphics(img_path)
+```
+
+[INSERT EXPOSURE NARRATIVE TEXT HERE]
+
+```{r}
+#| echo: false
+# Define the directory and the correct file extension pattern
+ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
+dir_path <- here::here("figures/Red Drum")
+
+# Search for any file containing the string AND the correct extension
+found_files <- list.files(
+  path = dir_path, 
+  pattern = paste0("total_exposure_map_all.*", ext), 
+  full.names = TRUE
+)
+
+has_figure <- length(found_files) > 0
+
+if (has_figure) {
+  # Get metadata for all matching files
+  file_details <- file.info(found_files)
+  
+  # Find the row with the maximum (newest) modification time
+  newest_index <- which.max(file_details$mtime)
+  
+  # Assign the newest file's path to img_path
+  img_path <- found_files[newest_index]
+} else {
+  img_path <- NULL
+}
+
+# Store the TRUE/FALSE result 
+has_figure <- file.exists(img_path)
+```
+
+```{r,echo=FALSE, fig.align='center'}
+#| lightbox: true
+#| eval: !expr has_figure
+#| fig-cap: "Total Exposure on the Northeast Shelf for Red Drum. Total Exposure is calculated by applying the logic rule from @hare2016vulnerability within grid cells across exposure factors (see @fig-fact-exp-red)"
+#| label: fig-exp-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -270,12 +291,12 @@ knitr::include_graphics(img_path)
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all*", ext), 
+  pattern = paste0("total_vulnerability_map_all.*", ext), 
   full.names = TRUE
 )
 
@@ -301,8 +322,8 @@ has_figure <- file.exists(img_path)
 ```{r,echo=FALSE, fig.align='center'}
 #| lightbox: true
 #| eval: !expr has_figure
-#| fig-cap: "Vulnerability on the Northeast Shelf for Red drum. Vulnerability is the product of sensitivity and exposure (see @fig-exp and @fig-sens)"
-#| label: fig-vuln
+#| fig-cap: "Vulnerability on the Northeast Shelf for Red Drum. Vulnerability is the product of sensitivity and exposure (see @fig-exp-red and @fig-sens-red)"
+#| label: fig-vuln-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -329,12 +350,12 @@ knitr::include_graphics(img_path)
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("distribution_shifts_static*", ext), 
+  pattern = paste0("distribution_shifts_static.*", ext), 
   full.names = TRUE
 )
 
@@ -357,8 +378,8 @@ if (has_figure) {
 ```{r,echo=FALSE, fig.align='center'}
 #| eval: !expr has_figure == TRUE
 #| lightbox: true
-#| fig-cap: "Distribution shifts on the Northeast Shelf for Red drum. Polygons illustrate core habitat (left) and species range (right) for five-year average periods. Points illustrate weighted centroid, calculated as the average position with species distribution models as weights. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
-#| label: fig-shifts
+#| fig-cap: "Distribution shifts on the Northeast Shelf for Red Drum. Polygons illustrate core habitat (left) and species range (right) for five-year average periods. Points illustrate weighted centroid, calculated as the average position with species distribution models as weights. Inset timeseries illustrate the shift in core and habitat range area over time. Circles represent points from the MOM6 hindcast; triangles represent points from the MOM6 forecast. Dashed lines represent significant linear regressions"
+#| label: fig-shifts-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -374,14 +395,39 @@ knitr::include_graphics(img_path)
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
 | 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
 | 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
 ::: {.content-visible when-format="html"}
-![Red drum Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Red drum/distribution_shift_drivers.gif){#fig-movement .lightbox fig-align="center" width="85%"}
+```{r}
+#| echo: false
+#| lightbox: true
+#| label: fig-movement-red
+#| fig-cap: "Red Drum Distribution shifts over time. Map illustrates predicted distribution, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep."
+#| out-width: "85%"
+#| fig-align: "center"
+
+# Define the directory path
+dir_path <- here::here("figures/Red Drum")
+
+# Search for any GIF file containing "distribution_shift_drivers"
+found_files <- list.files(
+  path = dir_path, 
+  pattern = "distribution_shift_drivers.*\\.gif$", 
+  full.names = TRUE
+)
+
+# If files are found, pick the newest one and include it
+if (length(found_files) > 0) {
+  file_details <- file.info(found_files)
+  newest_index <- which.max(file_details$mtime)
+  
+  knitr::include_graphics(found_files[newest_index])
+}
+```
 :::
 
 ### Directional Effect:
@@ -404,7 +450,7 @@ knitr::include_graphics(img_path)
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
@@ -432,8 +478,8 @@ if (has_figure) {
 ```{r,echo=FALSE, fig.align='center'}
 #| lightbox: true
 #| eval: !expr has_figure
-#| fig-cap: "Monthly Timeseries of each Exposure Factor for Red drum. Exposure was calculated between 2014-2023 and 2025-2035"
-#| label: fig-exp-month-tm
+#| fig-cap: "Monthly Timeseries of each Exposure Factor for Red Drum. Exposure was calculated between 2014-2023 and 2025-2035"
+#| label: fig-exp-month-tm-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -446,12 +492,12 @@ knitr::include_graphics(img_path)
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_timeseries_only_all*", ext), 
+  pattern = paste0("total_exposure_timeseries_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -474,8 +520,8 @@ if (has_figure) {
 ```{r,echo=FALSE, fig.align='center'}
 #| lightbox: true
 #| eval: !expr has_figure
-#| fig-cap: "Timeseries of Total Exposure  for Red drum"
-#| label: fig-exp-month
+#| fig-cap: "Timeseries of Total Exposure  for Red Drum"
+#| label: fig-exp-month-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -488,12 +534,12 @@ knitr::include_graphics(img_path)
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all*", ext), 
+  pattern = paste0("dynamic_variable_importance_all.*", ext), 
   full.names = TRUE
 )
 
@@ -516,8 +562,8 @@ if (has_figure) {
 ```{r,echo=FALSE, fig.align='center'}
 #| lightbox: true
 #| eval: !expr has_figure
-#| fig-cap: "Dynamic Factors driving American lobster distributions. The closer the polygon is to the edge of the figure, the more important the variable is. Each ring represents 10% variance explained. Factors must explain at least 10% of variance in the ensemble model to be used to calculate total exposure."
-#| label: fig-radar
+#| fig-cap: "Dynamic Factors driving Red Drum distributions. The closer the polygon is to the edge of the figure, the more important the variable is. Each ring represents 10% variance explained. Factors must explain at least 10% of variance in the ensemble model to be used to calculate total exposure."
+#| label: fig-radar-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -530,12 +576,12 @@ knitr::include_graphics(img_path)
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_timeseries_imp*", ext), 
+  pattern = paste0("total_exposure_map_timeseries_imp.*", ext), 
   full.names = TRUE
 )
 
@@ -558,8 +604,8 @@ if (has_figure) {
 ```{r,echo=FALSE, fig.align='center'}
 #| lightbox: true
 #| eval: !expr has_figure
-#| fig-cap: "Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Red drum distributions"
-#| label: fig-exp-imp
+#| fig-cap: "Total Exposure Map and Timeseries when Exposure was calculated with only Exposure Factors critical to Red Drum distributions"
+#| label: fig-exp-imp-red
 #| out-width: "85%"
 #| fig-align: "center"
 #| fig-pos: "H"
@@ -570,12 +616,12 @@ knitr::include_graphics(img_path)
 #| echo: false
 # Define the directory and the correct file extension pattern
 ext <- ifelse(knitr::is_latex_output(), "\\.pdf$", "\\.png$")
-dir_path <- here::here("figures/Red drum")
+dir_path <- here::here("figures/Red Drum")
 
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars*", ext), 
+  pattern = paste0("summary_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -600,8 +646,8 @@ if (has_figure) {
 #| eval: !expr has_figure
 #| lightbox: true
 #| out-width: "100%"
-#| label: fig-sum-imp
-#| fig-cap: "As in @fig-sum-tab for Red drum, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| label: fig-sum-imp-red
+#| fig-cap: "As in @fig-sum-tab for Red Drum, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

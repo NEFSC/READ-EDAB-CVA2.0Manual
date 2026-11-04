@@ -1,23 +1,23 @@
 species_names <- c(
-  "American lobster",
- # "Atlantic cod",
+  "American Lobster",
+  "Atlantic cod",
   "Atlantic croaker",
   "Atlantic halibut",
   "Atlantic herring",
   "Atlantic mackerel",
-  "Atlantic menhaden",
+  "Atlantic Menhaden",
   "Atlantic sea scallop",
   "Atlantic surfclam",
   "Atlantic wolffish",
   "Black sea bass",
-  "Blue crab",
+  "Blue Crab",
   "Bluefin tuna",
   "Bluefish",
   "Blueline tilefish",
   "Butterfish",
   "Chub mackerel",
   "Cobia",
-  "Eastern oyster",
+  "Eastern Oyster",
   "Golden tilefish",
   "Haddock",
   "Longfin squid",
@@ -26,7 +26,7 @@ species_names <- c(
   "Ocean pout",
   "Ocean quahog",
   "Pollock",
-  "Red drum",
+  "Red Drum",
   "Scup",
   "Shortfin squid",
   "Smooth dogfish",
@@ -45,7 +45,7 @@ species_names <- c(
 
 sci_names <- c(
   "Homarus americanus",
- # "Gadus morhua",
+  "Gadus morhua",
   "Micropogonias undulates",
  "Hippoglossus hippoglossus",
   "Clupea harengus",
@@ -88,7 +88,52 @@ sci_names <- c(
   'Limanda ferruginea'
 )
 
-create_child <- function(species_name, scientific_name) {
+abbrvs <- c(
+  "lobster",
+  "cod",
+  "croaker",
+  "halibut",
+  "herring",
+  "mackerel",
+  "menhaden",
+  "scallop",
+  "surfclam",
+  "wolffish",
+  "bsb",
+  "bc",
+  "bft",
+  "blue",
+  "blueline",
+  "butter",
+  "chub",
+  "cobia",
+  "eoyster",
+  "golden",
+  "haddock",
+  "longfin",
+  "Monkfish",
+  "nquahog",
+  "pout",
+  "oquahog",
+  "pollock",
+  "red",
+  "Scup",
+  "shortfin",
+  "smoothdog",
+  "softshell",
+  "spanmack",
+  "spinydog",
+  "sbass",
+  "summerfl",
+  "tautog",
+  "whitehake",
+  "windowpane",
+  "winterfl",
+  "witchfl",
+  "yellowtail"
+)
+
+create_child <- function(species_name, scientific_name, abbreviations) {
   filename <- here::here("chapters", paste0(species_name, ".qmd"))
   file.create(filename)
 
@@ -97,6 +142,7 @@ create_child <- function(species_name, scientific_name) {
     file = here::here("utils/species_chapter_template.qmd"),
     species = species_name,
     scientific_name = scientific_name,
+    abb = abbreviations,
     delim = c("<%", "%>")
   )
   
@@ -104,6 +150,11 @@ create_child <- function(species_name, scientific_name) {
   writeLines(text = content, con = filename)
 }
 
-purrr::walk2(.x = species_names,
-           .y = sci_names, 
-           ~ create_child(species_name = .x, scientific_name = .y))
+purrr::pwalk(
+  .l = list(species_names, sci_names, abbrvs), 
+  .f = ~ create_child(
+    species_name = ..1, 
+    scientific_name = ..2, 
+    abbreviations = ..3
+  )
+)

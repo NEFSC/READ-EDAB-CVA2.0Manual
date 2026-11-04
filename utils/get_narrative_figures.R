@@ -64,10 +64,18 @@ for(x in species_names){
     list(dir = here::here("Exposure", gsub(' ', '', x), "Figures"),
          id = "r20250925_i202501_r20250715_20142023", 
          contains = c('map_only_all_var', 'timeseries_only_all_var', 'variable_exposure', 'map_timeseries_imp_var')),
+    list(dir = here::here("Exposure", gsub(' ', '', x), "Figures"),
+         id = "r20250715", 
+         contains = c('dynamic_variable_importance')),
     
     # Sensitivity
     list(dir = here::here("Sensitivity", 'Final', 'rasters'),
          id = "2.0", 
+         contains = gsub(' ', '', x)),
+    
+    # stock map
+    list(dir = here::here("shpfiles", 'species_stock_areas', 'maps'),
+         id = "stock_map", 
          contains = gsub(' ', '', x)),
     
     # Dist shifts 
