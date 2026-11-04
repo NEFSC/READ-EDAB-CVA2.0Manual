@@ -397,7 +397,7 @@ In the previous assessment, cod were given a High Potential for Distribution Cha
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist-cod}
 
 ::: {.content-visible when-format="html"}
-![Atlantic cod Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/%3C%%20species%20%%3E/distribution_shift_drivers.gif){#fig-movement-cod .lightbox fig-align="center" width="85%"}
+![Atlantic cod Distribution shifts over time. Map illustrates predicted habitat, core habitat, and range. Timeseries illustrate changes in the leading and trailing latitude and longitude edges, with the red point corresponding to the current timestep.](../figures/Atlantic cod/distribution_shift_drivers.gif){#fig-movement-cod .lightbox fig-align="center" width="85%"}
 :::
 
 ### Directional Effect:
