@@ -38,13 +38,20 @@ jobs:
         run: |
           # Hide the config file so Quarto doesn't treat this as a book
           mv _quarto.yml _quarto.yml.hidden
-          for file in chapters/*.qmd; do
+          # 1. Add your new file to the end of the loop list (replace 'your_file.qmd')
+          for file in chapters/*.qmd content/species_narrative_intro.qmd; do
             if [ "$file" != "chapters/index.qmd" ]; then
-              # Extract just the filename without the 'chapters/' path or '.qmd' extension
+      
               base=$(basename "$file" .qmd)
+              # 2. Extract the directory name (e.g., 'chapters' or 'content')
+              dir=$(dirname "$file")
               
-              # Force Quarto to use the chapter name and put it directly in the pdfs folder
-              quarto render "$file" --to pdf --output "$base.pdf" --output-dir pdfs
+              # Render the file
+              quarto render "$file" --to pdf -M crossref-chapters:false -M project-type:default --output "$base.pdf"
+              
+              # 3. Move the file from its source directory to the pdfs/ directory
+              mv "$dir/$base.pdf" "pdfs/$base.pdf"
+            
             fi
           done
           

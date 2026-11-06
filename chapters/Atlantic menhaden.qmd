@@ -495,7 +495,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-Monthly exposure scores ranged from Low to High. Scores were Low in July and High from September through February (@fig-exp-month). These patterns were driven by changes in sea surface temperature and pH (@fig-exp-month-tm-menhaden).
+Monthly exposure scores ranged from Low to High. Scores were Low in July and High from September through February (@fig-exp-month-menhaden). These patterns were driven by changes in sea surface temperature and pH (@fig-exp-month-tm-menhaden).
 
 ```{r}
 #| echo: false
