@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Moderate
+-   **Exposure:** Moderate
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Red Drum")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Moderate         | Moderate             | None |
+| *Exposure*           | Very High         | Moderate             | Decrease |
+| *Vulnerability*      | High         | Low             | Decrease |
+| *Directional Effect* | Positive         | Neutral             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Red Drum is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nRed Drum is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,15 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Red Drum received a **Moderate** sensitivity score with 50% certainty. This was driven by five attributes with scores over 2.5: Complexity in Reproductive Strategy (3.3), Population Growth Rate (3), Other Stressors (2.9), Egg and Larval Survival and Settlement Requirements (2.6), and Stock Size (2.6) (@fig-sum-tab-red).
+
+Red Drum utilize spawning aggregations and spawn in estuaries, which are known vulnerable habitats [@guyant2022northeast]. Males also use sounds to attract females to spawning locations [@looby2022quantitative] [@montie2016long]. They mature at 3-4 years of age, and can live up to 62 years, making them a very long-lived species [@asmfc2024reddrum]. Larvae may rely on currents for transport into nursery habitats, which include seagrass beds.
+
+Seagrass beds may contain an olfactory cue for settlement, and are highly vulnerable habitats in the Northeast US [@asmfc2024reddrum] [@comyns1989age] [@guyant2022northeast]. Adults are also dependent on shellfish reef habitats and estuarine water column habitats that are highly vulnerable [@guyant2022northeast]. Invasive species may also displace the native plant and prey species that red drum rely on [@asmfc2024reddrum].
+
+While the stock within the Northeast US is not overfished and overfishing is not occurring, models for the northern stock had high uncertainty and instability and could not be used to determine stock status in the most recent assessment [@asmfc2024reddrum].
+
+In the previous Climate Vulnerability Assessment for the Northeast Shelf, Red Drum also received a Moderate sensitivity score. This score was driven by similar attributes to our score: Population Growth Rate, Spawning Cycle, and Early Life History Requirements [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +247,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for Red Drum was **Moderate** (1.74 +/- 0.89) (@fig-sum-tab-red). Exposure was greatest (High) within Chesapeake Bay, off the coast of the DelMarVa Peninsula, and off of Cape Hatteras. Exposure was Low elsewhere in the species range (@fig-exp-red). These patterns were driven by high bottom temperature, oxygen, and salinity exposure (@fig-fact-exp-red). 
+
+In the previous Assessment, Red Drum received a Very High score, driven by sea surface temperature, air temperature, and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +260,7 @@ dir_path <- here::here("figures/Red Drum")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +305,7 @@ dir_path <- here::here("figures/Red Drum")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +339,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean overall vulnerability rank for Red Drum was **Low** (3.49 +/- 1.77) (@fig-sum-tab-red). Vulnerability was Moderate within Chesapeake Bay, off the coast of Virginia and Maryland, and off Cape Hatteras, but Low elsewhere within the species range (@fig-vuln-red). 
+
+In the previous Assessment, Red Drum received a High Vulnerability score due to a higher Exposure score than our assessment [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-red).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The red drum ensemble model received a mean model confidence score of 2 (+/- 0.7), indicating moderate confidence in the final model. The final model represented known distributions well, but the low sample size drove down scores. The ensemble model AUC score was 0.91, indicating excellent model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +402,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Red drum ranges significantly expanded between 1993 and 2023 due to a northward shift in the northern edge of the distribution. Core habitat area remained relatively stable over the same time period (@fig-shifts-red). The weighted centroid shifted less than 5 km east-northeast. 
+
+Under near future climate conditions, red drum distributions are predicted to remain similar to current distributions (@fig-shifts-red). The weighted centroid is predicted to continue to shift northward by another 21 km. 
+
+Red drum received a Moderate Distributional Vulnerability Rank in the previous assessment due to long seasonal migrations [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 9,004 | 33,830 | 3.12 | 1.36 |
+| 2019-2023 | 4.6 km ENE | 8,001 (-1,002) | 34,612 (+783) | 3.18 (+0.06) | 1.36 (0) |
+| 2031-2035 | 21.4 km N | 8,251 (+250) | 34,205 (-407) | 3.18 (0) | 1.36 (0) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +447,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predict that climate change will have a **neutral** effect on Red Drum. Certainty was 85%. Higher temperatures have been correlated with strong recruitment events [@goldberg2022analysis]. However, Red Drum occupy vulnerable estuarine habitats, and rely on highly vulnerable habitats such as seagrass beds and shellfish reef habitats [@guyant2022northeast]. In the previous Assessment for the Northeast Shelf, experts predicted Red Drum would be positively impacted by climate change, albeit with low certainty [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Red drum recruitment has been correlated with wind directions and sea surface temperature [@asmfc2024reddrum]. In North Carolina, the duration and magnitude of N and NE winds in August was twice as strong in high recruitment years. Elevated nearshore sea surface temperatures and coastal productivity (high chlorophyll a) were positively correlated with strong year classes [@goldberg2022analysis]. Red drum acclimated to higher temperatures had a higher standard metabolic rate, decreased critical oxygen threshold, and reduced ability to recover from exercise. Crude oil exposure (hypoxic conditions) also resulted in lower metabolic rates and reduced ability to recover from exercise, and combined with climate-induced increases in temperature, are likely to impact red drum respiratory performance and fitness [@ackerly2021effects]. Laboratory experiments on early life stage red drum resulted in decreased survival and increased heart rate when exposed to elevated pCO^2^ ; however the effects were less severe on red drum compared to similar studies on other species [@lonthair2017early].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Red drum, or redfish, are a popular recreational fish species found in estuarine and inshore waters from Massachusetts to Florida. The stock is divided into northern and southern subunits from New Jersey to North Carolina and South Carolina to Florida, respectively [@asmfc2024reddrum]. Spawning occurs within 45-60 days between August and October and where currents can move larvae/eggs into nearby estuaries and nursery habitats [@asmfc2024reddrum]. Optimal spawning temperatures in laboratory studies ranged between 22 - 25°C, with spawning observed from 22 - 30°C [@asmfc2024reddrum]. Eggs hatch within 24-36 hours [@peters1987early]. Larvae settle at approximately 17 days old in Florida estuaries [@rooker1998vulnerability]. Temperatures of 25°C and salinities around 30 are optimal for hatching success and larval survival. Larvae growth rates were also correlated with ocean temperatures in the Gulf of America [@asmfc2024reddrum] [@comyns1989age]. Larvae in Florida consume abundant copepods, whereas juveniles consume abundance amphipods, shrimp, and mysids, switching to crabs and fish as they grow [@peters1987early]. Juveniles rely on structural nursery habitats such as seagrasses for protection from predators. Juveniles are most abundant in estuarine waters and inlets, while fish older than age four inhabit deeper waters [@rooker1998vulnerability]. Adults in the Gulf of America (TX) consume white shrimp, gulf menhaden, and blue crab. Dominant prey species shift seasonally (shrimp in fall, menhaden in spring) while some prey species are consistent throughout the year (crab) [@scharf2000feeding]. Age at maturity in red drum off North Carolina is 3-4 years, with a maximum age of 62 years [@asmfc2024reddrum]. Red drum move out of estuaries into coastal waters as they mature. Seasonal movements with seasonal site fidelity have been observed in Georgia but some populations (particularly in the southern stock) are resident year round. Seasonal migrations between Virginia and North Carolina have been observed between May and September [@asmfc2024reddrum]. The northern stock is managed by the Atlantic States Marine Fisheries Commission. The northern stock is not overfished and overfishing is not occurring, however the southern stock is overfished and overfishing is currently occurring [@asmfc2024reddrum].
 
 ## Supplemental Scores
 
@@ -486,7 +501,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Throughout the year, exposure ranged from Low to High (@fig-exp-month-red). Exposure was High in May due to coincident increases in bottom salinity, net primary production, and downward particulate organic carbon flux (@fig-exp-month-tm-red).
 
 ```{r}
 #| echo: false
@@ -539,7 +554,7 @@ dir_path <- here::here("figures/Red Drum")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +585,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, salinity, and aragonite solubility were the most important factors to Red Drum distributions (@fig-radar-red). Estuaries are important nursery habitats and adults also utilize shellfish reef habitats [@rooker1998vulnerability] [@guyant2022northeast]. When only these factors were used to estimate exposure, exposure decreased and was only high at the mouth of Chesapeake Bay and near the continental shelf break off of Cape Hatteras (@fig-sum-imp-red; @fig-exp-imp-red).
 
 ```{r}
 #| echo: false
@@ -621,7 +636,7 @@ dir_path <- here::here("figures/Red Drum")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +662,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-red
-#| fig-cap: "As in @fig-sum-tab for Red Drum, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-red for Red Drum, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

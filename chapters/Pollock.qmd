@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** High
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Pollock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Moderate         | High             | Increase |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | Moderate         | Moderate             | None |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Pollock is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nPollock is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,10 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Pollock received a **High** sensitivity score, with 100% certainty according to bootstrap analysis. Two attributes had scores greater than 3: Population Growth Rate (3.6) and Complexity in Reproductive Strategy (3.4) (@fig-sum-tab-pollock). Pollock are long-lived and relatively slow to mature, reaching maturity at 4-7 years of age and living for up to 24 years [@nefsc201355th]. Spawning occurs at a narrow range of temperatures [@cargnelli1999_pollock] [@collette2002bigelow]. Sound production, and conversely the ability to hear sounds, may play a role in reproduction [@looby2022quantitative] [@hawkins2019importance].
+
+In the 2016 Climate Vulnerability Assessment, Pollock received a Moderate sensitivity score. This was driven by Population Growth Rate, similar to our study, and Early Life History Requirements, because juveniles rely on inshore habitats [@hare2016vulnerability]. Our corresponding attribute, Egg and Larval Survival and Settlement Requirements, received a score of 3 in this assessment, up slightly from the previous assessment (@fig-sum-tab-pollock).
+
 
 ### Exposure:
 
@@ -240,7 +242,8 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for Pollock was **Moderate** (1.93 +/- 0.92) (@fig-sum-tab-pollock). Scores were Very High over Georges Bank and High along the coast of the Gulf of Maine. Scores were Low away from the coast (@fig-exp-pollock). These patterns were driven by high bottom temperature and oxygen exposures (@fig-fact-exp-pollock). Pollock received a High score in the previous Assessment, driven by sea surface temperature and ocean acidification exposures [@hare2016vulnerability].
+
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Pollock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Pollock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for Pollock was **Moderate** (5.8 +/- 2.76) (@fig-sum-tab-pollock). Vulnerability was highest on Georges Bank (Very High), followed by the coast of the Gulf of Maine (High). Vulnerability decreased away from the coast (@fig-vuln-pollock). 
+
+In the previous Assessment, Pollock also received a Moderate Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+85% of data quality scores were greater than or equal to 2, indicating strong data quality. Egg and Larval Survival and Settlement Requirements and Relationship to Calcified Organisms were considered data gaps (mean attribute data quality score \< 2) (@fig-sum-tab-pollock).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The pollock ensemble model received a mean model confidence score of 2.4 (+/-0.5), indicating moderate confidence in the model. The model captured known pollock distributions well across time and space. The ensemble model AUC score was 0.90, indicating excellent model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Pollock experienced significant declines in habitat area between 1993 and 2023, despite recent rebounds. Pollock core habitats moved deeper into the Gulf of Maine (@fig-shifts-pollock). The overall shift was minimal; the weighted centroid shifted less than 2 km to the south. 
+
+Under near future ocean conditions, pollock habitats are predicted to expand significantly, reaching near 1993 levels. This expansion is predicted to be uniform across the Gulf of Maine and the weighted centroid is predicted to remain stable (@fig-shifts-pollock). 
+
+In the previous assessment, pollock received a High Distributional Vulnerability Rank due to their high mobility and high larval dispersal [@hare2016vulnerability]. 
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 49,822 | 123,835 | 2.74 | 4.65 |
+| 2019-2023 | 1.7 km S | 47,165 (-2,656) | 121,391 (-2,445) | 2.68 (-0.06) | 4.49 (-0.16) |
+| 2031-2035 | 1.7 km WSW | 48,966 (+1,801)  | 123,988 (+2,595) | 2.68 (0) | 4.57 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +442,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that Pollock would be **negatively** impacted by climate change. Certainty was 70%. This is similar, albeit with lower certainty, than the results from the 2016 Assessment [@hare2016vulnerability]. Pollock spawn at a narrow range of temperatures and prefer temperatures between 3 and 11 C [@cargnelli1999_pollock] [@collette2002bigelow] [@scott1982depth]. Shifts to deeper waters have already been observed [@nye2009changing]  [@murawski1993climate].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Because of the narrow range for when spawning occurs (4.5-6°C) [@cargnelli1999_pollock] [@collette2002bigelow], increase in temperatures and climate change could have implications on the stock's success. The center of biomass for Northwest Atlantic pollock has not shifted and distribution has not moved northward, although they have been recently found at greater depths [@nye2009changing]. @murawski1993climate noted a range contraction, increased depth of occurrence, and increased temperature of occurrence in pollock and other deep-water fish in the Gulf of Maine.
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Atlantic pollock are found in the Northwest Atlantic from the Grand Banks and Gulf of St. Lawrence to the Delmarva Peninsula, with highest abundances on the Scotian Shelf and in the Gulf of Maine [@cargnelli1999_pollock]. Spawning takes place from September to April on the Scotian Shelf and November to February in the Gulf of Maine [@cargnelli1999_pollock]. Optimal egg development occurs between 2.2 and 8.9°C [@cargnelli1999_pollock]. Eggs are pelagic and free-floating, usually found in water 50-250 m in depth. Larvae are normally occurring from the shore out to the 200 m depth contour, but have been reported in waters as deep as 1550 m [@hardy1978development]. Eggs and larvae undergo significant movement away from the spawning area as they drift with currents. For example, larvae from the northern Gulf of Maine are thought to originate from spawning grounds in the southern Gulf of Maine [@hardy1978development]. Larvae are pelagic, consuming generally the most abundant copepods in their preferred size range, and metamorphose into juveniles at 3-4 months of age [@cargnelli1999_pollock]. Juveniles have been reported over a wide variety of substrates, including sand, mud, or rocky bottom and vegetation [@ojeda1990diversity]. Inshore subtidal and intertidal zones are utilized by age 0-1 juveniles and serve as important nursery areas. Age 2+ juveniles move offshore, inhabiting depths of 130-150 m [@hardy1978development]. The primary prey of juvenile pollock are crustaceans. Euphausiids, in particular *Meganyctiphanes norvegica*, are the most important crustacean prey of juveniles [@tyler1972food]. Fish and mollusks make up a smaller proportion of the juvenile diet; however, in some cases fish may play a more important role in the diet [@collette2002bigelow]. Pollock reach maturity at 3-7 years of age, longer for females, and reach a maximum age of 24 years [@nefsc201355th]. Adults inhabit a wide range of depths, 35-365 m, but most occur within the 137 m depth contour and depths of 100-125 m are preferred [@scott1982depth]. They prefer temperatures 0-14°C , although they tend to avoid temperatures \> 11°C and \< 3°C [@scott1982depth]. For most of the year, adult pollock undergo minor inshore-offshore movements linked to temperature. Pollock migration rates vary with stock areas, but there is considerable movement across the Scotian Shelf and Gulf of Maine [@mayo1989patterns]. The diet of adults consists of, in order of decreasing importance, euphausiids, fish and mollusks. *M. norvegica* is the single most important prey item and Atlantic herring is the most important fish species [@steele1963pollock]. The primary predator of adult pollock are monkfish, although spiny dogfish and other pollock also prey on adults [@cargnelli1999_pollock]. Atlantic pollock are managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. The stock is not currently overfished and overfishing is not occurring [@nefsc2024pollock].
 
 ## Supplemental Scores
 
@@ -486,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposures ranged from Low to High throughout the year, peaking in August (@fig-exp-month-pollock). Bottom temperature, oxygen, and salinity exposure were relatively consistent throughout the year; changes were primarily due to spikes in exposure due to zooplankton biomass (@fig-exp-month-tm-pollock).
 
 ```{r}
 #| echo: false
@@ -539,7 +549,7 @@ dir_path <- here::here("figures/Pollock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +580,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, salinity, and aragonite solubility, as well as small zooplankton biomass were important to pollock distributions (@fig-radar-pollock). Temperature plays an important role in distribution and reproductive success [@cargnelli1999_pollock] [@collette2002bigelow] [@scott1982depth]. Larvae feed primarily on zooplankton, and adults feed on small fish and krill [@cargnelli1999_pollock] [@steele1963pollock]. When only these factors were used to calculate exposure, the scores remained the same across space (@fig-exp-imp-pollock; @fig-sum-imp-pollock).
 
 ```{r}
 #| echo: false
@@ -621,7 +631,7 @@ dir_path <- here::here("figures/Pollock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +657,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-pollock
-#| fig-cap: "As in @fig-sum-tab for Pollock, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-pollock for Pollock, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

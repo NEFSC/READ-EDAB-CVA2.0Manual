@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** High
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Atlantic wolffish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | High         | High             | None |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | High         | Moderate             | Decrease |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Atlantic wolffish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nAtlantic wolffish is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Atlantic Wolffish received a **High** sensitivity score. This score had a certainty of 99% from bootstrap analysis. Three attributes had scores greater than 3: Stock Size (3.5), Population Growth Rate (3.3), and Historical Variability in Temperature (3) (@fig-sum-tab-wolffish).
+
+Wolffish are a long lived (maximum documented age is 33 years) and late maturing species (most reach maturity by age 6) [@Rountree2002; @McBride2022]. Furthermore, wolffish prefer colder waters and previous studies have illustrated that they will shift to seek out preferred temperature [@Kulka2011; @Rountree2002]. Wolffish are not currently overfished and overfishing is not occurring (NEFSC 2022).
+
+In the previous Climate Vulnerability Assessment, Atlantic wolffish also received a High sensitivity score [@hare2016vulnerability]. This was driven by Stock Status, Population Growth Rate, and Spawning Cycle, similar to our results. Previous research suggested that spawning only occurred in the autumn in the Northwest Atlantic, which likely drove the high Spawning Cycle score in the previous Assessment. However, more recent work has shown that timing may vary according to local conditions [@Rountree2002; @McBride2022].
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for Atlantic Wolffish throughout its range was **Moderate** (2.05 +/- 0.92) (@fig-sum-tab-wolffish). This was driven primarily by high exposure to changes in bottom temperature and oxygen (@fig-fact-exp-wolffish). Exposure was highest along the western coast of the Gulf of Maine as well as on the northern flank of Georges Bank and east of Cape Cod (@fig-exp-wolffish). 
+
+In the previous Assessment, Atlantic Wolffish received a High exposure score, driven by sea surface temperature and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Atlantic wolffish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Atlantic wolffish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for the Atlantic Wolffish throughout its range was **Moderate** (6.16 +/- 2.77) (@fig-sum-tab-wolffish).  Vulnerability was High along the western coast of the Gulf of Maine, and on the northern flank of Georges Bank and Low elsewhere throughout the Gulf of Maine (@fig-vuln-wolffish).
+
+In the previous Assessment, wolffish received a High Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+97% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-wolffish).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The wolffish ensemble model received a model confidence score of 2.4 (+/- 0.1), indicating moderate confidence in the final model. Experts stated that the modeled distributions met expectations, but low sample size due to infrequent catches in the surveys lowered scores. The ensemble model AUC was 0.87, indicating good model performance.
 
 ## Additional Metrics
 
@@ -391,13 +398,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+There were significant declines in habitat area for Atlantic wolffish due to a southward shift in the northern edge of the distribution (@fig-shifts-wolffish). The weighted centroid shifted less than 5 km south-southwest between 1993 and 2023. 
+
+Distributions are predicted to remain similar to current conditions between 2025 and 2035. Wolffish are predicted to lose a portion of their habitat in southern New England, but gain more habitat near the shelf break (@fig-shifts-wolffish). The weighted centroid is predicted to shift a further 14 km east. 
+
+In the previous Assessment, wolffish received a Moderate Distributional Vulnerability Rank due to their sedentary behaviors and preference for complex habitats [@hare2016vulnerability].
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 38,957 | 140,548 | 2.81 | 4.97 |
+| 2019-2023 | 3.83 km SSW | 33,572 (-5,385) | 135,170 (-5,378) | 2.62 (-0.19) | 4.97 (0) |
+| 2031-2035 | 13.5 km E | 32,880 (-692) | 130,498 (-4,672) | 2.49 (-0.12) | 4.97 (0) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -430,17 +441,18 @@ if (length(found_files) > 0) {
 ```
 :::
 
+
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Atlantic wolffish are expected to be **negatively** impacted by future climate change. Certainty scores from experts were 100%. Atlantic wolffish are known temperature seekers and prefer cold waters [@Kulka2011]. Low dissolved oxygen concentrations may also impact wolffish [@Bianucci2016]. These results are similar to those from the 2016 Climate Vulnerability Assessment for the region [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Atlantic wolffish is a cold water species and has been termed a “temperature seeker” [@Kulka2011]. Early life history stages and fish near the southern stock boundary may be the most vulnerable to surface water temperatures exceeding 9-11°C [@Rountree2002]. Juvenile Atlantic wolffish exposed to temperatures of 15°C exhibited reduced growth and higher metabolic rates compared to those at 10°C [@Hinchcliffe2025]. In the North Sea, Atlantic wolffish have shifted their distribution and decreased abundance at the southern end of their range and in shallow waters [@Bluemel2022]. @Bianucci2016 observed a connection between low dissolved oxygen and contraction of the Atlantic wolffish population on the Scotian Shelf. Model results of future dissolved oxygen conditions also extend to areas with high Atlantic wolffish biomass [@Bianucci2016]. Similar results were also observed in [@Brennan2016] which predicted declines in dissolved oxygen concentrations and increases in temperature outside of known adult wolffish tolerances.
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Atlantic wolffish inhabit deep, rocky waters of the Northwest Atlantic from Labrador to the Great South Channel and Georges Bank [@Rountree2002]. In the Northwest Atlantic, wolffish are believed to spawn primarily in autumn [@Rountree2002]. Spawning is likely temperature dependent [@AWBRT2009]. Wolffish will migrate to colder temperatures before the spawning season, and egg laying and guarding behavior could be disrupted if bottom temperatures increase above 10°C [@Collette2002]. However, laboratory experiments suggest that timing may be highly plastic and dependent on local conditions, including photoperiod [@McBride2022]. Spatial and temporal variation in spawning may be contributing to the stock’s regional reproductive isolation [@AWBRT2009]. Eggs are deposited in rocky dens and incubation time is highly dependent on water temperature, varying between 3 - 9 months [@AWBRT2009]. After hatching, prolarvae stay close to the bottom. Larvae consume a broad range of amphipod, crustacean, and fish larvae [@Rountree2002]. The prolarval stage can last from a few hours to 6 days [@Collette2002]. The larvae become pelagic shortly after and stay within the water column from 20 days to 2 months, with colder temperatures prolonging the larval period, before migrating back to the bottom [@Rountree2002]. Juvenile and adult wolffish occupy the bottom habitats of the continental shelf and slope, using large stones and rocks for shelter and nesting and soft substrates for feeding [@AWBRT2009] [@Collette2002]. Juvenile wolffish primarily consume echinoderms [@AWBRT2009]. Adults prey upon hard-shelled invertebrates such as mollusks, crustaceans and echinoderms. Stomach contents have included sea urchins, whelks, cockles, sea clams, brittle stars, crabs, scallops and other shellfish in addition to an occasional redfish [@AWBRT2009] [@Rountree2002]. While previous studies have suggested that wolffish migrate inshore/offshore seasonally for spawning or maturity, it is unclear if this is a true migration or if behavioral changes are affecting catchability as eggs are found both inshore and offshore. More recent tagging studies have illustrated that movements in the Northwest Atlantic are limited, but the species has been shown to migrate in the Northeast Atlantic [@Rountree2002] [@Simpson2015] [@Gunnarsson2019]. Spiny dogfish, sea raven and Atlantic cod are the dominant predators for juveniles. For adults, the occurrence of predation is low and is not likely to be having a significant effect at the population level [@AWBRT2009]. The maximum reported age for wolffish in the Gulf of Maine is 33 years [@Fairchild2015]. Most individuals reach maturity by age 6, but this may vary regionally due to temperature [@Rountree2002] [@McBride2022]. Atlantic wolffish are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. As of the 2022 Management Track Assessment, the stock is not overfished and overfishing is not occurring [@NEFSC2022_wolffish].
 
 ## Supplemental Scores
 
@@ -486,7 +498,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure ranged from Low to High. Scores were Low from November through April, and increased to High in August (@fig-exp-month-wolffish). This was due to changes in bottom temperature and oxygen, as well as downward carbon flux exposure (@fig-exp-month-tm-wolffish).
 
 ```{r}
 #| echo: false
@@ -539,7 +551,7 @@ dir_path <- here::here("figures/Atlantic wolffish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +582,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, aragonite solubility, as well as net primary production were the strongest dynamic drivers of wolffish distribution (@fig-radar-wolffish). Wolffish are described as ‘temperature-seekers’ and bottom oxygen concentrations are known drivers of species distributions [@Kulka2011; @Rountree2002; @Bianucci2016; @Brennan2016]. Both adults prey on a variety of bottom species, including mollusks, which may explain why bottom aragonite saturation state drove species distributions [@AWBRT2009; @Rountree2002]. When Exposure was calculated using only these factors, Exposure remained Moderate (1.81 +/- 0.94) and spatial patterns were similar (@fig-sum-imp-wolffish; @fig-exp-imp-wolffish).
 
 ```{r}
 #| echo: false
@@ -621,7 +633,7 @@ dir_path <- here::here("figures/Atlantic wolffish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +659,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-wolffish
-#| fig-cap: "As in @fig-sum-tab for Atlantic wolffish, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-wolffish for Atlantic wolffish, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

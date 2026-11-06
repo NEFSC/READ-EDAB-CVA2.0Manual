@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** High
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Atlantic sea scallop")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | High         | High             | None |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | High         | Moderate             | Decrease |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Atlantic sea scallop is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nAtlantic sea scallop is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Both the Georges Bank and Mid Atlantic Bight stock units of Atlantic Sea Scallop received a **High** sensitivity score (@fig-sum-tab-scallop). Certainties for both stocks were 100%. Relationship to Calcified Organisms (4) and Adult Mobility (3.8) drove the scores in both stocks. Scores for each attribute were the same for both stocks (@fig-sum-tab-scallop).
+
+Scallops are subject to stress due to increasing ocean acidification due to their calcium carbonate shells [@zang2022modeling]. Adults are primarily sessile, but can make small-scale movements to avoid predators [@hart2004essential].
+
+Atlantic sea scallops also received a High sensitivity score in the previous assessment [@hare2016vulnerability]. This score was also driven by Sensitivity to Ocean Acidification and Adult Mobility [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for Atlantic Sea Scallop across its range was **Moderate** (2.21 +/- 0.92) (@fig-sum-tab-scallop). Exposure was Very High over Georges Bank and High in southern New England and along the coast of the Gulf of Maine (@fig-exp-scallop). These patterns were driven by bottom temperature, salinity, and oxygen exposures (@fig-fact-exp-scallop). 
+
+In the previous Assessment, Atlantic sea scallop received a High exposure score, driven by sea surface temperature and ocean acidification exposure [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Atlantic sea scallop")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Atlantic sea scallop")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for Atlantic Sea Scallop across its range was **Moderate** (6.62 +/- 2.77) (@fig-sum-tab-scallop). Vulnerability was Very High over Georges Bank and High throughout the coast of the Gulf of Maine and Southern New England (@fig-vuln-scallop). 
+
+In the previous Assessment, Atlantic Sea Scallop received a High Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+95% of sensitivity attribute data quality scores were greater than or equal to 2 for both stocks of Atlantic Sea Scallop, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were found in either stock (@fig-sum-tab-scallop).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+Mean model confidence scores were 2.6 (+/- 0.5)  indicating high confidence in the model. Experts stated that important variables matched their expectations. The ensemble model’s AUC was 0.85, indicating good performance. 
 
 ## Additional Metrics
 
@@ -391,13 +398,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+There were significant declines in sea scallop core habitat area and range between 1993 and 2023. Most core habitat loss occurred in the Mid Atlantic Bight (@fig-shifts-scallop). The weighted centroid shifted less than 10 km east-northeast. 
+
+Atlantic sea scallop distributions are expected to remain similar in the next decade. No significant changes in habitat area are expected and the weighted centroid of the distribution is predicted to shift less than five kilometers southwest (@fig-shifts-scallop). 
+
+Sea scallops received a Moderate Distributional Vulnerability Rank in the previous Assessment [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 64,498  | 185,605 | 6.30 | 8.90 |
+| 2019-2023 | 6.43 km ENE | 61,364 (-3,134) | 181,195 (-4,410) | 6.17 (-0.12) | 8.90 (0)  |
+| 2031-2035 | 4.43 km SW | 59,177 (-2,187) | 183,116 (+1,921) | 6.30 (+0.12) | 9.0 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +443,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Both stocks of Atlantic sea scallop are estimated to be **negatively** impacted by future climate change. Certainty ranged from 88 – 99%, with higher certainty for the Mid Atlantic Bight stock. Rising temperatures and ocean acidification induce stress in sea scallops. In addition, anthropogenic activities such as dredging and offshore wind construction degrade habitats and impact behaviors. These results are similar to those from the 2016 Climate Vulnerability Assessment [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+The Atlantic sea scallop population in the Northwest Atlantic is subject to climate-related environmental stress from rising temperatures and ocean acidification [@zang2022modeling]. Scallop habitat can be degraded by trawling/dredging activity [@maguire2002effects]. Scallop feeding behaviors are temporarily impacted by noise pollution associated with offshore wind construction [@jezequel2022pile]. Changes in temperature and food availability are likely the predominant drivers for reduced growth in sea scallops [@cranford1998situ]. @rheuban2018projected modeled the Atlantic sea scallop fishery under a range of climate and management scenarios and found the possibility of reduced biomass up to 50% by the end of this century. Results of a scope for growth model with increased warming food deficiency indicated a range contraction of suitable sea scallop habitat in the Mid-Atlantic Bight [@zang2022modeling]. A second scope for growth model by @zang2023effects investigated the relationship between sea scallop size and temperature. Under future climate warming, sea scallops exhibited a range contraction and decline in maximum shell height. An integrated assessment model simulating sea scallop population dynamics with oceanographic and socioeconomic influences indicates that sea scallop harvests could experience a substantial decline by 2050 under increased CO^2^ emissions (with the assumption that ocean acidification decreases recruitment and slows growth and warming increases growth) [@cooley2015integrated].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Atlantic sea scallops are one of the most economically important fisheries in the Northwest Atlantic, with average annual ex-vessel revenues of over $500 million [@zang2022modeling]. Their habitat ranges from the Gulf of St. Lawrence to Cape Hatteras, North Carolina [@stewart1994environmental] with primary fishing areas in Georges Bank, the Great South Channel, and the Mid-Atlantic Bight [@hart2006long]. After a period of severe overfishing in the 1970s to 1990s, regulations including effort reductions, gear restrictions, and closed areas were introduced to rebuild the stock [@hart2006long]. Spawning occurs in late summer or early fall, although smaller spawning events at other times of the year are possible [@culliney1974larval]. Gametes from other scallops, agitation, or tides may trigger scallop spawning [@parsons1992intra]. Larvae reside in the water column for 5-7 weeks [@thouzeau1991spatial] and circulate with residual currents ranging from 6-25 cm/s [@culliney1974larval]. Larval exchange is influenced by duration and depth of planktonic drift, gyre strength, and weak cross-isobath flow [@thouzeau1991spatial]. The transition to the benthos of the freeswimming larvae occurs at a size of about 0.25 mm shell height and is accompanied by drastic changes in diet, morphology, and locomotory ability [@bourne1965comparison]. Mean fall temperatures impact the time larvae take to settle [@tremblay1994drift]. Sea scallop larvae are potentially preyed on by filter feeders and larval and adult planktivores [@tremblay1986horizontal]. Juvenile Atlantic sea scallops are mainly found on gravel, small rocks, shells, and among branching animals and plants that permit attachment of juveniles [@thouzeau1991spatial] and feed on suspended particles, primarily phytoplankton and microzooplankton [@shumway1987food]. Adult sea scallops are filter feeders on phytoplankton and other suspended organic particulates from the water [@shumway1987food]. Adult sea scallops prefer temperatures of 5-18°C [@hart2004essential]. Predation on juvenile and adult sea scallops decreases with shell height; common predators include Atlantic cod, wolffish, sculpins, winter and yellowtail flounder, as well as boring polychaetes, sea stars, crabs, and lobsters [@hart2004essential]. The New England Fishery Management Council manages Atlantic sea scallops in federal waters under the Atlantic Sea Scallop Fishery Management Plan. As of the 2020 Management Track Assessment, the stock is not overfished and overfishing is not occurring [@nefsc2020sea]. 
 
 ## Supplemental Scores
 
@@ -486,7 +497,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure ranged from Low to High. Scallops experienced Low exposures in late winter and spring (February through May) (@fig-exp-month-scallop). These patterns were driven by changes to bottom temperature and oxygen exposure. Exposure was High in August, driven by increases in downward carbon flux exposure (@fig-exp-month-tm-scallop).
 
 ```{r}
 #| echo: false
@@ -539,7 +550,7 @@ dir_path <- here::here("figures/Atlantic sea scallop")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +581,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom oxygen, salinity, and aragonite saturation, in addition to net primary production were important dynamic drivers of sea scallop distribution (@fig-radar-scallop). Scallops feed on suspended particles [@shumway1987food] and are often associated with gravel, other shellfish, and rocks [@thouzeau1991spatial]. When only these factors were used to calculate exposure, mean exposure remained Moderate (@fig-exp-imp-scallop; @fig-sum-imp-scallop). High exposure was still found on Georges Bank and in Southern New England (@fig-exp-imp-scallop).
 
 ```{r}
 #| echo: false
@@ -621,7 +632,7 @@ dir_path <- here::here("figures/Atlantic sea scallop")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +658,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-scallop
-#| fig-cap: "As in @fig-sum-tab for Atlantic sea scallop, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-scallop for Atlantic sea scallop, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

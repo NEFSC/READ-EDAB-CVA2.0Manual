@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Moderate
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Haddock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Moderate             | Increase |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | Low         | Moderate             | Increase |
+| *Directional Effect* | Negative         | Negative-Neutral             | None-Increase |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Haddock is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nHaddock is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Both the Georges Bank and Gulf of Maine stocks of Haddock received **Moderate** sensitivity scores. Certainties were 68% and 71%, respectively. For both stocks, Complexity in Reproductive Strategy (3) and Egg and Larval Survival and Settlement Requirements (3) had scores greater than 2.5. For the Gulf of Maine stock, Spawning Cycle (2.5) also had a score greater than 2.5 (@fig-sum-tab-haddock).
+
+Haddock spawn in aggregations. While bottom type conditions drive where haddock spawn, the timing of spawning has been correlated to temperatures in some studies. Retention of larvae is important, especially to the Georges Bank stock, as strong year-classes are present when circulation patterns promote retention on or near Georges Bank [@brodziak2005essential]. 
+
+In the previous Climate Vulnerability Assessment for the Northeast Shelf, Haddock received a Low sensitivity score. No attributes scored above 2.5 in the previous assessment [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+The overall mean Exposure for Haddock across its range was **Moderate** (1.94 +/- 0.94) (@fig-sum-tab-haddock). Scores were also Moderate in both the Gulf of Maine (1.75 +/- 0.88) and Georges Bank (2.24 +/- 0.96) stocks (@fig-sum-tab-haddock). Exposure was High along the coast of the Gulf of Maine, south of Cape Cod, and over Georges Bank, with areas of Very High Exposure over the Bank (@fig-exp-haddock). These patterns were driven by high exposure to bottom temperature, oxygen, and salinity changes (@fig-fact-exp-haddock).
+
+In the previous Assessment, Haddock received a High Exposure score, driven by sea surface temperatures and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Haddock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Haddock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for Haddock was **Moderate** across its range (3.88 +/- 1.89) (@fig-sum-tab-haddock). Vulnerability was **Low** within the **Gulf of Maine** stock and **Moderate** within the **Georges Bank** stock (3.49 +/- 1.76 and 4.48 +/- 1.91, respectively) (@fig-sum-tab-haddock). Vulnerability was High over Georges Bank, and Moderate along the coast of Southern New England and the Gulf of Maine (@fig-vuln-haddock). 
+
+In the previous Assessment, Haddock received a Low Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+97% of data quality scores were greater than or equal to 2 for both stocks, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-haddock).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The haddock ensemble model received a model confidence score of 2.3 (+/- 0.2), indicating moderate confidence in the model. The modeled distributions aligned with experts’ expectations. There were some concerns about the model residuals which may be tied to changes in abundance over time. The ensemble model AUC for Haddock was 0.91, indicating that the model had excellent predictive power. 
 
 ## Additional Metrics
 
@@ -391,13 +398,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Haddock core habitat area and range significantly increased between 1993 and 2023. Core habitat expanded westward into the Gulf of Maine and the species’ total range expanded south and west towards southern New England (@fig-shifts-haddock). The weighted centroid shifted 20 km west during this time. 
+
+Under near future climate conditions, Haddock habitat is predicted to continue to grow. Habitat is predicted to continue to expand further into the Gulf of Maine and into southern New England waters (@fig-shifts-haddock). The distribution centroid is predicted to shift a further 3 km south-southwest. 
+
+In the previous assessment, haddock received a High Distributional Vulnerability Rank due to their mobility, habitat preferences, and high larval dispersion [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 53,027 | 150,720 | 3.43 | 4.73 |
+| 2019-2023 | 19.7 km W | 67,784 (+14,756) | 156,737 (+6,017) | 3.55 (+0.12) | 4.73 (0) |
+| 2031-2035 | 3.4 km SSW | 68,955 (+1,171) | 160,491 (+3,754) | 3.62 (+0.06) | 4.81 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +443,17 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that the **Georges Bank** Haddock stock will be **negatively** impacted by climate change, while climate change will **neutrally** impact the **Gulf of Maine** stock. Certainties were 70% and 68%, respectively. Haddock abundance on Georges Bank has increased recently and coincides with rising ocean temperatures [@friedland2008does] [@wang2024density], but increasing temperatures may also lead to increased predation by cod [@durant2020nonlinearity]. Retention plays a large role in recruitment on Georges Bank, but not much is known about the role retention plays in the Gulf of Maine stock [@brodziak2005essential].
+
+Experts predicted that haddock would be negatively impacted by climate change in the previous Assessment [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+In the Northeast Atlantic, early life stage haddock and cod compete for food and later life stage cod prey upon haddock. Changing climate and the increasing number of warm years increases cod abundance, causing a decline in haddock [@durant2020nonlinearity]. Haddock abundance on Georges Bank has increased significantly in recent years and may coincide with a rise in extreme ocean temperatures or phytoplankton blooms [@friedland2008does] [@wang2024density]. A large recruitment event in Georges Bank haddock in 2003 was hypothesized to be related to the timing of the fall bloom and enhanced adult condition, affecting reproductive output [@friedland2008does]. Spatial distribution changes of haddock were modeled using bottom trawl survey data, and results showed range expansion and contraction in both spring and fall. Higher temperatures correspond with northward distribution shifts on Georges Bank [@wang2024density]. Future warming may shift haddock’s southern range boundary, making it difficult to define stock boundaries.
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+In the Northwest Atlantic, haddock are found from Newfoundland to Cape May, New Jersey but are most abundant in the Gulf of Maine and on Georges Bank [@brodziak2005essential]. The stock is managed in two subunits for the Gulf of Maine and Georges Bank [@nefsc2024gb] [@nefsc2024gom]. Haddock primarily spawn on the Northeast peak of Georges Bank and in the Great South Channel. Spawning occurs from January to July with a delay in peak spawning time with increasing latitude [@smith1985retention]. Spawning distribution is influenced more by restrictive spawning area and bottom type conditions than by temperature variation [@page1989spawning]. At water temperatures typical of Georges Bank, haddock eggs hatch in about 15 days. Larvae metamorphose into juveniles in roughly 30-42 days at lengths of 2-3 cm [@page1989spawning]. Small juveniles initially live and feed in the epipelagic zone and remain in the upper part of the water column for 3-5 months [@fahay1983guide]. The retention of haddock larvae in suitable nursery areas is an important factor in determining year class strength of Georges Bank haddock. The clockwise gyre around the main portion of Georges Bank provides a physical mechanism to retain haddock larvae on the Bank. There is limited information on retention of larval haddock in the Gulf of Maine. Larvae can potentially be advected as far south as the Mid-Atlantic Bight, but local retention or transport to nursery habitats to the southwest of Georges Bank are important to strong recruitment [@brodziak2005essential]. Haddock larvae are passive foragers on less motile prey: invertebrate eggs, copepods, and phytoplankton [@marak1960food]. Planktonic prey declines after juveniles become demersal, feeding on ophiuroids and polychaetes instead of copepods and pteropods [@brodziak2005essential]. Common predators of juvenile haddock include spiny dogfish, skates, and other groundfish. Gray seals also prey on adult haddock [@brodziak2005essential]. Adult haddock are indiscriminate consumers of benthic, sedentary or slow-moving invertebrates: crustaceans, annelids, polychaetes, mollusks, and echinoderms. Prey consumption varies by area and prey availability indicating adaptability [@tam2016trans]. Juvenile and adult haddock are demersal and usually found between 40-150m depth. Preferred bottom types include gravel, pebbles, clay and smooth hard sand, particularly smooth areas between rocky patches [@kleinmacphee2002haddock]. Age at maturity ranges from 1-4 years with a maximum age of 22 years [@nefsc2014saw59]. The Georges Bank and Gulf of Maine haddock stocks are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. Both stocks are not overfished and overfishing is not occurring [@nefsc2024gb] [@nefsc2024gom].
 
 ## Supplemental Scores
 
@@ -486,7 +499,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure ranged from Low to Moderate across the range of Haddock, oscillating with changes in bottom temperature, bottom oxygen, and downward carbon flux exposure (@fig-exp-month-haddock, @fig-exp-month-tm-haddock). Within both stocks, exposure ranged from Low to High. Exposure was High from June through November over Georges Bank, while it was only High in August in the Gulf of Maine stock (@fig-exp-month-haddock). This was because bottom temperature and oxygen exposure were greater over Georges Bank than they were in the Gulf of Maine (@fig-exp-month-tm-haddock).
 
 ```{r}
 #| echo: false
@@ -539,7 +552,7 @@ dir_path <- here::here("figures/Haddock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +583,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, aragonite solubility, and net primary productivity were important dynamic drivers of habitat distributions (@fig-radar-haddock). Haddock are demersal fish and are generalist feeders [@tam2016trans]. When only these factors were used to calculate Exposure, scores remained Moderate and spatial patterns were similar (@fig-exp-imp-haddock; @fig-sum-imp-haddock).
 
 ```{r}
 #| echo: false
@@ -621,7 +634,7 @@ dir_path <- here::here("figures/Haddock")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +660,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-haddock
-#| fig-cap: "As in @fig-sum-tab for Haddock, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-haddock for Haddock, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** Moderate - High
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Black sea bass")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Moderate         | Low             | Decrease |
+| *Exposure*           | Very High         | Moderate - High             | Decrease |
+| *Vulnerability*      | High         | Low             | Decrease |
+| *Directional Effect* | Positive         | Positive             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Black sea bass is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nBlack sea bass is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Black Sea Bass received a **Low** sensitivity score (@fig-sum-tab-bsb). Certainty was 64%. The only score greater than 2.5 was Complexity in Reproductive Strategy (2.7). This is likely because black sea bass as protogynous hermaphrodites (they transition from female to male as they age). Black Sea Bass also spawn in aggregations that consist of a single dominant male and many females [@tabandera2024black].
+
+In the 2016 Climate Vulnerability Assessment, Black Sea Bass received a Moderate sensitivity score. This was driven by Complexity in Reproductive Strategy (which received the same score in both assessments) and Early Life History Requirements [@hare2016vulnerability]. Juvenile Habitat Requirements was likely important because Black Sea Bass rely on seagrasses and shellfish beds as nursery habitats [@guyant2022northeast]. This attribute received a score of 2.4 in our assessment.
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for Black Sea Bass was **Moderate** throughout its range (2.02 +/- 0.99) (@fig-sum-tab-bsb). In the northern half of its range, exposure was High (2.61 +/- 0.83) whereas it remained Moderate in the southern half of its range (1.5 +/- 0.80) (@fig-sum-tab-bsb). Exposure was greatest south of Cape Cod and remained high south in Southern New England (@fig-exp-bsb). This was driven by high exposure to changes in bottom temperature and oxygen (@fig-fact-exp-bsb). Exposure was Low south of New Jersey, with the exception of the continental shelf, driven by high exposure to changes in bottom aragonite solubility along the shelf break (@fig-exp-bsb, @fig-fact-exp-bsb).
+
+In the previous Assessment, Black Sea Bass received a Very High Exposure score, driven by high exposure to sea surface temperature, air temperature, and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Black sea bass")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Black sea bass")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+The mean Vulnerability score for Black Sea Bass was **Low** throughout its range and in both the Northern and Southern substocks (2.02 +/- 0.99) (@fig-sum-tab-bsb). 
+
+Overall vulnerability rank in the previous assessment was High [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified.
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The black sea bass ensemble model received a 1.7 (+/- 0.4) model confidence score, indicating low confidence in the model. Experts stated that the model described black sea bass distributions well, particularly in the Mid-Atlantic, but did not represent the recent northern range expansion. The ensemble model AUC was 0.93, indicating excellent model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Black sea bass habitat grew significantly between 1993 and 2023. Both the northern and southern edges of black sea bass distribution shifted northward. Distributions have also expanded eastward along the coast of southern New England (@fig-shifts-bsb). The weighted centroid shifted nearly 12 km north-northeast during this time. 
+
+There is a predicted loss of core black sea bass habitat along the continental shelf break. However, total habitat area is predicted to continue to increase between 2025 and 2035 due to continued northward expansion into the Gulf of Maine and Cape Cod (@fig-shifts-bsb). The weighted centroid is predicted to continue to shift a further 31 km north-northeast.
+
+In the previous Assessment, black sea bass received a High Distributional Vulnerability Rank due to high adult mobility and high dispersal of eggs and larvae [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 44,186 | 119,369 | 5.05 | 5.37 |
+| 2019-2023 | 11.6 km NNE | 47,354 (+3,168) | 121,620 (+2,251) | 4.99 (-0.06) | 5.53 (+0.16) |
+| 2031-2035 | 31.2 km NNE | 43,780 (-3,574) | 124,309 (+2,689) | 4.86 (-0.12) | 5.53 (0)  |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +441,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Black sea bass are expected to be **positively** impacted by climate change. Expert certainty was 100%. Black sea bass have been expanding their distributions northward into the Gulf of Maine [@mcmahan2020geographic], likely due to increasing temperature supporting recruitment. This is the same result as the 2016 assessment [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Black sea bass in the Mid-Atlantic Bight are currently expanding their distribution northward into the Gulf of Maine [@mcmahan2020geographic]. Black sea bass in their newly-expanded range have a less diverse diet, lower condition, and a younger age-at-maturity than their counterparts at the historic northern range of the stock [@mcmahan2020geographic]. A laboratory study on Mid-Atlantic black sea bass observed a decline in bodily processes that require oxygen demand above 24°C, suggesting black sea bass will continue to shift their range poleward with warming conditions [@slesinger2020effect]. @tabandera2024black found that winter bottom temperature was positively correlated with recruitment deviations in black sea bass. Black sea bass in the southern Mid-Atlantic Bight also appear to occupy a smaller portion of their habitat in years with an increase in cold shelf water on the shelf slope. Northward distributions of black sea bass are resulting in new species interactions and habitat overlaps. In Narragansett Bay, black sea bass juveniles now share nursery habitats with juvenile tautog and cunner, however dietary overlap was size-dependent and ontogenic diet shifts eventually led to niche separation [@bell2015disentangling] [@taylor2023habitat].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Black sea bass are found along the U.S. Atlantic coast from Cape Cod to the Gulf of America in structured habitats such as reefs, shipwrecks, or oyster beds [@drohan2007essential]. In the Mid-Atlantic Bight, spawning occurs from April to October, beginning first in the southern portion of their range and northern latitudes starting later in the year [@able1998first]. Early larval stages last approximately 72 hrs at 21°C but can last anywhere from 2-6 days depending on temperature [@berlinsky2004effects]. Afterwards, larvae enter a 21-24 day planktonic phase where they can disperse up to 50 miles by currents [@watanabe2021status]. Eggs and pelagic larvae are vulnerable to predation, especially by gelatinous zooplankton [@arai1988interactions]. Larvae settle in nearshore shelf habitats and then migrate to estuarine nurseries to settle and metamorphose into juveniles (occurs at 13-24mm) [@able1995early]. Larvae are abundant at temperatures between 13-21°C and leave estuaries for deeper water when temperatures dip below 14°C [@kendall1972description]. Larvae consume microalgae and zooplankton, including rotifers [@richards1963demersal]. Metamorphosis is likely the biggest factor influencing settlement [@musick1977seasonal]. Structural complexity appears to be an essential component of juvenile black sea bass habitat offshore as well as inshore nurseries throughout the species range. In offshore areas, recently settled fish occur in accumulations of shell on sand substrata, complex microtopographies on exposed clay, on rocky reefs, and on wrecks [@able1995early]. Primary black sea bass settlement habitats are probably located along the near shore continental shelf in accumulations of the shells of bivalves, including Atlantic surfclams (*Spisula solidissima*) [@able1995early]. Juvenile growth rates impact winter mortality. Smaller juveniles have smaller lipid reserves and higher metabolic rates and therefore face higher predation or starvation risks in the winter [@geissinger2021food]. Juveniles, which are diurnal, visual predators, prey on benthic and epibenthic crustaceans (isopods, amphipods, small crabs, sand shrimp, copepods, mysids) and small fish. As they mature, their diet diversifies to include crabs, krill, isopods, shrimp, and small fish [@kimmel1973food]. Adult black sea bass perform seasonal inshore/offshore migrations between coastal spawning grounds and offshore overwintering habitats. Migrations are triggered by declining temperatures (around 10-12°C) and begin in the North moving southward [@tabandera2024black]. In the Mid-Atlantic Bight, individuals have home ranges as large as 7km^2^ [@tabandera2024black]. Observations suggest that spawning aggregations consist of a single dominant male and a harem of females. These spawning aggregations may rely on visual cues rather than chemical or environmental cues [@tabandera2024black]. Black sea bass are protogynous hermaphrodites, with fish changing sex from female to male as they increase in age and size [@mcgovern2002temporal]. Age of sexual transition varies with latitude with females maturing and undergoing sexual transition at greater ages in northern latitudes [@obrien1993maturation]. On average, age at maturity in the Mid-Atlantic is 2-3 years but can extend up to 5 years [@obrien1993maturation]. Maximum age for females is 8 years and 12 years for males [@nefsc2017_62saw]. The black sea bass fishery in the Northwest Atlantic is divided into two stock subunits (north and south) and is managed by the Mid-Atlantic Fishery Management Council along with the Atlantic States Marine Fisheries Commission. As of the 2025 Management Track Assessment, the Mid-Atlantic stock is not overfished or subject to overfishing [@asmfc2025_bsb].
 
 ## Supplemental Scores
 
@@ -486,7 +495,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Throughout its range, monthly exposure for black sea bass was Low from January to July (@fig-exp-month-bsb). Exposure increased to High for October and November. Monthly exposure remained Low throughout most of the year within the southern half of the range, but was High from May through December in the northern half (@fig-exp-month-bsb). These patterns were primarily driven by bottom temperature and oxygen exposure, which was overall higher in the northern half of the species range (@fig-exp-month-tm-bsb).
 
 ```{r}
 #| echo: false
@@ -539,7 +548,7 @@ dir_path <- here::here("figures/Black sea bass")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +579,9 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, and aragonite solubility were important dynamic drivers of species distributions (@fig-radar-bsb). Temperature is a known driver of larval development and migration timing [@able1995early]. Bivalve beds are important settling habitats, which may drive the importance of aragonite solubility to species distributions [@able1995early]. 
+
+When only these important factors were used to calculate exposure, scores remained Moderate on average throughout the species range (1.72 +/- 0.92). However, scores decreased from High to Moderate (2.28 +/- 0.92) and Moderate to Low (1.22 +/- 0.58) in the northern and southern portions of their range, respectively (@fig-sum-imp-bsb). When exposure calculations were limited to only important factors, exposure was greatest south of Long Island and Cape Cod, driven by high temperature and oxygen exposure (@fig-exp-imp-bsb).
 
 ```{r}
 #| echo: false
@@ -621,7 +632,7 @@ dir_path <- here::here("figures/Black sea bass")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +658,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-bsb
-#| fig-cap: "As in @fig-sum-tab for Black sea bass, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-bsb for Black sea bass, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

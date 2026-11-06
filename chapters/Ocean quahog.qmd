@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Very High
+-   **Exposure:** Moderate
+-   **Vulnerability:** High
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Ocean quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Very High         | Very High             | None |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | Very High         | High             | Decrease |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Ocean quahog is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nOcean quahog is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+The ocean quahog received a **Very High** sensitivity score, with a certainty of 71%. Three attributes had scores greater than 3.5: Adult Mobility (4), Population Growth Rate (4), and Relationship to Calcified Organisms (3.6) (@fig-sum-tab-oquahog).
+
+Similar to other bivalves, ocean quahogs have calcium carbonate shells and are sessile [@cargnelli1999_oq]. They are also one of the longest-lived bivalve species, with maximum ages high as 507 years old documented, and ages over 300 years old common in the Northwest Atlantic [@sower2023examination]. They mature at 13 years of age [@cargnelli1999_oq].
+
+Ocean quahogs also received a Very High sensitivity score in the previous Climate Vulnerability Assessment for the Northeast Shelf. The same attributes: Adult Mobility, Population Growth Rate, and Sensitivity to Ocean Acidification, drove the score [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure scores for the ocean quahog were **Moderate** (2.46 +/- 0.90) (@fig-sum-tab-oquahog). Exposure was Very High on Georges Bank, and High along the coast of the Gulf of Maine and in Southern New England. Scores were Low elsewhere in the distribution (@fig-exp-oquahog). These patterns were driven by bottom temperature, oxygen, and salinity exposure (@fig-fact-exp-oquahog).
+
+In the previous Assessment, ocean quahog received a High Exposure score, driven by high sea surface temperature and ocean acidification scores [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Ocean quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Ocean quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability scores for ocean quahog were **High** (9.85 +/- 3.58) (@fig-sum-tab-oquahog). Scores were Very High in Southern New England and on Georges Bank and Moderate elsewhere along the continental shelf (@fig-vuln-oquahog). 
+
+In the previous Assessment, ocean quahog received a Very High Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+87% of data quality scores were greater than or equal to 2, indicating strong data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-oquahog).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The ensemble ocean quahog model received a 2.2 (+/- 0.2) mean model confidence score, indicating moderate confidence in the model. The predicted distributions matched experts’ expectations, but the limited sample size decreased overall scores. The ensemble model AUC score was 0.88, indicating good model performance. 
 
 ## Additional Metrics
 
@@ -391,7 +398,11 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Ocean quahog habitat area increased significantly between 1993 and 2023. Core habitat grew in southern New England and the Mid Atlantic Bight, as well as over Georges Bank, which the species range expanded southward (@fig-shifts-oquahog). Because these shifts were relatively uniform, there was very little shift in the weighted centroid; the centroid shifted less than a kilometer to the south-southeast between 1993 and 2023. 
+
+Under near future ocean conditions, ocean quahog habitat is predicted to continue expanding. Habitat will continue to expand in Southern New England and over Georges Bank, but habitat is also predicted to expand along the coast of the Gulf of Maine (@fig-shifts-oquahog). As a result, the weighted centroid is predicted to shift 22 km to the east-northeast by 2035. 
+
+In the previous Assessment, ocean quahog received a High Distributional Vulnerability Rank [@hare2016vulnerability].
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
@@ -432,15 +443,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that Ocean Quahog would be **negatively** impacted by climate change. Certainty was 100%. Warming conditions are expected to shift the species’ distribution north and further offshore, possibly leading to competition between surfclams and ocean quahogs [@weinberg2002influence] [@stromp2023evaluation] [@spencer2024climate]. Ocean acidification will also negatively impact the species. The 2016 Climate Vulnerability Assessment also suggested that Ocean Quahogs would be negatively impacted by climate change [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Radiocarbon aging on ocean quahog shells suggest past (200 years) ocean quahog distributions inshore of their current range, indicating a range shift coinciding with the regression of the Cold Pool after the Little Ice Age [@leclaire2022historical]. With settlement occurring at the end of the larval stage, it may be presumed that temperature impacts settlement rate. @weinberg2002influence note that an increase in temperature would shift the species offshore and north. Future warming conditions are predicted to result in range shifts in Atlantic surfclams that would lead to potential competition for food and space between surfclams and ocean quahogs [@stromp2023evaluation] [@spencer2024climate].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Ocean quahogs are bivalve mollusks that inhabit the Northeast U.S. Continental Shelf from Newfoundland to Cape Hatteras [@cargnelli1999_oq]. The ocean quahog is among the longest-lived and slowest growing of marine bivalves, reaching maturity around 13 years of age and harvestable size at age 20 [@cargnelli1999_oq]. Maximum ages have been documented as high as 507 years old, with ages over 300 years old more common in the Northwest Atlantic [@sower2023examination]. Spawning occurs either in summer or fall, and can extend for months, releasing eggs and sperm into the water column at low levels over time [@cargnelli1999_oq]. Multiple annual spawnings may occur at the individual and population levels [@mann1982seasonal]. Eggs and larvae drift with currents until metamorphosis, then settle to the bottom [@mafmc1997_oq]. Larval development, at minimum, lasts for 55 days and decreases with increasing temperature [@lutz1981experimental]. Larvae go through three stages of development (trochophores, veligers and pediveligers) with the duration of each stage being temperature dependent [@cargnelli1999_oq]. @vandewater1997biological noted that wind-forced circulation may play a significant role in planktonic and benthic recruitment on Georges Bank and that interannual differences in these winds can yield very different abundance patterns over the bank. Once settled to the bottom, juvenile ocean quahogs are found offshore in sandy substrates, but may survive in muddy intertidal environments if protected from predators [@kraus1989growth]. Cross-shelf distributions of juveniles and adults remain within a 10°C optimal temperature range, as temperatures above 16°C limit distribution [@cargnelli1999_oq]. Ocean quahogs are suspension feeders on phytoplankton, using their relatively short siphons which are extended above the surface of the substrate to pump in water [@cargnelli1999_oq]. Juvenile and small ocean quahogs are commonly preyed upon by crustaceans (rock crabs, sea stars) and fish (haddock, cod) [@cargnelli1999_oq]. Ocean quahogs are managed by the Mid-Atlantic Fishery Management Council under the Atlantic Surfclam-Ocean Quahog Fishery Management Plan. The species is mainly harvested off of Maine and Long Island. The last stock assessment was conducted in 2019, where the stock was not overfished and overfishing was not occurring [@mafmc2025_oq].
 
 ## Supplemental Scores
 
@@ -486,7 +497,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure scores ranged from Low to High. Scores were Low in March and High from June through December (@fig-exp-month-oquahog). These patterns were driven by changes in bottom temperature and oxygen exposure (@fig-exp-month-tm-oquahog).
 
 ```{r}
 #| echo: false
@@ -539,7 +550,7 @@ dir_path <- here::here("figures/Ocean quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +581,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom oxygen, salinity, aragonite solubility, and net primary productivity were the major dynamic drivers of ocean quahog distributions (@fig-radar-oquahog). As a benthic shellfish, they occupy the benthos and are filter feeders with calcium carbonate shells [@cargnelli1999_oq]. When only these factors were used to calculate exposure, exposure remained Moderate (1.86 +/- 0.83) (@fig-sum-imp-oquahog). High exposure scores were found south of Long Island, Cape Cod, and on Georges Bank (@fig-exp-imp-oquahog).
 
 ```{r}
 #| echo: false
@@ -621,7 +632,7 @@ dir_path <- here::here("figures/Ocean quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +658,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-oquahog
-#| fig-cap: "As in @fig-sum-tab for Ocean quahog, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-oquahog for Ocean quahog, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

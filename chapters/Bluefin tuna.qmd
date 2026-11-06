@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** High
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Bluefin tuna")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Moderate [@loughran2025climate]        | Low             | Decrease |
+| *Exposure*           | High [@loughran2025climate]        | High             | None |
+| *Vulnerability*      | Moderate [@loughran2025climate]        | Low             | Decrease |
+| *Directional Effect* | Neutral [@loughran2025climate]        | Neutral             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Bluefin tuna is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nBluefin tuna is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Bluefin Tuna received a **Low** sensitivity score, with a certainty of 67% (@fig-sum-tab-bft). The only attribute that received a score greater than 2.5 was Egg and Larval Survival and Settlement Requirements (2.6) (@fig-sum-tab-bft). Early larval stages are susceptible to starvation and older larvae are susceptible to predation [@shropshire2022]. Larvae also depend on ocean currents for transport to nursery habitats.
+
+Bluefin Tuna were not included in the 2016 Climate Vulnerability Assessment for the Northeast Shelf, but were included in the recent Highly Migratory Species Climate Vulnerability Assessment [@loughran2025climate]. In this analysis, Bluefin Tuna received a Moderate sensitivity score across their range [@loughran2025climate]. This score was driven by population growth rates, reproductive cycles, and early life history requirements, similar to our analysis.
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for Bluefin Tuna was **High** (2.93 +/- 0.53) across its distribution along the Northeast Shelf (@fig-sum-tab-bft). This was driven by high sea surface temperature, salinity, and pH exposure (@fig-fact-exp-bft). Exposure was relatively uniform across the species’ range, with pockets of Moderate exposure off the coasts of the DelMarVa Peninsula, and pockets of High Exposure along the edge of the Gulf of Maine (@fig-exp-bft).
+
+Bluefin Tuna were not assessed in the previous Climate Vulnerability Assessment for the Northeast Shelf, but were recently assessed by the Highly Migratory Species group [@loughran2025climate]. In that assessment, which included their entire distribution throughout the Northwest Atlantic, they received a High Exposure score [@loughran2025climate]. This score was driven by pH, surface oxygen, and surface temperature [@loughran2025climate].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Bluefin tuna")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Bluefin tuna")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+The mean Vulnerability score for Bluefin Tuna was **Low** (2.93 +/- 0.53) due to the Low sensitivity score (@fig-sum-tab-bft). Vulnerability was Low throughout the species’ distribution along the Northeast Shelf (@fin-vuln-bft; @fig-sum-tab-bft).
+
+Bluefin Tuna received a Moderate Vulnerability score in the recent highly migratory species climate vulnerability assessment [@loughran2025climate]. They were not assessed in the previous climate vulnerability assessment for the Northeast Shelf [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+98% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-bft).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The bluefin tuna received a mean model confidence score of 0.5 (+/- 0.5), indicating no confidence in the model. While experts stated that broad trends matched expectations, the low sample size, highly migratory behaviors of bluefin tuna, and a lack of predictions in known habitats drove the score down. The ensemble model AUC was 0.98 indicating that the model had excellent predictive skill. 
 
 ## Additional Metrics
 
@@ -391,13 +396,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Between 1993 and 2023 there were significant declines in bluefin tuna habitat area on the Northeast Shelf (@fig-shifts-bft). The weighted centroid shifted 39 km southwest during this time. 
+
+Core habitat area for bluefin tuna is predicted to expand significantly due to increased habitat area off the coast of Maryland and Virginia and as north as Nova Scotia (@fig-shifts-bft). The weighted centroid is predicted to shift a further 73 km to the northeast between 2025 and 2035. 
+
+Distribution Vulnerability was not calculated in the recent Highly Migratory Species Climate Vulnerability Assessment [@loughran2025climate]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 35,842 | 172,272 | 8.54 | 9.54 |
+| 2019-2023 | 38.7 km SW | 31,332 (-4,510) | 167,717 (-4,554) | 8.85 (+0.31) | 9.54 (0) |
+| 2031-2035 | 72.5 km NE | 41,818 (+10,485) | 185,684 (+17,967) | 9.04 (+0.19) | 9.62 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +441,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Bluefin tuna were estimated to be **neutrally** impacted by climate change. Expert certainty was 96%. Bluefin distributions have been projected to move poleward into the northeast Atlantic. Habitat losses are expected to be great (60% loss) in the Gulf of America, but smaller (20%) in the Northwest Atlantic [@braun2023widespread]. Spawning may shift to early spring due to increasing temperatures [@muhling2011]. This is similar to the results from the recent Highly Migratory Species Climate Vulnerability Assessment [@loughran2025climate].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Projected surface temperatures in the Gulf of America may alter the spatial and temporal extent of Atlantic bluefin tuna spawning. Model results from [@muhling2011] indicate decreased larval bluefin tuna occurrence in late spring in the Gulf by 39-61% by 2050 and 93-96% by 2100, with early spring spawning becoming more prevalent. @erauskin2026 also modeled decreased habitat suitability for spawning in the Gulf of America. They predict a poleward shift in Atlantic bluefin tuna distribution and greater spatial overlap with prey in higher latitudes. Nursery habitats in the Gulf of America are impacted by oil spills. Upwards of 5% of predicted spawning habitat within the U.S. Exclusive Economic Zone (EEZ) was impacted by the Deepwater Horizon oil spill [@hazen2016].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Western Atlantic bluefin tuna are a highly migratory species observed from Newfoundland to the Gulf of America; they occupy temperate surface waters but can dive to depths of 1000m [@fromentin2006]. Spawning occurs between spring and summer throughout western North Atlantic spawning grounds, namely the Gulf of America (March-June) and Slope Sea (June-September). Spawning in the Slope Sea occurs one to two months later than the Gulf of America due to differences in sea surface temperatures [@baglin1982]. Bluefin tuna eggs hatch after 2 days and larvae remain pelagic for 3-4 weeks [@shropshire2022]. Larval bluefin tuna are found near spawning grounds and dispersed via wind and the margins of ocean currents. Edges of ocean currents and eddies provide access to warmer sea surface temperatures and nutrient-rich waters that support larval foraging of zooplankton prey while avoiding predation [@shropshire2022]. Favorable habitat for bluefin larvae in the Gulf of America was determined to be moderately warm waters (23.5-28.5°C) in the eddies of the Loop Current, and outside of cooler, higher chlorophyll continental shelf waters [@teo2007]. Along the coast of the southeastern United States, larval stages may benefit from nearshore meanders of the Gulf Stream that can produce upwelling of nutrient rich water along the continental shelf edge [@shropshire2022]. Larvae initially feed on zooplankton and progress to a piscivorous diet at a relatively small size [@llopiz2015]. Starvation is the largest cumulative source of mortality in early larval stages, and predation on older larvae is a main source of mortality in later stages [@mcgowan1989]. Juvenile habitats are located over the continental shelf in the summer and further offshore in the winter. Juvenile life stages follow similar seasonal movements compared to adult life stages, though are generally more restricted to coastal areas [@nmfs2006]. Juvenile and adult bluefin tuna are opportunistic, generalist predators feeding mainly on zooplanktivorous fishes and crustaceans. Predation of larger fish continues with increasing body size, with juveniles moving from sand lance to mackerel and herring as adults [@logan2011] [@logan2015]. Adult bluefin tuna migrate seasonally from winter to early summer spawning grounds in the Gulf of America, Straits of Florida, and Slope Sea to summer and fall foraging grounds throughout the Gulf Stream, South and Mid-Atlantic Bight, Gulf of Maine, Nova Scotia Shelf, and east of the Flemish Cap [@block2001]. Age at 50% maturity estimates for Atlantic bluefin tuna vary between 5 to 12 years, with a maximum age of over 30 years [@scrs2021]. NOAA Fisheries, with recommendations from the International Commission for the Conservation of Atlantic Tunas (ICCAT), manages the Atlantic bluefin tuna fishery in the United States through the Atlantic Highly Migratory Species Management Division. As of 2023, the stock is being managed ICCAT Recommendation 21-10. Population numbers are unknown but the stock is not subject to overfishing [@iccat2022]. 
 
 ## Supplemental Scores
 
@@ -486,7 +495,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure remained High across all months. There was no month-to-month variability (@fig-exp-month-bft). There was some variability in individual factors, but the overall Exposure score did not change (@fig-exp-month-tm-bft). 
 
 ```{r}
 #| echo: false
@@ -539,7 +548,7 @@ dir_path <- here::here("figures/Bluefin tuna")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +579,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Sea Surface Temperature was the only major driver of Bluefin Tuna distribution along the Northeast Shelf (@fig-radar-bft). As a result, Exposure was Low when calculated with only important factors due to the limited number of important factors (@fig-exp-imp-bft; @fig-sum-imp-bft).
 
 ```{r}
 #| echo: false
@@ -621,7 +630,7 @@ dir_path <- here::here("figures/Bluefin tuna")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +656,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-bft
-#| fig-cap: "As in @fig-sum-tab for Bluefin tuna, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-bft for Bluefin tuna, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

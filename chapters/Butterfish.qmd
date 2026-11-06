@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** High
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Butterfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Low             | None |
+| *Exposure*           | High         | High             | None |
+| *Vulnerability*      | Low         | Low             | None |
+| *Directional Effect* | Positive         | Neutral             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Butterfish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nButterfish is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Butterfish received a **Low** sensitivity score. Certainty was 100% (@fig-sum-tab-butter). No attributes had scores greater than 2.5 (@fig-sum-tab-butter). The only score greater than 2 was Other Stressors (2.1). Butterfish spawn in estuarine habitats like Long Island Sound and Chesapeake Bay that are impacted by urbanization impacts such as hypoxia, loss of seagrass beds, and changes to freshwater inputs [@guyant2022northeast].
+
+These results are similar to the 2016 Assessment where all attribute scores were less than 2.5 and the overall sensitivity score was Low [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for Butterfish was **High** (3.02 +/- 0.59) (@fig-sum-tab-butter). Exposure was High throughout most of the species range, with Very High exposure along Georges Bank and Low exposure off the coast of Chesapeake Bay (@fig-exp-butter). These scores were driven by high surface temperature, salinity, and pH exposures (@fig-fact-exp-butter). 
+
+In the previous Assessment, Butterfish also received a High Exposure score, driven by surface temperature and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Butterfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Butterfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean overall Vulnerability for Butterfish was **Low** (3.02 +/- 0.59), driven by Low Sensitivity (@fig-sum-tab-butter). Vulnerability was Low throughout most of the Butterfish’s range, but was Moderate along Georges Bank and off the coast of Massachusetts/Cape Cod (@fig-vuln-butter).
+
+In the previous Assessment, Butterfish also received a Low Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-butter).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The butterfish ensemble model received a mean model confidence score of 1.9 (+/- 0.2), indicating low confidence in the model. Experts stated that the model generally met expectations but tended to overpredict presence. The ensemble model for butterfish had an AUC score of 0.86 indicating good predictive ability. 
 
 ## Additional Metrics
 
@@ -391,13 +396,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Butterfish habitat increased significantly between 1993 and 2023. While butterfish tended to occupy less area on the shelf break, they occupied more area on the shelf itself (@fig-shifts-butter). The weighted centroid shifted 13 km northeast between 1993 and 2023. 
+
+Under near future climate conditions, butterfish habitat is predicted to continue expanding. Offshore habitat use on the shelf break is predicted to decrease, but butterfish are expected to continue to use more continental shelf habitat (@fig-shifts-butter). The weighted centroid is predicted to shift a further 22 km to the north-northeast. 
+
+In the previous assessment, butterfish received a Very High Distributional Vulnerability Rank due to their high mobility and large seasonal migrations [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 77,124 | 222,896 | 8.29 | 9.46 |
+| 2019-2023 | 13.0 km NE | 81,307 (+4,183)| 226,905 (+4,009) | 8.29 (0) | 9.46 (0) |
+| 2031-2035 | 21.8 km NNE | 85,249 (+3,942) | 233,659 (+6,754) | 8.10 (-0.19) | 9.54 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +441,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+The effect of climate change on butterfish was predicted to be **neutral**, with 98% certainty in expert scores. Butterfish have expanded their range northward and into deeper waters [@suca2021environmental] [@adams2022update]. However, reliance on zooplankton and copepod prey in the spring may lead to mismatches that impact recruitment [@suca2018feeding]. In the previous Assessment, experts predicted that butterfish would be positively impacted by climate change [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Butterfish distributions and abundance in the Mid-Atlantic Bight are strongly related to bottom temperature [@kohut2013toward]. Butterfish have shifted their distribution northward in recent decades. @collie2008long documented an increase in butterfish abundance in Narragansett Bay in the latter half of the 20th century, and they recently have expanded their range into the Gulf of Maine [@suca2021environmental] [@adams2022update]. Their depth distribution has also shifted to inhabiting deeper waters [@suca2021environmental]. An increase in butterfish prevalence in the Gulf of Maine has altered seabird diets, and is replacing preferred prey in common terns [@smith2023effects].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Butterfish distribution ranges from Newfoundland in Canada to Atlantic Florida, but they are primarily found from the Gulf of Maine to Cape Hatteras. They are a schooling fish and shift distribution in response to changing water temperatures: moving north and inshore over the summer to spawn and south and offshore in the winter to seek warmer water [@cross1999essential]. Butterfish are broadcast spawners and spawn primarily in the evening or at night, however no direct observations have been made [@horn1970systematics]. In general, butterfish spawn starting in May through early fall, peaking in June-July, although timing is dependent on location [@cross1999essential]. Egg duration and larval growth is temperature dependent [@colton1963eggs], and most eggs and larvae prefer temperatures 9-19°C [@cross1999essential]. Butterfish eggs and larvae are widely distributed throughout their range from spring to fall as spawning occurs over their entire range. Larvae are associated with the Gulf Stream, although it is not clear how far they travel [@morse1987marmap]. Later life stages (juveniles and adults) can inhabit surface waters to depth on the continental shelf and into coastal bays and estuaries [@schreiber1973fishes]. Survival is reduced in juveniles and adults below 10°C [@cross1999essential]. Juvenile and adult butterfish feed mainly on planktonic prey including thaliaceans (primarily *Larvacea* and *Hemimyaria*), mollusks (primarily squids), crustaceans, coelenterates, polychaetes, small fishes, and ctenophores [@horn1970systematics]. Recent diet analysis on 2013-2015 trawl specimens illustrates that spring diets are dominated by *Calanus* copepods, amphipods, larvaceans, and fall diets are dominated by amphipods [@suca2018feeding]. There is little information about larval predation; juvenile and adult butterfish are preyed upon by haddock, silver hake, goosefish, weakfish, bluefish, swordfish, sharks (hammerhead), and longfin inshore squid [@bigelow1953fishes_butterfish] [@horn1970systematics]. Butterfish age at maturity is 1-2 years; the maximum lifespan is 6 years although most butterfish live roughly 2-3 years [@horn1970systematics] [@draganik1966rate]. In the Northwest Atlantic, butterfish are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. As of the 2024 stock assessment, the stock is not overfished and overfishing is not occurring [@nefsc2024butterfish].
 
 ## Supplemental Scores
 
@@ -486,7 +495,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure was High for Butterfish throughout most of the year. Exposure declined to Moderate in May through June and December (@fig-exp-month-butter). These declines were due to declines in salinity and pH, and sea surface temperatures, respectively (@fig-exp-month-tm-butter).
 
 ```{r}
 #| echo: false
@@ -539,7 +548,7 @@ dir_path <- here::here("figures/Butterfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +579,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Surface temperature, pH, and small phytoplankton productivity were important to species distributions (@fig-radar-butter). Temperature is an important driver of Butterfish migrations [@cross1999essential]. Recent diet analysis shows that *Calanus* copepods, amphipods, and larvaceans are primary prey sources [@suca2018feeding]. When only these important factors were used to calculate exposure, mean exposure decreased to Moderate (2.29 +/- 0.9) (@fig-exp-imp-butter;, @fig-sum-imp-butter).
 
 ```{r}
 #| echo: false
@@ -621,7 +630,7 @@ dir_path <- here::here("figures/Butterfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +656,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-butter
-#| fig-cap: "As in @fig-sum-tab for Butterfish, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-butter for Butterfish, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

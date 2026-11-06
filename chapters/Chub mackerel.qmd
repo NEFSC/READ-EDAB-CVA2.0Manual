@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** High
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Chub mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Not Available         | Low             | - |
+| *Exposure*           | Not Available         | High             | - |
+| *Vulnerability*      | Not Available         | Low             | - |
+| *Directional Effect* | Not Available         | Neutral             | - |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Chub mackerel is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nChub mackerel is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Chub mackerel were given a **Low** sensitivity score, with 99% certainty according to bootstrap analysis (@fig-sum-tab-chub). The only attribute that received a score greater than 2.5 was Stock Size. This is likely because no stock assessment for chub mackerel exists [@mafmc2025chub].
+
+Chub mackerel were not assessed in the 2016 Climate Vulnerability Assessment, nor any other recent Assessment [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for Chub mackerel was **High** (2.89 +/- 0.69) (@fig-sum-tab-chub). Exposure was High throughout most of the species range, but was Very High south of Long Island and Cape Cod, and Low off the coast of Chesapeake Bay (@fig-exp-chub). This was driven by surface temperature, salinity, and pH exposures, plus high exposures in phytoplankton productivity variables (all size classes) around Hudson Canyon and off the coasts of Delaware and Virginia (@fig-fact-exp-chub). 
+
+Chub mackerel were not assessed in the 2016 Climate Vulnerability Assessment, nor any other recent Assessment [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Chub mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Chub mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for Chub mackerel was **Low** (2.89 +/- 0.69) due to Low sensitivity scores (@fig-sum-tab-chub). Vulnerability was Low throughout the species’ range, except south of Long Island and Cape Cod where Vulnerability was Moderate (@fig-vuln-chub). 
+
+Chub mackerel were not assessed in the 2016 Climate Vulnerability Assessment, nor any other recent Assessment [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+Only 68% of data quality scores were greater than or equal to 2, indicating poor data quality. Data gaps (mean attribute data quality score \< 2) included Complexity in Reproductive Strategy, Dispersal of Early Life Stages, Egg and Larval Survival and Settlement Requirements, Other Stressors, and Stock Size/Status (@fig-sum-tab-chub).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The chub mackerel ensemble model received a mean model confidence score of 2.1 (+/- 0.6), indicating moderate confidence in the final model. Experts thought that the model generally described chub mackerel distributions well, but the low sample size drove scores down. The ensemble AUC score for chub mackerel was 0.89 indicating that the final model had good predictive performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Chub mackerel experienced significant habitat expansion between 1993 and 2023. Core habitats expanded further north along the coast of New Jersey and their range expanded further east along the coast of southern New England (@fig-shifts-chub). The weighted centroid shifted 27 km north-northeast between 1993 and 2023. 
+
+Under near future climate conditions, chub mackerel habitat is expected to remain similar. Chub mackerel are predicted to lose habitat on the continental shelf break, but gain habitat nearshore and on the shelf itself as the northern and eastern edges of their distribution continue to shift further north and east respectively (@fig-shifts-chub). The weighted centroid is predicted to shift 34 km westward, reflecting the increase in inshore habitat use. 
+
+Chub mackerel were not assessed previously so no previous ranks are available. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 33,926 | 124,707 | 5.61 | 6.49 |
+| 2019-2023 | 37.2 km NNE | 41,283 (+7,356) | 131,768 (+7,060) | 5.80 (+0.19) | 6.41 (-0.08) |
+| 2031-2035 | 33.5 km W | 36,136 (-5,146) | 127,610 (-4,157) | 5.86 (+0.06) | 5.93 (-0.48) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +441,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that climate change would have a **neutral** effect on chub mackerel. Expert certainty was 87%. Variations in abundance have been observed and are likely due to oceanographic processes due to their pelagic lifestyle, but the exact drivers are unclear [@hernandez2000synopsis].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Fluctuations in Atlantic chub mackerel abundance have been reported in the Mid-Atlantic and New England, and may result from environmental influences such as temperature and upwelling. Oceanographic processes likely influence recruitment and distribution, as all life stages of chub mackerel are fully pelagic [@hernandez2000synopsis]. In the eastern Atlantic, chub mackerel distributions have shifted northward, with a delayed and prolonged spawning season with increasing latitude [@dominguez2022spatial]. In the Alboran Sea, chub mackerel abundance is vulnerable to variations in sea surface temperature, salinity, currents, and wind patterns [@ayman2024environmental].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Atlantic chub mackerel is a schooling pelagic species ranging from Nova Scotia to Argentina, including the Gulf of America, and are found on the continental shelf at depths of 250-300m [@mafmc2025chub]. They are batch spawners, spawning January through April from North Carolina through the Gulf of America [@daley2018growth]. Spawning generally occurs in waters greater than 10°C and is possibly triggered by water temperatures between 15- 20°C [@hernandez2000synopsis]. Chub mackerel eggs develop for approximately 53-56 hrs at 18-20°C. Larval stages last between 16-24 days, developing faster at higher temperatures [@hernandez2000synopsis]. Atlantic chub mackerel grow rapidly during the first year of life, reaching maturity around 2 years of age [@daley2018growth] and can live up to 13 years [@hernandez2000synopsis]. Chub mackerel are generalist predators of zooplankton and other pelagic prey including mysids, euphausids, decapod larvae, copepods, amphipods, small fish, cephalopods. Cannibalism has been observed in this species [@hernandez2000synopsis]. There is little data on chub mackerel predation in the Northwest Atlantic. The Mid-Atlantic Fishery Management Council funded a study on diet composition of marlins and tunas and found very few chub mackerel in the stomachs of yellowfin tuna and white marlin [@mafmc2025chub]. In 2019, the Mid-Atlantic Fishery Management Council approved Amendment 21 to the Mackerel, Squid, and Butterfish Fishery Management Plan. This Amendment established conservation and management measures for Atlantic chub mackerel in the Northwest Atlantic [@mafmc2019amendment]. There is currently no stock assessment of chub mackerel in the Mid-Atlantic. Biomass is assumed to be at a sustainable level based on stock productivity and low fishery capacity [@mafmc2025chub].
 
 ## Supplemental Scores
 
@@ -486,7 +495,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure ranged from Moderate to Very High (@fig-exp-month-chub). Scores were Very High in May due to coincident spikes in phytoplankton biomass exposure across size classes. Exposure declined to Moderate in July and August due to declines in surface salinity exposure (@fig-exp-month-tm-chub).
 
 ```{r}
 #| echo: false
@@ -539,7 +548,7 @@ dir_path <- here::here("figures/Chub mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +579,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Sea surface temperature, surface salinity, and diazotroph primary productivity were important dynamic drivers of chub mackerel distributions on the Northeast Shelf (@fig-radar-chub). Chub mackerel are generalist zooplankton predators and oceanographic processes play a role in spawning and their distribution [@hernandez2000synopsis]. When only these factors are included in the exposure calculation, mean exposure drops from High to Moderate (1.54 +/- 0.83) (@fig-sum-imp-chub). Exposure in this scenario is High off the coasts of Long Island and New Jersey, where high surface temperature and salinity exposures overlap, but Low elsewhere (@fig-exp-imp-chub).
 
 ```{r}
 #| echo: false
@@ -621,7 +630,7 @@ dir_path <- here::here("figures/Chub mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +656,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-chub
-#| fig-cap: "As in @fig-sum-tab for Chub mackerel, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-chub for Chub mackerel, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("<% species %> is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\n<% species %> is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -399,7 +398,7 @@ knitr::include_graphics(img_path)
 | 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
 | 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
 
-: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist-<% abb %>}
 
 ::: {.content-visible when-format="html"}
 ```{r}
@@ -539,7 +538,7 @@ dir_path <- here::here("figures/<% species %>")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -621,7 +620,7 @@ dir_path <- here::here("figures/<% species %>")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +646,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-<% abb %>
-#| fig-cap: "As in @fig-sum-tab for <% species %>, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-<% abb %> for <% species %>, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

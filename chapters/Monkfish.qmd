@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Monkfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Monkfish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nMonkfish is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Both the **Northern** and **Southern** Stocks of Monkfish received a **Low** sensitivity score. Certainties were 99% and 98% respectively (@fig-sum-tab-Monkfish). For both stocks, the only attribute that received a score greater than 2.5 was Population Growth Rate (2.6 for both stocks) (@fig-sum-tab-Monkfish). Monkfish mature slowly, reaching maturity at 4-5 years [@richards2008population]. Maximum ages range from 7 years for males to 14 years for females [@nefsc2010fifty].
+
+Monkfish also received a Low sensitivity score in the 2016 Climate Vulnerability Assessment for the Northeast Shelf. Like in this assessment, this result was driven by Population Growth Rate [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for Monkfish was **Moderate** throughout its range (2.02 +/- 0.95). Scores were also **Moderate** when averaged across both the **Northern** and **Southern** stocks (1.99 +/- 0.96 and 2.08 +/- 0.95, respectively) (@fig-sum-tab-Monkfish). Exposure was greatest (Very High) over Georges Bank and Moderate in Southern New England and along the coast of the Gulf of Maine (@fig-exp-Monkfish). This was driven by bottom temperatures, oxygen, and salinity, as well as zooplankton biomass exposure. Exposure was also moderate on the shelf break due to high exposure to changes in bottom aragonite solubility (@fig-fact-exp-Monkfish).
+
+In the previous Climate Vulnerability Assessment for the Northeast Shelf, monkfish received a High Exposure score. This previous score was driven by sea surface temperature, ocean acidification, and currents [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Monkfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Monkfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Exposure for Monkfish was **Moderate** throughout its range (2.02 +/- 0.95). Scores were also **Moderate** when averaged across both the **Northern** and **Southern** stocks (1.99 +/- 0.96 and 2.08 +/- 0.95, respectively) (@fig-sum-tab-Monkfish). Exposure was greatest (Very High) over Georges Bank and Moderate in Southern New England and along the coast of the Gulf of Maine (@fig-exp-Monkfish). This was driven by bottom temperatures, oxygen, and salinity, as well as zooplankton biomass exposure. Exposure was also moderate on the shelf break due to high exposure to changes in bottom aragonite solubility (@fig-fact-exp-Monkfish).
+
+In the previous Climate Vulnerability Assessment for the Northeast Shelf, monkfish received a High Exposure score. This previous score was driven by sea surface temperature, ocean acidification, and currents [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+88% of data quality scores were greater than or equal to 2, indicating strong data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-Monkfish).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The monkfish ensemble model received a 2.4 (+/- 0.4) model confidence score, indicating moderate confidence in the model. The final model met experts’ expectations, representing the known distribution and drivers well. The ensemble model AUC score was 0.94, indicating that the model had excellent predictive performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Monkfish lost significant amounts of habitat between 1993 - 2023, particularly off of southern New England and at the southern edge of their range. Monkfish have gained habitat in the Gulf of Maine and total habitat area has increased in recent years (@fig-shifts-Monkfish). The weighted centroid has shifted 51 km northeast between 1993 and 2023. 
+
+Under near future ocean conditions, the recent habitat growth trend is expected to continue. Monkfish habitat is predicted to expand south of Georges Bank and at the southern edge of their range (@fig-shifts-Monkfish). The weighted centroid is expected to shift 17 km southwest, back towards its 1993 location. 
+
+In the previous Assessment, monkfish received a High Distributional Vulnerability rank because of their habitat preferences (generalists) and seasonal migrations [@hare2016vulnerability]. 
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 96,668 | 233,269 | 6.23 | 8.02 |
+| 2019-2023 | 50.9 km NE | 81,028 (-15,640) | 220,138 (-13,131) | 5.23 (-1.00) | 7.22 (-0.80) |
+| 2031-2035 | 16.6 km SW | 86,432 (+5,404) | 224,828 (+4,689) | 5.80 (+0.56) | 7.70 (+0.48) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +442,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Climate change is predicted to **negatively** impact both the **northern** and **southern** stocks of Monkfish. Certainties were 94% and 87% respectively. Monkfish are most abundant on Georges Bank when bottom temperatures are between 5-14 C, suggesting that warming temperatures would decrease the amount of preferred habitat [@siemann2018summering]. Experts in the previous Assessment predicted that climate change would have a neutral impact on Monkfish with a high degree of uncertainty [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+In Icelandic waters, monkfish distribution changes and increased stock size have been correlated with rising water temperatures and expanding suitable habitat [@solmundsson2007recent]. Monkfish movement and relative abundance on Georges Bank is driven by seasonal changes in bottom temperature. Their distribution may shift in response to future changes in thermal habitat, highlighting the need for further management strategies [@siemann2018summering]. Maximum size of monkfish in the Northwest Atlantic has decreased, and is related to seasonality and bottom temperature [@charbonneau2020pervasive].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Monkfish are a bottom dwelling fish ranging from the northern Gulf of St. Lawrence to Cape Hatteras. The commercial fishery operates from Maine to North Carolina [@steimle1999monkfish]. Spawning takes place from spring through early autumn, progressing from south to north over a 6 month period [@richards2008population]. Pelagic larvae hatch from egg veils (up 12 m long and 1.5 m wide) 1-3 weeks after being laid, depending on temperature. Larvae remain in the egg veil 2-3 days after hatching. Monkfish larvae feed on zooplankton, including copepods, crustacean larvae, and chaetognaths [@bigelow1953fishes]. Larval to juvenile transition occurs at 5-10 cm TL (total length) when the elongate fins and body gradually assume the adult form [@nefsc2010fifty]. Once larvae transition to juveniles, they move to the benthos. Juveniles and adults settle on mud, gravelly sand, algae, and rock substrates [@steimle1999monkfish]. Once moved to the bottom, juveniles can eat sand lance, but invertebrates such as red shrimp and squid make up the majority of their diet. The amount of invertebrates eaten by juveniles decreases as they get older [@steimle1999monkfish]. Monkfish are ambush predators and opportunistic feeders; prey found in their stomachs include a variety of benthic and pelagic species. Monkfish are also cannibalistic and can eat sea birds and diving ducks. Adults spend most of their time resting on the bottom, but have been reported at the surface after a storm event, preying on seabirds [@richards2008population]. Large monkfish have few predators, but smaller monkfish are common prey for swordfish, sharks, and skates [@steimle1999monkfish]. Monkfish move by slow swimming or by using their sturdy pectoral fins to "walk." Despite slow speeds, juveniles and adults migrate in response to thermal conditions, spawning, or food availability [@steimle1999monkfish]. Monkfish were found on Georges Bank in summer and early fall, and found in deeper waters/on the edge of the bank in winter months, suggesting that movements may be influenced by temperature [@rountree2006extraction]. Age at maturity is 4-5 years, longer for females and for the Mid-Atlantic stock [@richards2008population]. Maximum age is listed at 7 years for males and 12-14 years for females [@nefsc2010fifty]. Monkfish in the Northwest Atlantic are divided into two stocks: the Gulf of Maine/Northern Georges Bank and Southern Georges Bank/Mid-Atlantic. Both stocks do not have stock assessments that provide indices on overfishing and overfished status, although an index based assessment is used for catch advice [@deroba2022draft].
 
 ## Supplemental Scores
 
@@ -486,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Within the Northern and Southern stocks of Monkfish, monthly exposures ranged from Low to High (@fig-exp-month-Monkfish). In the Northern Stock, Exposure was Moderate from May to November and increased to High in August. In the Southern Stock, Exposure was High from August through October. These patterns were driven by increases in bottom temperature and oxygen exposure as the year progressed, and sharp increases in medium zooplankton biomass in late summer (@fig-exp-month-tm-Monkfish).
 
 ```{r}
 #| echo: false
@@ -539,7 +549,7 @@ dir_path <- here::here("figures/Monkfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +580,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Several factors were considered important dynamic drivers of Monkfish distributions: bottom temperature, oxygen, salinity, and large zooplankton biomass (@fig-radar-Monkfish). Adult monkfish are demersal (Richards et al. 2008) and movement patterns have been associated with bottom temperatures [@siemann2018summering]. Monkfish are generalist predators but larvae prey on zooplankton [@bigelow1953fishes]. When only these factors were used to calculate Exposure, scores remained Moderate both throughout the species range and within the stocks (@fig-exp-imp-Monkfish, @fig-sum-imp-Monkfish).
 
 ```{r}
 #| echo: false
@@ -621,7 +631,7 @@ dir_path <- here::here("figures/Monkfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +657,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-Monkfish
-#| fig-cap: "As in @fig-sum-tab for Monkfish, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-Monkfish for Monkfish, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

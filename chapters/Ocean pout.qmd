@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** High
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Ocean pout")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | High         | High             | None |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | High         | Moderate             | Decrease |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Ocean pout is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nOcean pout is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+The ocean pout received a **High** sensitivity score, with a certainty of 100%. Two attributes had scores greater than 3: Stock Size (4) and Dispersal of Early Life Stages (3.6) (@fig-sum-tab-pout). The stock is currently overfished, but overfishing is not occurring [@nefsc2022ocean]. Eggs masses and larvae are both demersal, with larvae quickly associating with benthic habitats after hatching [@steimle1999_pout].
+
+In the 2016 Climate Vulnerability Assessment, ocean pout also received a High sensitivity score. This was driven by Dispersal and Early Life History, Stock Status, and Population Growth Rates [@hare2016vulnerability]. In our assessment, Population Growth Rate received a score of 2.8.
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure scores for ocean pout were **Moderate** (2.09 +/- 0.91) (@fig-sum-tab-pout). Scores were High in Southern New England, along the coast of the Gulf of Maine, and on Georges Bank, and Low throughout the rest of the Gulf of Maine (@fig-exp-pout). These patterns were driven by bottom temperature, oxygen, and salinity exposures (@fig-fact-exp-pout).
+
+In the previous Assessment, ocean pout received a High exposure score, driven by high sea surface temperature and ocean acidification scores [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Ocean pout")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Ocean pout")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Ocean pout had a **Moderate** mean Vulnerability score (6.26 +/- 2.72) (@fig-sum-tab). Vulnerabilities were High in Southern New England, Georges Bank, and along most of the coast of the Gulf of Maine, but Low elsewhere (@fig-vuln). 
+
+In the previous Assessment, ocean pout received a High Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+83% of data quality scores were greater than or equal to 2, indicating strong data quality. Adult Mobility and Egg and Larval Survival and Settlement Requirements were considered data gaps (mean attribute data quality score \< 2) (@fig-sum-tab-pout).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The ocean pout ensemble model received a mean model confidence score of 2 (+/- 0.4), indicating moderate confidence in the model. The predicted distributions aligned with experts- expectations. The model tended to underpredict present on Georges Bank, particularly in spring, which drove down scores. The ensemble model AUC score was 0.87, indicating good model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Ocean pout experienced significant declines in habitat area between 1993 and 2023. This was driven by loss of core habitat south of Long Island and the northward movement of the southern edge of their range (@fig-shifts-pout). During this time period, the weighted centroid shifted 14 km northeast. 
+
+Under near future climate conditions, the range of ocean pout is predicted to expand. Core habitat is also expected to expand, although it will still be smaller than 2023 levels (@fig-shifts-pout). The weighted centroid is predicted to shift a further 24 km east-northeast. 
+
+In the previous Assessment, ocean pout received a Moderate Distributional Vulnerability Rank due to their preference for complex habitats [@hare2016vulnerability].
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 74,722 | 201,136 | 4.43 | 7.62 |
+| 2019-2023 | 13.6 km NE | 70,825 (-3,897)  | 196,853 | 4.24 (-0.19) | 7.37 (-0.24) |
+| 2031-2035 | 24.3 km ENE | 66,247 (-4,579) | 198,933 (+2,080)| 4.24 (0) | 7.30 (-0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +442,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predict that ocean pout will be **negatively** impacted by climate change with 99% certainty. Ocean pout prefer colder waters and are sluggish movers [@steimle1999_pout], which may make it difficult to avoid stressful conditions such as hypoxia [@azarovitz1976effects]. In the previous Climate Vulnerability Assessment, experts made a similar prediction, but certainty was lower [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+@nye2009changing identified an increase in depth of occurrence of ocean pout in the Gulf of Maine. Although ocean pout have been reported to be quite hardy, they appear to have limited tolerance of hypoxic and anoxic conditions; they are common victims of these conditions which occasionally occur in the New York Bight [@azarovitz1976effects]. Ocean pout are sluggish swimmers, which can explain their inability to avoid stressful conditions, such as hypoxia [@steimle1999_pout]. @killen2008lack found that young ocean pout from Newfoundland do not show thermal compensation in response to long-term temperature changes.
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Ocean pout are a non-migratory, bottom dwelling fish found along the Atlantic coast from Labrador to Delaware [@steimle1999_pout]. Spawning occurs in the late summer through early winter (peak in September-October) with earlier peaks (August-October) in the south [@wilk1979annual]. Eggs are laid in gelatinous masses in a sheltered place on the bottom, such as rocky crevices, where they are guarded either by one or both parents until hatching [@steimle1999_pout]. Eggs develop in 2-3 months, temperature dependent [@olsen1946studies]. Larvae are about 30 mm long at hatching [@clark1982ocean] and live at the bottom at temperatures below 10°C [@steimle1999_pout]. Juvenile and adult ocean pout use both open and rough habitats. @sedberry1983food reported that juveniles were common during the summer on the sandy, mid- to outer-continental shelf (approximately 35-95 m). In the Gulf of Maine, juveniles occur in shallow coastal waters around rocks and attached algae, and in rivers with saline bottom waters [@auster1985some]. @macdonald1983laboratory reported that ocean pout feed by sorting mouthfuls of sediments for infauna and do not use visual cues to stimulate feeding; they maintained that ocean pout were not very effective at capturing moving prey and rarely left the bottom to feed. @auster1985some and @auster1995patterns, however, considered ocean pout an "ambush predator" that waits in sediment depressions for prey to approach or drift by in the current. Juveniles feed primarily on gammarid amphipods and polychaetes [@sedberry1983food]. Adult ocean pout feed on a variety of benthic invertebrates, including polychaetes, mollusks, crustaceans, and echinoderms [@steimle1999_pout]. Adults reach maturity at 2+ years [@steimle1999_pout], with a maximum age of 18 years [@hoenig1983empirical]. Although they do not migrate, ocean pout move seasonally within a region: offshore in late summer and inshore in the spring in the Gulf of Maine, and offshore to cooler waters in the summer returning inshore in the fall in Southern New England and Georges Bank [@steimle1999_pout]. Ocean pout are managed by the New England Fishery Management Council under the Northeast Multispecies Fishery Management Plan. As of the 2022 management track assessment, the stock is not overfished and overfishing is not occurring [@nefsc2022ocean].
 
 ## Supplemental Scores
 
@@ -486,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly Exposure ranged from Low to High. Scores were Low in March and High in August and September (@fig-exp-month). These patterns were driven by bottom temperature, bottom oxygen, and downward particulate carbon flux (@fig-exp-month-tm-pout).
 
 ```{r}
 #| echo: false
@@ -539,7 +549,7 @@ dir_path <- here::here("figures/Ocean pout")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +580,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, salinity, and net primary productivity were important dynamic drivers of ocean pout distributions (@fig-radar-pout). Ocean pout are demersal fish that filter feed on bottom sediments [@steimle1999_pout]. When only these factors were used to calculate exposure, mean scores remained Moderate (2 +/- 0.92) (@fig-sum-imp-pout, @fig-exp-imp-pout).
 
 ```{r}
 #| echo: false
@@ -621,7 +631,7 @@ dir_path <- here::here("figures/Ocean pout")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +657,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-pout
-#| fig-cap: "As in @fig-sum-tab for Ocean pout, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-pout for Ocean pout, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

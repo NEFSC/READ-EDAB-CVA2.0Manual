@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Moderate
+-   **Exposure:** Low
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Atlantic croaker")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Moderate             | Increase |
+| *Exposure*           | Very High         | Low           | Decrease |
+| *Vulnerability*      | Moderate         | Low             | Decrease |
+| *Directional Effect* | Positive         | Neutral             | Increase |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Atlantic croaker is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nAtlantic croaker is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Atlantic croaker received a sensitivity score of **Moderate** (@fig-sens-croaker). Certainty was high (90%). Three attributes received scores greater than 2.5: 1) Egg and Larval Survival and Settlement Requirements (2.9), 2) Other Stressors (2.7), and 3) Stock Size (2.5) (@fig-sum-tab-croaker).
+
+Croaker eggs and larvae rely on currents and tidal activity for transport to suitable nursery habitats [@sempsrott2017biological]. Larvae are selective feeders, only feeding on a subset of plankton species [@govoni1986selective]. Juveniles are also dependent on native salt marsh habitats, which themselves are highly vulnerable [@guyant2022northeast] and are susceptible to eutrophication and hypoxic events.
+
+Croaker had a low sensitivity score in the previous assessment [@hare2016vulnerability]. Egg and Larval Survival and Settlement Requirements drove the previous sensitivity score.
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure was **Low (1.49 +/- 0.78)** over the range of Atlantic croaker (@fig-sum-tab-croaker). Exposure was greatest along the coast of New Jersey, in Chesapeake Bay, and near the shelf break near Cape Hatteras (@fig-exp-croaker). On the shelf and in the coastal bays, this high exposure was driven by bottom temperatures, oxygen concentrations, and bottom salinity. On the shelf break, high exposures were due to aragonite saturation state (@fig-fact-exp-croaker). 
+
+In the previous assessment, croaker received a Very High score, driven by high exposure to changes in sea surface temperature, air temperature, and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Atlantic croaker")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Atlantic croaker")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability was **Low** for Atlantic croaker (2.97 +/- 1.56) (@fig-sum-tab-croaker). Scores were Moderate off the coast of New Jersey, in Delaware and Chesapeake Bays, and around the shelf break off the coast of Cape Hatteras. Scores and their distributions were similar when using the exposure scores calculated from only important factors (2.66 +/- 1.29) (@fig-vuln-croaker).
+
+Atlantic croaker received a Moderate Vulnerability score in the previous assessment, driven by a Very High Exposure score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+73% of sensitivity attribute data quality scores were greater than or equal to 2, indicating good data quality. Four attributes were considered data gaps (mean attribute data quality score \< 2): Complexity in Reproductive Strategy, Egg and Larval Survival and Settlement Requirements, Population Growth Rate, and Stock Size/Status (@fig-sum-tab-croaker).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The Atlantic croaker ensemble model received a model confidence score of 2.7 (+/- 0.4), indicating strong confidence in the model results. Experts stated that the model accurately represented croaker distributions, but may have underestimated presence in the winter months. The ensemble model’s AUC was 0.99, indicating excellent performance. 
 
 ## Additional Metrics
 
@@ -391,13 +398,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Despite a significant positive trend, net core habitat growth was small between 1993 and 2023 (@fig-shifts-croaker). As a result, the weighted centroid shifted 4 km NW. Total habitat area remained consistent over the same time period. 
+
+Croaker habitats are predicted to expand in the near future. The distribution centroid is predicted to shift a further 22 km northward, driven by a northward range expansion. Croaker are predicted to occupy more space further offshore off New Jersey and further east along the coast of Long Island (@fig-shifts-croaker). 
+
+In the previous Assessment, croaker received a High Distributional Vulnerability rank due to their wide larval dispersal and migration behavior [@hare2016vulnerability].
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 11,766 | 49,314 | 4.55 | 2.33 |
+| 2019-2023 | 4.2 km NW | 12,504 (+737) | 46,907 (-2,406) | 4.49 (-0.06) | 2.24 (-0.08) |
+| 2031-2035 | 22.3 km N | 13,437 (+933) | 51,029 (+4,121) | 4.55 (+0.06)| 2.33 (+ 0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +443,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+The effect of climate change on croaker is estimated to be **neutral** with 89% certainty in expert scores. Warmer temperatures may decrease young-of-year mortality rates. However, juvenile habitats are highly vulnerable to climate change. In the previous assessment, the effects of climate change were estimated to have a positive impact on croaker [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+As a sub-tropical species, Atlantic croaker may experience both positive and negative effects on their abundance and distribution as a result of climate change. Interannual variability in croaker abundance may be climate related, with colder winters causing increased mortality in overwintering young-of-the-year [@lankford2001low]. Warm winters, however, may result in increased abundances, or “outbursts” of juveniles in the spring that contribute to expansion of the population’s distribution [@hare2007mechanistic]. @diamond2013simulating modeled Atlantic croaker abundance in the Mid-Atlantic with global climate change projections and found increased croaker abundance with lower inter-annual variability under global climate change. Positive responses in sensitivity analyses stemmed from warmer temperatures, and negative responses were due to rising variability in salinity and increases in offshore transport and sea level rise [@diamond2013simulating]. Common juvenile habitat types (submerged aquatic vegetation, salt marshes, and intertidal habitats) are highly vulnerable to climate change [@guyant2022northeast].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Atlantic croaker are a demersal species found from the Gulf of Maine to Argentina. Along the United States Atlantic coast, they are most abundant from Chesapeake Bay to northern Florida [@asmfc2020addendum]. Atlantic croaker spawn from July - December in inshore shelf and estuarine waters between Delaware Bay and Cape Hatteras, peaking in August - October near Chesapeake Bay [@able1998first]. Their name comes from the croaking noises the fish make during spawning by vibrating their abdominal muscles against their swim bladder [@asmfc2020addendum]. After 30-90 days post-hatch Atlantic croaker larvae are driven inshore by winds [@thorrold1997response] where they migrate to estuarine habitats [@sempsrott2017biological]. Initial fall recruitment of croaker depends on fall continental shelf winds to provide transport into Chesapeake Bay [@norcross1991estuarine]. Recruitment to specific estuaries is influenced by tidal activity and currents, such that eggs and larvae are dependent on transport to suitable habitats for survival [@sempsrott2017biological]. Atlantic croaker larvae are selective feeders, as they eat fewer taxa of suitable size than are present in ambient plankton [@govoni1986selective]. Juvenile croaker are highly dependent on marine, estuarine, and riverine mud and sand substrates, as well as native salt marsh habitats [@guyant2022northeast]. The major prey of young-of-the-year Atlantic croaker are polychaetes, copepods, and mysids. Detritus is also a major component of the juvenile diet [@ffwcc2010croaker; @sink2011species]. Adult Atlantic croaker perform seasonal migrations, moving northward and inshore to estuaries and bays in the spring - fall and southward and offshore to shelf waters in the winter [@asmfc2020addendum]. They reach maturity by 2 years of age and can live up to 17 years, although lifespans are commonly below 10 years [@asmfc2020addendum]. Adult Atlantic croaker are opportunistic feeders and are known to consume polychaetes, anchovies, mysid shrimp, amphipods, fishes and crabs, and detritus in Chesapeake Bay [@nye2011annual]. Atlantic croaker are managed under Amendment 1 to the Atlantic States Marine Fisheries Commission’s Interstate Fishery Management Plan for Atlantic Croaker (2005) and Addenda I, II, and III (2011, 2014, 2020). [@asmfc2020addendum]. The most recent benchmark stock assessment was completed in 2017, where the current stock status could not be determined because the assessment results were sensitive to certain modeling assumptions, but any further depletion in the stock was unlikely [@asmfc2017croaker].
 
 ## Supplemental Scores
 
@@ -486,7 +497,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Across months, exposure ranged between Low and Moderate. Exposure was Low from February to April and June through September due to declines in bottom temperature, oxygen, and salinity exposure (@fig-exp-month-croaker; @fig-exp-month-tm-croaker).
 
 ```{r}
 #| echo: false
@@ -539,7 +550,7 @@ dir_path <- here::here("figures/Atlantic croaker")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +581,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, salinity, and aragonite saturation state, in addition to integrated downward particulate organic carbon flux, were all important drivers of croaker distribution (@fig-radar-croaker; @fig-sum-imp-croaker; @fig-exp-imp-croaker). Both adult and juvenile croaker use demersal estuarine habitats [@asmfc2020addendum; @guyant2022northeast]. Detritus is a major component of the juvenile diet [@ffwcc2010croaker; @sink2011species] whereas adults are generalist feeders, consuming polychaetes, fishes, crabs, and detritus [@nye2011annual]. Only including these factors in the exposure calculation did not alter the Exposure score (@fig-sum-imp-croaker).
 
 ```{r}
 #| echo: false
@@ -621,7 +632,7 @@ dir_path <- here::here("figures/Atlantic croaker")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +658,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-croaker
-#| fig-cap: "As in @fig-sum-tab for Atlantic croaker, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-croaker for Atlantic croaker, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

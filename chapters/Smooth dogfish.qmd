@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Moderate
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Smooth dogfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low [@hare2016vulnerability] [@loughran2025climate]         | Moderate             | Increase |
+| *Exposure*           | High [@hare2016vulnerability] Very High [@loughran2025climate]         | Moderate             | Decrease |
+| *Vulnerability*      | Low [@hare2016vulnerability] Moderate [@loughran2025climate]         | Moderate             | Decrease - None |
+| *Directional Effect* | Neutral [@hare2016vulnerability] [@loughran2025climate]         | Neutral             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Smooth dogfish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nSmooth dogfish is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Smooth dogfish received a **Moderate** sensitivity score, with a certainty of 69% according to bootstrap analysis. Two attributes had scores greater than 2.5: Other Stressors (2.7) and Juvenile Habitat Requirements (2.6) (@fig-sum-tab-smoothdog).
+
+Smooth dogfish rely on coastal habitats throughout their life-cycles, which are impacted by eutrophication and hypoxia, changes in freshwater input, and increases in turbidity due to activities such as dredging [@plumlee2018community]. Juveniles in particular rely on nursery estuary and seagrass bed habitats, which are vulnerable habitats [@guyant2022northeast].
+
+In the previous Northeast Climate Vulnerability Assessment, smooth dogfish received a Low sensitivity score. This was driven by Population Growth Rate, which only received a score of 2.2 in our assessment [@hare2016vulnerability]. The Atlantic stock of Smooth dogfish were also assessed in the recent Highly Migratory Species Climate Vulnerability Assessment, where it also received a Low score because no attributes scored higher than 2.5 [@loughran2025climate].
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure score for smooth dogfish was **Moderate** (2.37 +/- 1.11) (@fig-sum-tab-smoothdog). Exposure was Very High over Georges Bank and south of Cape Cod. Scores were High in Southern New England and along the shelf break (@fig-exp-smoothdog). These patterns were driven by high bottom temperature, oxygen, salinity, and aragonite saturation exposures (@fig-fact-exp-smoothdog). 
+
+In the previous Assessment for the Northeast Shelf, smooth dogfish received a High Exposure score, driven by sea surface temperature and ocean acidification [@hare2016vulnerability]. In the recent Highly Migratory Species Assessment, smooth dogfish received a Very High exposure score, driven by bottom salinity, bottom temperature, pH and sea surface oxygen [@loughran2025climate].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Smooth dogfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Smooth dogfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean overall Vulnerability for smooth dogfish was Moderate (4.74 +/- 2.22) (@fig-sum-tab-smoothdog). Vulnerability was High south of Cape Cod and over Georges Bank and Moderate in Southern New England (@fig-vuln-smoothdog). 
+
+In the previous Assessment for the Northeast Shelf, smooth dogfish received a Low score [@hare2016vulnerability]. In the recent Highly Migratory Species assessment, smooth dogfish received a Moderate score, similar to our assessment [@loughran2025climate].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-smoothdog).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The smooth dogfish ensemble model received a 2.2 (+/- 0.5) mean model confidence score, indicating moderate confidence in the model. Experts agreed that the model captured the distribution of smooth dogfish well. They highlighted that the model failed to capture smooth dogfish presence in the southern Gulf of Maine. The ensemble model AUC score was 0.92, indicating excellent model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +398,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Smooth dogfish core habitat significantly increased between 1993 and 2023. Core habitats expanded further offshore along the continental shelf (@fig-shifts-smoothdog). The weighted centroid shifted 28 km northeast. 
+
+Under near-future ocean conditions, smooth dogfish ranges are predicted to significantly increase. Their range is predicted to shift northward into Cape Cod Bay (@fig-shifts-smoothdog). The weighted centroid is predicted to shift another 23 km north-northeast. 
+
+In the previous Assessment for the Northeast Shelf, smooth dogfish received a Very High Distributional Vulnerability rank due to their high mobility and large seasonal migrations [@hare2016vulnerability]. Distributional Vulnerability Rank was not calculated in the Highly Migratory Species Assessment [@loughran2025climate]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 38,866 | 134,934 | 5.99 | 6.65 |
+| 2019-2023 | 27.8 km NE | 44,630 (+5,764) | 137,060 (+2,126) | 5.86 (-0.12) | 6.81 (+0.16) |
+| 2031-2035 | 22.5 km NNE | 43,921 (-709) | 138,278 (+1,218) | 5.86 (0)  | 6.57 (-0.24) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +443,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predict that climate change will have a **neutral** impact on smooth dogfish with 96% certainty. While smooth dogfish occupy estuarine habitats that are more likely to be degraded and are highly vulnerable [@guyant2022northeast] [@plumlee2018community], smooth dogfish may be tolerant of future warming and could possibly expand their range [@bockus2020thermal]. Both the previous Climate Vulnerability Assessment in the Northeast and the Highly Migratory Species Assessment also predicted that climate change would have a neutral impact on climate change [@hare2016vulnerability] [@loughran2025climate].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Little information exists on the potential effects of climate on smooth dogfish abundance and distribution. Coastal areas, including estuaries and smooth dogfish nursing grounds, are affected by anthropogenic activities that degrade a portion of smooth dogfish habitat. These areas are also more likely to be impacted by hypoxia and changes to freshwater input/increases in turbidity [@plumlee2018community]. Smooth dogfish exposed to higher temperatures (increase of 6°C) did not result in a thermal stress response, indicating a possible tolerance and ability for range expansion [@bockus2020thermal].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Smooth dogfish are a demersal, highly migratory shark species (HMS). The Northwest Atlantic population of smooth dogfish ranges from Cape Cod to Florida and the northern Gulf of America [@conrath2002age]. The species undergoes temperature-driven seasonal migrations north in the summer and south in the winter. They overwinter in Chesapeake Bay to South Carolina from January to May, migrating north to Southern New England beginning in early spring to give birth to pups [@castro2010sharks] [@dellapa2018hierarchical]. Females ovulate between June and July, with gestation lasting 10 months. Birth occurs in southern New England between early May to mid-July [@castro2010sharks]. Once females have given birth in nearshore or estuarine areas,, young of year and immature age classes may remain in nursery grounds while females migrate north to suitable temperatures [@bangley2017habitat]. Smooth dogfish prefer temperatures 9-32°C. They begin appearing in the mid-Atlantic and New England when temperatures are greater than 6-7°C, and are most abundant along the East Coast between 13-15°C [@bockus2020thermal]. Young of year individuals use shallow shoals and marsh creek habitats particularly during night hours. Juveniles are found throughout temperate coastal estuaries, creeks, and seagrass beds, which may serve as nursery grounds [@castro2010sharks]. Juveniles prey on small shrimp, polychaete worms, and crabs, and may fill an important predatory role during times of year when other piscivores are rare [@rountree1996seasonal_smooth]. Adult smooth dogfish are bottom feeders, primarily consuming crustaceans and mainly feeling at night. They are described as a trophic specialist due to the morphological and functional modifications that allow them to feed on hard-shelled/exoskeleton-bearing prey [@castro2010sharks] [@bangley2017habitat]. Smooth dogfish are prey items for a variety of larger sharks and fishes [@gelsleichter1999food]. Age at maturity is 2-3 years for males and 4-7 years for females, with a maximum age of 11 years for males and 13 years for females [@conrath2002age] [@giresi2013morphological]. In state waters, smooth dogfish are managed by the Atlantic States Marine Fisheries Commission’s Interstate Fishery Management Plan for Coastal Sharks [@asmfc2024_smooth]. NOAA Fisheries produces an annual Stock Assessment and Fisheries Evaluation (SAFE) Report detailing the status of HMS in federal waters [@nmfs2023safe]. The current stock status is not overfished and overfishing is not occurring [@sedar2015smoothdogfish].
 
 ## Supplemental Scores
 
@@ -486,7 +497,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Across months, exposure ranged from Low to High. Exposure was lowest from March through July, and greatest from September through November (@fig-exp-month-smoothdog). This was driven by changes in bottom temperature and oxygen exposure, which also peaked September through November (@fig-exp-month-tm-smoothdog).
 
 ```{r}
 #| echo: false
@@ -539,7 +550,7 @@ dir_path <- here::here("figures/Smooth dogfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +581,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, salinity, and aragonite solubility, as well as net primary production were the major dynamic drivers of smooth dogfish distributions (@fig-radar-smoothdog). Smooth dogfish are demersal and their migrations are cued by temperature [@castro2010sharks] [@dellapa2018hierarchical]. Juveniles use coastal estuaries and other nearshore habitats as nursery habitat [@castro2010sharks]. Crustaceans are the predominate prey item for adults [@castro2010sharks] [@bangley2017habitat]. When these factors were used to calculate exposure, exposure scores remained Moderate (1.91 +/- 0.90) (@fig-sum-imp-smoothdog). Scores were still High over Georges Bank, south of Cape Cod and Long Island, and on the continental shelf break (@fig-exp-imp-smoothdog).
 
 ```{r}
 #| echo: false
@@ -621,7 +632,7 @@ dir_path <- here::here("figures/Smooth dogfish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +658,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-smoothdog
-#| fig-cap: "As in @fig-sum-tab for Smooth dogfish, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-smoothdog for Smooth dogfish, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

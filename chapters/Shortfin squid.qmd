@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** High
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Shortfin squid")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Low             | None |
+| *Exposure*           | High         | High             | None |
+| *Vulnerability*      | Low         | Low             | None |
+| *Directional Effect* | Positive         | Neutral             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Shortfin squid is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nShortfin squid is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Short-finned squid received a **Low** sensitivity score, with a certainty of 89%. Only one attribute – Egg and Larval Survival and Settlement Requirements (2.9) – received a score greater than 2.5 (@fig-sum-tab-shortfin). Short-finned squid rely on the Gulf Stream for transport between southern spawning habitats and northern feeding grounds. Therefore, recruitment has been linked to climate oscillations such as the North Atlantic Oscillation that drive shifts in the Gulf Stream [@dawe2000environmental] [@odor2013chapter] [@hendrickson2004essential].
+
+In the previous Climate Vulnerability Assessment for the Northeast Shelf, Short-finned squid also received a Low sensitivity score. In that analysis, no attributes had a score greater than 2.5 [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for shortfin squid was **High** (3.13 +/- 0.48) (@fig-sum-tab-shortfin). Exposure was consistently High throughout the Northeast Shelf, with Very High scores off the coast of Cape Cod and over Georges Bank (@fig-exp-shortfin). These patterns were driven by high sea surface temperature, salinity, and pH scores (@fig-fact-exp-shortfin).
+
+Shortfin squid received the same exposure score in the previous Assessment [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Shortfin squid")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Shortfin squid")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,20 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean overall Vulnerability rank for shortfin squid was **Low** (3.13 +/- 0.48) (@fig-sum-tab-shortfin). Vulnerability was Moderate south of Cape Cod and on Georges Bank, but Low throughout the rest of the Northeast Shelf (@fig-vuln-shortfin).
+
+Shortfin squid also received a Low Vulnerability score in the previous assessment [@hare2016vulnerability].
+
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+85% of data quality scores were greater than or equal to 2, indicating strong data quality. Only Stock Size/Status was considered a data gap (mean attribute data quality score \< 2) (@fig-sum-tab-shortfin).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The shortfin squid ensemble model received a model confidence score of 2 (+/- 0.4), indicating moderate confidence in the model. The predicted distributions aligned with expert expectations. The model also captured the recent increase in shortfin presence in the Gulf of Maine. The ensemble model AUC score was 0.83, indicating good model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +397,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Core habitat for shortfin squid significantly increased between 1993 and 2023. Shortfin squid core habitat expanded into the Gulf of Maine during this time (@fig-shifts-shortfin). The weighted centroid shifted 25 km northeast. 
+
+Under near future climate conditions, these trends are predicted to continue. Both shortfin squid core habitat and their range are predicted to significantly increase. Core habitat use in the coastal Gulf of Maine will increase, and their overall range is expected to shift towards the coast (@fig-shifts-shortfin). As a result, the weighted centroid is predicted to shift 10 km west-northwest. 
+
+In the previous assessment, shortfin squid received a Very High Distributional Vulnerability rank due to their high mobility, large migrations, and broad larval dispersal [@hare2016vulnerability]. 
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 76,082 | 229,374 | 7.05 | 9.06 |
+| 2019-2023 | 24.6 km NE | 87,505 (+11,423) | 231,193 (+1,819) | 6.92 (-0.12) | 8.98 (-0.08) |
+| 2031-2035 | 10.4 km WNW | 101,683 (+14,177) | 245,237 (+14,043) | 6.98 (+0.06) | 9.06 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +443,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that climate change will have a **neutral** effect on short-finned squid. Certainty was 96%. Recruitment is highly dependent on transport mechanisms such as the Gulf Stream and catch per unit effort is correlated with cooler bottom temperatures [@salois2023shelf] [@dawe2000environmental] [@odor2013chapter] [@hendrickson2004essential]. However, short-finned squid are able to adapt to the available niche space in response to predators, competitors, and prey due to their short life cycle [@dawe2000environmental]. In the previous Assessment, short-finned squid were predicted to be positively impacted by climate change, although with high uncertainty [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Distribution and abundance of shortfin squid on the Northeast U.S. Continental Shelf is highly related to oceanographic conditions such as shelf-slope dynamics and positions of the shelf-slope front and Gulf Stream [@dawe2007ocean]. @dawe2000environmental theorized based on catch data from Newfoundland that squid abundance may co-vary with that of its most important predators, competitors, and prey in an adaptive manner such that the population increases and expands when niche space becomes available. These shifts appear to result from high water temperatures, a negative North Atlantic Oscillation (NAO) index, and a southward shift in the Gulf Stream position. Greater catch per unit effort (CPUE) of shortfin squid has been associated with cooler bottom temperatures, timing and location of warm core rings in the winter and spring, and slope water/shelf slope front dynamics [@salois2023shelf]. These features may contribute to areas of high primary productivity, food sources, and transport mechanisms for larvae.
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+The northern shortfin squid inhabits Northwest Atlantic shelf and slope waters from the Labrador Sea to the Florida Straits [@hendrickson2004essential]. Spawning occurs year round, but peaks seasonally from October to June. Shortfin squid are semelparous; females release multiple egg capsules during a single spawning season, after which they die [@hendrickson2004essential]. Laboratory studies indicate that hatching occurs in 16 days at 13°C, 12 days at 16°C, and 8 days at 21°C. In the laboratory, paralarvae enter a transitional stage at approximately 5.0 mm ML, followed by a juvenile stage at about 7.0 mm ML [@odor1982embryonic]. The Gulf Stream and associated eddies are hypothesized to be the primary mechanisms for transport of larvae to northern latitudes and then inshore via the eddies [@trites1983physical]. Larvae have small yolk-sacs, so they rely on rapid transportation to food-rich habitats [@hendrickson2004population]. Larvae feed on a variety of prey items (fish, nematodes, euphausiids). Larvae and juveniles are abundant in the slope water of the Gulf Stream and in the adjacent upwelling regions at times of maximum production such as the spring plankton bloom [@hendrickson2004essential]. As the initial biomass of the bloom is transferred up through various trophic levels, the squid grow at a pace which allows them to feed continuously at the level where biomass is peaking [@odor2013chapter]. Paralarvae, juveniles and adults of Illex exhibit diel vertical migrations to feed at night, and remain near the seabed during the day [@arkhipkin1986diel]. An ontogenetic shift in diet from a predominance of crustaceans to a predominance of fish and squid is evident as the squid mature [@dawe1988length]. Larger, older Northern shortfin squid feed primarily on fish, but cannibalism of small individuals (most likely males) by larger females also occurs, particularly during autumn. Fish prey consists of the early life history stages of Atlantic cod, Arctic cod, redfish, sand lance, mackerel, Atlantic herring, haddock, and sculpin [@dawe1988length]. Shortfin squid are important prey for seabirds and many fish species, including tunas, hakes, spiny dogfish, monkfish, and Atlantic cod [@hendrickson2004essential]. Juveniles and adults make seasonal migrations off the continental shelf in the fall and back onto the shelf to spawning grounds in the Mid-Atlantic in the spring [@hendrickson2004essential]. Shortfin squid are a short lived species, reaching maturity at 40-60 days and a maximum lifespan of less than one year [@hendrickson2004population]. Adults are found at bottom temperatures between 3.5-15°C and surface temperatures greater than 20°C [@hendrickson2004essential]. Shortfin squid in the Northwest Atlantic are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. The most recent stock assessment occurred in 2025; management measures are in place but stock status is unknown as there are no reference points for this stock [@nefsc2025northern].
 
 ## Supplemental Scores
 
@@ -486,7 +497,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+There was little variation in exposure scores across months. Exposure scores were High for every month except June due to declines in sea surface salinity and pH exposure (@fig-exp-month-shortfin; @fig-exp-month-tm-shortfin).
 
 ```{r}
 #| echo: false
@@ -539,7 +550,7 @@ dir_path <- here::here("figures/Shortfin squid")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +581,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Sea surface temperature, surface salinity, and medium and large zooplankton biomass were all important dynamic drivers of short fin squid distributions (@fig-radar-shortfin). Shifts in the Gulf Stream impact recruitment and shelf slope front dynamics [@dawe2000environmental] [@odor2013chapter] [@hendrickson2004essential] [@salois2023shelf]. Short fin squid are also generalist predators feeding on crustaceans and copepods as juveniles and small fish as adults [@dawe1988length]. Exposure was High throughout most of the shelf and Gulf of Maine, where areas of high surface temperature and salinity overlapped. Scores were Low in nearshore and shelf break areas (@fig-exp-imp-shortfin). When only these factors were considered in the exposure score, mean exposure dropped to Moderate (1.93 +/- 0.91) (@fig-sum-imp-shortfin). 
 
 ```{r}
 #| echo: false
@@ -621,7 +632,7 @@ dir_path <- here::here("figures/Shortfin squid")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +658,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-shortfin
-#| fig-cap: "As in @fig-sum-tab for Shortfin squid, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-shortfin for Shortfin squid, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

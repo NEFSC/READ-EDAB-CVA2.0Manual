@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Moderate
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Golden tilefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | High [@burton2023climate]         | Moderate             | Decrease |
+| *Exposure*           | Very High [@burton2023climate]        | Moderate            | Decrease |
+| *Vulnerability*      | Very High [@burton2023climate]        | Moderate             | Decrease |
+| *Directional Effect* | Neutral [@burton2023climate]        | Neutral             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Golden tilefish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nGolden tilefish is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Golden Tilefish received a Moderate sensitivity score with 62% certainty (@fig-sum-tab-golden). Four attributes had scores greater than 2.5: Stock Size (3), Adult Mobility (3), Population Growth Rate (2.8), and Historical Variability in Temperature (2.7) (@fig-sum-tab-golden).
+
+Golden Tilefish primarily occupy burrows on the seafloor. Die offs have been observed after meanders in the Gulf Stream, suggesting that they are very sensitive to temperature shifts [@able1982burrow]. Golden tilefish mature at 2-4 years and maximum ages of 45 years have been documented [@steimle1999essential] [@bigelow1953fishes], suggesting they are a long-lived species that may be susceptible to overfishing. Overfishing is currently occurring in the Mid-Atlantic stock (NEFSC 2024).
+
+Golden tilefish were not assessed along the Northeast Shelf in the 2016 Assessment, but were assessed in the recent Southeast US Climate Vulnerability Assessment. They received a High sensitivity score in that assessment. This was driven by two attributes: Habitat Specialization and Population Growth Rate [@burton2023climate], similar to our results.
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for Golden Tilefish was Moderate (1.87 +/- 0.94) (@fig-sum-tab-golden). Exposure was greatest at the shelf break and decreased on the shelf (@fig-exp-golden). This was driven by high exposure to changes in bottom oxygen, salinity, and aragonite solubility (@fig-fact-exp-golden). 
+
+Golden tilefish received an Exposure score of Very High in the recent Climate Vulnerability Assessment for the Southeast Shelf [@burton2023climate]. This score was driven by high exposure to sea surface temperature, salinity, ocean acidification, and currents [@burton2023climate]. 
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Golden tilefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Golden tilefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean overall Vulnerability for Golden Tilefish along the Northeast Shelf was Moderate (3.75 +/- 1.88) (@fig-sum-tab-golden). Scores were Moderate along the shelf break and decreased to Low along the continental shelf (@fig-vuln-golden). When only important drivers of species distribution were used in the exposure calculation, Vulnerability decreased to Low (2.12 +/- 0.59) (@fig-sum-tab-golden). 
+
+In the recent assessment for the Southeast Shelf, Golden Tilefish received a vulnerability score of Very High [@burton2023climate]. 
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+93% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score < 2) were identified (@fig-sum-tab-golden). 
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+Mean model confidence for golden tilefish was 2.3 (+/- 0.57). Similar to blueline tilefish, experts stated that the models accurately represented known distributions of golden tilefish, but low sample sizes due to catchability drove down confidence. The model AUC was 0.95, indicating excellent performance. 
 
 ## Additional Metrics
 
@@ -391,13 +398,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Golden tilefish range expanded significantly between 1993 and 2023 due to increased habitat availability in the Gulf of Maine and along the continental shelf (@fig-shifts-golden). The weighted centroid shifted 2 km south-southwest. 
+
+Under near future climate conditions, these trends are predicted to continue. Both core habitat and total range of golden tilefish is predicted to expand significantly. Core habitat is predicted to expand laterally along the continental shelf break and the species’ range is predicted to continue to expand onto the continental shelf and into the Gulf of Maine (@fig-shifts-golden). The weighted centroid is predicted to shift a further 2 km southwest. 
+
+In the previous assessment for the southeast shelf, golden tilefish received a Moderate Distributional Vulnerability Rank due to their sensitivity to temperature, adult mobility, and larval dispersal [@burton2023climate]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 5,968 | 73,613 | 2.62 | 5.53 |
+| 2019-2023 | 2.0 km SSW | 6,205 (+237) | 77,943 (+4,329) | 2.81 (+0.19) | 5.69 (+0.16) |
+| 2031-2035 | 2.3 km SW | 7,061 (+856) | 83,590 (+5,647) | 3.24 (+0.44) | 5.93 (+0.24) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +443,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that climate change would have a neutral impact on Golden tilefish. Certainty was 92%. Golden Tilefish occupy the ‘warm belt’ where shelf and slope waters meet [@able1982burrow]. Warming temperatures could increase the amount of preferred habitat. In the Southeast Climate Vulnerability Assessment, experts also predicted that climate change will have a neutral impact on Golden Tilefish, and hypothesized that warming temperatures could increase the amount of available habitat in the northeast [@burton2023climate]. 
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Golden tilefish prefer a very narrow temperature range (8-17°C); increased ocean acidification may have negative impacts on survival, growth, and abundance [@salois2024golden]. @nesslage2021environmental identified a correlation between negative Atlantic Multidecadal Oscillation (AMO) and positive North Atlantic Oscillation (NAO) and golden tilefish recruitment class pulses. Catch per unit effort is influenced by temperature and oceanographic currents (Gulf Stream and Labrador Current) [@nesslage2021environmental]. A large golden tilefish die-off and resulting fishery collapse in the spring of 1882 has been correlated with meanders in the Gulf Stream, suggesting that they are very sensitive to temperature changes [@fisher2014life]. Changes to weather patterns and a rise in stormy conditions along with very cold bottom temperatures can drive golden tilefish off the shelf and cause a decrease in fishing [@salois2024golden].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Golden tilefish inhabit continental shelf and slope waters along the entire U.S. East and Gulf Coasts, although they are most abundant from Nantucket to Cape May, New Jersey [@steimle1999essential]. Two genetically-different tilefish stocks have been identified in United States waters: the Mid-Atlantic Bight and south of Cape Hatteras into the Gulf of America [@steimle1999essential]. Individuals of many species off Cape Hatteras were smaller and less active than their conspecifics off Virginia. Tilefish are classified as serial or fractional spawners from March to November with a peak in activity in June [@idelberger1988reproductive]. However, with serial or fractional spawners there is some doubt whether all of the eggs in the ovaries are released during a single seasonal spawning cycle. Residual eggs could be resorbed during the winter [@grimes1988reproductive]. Artificially-fertilized eggs hatched in 40 hours at 22-24.6°C; it is likely that egg duration increases in colder temperatures [@fahay1981preliminary]. The duration of the larval stage is unknown. Movements of water masses along the shelf break may play a role in recruitment success, including larval survival and retention near spawning grounds. Strong recruitment pulses have been linked to shifts in the Gulf Stream Index, AMO, and NAO [@salois2024golden]. Little is known about larval diets, but they likely prey on zooplankton, particularly *Calanus* [@steimle1999essential]. Common predators of larval and juvenile tilefish are monkfish, spiny dogfish, and bottom-dwelling sharks [@steimle1999essential]. Post-larval tilefish are primarily sedentary and non-migratory. They settle in waters approximately 8-17°C, known as the "warm belt" (where shelf and slope water meet) on the outer continental shelf and upper slope of the Northwest Atlantic [@able1982burrow]. Juveniles and adults often occupy simple vertical shaft burrows in semi-lithified clay of the shelf break, submarine canyon walls, and flanks around 100-200m depth [@able1982burrow]. Lobster pots, red crab traps, ship wrecks and other artificial structures have also been used by tilefish [@steimle1999essential]. Diet shifts with size, with crustaceans, mollusks, and echinoderms dominating young/small tilefish diets. Adult tilefish are opportunistic benthic foragers, feeding on shrimp, crabs, snails, worms, anemones, sea cucumbers, smaller fish, squid, and bivalves. They are known to scavenge on fresh material and reject rancid bait. Adults will also consume anthropogenic material [@steimle1999essential]. Age at maturity is typically 2-4 years [@steimle1999essential], with a maximum age up to 45 years [@bigelow1953fishes]. The Northwest Atlantic stock is managed by the Mid-Atlantic Fishery Management Council under the Tilefish Fishery Management Plan. The most recent benchmark stock assessment occurred in 2024. The stock is not overfished, but overfishing is occurring and the Mid-Atlantic stock is reduced to end overfishing [@nefsc2024golden].
 
 ## Supplemental Scores
 
@@ -486,7 +497,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure ranged from High to Low across months. Exposure was generally higher in the winter months (January - March) than the rest of the year (@fig-exp-month-golden). This was due to high bottom salinity and aragonite solubility exposure during those months (@fig-exp-month-tm-golden). 
 
 ```{r}
 #| echo: false
@@ -539,7 +550,7 @@ dir_path <- here::here("figures/Golden tilefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +581,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, and salinity were the major dynamic drivers of golden tilefish distributions along the Northeast Shelf (@fig-radar-golden). Golden tilefish are very sensitive to temperature changes and water mass movements may play a large role in recruitment [@salois2024golden]. When only these factors were used to quantify Exposure, the mean score decreased to Low (1.06 +/- 0.30) due to low bottom temperature exposure (@fig-exp-imp-golden; @fig-sum-imp-golden).
 
 ```{r}
 #| echo: false
@@ -621,7 +632,7 @@ dir_path <- here::here("figures/Golden tilefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +658,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-golden
-#| fig-cap: "As in @fig-sum-tab for Golden tilefish, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-golden for Golden tilefish, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

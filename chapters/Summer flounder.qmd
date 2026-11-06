@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** Moderate
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Summer flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Low             | None |
+| *Exposure*           | Very High         | Moderate             | Decrease |
+| *Vulnerability*      | Moderate         | Low             | Decrease |
+| *Directional Effect* | Neutral         | Positive             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Summer flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nSummer flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Summary flounder received a **Low** sensitivity score. Certainty was 75% according to bootstrap analysis. The only attribute that received a score greater than 2.5 was Juvenile Habitat Requirements (2.7) (@fig-sum-tab-summerfl). Juvenile summer flounder rely on estuary habitats, including marshes, oyster reefs, and seagrass beds for important nursery habitats. Many of these are considered highly vulnerable habitats [@guyant2022northeast].
+
+In the 2016 Climate Vulnerability Assessment, summer flounder also received a Low sensitivity score. In that assessment, no attributes scored above 2.5 [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for Summer flounder was **Moderate** (2.1 +/- 0.97) (@fig-sum-tab-summerfl). Exposure was Very High over Georges Bank and High throughout Southern New England and on the shelf break. Exposure was Low on the shelf south of New Jersey (@fig-exp-summerfl). These patterns were driven by bottom temperature, oxygen, salinity, and aragonite solubility (@fig-fact-exp-summerfl).
+
+In the previous Assessment, summer flounder received a Very High exposure score. This was driven by high exposure to sea surface temperature, air temperature, and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Summer flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Summer flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability scores for Summer flounder were **Low** (2.1 +/- 0.97) (@fig-sum-tab-summerfl). Vulnerability was Low throughout a majority of the summer flounder distribution, with the exception of portions of Georges Bank and areas south of Cape Cod (@fig-vuln-summerfl).
+
+In the previous Assessment, Summer Flounder received a Moderate Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+100% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-summerfl).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The summer flounder ensemble model received a mean model confidence score of 2 (+/- 0.6) indicating moderate confidence in the model. While the model predicted general distributions well, there were strong monthly patterns in residuals that drove scores down. The ensemble model AUC score was 0.94, indicating excellent model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Summer flounder experienced significant core habitat loss between 1993 and 2023. These losses occurred at the southern edge of their range in both nearshore and shelfbreak habitats (@fig-shifts-summerfl). The distribution centroid shifted 12 km northeast. 
+
+Under near future ocean conditions, summer flounder range is predicted to expand northward into Cape Cod Bay and further over Georges Bank (@fig-shifts-summerfl). The distribution centroid is predicted to shift a further 11 km north-northeast. 
+
+In the previous assessment, summer flounder received a High Distributional Vulnerability rank due to high larval dispersal, seasonal migrations, and variety of preferred habitats [@hare2016vulnerability]. 
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 65,140 | 154,589 | 5.11 | 8.10 |
+| 2019-2023 | 11.5 km NE | 62,882 (-2,258) | 155,202 (+613) | 4.99 (-0.12) | 8.10 (0) |
+| 2031-2035 | 11.3 km NNE | 60,800 (-2,082) | 156,586 (+1,384) | 4.93 (-0.06) | 8.10 (0) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +442,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predict that summer flounder will be **positively** impacted by climate change. Certainty was 65%. Spatio-temporal models have suggested that summer flounder abundance will increase with increasing temperatures [@deen2025estimating]. Increasing winter water temperatures may help summer flounder expand their distributions northward [@bell2014externally]. In the previous Assessment, experts predicted that the impacts of climate change on summer flounder would be neutral; however, certainty was low [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Summer flounder distributions are correlated with depth, bottom temperature, sea surface temperature (SST), and bottom salinity [@deen2025estimating]. Their distribution in the Northwest Atlantic may shifting north due to increasing winter temperatures, but could also be affected by reductions in fishing pressure or range expansion [@bell2014externally]. Large-scale climate drivers, such as the Gulf Stream Index, may affect summer flounder recruitment and distribution [@oleary2019understanding]. Spatio-temporal modeling results from [@deen2025estimating] report increased abundance of summer flounder in the fall by 10-15% with a 1°C increase in SST, 12% with a 1°C increase in bottom temperature and 3-4% increase with each meter in depth. In the spring, abundance increased by 30% with a 1°C increase in SST. Summer flounder embryos exhibit reduced survival when exposed to elevated CO^2^. Larvae exposed to elevated CO^2^ had tissue damage and initiated metamorphosis earlier and at smaller sizes [@chambers2014effects].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Summer flounder are found both inshore and offshore in waters from Nova Scotia to Florida [@packer1999_sf]. Spawning season lasts from September through February/March, with lower latitudes starting sooner. Spawning adults migrate to overwintering habitats on the continental shelf edge. In the late spring, they move back inshore into shallow waters and estuaries [@packer1999_sf]. The timing of peak spawning in October/November coincides with the breakdown of thermal stratification on the continental shelf and the maximum production of autumn plankton which is characteristic of temperate ocean waters of the northern hemisphere [@packer1999_sf] [@morse1981reproduction]. Egg development takes anywhere from 48-142 hours, depending on water temperatures. At 14°C, larvae metamorphosize into juveniles within approximately 65 days of hatching. Time to metamorphosis also was dependent on temperatures, with metamorphosis completing as fast as 46.5 days at 14.5°C [@smith1973distribution]. Larvae do not drift far from spawning regions; however, tidal stream transport and vertical migration behavior may be important to determining larval distributions [@packer1999_sf] [@hare2006sinking]. Larvae prefer waters with warmer temperatures and intermediate salinities. Temperature affects the rate of larvae yolk sac absorption (which impacts when larvae have to depend on exogenous feeding), development and growth [@watanabe1998light]. Studies have also shown that larval size increases with greater light intensity (presumably affecting activity and energy metabolism) and higher salinities [@watanabe1998light] [@burke1998influence]. Larvae are preyed upon by a variety of predators, including blue crabs and sea robins. The type and abundance of predators (ex: *Crangon septemspinosa* or pelagic mummichugs) could determine whether a metamorphic summer flounder stays in the substrate or the water column (*C. septemspinosa* would force them to the water column, and vice versa for mummichugs) [@keefe1994contributions]. Larvae preferentially settle on sandy substrate; bottom type, presence of predators, and water temperatures may all impact settlement [@keefe1994contributions]. Young-of-the-year can occur in a variety of habitats, including shallow, mud-bottomed marsh creeks, shallow sand substrates (including seagrass beds), deep sand substrate, and deep fine-sand substrates [@szedlmayer1993ultrasonic]. Juveniles are opportunistic feeders and differences in diet are often related to the availability of prey. There also appears to be ontogenetic changes in diet. Smaller individuals eat polychaetes and crustaceans. Metamorphic stage individuals reflect calanoid copepod diets (pelagic), while late metamorphosis stage individual and juveniles' diets reflected shrimp, polychaetes, harpactoid copepods, amphipods, small fishes, small gastropod mollusks, and plant material (benthic) [@grover1998feeding]. Adults are demersal, with highest abundance in waters deeper than 30m and at temperatures 2-27°C [@packer1999_sf]. Adults are also opportunistic feeders. Fish and crustaceans make up the majority of their diet, but dominant prey items shift following prey availability [@cernadas2021composition]. Adult summer flounder are preyed upon by sharks, rays, and monkfish [@packer1999_sf]. Summer flounder reach maturity at approximately 13-17 months. Males can reach 12 years of age and females 14 years, although individuals living upwards of 20 years have been reported [@nefsc2019assessment_sf]. The summer flounder stock is cooperatively managed by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission under the Summer Founder, Scup, and Black Sea Bass Fishery Management Plan. The stock is not overfished and overfishing is not occurring [@nefsc2025assessment_sf].
 
 ## Supplemental Scores
 
@@ -486,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure ranged from Low to High, with the highest scores occurring between September through December (@fig-exp-month-summerfl). This was driven by peaks in bottom temperature and bottom oxygen exposure during these months (@fig-exp-month-tm-summerfl).
 
 ```{r}
 #| echo: false
@@ -539,7 +549,7 @@ dir_path <- here::here("figures/Summer flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +580,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature and aragonite solubility were the major drivers of summer flounder distributions (@fig-radar-summerfl). Adults are demersal, opportunistic feeders [@packer1999_sf] [@cernadas2021composition]. When only these factors were used to calculate exposure, scores decreased to Low (1.01 +/- 0.11) (@fig-sum-imp-summerfl, @fig-exp-imp-summerfl).
 
 ```{r}
 #| echo: false
@@ -621,7 +631,7 @@ dir_path <- here::here("figures/Summer flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +657,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-summerfl
-#| fig-cap: "As in @fig-sum-tab for Summer flounder, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-summerfl for Summer flounder, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

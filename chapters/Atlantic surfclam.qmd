@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** High
+-   **Exposure:** Moderate
+-   **Vulnerability:** High
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Atlantic surfclam")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | High         | High             | None |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | High         | High             | None |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Atlantic surfclam is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nAtlantic surfclam is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Atlantic surfclams received a **High** sensitivity score, with 100% certainty (@fig-sum-tab-surfclam). Two attributes had scores greater than 3: Adult Mobility (4) and Relationship to Calcified Organisms (4) (@fig-sum-tab-surfclam). Like other bivalves, they have a calcium carbonate shell and are therefore susceptible to ocean acidification [@Cargnelli1999_surfclam]. In addition, they are primarily sessile, other than burrowing into sediments to avoid predators [@Cargnelli1999_surfclam].
+
+Surfclams received the same sensitivity score in the 2016 Climate Vulnerability Assessment. Adult Mobility and Relationship to Calcified Organisms also drove that score [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+The Atlantic surfclam had a mean Exposure score of 2.35 +/- 1.0, resulting in a **Moderate** average score throughout the Northeast Shelf (@fig-sum-tab-surfclam). This was driven by high exposure to bottom temperature, oxygen, and salinity changes (@fig-fact-exp-surfclam). Exposure was highest on Georges Bank and generally decreased moving down the coastline (@fig-exp-surfclam). 
+
+In the previous Assessment, surfclam received a High exposure score, driven by sea surface temperature and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Atlantic surfclam")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Atlantic surfclam")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+The mean overall Vulnerability rank for Atlantic surfclams was **High** (7.05 +/- 3.01) (@fig-sum-tab-surfclam). Similar to the Exposure score, Vulnerability was highest on Georges Bank and generally decreased moving southward along the coast (@fig-vuln-surfclam). 
+
+In the previous assessment, Atlantic Surfclam also received a High vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+95% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-surfclam).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+Mean model confidence for the Atlantic surfclam model was 2.3 (+/- 0.6) indicating moderate confidence in the distribution model. While the model aligned with experts’ expectations on the distribution, there were concerns about low sample size. Experts also thought that sediment type should have been included in the models. The ensemble model AUC score was 0.92, indicating excellent predictive performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Surfclam habitat area experienced a net increase between 1993 and 2023. There was a decline in habitat area in approximately 2010 but the area has since rebounded (@fig-shifts-surfclam). Ranges and core habitat expanded further offshore and further south between 1993 and 2023. The weighted centroid shifted approximately 6 km east-southeast from 1993 to 2023. 
+
+Core habitat is predicted to continue to grow significantly between 2025 and 2035 due to continued offshore shifts (@fig-shifts-surfclam). The distribution centroid is expected to shift 11 km north-northeast. 
+
+In the previous Assessment, Atlantic surfclam received a High Distributional Vulnerability Rank [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 26,877 | 131,735 | 4.61 | 8.01 |
+| 2019-2023 | 5.7 km ESE | 31,880 (+5,004) | 137,933 (+6,197) | 4.92 (+0.31) | 8.10 (+0.08) |
+| 2031-2035 | 11.1 km NNE | 30,810 (-1,070) | 136,763 (-1,170) | 4.42 (-0.50) | 8.01 (-0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -430,17 +439,18 @@ if (length(found_files) > 0) {
 ```
 :::
 
+
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Atlantic surfclams are expected to be **negatively** impacted by climate change. Certainty in expert scores was 80%. Warming bottom waters have shifted surfclam populations from nearshore to more northern and offshore waters [@Timbs2019; @Stromp2023; @Hofmann2018]. This northern shift may lead to future competition with ocean quahogs [@Spencer2026; @Stromp2023]. Ocean acidification will also likely impact the surfclam. These results are similar to those from the 2016 Climate Vulnerability Assessment. Certainty was higher in the previous assessment [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Warming bottom water temperatures in the Northwest Atlantic have produced a range shift in Atlantic surfclams from southern, inshore waters of the Mid-Atlantic Bight into deeper waters north and offshore [@Timbs2019] [@Stromp2023]. The southern range boundary of the species likely began to migrate northward and offshore in the 1970s [@Hofmann2018]. A mass mortality event in the inshore waters of Delmarva occurred in 2000, where surfclams were in a “transient event margin”, a physiological range where scope for growth is negative but temperatures remain non-lethal, leading to decreased energetics and mortality [@Weinberg2005] [@Woodin2013]. Thermal stress in surfclams occurs at 21°C and mortality above 25°C [@Munroe2013] [@Powell2017]. Model projections through the end of the 21st century show a positive trend in Atlantic surfclam biomass as their range continues to shift, with biomass expanding in deeper waters off of New Jersey, Long Island, and Southern New England and declines in Georges Bank and Delmarva [@Spencer2026]. Warming waters may result in declines in maximum size in the southern portion of the species’ range [@Powell2025]. This range shift may lead to potential competition between Atlantic surfclams and ocean quahogs (*Arctica islandica*) and changes to the spatial extent of the fishery [@Spencer2026] [@Stromp2023].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Atlantic surfclams are a benthic biomass dominant species on the Northeast U.S. continental shelf from the Gulf of St. Lawrence to Cape Hatteras, North Carolina [@Hofmann2018]. The fishery operates in the Mid-Atlantic Bight and Georges Bank and produces over \$30 million in exvessel annual revenue [@Murray2016]. Spawning occurs in summer to early fall, with earlier spawning occurring in southern habitats [@Cargnelli1999_surfclam]. Temperature is a determinant for gonadal development and spawning [@Loosanoff1963]. Spawning occurs when temperatures exceed 15°C, and may be delayed due to cold temperatures [@Cargnelli1999_surfclam]. Fertilized eggs develop into planktonic larvae approximately 9 hours after fertilization at 21.7°C and 40 hours at 14°C [@Ropes1980]. Larvae mature into the pediveliger stage, a transitional “swimming-crawling” larval stage with development of a foot for burrowing, around 18 days after fertilization [@Loosanoff1963]. Larvae are dispersed by currents (generally southward along the Northeast shelf) and settlement coincides with a relaxation of upwelling events [@Fay1983]. Variable reproductive success has been linked to variability in current dynamics in the Mid-Atlantic Bight [@Zhang2016]. Metamorphosis to juveniles, which consists of complete absorption of the velum and settlement to the substrate, occurs anywhere from 19 to 35 days after fertilization depending on temperature [@Fay1983]. Juveniles settle in sandy habitats in the intertidal and up to depths of 178m [@Cargnelli1999_surfclam]. Juveniles and adults are planktivorous siphon feeders, feeding on phytoplankton ≥ 4µm diameter. Food varies with the season, geographic location, and depth of shell bed [@Cargnelli1999_surfclam]. Atlantic surfclams have many predators, including the naticid snails *Euspira heros* and *Neverita duplicata*, the sea star *Asterias forbesi*, lady crabs (*Ovalipes ocellatus*), Jonah crabs (*Cancer borealis*) and horseshoe crabs (*Limulus polyphemus*). Fish predators include haddock (*Melanogrammus aeglefinus*) and Atlantic cod (*Gadus morhua*) [@Ropes1980]. Age at maturity ranges anywhere from 3 months to 4 years, however size is likely more important to maturation rates [@Cargnelli1999_surfclam]. Atlantic surfclams have a maximum age of 31 years [@Cargnelli1999_surfclam]. The stock is managed by the Mid-Atlantic Fishery Management Council under the Atlantic surfclam and ocean quahog Fishery Management Plan. As of the 2024 Management Track Assessment, the stock is not overfished and overfishing is not occurring. However, spawning stock biomass continues to decline and is currently at 95% of the target biomass [@NEFSC2024_surfclam].
 
 ## Supplemental Scores
 
@@ -486,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure ranged from Low to High. Exposure was Low in March, and High from August through January (@fig-exp-month-surfclam). These patterns were driven by bottom temperature, oxygen, and salinity exposure (@fig-exp-month-tm-surfclam).
 
 ```{r}
 #| echo: false
@@ -539,7 +549,7 @@ dir_path <- here::here("figures/Atlantic surfclam")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +580,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, bottom salinity, and net primary productivity were the most important to species distribution (@fig-radar-surfclam). Surfclams are known to be sensitive to thermal stress and occupy coastal habitats [@Cargnelli1999_surfclam]. They are generalist planktivores [@Cargnelli1999_surfclam]. When exposure was calculated with only these factors, it remained Moderate on average throughout the species range and spatial patterns remained consistent (@fig-exp-imp-surfclam; @fig-sum-imp-surfclam).
 
 ```{r}
 #| echo: false
@@ -621,7 +631,7 @@ dir_path <- here::here("figures/Atlantic surfclam")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +657,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-surfclam
-#| fig-cap: "As in @fig-sum-tab for Atlantic surfclam, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-surfclam for Atlantic surfclam, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

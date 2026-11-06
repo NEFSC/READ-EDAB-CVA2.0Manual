@@ -28,14 +28,14 @@ knitr::opts_chunk$set(
 # Atlantic cod (*`Gadus morhua`*)
 
 ::: {.content-visible when-format="html"}
-[Download Species Narrative as a PDF](Atlantic cod.pdf){.btn .btn-primary target="_blank"}
+[Download Species Narrative as a PDF](Atlantic%20cod.pdf){.btn .btn-primary target="_blank"}
 :::
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** High - Very High
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate - High
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Atlantic cod")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -80,14 +80,14 @@ knitr::include_graphics(img_path)
 
 ## Changes from Previous Assessment(s)
 
-| Metric               |Previous Assessment(s)  | Current Assessment | Change     |
-|-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| Metric | Previous Assessment(s) | Current Assessment | Change |
+|------------------|------------------|-------------------|------------------|
+| *Sensitivity* | Moderate | High - Very High | Increase |
+| *Exposure* | High | Moderate | Decrease |
+| *Vulnerability* | Moderate | Moderate - High | None - Increase |
+| *Directional Effect* | Negative | Negative | None |
 
-: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
+: Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-change}
 
 {{< pagebreak >}}
 
@@ -138,10 +138,10 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Atlantic cod is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nAtlantic cod is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
 
 ## Score Descriptions:
@@ -193,7 +193,13 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Of the four cod stocks, three (**Eastern Gulf of Maine, Western Gulf of Maine, and Georges Bank**) received **High** sensitivity scores. The **Southern New England** stock received a **Very High** score. Certainty was highest for the Georges Bank (92%) stock, followed by the Eastern Gulf of Maine (82%), Western Gulf of Maine (66%), and Southern New England (64%) (@fig-sum-tab-cod).
+
+Stock size, complexity in reproductive strategy, and egg and larval survival and settlement requirements drove the scores across all four stocks. Spawning cycle and historical variability in temperature also scored above 3 for all stocks (@fig-sum-tab-cod).
+
+Cod are currently overfished in the Gulf of Maine [@nefsc2021update]. Spawning is coupled with copepod production (Brander and Hurley 1992) and may be impacted by warming temperatures [@behan2023profile; @drinkwater2005response]. Warming temperatures may also reduce adult fitness, and thus reduce egg quality [@klein2016effects]. Recruitment success is linked to retentive circulation patterns in the Gulf of Maine and on Georges Bank [@cong1996retrospective; @lough1989movement], which can be altered by large scale climate patterns and overall regional warming [@pershing2015slow].
+
+Atlantic cod sensitivity has increased since the last assessment. Atlantic cod were previously scored as Moderate [@hare2016vulnerability]. Stock size/status and egg and larval survival and settlement requirements (formally early life history requirements) drove the scores in both assessments.
 
 ### Exposure:
 
@@ -240,7 +246,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean (+/- standard deviation) exposure scores within all four cod stocks were **Moderate** when all exposure factors were considered (@fig-sum-tab-cod). Across the species range, exposure scores were greatest along the coastline, southeast of Cape Cod, and over Georges Bank (@fig-exp-cod). These patterns were driven by high exposure to changes in bottom temperature, salinity, and oxygen. High bottom temperature exposure south of Cape Cod and Long Island drove the higher scores observed in the Western Gulf of Maine and Southern New England Stocks (@fig-fact-exp-cod).
+
+In the previous assessment, cod received a High exposure score, driven by high exposure to increased sea surface temperatures and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +259,7 @@ dir_path <- here::here("figures/Atlantic cod")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +304,7 @@ dir_path <- here::here("figures/Atlantic cod")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +338,21 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean vulnerability scores within the **Eastern Gulf of Maine, Western Gulf of Maine, and Georges Bank** stocks were **Moderate**, ranging from 5.01 to 6.75 (+/- 2.50 - 2.82). Mean scores in the **Southern New England** stock were **High** (9.8 +/- 3.09). This was driven by the higher Sensitivity score within the stock (@fig-sum-tab-cod).
+
+Very High Vulnerability scores were found south of Cape Cod, due to high exposure and high sensitivity within the Southern New England stocks. High Vulnerability scores were found along the coast of the Gulf of Maine and over Georges Bank due to high exposure, whereas exposure was Low within the Gulf of Maine basin (@fig-vuln-cod).
+
+Vulnerability scores in the previous Assessment were Moderate for Atlantic cod, similar to our results [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+82% of the data quality scores were greater than or equal to 2 for the Georges Bank, Western Gulf of Maine, and Southern New England stocks. This value was 83% for the Eastern Gulf of Maine stock, indicating strong data quality. For all stocks, only Population Growth Rate was considered a data gap (mean attribute data quality score \< 2) (@fig-sum-tab-cod).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+Experts had moderate confidence in the Atlantic cod model (mean confidence = 1.9 +/- 0.3). Experts noted that cod are often associated with rocky bottoms, which are undersampled by traditional trawl surveys used to build the models. The ensemble model AUC was 0.84, indicating good performance.
 
 ## Additional Metrics
 
@@ -391,15 +403,19 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+The weighted distribution centroid shifted 3.8 km ESE between 1993-1997 and 2019-2023. Declines in latitudinal range led to significant losses in core and total habitat area (@fig-shifts-cod). This was driven by the southern edge of the species’ range moving further north (@fig-shifts-cod).
 
-| Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
+In the next ten years, the distribution weighted centroid is expected to shift a further 7.3 km ENE. Cod ranges are predicted to expand between 2025-2035, but will remain similar to the 2019-2023 range (@fig-shifts-cod).
+
+In the previous assessment, cod were given a High Potential for Distribution Change score [@hare2016vulnerability].
+
+| Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km2) | Habitat Total Area (change) (km2) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 65,441 | 159,006 | 3.43 | 4.97 |
+| 2019-2023 | 3.8 km ESE | 60,182 (-5,258) | 154,872 (-4,133) | 3.3 (-0.12) | 4.97 (0) |
+| 2031-2035 | 7.3 km ENE | 57,770 (-2,412) | 153,955 (-917) | 3.3 (0) | 4.97 (0) |
 
-: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
+: Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="\[15, 20, 20, 20, 15, 10\]"} {#tbl-dist-cod}
 
 ::: {.content-visible when-format="html"}
 ```{r}
@@ -432,15 +448,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+All four stocks of Atlantic Cod will likely be negatively impacted by future climate change (100% certainty in expert scores). This is similar to the previous Assessment [@hare2016vulnerability]. Continued warming will likely drive declines in recruitment and shifts in spawning phenology.
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Recent warming in the Gulf of Maine relating to a northward shift in the Gulf Stream and changes in the Atlantic Multidecadal Oscillation and Pacific Decadal Oscillation led to reduced Atlantic cod recruitment and increased mortality [@pershing2015slow]. Rising temperatures may affect Atlantic cod spawning locations and timing [@behan2023profile]. @drinkwater2005response suggested Atlantic cod spawning grounds will experience a shift northward, with spawning timing occurring later in the season as a response to warming ocean temperatures. Climate change may also increase in natural mortality in adult Atlantic cod due to declines in fish condition [@behan2023profile]. @drinkwater2005response predicted large-scale declines in Atlantic cod in the Gulf of Maine if bottom temperatures increase above 12°C, either through changes in distribution to colder waters or natural mortality. Reduced fitness in Atlantic cod adults from climate impacts may result in lower quality eggs [@klein2016effects]; however, there may be some capacity to adapt to slower rates of warming [@langan2020abundance].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Cod in the Northwest Atlantic range from Greenland to Cape Hatteras, NC, with a majority of biomass in the Gulf of Maine and on Georges Bank [@behan2023profile]. Spawning timing varies by location - later in the year with increasing latitude - although peaks generally occur in the winter and spring [@lough2004essential] in water temperatures between 5-7°C. In spring, Atlantic cod spawning matched the variation in peak abundance of *Calanus finmarchicus*. In fall, cod spawned in some, but not all, areas where *Calanus* were abundant. This is consistent with the hypothesis that cod spawning is coupled to copepod production [@brander1992distribution]. Atlantic cod eggs are pelagic and hatch after 8-60 days, varying with temperature [@hardy1978development]. Recruitment success increases when dispersion of larvae by currents is reduced [@cong1996retrospective]. On Georges Bank, a clockwise gyre circulation pattern tends to retain and isolate eggs and larvae [@lough1989movement]. Transformation from larvae to the juvenile stage occurs at sizes greater than 20 mm, where they then move to the bottom [@lough2004essential]. Early juveniles are dependent on gravel substrates or grass beds in nearshore nurseries to favor survival through predator avoidance and increased food availability [@lough1989movement]. In the Gulf of Maine, juveniles prey on mollusks and other invertebrates, while adults consume a greater proportion of fish including herring, redfish, mackerel, and other cod [@bowman1975food]. Adult cod have few predators, other than large sharks and seals [@neuenhoff2019continued]. Recent modeling studies illustrate growing populations of grey seals, harp seals, and dogfish are a major barrier to cod population recovery [@behan2023profile]. Adults in the Newfoundland stock migrate, leaving overwintering areas in deep oceanic waters and follow tongues of deep, relatively warm, oceanic waters ("highways") across the shelf to summer feeding areas nearshore. They then move northward along the Newfoundland coast in late summer, and eventually return to wintering areas [@lough2004essential]. Previous research suggested that in the middle part of their range, Atlantic cod only undertake minor seasonal movements in reaction to changing temperatures. However, more recent research suggests that there are inshore/offshore migrations that correspond to spawning and feeding activity in the Gulf of Maine [@zemeckis2017seasonal]. As of 2025, Atlantic cod are divided into 4 stock units (Western & Eastern Gulf Maine, Georges Bank, and Southern New England) based on spawning locations, larval transport pathways, and genetic markers [@nefmc2025multispecies]. All stocks are managed under the New England Fishery Management Council’s Northeast Multispecies Fishery Management Plan [@kleinmacphee2012atlantic]. The stock is overfished and overfishing is occurring in the Gulf of Maine [@nefsc2021update].
 
 ## Supplemental Scores
 
@@ -486,7 +502,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+While total exposure was relatively consistent across months for cod across their entire range, there was variability throughout the year within the different stocks (@fig-exp-month-cod). Georges Bank, Western Gulf of Maine, and Southern New England stocks had the highest variability. Exposure within the Georges Bank and Western Gulf of Maine stocks ranged from Low to High, whereas exposure ranged from Moderate to Very High in Southern New England. Exposure was generally highest in the summer months, due to high bottom temperature, oxygen and zooplankton biomass exposures (@fig-exp-month-tm-cod).
 
 ```{r}
 #| echo: false
@@ -539,7 +555,7 @@ dir_path <- here::here("figures/Atlantic cod")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +586,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, bottom salinity, and large zooplankton biomass were the most important dynamic variables in the Atlantic Cod species distribution model (@fig-radar-cod). Cod are piscivores, feeding on other small fishes that likely prey on zooplankton [@bowman1975food]. Spawning is closely linked to temperature [@lough2004essential]. When only important factors were used to calculate exposure, exposure in the Eastern and Western Gulf of Maine stocks, as well as the Georges Bank stock, decreased to Low (@fig-exp-imp-cod; @fig-sum-imp-cod). The mean exposure score only remained Moderate in the Southern New England stock (@fig-exp-imp-cod; @fig-sum-imp-cod). 
 
 ```{r}
 #| echo: false
@@ -621,7 +637,7 @@ dir_path <- here::here("figures/Atlantic cod")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,11 +663,10 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-cod
-#| fig-cap: "As in @fig-sum-tab for Atlantic cod, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-cod for Atlantic cod, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)
 ```
-
 
 ## References

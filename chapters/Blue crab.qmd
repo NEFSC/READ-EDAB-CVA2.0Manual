@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Moderate
+-   **Exposure:** Low
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Blue Crab")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | High         | Moderate             | Decrease |
+| *Exposure*           | Very High         | Low             | Decrease |
+| *Vulnerability*      | Very High         | Low             | Decrease |
+| *Directional Effect* | Neutral         | Neutral             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Blue Crab is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nBlue Crab is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Blue crabs had a **Moderate** sensitivity score, with 79% certainty. Three attributes received scores greater than 2.5: Complexity in Reproductive Strategy (3.4), Other Stressors (2.8), and Egg and Larval Survival and Settlement Requirements (2.7) (@fig-sum-tab-bc).
+
+Blue crabs rely on estuaries throughout their life cycles, including for spawning. Estuaries are highly vulnerable habitats due to urbanization impacts such as hypoxia, loss of seagrass beds, and changes to freshwater inputs [@guyant2022northeast]. Temperatures have been shown to impact spawning behaviors and larvae require low salinities (10-30) for proper development [@hill1989species].
+
+Blue crabs received a High sensitivity score in the previous Climate Vulnerability Assessment. This was driven by similar attributes to our scores: Other Stressors and Complexity in Reproductive Strategy [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure score for the Blue crab was Low (1.48 +/- 0.73) (@fig-sum-tab-bc). Exposures were greatest off the coast of New Jersey and within Chesapeake Bay, but Low offshore (@fig-exp-bc). 
+
+In the previous Assessment, blue crab received a Very High score due to high sea surface temperature, air temperature, and ocean acidification exposure scores [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Blue Crab")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Blue Crab")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for Blue crab was **Low** (2.97 +/- 1.47) due to low Exposure scores (@fig-sum-tab-bc). Vulnerability remained Low when Exposure scores were calculated with only important factors (2.61 +/- 1.18) (@fig-sum-tab-bc).
+
+In the previous Assessment, Blue crab received a Very High Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+93% of data quality scores were greater than or equal to 2, indicating excellent data quality. Only Stock Size/Status was considered a data gap (mean attribute data quality score \< 2) (@fig-sum-tab-bc).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The blue crab model received a 2.6 (+/- 0.2) mean model confidence score, indicating high confidence in the model. Experts said the model generally aligned with expectations for the species distribution on this spatial scale. The ensemble model AUC score was 0.98 indicating excellent model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +398,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+ Blue crab distributions were stable between 1993 - 2023, with small changes to overall area and range (@fig-shifts-bc). The weighted centroid shifted 8.5 km north. 
+
+Blue crab distributions are expected to shift significantly under near future climate conditions. Significant increases in available habitat are predicted. Blue crab distributions are predicted to expand north and east. Core habitat is predicted to expand north along the coast of New Jersey while the species range is predicted to expand as far east as Georges Bank and as far north as Cape Cod Bay (@fig-shifts-bc). As a result, the weighted centroid is predicted to shift nearly 63 km east-northeast.  
+
+Blue crab received a High Distributional Vulnerability Rank in the previous Assessment [@hare2016vulnerability].
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 8,190 | 15,723 (+8,680) | 5.42 | 4.01 |
+| 2019-2023 | 8.5 km N | 7,043 (-1,146) | 64,251 (+487) | 5.61 (+0.18) | 4.33 (+0.32) |
+| 2031-2035 | 62.7 km ENE | 15,723 (+8,680) | 93,435 (+29,184) | 5.92 (+0.31) | 6.57 (+2.24) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +443,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Blue crab are expected to be **neutrally** impacted by climate change. Expert scores had 93% certainty. This is consistent with the previous Assessment [@hare2016vulnerability]. While degradation of estuarine habitats may limit food sources or force crabs into new areas, warmer temperatures are predicted to increase survival rates, particularly over winter [@aguilar2008importance; @glandon2019winter].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+As an estuary dependent species, blue crab habitats have been degraded through urbanization impacts including hypoxia, reduction in seagrass beds, and changes in timing and volume of freshwater inputs. Low oxygen conditions may force crabs into shallower, more spatially restricted areas of Chesapeake Bay, increasing their vulnerability to predation or capture. Prolonged hypoxia may limit food resources (mainly infaunal bivalves) in affected areas even after normoxic conditions resume [@aguilar2008importance]. @glandon2019winter estimated water temperatures in Chesapeake Bay through 2100 and found that a 50% shorter winter will increase overwinter survival rates in blue crab by 20%. Faster growth, a longer growing season, and lower winter mortality would lead to increased productivity [@glandon2019winter]. Blue crabs may also adapt phenologically to warming temperatures by shifting the timing of biological events such as spawning [@schneider2024reproductive]. Blue crabs have been observed in the Gulf of Maine, indicating a possible range extension from climate-driven rising temperatures [@johnson2015savory].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+The blue crab’s native range is along the western Atlantic coast from Nova Scotia to Argentina, including the Gulf of America [@hill1989species]. The blue crab fishery is the most valuable fishery in the Chesapeake Bay [@hines2007ecology]. In Chesapeake Bay, adults spawn from May to October, however spawning is likely more limited in cooler waters [@umces2011stock]. To spawn, adults aggregate in low salinity areas of upper estuaries to mate. Adult females then travel to higher salinity spawning grounds [@hill1989species]. The timing of the migration varies with water temperature and occurs earlier in the year at lower latitudes [@aguilar2008importance]. Eggs (7-14 days) and larvae (40-70 days) are pelagic [@hill1989species] and are carried by currents offshore before using physical transport methods to return to bays and eventually estuaries [@millikin1984synopsis]. Larvae require temperatures of 20-30°C and salinities of 10-30 ppt for proper development [@hill1989species]. Settlement into estuarine habitats is associated with Ekman flow from southward wind events resulting in strong subtidal flow into the estuaries. Once in the estuary, settlement and metamorphosis of the megalopae are stimulated by chemical cues associated with appropriate nursery habitat [@epifanio2016behavioral]. Larvae are phytoplanktivorous, consuming dinoflagellates and copepod nauplii [@hill1989species]. They are preyed upon by a large number of estuarine and marine animals , including other commercially important species such as the striped bass [@hill1989species]. Once reaching the juvenile stage, blue crabs gradually migrate into shallower, less saline waters in upper estuaries and rivers, where they grow and mature. Males, which prefer low-salinity waters, generally migrate farther upstream than do females, which tend to stay in the lower rivers and estuaries [@hill1989species]. Post-larval and juvenile crabs are considered general scavengers, bottom carnivores, detritivores, and omnivores, consuming a wide range of dead and live fish, crabs, organic debris, shrimp, mollusks (including mussels, clams, oysters, and snails), and aquatic plants [@hill1989species]. Adult blue crab prey is very similar to juveniles; they will consume most available prey and freely switch among preferred prey types [@hill1989species]. Juvenile and adult blue crabs are consumed by mammals, sea turtles, birds, and several fishes [@hill1989species]. Blue crabs reach maturity at 12-18 months, with a maximum lifespan around 4 years of age and a maximum size of 9 inches carapace length (CL) [@umces2011stock] [@millikin1984synopsis]. Adults prefer temperatures of 9-10°C for feeding, growth, and migration [@hines2007ecology]. In the Northwest Atlantic, blue crabs are managed by the Maryland Department of Natural Resources, Virginia Marine Resources Commission, and Potomac River Fisheries Commission. These entities work together with NOAA to conduct stock assessments for blue crab. The Chesapeake Bay blue crab population is not overfished based on current biological reference points, but abundance and recruitment remain low. A benchmark stock assessment is underway to improve understanding of blue crab population dynamics and its fishery [@cbsac2025advisory].
 
 ## Supplemental Scores
 
@@ -486,7 +497,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure was Low most months but ranged between Moderate to High from September through December (@fig-exp-month-bc). This was due to increases in bottom temperature and oxygen exposure during this time (@fig-exp-month-tm-bc).
 
 ```{r}
 #| echo: false
@@ -539,7 +550,7 @@ dir_path <- here::here("figures/Blue Crab")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +581,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature and salinity were the major dynamic drivers of species distributions (@fig-radar-bc). As an estuarine species, blue crab are sensitive to changes in salinity and temperatures play a role in spawning behavior and development [@hill1989species; @aguilar2008importance]. Both bottom temperature and salinity experienced relatively high exposure along the coast of New Jersey (@fig-exp-imp-bc, @fig-fact-exp-bc). However, when exposure was calculated with only these factors, overall exposure remained Low (@fig-sum-imp-bc).
 
 ```{r}
 #| echo: false
@@ -621,7 +632,7 @@ dir_path <- here::here("figures/Blue Crab")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +658,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-bc
-#| fig-cap: "As in @fig-sum-tab for Blue Crab, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-bc for Blue Crab, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

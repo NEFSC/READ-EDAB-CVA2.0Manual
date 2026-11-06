@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Moderate
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Scup")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Moderate             | Increase |
+| *Exposure*           | Very High         | Moderate             | Decrease |
+| *Vulnerability*      | Moderate         | Moderate             | None |
+| *Directional Effect* | Positive         | Neutral             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Scup is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nScup is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Scup received a **Moderate** sensitivity score with a certainty of 59%. A total of four attributes had scores greater than 2.5: Spawning Cycle (3), Complexity in Reproductive Strategy (2.9), Dispersal of Early Life Stages (2.9), and Other Stressors (2.8) (@fig-sum-tab-Scup).
+
+Scup only spawn once per year between May and August [@steimle1999_scup]. Spawning occurs in inshore waters once they are warmer than 10C and rely on highly vulnerable habitats such as submerged aquatic vegetation and estuarine habitats [@steimle1999_scup] [@guyant2022northeast]. Spawning may also rely on soniferous behaviors [@looby2022quantitative]. Eggs and larvae do not disperse far from spawning locations [@steimle1999_scup]. Adults utilize benthic habitats on the continental shelf and in estuaries. As a result, they are exposed to a variety of stressors due to urbanization impacts such as hypoxia, changes to freshwater inputs, and dredging [@guyant2022northeast].
+
+In the 2016 Climate Vulnerability Assessment, Scup received a Low sensitivity score. Similar to our analysis, this score was driven by Spawning Cycle and Early Life History Requirements, as well as Population Growth Rate [@hare2016vulnerability]. In our analysis, Population Growth Rate received a score of 2.4 (@fig-sum-tab-Scup).
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for Scup was **Moderate** (2.08 +/- 1.02) across its range (@fig-sum-tab-Scup). Exposure was Very High south of Cape Cod and High along the continental shelf throughout Southern New England. South of New Jersey, Exposure was Low, except along the continental shelf break (@fig-exp-Scup). These patterns were driven by bottom temperature, oxygen, salinity, and aragonite solubility (@fig-fact-exp-Scup).
+
+Scup received a Very High Exposure score in the previous Assessment. This score was driven by sea surface temperature, air temperature, and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Scup")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Scup")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Overall mean Vulnerability for Scup was **Moderate** (4.15 +/- 2.03) (@fig-sum-tab-Scup). Vulnerability was Moderate in Southern New England and on the continental shelf break. It was High south of Cape Cod (@fig-vuln-Scup). 
+
+In the previous Assessment, Scup also received a Moderate vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+98% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-Scup).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The scup ensemble model received a mean model confidence score of 2.1 (+/- 0.7), indicating moderate confidence in the model. The predicted distributions matched experts’ expectations, with the exception of southern latitudes where probabilities were higher than expected in nearshore areas in the warmer months. The ensemble model AUC score was 0.95, indicating excellent model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +398,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Despite losing core habitat on the continental shelf, scup distributions overall expanded between 1993 and 2023. Scup utilized more nearshore habitats than offshore habitats (@fig-shifts-Scup). The weighted centroid shifted 15 km north-northeast during this time period. 
+
+Under near future ocean conditions, scup ranges are predicted to continue their expansion. Their range is predicted to continue expanding eastward and northward into the Gulf of Maine (@fig-shifts-Scup). As a result, the weighted centroid is also predicted to shift 46 km northeast. 
+
+In the previous assessment, scup received a High Distributional Vulnerability rank due to their high mobility and large seasonal migrations [@hare2016vulnerability].
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 37,558 | 123,452 | 5.99 | 5.85 |
+| 2019-2023 | 15.0 km NNE | 39,379 (+1,821) | 122,333 (-1,118) | 5.92 (-0.06) | 5.77 (-0.08) |
+| 2031-2035 | 46.0 km NE | 36,419 (-2,960) | 129,865 (+7,531) | 5.74 (-0.18) | 5.85 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +444,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that climate change will have a **neutral** effect on Scup. Certainty was 93%. Scup distributions have shifted northward and offshore [@bell2015disentangling] [@palacios2023quantifying], likely in search of preferred temperatures, which range between 9-24C [@steimle1999_scup], but their center of distribution has not changed [@roday2026recreational]. Juveniles and adults both utilize vulnerable estuarine habitats [@guyant2022northeast]. In the previous assessment, experts predicted that Scup would be positively impacted by climate change, however, uncertainty was high [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Scup distributions in the spring and fall have shifted northward and offshore, which may necessitate new management strategies [@bell2015disentangling] [@palacios2023quantifying]. @roday2026recreational analyzed fish distribution shifts using recreational catch and fishery independent data. Scup distributions showed a moderate range expansion but little to no change to center of distribution [@roday2026recreational]. Juvenile scup exposed to elevated pCO^2^ in a laboratory setting had no significant effect on growth, survival, or otolith condition. Scup spawning areas in Long Island Sound are already exposed to high pCO^2^, indicating some tolerance to ocean acidification [@perry2015effect].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Scup are found in the Northwest Atlantic from Cape Cod, Massachusetts to Cape Hatteras, North Carolina [@steimle1999_scup]. There are two U.S. stocks: Mid-Atlantic/New England (Atlantic coast) and South Atlantic [@nefsc2025scup]. Spawning occurs once per year in coastal bays and estuaries in May-August, beginning with lower latitudes [@steimle1999_scup]. Eggs take 2-3 days to hatch depending on temperature. The larval stage lasts from 2 mm TL to 18-19 TL; the duration of this period is unclear. Larval distributions are highest in inshore bays and estuaries, suggesting that eggs and larvae do not travel far during planktonic stages [@steimle1999_scup]. The biggest cue for larval settlement is size (\~25 mm), with size in part being a function of temperature - most common at 15-20°C [@steimle1999_scup]. Larval diets are poorly understood, but larvae have been successfully reared on zooplankton in lab experiments [@bowman1987food]. Early juveniles consume copepods, so larval scup may also consume copepods [@michelman1988biology]. Larval predators include plantivorous medusae, crustaceans, and fishes [@steimle1999_scup]. Juveniles have been caught in intertidal and subtidal habitats, over sand, silty-sand, shell, mud, mussel beds and eelgrass (*Zosteria marina*). Offshore winter-spring distributions indicate that they occur in habitats ranging from relatively flat, open, sandy-silty bottoms to the head of submarine canyons, and other areas with topographical relief and varying sediments. Juveniles can use biogenic depressions, sand wave troughs, and possibly mollusk shell fields for shelter in winter, suggesting structure may be important to juveniles [@able1998first]. Juveniles primarily feed on polychaetes, epibenthic amphipods and other small crustaceans, mollusks, and fish eggs and larvae [@steimle1999_scup]. Prey size increases with individual size, with copepods and mysids being important to early juveniles and bivalve mollusks consumed by larger fish [@bowman1987food]. Adult scup are also benthic feeders and forage on a variety of prey, including small crustaceans (including zooplankton), polychaetes, mollusks, small squid, vegetable detritus, insect larvae, hydroids, sand dollars, amphipods, and small fish [@steimle1999_scup]. Similar to juveniles, their prey size scales with individual size. Diets can vary based on location, and season. Feeding slows or stops entirely in winter [@byron2010stability]. Adults are primarily benthic and utilize both estuarine and shelf benthos [@steimle1999_scup]. Age at maturity is around 2 years of age, with a maximum age between 15-20 years [@nefsc2015sixtieth]. Scup undertake extensive inshore/offshore migrations driven by temperature preferences. They migrate south and offshore in the fall and return to inshore bays and estuaries in the spring to spawn. Scup can become inactive or dormant if caught in cold pockets \< 6°C during their inshore spring migration and prefer temperatures 9-24°C [@steimle1999_scup]. The North Atlantic scup fishery is managed jointly by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission. The 2025 Management Track Assessment reported the Atlantic coast stock as not overfished and overfishing not occurring [@nefsc2025scup].
 
 ## Supplemental Scores
 
@@ -486,7 +498,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Throughout the year, Scup exposure ranges from Low to High (@fig-exp-month-Scup). Exposure is greatest September through November due to high bottom temperature, oxygen, and salinity exposure (@fig-exp-month-tm-Scup).
 
 ```{r}
 #| echo: false
@@ -539,7 +551,7 @@ dir_path <- here::here("figures/Scup")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +582,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Scup distributions were driven by bottom temperature and aragonite solubility (@fig-radar-Scup). Temperatures drive inshore/offshore migrations in scup [@steimle1999_scup]. Scup may also use structural habitat, including shellfish beds [@able1998first]. When only these factors were used to calculate exposure, scores were Low due to the lack of overlap in high bottom temperature and aragonite saturation state exposures (@fig-exp-imp-Scup, @fig-sum-imp-Scup).
 
 ```{r}
 #| echo: false
@@ -621,7 +633,7 @@ dir_path <- here::here("figures/Scup")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +659,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-Scup
-#| fig-cap: "As in @fig-sum-tab for Scup, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-Scup for Scup, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

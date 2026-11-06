@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** Moderate
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Spanish mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Low             | None |
+| *Exposure*           | Very High         | Moderate             | Decrease |
+| *Vulnerability*      | Moderate         | Low             | Decrease |
+| *Directional Effect* | Positive         | Neutral             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Spanish mackerel is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nSpanish mackerel is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Spanish mackerel received a **Low** sensitivity score. Certainty was 100% according to bootstrap analysis (@fig-sum-tab-spanmack). No attributes scored higher than 2.5. The highest attribute score was for Other Stressors (2.4) (@fig-sum-tab-spanmack). Spanish mackerel adults use estuarine water column habitats, which are classified as highly vulnerable due to impacts of stratification, hypoxia, increased fresh water runoff, and habitat loss [@guyant2022northeast].
+
+Similarly, in the previous Climate Vulnerability Assessment, Spanish Mackerel was also given a Low sensitivity score and no attributes scored above 2.5 [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Spanish mackerel had an average Exposure score of **Moderate** (2.44 +/- 0.91) (@fig-sum-tab-spanmack). Exposure was High in Chesapeake Bay and off the coasts from New Jersey to North Carolina, with the exception of the mouth of Chesapeake Bay, where exposures were Low (@fig-exp-spanmack). 
+
+In the previous Assessment, Spanish mackerel received a Very High Exposure score, driven by high sea surface temperature, air temperature and ocean acidification exposure scores [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Spanish mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Spanish mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for Spanish Mackerel was **Low** (2.44 +/- 0.91) (@fig-sum-tab-spanmack). There was little variation throughout their range (@fig-vuln-spanmack). 
+
+In the previous Assessment, Spanish Mackerel received a Moderate score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+85% of data quality scores were greater than or equal to 2, indicating strong data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-spanmack).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+Mean model confidence score for spanish mackerel was 2.15 (+/- 0.22) indicating moderate confidence in the ensemble model. Experts stated that predicted distributions met expectations but low sample size decreased scores. The model AUC score was 0.99 indicating that the model had excellent predictive performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Spanish mackerel remained stable between 1993 and 2023. The northern edge of the core habitat and overall species distribution moved northward, resulting in a shift in the weighted centroid 33 km to the north-northeast (@fig-shifts-spanmack). 
+
+Spanish mackerel are expected to significantly expand their core habitat and range throughout the Northeast Shelf by 2035. Core habitat is predicted to expand from the coast of Maryland to south of Cape Cod. Similarly, Spanish mackerel are expected to expand their range to the coast of Gulf of Maine and Georges Bank (@fig-shifts-spanmack). As a result, the weighted centroid is expected to shift 360 km northeast. 
+
+In the previous Assessment, spanish mackerel received a High Distributional Vulnerability rank due to their habitat preferences, seasonal migrations, and broad larval dispersal [@hare2016vulnerability].
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 8,329 | 75,434 | 5.36 | 3.93 |
+| 2019-2023 | 32.9 km NNE | 11,404 (+3,075) | 82,357 (+6,923) | 5.61 (+0.25) | 4.41 (+0.48) |
+| 2031-2035 | 359.5 km NE | 69,287 (+57,883) | 219,083 (+136,726) | 7.86 (+2.24) | 9.22 (+4.81) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +442,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predict that climate change will have a **neutral** effect on Spanish mackerel. Certainty was 92%. Spanish mackerel prefer temperatures between 21-27 C, so warming temperatures will likely expand suitable habitat [@berrien1977biological]. Spawning, however, occurs in coastal areas and estuaries such as Chesapeake Bay [@cooksey1996reproductive] [@mceachran1980distribution] These habitats are vulnerable due to anthropogenic impacts and may impact reproductive success [@guyant2022northeast]. The previous Climate Vulnerability Assessment predicted that Spanish mackerel would be positively impacted by climate change [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Little work exists on the effects of climate on Spanish mackerel populations in the Northwest Atlantic. Temperature likely limits movement; they are not found in waters colder than 18°C [@berrien1977biological]. Rising ocean temperatures may expand suitable habitat in the Mid-Atlantic and north to New England. Larval Spanish mackerel were largely resistant to contaminants from the Deepwater Horizon oil spill, and larval abundance did not differ before v. after the spill [@ransom2016condition].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Spanish mackerel are a migratory, schooling fish found along the eastern United States and Gulf from New York to Florida [@godcharles1986species]. There are two Spanish mackerel stocks, one in the South Atlantic and one in the Gulf of America [@sedar2022sedar78] [@sedar2023sedar81]. The Atlantic stock overwinters off the Florida coast and migrates northward to the Mid-Atlantic in the spring and early summer. They return south to Florida once the Mid-Atlantic cools in the fall [@berrien1977biological]. Spanish mackerel prefer temperatures 21-27°C and are not seen below 18°C [@berrien1977biological]. Spawning occurs from May to September along the southeast Atlantic coast, with lower latitudes spawning earlier than higher latitudes [@collins1987larval]. In Chesapeake Bay, spawning occurs from June to August, peaking in June [@cooksey1996reproductive]. Females are batch spawners, releasing as many as 1.5 million eggs over the spawning season [@collins1987larval]. Larval collection data indicate that spawning occurs at depths of 12-35 meters over the inner continental shelf including estuarine and coastal areas [@mceachran1980distribution]. Hatching occurs approximately 25 hours after fertilization at water temperatures averaging 26ºC. Larvae and early juveniles grow 1.9 mm per day for approximately the first 23 days of life. From 23-40 days, growth is accelerated, with young fishes growing as much as 5 mm per day. Thereafter, growth slows to approximately 2.1 mm per day [@schmidt1993age]. Larvae are found in surface waters between 19.6–29.8°C with a salinity of 28.3–37.4 ppt. It is unclear if there is a dependency on currents for transport to nursery habitats [@godcharles1986species]. Larvae feed on other larval fishes such as carngids, clupeids, and engraulids and crustaceans [@berrien1977biological]. Juveniles and adults are voracious, opportunistic, carnivores. Food consists mostly of small fishes with lesser quantities of pandalid and penaeoid shrimps and squids. Clupeoids such as round herring, thread herring, menhaden, and alewives, along with anchovies, are important forage species. They seldom feed on bottom invertebrates [@bowman2000food] [@berrien1977biological]. Spanish mackerel reach maturity around 1-1.5 years of age [@juan2013life] with a maximum lifespan of around 12 years [@sedar2022sedar78]. They are largely preyed upon by dolphins, sharks, and tunas [@berrien1977biological]. Management of Spanish mackerel in state waters is coordinated by the Atlantic States Marine Fisheries Commission (ASMFC) Coastal Pelagics Management Board. Both stocks are not overfished or subject to overfishing [@sedar2022sedar78] [@sedar2023sedar81].
 
 ## Supplemental Scores
 
@@ -486,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure scores ranged from Low to High across months, with High scores in May, June, and December (@fig-exp-month-spanmack). These patterns were driven primarily by sea surface salinity and surface pH exposures (@fig-exp-month-tm-spanmack).
 
 ```{r}
 #| echo: false
@@ -539,7 +549,7 @@ dir_path <- here::here("figures/Spanish mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +580,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Sea surface temperature and salinity, as well as small and medium zooplankton biomass were important dynamic drivers of species distributions (@fig-radar-spanmack). Spanish mackerel prefer warmer temperatures [@berrien1977biological]. They are generalist predators on smaller fishes [@bowman2000food] [@berrien1977biological]. When these factors were used to calculate exposure, the mean exposure score decreased to Low (1.3 +/- 0.62) (@fig-sum-imp-spanmack). These scores were greatest in Chesapeake Bay and off the coast of Maryland and Virginia (@fig-exp-imp-spanmack).
 
 ```{r}
 #| echo: false
@@ -621,7 +631,7 @@ dir_path <- here::here("figures/Spanish mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +657,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-spanmack
-#| fig-cap: "As in @fig-sum-tab for Spanish mackerel, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-spanmack for Spanish mackerel, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

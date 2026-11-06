@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** High
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Bluefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Low             | None |
+| *Exposure*           | High         | High             | None |
+| *Vulnerability*      | Low         | Low             | None |
+| *Directional Effect* | Positive          | Neutral             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Bluefish is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nBluefish is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Bluefish received a **Low** sensitivity score, with a certainty of 69% (@fig-sum-tab-blue). The only attribute that received a score greater than 2.5 was Juvenile Habitat Requirements (4) (@fig-sum-tab-blue). Bluefish rely entirely on salt marshes and submerged aquatic vegetation as juveniles; both habitats are considered highly vulnerable to future climate change [@guyant2022northeast].
+
+Bluefish also received a Low sensitivity score in the 2016 Assessment. Similar to our results, Early Life History Requirements was the only attribute to score above 2.5 [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure was **High** (3.11 +/- 0.69) (@fig-sum-tab-blue). Bluefish exposure was Very High along Georges Bank and south of Cape Cod, and Low off the coast of Chesapeake Bay (@fig-exp-blue). These patterns were driven by high exposure to changes in sea surface temperature, salinity, and pH (@fig-fact-exp-blue). 
+
+In the previous Assessment, Bluefish also received a High Exposure score due to high exposure to sea surface temperature and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Bluefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Bluefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for Bluefish was **Low** (3.11 +/- 0.69) due to Low Sensitivity scores (@fig-sum-tab-blue). Vulnerability was Moderate along Georges Bank and south of Cape Cod but Low throughout the rest of their range (@fig-vuln-blue). 
+
+In the previous Assessment, Bluefish also received a Low Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+97% of data quality scores were greater than or equal to 2, indicating excellent data quality. No data gaps (mean attribute data quality score \< 2) were identified (@fig-sum-tab-blue).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The bluefish mean model confidence score was 2.6 (+/- 0.3), indicating high confidence in the model. Experts stated that the final model captures the species distributions well. There were spatial patterns in residuals, particularly during the fall migration, but this behavior varies with interannual shifts in temperature, so residuals were expected. The ensemble model AUC was 0.95 indicating that the model had excellent prediction skill. 
 
 ## Additional Metrics
 
@@ -391,13 +396,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Bluefish distributions contracted closer to shore between 1993 and 2023, resulting in significant habitat area losses. The northern edge of bluefish’s range also shifted southward (@fig-shifts-blue). During this time, the weighted centroid shifted 18 km southwest. 
+
+Under near future climate conditions, bluefish core habitat area is predicted to increase to near 1993 levels (@fig-shifts-blue). The weighted centroid is predicted to shift 14 km northeast, back towards the 1993 location. 
+
+In the previous Assessment, bluefish received a High Distributional Vulnerability Rank due to high adult mobility, large seasonal migrations, and high larval dispersal [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 49,512 | 167,963 | 6.80 | 7.86 |
+| 2019-2023 | 17.6 km SW | 46,260 (-3,252) | 163,618 (-4,344) | 6.42 (-0.37) | 7.94 (+0.08) |
+| 2031-2035 | 13.5 km NE | 48,114 (+1,854) | 164,983 (+1,364) | 6.42 (0) | 7.94 (0) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +441,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Bluefish are expected to be **neutrally** impacted by climate change. Expert certainty was 95%. Distributions are shifting north and east and warming temperatures may expand the spawning season [@Tyrell2022]. However, there is a concern that seasonal mismatches may occur if juveniles arrive in estuaries before their prey, which may impact recruitment [@Taylor2006]. In the original Assessment, bluefish were predicted to be positively impacted by climate change due to expanding distributions and spawning seasons [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+There has been a documented shift in bluefish distribution, spawning, habitat use in the Mediterranean [@Sabates2012] [@VillegasHernandez2015]. Bluefish distributions in the Northwest Atlantic seem to be shifting north and east [@Tyrell2022]. Increasing fall sea surface temperatures may extend spawning season further into the calendar year [@Tyrell2022]. If warming alters spawning phenology, there are concerns that juveniles may arrive in estuaries before their prey. Seasonal mismatches have been shown to impact growth, body condition, and reproductive success [@Taylor2006]. Changing distributions of prey species as a result of climate change may alter interactions between bluefish and their prey [@Whitfield2026].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Bluefish inhabit temperate and tropical surface waters in the North Atlantic from Maine to the Atlantic coast of Florida [@Shepherd2006]. Bluefish in the North Atlantic are a single, migratory stock with two discrete spawning periods. The first occurs during March-May near the edge of the continental shelf of the South-Atlantic Bight. The second occurs between June and August in the Mid-Atlantic Bight [@Shepherd2006]. Eggs hatch after 46-48 hours at 18 - 22.2°C to pelagic larvae [@Deuel1966]. Larvae spawned in the South Atlantic (spring-spawned cohort) are subject to advection north via the Gulf Stream and inshore via warm core rings. Eggs in the southern part of the Mid-Atlantic Bight may be advected south and offshore [@Shepherd2006]. Transport of larvae and/or juveniles across the shelf- slope region may be aided by wind-driven surface flow [@Hare1996]. @Sherman1984 note that wide distribution of bluefish larvae over the shelf reduces their vulnerability to the predator field and environmental perturbation. Larvae prey on copepods [@Shepherd2006]. Peak abundance of larval bluefish in Southern New England and the Mid-Atlantic Bight coincided with zooplankton production [@Sherman1984]. Changes in prey availability and distribution can impact bluefish condition and reproductive success [@Taylor2006]. Juvenile bluefish inhabit estuaries, bays, and coastal oceans with sand, oyster beds, and submerged aquatic vegetation habitats [@McBride1991]. Juveniles enter estuaries when temperatures are greater than 13-15°C and leave when temperatures fall below 10-12°C [@Smith1994]. Juvenile migration into estuarine habitats appears tied to a shift in eating other fish. In estuaries, adults and juveniles eat whatever taxa are locally abundant (fish, crustaceans, shrimp, and polychaetes). In ocean habitats, young-of-the-year bluefish switch to piscivory predation with increasing size, similar to estuarine habitats [@Marks1996]. Bluefish are opportunistic foragers, and the composition of adult bluefish diet depends largely on the available prey, but they consume similar prey items as juvenile bluefish [@Shepherd2006]. Bluefish have long been recognized as a notable predator of forage fish [@Tyrell2022]. Adult bluefish conduct seasonal migrations following warmer waters, overwintering in the south and moving north in the spring and summer [@Shepherd2006]. Migrations may be cued by photoperiod as well, and have been observed to shift northward in warm years [@Nye2009]. Shortfin mako sharks are identified as a major predator of bluefish and may consume more individuals than removed by the fishery [@Wood2009]. Most bluefish are mature by age 2, with approximately half maturing by age 1 [@NEFSC2015_bluefish]. The maximum age for bluefish in the North Atlantic is 12 years [@Salerno2001]. In the Northwest Atlantic, bluefish are managed by the Mid-Atlantic Fishery Management Council and Atlantic States Marine Fisheries Commission. The last stock assessment occurred in 2025, where bluefish were found to not be overfished nor is overfishing occurring [@NEFSC2025_bluefish].
 
 ## Supplemental Scores
 
@@ -486,7 +495,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+There was little month-to-month variability in exposure for bluefish (@fig-exp-month-blue). Exposure was mostly High month to month, but declines in June and December due to declines in salinity exposure (@fig-exp-month-tm-blue).
 
 ```{r}
 #| echo: false
@@ -539,7 +548,7 @@ dir_path <- here::here("figures/Bluefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +579,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Sea surface temperature, surface salinity, and small zooplankton biomass were the major drivers of bluefish distribution (@fig-radar-blue). While adult bluefish are piscivores, larvae are dependent on copepod prey [@Shepherd2006]. Bluefish juveniles utilize estuary habitats, and temperature is a major driver of migration timing [@Smith1994]. When only these important factors were used in the exposure calculation, exposure was Moderate due to changes in zooplankton biomass exposure (@fig-exp-imp-blue; @fig-sum-imp-blue).
 
 ```{r}
 #| echo: false
@@ -621,7 +630,7 @@ dir_path <- here::here("figures/Bluefish")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +656,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-blue
-#| fig-cap: "As in @fig-sum-tab for Bluefish, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-blue for Bluefish, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

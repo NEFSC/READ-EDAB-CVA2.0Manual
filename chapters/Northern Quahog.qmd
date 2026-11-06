@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** High
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Northern Quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Very High         | High             | Decrease |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | Very High         | Moderate             | Decrease |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Northern Quahog is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nNorthern Quahog is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+The Northern Quahog received a **High** Sensitivity score, with 100% certainty. Three attributes received scores greater than 3: Adult Mobility (4), Relationship to Calcified Organisms (3.8), and Population Growth Rate (3.1) (@fig-sum-tab-nquahog).
+
+Northern Quahogs, like other bivalves, are mostly sessile, only capable of small-scale movements [@stanley1983species]. Similarly, they also have calcium carbonate shells that put them at risk of ocean acidification [@stanley1983species]. They are long-lived, slowly maturing species, reaching maturity at 1-3 years and maximum ages usually around 12-20 years, although 46 year old quahogs have been observed [@bricelj1992aspects] [@ridgway2011new].
+
+In the previous Climate Vulnerability Assessment for the Northeast Shelf, Northern Quahogs received a Very High sensitivity score. This was driven by Sensitivity to Ocean Acidification, Adult Mobility, and Other Stressors [@hare2016vulnerability]. In our analysis, Other Stressors received a score of 2.9 (@fig-sum-tab-nquahog).
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean Exposure for the Northern Quahog was **Moderate** (2.31 +/- 1.17) (@fig-sum-tab-nquahog). Exposure was Very High along Georges Bank and Low off the coast of the DelMarVa Peninsula (@fig-exp-nquahog). These patterns were driven by bottom temperature, oxygen, and salinity exposures (@fig-fact-exp-nquahog).
+
+In the previous assessment, Northern Quahog received a High Exposure score [@hare2016vulnerability]. This score was driven by high sea surface temperature, air temperature, and ocean acidification exposure scores [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Northern Quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Northern Quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for Northern Quahog was **Moderate** (6.94 +/- 3.51) (@fig-sum-tab-nquahog). This was driven by Very High vulnerability scores on Georges Bank (@fig-vuln-nquahog). 
+
+In the previous Assessment, Northern Quahog received a Very High Vulnerability score, driven by Very High sensitivity scores [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+88% of data quality scores were greater than or equal to 2, indicating strong data quality. Only Stock Size/Status was considered a data gap (mean attribute data quality \< 2) (@fig-sum-tab-nquahog).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The Northern Quahog ensemble model received a 0.5 (+/- 0.5) mean model confidence score, indicating experts had no confidence in the final model. The primary concerns with the model were low sample size and a lack of predictions in inshore regions due poor sampling. The ensemble model AUC for Northern Quahog was 0.73, indicating that the model has fair predictive power. 
 
 ## Additional Metrics
 
@@ -391,13 +398,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Northern Quahog available habitat declined significantly between 1993 and 2023. Most habitat loss occurred within the Gulf of Maine and on the continental shelf south of Long Island and New England (@fig-shifts-nquahog). The weighted centroid shifted 38 km west-southwest. 
+
+Under near future climate conditions, northern quahog habitats are not predicted to shift significantly. Distributions south of Long Island are expected to return to 1993 distributions (@fig-shifts-nquahog). The weighted centroid is predicted to shift 32 km northeast. 
+
+In the previous Assessment, the northern quahog received a High Distributional Vulnerability Rank [@hare2016vulnerability].
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 79,139 | 193,388 | 6.86 | 9.30 |
+| 2019-2023 | 37.7 km WSW | 63,468 (-15,671) | 177,678 (-15,710) | 6.98 (+0.12) | 9.46 (+0.16) |
+| 2031-2035 | 32.3 km NE | 68,821 (+5,353) | 181,775 (+4,097) | 6.80 (-0.19) | 9.62 (+0.16) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +444,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predict that the Northern Quahog will be **negatively** impacted by climate change, with 70% certainty. Temperature and salinity are important to reproductive success and settlement – increasing temperatures outside the preferred temperature range could inhibit spawning and increased freshwater intrusions could inhibit metamorphosis [@stanley1983species] [@kennish1975effects]. Eutrophication and ocean acidification could also impact stock fitness [@carmichael2004changes] [@ivanina2013interactive]. In the previous Climate Vulnerability Assessment for the Northeast shelf, experts also predicted that Northern Quahogs would be negatively impacted by climate change [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Temperature is the decisive factor for final gamete maturation in northern quahogs. @kennish1975effects cited 21 to 25°C as the required or preferred temperature range for spawning. Metamorphosis is inhibited at salinities below 17.5 to 20 ppt [@stanley1983species]. Increased freshwater intrusions (man-made or otherwise) have resulted in clam die offs. Eutrophication of habitat has resulted in reduced growth and health of stocks [@carmichael2004changes]. Recent research suggests that quahogs are relatively resilient to suboxic conditions, which may help protect them from predators that are more sensitive to these conditions [@altieri2006local]. Northern quahogs exposed to higher temperatures and elevated pCO^2^ led to decreased shell hardness and energy deficiency [@ivanina2013interactive]. Alternatively, northern quahogs exposed to marine heat wave conditions exhibited increased absorption efficiency, respiration rate, excretion rate, and scope for growth, indicating their ability to recover from persistent or repeated marine heat waves [@liang2024hard].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+The northern quahog, or hard clam, is a hard shell clam inhabiting intertidal and subtidal waters from the Gulf of St. Lawrence south to Florida [@kraeuter2001biology]. Spawning occurs from May through August, depending on latitude and temperature. Female hard clams require 2 - 2.5 months to spawn out completely, but the greatest release of eggs is during the initial spawning of the season [@stanley1983species]. Eggs hatch within 12-14 hours. Larvae are planktonic until metamorphosis, which occurs within 5-7 days at 30°C, or 16-24 days at 18°C [@stanley1983species] [@rice1992review]. Eggs may be carried by currents up to 25km from spawning sites. Larvae feed on phytoplankton, primarily dinoflagellates and use physical transport mechanisms to travel to the entrance of estuaries [@stanley1983species]. The clams prefer to settle on sandy substrate with a few small rocks and/or shells, and set more densely in sand than mud [@mackenzie1979management]. Juveniles likely consume phytoplankton or small zooplankton. The adult hard clam feeds by filtering out plankton and microorganisms that are carried along the bottom by currents [@stanley1983species], burrowing into the sediment and leaving their siphons exposed to feed. However, adults cease filter feeding at 6°C [@kraeuter2001biology]. They are preyed upon by gastropods, crabs, and starfish [@stanley1983species]. These clams have slow growth rates, reaching maturity at 1-3 years with a maximum lifespan of 12-20 years [@bricelj1992aspects], although they have been found up to 46 years [@ridgway2011new]. There are numerous reports of isolated incidents of hard clam disease causing high mortality rates. Disease may be related to a parasite (QPX - Quahog parasite unknown). The prevalence of QPX appears to be increasing [@smolowitz1998observations] [@dove2004histological]. Quahogs occur in areas of harmful algal blooms (HABs) and may act to reduce prevalence and length of HABs due to filtration. Negative effects of HABs on quahog have been noted, specifically the presence of HABs have been shown to impact growth rates [@cerrato2004effect]. Because these clams are primarily estuarine and inhabit specific bays and coastal zones, the fishery is managed on a localized, state-by-state basis rather than by federal fishery councils. Primary management tools include minimum legal size limits (typically 50 mm), gear restrictions, and daily bag limits [@ncdmf2025north] [@njdep2014inventory].
 
 ## Supplemental Scores
 
@@ -486,7 +498,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposures ranged from Low to High. Exposure was High from September through January (@fig-exp-month-nquahog). These patterns were driven by very high bottom temperature and oxygen exposure (@fig-exp-month-tm-nquahog).
 
 ```{r}
 #| echo: false
@@ -539,7 +551,7 @@ dir_path <- here::here("figures/Northern Quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +582,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, net primary productivity, and downward POC flux were the most important dynamic drivers of quahog distributions (@fig-radar-nquahog). Northern quahog are benthic filter feeders [@stanley1983species]. Temperature is a known driver of feeding behaviors [@kraeuter2001biology]. When only these factors were used to calculate exposure, mean Exposure was Low throughout its range (@fig-exp-imp-nquahog, @fig-sum-imp-nquahog).
 
 ```{r}
 #| echo: false
@@ -621,7 +633,7 @@ dir_path <- here::here("figures/Northern Quahog")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +659,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-nquahog
-#| fig-cap: "As in @fig-sum-tab for Northern Quahog, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-nquahog for Northern Quahog, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Very High
+-   **Exposure:** Low
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Eastern Oyster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | High        | Very High             | Increase |
+| *Exposure*           | Very High        | Low             | Decrease |
+| *Vulnerability*      | Very High        | Moderate             | Decrease |
+| *Directional Effect* | Negative         | Neutral             | Increase |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Eastern Oyster is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nEastern Oyster is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+The Eastern oyster received a **Very High** sensitivity score, with 100% certainty according to bootstrap analysis (@fig-sum-tab-eoyster). Five attributes had scores greater than 3.5: Adult Mobility (4), Other Stressors (4), Relationship to Calcified Organisms (3.9), Complexity in Reproductive Strategy (3.8), and Egg and Larval Survival and Settlement Requirements (3.5) (@fig-sum-tab-eoyster).
+
+Eastern Oysters are sessile once they settle out of the plankton, and settle in estuarine habitats. As a result, they are exposed to a variety of stressors due to urbanization impacts such as hypoxia, loss of seagrass beds, dredging, and changes to freshwater inputs [@guyant2022northeast]. Spawning is initiated by warmer temperatures. Settling out of the plankton also is dependent on temperature and the presence of conspecifics. Because recruitment is density dependent, population collapse can be sudden.
+
+In the 2016 Assessment, Eastern Oysters received a High sensitivity score. This was driven by Sensitivity to Ocean Acidification, Adult Mobility, and Other Stressors, similar to our results [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for Eastern Oyster was **Low** (1.33 +/- 0.66) (@fig-sum-tab-eoyster). Scores were Moderate within Chesapeake Bay but were Low on the continental shelf (@fig-exp-eoyster). This was driven by high exposure to bottom temperature and oxygen changes within the Bay (@fig-fact-exp-eoyster). 
+
+In the previous assessment, eastern oysters received a Very High exposure score, driven by sea surface temperature, air temperature, and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/Eastern Oyster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/Eastern Oyster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,18 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean vulnerability for Eastern Oyster was **Moderate** (5.25 +/- 2.63) (@fig-sum-tab-eoyster). Vulnerability was highest in the Chesapeake Bay (@fig-vuln-eoyster). 
+
+In the previous Assessment, Eastern Oyster received a Very High Vulnerability score, driven by high and very high sensitivity and exposure scores, respectively [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+90% of data quality scores were greater than or equal to 2, indicating excellent data quality. Population Growth Rate and Stock Size/Status were identified as data gaps (mean attribute data quality score \< 2) (@fig-sum-tab-eoyster).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
-
+The eastern oyster ensemble model received a 1.2 (+/- 0.9) mean model confidence score, indicating low confidence in the model. Poor sample size drove down model confidence scores and the model struggled to predict nearshore habitats. The ensemble AUC score for the eastern oyster model was 0.95, indicating that the model had excellent ability to predict oyster presence/absence. 
 ## Additional Metrics
 
 ### Distribution Shifts:
@@ -391,13 +397,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Eastern oyster habitat was increasing between 1993 and 2015, but recently declined significantly (@fig-shifts-eoyster). The weighted centroid shifted 28 km west-southwest. 
+
+Under near future climate conditions, these trends are predicted to continue. Further habitat loss is predicted across the species range and the weighted centroid is predicted to shift a further 21 km southwest (@fig-shifts-eoyster). 
+
+In the previous Assessment, the eastern oyster received a Moderate Distributional Vulnerability Rank score [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 24,144 | 109,499 | 5.24 | 7.06 |
+| 2019-2023 | 28.3 km WSW | 17,191 (-6,954) | 103,316 (-6,182) | 4.99 (-0.25) | 6.90 (-0.16) |
+| 2031-2035 | 21.2 km SW | 15,968 (-1,223)  | 101,048 (-2,268) | 4.99 (0) | 6.73 (-0.16) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +442,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that climate change would have a **neutral** effect on Eastern Oysters. Certainty was low at 60%. While oysters live in vulnerable estuarine habitats [@guyant2022northeast], spawning occurs throughout the year when temperatures are warm [@berringan1991oyster]. Aquaculture programs also help contribute to population recovery [@mackenzie1981biotic]. In the previous Assessment, experts predicted that climate change would have a negative impact on Eastern Oysters [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Climate change, warmer temperatures, and perhaps different tidal ranges, may increase competition for resources with current competitors, like hooked mussel, invasive species such as *Didemnum* sp., or increase exposure to predators like veined rapa whelk [@white1996predators]. Depletion of oyster beds will also likely have negative effects for many marine species and habitats, for they provide refuge and homes for many fish and invertebrates species and help prevent erosion [@eobrt2007status]. Hurricanes can cover oysters in silt, wash them off beds, or impose extended “freshettes” on oyster beds to the degree that they are significantly impaired and need restoration. This may become more problematic, for hurricanes are thought to increase with increased warming temperatures and climate change [@perret1999oyster]. Since adult oysters are sessile and inhabit mainly highly vulnerable habitats in areas with high climate exposure, their spawning habitat is also highly vulnerable [@farr2021assessment].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Eastern oysters are found along the eastern U.S. from the Gulf of St. Lawrence to the Gulf of America. They inhabit brackish and salty waters, forming beds or reefs by attaching to each other or other hard substrate [@ozbay2014eastern]. Eastern oysters are a keystone species, and provide valuable habitat for benthic and intertidal organisms. Oysters are sessile filter feeders, contributing to increased water quality through reduced sediment suspension and nutrient uptake and sequestration [@ozbay2014eastern]. Eastern oyster populations in the Mid-Atlantic and Gulf declined in the 19th and 20th centuries, mainly from anthropogenic factors such as land use, habitat degradation, and overharvesting. Disease mortality from Dermo and MSX continues to diminish oyster recovery [@eobrt2007status]. Aquaculture production of oysters contributes to population recovery and habitat restoration programs across the East Coast [@mackenzie1981biotic]. Oysters spawn during the summer in the North and Mid-Atlantic and throughout most of the year in the South Atlantic when temperatures remain above 20°C and salinities above 10ppt [@berringan1991oyster]. The first larval stage (trochophore) is formed four to six hours following fertilization. Larvae normally settle two to three weeks after hatching, but can last up to 2 months [@eobrt2007status]. Larvae move both by passive and active (as development progresses) transport, although larval transport in estuaries seems to be minimal. A balance is reached where the larvae can find suitable areas to settle while still being retained in estuaries [@eobrt2007status]. Settlement ends at the end of the larval stage, and the larval duration is highly temperature dependent [@shumway1996natural]. @fritz1984selective found that planktotrophic oyster larvae fed upon a variety of phytoplankton taxa (coccoids, centrate diatoms, pennate diatoms, dinoflagellates, and flagellates). @baldwin1991omnivorous found that the larvae are actually omnivorous, preying on both autotrophic and heterotrophic plankton. Predation on oyster larvae is extremely high by filter-feeders in the water column and in the benthos. Along the Atlantic coast, drills have been responsible for mortality on 33% of spat in Long Island Sound. Oysters can compete with other mussels and barnacles for shell and substrate spaces, resulting in increased mortality when competitors are abundant [@kennedy1996biology]. Juveniles and adults feed primarily on phytoplankton and suspended detritus, relying on food-laden water being moved past them in order to extract food from the water column [@langdon1996digestion]. Maturity occurs between 1 and 3 years of age [@fsuml_oyster_lifecycle]. Several ages have been proposed, the most common being 20 years. Oysters in Maryland appear to survive at least 10 years based on plantings at restoration sites which are not thought to have received natural spat sets. It is likely that the maximum longevity is substantially longer than 10 years [@mddnr2025stock]. Wild and aquaculture harvest is managed by individual jurisdictions or states, and management guidelines vary [@ozbay2014eastern].
 
 ## Supplemental Scores
 
@@ -486,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure for the eastern oyster varied throughout the year (@fig-exp-month-eoyster). Exposure was Low from March through August due to low bottom temperature and oxygen exposure (@fig-exp-month-tm-eoyster). For the remainder of the year, exposure was Moderate to High (@fig-exp-month-eoyster).
 
 ```{r}
 #| echo: false
@@ -539,7 +549,7 @@ dir_path <- here::here("figures/Eastern Oyster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +580,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom salinity and aragonite solubility were important drivers of species distribution (@fig-radar-eoyster). Eastern Oysters live in estuarine habitats and build calcium carbonate shells [@ozbay2014eastern]. When these factors were used to calculate exposure, scores were Low (1.03 +/- 0.22) (@fig-sum-imp-eoyster, @fig-exp-imp-eoyster).
 
 ```{r}
 #| echo: false
@@ -621,7 +631,7 @@ dir_path <- here::here("figures/Eastern Oyster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +657,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-eoyster
-#| fig-cap: "As in @fig-sum-tab for Eastern Oyster, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-eoyster for Eastern Oyster, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

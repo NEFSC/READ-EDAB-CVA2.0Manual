@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Moderate
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/White hake")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Moderate        | Moderate             | None |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | Moderate         | Moderate             | None |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("White hake is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nWhite hake is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,11 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+White hake received a **Moderate** sensitivity score, with a certainty of 59%. Four attributes had scores greater than 2.5: Stock Size (3), Juvenile Habitat Requirements (2.9), Population Growth Rate (2.8), and Spawning Cycle (2.8) (@fig-sum-tab-whitehake).
+
+Spawning occurs in the spring months along the continental shelf near Georges Bank and the Mid Atlantic Bight [@fahay1989white]. Juveniles transition from pelagic to demersal at approximately two months, where eelgrass becomes an important habitat. These habitats are highly vulnerable [@guyant2022northeast]. White hake reach maturity at 2.5-2.8 year and have lifespans of approximately 20 years [@nefsc2013saw56]. The stock is under a rebuilding plan, but is not overfished nor is overfishing occurring [@nefsc2025whitehake].
+
+White hake also received a Moderate sensitivity score in the 2016 Climate Vulnerability Assessment. This was driven by Stock Status, Population Growth Rate, and Spawning Cycle, similar to our results.
 
 ### Exposure:
 
@@ -240,7 +243,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for White hake was **Moderate** (2.01 +/- 0.99) (@fig-sum-tab-whitehake). Exposure was Very High over Georges Bank and Moderate along the coast of Georges Bank. Farther from the coast, scores were Low (@fig-exp-whitehake). These patterns were driven by bottom temperature, salinity, and oxygen exposure (@fig-fact-exp-whitehake). 
+
+In the previous Assessment, White hake received a High exposure score. This previous score was driven by high sea surface temperature and ocean acidification exposure [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +256,7 @@ dir_path <- here::here("figures/White hake")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +301,7 @@ dir_path <- here::here("figures/White hake")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +335,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean Vulnerability for white hake was **Moderate** (4.02 +/- 1.98) (@fig-sum-tab-whitehake). Vulnerability was High over Georges Bank and Moderate along the coasts of the Gulf of Maine (@fig-vuln-whitehake). 
+
+In the previous Assessment, white hake also received a Moderate score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+85% of data quality scores were greater than or equal to 2, indicating strong data quality. Egg and Larval Survival and Settlement Requirements and Other Stressors were identified as data gaps (mean attribute data quality score \< 2) (@fig-sum-tab-whitehake).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The white hake ensemble model received a mean model confidence score of 2.4 (+/- 0.4) indicating moderate confidence in the model. Predicted distributions generally matched expert expectations, however, several noted that seasonal inshore/offshore migrations were missed, possibly due to poor sampling in known canyon habitats. The ensemble model AUC score was 0.89, indicating good model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +398,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+White hake experienced significant declines in both core habitat area and range between 1993 and 2023. They experienced losses primarily on the southern edge of their range. Their range also contracted closer to the continental shelf break (@fig-shifts-whitehake). The weighted centroid shifted 11 km north-northeast. 
+
+Under near-future ocean conditions, white hake core habitat declines are predicted. However, the overall range is predicted to expand. White hake are predicted to re-occupy areas on the shelf further from the shelf break (@fig-shifts-whitehake). The weighted centroid is predicted to shift less than 2 km to the west-southwest. 
+
+White hake received a High Distributional Vulnerability rank in the previous assessment [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 48,593 | 156,517 | 4.05 | 4.49 |
+| 2019-2023 | 10.7 km NNE | 46,152 (-2,441) | 148,771 (-7,745) | 3.87 (-0.19) | 4.25 (-0.24) |
+| 2031-2035 | 1.4 km WSW | 45,795 (-356) | 150,073 (+1,301) | 3.87 (0) | 4.33 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +443,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that white hake will be **negatively** impacted by climate change. Certainty was 70%. This is similar to the results of the previous Assessment [@hare2016vulnerability]. White hake have a narrow temperature preference (9-13 °C) and as a result, distributions have been shifting northward as bottom waters warm [@lafreniere2023what]. Recruitment is strongly linked to circulation patterns, which may be impacted by future change [@han2008dispersion] [@ings2008episodic].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+White hake are a common groundfish species in the Gulf of Maine, which is warming faster than most of the world’s oceans [@pershing2021climate]. In response to warming in the Gulf of Maine, white hake show a preference for narrow temperature (9-13°C) and depth (55-100 m) ranges and display a gradual northward movement in their center of gravity [@lafreniere2023what]. @nye2009changing observed a range contraction in white hake in the Gulf of Maine. White hake may be affected by changes in circulation patterns. Small white hake larvae have been collected in early summer in a Gulf Stream warm core ring seaward of southern Scotian Shelf and southeast of Georges Bank. Patterns of strong recruitment have been linked to the strength of the Labrador Current on the Great Banks and strong onshore transport and downwelling conditions in coastal Newfoundland [@han2008dispersion] [@ings2008episodic].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+White hake are a groundfish species inhabiting deep water from Newfoundland to the Mid-Atlantic Bight [@chang1999essential]. Males reach maturity at 2.5 years and females at 2.8 years; both males and females have a lifespan of around 20 years of age [@nefsc2013saw56]. In the Gulf of Maine, white hake of all ages tend to migrate inshore in warmer months and disperse into deeper waters in colder months, while hake in the south move offshore to spawn in the spring; fall movements may be linked to prey movements [@langton1994selected]. Based on the distribution and abundance of pelagic juveniles, as well as circulation patterns throughout the region, @fahay1989white suggested that the southern portion of the stock (below the Gulf of St. Lawrence) spawns in early spring (April-May) in deep waters along the continental slope, primarily off southern Georges Bank and the Mid-Atlantic Bight. White hake eggs are buoyant, and hatch in the water column in 3-7 days [@fahay1983guide]. Larvae may be affected by oceanographic conditions like warm core rings, the Gulf Stream, and Labrador Current for transport [@han2008dispersion] [@ings2008episodic]. White hake prefer temperatures between 7-20°C [@chang1999essential]. Eggs, larvae, and early juveniles are pelagic; older juveniles and adults are demersal. Most catches occur in Canadian waters at depths between 175 to 375 m with no differences between mature and immature hake. In the Gulf of Maine, depth preferences are 55-100 m [@fahay1989white] [@nozeres2015review]. Juvenile white hake settle to the bottom at around 2 months of age. Pelagic juveniles are in the upper water column during the daytime. Demersal juveniles inhabit muddy and fine grained sandy bottom sediment [@chang1999essential] [@fahay1989white]. Demersal juveniles feed primarily on polychaetes, shrimps, and other crustaceans [@bowman1981food]. Adults feed on fish, including juveniles of their own and similar species (silver hake), Atlantic herring, Gulf Stream flounder, and possibly alewife, shrimps, krill, and other crustaceans [@langton1994selected] [@nozeres2015review]. The white hake fishery is managed as a single stock by the New England Fisheries Management Council, under the Northeast Multispecies (Small-Mesh) Fishery Management Plan. The stock is under a rebuilding plan, but is not overfished and overfishing is not occurring [@nefsc2025whitehake].
 
 ## Supplemental Scores
 
@@ -486,7 +497,8 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure was consistent across months. Exposure was Low for most of the year, and spiked to High in August due to spikes in medium zooplankton biomass exposure (@fig-exp-month-whitehake; @fig-exp-month-tm-whitehake).
+
 
 ```{r}
 #| echo: false
@@ -539,7 +551,7 @@ dir_path <- here::here("figures/White hake")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +582,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, and salinity as well as small and large zooplankton biomass were important dynamic drivers of white hake distribution (@fig-radar-whitehake). White hake are a demersal groundfish species. Their inshore and offshore movements are dictated by temperature and prey movements [@langton1994selected]. Adults are generalist piscivores [@langton1994selected] [@nozeres2015review]. When only these factors were used to calculate exposure, scores remained Moderate (1.89 +/- 0.99) (@fig-sum-imp-whitehake, @fig-exp-imp-whitehake).
 
 ```{r}
 #| echo: false
@@ -621,7 +633,7 @@ dir_path <- here::here("figures/White hake")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +659,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-whitehake
-#| fig-cap: "As in @fig-sum-tab for White hake, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-whitehake for White hake, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

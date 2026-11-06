@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** High
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Atlantic mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Moderate         | Low             | Decrease |
+| *Exposure*           | High         | High             | None |
+| *Vulnerability*      | Moderate         | Low             | Decrease |
+| *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Atlantic mackerel is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nAtlantic mackerel is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Atlantic mackerel received a **Low** sensitivity score with a certainty of 100% (@fig-sum-tab-mackerel). The only score greater than 2.5 was Stock Size (3.2) (@fig-sum-tab-mackerel). Stocks are not currently overfished or experiencing overfishing according to the most recent stock assessment. The stock is rebuilding to target levels [@nefsc2025_mack].
+
+In the previous Climate Vulnerability Assessment, mackerel were given a Moderate sensitivity score [@hare2016vulnerability]. This previous score was driven by Stock Size, Egg and Larval Survival and Settlement Requirements (Early Life History Requirements), and Spawning Cycle. Stock sizes were not classified at the time of the last assessment, and it was unclear how spawning cycle and early life stages would be impacted by warming waters [@hare2016vulnerability]. Recent work has suggested that spawning habitats will likely shift west and north under future warming conditions [@bruge2016].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Atlantic mackerel had an average Exposure score of 3 (+/- 0.25), resulting in a High Exposure score (@fig-sum-tab-mackerel). Scores were consistent across the shelf, with the highest exposure observed on Georges Bank (@fig-exp-mackerel). These scores were driven by sea surface temperature, salinity, and pH exposure scores (@fig-fact-exp-mackerel). 
+
+In the previous Assessment, mackerel also received a High exposure score, driven by high exposure to changes in sea surface temperatures and pH [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Atlantic mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Atlantic mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+The mean overall Vulnerability score was **Low** (3 +/- 0.25) (@fig-sum-tab-mackerel). Scores were low throughout the continental shelf with the exception of Georges Bank, where scores were moderate on portions of the Bank (@fig-vuln-mackerel).
+
+In the previous Assessment, mackerel received a Moderate vulnerability score, driven in part by a moderate sensitivity score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+95% of sensitivity attribute data quality scores were greater than or equal to 2, indicating excellent data quality. Only Relationship to Calcified Organisms was considered a data gap (mean attribute data quality score \< 2).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The Atlantic mackerel ensemble species distribution model received a mean model confidence score of 1.4 (+/- 0.5), indicating low confidence in the model. Experts noted that the model missed known seasonal shifts in distribution, but also highlighted that mackerel distributions are patchy and diffuse. The ensemble model’s AUC was 0.73, indicating fair performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Mackerel habitats have been highly variable between 1993 and 2023. Habitat areas declined around 2010 and have since recovered to near 1993 levels. The southern edge of mackerel ranges have moved northward (@fig-shifts-mackerel). The weighted centroid shifted 16 km northeast between 1993 and 2023. 
+
+Mackerel habitats are predicted to expand in future ocean conditions. Both core habitat area and mackerel range are predicted to increase. While the southern edge of the range is predicted to continue to move northward, mackerel are expected to move into new areas in southern New England (@fig-shifts-mackerel). Distributions are predicted to continue to shift eastward by 5 km. 
+
+In the previous Assessment, mackerel received a High Distributional Vulnerability rank, due to their high mobility, migrations, and high larval dispersal [@hare2016vulnerability].
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 101,852 | 252,291 | 6.80 | 9.06 |
+| 2019-2023 | 16.1 km NE | 99,283 (-2,569) | 251,261 (-1,030) | 6.61 (-0.19) | 9.14 (+0.08) |
+| 2031-2035 | 5.3 km ENE | 99,418 (+135) | 251,856 (+594) | 6.55 (-0.06) | 9.06 (-0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +441,16 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Atlantic mackerel are likely to be **negatively** impacted by climate change. Expert certainty was 83%. Regional warming has resulted in northeasterly shifts in mackerel distributions. Spawning habitat could increase in more northern regions such as the Gulf of St Lawrence as mackerel seek out preferred temperatures. This result is similar to the results from the 2016 Climate Vulnerability Assessment for the region [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Atlantic mackerel are sensitive to temperature changes, particularly temperatures greater than 5°C [@overholtz2011]. From 1968 to 2008, the distribution of mackerel in the Northwest Atlantic has shifted roughly 250km north and east in addition to changes in depth distribution to more shallow on-shelf waters. These changes in position and depth are known to be correlated with the gradual warming of the Northwest Atlantic [@overholtz2011]. Atlantic mackerel egg distribution has also shifted northeastward as a consequence of warming, depleting egg production in important spawning locations in southern New England [@richardson2020]. @bruge2016 projected changes in Northeast Atlantic mackerel spawning distribution under future climate scenarios, and found that the spawning center of gravity is expected to shift westward and northward. @mbaye2019 investigated effects of environmental conditions on Atlantic mackerel spawning habitat in the Gulf of St. Lawrence. Generalized additive model (GAM) results showed that spawning habitat in the Gulf of St. Lawrence could expand and extend to western and southern Newfoundland. 
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Atlantic mackerel in the Northwest Atlantic inhabit cold and temperate continental shelf waters from the Gulf of St Lawrence to Cape Lookout, North Carolina [@studholme1999]. Spawning occurs from April to August in the Northwest Atlantic and progresses from south to north with warming temperatures and following migration patterns [@sette1943]. There are two spawning contingents: the southern contingent spawns from April to July in the Mid-Atlantic Bight and Gulf of Maine, and the northern contingent spawns in the southern Gulf of St. Lawrence in June and July [@berrien1982] [@morse1987]. Temperature is a cue for spawning. Spawning does not occur until water has warmed to 8°C with most egg production occurring between 9-14°C [@sette1943]. More recent work has shown that mackerel spawning and migration timing is negatively correlated with sea surface temperature [@jansen2011]. Early life stage development happens quickly, with eggs hatching in 4-7.5 hours, depending on temperature [@berrien1982]. Larvae (< 13 mm) occur primarily in offshore waters from Chesapeake Bay to southern Gulf of St. Lawrence [@sette1943]. Larval and juvenile depth varies diurnally and with age [@collette2002_mack]. Larvae feed primarily on zooplankton and copepods, and larvae > 6.4 mm are known to experience cannibalistic behavior [@castonguay2008]. Juveniles rely on water column habitats, both on the shelf, and in estuaries [@guyant2022]. Juveniles and adults are opportunistic feeders that prey on a wide range of crustaceans, copepods, planktonic organisms, and fishes [@sette1950]. Squid, seabirds and larger piscivores, including Atlantic cod, prey on juvenile mackerel [@studholme1999]. Adults over winter in moderately deep water, 70-200 m, along the continental shelf. After migrating inshore in April-May, they form the two spawning aggregations [@berrien1982]. Predators of adult mackerel include larger fish, sharks, skates, seabirds, and marine mammals (primarily whales and seals) [@studholme1999]. Atlantic mackerel are managed by the Mid-Atlantic Fishery Management Council under the Mackerel, Squid, and Butterfish Fishery Management Plan. As of the 2025 assessment, the stock is not overfished and overfishing is not occurring, but is rebuilding to target levels [@nefsc2025_mack].
+
 
 ## Supplemental Scores
 
@@ -486,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure was consistent for Atlantic mackerel. Exposure was High most of the year, with the exception of April and May, where exposure declined to Moderate due to declines in sea surface temperature exposure (@fig-exp-month-mackerel, @fig-exp-month-tm-mackerel).
 
 ```{r}
 #| echo: false
@@ -539,7 +549,7 @@ dir_path <- here::here("figures/Atlantic mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +580,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Sea surface temperatures and salinities were the major drivers of mackerel distributions (@fig-radar-mackerel). Mackerel are sensitive to sea surface temperatures [@overholtz2011; @jansen2011], and juveniles rely on estuarine habitats where they will be exposed to changes in salinity [@guyant2022]. When exposure was calculated with only these factors, the mean exposure score decreased to Moderate (1.71 +/- 0.85) (@fig-sum-imp-mackerel). Exposure scores were greatest in the Gulf of Maine and on the mid continental shelf where high exposure to temperature and salinity changes overlapped (@fig-exp-imp-mackerel).
 
 ```{r}
 #| echo: false
@@ -621,7 +631,7 @@ dir_path <- here::here("figures/Atlantic mackerel")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +657,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-mackerel
-#| fig-cap: "As in @fig-sum-tab for Atlantic mackerel, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-mackerel for Atlantic mackerel, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

@@ -1,4 +1,4 @@
-here::i_am("READ-EDAB-CVA2.0Manual/utils/get_narrative_figures.R")
+here::i_am("utils/get_narrative_figures.R")
 
 species_names <- c(
   "American Lobster",

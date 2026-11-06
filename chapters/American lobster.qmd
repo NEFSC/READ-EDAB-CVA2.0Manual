@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** High - Very High
+-   **Exposure:** Moderate
+-   **Vulnerability:** Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/American Lobster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Moderate         | High - Very High             | Increase |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | Moderate         | Moderate             | None |
+| *Directional Effect* | Neutral         | Negative             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("American Lobster is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nAmerican Lobster is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,13 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+The **Gulf of Maine/Georges Bank** stock of American lobster received a **High** sensitivity score and the **Southern New England** stock scored **Very High.** Certainty was high for both stocks, with 99% certainty for the Gulf of Maine/Georges Bank stock and 92% certainty for the Southern New England stock (@fig-sum-tab-lobster).
+
+Population growth rate and other stressors drove the scores for both stocks. Relationships to calcified organisms contributed to the High score for the Gulf of Maine/Georges Bank stock, and received a score of 3.5 for the Southern New England stock. Stock size had the highest score for the Southern New England Stock (@fig-sum-tab-lobster).
+
+Lobsters are long-lived, slow growing species that can reach ages of 50+ years. Disease and the introduction of new predators such as black sea bass and spiny dogfish impact lobsters across their range [@asmfc2025; @goldstein2025]. American lobsters are omnivores but diets are dominated by mollusks [@elner1987], which are likely to be impacted by ocean acidification.
+
+Sensitivity has increased since the last assessment, where lobsters received a Moderate score. Population growth rate and other stressors drove scores in both assessments [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +245,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for American lobster across its range was **Moderate** (2.11 +/- 0.95) (@fig-sum-tab-lobster). Exposure was Very High over Georges Bank and High in Southern New England and along the coast of the Gulf of Maine. Exposure was also High along the continental shelf break (@fig-exp-lobster). These patterns were driven by bottom temperature, oxygen, salinity, and aragonite saturation exposure (@fig-fact-exp-lobster).
+
+In the previous Assessment, American lobster received a High exposure score driven by sea surface temperature and ocean acidification [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +258,7 @@ dir_path <- here::here("figures/American Lobster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +303,7 @@ dir_path <- here::here("figures/American Lobster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +337,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean vulnerability for the American lobster was **Moderate** (6.33 +/- 2.85) across its range (@fig-sum-tab-lobster). Vulnerability was Very High over Georges Bank and High along the coast of the Gulf of Maine, in Southern New England, and along the continental shelf break (@fig-vuln-lobster). 
+
+In the previous Assessment, American lobster also received a Moderate Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The percent of data quality scores greater than 2 was 97% for the Gulf of Maine/Georges Bank stock and 95% for the Southern New England stock, indicating excellent data quality. For both stocks, Stock Size/Status was the only data gap (mean attribute data quality score \< 2) (@fig-sum-tab-lobster).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The mean model confidence score for American Lobster was 1.45 (+/- 0.45), indicating that experts had low confidence in the model. Experts stated that the model missed seasonal inshore and offshore migrations. The ensemble model’s AUC was 0.86, indicating good predictive performance.
 
 ## Additional Metrics
 
@@ -391,13 +400,16 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Between 1993 and 2023, the weighted centroid shifted nearly 29 km northeast. There were significant declines in lobster habitat along the southern and western edges of their distribution (@fig-shifts-lobster). 
+
+The American lobster weighted centroid is predicted to shift 4.5 km west-southwest under near future ocean conditions. Distributions are expected to expand westward and south (@fig-shifts-lobster). 
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 85,851 | 215,882 | 4.74 | 7.30 |
+| 2019-2023 | 28.6 km NE | 80,403 (-5,447) | 205,927 (-9,955) | 4.36 (-0.37) | 6.73 (-0.56) |
+| 2031-2035 | 4.5 km WSW | 81,912 (+1,509) | 207,712 (+1,784) | 4.36 (0) | 6.81 (+0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +444,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Both stocks are likely to be **negatively** impacted by climate change (certainties range from 81 – 100% based on bootstrap analysis of expert scores). Increased thermal stress and disease will continue to decrease the productivity of the stocks. In addition, new demersal predators such as black sea bass and spiny dogfish will increase predation pressures of juvenile and adult lobster. The directional effect was estimated to be neutral in the previous Assessment [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+The Northwest Atlantic has been warming at an exceptionally fast rate [@saba2016], which has contributed to declines in fecundity and population size in Southern New England [@goldstein2022] while the fishery in the central Gulf of Maine has increased dramatically [@lebris2018]. Temperatures have increased in the lobster’s inshore range, and evidence suggests that the productivity of the stock is severely compromised with increased thermal stress and disease [@asmfc2025]. The assemblage of predators of American lobster has shifted with warming conditions in the Gulf of Maine, with benthic and demersal predators, such as black sea bass (*Centropristis striata*) and spiny dogfish (*Squalus acanthias*) becoming increasingly present throughout the lobster’s range, taking the place of traditional predators, such as Atlantic cod (*Gadus morhua*). The effects of invasive and range-expanding species may also lead to greater predation risk for juvenile lobsters [@goldstein2025].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+American lobsters inhabit the coastal and oceanic waters of the Atlantic Ocean from Labrador to North Carolina. They are widely distributed within most of the coastal waters in the Northeast U.S. with some major offshore concentrations along the outer edge of the Continental Shelf and upper slope between Georges Bank and Delaware Bay [@mackenzie1985]. Spawning takes place during a 4 month period from late May through much of September, when females leave their solitary shelters about 7 days before molting to share the shelter of a dominant male [@factor1995] [@mackenzie1985]. Lobster larvae are planktonic for 6-8 weeks [@factor1995] and travel from surface waters offshore to inshore areas of Southern New England and the Gulf of Maine. Larval distribution is affected by the distribution of spawning females and by surface current velocity and direction, temperature, salinity, light intensity, and hydrostatic pressure [@katz1994] [@harding1988] [@hudson1993; @mackenzie1985]. Larval survival is likely affected by pollution of the marine environment by human activity, especially coastal waters [@connor1972]. There is an inverse relationship between temperature and the time from hatching to the postlarval stage (when they settle). Larvae take as few as 11 days at 22°C and as many as 54 days at 10°C to reach the postlarval stage. It is speculated that thermoclines are a negative cue for larvae/post larvae settlement [@factor1995; @templeman1936]. Juvenile lobsters utilize shelters (rocks and vegetation) in the benthic habitat, and may also burrow in mud [@wahle1991]. Juveniles are omnivorous but also scavenge for food. Much of their diet consists of bottom invertebrates, crabs, urchins, mussels, polychaetes, periwinkles, and sea stars, but they may also consume fish and plants [@lawton1987]. Adult lobsters are also considered omnivores and scavengers . However, their diet is dominated by mollusks (especially mussels), echinoderms, and polychaetes [@elner1987]. Juveniles and adults prefer bottom water temperatures of 8-14°C [@mackenzie1985]. Inshore, adult lobsters appear to have a limited home range of about 2.2 km, however offshore lobsters tend to migrate greater distances (up to 345 km in 71 days) [@mackenzie1985]. American lobster are managed by the Atlantic States Marine Fisheries Commission as three stock units based on life history differences: Gulf of Maine, Georges Bank, and southern New England [@asmfc2025].
 
 ## Supplemental Scores
 
@@ -486,7 +498,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure scores ranged from Moderate to Low (@fig-exp-month-lobster). Scores were Low from February to April, corresponding to a decline in bottom temperature and oxygen exposure (@fig-exp-month-lobster, @fig-exp-month-tm-lobster). Scores were Moderate for the remainder of the year (@fig-exp-month-lobster).
 
 ```{r}
 #| echo: false
@@ -539,7 +551,7 @@ dir_path <- here::here("figures/American Lobster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +582,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, and salinity, in addition to net primary production and downward carbon flux were all important dynamic drivers of lobster distributions (@fig-radar-lobster). Lobsters are omnivorous scavengers [@elner1987]. They prefer colder waters and utilize rocky and vegetative habitats for cover [@wahle1991]. When only these factors were used to calculate exposure, scores remained Moderate (1.99 +/- 0.96) (@fig-sum-imp-lobster, @fig-exp-imp-lobster).
 
 ```{r}
 #| echo: false
@@ -621,7 +633,7 @@ dir_path <- here::here("figures/American Lobster")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +659,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-lobster
-#| fig-cap: "As in @fig-sum-tab for American Lobster, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-lobster for American Lobster, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

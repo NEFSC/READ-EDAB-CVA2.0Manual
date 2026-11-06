@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low - Moderate
+-   **Exposure:** Moderate
+-   **Vulnerability:** Low - Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Windowpane flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Low - Moderate             | None - Increase |
+| *Exposure*           | High         | Moderate             | Decrease |
+| *Vulnerability*      | Low         | Low - Moderate             | None - Increase |
+| *Directional Effect* | Neutral         | Negative - Neutral             | Decrease - None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Windowpane flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nWindowpane flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,13 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+The **Gulf of Maine/Georges Bank** stock of Windowpane flounder received a **Moderate** sensitivity score, with a certainty of 69%. This score was driven by Stock Size (3.5) and Complexity in Reproductive Strategy (2.6) (@fig-sum-tab-windowpane).
+
+The **Southern New England/Mid Atlantic** stock received a **Low** sensitivity score, with a certainty of 74%. No attributes received a score greater than 2.5 for this stock. Stock Size and Complexity in Reproductive Strategy both received scores of 2.4 (@fig-sum-tab-windowpane).
+
+Spawning occurs throughout most of the year [@AbleFahay2010] [@Cadrin2021], but relies on cold bottom temperature (8.5-13.5 C) [@Chang1999_windowpane]. Spawning occurs in estuaries and nearshore environments; estuarine water column habitats are considered highly vulnerable [@guyant2022northeast]. The stock status of the Gulf of Maine/Georges Bank stock is unknown. The southern stock is not overfished and overfishing is not occurring [@NEFSC2023a_windowpane] [@NEFSC2023b_windowpane]).
+
+In the previous Climate Vulnerability Assessment, Windowpane flounder received a Low sensitivity score. This was driven by Stock Status [@hare2016vulnerability].
 
 ### Exposure:
 
@@ -240,7 +245,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for Windowpane Flounder was **Moderate** across its range (2.13 +/- 0.92). Scores were also **Moderate** within the **Gulf of Maine/Georges Bank** and **Southern New England/Mid-Atlantic** stocks (2.24 +/- 0.93 and 2.06 +/- 0.91, respectively) (@fig-sum-tab-windowpane). Exposure was Very High over Georges Bank and High along the coasts of the Gulf of Maine and in Southern New England (@fig-exp-windowpane). These patterns were driven by bottom temperature and oxygen exposure (@fig-fact-exp-windowpane).
+
+In the previous Assessment, Windowpane Flounder received a High exposure score, driven by high sea surface temperature and ocean acidification exposures [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +258,7 @@ dir_path <- here::here("figures/Windowpane flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +303,7 @@ dir_path <- here::here("figures/Windowpane flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +337,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean vulnerability for Windowpane Flounder was **Low** on average across its range (3.15 +/- 1.84) (@fig-sum-tab-windowpane). Average scores were **Moderate** within the **Gulf of Maine/Georges Bank** stock and **Low** within the **Southern New England/Mid Atlantic** stock (4.44 +/- 1.85 and 2.06 +/- 0.91, respectively) (@fig-sum-tab-windowpane). Scores were High over Georges Bank and Moderate along the coast of the Gulf of Maine. Scores were Low throughout the Southern New England/Mid Atlantic stock due to the Low Sensitivity score (@fig-vuln-windowpane).
+
+In the previous Assessment, windowpane flounder received a Low vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+75% of data quality scores were greater than or equal to 2, indicating good data quality. Across both stocks, Complexity in Reproductive Strategy, Dispersal of Early Life Stages, Egg and Larval Survival and Settlement Requirements, Population Growth Rate, and Relationship to Calcified Organisms were all identified as data gaps (mean attribute data quality score \< 2) (@fig-sum-tab-windowpane).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The ensemble windowpane flounder distribution model received a 2.1 (+/- 0.2) model confidence score, indicating moderate confidence in the model. The predicted distributions matched experts’ expectations. Residuals were higher in nearshore areas, which drove down scores, but were overall evenly distributed. The ensemble model AUC score was 0.92, indicating excellent model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +400,18 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Windowpane flounder habitat area and range did not change significantly between 1993 and 2023, due to recent declines in habitat area after a period of growth between approximately 2005 and 2015 (@fig-shifts-windowpane). During this time, the weighted centroid shifted 6 km N. 
+
+Under near future ocean conditions, core habitat and the range of the windowpane flounder are predicted to expand. Core habitat is predicted to extend south along the coast of Maryland and Virginia and their range is expected to expand offshore towards the continental shelf break (@fig-shifts-windowpane). The weighted centroid is predicted to shift 22 km southwest. 
+
+In the previous Assessment, windowpane flounder received a High Distributional Vulnerability rank due to their seasonal migrations, varied habitat preferences, and high larval dispersal [@hare2016vulnerability]. 
+
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 48,997 | 170,832 | 6.48 | 8.90 |
+| 2019-2023 | 6.0 km N | 48,735 (-262) | 172,242 (+1,410) | 6.48 (0) | 8.90 (0) |
+| 2031-2035 | 21.9 km SW | 52,627 (+3,891) | 177,465 (+5,223) | 6.80 (+0.31) | 9.06 (+0.16) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +446,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that effects of climate change would be **neutral** for the Gulf of Maine/Georges Bank stock, with 73% certainty. For the Southern New England/Mid-Atlantic stock, the effects were predicted to be **negative**, with 58% certainty. Increasing temperatures have been shown to displace windowpane flounder, and extreme cold winters have increased juvenile mortality [@Bell2021] [@Wilber2016]. In the previous Climate Vulnerability Assessment, experts predicted that impacts of climate change on windowpane flounder would be neutral [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Percent biomass of windowpane flounder in the Northwest Atlantic increases with changes in seasonality, from cold springs, to warm springs, to fall [@Dunn2016]. Increasing temperatures (\> 7-10°C) have been shown to displace windowpane flounder [@Bell2021]. In New York/New Jersey Harbor, cold winter temperatures decreased windowpane abundance and overwinter mortality in small juveniles [@Wilber2016]. Overwintering success appears to be driven in part by temperatures, with extreme cold conditions resulting in high overwinter mortality of age-0 individuals. This likely has a larger impact on fall-spawned juveniles since resilience to extreme cold temperatures is size-dependent and fall-spawned individuals have less time to grow [@Neuman2009_windowpane]. Individual windowpane have also demonstrated avoiding hypoxic conditions [@Cadrin2021].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Windowpane flounder inhabit shallow waters from the Gulf of St. Lawrence to Florida, but are most abundant from Georges Bank to Chesapeake Bay [@Chang1999_windowpane]. They reach maturity around 1.5 years of age and can live up to 8 years [@Cadrin2021]. Windowpane spawn from February to November on the inner continental shelf, Georges Bank, and within estuaries. Spawning occurs in the Mid-Atlantic Bight in both spring and fall, whereas spawning in Georges Bank peaks in summer [@AbleFahay2010] [@Cadrin2021]. Windowpane spawn in the evening or at night on or near bottom at temperatures ranging from 6-21°C [@Chang1999_windowpane]. Eggs hatch after 8 days. The duration of the larval stage is unknown, but eggs and larvae remain in the water column feeding on suspended copepods [@Chang1999_windowpane]. Surveys from Canadian waters suggest that small (\< 10 cm TL) windowpane consume bay shrimp and crab larvae, which may be a transition point from zooplankton prey to larger prey items [@Hanson2014]. Larvae settle to the bottom at approximately 10 mm TL. However, individuals collected on Georges Bank may be planktonic up to 20 mm. There is no indication that settlement is driven by environmental factors [@Morse1995_windowpane]. Juveniles that settle in shallow inshore waters move to deeper offshore waters as they grow. Juveniles inhabiting Georges Bank (\< 60 m) undergo seasonal movements to deeper waters along the southern flank of the Bank occur during late autumn, as bottom temperatures drop, and overwintering occurs in deeper areas until late spring [@KleinMacPhee2002_windowpane]. From Massachusetts to the Gulf of Maine, they can be found in estuaries and on the shelf [@Chang1999_windowpane]. Adults are found on the benthos in waters \< 100 m and tolerate a wide range of temperatures (0-26.8°C) [@Chang1999_windowpane]. Adult windowpane may travel along the coast for considerable distances. Juveniles and adults may migrate to nearshore or estuarine habitats in the Mid-Atlantic Bight. Seasonal movements into offshore overwintering habitats have also been documented [@Chang1999_windowpane]. Stomach content data collected during Northeast Fisheries Science Center (NEFSC) bottom trawl surveys indicate windowpane feed on small crustaceans (e.g., mysids and decapod shrimp) and various fish larvae including hakes and tomcod, as well as their own species [@Langton1981] [@Chang1999_windowpane]. Windowpane flounder are managed by the New England Fishery Management Council under the Northeast Multispecies (Groundfish) Fishery Management Plan. The fishery is divided into two stocks: Northern Gulf of Maine/Georges Bank and Southern New England/Mid-Atlantic. Overfishing and overfished status of the northern stock is unknown, as the assessment has not estimated reference points since 2020 [@NEFSC2023a_windowpane]. The southern stock is not overfished and overfishing is not occurring [@NEFSC2023b_windowpane].
 
 ## Supplemental Scores
 
@@ -486,7 +500,8 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Exposure varied from Low to High across months. Exposures were Low in early spring (March-April) due to declines in bottom temperature and oxygen exposure (@fig-exp-month-windowpane, @fig-exp-month-tm-windowpane).
+
 
 ```{r}
 #| echo: false
@@ -539,7 +554,7 @@ dir_path <- here::here("figures/Windowpane flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +585,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, oxygen, salinity, and aragonite solubility, as well as large zooplankton biomass were important drivers of windowpane distributions (@fig-radar-windowpane). Temperature is a known driver of movement [@KleinMacPhee2002_windowpane]. Coastal and estuarine habitats may be important overwintering habitats [@Chang1999_windowpane]. Small crustaceans and small fish larvae are the predominant prey species [@Langton1981] [@Chang1999_windowpane]. When only these factors were used to calculate exposure, scores remained Moderate both across the range and within stocks (@fig-sum-imp-windowpane; @fig-exp-imp-windowpane).
 
 ```{r}
 #| echo: false
@@ -621,7 +636,7 @@ dir_path <- here::here("figures/Windowpane flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +662,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-windowpane
-#| fig-cap: "As in @fig-sum-tab for Windowpane flounder, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-windowpane for Windowpane flounder, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

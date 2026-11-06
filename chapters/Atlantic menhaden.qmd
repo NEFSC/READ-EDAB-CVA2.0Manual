@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low
+-   **Exposure:** High
+-   **Vulnerability:** Low
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Atlantic Menhaden")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Low             | None |
+| *Exposure*           | Very High         | Moderate             | Decrease |
+| *Vulnerability*      | Moderate         | Low             | Decrease |
+| *Directional Effect* | Positive         | Positive             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Atlantic Menhaden is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nAtlantic Menhaden is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+Atlantic menhaden received a **Low** sensitivity score, with a certainty of 93% from bootstrap analysis (@fig-sum-tab-menhaden). The greatest attribute score was Prey Specificity (2.5) (@fig-sum-tab-menhaden). Juveniles and adults both consume zooplankton, but are generalist feeders that are not likely to be impacted by mismatches [@rogers1989].
+
+The previous Climate Vulnerability Assessment also gave menhaden a Low sensitivity score [@hare2016vulnerability]. The highest attribute in that assessment was Early Life History Requirements because late larval and juvenile life stages depend on estuaries [@able2005re]. None of the estuarine habitats that these life stages rely on were classified as vulnerable by the habitat climate vulnerability assessment [@guyant2022].
 
 ### Exposure:
 
@@ -240,7 +241,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+The mean Exposure score for Atlantic menhaden was 2.9 (+/- 0.52), giving the species a **High** mean score (@fig-sum-tab-menhaden). Exposure was High throughout most of the species’ range, however Low scores within Chesapeake Bay and off the coast of Virginia/North Carolina drove down the average score (@fig-exp-menhaden). High scores were driven by high exposure to changes in sea surface temperature and pH (@fig-fact-exp-menhaden). 
+
+In the previous Assessment, menhaden received a Very High exposure score due to exposure to changes in sea surface temperature, ocean acidification, and air temperatures [@hare2016vulnerability].
 
 ```{r}
 #| echo: false
@@ -251,7 +254,7 @@ dir_path <- here::here("figures/Atlantic Menhaden")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +299,7 @@ dir_path <- here::here("figures/Atlantic Menhaden")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +333,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Mean total Vulnerability was **Low** for Atlantic menhaden (2.9 +/- 0.52) (@fig-sum-tab-menhaden). Scores were low throughout Menhaden's range, with some areas of moderate vulnerability off the coast of Long Island and south of Cape Cod (@fig-vuln-menhaden). 
+
+In the previous assessment, menhaden received a Moderate vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+88% of data quality scores were greater than or equal to 2, indicating strong data quality (@fig-sum-tab-menhaden). Complexity in Reproductive Strategy and Spawning Cycle were identified as data gaps (mean attribute data quality score \< 2) (@fig-sum-tab-menhaden).
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The menhaden ensemble model received a model confidence score of 2 (+/- 0.4), indicating moderate confidence in the model. Experts stated that the model’s general distribution trends matched expectations, but missed recent northward expansions. The ensemble model’s AUC was 0.84, indicating good performance. 
 
 ## Additional Metrics
 
@@ -391,13 +396,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Menhaden habitat area expanded north and east significantly between 1993 and 2023 and the weighted centroid shifted 90 km northeast. Menhaden distributions shifted further offshore and further north into the Gulf of Maine (@fig-shifts-menhaden). 
+
+In the next ten years, these trends are predicted to continue. Habitat area is predicted to significantly increase as menhaden distributions continue to expand offshore and northward into the Gulf of Maine (@fig-shifts-menhaden). The weighted centroid is predicted to shift a further 67 km east-northeast. 
+
+In the previous Assessment, Atlantic menhaden received a High Distributional Vulnerability Rank due to wide larval dispersal and large seasonal migrations [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 20,795  | 168,520 | 8.85 | 9.46 |
+| 2019-2023 | 90.5 km NE | 29,647 (+8,852) | 186,690 (+18,170) | 8.85 (0) | 9.78 (+0.32) |
+| 2031-2035 | 67 km ENE | 53,280 (+23,633) | 230,160 (+43,469) | 8.72 (-0.12) | 9.70 (-0.08) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +441,15 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Atlantic menhaden are estimated to be **positively** impacted by climate change. Expert certainty was 58% from bootstrap analysis. Menhaden distributions have been expanding northward [@morano2025] likely due to warming and increased spawning activity. These results are similar to those from the 2016 Climate Vulnerability Assessment, albeit with decreased certainty [@hare2016vulnerability].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Atlantic menhaden are estuary dependent species, and their habitats may be impacted by future development or trawling and dredging activities [@rogers1989]. Atlantic menhaden distribution is expanding northward, likely to due warmer water temperatures, although other local ecological factors may also influence distribution [@morano2025]. Recruitment of Atlantic menhaden larvae to nursery habitats appears to be driven primarily by larval supply and the oceanographic properties driving transport, as well as nursery habitat quality, rather than specific settlement cues [@quinlan1999]. Climate change could impact these transport mechanisms or the quality of nursery habitats. In a study modeling menhaden recruitment trends in Chesapeake Bay and Southern New England, a broad-scale climate driver, the Atlantic Multidecadal Oscillation (AMO) was one of the best predictors of recruitment [@buchheister2016]. @midway2020 used hierarchical models to determine significant effects of age 1 Atlantic menhaden growth caused by the AMO (negative effect), easterly (positive effect) and northerly (negative effect) wind velocity. @turner2017 investigated declines in size-at-age for age 3-5 Atlantic menhaden and attributed these size changes to coastal and ocean warming. This study also predicted future reductions in size-at-age as ocean temperatures rise.
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Atlantic menhaden inhabit coastal and estuarine waters from Nova Scotia to Florida [@rogers1989]. They are a key forage species in the North and South Atlantic, and are consumed by a wide range of predators, including striped bass, bluefish, and weakfish in the North Atlantic [@asmfc2025_menhaden]. Menhanden spawning peaks in December - February [@sedar2025]. Spawning was originally thought to be concentrated off the coast of the Carolinas following the fall migration. However, more recent analysis of larval distributions suggests that spawning occurs throughout the range, as far north as Long Island [@nelson1977] [@simpson2017]. Menhaden spawning periods coincide with presence of phytoplankton and zooplankton, the dominant food sources of larval menhaden [@rogers1989]. Eggs are buoyant and reliant on transportation by wind and tidal currents towards nursery estuary habitats, where they hatch in a few days [@sedar2025]. After around 30 days in the larval stage, juveniles move to upper portions of estuaries including river shoals and the heads of small tidal creeks, where they congregate over vegetation in open water [@rogers1989]. Young juvenile menhaden consume individual zooplankton; this reliance on zooplankton decreases as menhaden move from open waters to marshes, although adult menhaden also consume zooplankton [@rogers1989]. Adults prefer temperatures near 18°C and generally remain within the top 100m of the water column [@sedar2025]. After the winter spawning season, adults migrate inshore and north following spawning grounds in the Carolinas to the Gulf of Maine [@rogers1989]. Atlantic menhaden reach maturity around 2 years of age and a maximum age is listed at 10 years, although individuals older than 6 years of age are rarely caught in the fishery [@sedar2025]. Menhaden in the Northwest Atlantic are managed as a single stock unit by the Atlantic States Marine Fisheries Commission. The most recent stock assessment update in 2025 used ecological reference points to determine stock status. As of 2025, the stock is not overfished and overfishing is not occurring [@asmfc2025_menhaden].
 
 ## Supplemental Scores
 
@@ -486,7 +495,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Monthly exposure scores ranged from Low to High. Scores were Low in July and High from September through February (@fig-exp-month). These patterns were driven by changes in sea surface temperature and pH (@fig-exp-month-tm-menhaden).
 
 ```{r}
 #| echo: false
@@ -539,7 +548,7 @@ dir_path <- here::here("figures/Atlantic Menhaden")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +579,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Sea surface salinity and medium phytoplankton primary productivity were important drivers of species distributions (@fig-radar-menhaden). Menhaden are estuary-dependent species, and consume phytoplankton and zooplankton [@rogers1989]. Only changes in sea surface salinities resulted in high exposures. Therefore, exposure scores when only important factors were considered was Low (1 +/- 0) (@fig-exp-imp-menhaden; @fig-sum-imp-menhaden).
 
 ```{r}
 #| echo: false
@@ -621,7 +630,7 @@ dir_path <- here::here("figures/Atlantic Menhaden")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +656,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-menhaden
-#| fig-cap: "As in @fig-sum-tab for Atlantic Menhaden, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-menhaden for Atlantic Menhaden, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)

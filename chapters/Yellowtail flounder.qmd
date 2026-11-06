@@ -33,9 +33,9 @@ knitr::opts_chunk$set(
 
 ## Summary Scores
 
--   **Sensitivity:** [INSERT]
--   **Exposure:** [INSERT]
--   **Vulnerability:** [INSERT]
+-   **Sensitivity:** Low - Moderate
+-   **Exposure:** Moderate - High
+-   **Vulnerability:** Low - Moderate
 
 ```{r}
 #| echo: false
@@ -46,7 +46,7 @@ dir_path <- here::here("figures/Yellowtail flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_allvars.*", ext), 
+  pattern = paste0("combined_table_allvars.*", ext), 
   full.names = TRUE
 )
 
@@ -82,10 +82,10 @@ knitr::include_graphics(img_path)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
 |-------------------|-----------------|--------------------|-----------------|
-| *Sensitivity*        | [INSERT]         | [INSERT]             | [INSERT] |
-| *Exposure*           | [INSERT]         | [INSERT]             | [INSERT] |
-| *Vulnerability*      | [INSERT]         | [INSERT]             | [INSERT] |
-| *Directional Effect* | [INSERT]         | [INSERT]             | [INSERT] |
+| *Sensitivity*        | Low         | Low - Moderate             | None - Increase |
+| *Exposure*           | High         |   Moderate - High          | Decrease - None |
+| *Vulnerability*      | Low         | Low -  Moderate             | None  - Increase |
+| *Directional Effect* | Negative         | Neutral - Negative             | Increase - None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
 
@@ -138,12 +138,11 @@ knitr::include_graphics(img_path)
 
 ```{r}
 #| echo: false
-#| eval: !expr has_figure == FALSE
+#| eval: !expr isFALSE(has_figure)
 #| results: asis
 
-cat("Yellowtail flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.")
+cat("\n\nYellowtail flounder is managed as a single stock or stock information was not considered for this iteration of the CVA.\n\n")
 ```
-
 ## Score Descriptions:
 
 ### Sensitivity:
@@ -193,7 +192,14 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SENSITIVITY NARRATIVE TEXT HERE]
+The **Southern New England/Mid-Atlantic** and **Georges Bank** stocks of Yellowtail flounder both received **Moderate** sensitivity scores. Both scores had 88% certainty. These scores were driven by Stock Size (4 and 3.6), Spawning Cycle (2.7 and 2.6) and Egg and Larval Survival and Settlement Requirements (2.6). Adult Mobility (2.5) also played a role in the score for the Georges Bank stock (@fig-sum-tab-yellowtail).
+
+The **Gulf of Maine/Cape Cod** stock of Yellowtail flounder received a **Low** sensitivity score, with 56% certainty. For this stock, only the Stock Size (2.8) attribute had a score greater than 2.5 (@fig-sum-tab-yellowtail).
+
+Spawning occurs from mid-February to July on Georges Bank and in nearshore habitats in Southern New England and the Mid-Atlantic [@MartinDrewry1978]. Larvae feed on zooplankton prey and zooplankton abundance has been linked to recruitment success. Although it is also worth noting that studies directly testing for mismatches did not find evidence of mismatches between larvae and zooplankton overlap and recruitment [@Kittel2025] [@Johnsonetal1999] McManus and Richardson 2023). Larvae perform vertical migrations to help increase retention in and around nursery locations. Recruitment has also been correlated with circulation patterns and the Mid Atlantic Cold Pool. Both the Georges Bank and Southern New England stocks are under rebuilding plans [@NEFSC2025b_yellowtail] [@NEFSC2025c_yellowtail].
+
+In the 2016 Climate Vulnerability Assessment, yellowtail flounder also received a Low sensitivity score. Similar to the Gulf of Maine/Cape Cod stock, the only attribute that scored above 2.5 in the 2016 Assessment was Stock Status [@hare2016vulnerability].
+
 
 ### Exposure:
 
@@ -240,7 +246,9 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT EXPOSURE NARRATIVE TEXT HERE]
+Mean exposure for Yellowtail flounder across its range was **Moderate** (2.34 +/- 0.89). Mean scores were also **Moderate** within the **Georges Bank** and **Gulf of Maine/Cape Cod** stocks (2.21 +/- 0.99 and 2.45 +/- 0.83, respectively). Average exposure was **High** for the **Southern New England/Mid-Atlantic** stock (2.5 +/- 0.77) (@fig-sum-tab-yellowtail). Exposure was Very High over Georges Bank and High throughout most of Southern New England and along the coast of the Gulf of Maine (@fig-exp-yellowtail). These patterns were driven by high bottom temperature, oxygen, and salinity exposure (@fig-fact-exp-yellowtail).
+
+In the previous Assessment, yellowtail flounder received a High Exposure score [@hare2016vulnerability]. 
 
 ```{r}
 #| echo: false
@@ -251,7 +259,7 @@ dir_path <- here::here("figures/Yellowtail flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_exposure_map_all.*", ext), 
+  pattern = paste0("total_exposure_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -296,7 +304,7 @@ dir_path <- here::here("figures/Yellowtail flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("total_vulnerability_map_all.*", ext), 
+  pattern = paste0("total_vulnerability_map_only_all.*", ext), 
   full.names = TRUE
 )
 
@@ -330,17 +338,19 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-[INSERT VULNERABILITY NARRATIVE TEXT HERE]
+Yellowtail flounder received a mean Vulnerability score of **Moderate** (3.96 +/- 1.88) (@fig-sum-tab-yellowtail). Scores were **Moderate** in the **Georges Bank** and **Southern New England/Mid-Atlantic** stocks (4.42 +/- 1.98 and 5 +/- 1.55, respectively). Mean Vulnerability was **Low** in the **Gulf of Maine/Cape Cod** stock due to Low Sensitivity (2.5 +/- 0.95) (@fig-sum-tab-yellowtail). Vulnerability was High over portions of Georges Bank, and Moderate over the Bank and in Southern New England (@fig-vuln-yellowtail). These scores did not change when exposure was calculated using only factors important to yellowtail distribution (@fig-sum-tab-yellowtail).
+
+In the previous Assessment, yellowtail flounder received a Low Vulnerability score [@hare2016vulnerability].
 
 ## Data Quality Metrics
 
 ### Life History Data Quality:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+Between 93 - 97% of data quality scores were greater than or equal to 2 across both stocks, indicating excellent data quality. Complexity in Reproductive Strategy was identified as a data gap (mean attribute data quality score \< 2) for the Southern New England/Mid-Atlantic stock (@fig-sum-tab-yellowtail).\
 
 ### Model Confidence Score:
 
-[INSERT DATA QUALITY NARRATIVE TEXT HERE]
+The yellowtail distribution model received a 2.4 (+/- 0.2) mean model confidence score, indicating moderate confidence in the model. Experts noted that the model overpredicted distributions over Georges Bank, but otherwise accurately predicted distributions. The ensemble model AUC score was 0.88, indicating good model performance. 
 
 ## Additional Metrics
 
@@ -391,13 +401,17 @@ knitr::include_graphics(img_path)
 *Note: For an animated version of this plot, please see the online version of this document.*
 :::
 
-[INSERT DISTRIBUTION SHIFTS NARRATIVE TEXT HERE]
+Yellowtail flounder core habitat and range decreased significantly between 1993 and 2023. Core habitat loss occurred in southern New England and along the coast of the Gulf of Maine. Yellowtail flounder lost habitat at the southern edge of their range in the Mid Atlantic Bight (@fig-shifts-yellowtail). The distribution centroid shifted 11 km east-northeast. 
+
+Under near future ocean conditions, yellowtail flounder are expected to gain core habitat and ranges are expected to expand. Yellowtail flounder are predicted to gain more core habitat over Georges Bank. Ranges are predicted to expand southward in the Mid Atlantic Bight (@fig-shifts-yellowtail). The distribution centroid is predicted to shift 9 km southeast. 
+
+In the previous assessment, yellowtail flounder received a High Distributional Vulnerability Rank score due to high larval dispersal, moderate mobility, and variety of preferred habitats [@hare2016vulnerability]. 
 
 | Time Period | Weighted Centroid Shift (km & bearing) | Core Habitat Area (change) (km^2^) | Habitat Total Area (change) (km^2^) | Latitude Range (change) (deg) | Change in Longitude Range (deg) |
 |------------|------------|------------|------------|------------|------------|
-| 1993-1997 | NA | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2019-2023 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
-| 2031-2035 | [INSERT] | [INSERT] | [INSERT] | [INSERT] | [INSERT] |
+| 1993-1997 | NA | 50,189 | 157,664 | 3.68 | 7.22 |
+| 2019-2023 | 11.2 km ENE | 42,445 (-7,744) | 150,197 (-7,467) | 3.42 (-0.25) | 6.81 (-0.40) |
+| 2031-2035 | 8.8 km SE | 43,367 (+921) | 158,740 (+8,543) | 3.55 (+0.12) | 6.98 (+0.16) |
 
 : Distribution shifts based on five-year average distributions. Changes are calculated relative to the previous time period. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-dist}
 
@@ -432,15 +446,16 @@ if (length(found_files) > 0) {
 
 ### Directional Effect:
 
-[INSERT DIRECTIONAL EFFECT NARRATIVE TEXT HERE]
+Experts predicted that the effects of climate change on Yellowtail flounder would be **negative** for both the Georges Bank and Southern New England/Mid-Atlantic stocks. Certainty for both stocks was high at 98% and 100% respectively. In the 2016 Climate Vulnerability Assessment, experts also predicted that yellowtail would be negatively impacted by climate change [@hare2016vulnerability]. For the Gulf of Maine/Cape Cod stock, the effect was predicted to be **neutral**, but with lower certainty (86%). Increased temperatures have been linked to decreased productivity, increased larval mortality, and reduced settlement rates [@Kitteletal2026] [@Kleinetal2017]. Recruitment has also been linked to the Mid-Atlantic Cold Pool [@Kittel2025].
 
 ## Climate Effects on Abundance and Distribution
 
-[INSERT CLIMATE EFFECTS NARRATIVE TEXT HERE]
+Yellowtail flounder abundance, distribution, and recruitment have been associated with a number of environmental and climate indices. Rapid warming of the Northwest Atlantic has resulted in decreased productivity in yellow flounder [@Kitteletal2026]. Higher temperatures can increase mortality in yellowtail flounder larvae, and faster rates of warming causing earlier stratification may reduce settlement rates in juveniles [@Kleinetal2017]. Yellowtail recruitment in Southern New England is highly correlated with the North Atlantic Oscillation (NAO) and air temperature [@Sullivanetal2005]. Low recruitment since 1990 was associated with unfavorable environmental conditions caused by a northward shift in the Gulf Stream [@Xu2016] [@Kittel2025]. The Mid-Atlantic Cold Pool, bottom temperature, and the Atlantic Multidecadal Oscillation (AMO) are also linked to recruitment [@Kittel2025]. As warming continues, joint management between the United States and Canada may be more challenging as distributions change [@Sumailaetal2020].
 
 ## Life History Synopsis
 
-[INSERT LIFE HISTORY NARRATIVE TEXT HERE]
+Yellowtail flounder are found in the Northwest Atlantic from Newfoundland to Chesapeake Bay, inhabiting sandy bottom waters between 130-230 m depth [@Johnsonetal1999] and at temperatures of -1 to 18°C [@OverholtzCadrin1998]. Previous research has suggested that fish live up to 17 years, possibly as high as 20 years, although fish older than 7 years is unusual [@NEFSC2012_yellowtail]. The fishery is divided into 3 stocks: Gulf of Maine/Cape Cod, Georges Bank, and Southern New England/Mid-Atlantic [@NEFSC2025a_yellowtail] [@NEFSC2025b_yellowtail] [@NEFSC2025c_yellowtail]. Most females are mature by ages 2-3 [@NEFSC2012_yellowtail]. Spawning occurs from mid-February to July along the continental shelf waters of Georges Bank, northwest of Cape Cod, Southern New England and nearshore along New Jersey and southern Long Island [@MartinDrewry1978]. Spawning peaks from April to June in southern New England and late June to July in Canada [@BerrienSibunka1999]. Laboratory studies show eggs begin to hatch 6-7 days after fertilization [@BenoitPepin1999]. At sea hatching times range from 14.5 days at 4⁰C to 4.5 days at 14⁰C [@WalshMorgan2004]. Eggs are pelagic (most at 10-90m depth), with movement limited to currents in spawning locations [@Smithetal1975]. Larvae move from the surface down to about 20 m, with larger larvae making longer migrations. This habit may assist in the dispersal of larvae because circulation at the surface transports the larvae further and is likely associated with feeding behavior [@Smithetal1978]. Larvae feed on zooplankton, particularly *Calanus* [@Kittel2025]. Once larvae reach metamorphosis size (11.6-16 mm) bottom temperature (4-8°C) and depth (41-70m) are the most important parameters for determining settlement [@ColletteKleinMacPhee2002]. Juveniles utilize marine and estuarine sandy and muddy substrates, as well as estuarine and marine water columns [@ColletteKleinMacPhee2002]. Rotifers, copepods, and brine shrimp nauplii were fed to juveniles in laboratory studies [@BenoitPepin1999]. *Calanus* copepods are considered a critical food source for larvae/juveniles [@Purchaseetal2000]. Amphipods (41% by weight) and polychaetes (38.5%) dominate the diet of adult yellowtail, but they also can consume cnidarians, small crabs and shrimps, mysids, cumaceans, isopods, univalve and bivalve mollusks, echinoderms, and sometimes small fish [@Bowmanetal1987] [@Bowmanetal2000]. Similar to other groundfish, yellowtail may be impacted by increasing grey seal and dogfish populations and resulting increased predation pressures [@Kittel2025]. Other predators of juvenile and adult yellowtail include spiny dogfish, skates, cod, hakes, and monkfish [@Johnsonetal1999]. Minimal migration patterns show that Southern New England yellowtail traveled eastward during spring and summer and westward in the fall and winter as a result of seasonal changes in temperature [@Smithetal1975]. Recent tagging studies, however, show that individuals generally don't move between stocks [@Goetheletal2015]. Yellowtail flounder are managed by the New England Fishery Management Council through the Northeast Multispecies (Groundfish) Fishery Management Plan. The Georges Bank stock is jointly managed by the Council and Canada, as the stock extends beyond the international boundary. The Cape Cod/Gulf of Maine stock is not overfished and not subject to overfishing [@NEFSC2025a_yellowtail]. The Georges Bank stock is overfished but under a rebuilding plan; overfishing status is unknown [@NEFSC2025b_yellowtail]. The Southern New England/Mid-Atlantic stock is overfished but under a rebuilding plan, but not subject to overfishing [@NEFSC2025c_yellowtail].
+
 
 ## Supplemental Scores
 
@@ -486,7 +501,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT MONTHLY EXPOSURE NARRATIVE TEXT HERE]
+Across months, exposure scores ranged from Low to Moderate. Exposure was generally Low in the late winter and early spring (February - May) and High from June through the end of the year (@fig-exp-month-yellowtail). This was driven by bottom temperature and oxygen exposure changes throughout the year (@fig-exp-month-tm-yellowtail).
 
 ```{r}
 #| echo: false
@@ -539,7 +554,7 @@ dir_path <- here::here("figures/Yellowtail flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("dynamic_variable_importance_all.*", ext), 
+  pattern = paste0("dynamic_variable_importance.*", ext), 
   full.names = TRUE
 )
 
@@ -570,7 +585,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-[INSERT SIGNIFICANT VARIABLES NARRATIVE TEXT HERE]
+Bottom temperature, salinity, oxygen, and aragonite solubility, in addition to net primary productivity were important dynamic drivers of yellowtail flounder species distribution (@fig-radar-yellowtail). Yellowtail occupy cooler bottom waters on the continental shelf [@OverholtzCadrin1998]. Adults primarily feed on amphipods and polychaetes but are generalists [@Bowmanetal1987] [@Bowmanetal2000]. When only these factors were used to calculate exposure, mean scores and overall spatial distribution of scores did not change (@fig-sum-imp-yellowtail, @fig-exp-imp-yellowtail).
 
 ```{r}
 #| echo: false
@@ -621,7 +636,7 @@ dir_path <- here::here("figures/Yellowtail flounder")
 # Search for any file containing the string AND the correct extension
 found_files <- list.files(
   path = dir_path, 
-  pattern = paste0("summary_table_impvars.*", ext), 
+  pattern = paste0("combined_table_impvars.*", ext), 
   full.names = TRUE
 )
 
@@ -647,7 +662,7 @@ if (has_figure) {
 #| lightbox: true
 #| out-width: "100%"
 #| label: fig-sum-imp-yellowtail
-#| fig-cap: "As in @fig-sum-tab for Yellowtail flounder, but with only significant Exposure factors and the resulting Vulnerability Scores."
+#| fig-cap: "As in @fig-sum-tab-yellowtail for Yellowtail flounder, but with only significant Exposure factors and the resulting Vulnerability Scores."
 #| fig-pos: "H"
 #| fig-align: "center"
 knitr::include_graphics(img_path)
