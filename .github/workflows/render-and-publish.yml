@@ -56,12 +56,21 @@ jobs:
           # Restore the config file for the final HTML book publish step
           mv _quarto.yml.hidden _quarto.yml
       
-      # 3. Upload the generated PDFs so you can download them
-      - name: Upload PDF Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: narrative-pdfs
-          path: pdfs/*.pdf
+      #commit pdf zip to main 
+      - name: Commit and push ZIP to main branch
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 1. Generate the zip file from the temporary PDFs
+          zip -j all_species_narratives.zip chapters/*.pdf content/*.pdf
+          
+          # 2. Stage ONLY the zip file (leave the PDFs untracked)
+          git add all_species_narratives.zip
+          
+          # 3. Commit and push the zip to main
+          git commit -m "Auto-generate updated species ZIP archive" || echo "No changes to commit"
+          git push
 
     #  - name: Publish to GitHub Pages (and render)
     #    uses: quarto-dev/quarto-actions/publish@v2
