@@ -78,6 +78,8 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
+{{< pagebreak >}}
+
 ## Changes from Previous Assessment(s)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
@@ -88,8 +90,6 @@ knitr::include_graphics(img_path)
 | *Directional Effect* | Negative         | Negative             | None |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
-
-{{< pagebreak >}}
 
 ## Stocks
 
@@ -333,7 +333,7 @@ has_figure <- file.exists(img_path)
 knitr::include_graphics(img_path)
 ```
 
-Ocean pout had a **Moderate** mean Vulnerability score (6.26 +/- 2.72) (@fig-sum-tab). Vulnerabilities were High in Southern New England, Georges Bank, and along most of the coast of the Gulf of Maine, but Low elsewhere (@fig-vuln). 
+Ocean pout had a **Moderate** mean Vulnerability score (6.26 +/- 2.72) (@fig-sum-tab-pout). Vulnerabilities were High in Southern New England, Georges Bank, and along most of the coast of the Gulf of Maine, but Low elsewhere (@fig-vuln-pout). 
 
 In the previous Assessment, ocean pout received a High Vulnerability score [@hare2016vulnerability].
 
@@ -496,7 +496,7 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
-Monthly Exposure ranged from Low to High. Scores were Low in March and High in August and September (@fig-exp-month). These patterns were driven by bottom temperature, bottom oxygen, and downward particulate carbon flux (@fig-exp-month-tm-pout).
+Monthly Exposure ranged from Low to High. Scores were Low in March and High in August and September (@fig-exp-month-pout). These patterns were driven by bottom temperature, bottom oxygen, and downward particulate carbon flux (@fig-exp-month-tm-pout).
 
 ```{r}
 #| echo: false

@@ -93,10 +93,10 @@ Vulnerability and exposure scores were calculated by averaging results across th
 
 | Average Vulnerability or Exposure Score | Average Exposure Numeric Score | Average Vulnerability Numeric Score |
 |------------------------|------------------------|------------------------|
-| Very High | ≥ 3.5 | ≥ 10.5 |
-| High | \< 3.5 | \< 10.5 |
-| Moderate | \< 2.5 | \< 7.0 |
-| Low | \< 1.5 | \< 3.5 |
+| Very High | $\geq$ 3.5 | $\geq$ 10.5 |
+| High | $<$ 3.5 | $<$ 10.5 |
+| Moderate | $<$ 2.5 | $<$ 7.0 |
+| Low | $<$ 1.5 | $<$ 3.5 |
 
 : Categorical scores corresponding to average vulnerability and exposure scores {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-scores}
 

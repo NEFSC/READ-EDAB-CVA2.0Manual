@@ -78,6 +78,8 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
+{{< pagebreak >}}
+
 ## Changes from Previous Assessment(s)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
@@ -88,8 +90,6 @@ knitr::include_graphics(img_path)
 | *Directional Effect* | Neutral         | Negative             | Decrease |
 
 : Changes to Vulnerability, Exposure, and Sensitivity scores relative to Previous Assessments. If a citation for the previous assessment is not provided, it comes from @hare2016vulnerability. {tbl-colwidths="[15, 20, 20, 20, 15, 10]"} {#tbl-change}
-
-{{< pagebreak >}}
 
 ## Stocks
 

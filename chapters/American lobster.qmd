@@ -78,6 +78,8 @@ if (has_figure) {
 knitr::include_graphics(img_path)
 ```
 
+{{< pagebreak >}}
+
 ## Changes from Previous Assessment(s)
 
 | Metric               |Previous Assessment(s)  | Current Assessment | Change     |
