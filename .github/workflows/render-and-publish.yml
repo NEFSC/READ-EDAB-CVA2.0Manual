@@ -55,7 +55,13 @@ jobs:
           
           # Restore the config file for the final HTML book publish step
           mv _quarto.yml.hidden _quarto.yml
-      # add software dependencies here
+      
+      # 3. Upload the generated PDFs so you can download them
+      - name: Upload PDF Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: narrative-pdfs
+          path: pdfs/*.pdf
 
     #  - name: Publish to GitHub Pages (and render)
     #    uses: quarto-dev/quarto-actions/publish@v2
