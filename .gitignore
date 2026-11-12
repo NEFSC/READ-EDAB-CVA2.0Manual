@@ -8,6 +8,3 @@
 /.quarto/
 /_site/
 
-# Ignore locally generated Quarto PDFs
-chapters/*.pdf
-content/*.pdf
