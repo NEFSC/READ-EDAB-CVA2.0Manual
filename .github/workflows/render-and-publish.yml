@@ -44,11 +44,11 @@ jobs:
               
               base=$(basename "$file" .qmd)
               
-              # Render the file (Quarto will drop the PDF in the main directory)
+              # Render the file
               quarto render "$file" --to pdf -M crossref-chapters:false -M project-type:default --output "$base.pdf"
-              
-              # Move the file from the main directory to the pdfs/ directory
-              mv "$base.pdf" "pdfs/$base.pdf"
+          
+              # Move the file to the same directory as the source .qmd file
+              mv "$base.pdf" "$(dirname "$file")/$base.pdf"
               
             fi
           done
