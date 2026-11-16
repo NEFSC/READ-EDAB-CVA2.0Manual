@@ -68,7 +68,7 @@ Exposure scores were estimated in a two steps. First, raw exposure was calculate
 
 Second, monthly exposure ranks for each factor were averaged using the species distribution model results as weights to account for where and when species were present. Averaging occurred as across months to produce a map of mean exposure across space.
 
-In this version of the analysis, the present day time period was defined as **2014-2023** and the future time period was defined as **2025-2035**. For reference, @hare2016vulnerability used 1956-2025 and 2006-2055 as their present and future timeframes, respectively. 
+In this version of the analysis, the present day time period was defined as **2014-2023** and the future time period was defined as **2025-2035**. For reference, @hare2016vulnerability used 1956-2005 and 2006-2055 as their present and future timeframes, respectively. 
 
 ### Creating Total Scores and Vulnerability
 
